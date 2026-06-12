@@ -52,6 +52,7 @@ schemas/
 
 sources/
   source-registry.json
+  source-discovery-registry.json
 
 taxonomies/
   authority-echelons.json
@@ -62,17 +63,20 @@ manifest.json
 
 See `docs/repo-hierarchy.md` for the artifact envelope and authority stack.
 See `docs/coverage-map.md` for generated coverage across the governance-item universe.
+See `docs/source-discovery-map.md` for generated coverage across official source systems and capture strategies.
 
 ## Commands
 
 ```bash
 npm run coverage
 npm run seed
+npm run sources
 npm run validate
 ```
 
 `npm run seed` fetches the current seed set from official sources where automation is allowed. `npm run validate` checks schema-critical fields, paths, checksums, and lifecycle consistency.
 `npm run coverage` regenerates `data/coverage-map.json` and `docs/coverage-map.md`.
+`npm run sources` regenerates `data/source-discovery-map.json` and `docs/source-discovery-map.md`.
 
 ## Policy
 

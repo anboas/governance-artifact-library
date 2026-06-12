@@ -82,6 +82,7 @@ assert.ok(blocked >= 3, `expected blocked official-source records to be explicit
 assert.ok(publicLaws >= 2, `expected at least 2 NDAA/public law artifacts, got ${publicLaws}`);
 assert.ok(operationalGuidance >= 1, "expected at least one lower-echelon operational guidance artifact");
 assert.equal(existsSync(join(ROOT, "sources", "source-registry.json")), true, "source registry missing");
+assert.equal(existsSync(join(ROOT, "sources", "source-discovery-registry.json")), true, "source discovery registry missing");
 assert.equal(existsSync(join(ROOT, "taxonomies", "authority-echelons.json")), true, "authority taxonomy missing");
 assert.equal(existsSync(join(ROOT, "taxonomies", "source-locations.json")), true, "source location taxonomy missing");
 assert.equal(existsSync(join(ROOT, "taxonomies", "governance-item-universe.json")), true, "governance item universe missing");

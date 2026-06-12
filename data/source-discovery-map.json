@@ -1,0 +1,1234 @@
+{
+  "generated_at": "2026-06-12T21:10:45.541Z",
+  "totals": {
+    "sources": 23,
+    "sources_with_artifacts": 12,
+    "sources_not_started": 11,
+    "direct_fetch_ready": 9,
+    "blocked_or_browser_needed": 5,
+    "needs_probe": 8,
+    "api_key_required": 2,
+    "api_sources": 4,
+    "feed_sources": 4,
+    "sitemap_sources": 10
+  },
+  "by_automation_status": [
+    {
+      "automation_status": "api_key_required",
+      "count": 1
+    },
+    {
+      "automation_status": "blocked_by_host",
+      "count": 4
+    },
+    {
+      "automation_status": "browser_shell_detected",
+      "count": 1
+    },
+    {
+      "automation_status": "direct_fetch_ready",
+      "count": 9
+    },
+    {
+      "automation_status": "needs_probe",
+      "count": 8
+    }
+  ],
+  "by_priority": [
+    {
+      "priority": "critical",
+      "count": 11
+    },
+    {
+      "priority": "high",
+      "count": 4
+    },
+    {
+      "priority": "medium",
+      "count": 8
+    }
+  ],
+  "by_capture_strategy": [
+    {
+      "capture_strategy": "api",
+      "count": 4
+    },
+    {
+      "capture_strategy": "browser_fetch",
+      "count": 12
+    },
+    {
+      "capture_strategy": "content_package_fetch",
+      "count": 1
+    },
+    {
+      "capture_strategy": "direct_fetch",
+      "count": 15
+    },
+    {
+      "capture_strategy": "html_parse",
+      "count": 3
+    },
+    {
+      "capture_strategy": "manual_import",
+      "count": 13
+    },
+    {
+      "capture_strategy": "pdf_fetch",
+      "count": 1
+    },
+    {
+      "capture_strategy": "rss",
+      "count": 3
+    },
+    {
+      "capture_strategy": "sitemap_crawl",
+      "count": 3
+    },
+    {
+      "capture_strategy": "source_discovery",
+      "count": 3
+    },
+    {
+      "capture_strategy": "source_known_registration",
+      "count": 5
+    }
+  ],
+  "rows": [
+    {
+      "id": "acquisition-gov",
+      "name": "Acquisition.gov",
+      "source_owner": "General Services Administration",
+      "issuing_authority_scope": [
+        "FAR Council",
+        "Defense Acquisition Regulations System"
+      ],
+      "source_location_types": [
+        "acquisition_gov_html"
+      ],
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "critical",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 0,
+        "feed_endpoints": 0,
+        "search_endpoints": 1,
+        "sitemap_urls": 1,
+        "has_robots": true
+      },
+      "coverage_status": "mirrored",
+      "counts": {
+        "artifacts": 1,
+        "mirrored": 1,
+        "blocked": 0,
+        "text_extracted": 1,
+        "analytics": 1,
+        "analysis": 1,
+        "structured": 1,
+        "versioned": 1
+      },
+      "artifacts": [
+        {
+          "id": "far-part-39-acquisition-of-it",
+          "title": "Federal Acquisition Regulation Part 39: Acquisition of Information Technology",
+          "mirror_status": "mirrored",
+          "pipeline_state": "structured",
+          "source_location_type": "acquisition_gov_html",
+          "path": "artifacts/far-part-39-acquisition-of-it/artifact.json"
+        }
+      ],
+      "notes": "Current source for FAR/DFARS pages and acquisition regulatory material."
+    },
+    {
+      "id": "congress-gov",
+      "name": "Congress.gov",
+      "source_owner": "Library of Congress",
+      "issuing_authority_scope": [
+        "Congress"
+      ],
+      "source_location_types": [
+        "congress_gov_api",
+        "congress_gov_html"
+      ],
+      "capture_strategies": [
+        "api",
+        "direct_fetch"
+      ],
+      "automation_status": "api_key_required",
+      "api_key_required": true,
+      "priority": "critical",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 1,
+        "feed_endpoints": 0,
+        "search_endpoints": 1,
+        "sitemap_urls": 1,
+        "has_robots": true
+      },
+      "coverage_status": "not_started",
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifacts": [],
+      "notes": "Best source for pre-enactment bill and legislative-status metadata before GovInfo public law capture."
+    },
+    {
+      "id": "doni",
+      "name": "Department of the Navy Issuances",
+      "source_owner": "Department of the Navy",
+      "issuing_authority_scope": [
+        "SECNAV",
+        "OPNAV",
+        "Department of the Navy"
+      ],
+      "source_location_types": [
+        "don_issuances_pdf"
+      ],
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "automation_status": "blocked_by_host",
+      "api_key_required": false,
+      "priority": "critical",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 0,
+        "feed_endpoints": 0,
+        "search_endpoints": 1,
+        "sitemap_urls": 0,
+        "has_robots": true
+      },
+      "coverage_status": "source_known_blocked",
+      "counts": {
+        "artifacts": 3,
+        "mirrored": 0,
+        "blocked": 3,
+        "text_extracted": 0,
+        "analytics": 3,
+        "analysis": 3,
+        "structured": 0,
+        "versioned": 3
+      },
+      "artifacts": [
+        {
+          "id": "secnav-m-5210-1-records-management",
+          "title": "SECNAV M-5210.1: Department of the Navy Records Management Program",
+          "mirror_status": "blocked",
+          "pipeline_state": "source_known",
+          "source_location_type": "don_issuances_pdf",
+          "path": "artifacts/secnav-m-5210-1-records-management/artifact.json"
+        },
+        {
+          "id": "secnav-m-5239-3-don-cybersecurity",
+          "title": "SECNAV M-5239.3: Department of the Navy Cybersecurity Program",
+          "mirror_status": "blocked",
+          "pipeline_state": "source_known",
+          "source_location_type": "don_issuances_pdf",
+          "path": "artifacts/secnav-m-5239-3-don-cybersecurity/artifact.json"
+        },
+        {
+          "id": "opnavinst-5239-1e-navy-cybersecurity",
+          "title": "OPNAVINST 5239.1E: U.S. Navy Cybersecurity Program",
+          "mirror_status": "blocked",
+          "pipeline_state": "source_known",
+          "source_location_type": "don_issuances_pdf",
+          "path": "artifacts/opnavinst-5239-1e-navy-cybersecurity/artifact.json"
+        }
+      ],
+      "notes": "Canonical DON source for SECNAV and OPNAV PDFs; blocks simple automated fetch."
+    },
+    {
+      "id": "dod-cio",
+      "name": "DoD CIO",
+      "source_owner": "DoD Chief Information Officer",
+      "issuing_authority_scope": [
+        "DoD CIO",
+        "DoW/DoD"
+      ],
+      "source_location_types": [
+        "dod_cio_pdf",
+        "dod_cio_html"
+      ],
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "automation_status": "blocked_by_host",
+      "api_key_required": false,
+      "priority": "critical",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 0,
+        "feed_endpoints": 0,
+        "search_endpoints": 1,
+        "sitemap_urls": 0,
+        "has_robots": true
+      },
+      "coverage_status": "source_known_blocked",
+      "counts": {
+        "artifacts": 1,
+        "mirrored": 0,
+        "blocked": 1,
+        "text_extracted": 0,
+        "analytics": 1,
+        "analysis": 1,
+        "structured": 0,
+        "versioned": 1
+      },
+      "artifacts": [
+        {
+          "id": "dod-zero-trust-strategy",
+          "title": "Department of Defense Zero Trust Strategy",
+          "mirror_status": "blocked",
+          "pipeline_state": "source_known",
+          "source_location_type": "dod_cio_pdf",
+          "path": "artifacts/dod-zero-trust-strategy/artifact.json"
+        }
+      ],
+      "notes": "Official strategy/guidance source; bot protection currently requires browser/manual lane."
+    },
+    {
+      "id": "dod-issuances",
+      "name": "DoW/DoD Issuances",
+      "source_owner": "Washington Headquarters Services / Executive Services Directorate",
+      "issuing_authority_scope": [
+        "DoW/DoD"
+      ],
+      "source_location_types": [
+        "dod_issuances_pdf"
+      ],
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "automation_status": "blocked_by_host",
+      "api_key_required": false,
+      "priority": "critical",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 0,
+        "feed_endpoints": 0,
+        "search_endpoints": 1,
+        "sitemap_urls": 0,
+        "has_robots": true
+      },
+      "coverage_status": "source_known_blocked",
+      "counts": {
+        "artifacts": 3,
+        "mirrored": 0,
+        "blocked": 3,
+        "text_extracted": 0,
+        "analytics": 3,
+        "analysis": 3,
+        "structured": 0,
+        "versioned": 3
+      },
+      "artifacts": [
+        {
+          "id": "dodd-5000-01-defense-acquisition-system",
+          "title": "DoD Directive 5000.01: The Defense Acquisition System",
+          "mirror_status": "blocked",
+          "pipeline_state": "source_known",
+          "source_location_type": "dod_issuances_pdf",
+          "path": "artifacts/dodd-5000-01-defense-acquisition-system/artifact.json"
+        },
+        {
+          "id": "dodi-5000-87-software-acquisition-pathway",
+          "title": "DoD Instruction 5000.87: Operation of the Software Acquisition Pathway",
+          "mirror_status": "blocked",
+          "pipeline_state": "source_known",
+          "source_location_type": "dod_issuances_pdf",
+          "path": "artifacts/dodi-5000-87-software-acquisition-pathway/artifact.json"
+        },
+        {
+          "id": "dodi-8510-01-risk-management-framework",
+          "title": "DoD Instruction 8510.01: Risk Management Framework for DoD Systems",
+          "mirror_status": "blocked",
+          "pipeline_state": "source_known",
+          "source_location_type": "dod_issuances_pdf",
+          "path": "artifacts/dodi-8510-01-risk-management-framework/artifact.json"
+        }
+      ],
+      "notes": "Official source often blocks automated PDF fetches. Keep source-known records and route to browser/manual capture."
+    },
+    {
+      "id": "federal-register",
+      "name": "Federal Register",
+      "source_owner": "Office of the Federal Register / National Archives and Records Administration",
+      "issuing_authority_scope": [
+        "President",
+        "Federal agencies"
+      ],
+      "source_location_types": [
+        "federal_register_html",
+        "federal_register_api"
+      ],
+      "capture_strategies": [
+        "api",
+        "direct_fetch",
+        "rss"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "critical",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 1,
+        "feed_endpoints": 1,
+        "search_endpoints": 1,
+        "sitemap_urls": 1,
+        "has_robots": true
+      },
+      "coverage_status": "mirrored",
+      "counts": {
+        "artifacts": 2,
+        "mirrored": 2,
+        "blocked": 0,
+        "text_extracted": 2,
+        "analytics": 2,
+        "analysis": 2,
+        "structured": 2,
+        "versioned": 2
+      },
+      "artifacts": [
+        {
+          "id": "eo-14028-cybersecurity",
+          "title": "Executive Order 14028: Improving the Nation's Cybersecurity",
+          "mirror_status": "mirrored",
+          "pipeline_state": "structured",
+          "source_location_type": "federal_register_html",
+          "path": "artifacts/eo-14028-cybersecurity/artifact.json"
+        },
+        {
+          "id": "eo-14110-ai",
+          "title": "Executive Order 14110: Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence",
+          "mirror_status": "mirrored",
+          "pipeline_state": "structured",
+          "source_location_type": "federal_register_html",
+          "path": "artifacts/eo-14110-ai/artifact.json"
+        }
+      ],
+      "notes": "API is keyless and suitable for presidential documents and agency notices."
+    },
+    {
+      "id": "govinfo",
+      "name": "GovInfo",
+      "source_owner": "U.S. Government Publishing Office",
+      "issuing_authority_scope": [
+        "Congress",
+        "Federal Register",
+        "Federal agencies"
+      ],
+      "source_location_types": [
+        "govinfo_public_law_pdf"
+      ],
+      "capture_strategies": [
+        "api",
+        "direct_fetch",
+        "content_package_fetch"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": true,
+      "priority": "critical",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 2,
+        "feed_endpoints": 0,
+        "search_endpoints": 1,
+        "sitemap_urls": 1,
+        "has_robots": true
+      },
+      "coverage_status": "mirrored",
+      "counts": {
+        "artifacts": 2,
+        "mirrored": 2,
+        "blocked": 0,
+        "text_extracted": 2,
+        "analytics": 2,
+        "analysis": 2,
+        "structured": 2,
+        "versioned": 2
+      },
+      "artifacts": [
+        {
+          "id": "pl-118-159-fy2025-ndaa",
+          "title": "Public Law 118-159: Servicemember Quality of Life Improvement and National Defense Authorization Act for Fiscal Year 2025",
+          "mirror_status": "mirrored",
+          "pipeline_state": "structured",
+          "source_location_type": "govinfo_public_law_pdf",
+          "path": "artifacts/pl-118-159-fy2025-ndaa/artifact.json"
+        },
+        {
+          "id": "pl-118-31-fy2024-ndaa",
+          "title": "Public Law 118-31: National Defense Authorization Act for Fiscal Year 2024",
+          "mirror_status": "mirrored",
+          "pipeline_state": "structured",
+          "source_location_type": "govinfo_public_law_pdf",
+          "path": "artifacts/pl-118-31-fy2024-ndaa/artifact.json"
+        }
+      ],
+      "notes": "Canonical public source for public laws, congressional documents, and GPO packages."
+    },
+    {
+      "id": "nist-csrc",
+      "name": "NIST CSRC",
+      "source_owner": "National Institute of Standards and Technology",
+      "issuing_authority_scope": [
+        "NIST"
+      ],
+      "source_location_types": [
+        "nist_csrc_html",
+        "nist_nvlpubs_pdf"
+      ],
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse",
+        "pdf_fetch"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "critical",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 0,
+        "feed_endpoints": 1,
+        "search_endpoints": 1,
+        "sitemap_urls": 1,
+        "has_robots": true
+      },
+      "coverage_status": "mirrored",
+      "counts": {
+        "artifacts": 2,
+        "mirrored": 2,
+        "blocked": 0,
+        "text_extracted": 2,
+        "analytics": 2,
+        "analysis": 2,
+        "structured": 2,
+        "versioned": 2
+      },
+      "artifacts": [
+        {
+          "id": "nist-sp-800-207-zero-trust-architecture",
+          "title": "NIST SP 800-207: Zero Trust Architecture",
+          "mirror_status": "mirrored",
+          "pipeline_state": "structured",
+          "source_location_type": "nist_nvlpubs_pdf",
+          "path": "artifacts/nist-sp-800-207-zero-trust-architecture/artifact.json"
+        },
+        {
+          "id": "nist-sp-800-53-r5-security-privacy-controls",
+          "title": "NIST SP 800-53 Rev. 5: Security and Privacy Controls for Information Systems and Organizations",
+          "mirror_status": "mirrored",
+          "pipeline_state": "structured",
+          "source_location_type": "nist_csrc_html",
+          "path": "artifacts/nist-sp-800-53-r5-security-privacy-controls/artifact.json"
+        }
+      ],
+      "notes": "Landing-page source for NIST publications; NVL pubs often hosts the canonical PDF bytes."
+    },
+    {
+      "id": "omb",
+      "name": "OMB",
+      "source_owner": "Office of Management and Budget",
+      "issuing_authority_scope": [
+        "OMB"
+      ],
+      "source_location_types": [
+        "white_house_pdf",
+        "white_house_html"
+      ],
+      "capture_strategies": [
+        "direct_fetch",
+        "sitemap_crawl"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "critical",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 0,
+        "feed_endpoints": 0,
+        "search_endpoints": 1,
+        "sitemap_urls": 1,
+        "has_robots": true
+      },
+      "coverage_status": "mirrored",
+      "counts": {
+        "artifacts": 2,
+        "mirrored": 2,
+        "blocked": 0,
+        "text_extracted": 2,
+        "analytics": 2,
+        "analysis": 2,
+        "structured": 2,
+        "versioned": 2
+      },
+      "artifacts": [
+        {
+          "id": "omb-m-21-31-cyber-logging",
+          "title": "OMB Memorandum M-21-31: Improving the Federal Government's Investigative and Remediation Capabilities Related to Cybersecurity Incidents",
+          "mirror_status": "mirrored",
+          "pipeline_state": "structured",
+          "source_location_type": "white_house_pdf",
+          "path": "artifacts/omb-m-21-31-cyber-logging/artifact.json"
+        },
+        {
+          "id": "omb-m-24-10-ai-governance",
+          "title": "OMB Memorandum M-24-10: Advancing Governance, Innovation, and Risk Management for Agency Use of Artificial Intelligence",
+          "mirror_status": "mirrored",
+          "pipeline_state": "structured",
+          "source_location_type": "white_house_pdf",
+          "path": "artifacts/omb-m-24-10-ai-governance/artifact.json"
+        }
+      ],
+      "notes": "OMB has its own issuing authority even when files are hosted under WhiteHouse.gov."
+    },
+    {
+      "id": "us-code-olrc",
+      "name": "U.S. Code",
+      "source_owner": "Office of the Law Revision Counsel",
+      "issuing_authority_scope": [
+        "Congress"
+      ],
+      "source_location_types": [
+        "us_code_html",
+        "us_code_xml"
+      ],
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "critical",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 0,
+        "feed_endpoints": 0,
+        "search_endpoints": 1,
+        "sitemap_urls": 0,
+        "has_robots": true
+      },
+      "coverage_status": "mirrored",
+      "counts": {
+        "artifacts": 1,
+        "mirrored": 1,
+        "blocked": 0,
+        "text_extracted": 1,
+        "analytics": 1,
+        "analysis": 1,
+        "structured": 1,
+        "versioned": 1
+      },
+      "artifacts": [
+        {
+          "id": "usc-title-10-section-2222",
+          "title": "10 U.S.C. 2222: Defense business systems",
+          "mirror_status": "mirrored",
+          "pipeline_state": "structured",
+          "source_location_type": "us_code_html",
+          "path": "artifacts/usc-title-10-section-2222/artifact.json"
+        }
+      ],
+      "notes": "Canonical U.S. Code HTML/XML source for codified authority."
+    },
+    {
+      "id": "white-house",
+      "name": "White House",
+      "source_owner": "Executive Office of the President",
+      "issuing_authority_scope": [
+        "President",
+        "OMB",
+        "OSTP",
+        "Executive Office of the President"
+      ],
+      "source_location_types": [
+        "white_house_pdf",
+        "white_house_html"
+      ],
+      "capture_strategies": [
+        "direct_fetch",
+        "rss",
+        "sitemap_crawl"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "critical",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 0,
+        "feed_endpoints": 1,
+        "search_endpoints": 1,
+        "sitemap_urls": 1,
+        "has_robots": true
+      },
+      "coverage_status": "mirrored",
+      "counts": {
+        "artifacts": 2,
+        "mirrored": 2,
+        "blocked": 0,
+        "text_extracted": 2,
+        "analytics": 2,
+        "analysis": 2,
+        "structured": 2,
+        "versioned": 2
+      },
+      "artifacts": [
+        {
+          "id": "omb-m-21-31-cyber-logging",
+          "title": "OMB Memorandum M-21-31: Improving the Federal Government's Investigative and Remediation Capabilities Related to Cybersecurity Incidents",
+          "mirror_status": "mirrored",
+          "pipeline_state": "structured",
+          "source_location_type": "white_house_pdf",
+          "path": "artifacts/omb-m-21-31-cyber-logging/artifact.json"
+        },
+        {
+          "id": "omb-m-24-10-ai-governance",
+          "title": "OMB Memorandum M-24-10: Advancing Governance, Innovation, and Risk Management for Agency Use of Artificial Intelligence",
+          "mirror_status": "mirrored",
+          "pipeline_state": "structured",
+          "source_location_type": "white_house_pdf",
+          "path": "artifacts/omb-m-24-10-ai-governance/artifact.json"
+        }
+      ],
+      "notes": "Useful host for OMB/OSTP memoranda and PDFs; issuing authority must be tracked separately."
+    },
+    {
+      "id": "cisa",
+      "name": "CISA",
+      "source_owner": "Cybersecurity and Infrastructure Security Agency",
+      "issuing_authority_scope": [
+        "CISA",
+        "Department of Homeland Security"
+      ],
+      "source_location_types": [
+        "cisa_html",
+        "cisa_pdf"
+      ],
+      "capture_strategies": [
+        "direct_fetch",
+        "sitemap_crawl",
+        "rss"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "high",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 0,
+        "feed_endpoints": 1,
+        "search_endpoints": 1,
+        "sitemap_urls": 1,
+        "has_robots": true
+      },
+      "coverage_status": "not_started",
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifacts": [],
+      "notes": "Target source for CISA maturity models, alerts, and implementation guidance."
+    },
+    {
+      "id": "dod-cyber-exchange",
+      "name": "DoD Cyber Exchange",
+      "source_owner": "DoD Cyber Exchange",
+      "issuing_authority_scope": [
+        "DoW/DoD"
+      ],
+      "source_location_types": [
+        "cyber_mil_html"
+      ],
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "automation_status": "browser_shell_detected",
+      "api_key_required": false,
+      "priority": "high",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 0,
+        "feed_endpoints": 0,
+        "search_endpoints": 1,
+        "sitemap_urls": 1,
+        "has_robots": true
+      },
+      "coverage_status": "source_known_blocked",
+      "counts": {
+        "artifacts": 1,
+        "mirrored": 0,
+        "blocked": 1,
+        "text_extracted": 0,
+        "analytics": 1,
+        "analysis": 1,
+        "structured": 0,
+        "versioned": 1
+      },
+      "artifacts": [
+        {
+          "id": "cyber-mil-cyber-awareness-challenge",
+          "title": "DoD Cyber Awareness Challenge",
+          "mirror_status": "blocked",
+          "pipeline_state": "source_known",
+          "source_location_type": "cyber_mil_html",
+          "path": "artifacts/cyber-mil-cyber-awareness-challenge/artifact.json"
+        }
+      ],
+      "notes": "Automated HTML capture can return a shell page; extraction quality checks must catch this."
+    },
+    {
+      "id": "ecfr",
+      "name": "eCFR",
+      "source_owner": "Office of the Federal Register / National Archives and Records Administration",
+      "issuing_authority_scope": [
+        "Federal agencies"
+      ],
+      "source_location_types": [
+        "ecfr_api",
+        "ecfr_html"
+      ],
+      "capture_strategies": [
+        "api",
+        "direct_fetch"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "high",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 1,
+        "feed_endpoints": 0,
+        "search_endpoints": 1,
+        "sitemap_urls": 1,
+        "has_robots": true
+      },
+      "coverage_status": "not_started",
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifacts": [],
+      "notes": "Point-in-time regulatory source; important for FAR/CFR alignment."
+    },
+    {
+      "id": "mynavyhr",
+      "name": "MyNavyHR",
+      "source_owner": "Navy Personnel Command",
+      "issuing_authority_scope": [
+        "CNO",
+        "Department of the Navy"
+      ],
+      "source_location_types": [
+        "mynavyhr_navadmin_txt",
+        "mynavyhr_alnav_txt"
+      ],
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "automation_status": "blocked_by_host",
+      "api_key_required": false,
+      "priority": "high",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 0,
+        "feed_endpoints": 0,
+        "search_endpoints": 1,
+        "sitemap_urls": 0,
+        "has_robots": true
+      },
+      "coverage_status": "source_known_blocked",
+      "counts": {
+        "artifacts": 1,
+        "mirrored": 0,
+        "blocked": 1,
+        "text_extracted": 0,
+        "analytics": 1,
+        "analysis": 1,
+        "structured": 0,
+        "versioned": 1
+      },
+      "artifacts": [
+        {
+          "id": "navadmin-214-24-fy2025-cybersecurity-awareness",
+          "title": "NAVADMIN 214/24: Fiscal Year 2025 Cybersecurity Awareness Challenge",
+          "mirror_status": "blocked",
+          "pipeline_state": "source_known",
+          "source_location_type": "mynavyhr_navadmin_txt",
+          "path": "artifacts/navadmin-214-24-fy2025-cybersecurity-awareness/artifact.json"
+        }
+      ],
+      "notes": "Official message archive for NAVADMIN/ALNAV text; bot protection blocks simple fetch."
+    },
+    {
+      "id": "air-force-epubs",
+      "name": "Air Force e-Publishing",
+      "source_owner": "Department of the Air Force",
+      "issuing_authority_scope": [
+        "Department of the Air Force"
+      ],
+      "source_location_types": [
+        "air_force_epubs_pdf",
+        "air_force_epubs_html"
+      ],
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "medium",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 0,
+        "feed_endpoints": 0,
+        "search_endpoints": 1,
+        "sitemap_urls": 0,
+        "has_robots": true
+      },
+      "coverage_status": "not_started",
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifacts": [],
+      "notes": "Air Force service-policy source for later cross-service coverage."
+    },
+    {
+      "id": "army-pubs",
+      "name": "Army Publishing Directorate",
+      "source_owner": "Department of the Army",
+      "issuing_authority_scope": [
+        "Department of the Army"
+      ],
+      "source_location_types": [
+        "army_pubs_pdf",
+        "army_pubs_html"
+      ],
+      "capture_strategies": [
+        "direct_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "medium",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 0,
+        "feed_endpoints": 0,
+        "search_endpoints": 1,
+        "sitemap_urls": 0,
+        "has_robots": true
+      },
+      "coverage_status": "not_started",
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifacts": [],
+      "notes": "Army service-policy source for later cross-service coverage."
+    },
+    {
+      "id": "disa",
+      "name": "DISA",
+      "source_owner": "Defense Information Systems Agency",
+      "issuing_authority_scope": [
+        "DISA",
+        "DoW/DoD"
+      ],
+      "source_location_types": [
+        "disa_html",
+        "disa_pdf"
+      ],
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "medium",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 0,
+        "feed_endpoints": 0,
+        "search_endpoints": 1,
+        "sitemap_urls": 0,
+        "has_robots": true
+      },
+      "coverage_status": "not_started",
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifacts": [],
+      "notes": "Likely source for implementation and technical policy-adjacent artifacts."
+    },
+    {
+      "id": "joint-staff",
+      "name": "Joint Staff Directives",
+      "source_owner": "Joint Staff",
+      "issuing_authority_scope": [
+        "Chairman of the Joint Chiefs of Staff",
+        "Joint Staff"
+      ],
+      "source_location_types": [
+        "joint_staff_pdf"
+      ],
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "medium",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 0,
+        "feed_endpoints": 0,
+        "search_endpoints": 1,
+        "sitemap_urls": 0,
+        "has_robots": true
+      },
+      "coverage_status": "not_started",
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifacts": [],
+      "notes": "Needed for joint instruction/manual coverage."
+    },
+    {
+      "id": "marine-corps-pubs",
+      "name": "Marine Corps Publications Electronic Library",
+      "source_owner": "United States Marine Corps",
+      "issuing_authority_scope": [
+        "Commandant of the Marine Corps",
+        "United States Marine Corps"
+      ],
+      "source_location_types": [
+        "marine_corps_pubs_pdf",
+        "marine_corps_pubs_html"
+      ],
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "medium",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 0,
+        "feed_endpoints": 0,
+        "search_endpoints": 1,
+        "sitemap_urls": 0,
+        "has_robots": true
+      },
+      "coverage_status": "not_started",
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifacts": [],
+      "notes": "Marine Corps policy/message source for later cross-service coverage."
+    },
+    {
+      "id": "navair",
+      "name": "NAVAIR",
+      "source_owner": "Naval Air Systems Command",
+      "issuing_authority_scope": [
+        "NAVAIR",
+        "Department of the Navy"
+      ],
+      "source_location_types": [
+        "fleet_command_pdf",
+        "fleet_command_html",
+        "program_office_pdf",
+        "program_office_html"
+      ],
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "medium",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 0,
+        "feed_endpoints": 0,
+        "search_endpoints": 1,
+        "sitemap_urls": 0,
+        "has_robots": true
+      },
+      "coverage_status": "not_started",
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifacts": [],
+      "notes": "Candidate lower-echelon source. Requires discovery before artifact rules are trusted."
+    },
+    {
+      "id": "navsea",
+      "name": "NAVSEA",
+      "source_owner": "Naval Sea Systems Command",
+      "issuing_authority_scope": [
+        "NAVSEA",
+        "Department of the Navy"
+      ],
+      "source_location_types": [
+        "fleet_command_pdf",
+        "fleet_command_html",
+        "program_office_pdf",
+        "program_office_html"
+      ],
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "medium",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 0,
+        "feed_endpoints": 0,
+        "search_endpoints": 1,
+        "sitemap_urls": 0,
+        "has_robots": true
+      },
+      "coverage_status": "not_started",
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifacts": [],
+      "notes": "Candidate lower-echelon source. Requires discovery before artifact rules are trusted."
+    },
+    {
+      "id": "navwar",
+      "name": "NAVWAR",
+      "source_owner": "Naval Information Warfare Systems Command",
+      "issuing_authority_scope": [
+        "NAVWAR",
+        "Department of the Navy"
+      ],
+      "source_location_types": [
+        "fleet_command_pdf",
+        "fleet_command_html",
+        "program_office_pdf",
+        "program_office_html"
+      ],
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "medium",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 0,
+        "feed_endpoints": 0,
+        "search_endpoints": 1,
+        "sitemap_urls": 0,
+        "has_robots": true
+      },
+      "coverage_status": "not_started",
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifacts": [],
+      "notes": "Candidate lower-echelon source for Navy cyber/software implementation guidance."
+    }
+  ]
+}
