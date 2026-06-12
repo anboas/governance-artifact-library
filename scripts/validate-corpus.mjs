@@ -43,6 +43,7 @@ for (const entry of manifest.artifacts) {
   assertSidecar(artifact, "analysis_path", "analysis sidecar");
   assertSidecar(artifact, "extraction_path", "entity/reference/concept extraction sidecar");
   assertSidecar(artifact, "claims_path", "claims sidecar");
+  assertSidecar(artifact, "reference_resolution_path", "reference resolution sidecar");
   assertSidecar(artifact, "version_index_path", "version index");
 
   const metadata = readJson(artifact.metadata_path);
@@ -50,22 +51,27 @@ for (const entry of manifest.artifacts) {
   const analysis = readJson(artifact.analysis_path);
   const extractions = readJson(artifact.extraction_path);
   const claims = readJson(artifact.claims_path);
+  const referenceResolution = readJson(artifact.reference_resolution_path);
   const versions = readJson(artifact.version_index_path);
   assert.equal(metadata.id, artifact.id, `${entry.id} metadata id mismatch`);
   assert.equal(analytics.id, artifact.id, `${entry.id} analytics id mismatch`);
   assert.equal(analysis.id, artifact.id, `${entry.id} analysis id mismatch`);
   assert.equal(extractions.id, artifact.id, `${entry.id} extraction id mismatch`);
   assert.equal(claims.id, artifact.id, `${entry.id} claims id mismatch`);
+  assert.equal(referenceResolution.id, artifact.id, `${entry.id} reference resolution id mismatch`);
   assert.equal(versions.id, artifact.id, `${entry.id} version index id mismatch`);
   assert.equal(Array.isArray(versions.versions), true, `${entry.id} versions must be an array`);
   assert.ok(artifact.analytic_lanes?.includes("obligation_extraction"), `${entry.id} should declare analytic lanes`);
   assert.ok(artifact.analytic_lanes?.includes("entity_reference_concept_extraction"), `${entry.id} should declare entity/reference/concept extraction lane`);
   assert.ok(artifact.analytic_lanes?.includes("claims_extraction"), `${entry.id} should declare claims extraction lane`);
+  assert.ok(artifact.analytic_lanes?.includes("reference_resolution"), `${entry.id} should declare reference resolution lane`);
   assert.equal(Array.isArray(extractions.entities), true, `${entry.id} extraction entities must be an array`);
   assert.equal(Array.isArray(extractions.references), true, `${entry.id} extraction references must be an array`);
   assert.equal(Array.isArray(extractions.concepts), true, `${entry.id} extraction concepts must be an array`);
   assert.equal(Array.isArray(extractions.line_annotations), true, `${entry.id} extraction line_annotations must be an array`);
   assert.equal(Array.isArray(claims.claims), true, `${entry.id} claims must be an array`);
+  assert.equal(Array.isArray(referenceResolution.resolved_references), true, `${entry.id} resolved references must be an array`);
+  assert.equal(Array.isArray(referenceResolution.uncatalogued_references), true, `${entry.id} uncatalogued references must be an array`);
 
   if (artifact.mirror_status === "mirrored") {
     mirrored += 1;
@@ -107,6 +113,8 @@ assert.equal(existsSync(join(ROOT, "sources", "source-discovery-registry.json"))
 assert.equal(existsSync(join(ROOT, "taxonomies", "authority-echelons.json")), true, "authority taxonomy missing");
 assert.equal(existsSync(join(ROOT, "taxonomies", "source-locations.json")), true, "source location taxonomy missing");
 assert.equal(existsSync(join(ROOT, "taxonomies", "governance-item-universe.json")), true, "governance item universe missing");
+assert.equal(existsSync(join(ROOT, "data", "reference-coverage-map.json")), true, "reference coverage map missing");
+assert.equal(existsSync(join(ROOT, "docs", "reference-coverage-map.md")), true, "reference coverage docs missing");
 
 console.log(`Validated ${manifest.artifact_count} artifacts (${mirrored} mirrored, ${blocked} source-known blocked).`);
 

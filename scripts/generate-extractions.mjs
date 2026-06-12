@@ -185,7 +185,7 @@ function concept(id, label, category, aliases) {
 }
 
 function reference(family, type, regex) {
-  return { family, type, regex };
+  return { id: family, family, type, regex };
 }
 
 function tag(kind, type, label, id) {
