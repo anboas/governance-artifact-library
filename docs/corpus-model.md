@@ -7,6 +7,7 @@ A Governance Artifact is an official policy or policy-adjacent artifact that can
 Examples:
 
 - Public law
+- NDAA
 - U.S. Code section
 - Executive Order
 - Presidential Memorandum
@@ -18,6 +19,31 @@ Examples:
 - NAVADMIN
 - Implementation guidance
 - Implementation evidence
+
+## Taxonomy Fields
+
+Every artifact carries normalized hierarchy fields:
+
+- `authority_level`: machine-readable position in the policy stack.
+- `hierarchy_rank`: numeric rank for sorting from law down to local guidance.
+- `family`: thematic family such as `cybersecurity`, `ai_governance`, `acquisition`, or `cyber_training`.
+- `jurisdiction`: policy jurisdiction such as `United States`, `DoW/DoD`, or `Department of the Navy`.
+- `source_system`: official source platform.
+- `source_location_type`: capture pattern for that official source.
+
+The canonical taxonomy files live in `taxonomies/`.
+
+## Artifact Mirror Envelope
+
+Mirrored artifacts carry:
+
+- `raw/source.<ext>`: source document bytes.
+- `text/extracted.txt`: full text extraction.
+- `metadata/metadata.json`: normalized source and document metadata.
+- `analytics/document-metrics.json`: machine-generated document metrics and term signals.
+- `analysis/machine-analysis.json`: bootstrap analysis and review flags.
+- `structured/summary.json`: compact downstream summary.
+- `versions/index.json`: current source version ledger.
 
 ## Boundary
 

@@ -4,6 +4,8 @@ The initial seed set intentionally mixes fully mirrored official artifacts with 
 
 ## Mirrored
 
+- `pl-118-31-fy2024-ndaa`: GovInfo Public Law PDF
+- `pl-118-159-fy2025-ndaa`: GovInfo Public Law PDF
 - `eo-14110-ai`: Federal Register HTML
 - `eo-14028-cybersecurity`: Federal Register HTML
 - `omb-m-24-10-ai-governance`: White House PDF
@@ -11,6 +13,7 @@ The initial seed set intentionally mixes fully mirrored official artifacts with 
 - `usc-title-10-section-2222`: U.S. Code HTML
 - `far-part-39-acquisition-of-it`: Acquisition.gov HTML
 - `nist-sp-800-53-r5-security-privacy-controls`: NIST CSRC HTML
+- `nist-sp-800-207-zero-trust-architecture`: NIST NVL Publications PDF
 
 ## Source-Known / Blocked
 
@@ -19,8 +22,12 @@ These official sources were identified and registered, but the raw hosts rejecte
 - `dodd-5000-01-defense-acquisition-system`: DoW/DoD Issuances
 - `dodi-5000-87-software-acquisition-pathway`: DoW/DoD Issuances
 - `dodi-8510-01-risk-management-framework`: DoW/DoD Issuances
+- `cyber-mil-cyber-awareness-challenge`: DoD Cyber Exchange
+- `dod-zero-trust-strategy`: DoD CIO
 - `secnav-m-5210-1-records-management`: Department of the Navy Issuances
+- `secnav-m-5239-3-don-cybersecurity`: Department of the Navy Issuances
 - `opnavinst-5239-1e-navy-cybersecurity`: Department of the Navy Issuances
+- `navadmin-214-24-fy2025-cybersecurity-awareness`: MyNavyHR NAVADMIN text
 
 ## Rule
 

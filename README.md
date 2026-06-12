@@ -11,6 +11,7 @@ Policy Intelligence and Opportunity Intelligence are separate top-level domains.
 ## What Lives Here
 
 - Statutes, public laws, and U.S. Code sections
+- NDAAs and defense authorization acts
 - Executive Orders and Presidential Memoranda
 - OMB memoranda and implementation guidance
 - DoW/DoD directives, instructions, manuals, and DTMs
@@ -39,7 +40,11 @@ artifacts/<artifact-id>/
   provenance.json
   raw/source.<ext>
   text/extracted.txt
+  metadata/metadata.json
+  analytics/document-metrics.json
+  analysis/machine-analysis.json
   structured/summary.json
+  versions/index.json
 
 schemas/
   governance-artifact.schema.json
@@ -48,8 +53,14 @@ schemas/
 sources/
   source-registry.json
 
+taxonomies/
+  authority-echelons.json
+  source-locations.json
+
 manifest.json
 ```
+
+See `docs/repo-hierarchy.md` for the artifact envelope and authority stack.
 
 ## Commands
 
