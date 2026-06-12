@@ -1,0 +1,3889 @@
+{
+  "id": "omb-m-21-31-cyber-logging",
+  "generated_at": "2026-06-12T22:50:00.000Z",
+  "extractor_version": "governance-extractor-rules-v1",
+  "extraction_status": "parsed",
+  "source_text_path": "artifacts/omb-m-21-31-cyber-logging/text/extracted.txt",
+  "extraction_path": "artifacts/omb-m-21-31-cyber-logging/extractions/extractions.json",
+  "summary": {
+    "entity_count": 5,
+    "reference_count": 4,
+    "concept_count": 17,
+    "annotated_line_count": 285,
+    "total_line_count": 1895
+  },
+  "entities": [
+    {
+      "id": "cisa",
+      "type": "agency",
+      "label": "Cybersecurity and Infrastructure Security Agency",
+      "aliases": [
+        "Cybersecurity and Infrastructure Security Agency",
+        "CISA"
+      ],
+      "count": 15,
+      "first_line": 86,
+      "lines_sample": [
+        86,
+        132,
+        147,
+        155,
+        313,
+        315,
+        317,
+        320,
+        321,
+        364,
+        366,
+        372
+      ]
+    },
+    {
+      "id": "nist",
+      "type": "agency",
+      "label": "National Institute of Standards and Technology",
+      "aliases": [
+        "National Institute of Standards and Technology",
+        "NIST"
+      ],
+      "count": 7,
+      "first_line": 153,
+      "lines_sample": [
+        153,
+        176,
+        240,
+        256,
+        439,
+        440,
+        492
+      ]
+    },
+    {
+      "id": "office-of-management-and-budget",
+      "type": "agency",
+      "label": "Office of Management and Budget",
+      "aliases": [
+        "Office of Management and Budget",
+        "OMB"
+      ],
+      "count": 5,
+      "first_line": 2,
+      "lines_sample": [
+        2,
+        126,
+        161,
+        162,
+        376
+      ]
+    },
+    {
+      "id": "chief-information-officer",
+      "type": "role",
+      "label": "Chief Information Officer",
+      "aliases": [
+        "Chief Information Officer",
+        "CIO"
+      ],
+      "count": 2,
+      "first_line": 127,
+      "lines_sample": [
+        127,
+        162
+      ]
+    },
+    {
+      "id": "department-of-defense",
+      "type": "department",
+      "label": "Department of Defense",
+      "aliases": [
+        "Department of Defense",
+        "DoD",
+        "Department of War",
+        "DoW"
+      ],
+      "count": 2,
+      "first_line": 1878,
+      "lines_sample": [
+        1878,
+        1879
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "undefined:executive-order-14028",
+      "type": "Executive Order",
+      "label": "Executive Order 14028",
+      "reference_family": "executive-order",
+      "count": 3,
+      "first_line": 27,
+      "lines_sample": [
+        27,
+        46,
+        51
+      ]
+    },
+    {
+      "id": "undefined:44-u-s-c-3502",
+      "type": "U.S. Code",
+      "label": "44 U.S.C. § 3502",
+      "reference_family": "usc",
+      "count": 1,
+      "first_line": 50,
+      "lines_sample": [
+        50
+      ]
+    },
+    {
+      "id": "undefined:44-u-s-c-3553",
+      "type": "U.S. Code",
+      "label": "44 U.S.C. § 3553",
+      "reference_family": "usc",
+      "count": 1,
+      "first_line": 319,
+      "lines_sample": [
+        319
+      ]
+    },
+    {
+      "id": "undefined:nist-sp-800-191",
+      "type": "NIST Special Publication",
+      "label": "NIST SP 800-191",
+      "reference_family": "nist-sp",
+      "count": 1,
+      "first_line": 439,
+      "lines_sample": [
+        439
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "logging",
+      "type": "cybersecurity",
+      "label": "Logging",
+      "aliases": [
+        "logging",
+        "event logs",
+        "log management"
+      ],
+      "category": "cybersecurity",
+      "count": 52,
+      "first_line": 30,
+      "lines_sample": [
+        30,
+        37,
+        40,
+        52,
+        53,
+        55,
+        57,
+        58,
+        60,
+        73,
+        80,
+        81
+      ]
+    },
+    {
+      "id": "audit",
+      "type": "oversight",
+      "label": "Audit",
+      "aliases": [
+        "audit",
+        "auditing",
+        "auditability"
+      ],
+      "category": "oversight",
+      "count": 37,
+      "first_line": 278,
+      "lines_sample": [
+        278,
+        290,
+        559,
+        598,
+        793,
+        842,
+        870,
+        913,
+        944,
+        980,
+        998,
+        1027
+      ]
+    },
+    {
+      "id": "identity-access",
+      "type": "cybersecurity",
+      "label": "Identity And Access",
+      "aliases": [
+        "identity",
+        "access management",
+        "authentication",
+        "credential"
+      ],
+      "category": "cybersecurity",
+      "count": 29,
+      "first_line": 503,
+      "lines_sample": [
+        503,
+        505,
+        521,
+        522,
+        523,
+        537,
+        538,
+        539,
+        540,
+        638,
+        642,
+        667
+      ]
+    },
+    {
+      "id": "implementation",
+      "type": "execution",
+      "label": "Implementation",
+      "aliases": [
+        "implementation",
+        "implementing",
+        "execute",
+        "execution"
+      ],
+      "category": "execution",
+      "count": 26,
+      "first_line": 39,
+      "lines_sample": [
+        39,
+        63,
+        77,
+        98,
+        108,
+        113,
+        114,
+        118,
+        124,
+        166,
+        179,
+        328
+      ]
+    },
+    {
+      "id": "continuous-monitoring",
+      "type": "cybersecurity",
+      "label": "Continuous Monitoring",
+      "aliases": [
+        "continuous monitoring",
+        "monitoring"
+      ],
+      "category": "cybersecurity",
+      "count": 16,
+      "first_line": 89,
+      "lines_sample": [
+        89,
+        114,
+        250,
+        291,
+        294,
+        333,
+        341,
+        408,
+        416,
+        424,
+        476,
+        1092
+      ]
+    },
+    {
+      "id": "cybersecurity",
+      "type": "cybersecurity",
+      "label": "Cybersecurity",
+      "aliases": [
+        "cybersecurity",
+        "cyber security"
+      ],
+      "category": "cybersecurity",
+      "count": 7,
+      "first_line": 19,
+      "lines_sample": [
+        19,
+        22,
+        27,
+        86,
+        132,
+        136,
+        481
+      ]
+    },
+    {
+      "id": "mission",
+      "type": "operations",
+      "label": "Mission",
+      "aliases": [
+        "mission",
+        "operational",
+        "warfighting"
+      ],
+      "category": "operations",
+      "count": 7,
+      "first_line": 856,
+      "lines_sample": [
+        856,
+        930,
+        1013,
+        1495,
+        1714,
+        1738,
+        1816
+      ]
+    },
+    {
+      "id": "governance",
+      "type": "governance",
+      "label": "Governance",
+      "aliases": [
+        "governance",
+        "oversight",
+        "policy"
+      ],
+      "category": "governance",
+      "count": 6,
+      "first_line": 159,
+      "lines_sample": [
+        159,
+        761,
+        1097,
+        1240,
+        1444,
+        1569
+      ]
+    },
+    {
+      "id": "encryption",
+      "type": "cybersecurity",
+      "label": "Encryption",
+      "aliases": [
+        "encryption",
+        "cryptographic",
+        "cryptography"
+      ],
+      "category": "cybersecurity",
+      "count": 4,
+      "first_line": 267,
+      "lines_sample": [
+        267,
+        1520,
+        1523,
+        1583
+      ]
+    },
+    {
+      "id": "compliance",
+      "type": "compliance",
+      "label": "Compliance",
+      "aliases": [
+        "compliance",
+        "comply",
+        "shall comply"
+      ],
+      "category": "compliance",
+      "count": 3,
+      "first_line": 63,
+      "lines_sample": [
+        63,
+        64,
+        731
+      ]
+    },
+    {
+      "id": "incident-response",
+      "type": "cybersecurity",
+      "label": "Incident Response",
+      "aliases": [
+        "incident response",
+        "incident reporting",
+        "cyber incident"
+      ],
+      "category": "cybersecurity",
+      "count": 2,
+      "first_line": 324,
+      "lines_sample": [
+        324,
+        430
+      ]
+    },
+    {
+      "id": "reporting",
+      "type": "oversight",
+      "label": "Reporting",
+      "aliases": [
+        "report",
+        "reporting",
+        "submit to Congress"
+      ],
+      "category": "oversight",
+      "count": 2,
+      "first_line": 743,
+      "lines_sample": [
+        743,
+        1692
+      ]
+    },
+    {
+      "id": "zero-trust",
+      "type": "cybersecurity",
+      "label": "Zero Trust",
+      "aliases": [
+        "zero trust",
+        "zero-trust"
+      ],
+      "category": "cybersecurity",
+      "count": 2,
+      "first_line": 374,
+      "lines_sample": [
+        374,
+        376
+      ]
+    },
+    {
+      "id": "artificial-intelligence",
+      "type": "technology",
+      "label": "Artificial Intelligence",
+      "aliases": [
+        "artificial intelligence",
+        "AI"
+      ],
+      "category": "technology",
+      "count": 1,
+      "first_line": 409,
+      "lines_sample": [
+        409
+      ]
+    },
+    {
+      "id": "cloud-computing",
+      "type": "technology",
+      "label": "Cloud Computing",
+      "aliases": [
+        "cloud computing",
+        "cloud service",
+        "cloud services"
+      ],
+      "category": "technology",
+      "count": 1,
+      "first_line": 24,
+      "lines_sample": [
+        24
+      ]
+    },
+    {
+      "id": "privacy",
+      "type": "compliance",
+      "label": "Privacy",
+      "aliases": [
+        "privacy",
+        "personally identifiable information",
+        "PII"
+      ],
+      "category": "compliance",
+      "count": 1,
+      "first_line": 1430,
+      "lines_sample": [
+        1430
+      ]
+    },
+    {
+      "id": "risk-management-framework",
+      "type": "cybersecurity",
+      "label": "Risk Management Framework",
+      "aliases": [
+        "risk management framework",
+        "RMF"
+      ],
+      "category": "cybersecurity",
+      "count": 1,
+      "first_line": 1868,
+      "lines_sample": [
+        1868
+      ]
+    }
+  ],
+  "line_annotations": [
+    {
+      "line": 2,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "Office of Management and Budget",
+          "id": "office-of-management-and-budget"
+        }
+      ]
+    },
+    {
+      "line": 19,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Cybersecurity",
+          "id": "cybersecurity"
+        }
+      ]
+    },
+    {
+      "line": 22,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Cybersecurity",
+          "id": "cybersecurity"
+        }
+      ]
+    },
+    {
+      "line": 24,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "technology",
+          "label": "Cloud Computing",
+          "id": "cloud-computing"
+        }
+      ]
+    },
+    {
+      "line": 27,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Cybersecurity",
+          "id": "cybersecurity"
+        },
+        {
+          "kind": "reference",
+          "type": "Executive Order",
+          "label": "Executive Order 14028",
+          "id": "undefined:executive-order-14028"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 30,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 32,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 37,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 39,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 40,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 46,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "Executive Order",
+          "label": "Executive Order 14028",
+          "id": "undefined:executive-order-14028"
+        }
+      ]
+    },
+    {
+      "line": 50,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "U.S. Code",
+          "label": "44 U.S.C. § 3502",
+          "id": "undefined:44-u-s-c-3502"
+        }
+      ]
+    },
+    {
+      "line": 51,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "Executive Order",
+          "label": "Executive Order 14028",
+          "id": "undefined:executive-order-14028"
+        }
+      ]
+    },
+    {
+      "line": 52,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 53,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 55,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 57,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 58,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 60,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 62,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 63,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        },
+        {
+          "kind": "concept",
+          "type": "compliance",
+          "label": "Compliance",
+          "id": "compliance"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 64,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "compliance",
+          "label": "Compliance",
+          "id": "compliance"
+        }
+      ]
+    },
+    {
+      "line": 71,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 73,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 77,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        }
+      ]
+    },
+    {
+      "line": 80,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 81,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 86,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "Cybersecurity and Infrastructure Security Agency",
+          "id": "cisa"
+        },
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Cybersecurity",
+          "id": "cybersecurity"
+        }
+      ]
+    },
+    {
+      "line": 88,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 89,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Continuous Monitoring",
+          "id": "continuous-monitoring"
+        }
+      ]
+    },
+    {
+      "line": 98,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        }
+      ]
+    },
+    {
+      "line": 102,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 108,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        }
+      ]
+    },
+    {
+      "line": 112,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 113,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        },
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        }
+      ]
+    },
+    {
+      "line": 114,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Continuous Monitoring",
+          "id": "continuous-monitoring"
+        },
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        }
+      ]
+    },
+    {
+      "line": 118,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 120,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 121,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 124,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        }
+      ]
+    },
+    {
+      "line": 125,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 126,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "Office of Management and Budget",
+          "id": "office-of-management-and-budget"
+        }
+      ]
+    },
+    {
+      "line": 127,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Chief Information Officer",
+          "id": "chief-information-officer"
+        }
+      ]
+    },
+    {
+      "line": 132,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "Cybersecurity and Infrastructure Security Agency",
+          "id": "cisa"
+        },
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Cybersecurity",
+          "id": "cybersecurity"
+        }
+      ]
+    },
+    {
+      "line": 136,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Cybersecurity",
+          "id": "cybersecurity"
+        }
+      ]
+    },
+    {
+      "line": 142,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 145,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 147,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "Cybersecurity and Infrastructure Security Agency",
+          "id": "cisa"
+        }
+      ]
+    },
+    {
+      "line": 148,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 150,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 153,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "National Institute of Standards and Technology",
+          "id": "nist"
+        }
+      ]
+    },
+    {
+      "line": 154,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 155,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "Cybersecurity and Infrastructure Security Agency",
+          "id": "cisa"
+        }
+      ]
+    },
+    {
+      "line": 156,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 157,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 159,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 161,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "Office of Management and Budget",
+          "id": "office-of-management-and-budget"
+        }
+      ]
+    },
+    {
+      "line": 162,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Chief Information Officer",
+          "id": "chief-information-officer"
+        },
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "Office of Management and Budget",
+          "id": "office-of-management-and-budget"
+        }
+      ]
+    },
+    {
+      "line": 166,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        }
+      ]
+    },
+    {
+      "line": 170,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 176,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "National Institute of Standards and Technology",
+          "id": "nist"
+        }
+      ]
+    },
+    {
+      "line": 179,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        }
+      ]
+    },
+    {
+      "line": 181,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 184,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 199,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 200,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 201,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 203,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 204,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 214,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 218,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 220,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 221,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 238,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 240,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "National Institute of Standards and Technology",
+          "id": "nist"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 241,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 248,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 250,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Continuous Monitoring",
+          "id": "continuous-monitoring"
+        }
+      ]
+    },
+    {
+      "line": 252,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 253,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 256,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "National Institute of Standards and Technology",
+          "id": "nist"
+        }
+      ]
+    },
+    {
+      "line": 263,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 264,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 266,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 267,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 268,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 270,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 272,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 274,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 278,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 286,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 290,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        },
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 291,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Continuous Monitoring",
+          "id": "continuous-monitoring"
+        }
+      ]
+    },
+    {
+      "line": 292,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 294,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Continuous Monitoring",
+          "id": "continuous-monitoring"
+        }
+      ]
+    },
+    {
+      "line": 303,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 304,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 306,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 310,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 313,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "Cybersecurity and Infrastructure Security Agency",
+          "id": "cisa"
+        }
+      ]
+    },
+    {
+      "line": 315,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "Cybersecurity and Infrastructure Security Agency",
+          "id": "cisa"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 317,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "Cybersecurity and Infrastructure Security Agency",
+          "id": "cisa"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 319,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "U.S. Code",
+          "label": "44 U.S.C. § 3553",
+          "id": "undefined:44-u-s-c-3553"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 320,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "Cybersecurity and Infrastructure Security Agency",
+          "id": "cisa"
+        }
+      ]
+    },
+    {
+      "line": 321,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "Cybersecurity and Infrastructure Security Agency",
+          "id": "cisa"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 323,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 324,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Incident Response",
+          "id": "incident-response"
+        },
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 325,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 327,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 328,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        }
+      ]
+    },
+    {
+      "line": 330,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 331,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        }
+      ]
+    },
+    {
+      "line": 333,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Continuous Monitoring",
+          "id": "continuous-monitoring"
+        }
+      ]
+    },
+    {
+      "line": 335,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 336,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 337,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 339,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        }
+      ]
+    },
+    {
+      "line": 340,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        }
+      ]
+    },
+    {
+      "line": 341,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Continuous Monitoring",
+          "id": "continuous-monitoring"
+        }
+      ]
+    },
+    {
+      "line": 342,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        }
+      ]
+    },
+    {
+      "line": 346,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 354,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 358,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 359,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 363,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 364,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "Cybersecurity and Infrastructure Security Agency",
+          "id": "cisa"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 365,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 366,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "Cybersecurity and Infrastructure Security Agency",
+          "id": "cisa"
+        }
+      ]
+    },
+    {
+      "line": 367,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 368,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 372,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "Cybersecurity and Infrastructure Security Agency",
+          "id": "cisa"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 374,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Zero Trust",
+          "id": "zero-trust"
+        }
+      ]
+    },
+    {
+      "line": 376,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "Office of Management and Budget",
+          "id": "office-of-management-and-budget"
+        },
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "Cybersecurity and Infrastructure Security Agency",
+          "id": "cisa"
+        },
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Zero Trust",
+          "id": "zero-trust"
+        }
+      ]
+    },
+    {
+      "line": 377,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 379,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 382,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 383,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 385,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 391,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 394,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 397,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 398,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 401,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "Cybersecurity and Infrastructure Security Agency",
+          "id": "cisa"
+        }
+      ]
+    },
+    {
+      "line": 404,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        }
+      ]
+    },
+    {
+      "line": 407,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 408,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Continuous Monitoring",
+          "id": "continuous-monitoring"
+        }
+      ]
+    },
+    {
+      "line": 409,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "technology",
+          "label": "Artificial Intelligence",
+          "id": "artificial-intelligence"
+        }
+      ]
+    },
+    {
+      "line": 410,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        }
+      ]
+    },
+    {
+      "line": 411,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 412,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 413,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 414,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 416,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Continuous Monitoring",
+          "id": "continuous-monitoring"
+        }
+      ]
+    },
+    {
+      "line": 424,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Continuous Monitoring",
+          "id": "continuous-monitoring"
+        }
+      ]
+    },
+    {
+      "line": 425,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 429,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 430,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Incident Response",
+          "id": "incident-response"
+        }
+      ]
+    },
+    {
+      "line": 432,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 439,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "National Institute of Standards and Technology",
+          "id": "nist"
+        },
+        {
+          "kind": "reference",
+          "type": "NIST Special Publication",
+          "label": "NIST SP 800-191",
+          "id": "undefined:nist-sp-800-191"
+        }
+      ]
+    },
+    {
+      "line": 440,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "National Institute of Standards and Technology",
+          "id": "nist"
+        }
+      ]
+    },
+    {
+      "line": 446,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 449,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 452,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 468,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        }
+      ]
+    },
+    {
+      "line": 476,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Continuous Monitoring",
+          "id": "continuous-monitoring"
+        }
+      ]
+    },
+    {
+      "line": 481,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Cybersecurity",
+          "id": "cybersecurity"
+        }
+      ]
+    },
+    {
+      "line": 492,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "National Institute of Standards and Technology",
+          "id": "nist"
+        }
+      ]
+    },
+    {
+      "line": 493,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 503,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 505,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 511,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 513,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 517,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 519,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 521,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 522,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 523,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 529,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 537,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 538,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 539,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 540,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 546,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 553,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 559,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 598,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 638,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 642,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 667,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 669,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 681,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 684,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        }
+      ]
+    },
+    {
+      "line": 731,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "compliance",
+          "label": "Compliance",
+          "id": "compliance"
+        }
+      ]
+    },
+    {
+      "line": 733,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        }
+      ]
+    },
+    {
+      "line": 743,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Reporting",
+          "id": "reporting"
+        }
+      ]
+    },
+    {
+      "line": 761,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        }
+      ]
+    },
+    {
+      "line": 793,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 797,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 807,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 842,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 856,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "operations",
+          "label": "Mission",
+          "id": "mission"
+        }
+      ]
+    },
+    {
+      "line": 870,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 889,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        }
+      ]
+    },
+    {
+      "line": 913,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 930,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "operations",
+          "label": "Mission",
+          "id": "mission"
+        }
+      ]
+    },
+    {
+      "line": 944,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 980,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 998,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1013,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "operations",
+          "label": "Mission",
+          "id": "mission"
+        }
+      ]
+    },
+    {
+      "line": 1027,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1061,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 1092,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Continuous Monitoring",
+          "id": "continuous-monitoring"
+        },
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 1097,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        }
+      ]
+    },
+    {
+      "line": 1108,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 1109,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 1111,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 1112,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1130,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 1131,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 1155,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1156,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1160,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1162,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1163,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1164,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1165,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1166,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1167,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1168,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1169,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1170,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1171,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1172,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1173,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1216,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 1218,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 1236,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        }
+      ]
+    },
+    {
+      "line": 1239,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Logging",
+          "id": "logging"
+        }
+      ]
+    },
+    {
+      "line": 1240,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        }
+      ]
+    },
+    {
+      "line": 1265,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 1355,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 1375,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 1376,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 1410,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        }
+      ]
+    },
+    {
+      "line": 1430,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "compliance",
+          "label": "Privacy",
+          "id": "privacy"
+        }
+      ]
+    },
+    {
+      "line": 1443,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 1444,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 1481,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 1491,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1495,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "operations",
+          "label": "Mission",
+          "id": "mission"
+        }
+      ]
+    },
+    {
+      "line": 1509,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1520,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 1522,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 1523,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 1541,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 1569,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        }
+      ]
+    },
+    {
+      "line": 1576,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 1583,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 1600,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1605,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 1677,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 1691,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "agency",
+          "label": "Cybersecurity and Infrastructure Security Agency",
+          "id": "cisa"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 1692,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Reporting",
+          "id": "reporting"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 1693,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 1699,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 1704,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1714,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "operations",
+          "label": "Mission",
+          "id": "mission"
+        }
+      ]
+    },
+    {
+      "line": 1726,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 1731,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1738,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "operations",
+          "label": "Mission",
+          "id": "mission"
+        }
+      ]
+    },
+    {
+      "line": 1764,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Continuous Monitoring",
+          "id": "continuous-monitoring"
+        }
+      ]
+    },
+    {
+      "line": 1766,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Continuous Monitoring",
+          "id": "continuous-monitoring"
+        }
+      ]
+    },
+    {
+      "line": 1770,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Continuous Monitoring",
+          "id": "continuous-monitoring"
+        }
+      ]
+    },
+    {
+      "line": 1777,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 1791,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1794,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Continuous Monitoring",
+          "id": "continuous-monitoring"
+        }
+      ]
+    },
+    {
+      "line": 1806,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1816,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "operations",
+          "label": "Mission",
+          "id": "mission"
+        }
+      ]
+    },
+    {
+      "line": 1831,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    },
+    {
+      "line": 1841,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        }
+      ]
+    },
+    {
+      "line": 1868,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Risk Management Framework",
+          "id": "risk-management-framework"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 1870,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 1878,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        }
+      ]
+    },
+    {
+      "line": 1879,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 1884,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Audit",
+          "id": "audit"
+        }
+      ]
+    }
+  ],
+  "blocked_reason": null
+}
