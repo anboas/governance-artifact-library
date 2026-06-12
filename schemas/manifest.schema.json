@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/anboas/governance-artifact-library/schemas/manifest.schema.json",
+  "title": "Governance Artifact Library Manifest",
+  "type": "object",
+  "required": ["generated_at", "artifact_count", "artifacts"],
+  "properties": {
+    "generated_at": { "type": "string" },
+    "artifact_count": { "type": "integer", "minimum": 0 },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "path", "pipeline_state", "mirror_status"],
+        "properties": {
+          "id": { "type": "string" },
+          "path": { "type": "string" },
+          "pipeline_state": { "type": "string" },
+          "mirror_status": { "type": "string" }
+        }
+      }
+    }
+  }
+}

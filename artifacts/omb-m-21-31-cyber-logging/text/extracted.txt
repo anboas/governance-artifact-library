@@ -1,0 +1,1895 @@
+                          EXECUTIVE OFFICE OF THE PRESIDENT
+                              OFFICE OF MANAGEMENT AND BUDGET
+                                          WASHINGTON, D.C. 20503
+
+
+
+
+                                             August 27, 2021
+
+
+M-21-31
+
+MEMORANDUM FOR THE HEADS OF EXECUTIVE DEPARTMENTS AND AGENCIES
+
+FROM:            Shalanda D. Young
+                 Acting Director
+
+SUBJECT:         Improving the Federal Government’s Investigative and Remediation Capabilities
+                 Related to Cybersecurity Incidents
+
+        Recent events, including the SolarWinds incident, underscore the importance of
+increased government visibility before, during, and after a cybersecurity incident. Information
+from logs on Federal information systems1 (for both on-premises systems and connections
+hosted by third parties, such as cloud services providers (CSPs)) is invaluable in the detection,
+investigation, and remediation of cyber threats.
+
+        Executive Order 14028, Improving the Nation's Cybersecurity,2 directs decisive action
+to improve the Federal Government’s investigative and remediation capabilities. This
+memorandum was developed in accordance with and addresses the requirements in section 8 of
+the Executive Order for logging, log retention, and log management, with a focus on ensuring
+centralized access and visibility for the highest-level enterprise security operations center (SOC)
+of each agency. In addition, this memorandum establishes requirements for agencies3 to
+increase the sharing of such information, as needed and appropriate, to accelerate incident
+response efforts and to enable more effective defense of Federal information and executive
+branch departments and agencies.
+
+Section I: Maturity Model for Event Log Management
+
+        This memo establishes a maturity model to guide the implementation of requirements
+across four Event Logging (EL) tiers, as described in Table 1 below.
+
+
+
+
+1
+  As used in this memorandum, “Federal information system” has the meaning given in Executive Order 14028.
+2
+  Available at https://www.federalregister.gov/d/2021-10460
+3
+  As used in this memorandum, “agency” has the meaning given in 44 U.S.C. § 3502. The requirements established
+by this memorandum do not apply to national security systems, as defined in Executive Order 14028.
+                              Table 1: Summary of Event Logging Tiers
+  Event Logging         Rating                                Description
+      Tiers
+      EL0            Not             Logging requirements of highest criticality are either not
+                     Effective       met or are only partially met
+        EL1          Basic           Only logging requirements of highest criticality are met
+        EL2          Intermediate    Logging requirements of highest and intermediate
+                                     criticality are met
+        EL3          Advanced        Logging requirements at all criticality levels are met
+
+        These tiers will help agencies prioritize their efforts and resources so that, over time, they
+will achieve full compliance with requirements for implementation, log categories, and
+centralized access. Agencies should also prioritize their compliance activities by focusing first on
+high-impact systems and high value assets (HVAs).
+
+Tier EL0, Rating – Not Effective
+   The agency or one or more of its components have not implemented the following
+requirement:
+
+   •    Ensuring that the Required Logs categorized as Criticality Level 0 are retained in
+        acceptable formats for specified timeframes, per technical details described in Appendix
+        C (Logging Requirements – Technical Details).
+
+Tier EL1, Rating – Basic
+   The agency and all of its components meet the following requirements, as detailed in Table 2
+(EL1 Basic Requirements) within Appendix A (Implementation and Centralized Access
+Requirements):
+
+    •   Basic Logging Categories
+    •   Minimum Logging Data
+    •   Time Standard
+    •   Event Forwarding
+    •   Protecting and Validating Log Information
+    •   Passive DNS
+    •   Cybersecurity Infrastructure Security Agency (CISA) and Federal Bureau of
+        Investigations (FBI) Access Requirements
+    •   Logging Orchestration, Automation, and Response – Planning
+    •   User Behavior Monitoring – Planning
+    •   Basic Centralized Access
+
+
+
+
+                                                  2
+Tier EL2, Rating – Intermediate
+   The agency and all of its components meet the following requirements, as detailed in Table 3
+(EL2 Intermediate Requirements) within Appendix A (Implementation and Centralized Access
+Requirements):
+
+   •   Meeting EL1 maturity level
+   •   Intermediate Logging Categories
+   •   Publication of Standardized Log Structure
+   •   Inspection of Encrypted Data
+   •   Intermediate Centralized Access
+Tier EL3, Rating – Advanced
+   The agency and all its components meet the following requirements, as detailed in in Table 4
+(EL3 Advanced Requirements) within Appendix A (Implementation and Centralized Access
+Requirements):
+
+   •   Meeting EL2 maturity level
+   •   Advanced Logging Categories
+   •   Logging Orchestration, Automation, and Response – Finalizing Implementation
+   •   User Behavior Monitoring – Finalizing Implementation
+   •   Application Container Security, Operations, and Management
+   •   Advanced Centralized Access
+
+Section II: Agency Implementation Requirements
+
+   Agencies must immediately begin efforts to increase performance in accordance with the
+requirements of this memorandum. Specifically, agencies must:
+
+   •   Within 60 calendar days of the date of this memorandum, assess their maturity against
+       the maturity model in this memorandum and identify resourcing and implementation gaps
+       associated with completing each of the requirements listed below. Agencies will provide
+       their plans and estimates to their OMB Resource Management Office (RMO) and Office
+       of the Federal Chief Information Officer (OFCIO) desk officer.
+   •   Within one year of the date of this memorandum, reach EL1 maturity.
+   •   Within 18 months of the date of this memorandum, achieve EL2 maturity.
+   •   Within two years of the date of this memorandum, achieve EL3 maturity.
+   •   Provide, upon request and to the extent consistent with applicable law, relevant logs to
+       the Cybersecurity and Infrastructure Security Agency (CISA) and Federal Bureau of
+       Investigation (FBI). This sharing of information is critical to defend Federal information
+       systems.
+   •   Share log information, as needed and appropriate, with other Federal agencies to address
+       cybersecurity risks or incidents.
+
+
+
+
+                                               3
+Section III: Government-Wide Responsibilities
+
+         The following agencies bear specialized responsibilities as part of government-wide
+efforts to improve the management and use of logging practices:
+
+       CISA is responsible for the following actions:
+       • Deploying teams to advise agencies in their assessment of logging capabilities.
+       • Developing and publishing tools, in coordination with the FBI, to help agencies facilitate
+          their assessment of logging maturity across the organization.
+
+       The Department of Commerce is responsible for the following actions:
+       • Continuing to maintain National Institute of Standards and Technology (NIST) Special
+          Publication (SP) 800-92,4 Guide to Computer Security Log Management, in coordination
+          with CISA and the FBI.
+       • Incorporating the requirements of this memorandum regarding logging, log retention, and
+          log management in the next revision of SP 800-92 and other relevant publications.
+
+Section IV: Policy Assistance
+
+       Address all questions or inquiries regarding this memorandum to the OMB Office of the
+Federal Chief Information Officer (OFCIO) via email: ofcio@omb.eop.gov.
+
+Attachments
+
+Appendix A:                   Implementation and Centralized Access Requirements
+
+Appendix B:                   Definitions
+
+Appendix C:                   Logging Requirements – Technical Details
+
+
+
+
+4
+    Available at https://csrc.nist.gov/publications/detail/sp/800-92/final
+
+                                                              4
+Appendix A: Implementation and Centralized Access Requirements
+                                       Table 2: EL1 Basic Requirements
+    Basic Logging           Ensuring that Required Logs categorized as Criticality Level 0 are
+    Categories              retained in acceptable formats for specified timeframes, per technical
+                            details described in Appendix C.
+    Minimum Logging         At a minimum, agencies shall ensure that each event log contains the
+    Data                    following data, if applicable:
+                            •    Properly formatted and accurate timestamp (see below for Time
+                                 Standard Requirements)
+                            •    Status code for the event type
+                            •    Device identifier (MAC address5 or other unique identifier)
+                            •    Session / Transaction ID
+                            •    Autonomous System Number
+                            •    Source IP (IPv4)
+                            •    Source IP (IPv6)
+                            •    Destination IP (IPv4)
+                            •    Destination IP (IPv6)
+                            •    Status Code
+                            •    Response Time
+                            •    Additional headers (i.e., HTTP headers)
+                            •    Where appropriate, the username and/or userID shall be included
+                            •    Where appropriate, the command executed shall be included
+                            •    Where possible, all data shall be formatted as key-value-pairs
+                                 allowing for easy extraction
+                            •    Where possible, a unique event identifier shall be included for event
+                                 correlation; a unique event identifier shall be defined per event
+                                 type6
+
+
+
+
+5
+  Agencies should configure all hosts to have MAC randomization turned off. Where possible, this configuration
+should be maintained automatically.
+6
+  Software developed by agencies or by contractors on behalf of agencies must log unique event identifiers for each
+event in accordance with these requirements.
+
+                                                         5
+    Time Standard            Consistent timestamp formats across all event logs are necessary for
+                             accurate and efficient event correlation and log analysis. Timestamps
+                             must be applied consistently to logs from all computing devices,
+                             routers, switches, and servers. Agencies shall maintain log timestamps
+                             in a format that meets the following requirements, based on both ISO
+                             8601 and RFC 3339: Date and Time on the Internet: Timestamps.7
+
+                             •   YYYY-MM-DDThh:mm:ss.mmmZ (Zulu time, UTC+0) and
+                             •   YYYY-MM-DDThh:mm:ss.mmm+04:00 (UTC+4)
+                             •   YYYY = four-digit year
+                             •   MM = two-digit month
+                             •   DD = two-digit day of the month
+                             •   T = a set character indicating the start of the time element
+                             •   hh = two digits of an hour (00 through 23)
+                             •   mm = two digits of a minute
+                             •   ss = two digits of a second
+                             •   mmm = three digits of a millisecond (000 through 999)
+                             •   +|- = time zone designator (Z or +hh:mm or -hh:mm), the + or –
+                                 values indicate how far ahead or behind a time zone is from the
+                                 UTC (Coordinated Universal Time) zone.
+                             Agencies shall use a GPS master station clock as a baseline reference
+                             for timestamps used for logs and systems producing logs. If GPS
+                             reference is not possible, agencies shall use NIST’s authenticated time
+                             service.8 Public, unauthenticated, and unencrypted NTP pools shall
+                             only be used as an option of last resort, and only for as long as needed
+                             to begin leveraging other options.
+
+    Event Forwarding         Event Forwarding allows administrators to obtain events from remote
+                             computers, also called source computers or forwarding computers, and
+                             store them on a central server known as the collector computer.
+                             Agencies shall forward all required logging data, in near real- time9 and
+                             on an automated basis, to centralized systems responsible for security,
+                             information, and event monitoring (SIEM); bulk storage; and other
+7
+  Software developed by agencies or by contractors on behalf of agencies must log timestamps for each event in
+accordance with these requirements. If the software does not produce data in this format, Federal agencies will
+transform records to conform to these standards before the data is ingested into the SIEM or stored in bulk storage.
+8
+  https://www.nist.gov/pml/time-and-frequency-division/time-services/nist-authenticated-ntp-service
+9
+  The term "near real-time" or "nearly real-time" (NRT) refers to the time delay introduced by automated data
+processing or network transmission between the occurrence of an event and the use of the processed data, such as
+for display or feedback and control purposes.
+
+                                                          6
+                 analytical workflows or services. Data must be encrypted in transit
+                 between its source and destination. Agencies must ensure the original
+                 log can be replayed for future use.
+Protecting and   To ensure data integrity, logging facilities and log information must be
+Validating Log   protected by cryptographic methods from tampering and unauthorized
+Information      access. Agencies shall protect and monitor the integrity of their logs
+                 and systems producing logs by:
+                 •   Verifying that event logging is enabled and active for system
+                     components.
+                         o Traps shall be put in place to monitor these data streams for
+                             disruption.
+                         o These traps shall be monitored.
+                 •   Ensuring that only individuals who have a job-related need can
+                     view, access, or modify log files.
+                 •   Documenting views and usage of log files and regularly
+                     reviewing/auditing the resulting records.
+                 •   Confirming that current log files are protected from unauthorized
+                     modifications via access control mechanisms, such as virtual or
+                     physical segregation.
+                 •   Ensuring that current log files are promptly backed up to an
+                     authorized source, such as a centralized log server or write-once
+                     media.
+                 •   Using integrity-verification mechanisms to detect unauthorized
+                     changes to event logging configuration and log files that are no
+                     longer being written to or are considered closed.
+                 •   Conducting integrity checks periodically and upon access against
+                     the log hashes throughout their retention period.
+                 •   When logging stops unexpectedly, audit alerts shall be sent in near
+                     real-time to any parties responsible for monitoring. The responsible
+                     party must promptly investigate the cause of the disruption and take
+                     appropriate corrective actions.
+                 •   Monitoring across the enterprise for unexpected changes to files or
+                     configuration items, including changes to:
+                         o Credentials
+                         o Privileges and security settings
+                         o Content
+                         o Core attributes and size
+                         o Hash values
+                         o Configuration values
+
+Passive DNS      Federal agencies shall implement a Domain Name System (DNS)
+                 logging system that meets the requirements identified in Appendix C,
+                 including DNS requests made over encrypted DNS connections.
+                 Agencies shall implement accompanying analytics that allow for rapid
+                 identification of the host that sourced each DNS query. This capability
+
+                                         7
+                    shall be monitored and triaged. Federal agencies shall automate the
+                    production of a list of hostnames that are frequently accessed or looked
+                    up by legitimate users within their agency, but are not included in
+                    general top domain lists identified by CISA or available publicly or via
+                    subscription. Agencies should make that list automatically accessible to
+                    CISA or submit it to CISA daily via an acceptable automated
+                    mechanism.
+CISA and FBI        Agencies shall provide logs and other relevant data to CISA and the
+Access              FBI upon request, to the extent consistent with applicable law,
+Requirements        including 44 U.S.C. § 3553(l). Agencies shall provide such data in a
+                    format and by means agreed upon by the agency, CISA, or the FBI, and
+                    shall do so pursuant to timelines specified by CISA or the FBI. Those
+                    timelines may require near real-time access to data.
+Logging             Federal agencies shall maintain and manage logs by leveraging the
+Orchestration,      additional logging to develop automated hunt and incident response
+Automation, and     playbooks. Such playbooks shall take advantage of Security,
+Response –          Orchestration, Automation, and Response (SOAR) capabilities.
+Planning            Agencies at EL1 stage shall start planning on how to best implement
+                    SOAR capabilities in their environment. For additional implementation
+                    requirements, please see Table 4, EL3 Advanced Requirements,
+                    Logging Orchestration, Automation, and Response – Finalizing
+                    Implementation.
+User Behavior       User behavioral analytics allow for early detection of malicious
+Monitoring –        behavior. This technology leverages machine learning and artificial
+Planning            intelligence techniques to detect anomalous user actions and help
+                    combat advanced threats. Agencies at EL1 stage shall start planning on
+                    how to best implement a user behavior analytics capability in their
+                    environment, leveraging the logging requirements, in order identify
+                    potentially malicious or malicious activity. Agencies are expected to
+                    finalize their implementation of this capability to achieve EL3 maturity
+                    level. For additional implementation requirements, please see Table 4,
+                    EL3 Advanced Requirements, User Behavior Monitoring – Finalizing
+                    Implementation.
+Basic Centralized   Logs should be centrally aggregated by an agency component-level
+Access              Enterprise Log Manager (ELM). Traps for detecting data-stream
+                    disruption should be monitored by the component-level SOC. The DNS
+                    logging system and accompanying analytics shall be monitored and
+                    triaged by the component-level SOC.
+
+
+
+
+                                            8
+                             Table 3: EL2 Intermediate Requirements
+EL1 maturity         All requirements for EL1 must be met.
+level
+
+
+Intermediate         Required Logs categorized as Criticality Level 1 and 2 must be retained in
+Logging              acceptable formats for specified timeframes, per technical details
+Categories           described in Appendix C.
+Publication of       For all software developed by or on behalf of Federal agencies that
+Standardized Log     produces logs and is deployed in Federal environments, Federal agencies
+Structure            shall provide a document detailing the structure (schema) for those logs to
+                     CISA. Agencies shall refer to guidance from CISA in developing this
+                     documented schema. Federal agencies shall also provide all updates to the
+                     schema to CISA no later than one business day after they are finalized.
+                     The schema and associated documentation shall be published to Data.gov.
+Inspection of        Federal agencies shall retain and store in cleartext form the data or
+Encrypted Data       metadata from Appendix C that is collected in their environment. If
+                     agencies perform full traffic inspection through active proxies, they
+                     should log additional available fields as described in Appendix C and can
+                     work with CISA to implement these capabilities. If agencies do not
+                     perform full traffic inspection, they should log the metadata available to
+                     them. In general, agencies are expected to follow zero-trust principles
+                     concerning least privilege and reduced attack surface, and relevant
+                     guidance from OMB and CISA relating to zero-trust architecture.
+Intermediate         Required Logs categorized as Criticality Levels 0 and 1 are accessible and
+Centralized          visible for the highest-level security operations at the head of each
+Access               agency. Required Logs categorized as Criticality Levels 2 are retained, at
+                     a minimum, at component level.
+                     • Traps for detecting data-stream disruption should be monitored by the
+                         component-level and top-level enterprise SOCs. The DNS logging
+                         system and accompanying analytics shall be monitored and triaged by
+                         the component-level and top-level enterprise SOCs. The enterprise
+                         SOC shall ensure that cross-organizational analytics are established
+                         for use across agency components.
+
+
+
+                              Table 4: EL3 Advanced Requirements
+EL2 maturity level    All requirements for EL2 must be met.
+
+
+Advanced Logging      Required Logs categorized as Criticality Level 3 must be retained in
+Categories            acceptable formats for specified timeframes, per technical details
+                      described in Appendix C.
+Logging               Agencies shall finalize and implement automated hunt and incident
+Orchestration,        response playbooks. Federal agencies shall also provide any updates to
+
+                                               9
+ Automation, and          the playbooks and automation integrations to CISA no later than one
+ Response –               business day after they are finalized.
+ Finalizing
+ Implementation
+
+
+ User Behavior            User behavioral analytics must be implemented in order to allow for
+ Monitoring –             early detection of malicious behavior. This technology leverages
+ Finalizing               machine learning and artificial intelligence techniques to detect
+ Implementation           anomalous user actions and help combat advanced threats. Agencies
+                          shall implement a user behavior analytics capability, leveraging the
+                          logging requirements, in order identify potentially malicious or
+                          malicious activity. This capability shall monitor all user and non-user
+                          accounts. This capability shall be monitored and triaged by component-
+                          and top-level agency Security Operations Centers (SOC). At a
+                          minimum, user Behavior Monitoring should be configured to detect and
+                          alert on:
+                          •   Compromised user credentials
+                          •   Privileged-user compromise
+                          •   Improper asset access
+                          •   Compromised system/host/device
+                          •   Lateral movement of threat actor
+
+ Application              Container security and monitoring tools should be integrated with
+ Container Security,      security information and event management (SIEM) tools to ensure
+ Operations, and          container-related events are captured by the enterprise. Alternatively, in
+ Management               cases where the uses and privileges of containers are appropriately
+                          constrained by the orchestration layer, agencies may rely on SIEM tools
+                          present at that layer. In general, Federal agencies shall ensure that their
+                          cyber hunt and incident response teams have appropriate tools and
+                          training to identify incidents within a containerized environment.10
+ Advanced                 Required Logs across all criticality levels shall be accessible to the
+ Centralized Access       highest-level security operations at the head of each agency.
+
+
+
+
+10
+  Reference NIST SP 800-191, Application Container Security Guide;
+https://csrc.nist.gov/publications/detail/sp/800-190/final
+
+                                                     10
+Appendix B: Definitions
+The definitions for the fields in Appendix C are as follows:
+
+Log Category – This column describes the various log categories from which logging data can
+be sourced. The table in Appendix C is organized by log category for ease of use.
+
+Required Data – This column describes the information that agencies must collect within each
+log category.
+
+Format – This column describes the acceptable formats for the required data. See below for
+definitions of the various formats that can appear in this column.
+
+        •   Attachment – An attachment is a file sent via email.
+        •   Config – A CONFIG file is a configuration file used by various applications. It
+            contains plain-text parameters that define settings or preferences for building or
+            running a program.
+        •   Database record – A database record is a set of database fields.
+        •   Database query – A database query is a request to access data from a database.
+            Capturing the query allows for playback so that Hunt and IR teams can identify what
+            data was exfiltrated or inserted.
+        •   File – A file is a resource for recording data in a storage device.
+        •   Log – A log file contains data about an event that occurred in an application or
+            operating system.
+        •   Packet capture – Packet capture (PCAP) results from the interception and copying of
+            a data packet that is crossing or moving over a specific computer network.
+        •   Script – A script file is a configuration file that lets users run or execute certain
+            actions.
+        •   Simple Network Management Protocol (SNMP) – SNMP exposes management
+            data in the form of variables on the managed systems organized in a management
+            information base (MIB), which describe the system status and configuration. These
+            variables can then be remotely queried (and, in some circumstances, manipulated) by
+            managing applications.
+
+Application monitoring dashboard – An application monitoring dashboard provides
+information about the metrics, usage, and performance of an application. Agencies should use a
+dashboard suited to the version, type, and deployment method of each application.
+
+Criticality – Each log category has an assigned criticality level based on its relative
+cybersecurity value. This cybersecurity value relates to the usefulness of the log data for threat
+detection, with the most useful data assigned a criticality of zero, and the least a criticality of 3.
+
+Active storage – Refers to data that is stored in a manner that facilitates frequent use and ease of
+access.
+
+
+
+
+                                                  11
+Cold data storage – refers to the storage of data in a manner that minimizes costs while still
+allowing some level of access and use. Agencies should leverage architectures defined in NIST
+800-92 to ensure that data stored in this manner is properly secured and audited.
+
+EMM – Enterprise Mobility Management
+
+UEM – Unified Endpoint Management
+
+MTD – Mobile Threat Defense
+
+MDM – Mobile Device Management
+
+IMEI – International Mobile Equipment Identity
+
+IMSI – International Mobile Subscriber Identity
+
+
+
+
+                                              12
+Appendix C: Logging Requirements – Technical Details
+Exceptions to requirements set below:
+   • Full packet capture data is required to be stored for only 72 hours.
+   • The retention periods prescribed below are minimum values; agencies may retain data for
+       longer periods if appropriate.
+
+                       Table 5: Logging Requirements – Technical Details
+ Log                                                                 Criticalit   Retention
+              Required Data                             Format
+ Category                                                            y            Period
+ Identity &   Identity & Credential Management          Log          0            12 Months
+ Credential      • Account Creation                                               Active
+ Manageme        • Manage Credential Type               Script                    Storage
+ nt                      o (PIV or CAC) and
+                            Derived Credentials                                   18 Months
+                         o Cert                                                   Cold Data
+                         o MFA                                                    Storage
+                         o Password
+                 • Establish/Manage Attributes
+                         o Organization
+                         o Groups/Roles
+                 • Manage/Track Changes in
+                     Attributes & Credentials
+                 • Track Usage of Credentials
+                 • Account Deletion
+
+ Privileged   Privileged Identity & Credential          Log          0            12 Months
+ Identity &   Management                                                          Active
+ Credential      • Provisioning                         Script                    Storage
+ Manageme        • Manage Credential Type
+ nt                      o (PIV or CAC) and                                       18 Months
+                             Derived Credentials                                  Cold Data
+                         o Cert                                                   Storage
+                         o MFA
+                         o Password
+                 • Establish/Manage Attributes
+                         o Organization
+                         o Groups/Roles
+                 • Manage/Track Changes in
+                     Attributes & Credentials
+                 • Track Usage of Credentials
+                 • Deprovisioning
+                 • Establish and Manage
+                     Privileges (Privilege
+                     Credentials)
+
+
+                                              13
+                 •   Isolate, Monitor, Record, Audit
+                     Privilege Sessions
+                 •   Control Privileged Actions
+                         o Commands
+                         o Tasks
+                 •   Track Privilege Escalation and
+                     Delegation
+                 •   Monitor, Alert and Respond to
+                     Anomalous
+                     Behaviors/Activities
+
+Email         IP and Domain Reputation (As             Log   0   12 Months
+Filtering,    Indicated by Mail Server                           Active
+Spam, and     Connection)                                        Storage
+Phishing
+                                                                 18 Months
+                                                                 Cold Data
+                                                                 Storage
+Network       All Devices                              Log   0   12 Months
+Device            • DHCP Lease Information                       Active
+Infrastruc-          Including:                                  Storage
+ture                     o MAC
+(For                     o IP                                    18 Months
+Devices                                                          Cold Data
+with                                                             Storage
+Multiple
+Interfaces:
+Interface
+MAC - If
+Correlated
+to the De-
+NAT IP
+Address)
+Network       DNS - Source IP and Port,                Log   0   12 Months
+Device        Destination IP and Port                            Active
+Infrastruc-   Date and Time                                      Storage
+ture             • Content of Query, Response,
+                     and Errors – All Record Types               18 Months
+                 • Zone Transfers Request and                    Cold Data
+                     Response (Audit Log)                        Storage
+                 • Zone Transfers Request and
+                     Response (Content)
+
+
+
+
+                                            14
+Network       Passive DNS Log                          Log        0   12 Months
+Device           • Tuple (Rrname, Rrtype, Rdata)                      Active
+Infrastruc-      • Time_First                          Database       Storage
+ture             • Time_Last                           Record
+                 • Count                                              18 Months
+                 • Bailiwick                                          Cold Data
+                 • Sensor_Id                                          Storage
+                 • Zone_Time_First
+                 • Zone_Time_Last
+                 • Time_First_Ms
+                 • Time_Last_Ms
+                 • Origin
+                 • Count of Questions Asked by
+                     Source IP
+                 • Count of Questions Asked
+                     Overall
+                 • Count of Responses by Source
+                     IP
+                 • Query Size in Bytes
+                 • Response Size in Bytes
+                 • TTL per Record Returned
+                 • Request Was Made Via UDP,
+                     TCP or Both
+                 • Response Was Made Via UDP,
+                     TCP or Both
+                 • Passive DNS Source (Used to
+                     Identify Which Passive DNS
+                     Source Data Came From)
+Network       DNS, DHCP, and Wi-Fi                     Log        0   12 Months
+Device           • Wi-Fi Supporting Infrastructure                    Active
+Infrastruc-          Logs Including Security Logs      SNMP           Storage
+ture                 at Info Level
+                 • Device Authentication Logs                         18 Months
+                     with User Agent                                  Cold Data
+                 • URL Browsing Logs + HTTP                           Storage
+                     Methods (e.g., Post, Get, etc.)
+                 • User Authentication Logs
+                 • DHCP Lease Information
+                     Including MAC, IP
+                 • Roaming Logs
+                 • Timestamps
+
+
+
+
+                                            15
+Network       DNS, DHCP, and Wi-Fi                 Log        0   12 Months
+Device          • Static Network Address                          Active
+Infrastruc-         Translation Table Mapping as   Database       Storage
+ture                Well as Port Forwards          Record
+                       o Date and Time                            18 Months
+                       o Protocol                  Script         Cold Data
+                       o Port                                     Storage
+                       o Inside Local and Global   File
+                           IP and Port
+                       o Outside Local and         Config
+                           Global IP and Port
+                                                SNMP
+Network          • IDS / IPS / NTA / NDR / SIEM Log           0   12 Months
+Device              Logs                                          Active
+Infrastruc-      • API Activity Logs            File              Storage
+ture             • Authentication Logs
+(General         • Firewall Logs                Packet            18 Months
+Logging)         • Web Proxy/WAF Logs           Capture           Cold Data
+                 • Service Metrics                                Storage
+                 • Network Flow Logs
+                                                                  72 Hours
+                 • Remote Access/VPN Logs
+                                                                  Packet
+                 • System/OS Logs
+                                                                  Capture
+                 • DLP Logs
+                 • DNS Query/Response Logs
+Network       Routers and Switches              Script        0   12 Months
+Device           • Routing Tables                                 Active
+Infrastruc-      • Routing Changes (Logging All File              Storage
+ture                CLI Commands, BGP)
+(For             • IP Addressing Schema and     Config            18 Months
+Devices             Implementation                                Cold Data
+with                                                              Storage
+Multiple
+Interfaces:
+Interface
+MAC - If
+Correlated
+to The De-
+NAT IP
+Address)
+
+
+
+
+                                         16
+Network       Load Balancer / Reverse Proxy        Log   0   12 Months
+Device        Access Logs                                    Active
+Infrastruc-      • Connection Type                           Storage
+ture             • Date and Time
+(For             • Resource ID of the Load                   18 Months
+Devices              Balancer                                Cold Data
+with             • Client IP:Port                            Storage
+Multiple         • Target IP:Port
+Interfaces:      • Request Processing Time
+Interface        • Target Processing Time
+MAC - If
+                 • Response Processing Time
+Correlated
+                 • Status Code from Load
+to the De-
+                     Balancer
+NAT IP
+Address)         • Target Status Code
+                 • Received Bytes
+                 • Bytes Sent
+                 • Request
+                 • User Agent
+                 • SSL Cipher
+                 • SSL Protocol
+                 • SNI Domain
+                 • Matched Rule Priority
+                 • Actions Executed
+                 • Redirect URL
+                 • Error Reason
+                 • Target IP:Port List
+                 • Target Status Code List
+                 • Classification Reason Request
+                     Does Not Comply with RFC
+                     7230
+                 • Other Implementation Specific
+                     Fields
+
+
+
+
+                                          17
+Network       Proxies and Web Content Filters        Log   0   12 Months
+Device        Provides NAT, User, and Gateway IP               Active
+Infrastruc-   Address to Provide Enhanced                      Storage
+ture          Reporting of Malicious Domains and
+(For          IP Addresses. In the Case of Web,                18 Months
+Devices       W3c Format.                                      Cold Data
+with             • Date and Time                               Storage
+Multiple         • Source
+Interfaces:              o Hostname
+Interface                o IP Address and Port
+MAC – If                 o MAC
+Correlated       • Destination
+to the De-               o Hostname
+NAT IP                   o IP Address and Port
+Address)                 o MAC
+                 • Web URL Methods / User
+                     Agent / Decoded Headers
+                 • URL Categories
+                 • URL
+                 • Permitted, Restricted, Denied
+Network       Proxies and Web Content Filters        Log   0   12 Months
+Device           • Policy Updates                              Active
+Infrastruc-      • Software Updates                            Storage
+ture
+                                                               18 Months
+                                                               Cold Data
+                                                               Storage
+
+Network       General Information                    Log   0   12 Months
+Device          • Date and Time                                Active
+Infrastruc-     • Event, Status, or Error Codes                Storage
+ture            • Service/Command/Application
+(Access,            Name                                       18 Months
+Authoriza-      • User or System Account                       Cold Data
+tion, and           Associated with an Event                   Storage
+Accounting      • Device Used (e.g., Source and
+)                   Destination IPs, Terminal
+                    Session ID, Web Browser, etc.)
+
+              Operating System (OS) Events
+                • Start-Up and Shutdown of the
+                    System
+                • Start-Up and Shutdown of a
+                    Service
+
+
+                                           18
+   •   Network Connection Changes
+       or Failures
+   •   Changes to, or Attempts to
+       Change, System Security
+       Settings and Controls
+
+OS Audit Records
+   • Log-On Attempts
+     (Success/Failure)
+   • The Function(s) Performed
+     after Logging On (e.g.,
+     Reading or Updating a Critical
+     File, Software Installation)
+   • Account Changes (e.g.,
+     Account Creation and Deletion,
+     Account Privilege Assignment)
+   • Successful/Failed Use of
+     Privileged Accounts
+
+Application Account Information
+  • Application Authentication
+      Attempts (Success/Failure)
+  • Application Account Changes
+      (e.g., Account Creation and
+      Deletion, Account Privilege
+      Assignment)
+  • Use of Application Privileges
+
+Application Operations
+  • Application Startup and
+      Shutdown
+  • Application Failures
+  • Major Application
+      Configuration Changes
+  • Application Transactions, For
+      Example,
+          o Email Servers
+             Recording the Sender,
+             Recipients, Subject
+             Name, and Attachment
+             Names for Each Email
+          o Web Servers Recording
+             Each URL Requested
+             and the Type of
+             Response Provided by
+             the Server
+
+                            19
+                        o Business Applications
+                           Recording Which
+                           Financial Records Were
+                           Accessed by Each User
+Operating     User and Administrator Access to      Log   0   12 Months
+Systems -     OS Components and Applications                  Active
+Windows          • File and Object Access                     Storage
+Infrastruc-      • Audit Log Access
+ture and            (Success/Failure)                         18 Months
+Operating        • System Access and Log Off                  Cold Data
+Systems             (Success/Failure)                         Storage
+                 • Privilege Access and Log Off
+                    (Success/Failure)
+                 • RDP Access and Log Off
+                    (Success/Failure)
+                 • SMB Access
+                 • Installation or Removal of
+                    Storage Volumes or
+                    Removeable Media
+
+              System Performance and
+              Operational Characteristics
+                 • Resource Utilization, Process
+                    Status
+                 • System Events
+                 • Service Status Changes (Start,
+                    Stop, Fail, Restart, etc.)
+                 • Service Failures and Restarts
+                 • Process Creation and
+                    Termination
+
+              System Configuration
+                 • Changes to Security
+                    Configuration
+                    (Success/Failure)
+                 • Audit Log Cleared
+                 • Changes to Accounts
+                 • User or Group Management
+                    Changes
+                 • Scheduled Task Changes
+
+              File Access
+                  • Transfer of Data to External
+                     Media or Remote Hosts
+
+
+                                            20
+Host Network Communications
+   • Listening Network Port and IP
+      Address
+   • Active Network
+      Communication with Other
+      Hosts
+
+Powershell Execution Commands
+
+WMI Events
+
+Registry Access
+
+Command-Line Interface (CLI)
+
+Basic Input Output System (BIOS),
+Unified Extensible Firmware
+Interface (UEFI), and Other
+Firmware
+   • Version
+   • Created Date
+   • Installed Date
+   • Manufacturer
+
+
+
+
+                            21
+Operating   User and Administrator Access to OS Log   0   12 Months
+Systems -   Components and Applications                   Active Storage
+MACOS (Or      • File and Object Access
+Other Apple    • Audit Log Access                         18 Months
+Desktop and       (Success/Failure)                       Cold Data
+Server         • System Access and Log Off                Storage
+Operating         (Success/Failure)
+Systems)       • Privilege Access and Log Off
+                  (Success/Failure)
+               • Remote Terminal or Equivalent
+                  Access and Log Off
+                  (Success/Failure)
+               • Samba/NFS/(S)FTP or
+                  Equivalent Access
+               • Installation or Removal of
+                  Applications
+               • Installation or Removal of
+                  Storage Volumes or Removeable
+                  Media
+
+            System Performance and Operational
+            Characteristics
+               • Resource Utilization, Process
+                  Status
+               • System Events
+               • Service Status Changes (Start,
+                  Stop, Fail, Restart, etc.)
+               • Service Failures and Restarts
+               • Process Creation and
+                  Termination
+
+            System Configuration
+               • Changes to Security
+                  Configuration (Success/Failure)
+               • Audit Log Cleared
+               • Changes to Accounts
+               • User or Group Management
+                  Changes
+               • Scheduled Task Changes
+
+            File Access
+                • Transfer of Data to External
+                   Media or Remote Hosts
+
+            Host Network Communications
+
+                                          22
+   •   Listening Network Port and IP
+       Address
+   •   Active Network Communication
+       with Other Hosts
+
+Command-Line Interface (CLI)
+  • System Log Folder: /Var/Log/*
+  • System Log:
+    /Var/Log/System.Log
+  • Mac Analytics Data:
+    /Var/Log/Diagnosticmessages/*
+  • Wi-Fi Log: /Var/Log/Wifi.Log
+  • System Application Logs:
+    /Library/Logs/* and
+    /Private/Var/Log/*
+  • System Reports:
+    /Library/Logs/Diagnosticreports/
+    *
+  • User Application Logs:
+    /Users/Name/Library/Logs/*
+  • User Reports:
+    /Users/Name/Library/Logs/Diag
+    nosticreports/*
+  • Audit Log: /Var/Audit/*
+
+Basic Input Output System (BIOS),
+Unified Extensible Firmware
+Interface (UEFI), and Other
+Firmware
+   • Version
+   • Created Date
+   • Installed Date
+   • Manufacturer
+
+
+
+
+                             23
+Operating   User and Administrator Access to OS Log   0   12 Months
+Systems –   Components and Applications                   Active Storage
+BSD (Linux)    • File and Object Access
+               • Audit Log Access                         18 Months
+                  (Success/Failure)                       Cold Data
+               • System Access and Log Off                Storage
+                  (Success/Failure)
+               • Privilege Access and Log Off
+                  (Success/Failure)
+               • Remote Terminal or Equivalent
+                  Access and Log Off
+                  (Success/Failure)
+               • Samba/NFS/(S)FTP or
+                  Equivalent Access
+               • Installation or Removal of
+                  Storage Volumes or Removeable
+                  Media
+
+            System Performance and Operational
+            Characteristics
+               • Resource Utilization, Process
+                  Status
+               • System Events
+               • Service Status Changes (Start,
+                  Stop, Fail, Restart, Etc.)
+               • Service Failures and Restarts
+               • Process Creation and
+                  Termination
+
+            System Configuration
+               • Changes to Security
+                  Configuration (Success/Failure)
+               • Audit Log Cleared
+               • Changes to Accounts
+               • User or Group Management
+                  Changes
+               • Scheduled Task Changes
+
+            File Access
+                • Transfer of Data to External
+                   Media or Remote Hosts
+
+            Host Network Communications
+               • Listening Network Port and IP
+                  Address
+
+                                          24
+   •   Active Network Communication
+       with Other Hosts
+
+Command-Line Interface (CLI)
+
+Security Enhanced Linux (SELinux)
+AppArmor or Equivalent
+   • Warning Logs
+   • Violation Logs
+
+System
+   • /Var/Log/Messages
+   • /Var/Log/Dmesg
+   • /Var/Log/Syslog
+   • /Var/Log/Daemon.Log
+   • /Var/Log/Cron
+   • /Var/Log/Kern.Log
+   • /Var/Log/Boot.Log
+
+Access And Authentication
+   • /Var/Log/Auth.Log
+   • /Var/Log/Secure
+   • /Var/Log/Faillog
+   • /Var/Log/Btmp
+   • /Var/Log/Wtmp or
+       /Var/Log/Utmp
+
+Applications
+  • /Var/Log/Mail.Log or
+      /Var/Log/Maillog
+  • /Var/Log/Xorg.X.Log
+
+Package Install/Uninstall
+   • /Var/Log/Dpkg.Log
+   • /Var/Log/Yum.Log
+
+Basic Input Output System (BIOS),
+Unified Extensible Firmware
+Interface (UEFI), and Other
+Firmware
+   • Version
+   • Created Date
+   • Installed Date
+   • Manufacturer
+
+
+                            25
+Cloud      Nearly all successful attacks on cloud   Log   0   12 Months
+Environ-   services result from customer                      Active
+ments      misconfigurations. With that in mind,              Storage
+(General   the logging and monitoring focus
+Events)    should be on:                                      18 Months
+               • Any Activity on Breakglass                   Cold Data
+                  Account(s) (which should                    Storage
+                  never have to be used)
+               • Conditional Access Policy
+                  Changes
+               • Changes to Environment
+                  Policies (e.g., Azure
+                  Subscription, AWS Services,
+                  Google Solutions, etc.) in
+                  Management Logs
+               • Privileged Role Changes
+               • Virtual Network (VNet)
+                  Changes
+               • Deletions of Delete Locks
+               • Changes to Logging Policies
+               • Privileged Identity
+                  Management (PIM) and
+                  Identity Protection Changes
+               • Changes to Alert Rules (Audit
+                  the Auditor)
+               • Key Vault/Key Management
+                  Changes
+               • Storage File Access Logs, File,
+                  File Hashes
+               • Baseline Deviations for Prod
+                  App Tiers
+               • Baseline Deviations for Prod
+                  Data Tiers
+
+
+
+
+                                          26
+Cloud       •   IDS / IPS / NTA / NDR / SIEM Log   0   12 Months
+Environ-        Logs                                   Active
+ments       •   API Activity Logs                      Storage
+(General    •   Authentication Logs
+Logging)    •   Firewall Logs                          18 Months
+            •   Web Proxy/WAF Logs                     Cold Data
+            •   Service Metrics                        Storage
+            •   Billing Data
+                                                       72 Hours
+            •   Flow Logs
+                                                       Packet
+            •   Remote Access/VPN Logs
+                                                       Capture
+            •   System/OS Logs
+            •   DLP Logs
+            •   DNS Query/Response Logs
+Cloud       •   AWS Cloudtrail               Log   0   12 Months
+AWS         •   Amazon Cloudwatch Logs                 Active
+            •   AWS Config                             Storage
+            •   Amazon S3 Access Logs
+            •   Amazon VPC Flow Logs                   18 Months
+            •   AWS WAF Logs                           Cold Data
+                                                       Storage
+            •   AWS Shield
+            •   AWS Guardduty
+            •   AWS Security Hub
+Cloud       •   Azure Active Directory Logs  Log   0   12 Months
+Azure       •   Activity Logs                          Active
+            •   Unified Audit Logs (w/                 Storage
+                Advanced Audit Features)
+                                                       18 Months
+                                                       Cold Data
+                                                       Storage
+Cloud GCP   •   Access Transparency Audit   Log    0   6 Months
+                Log                                    Active
+            •   Admin Audit Log                        Storage
+            •   Data Studio Audit Log
+            •   Drive Audit Log                        18 Months
+            •   Email Audit Log                        Cold Data
+            •   Groups Audit Log                       Storage
+            •   LDAP Audit Log
+            •   Login Audit Log
+            •   Devices Audit Log
+            •   Sail Audit Log
+            •   Token Audit Log
+            •   User Accounts Audit Log
+            •   OAuth Token Audit Log
+            •   Security Reports
+
+                                      27
+                • Usage Logs
+                • Storage Logs
+                • Data Access Logs
+             For Organizational and Default
+             Configuration Settings Enable:
+                • Admin Read
+                • Data Read
+                • Data Write
+
+
+
+
+System       Configuration – Scripts or Database     Database   1   12 Months
+Configura-   Changes Used to Configure Systems,      Record         Active
+tion and     Services on a System, or Applications                  Storage
+Performanc                                           Script
+e                                                                   18 Months
+                                                                    Cold Data
+                                                                    Storage
+System       Endpoint Detection & Response           Log        1   12 Months
+Configura-   (EDR)                                                  Active
+tion and                                                            Storage
+Performanc
+e                                                                   18 Months
+                                                                    Cold Data
+                                                                    Storage
+System       Configuration Changes                   Log        1   12 Months
+Configura-      • Management Action                                 Active
+tion and           (Success/Failure)                                Storage
+Performanc      • Admin Login (Success/Failure)
+e                                                                   18 Months
+                                                                    Cold Data
+                                                                    Storage
+
+
+
+
+                                              28
+ Authentica-       Administrative                                    Log             1              12 Months
+ tion and              • Authentication Logons                                                      Active
+ Authoriza-                (Success/Failure)                                                        Storage
+ tion11                • Authentication Logoffs
+                       • Privilege Elevation                                                        18 Months
+                           (Success/Failure)                                                        Cold Data
+                       • Security Related System Alerts                                             Storage
+                           and Failures
+                       • User and Group
+                               o Additions
+                               o Deletions
+                               o Modification to
+                                   Permissions
+                       • Unauthorized Access Attempts
+                           to Critical Systems and File
+ Authentica-       Authorization                                     Log             1              12 Months
+ tion and          All Privileged Operations Including:                                             Active
+ Authoriza-            • “sudo” or runas                                                            Storage
+ tion12                • Enabling CLI Access
+                       • System Administrative                                                      18 Months
+                           Commands                                                                 Cold Data
+                       • Powershell Execution                                                       Storage
+                           Commands
+                       • Powershell Script Block
+                           Logging
+ Email             Content Filtering Policy Updates                  Log             1              12 Months
+ Filtering,                                                                                         Active
+ Spam, and                                                                                          Storage
+ Phishing
+                                                                                                    18 Months
+                                                                                                    Cold Data
+                                                                                                    Storage
+ Anti-Virus            •    Date and Time                            Log             1              12 Months
+ and                        Source Hostname                                                         Active
+ Behavior-                      o IP                                 Email                          Storage
+ Based                          o Port                               Attach-
+ Malware               •    Destination Hostname                     ments                          18 Months
+ Protection                     o IP                                                                Cold Data
+                                o Port                                                              Storage
+                       •    Description of Malicious Code
+                            or Action and Severity
+
+11
+   These requirements are general requirements that apply to systems and applications that are not specified in this
+document
+12
+   These requirements are general requirements that apply to systems and applications that are not specified in this
+document
+
+                                                         29
+                 •   Identity or (Hash) Identifier of
+                     the File(s)
+                 •   Description of the Action
+                     Taken (Clean, Quarantine,
+                     Delete)
+                 •   Signature Updates
+
+Anti-Virus    Indication of the Host that                Log      1   12 Months
+and           Connected to a Specific URL                             Active
+Behavior-        • Date and Time                                      Storage
+Based            • IP and Domain Reputation
+Malware          • URL                                                18 Months
+Protection       • Categorization                                     Cold Data
+                                                                      Storage
+Network       All Devices                                Script   1   12 Months
+Device            • Hash of the Binary / Binaries                     Active
+Infrastruc-            Running on the Device             File         Storage
+ture              • Hash of Configs
+                  • Firmware                                          18 Months
+                           o Version                                  Cold Data
+                           o Created Date                             Storage
+                           o Installed Date
+                           o Manufacturer
+Network       Firewalls                                  Log      1   12 Months
+Device        All Events from Firewall. At the very                   Active
+Infrastruc-   least, if access control lists (ACL) are                Storage
+ture          enabled and the device is filtering
+(for          traffic:                                                18 Months
+Devices           • Action Permit, Teardowns,                         Cold Data
+with                   Closes, Denies, and Drops                      Storage
+Multiple          • Interface
+Interfaces:       • Source
+Interface                  o Hostname
+MAC - If                   o IP Address and Port
+Correlated                 o MAC
+to the De-        • Destination
+NAT IP                     o Hostname
+Address)                   o IP Address and Port
+                           o MAC
+                  • Protocol Type
+                  • Rule Name and Number
+                       Triggered
+                  • URL if Applicable, Associated
+                       User and User Agent
+                  • Date and Time
+
+
+                                               30
+Network       All Devices: IDs / IPs Alerts and     Log   1   12 Months
+Device        Events                                          Active
+Infrastruc-       • Date and Time                             Storage
+ture              • Source
+(For                      o Hostname                          18 Months
+Devices                   o IP Address and Port               Cold Data
+with                      o MAC                               Storage
+Multiple          • Destination
+Interfaces:               o Hostname
+Interface                 o IP Address and Port
+MAC - if                  o MAC
+Correlated        • Signature Triggered and
+to the De-            Associated Details Including:
+NAT IP                    o Signature
+Address)                  o Anomaly
+                  • Rate Threshold
+                  • Device Name
+                  • Type of Event and Category
+                  • In the Case of Fortinet Network
+                      IPs, Attack Context
+                  • (Web / Device) User Agent if
+                      Available
+                  • Wi-Fi Channel
+                  • Wi-Fi Extended Service Set
+                      Identifier (ESSID)
+Network       VPN Gateway – All Events              Log   1   12 Months
+Device        At the very least, for Accepts,                 Active
+Infrastruc-   Teardowns, Closes, Denies, and                  Storage
+ture          Drops:
+(For              • Date and Time                             18 Months
+Devices           • Source                                    Cold Data
+with                      o Hostname                          Storage
+Multiple                  o IP Address and Port
+Interfaces:               o MAC
+Interface         • Destination
+MAC - if                  o Hostname
+Correlated                o IP Address and Port
+to the De-                o MAC
+NAT IP            • Source IP Address and Port,
+Address)              MAC (Inside Tunnel)
+                  • Destination IP Address and
+                      Port, MAC (Inside Tunnel)
+                  • Authentication Information
+                      (Success/Fail with Username
+                      and Device with User Agent)
+
+                                          31
+                         •    Change in Status of
+                              Connections / Tunnel Status
+                         •    VPN Certificate Status
+                              Validation
+
+
+
+
+ PKI                 All Events Related to:                            Log             1              12 Months
+ Infrastruc-             • Generation                                                                 Active
+ ture                    • Revocation                                                                 Storage
+                         • Access
+                         • Update                                                                     18 Months
+                         • Expiry                                                                     Cold Data
+                         • Recover                                                                    Storage
+                         • Authentication Success
+                         • Authentication Fail
+                         • LDAP Logs
+
+ Vulnerabil-             •    Date and Time                            Log13           1              12 Months
+ ity                     •    Hostname, IP Address, and OS                                            Active
+ Assessment                   Version                                                                 Storage
+ s                       •    Open Ports
+                         •    Installed Applications                                                  18 Months
+                         •    Version of Installed                                                    Cold Data
+                              Applications                                                            Storage
+                         •    Vulnerabilities Listed in
+                              Installed Applications
+                         •    Source of Vulnerability and
+                              Severity
+
+
+
+
+13
+     Logs are kept for ALL assessments, even if there are 0 vulnerabilities identified during the assessment
+
+                                                           32
+ Database               •
+                        Addition of New Users,                         Log             1               12 Months
+ Level                  Especially Privileged Users                                                    Active
+                     • Query Being Executed                            Database                        Storage
+                     • Query, Status (Response), and                   Query
+                        Traceback                                                                      18 Months
+                            o Method                                                                   Cold Data
+                            o Comments or Variables                                                    Storage
+                            o Multiple Embedded
+                               Queries
+                            o Database Alerts or
+                               Failures
+                            o Time to Execute Query
+                     • Attempts to Elevate Privileges
+                        (Success/Failure)
+                     • Changes to the Database
+                        Structure
+                     • Changes to User Roles or
+                        Database Permissions
+                     • Database Administrator
+                        Actions
+                     • Database Logons
+                        (Success/Failure)
+                     • Failed Logons
+                     • Use of Executable Commands
+                     • CLI Commands against the
+                        Data Base
+                     • Database Configuration and
+                        Version
+                     • Access to Sensitive
+                        Information within the
+                        Databases such as Keys,
+                        Passwords, Privacy Related
+                        Data
+ Application       Web Applications                                    Log             1               12 Months
+ Level               • URL                                                                             Active
+                     • Headers                                         Log and                         Storage
+                     • HTTP Methods - Request with                     PCAP of
+                        Body of Data14                                 Plaintext                       18 Months
+                     • HTTP Response with Body of                      HTTP                            Cold Data
+                        Data                                           Request                         Storage
+                                                                       and
+
+
+14
+  Agencies shall evaluate this data to ensure proper protections are in place to encrypt the data at rest and in transit.
+Agencies shall also ensure that their tools are accredited to handle sensitive data and proper oversight controls are
+implemented to look for signs of inappropriate data usage
+
+                                                           33
+                                              Response        72 Hours
+                                              with Data       Packet
+                                                              Capture
+
+
+
+
+Application   Web Application                 Log         1   12 Months
+Level           • Database Queries                            Active
+                • Response Codes                              Storage
+
+                                                              18 Months
+                                                              Cold Data
+                                                              Storage
+Application   Web Application Crashes         Log         1   12 Months
+Level           • Processes                                   Active
+                • Applications                                Storage
+
+                                                              18 Months
+                                                              Cold Data
+                                                              Storage
+Application   Web Applications & Middleware   Log         1   12 Months
+Level           • Configuration                               Active
+                • Version                                     Storage
+
+                                                              18 Months
+                                                              Cold Data
+                                                              Storage
+
+
+
+
+                                        34
+Virtualizati    •User Authentication              Log   1   12 Months
+on System            o Logon (Success and                   Active
+                         Failure)                           Storage
+                     o Attempts to Obtain
+                         Privileged Access                  18 Months
+                         (Success and Failure)              Cold Data
+              • User and Administrator/Root                 Storage
+                 Access and Actions of
+                 Components and Applications
+                     o File and Object Access
+                     o Audit Log Access
+                         (Success and Failure)
+                     o System Access (Failure)
+              • System Performance and
+                 Operational Characteristics
+                     o Resource Utilization,
+                         Process Status
+                     o System Events
+                     o Service Status Changes
+                         (e.g., Started, Stopped)
+              • System Configuration
+                     o Changes to Security
+                         Configuration
+                         (Success/Failure)
+                     o Changes to Hypervisor
+                     o Changes to VMS
+                     o Changes Made within
+                         VMS
+                     o Audit Log Cleared
+              • Creation and Deployment of
+                 VMS
+              • Migration of VMS (e.g.,
+                 Source and Target Systems,
+                 Time, Authorization)
+              • Creation and Deletion of
+                 System-Level Objects
+Mobile      EMM (UEM)/MTD Alerts                  Log   1   12 Months
+(Smart-       • Date and Time                               Active
+phones and    • Alert Type                                  Storage
+Tablets)      • Failure of Cryptographic
+EMM              Protocols                                  18 Months
+(UEM) /       • Failure of Device                           Cold Data
+MTD              Cryptographic Capabilities                 Storage
+Server Logs      (e.g., Trusted Boot Process)
+
+
+
+                                        35
+                •   Certificate Validation Failure
+                    (Defined in MDM Server
+                    Protection Profile)
+                •   Alerts from Agent to Server
+                    Defined MDM Agent
+                    Protection Profile
+
+Mobile       General:                                Log   1   12 Months
+(Smart-        • Date and Time                                 Active
+phones and                                                     Storage
+Tablets)     Device Data
+EMM             • Device Name                                  18 Months
+(UEM) /         • Device Manufacturer and                      Cold Data
+MTD                 Model                                      Storage
+Agent Logs      • Serial #
+                • Phone #
+                • IMEI, IMSI, OS Version, OS
+                    Build
+                • Firmware Version
+                • Device IP Address, Device
+                    Root/Jailbreak Status and
+                    Reasons
+                • Developer Mode Enabled
+                • Battery/Power Information
+                • Hardware Info (Processor,
+                    Memory, Storage)
+                • Last Time Device Synched
+                    with Enterprise
+
+             Application Data
+               • Application Manifest (Installed
+                   Apps, App Version, Version
+                   History and Installation
+                   Timestamps), Installation and
+                   Data Storage Location
+               • Application Permissions
+               • Application Hash (e.g., SHA-
+                   256)
+               • Running Apps and Processes
+
+             Device Policy Settings
+                • Enrollment Policies
+                • Policies
+                    Successfully/Unsuccessfully
+                    Applied
+
+                                            36
+   •   Authentication Policies
+       (Password/Pin/Biometric, etc.)
+
+Device Configuration
+   • Certificates end Related
+       Information (Validity Period,
+       Revocation, etc.)
+   • Device Encryption
+       Configuration
+   • Android Enterprise Settings
+   • System Integrity Status
+
+Network Configuration
+   • Allowed/Disallowed Networks
+   • Currently Connected Network
+   • Proxy/Tunnel and Per-App
+      VPN Info
+   • Telephony Info (Some of This
+      Is Covered by Carrier Data)
+   • Captive Portals
+   • Wi-Fi SSID
+   • Network MAC Address
+   • Bluetooth
+
+Event / Audit / Crash Logs
+   • Event Type and ID
+   • Event Date/Timestamp
+   • Success/Failure of Various
+       Services
+   • User Authentication
+       (Success/Failure)
+   • Event Actor and ID (e.g.,
+       Admin, System, Device)
+   • Event Change Type (CRUD)
+
+MTD Agent Info
+  • Agent Activation Status
+  • Threat Detection of Variety of
+     Vulns
+  • Phishing Protection Status
+  • Tampering of Agent, App, or
+     System
+  • Privilege Escalation
+  • MITM Activities
+  • Remediation Actions Taken
+
+                               37
+                 •   Last Time Device Synched
+                     with Enterprise
+
+
+
+
+Container -     •    Log Container Image Sources      Script      1   12 Months
+Supply          •    Log Changes / Deltas Between                     Active Storage
+Chain                Image Source Versions            Manual
+                •    Log Vulnerability Scan of        Log Entry       18 Months
+                     Container Images, even if No                     Cold Data
+                     Vulnerabilities Are Discovered                   Storage
+                •    Log Where Containers Are
+                     Deployed and Which System
+                     They Support
+
+System        System Status                           Log         2   12 Months
+Configura-       • Resource Utilization                               Active
+tion and         • Performance                        Database        Storage
+Performanc                                            Record
+e                                                                     18 Months
+                                                      Script
+
+                                             38
+                                                                                                    Cold Data
+                                                                                                    Storage
+
+
+
+ Email            Raw and Metadata - Filtering        Log                            2              12 Months
+                         15
+ Filtering,       Events                                                                            Active
+ Spam, and            • Date and Time                 Email                                         Storage
+ Phishing             • Sent from Sender, from Sender Attach-
+                      • Recipient                     ments                                         18 Months
+                      • Subject                                                                     Cold Data
+                      • Email Headers                                                               Storage
+                      • Rule Triggered – Log of
+                         Policies along with Actual
+                         Values Including but Not
+                         Limited to:
+                             o DNS Records
+                             o Phish Campaign
+                                 Identifier
+                             o Domain URL
+ Data Loss            • Date and Time                 Log                            2              12 Months
+ Prevention           • Source Hostname                                                             Active
+                             o IP                     Email                                         Storage
+                             o Port                   Attach-
+                      • Destination Hostname          ments                                         18 Months
+                             o IP                                                                   Cold Data
+                             o Port                                                                 Storage
+                      • Description of Malicious Code
+                         or Action and Severity
+                      • Identity or Identifier of the
+                         File(s)
+                      • Description of the Action
+                         Taken (Clean, Quarantine,
+                         Delete)
+                      • Signature Updates
+Network           Full Packet Capture Data            Packet                        2               72 Hours
+Traffic              • Decrypted Plaintext            Capture                                       Packet
+                     • Cleartext                                                                    Capture
+
+
+
+
+15
+  Federal agencies shall submit all phishing attempts to CISA by forwarding the phishing as an attachment to
+federal.phishing.report@us-cert.gov. Federal agencies shall ensure that all contractors that operate infrastructure on
+their behalf implement this requirement.
+
+                                                         39
+Application      •  Commercial Off the Shelf          Log          2   12 Months
+Level               (COTS) and Custom                                  Active
+                    Applications                      Applicatio       Storage
+                • User Authentication                 n
+                    (Success/Failure)                 Monitorin        18 Months
+                • User and Administrator              g                Cold Data
+                    Application Use:                  Dashboar         Storage
+                        o File and Object Access      ds
+                        o Audit Log Access
+                           (Success/Failure)
+                        o System Access (Failure)
+                        o Application
+                           Transactions (Web Page
+                           Hits, Email
+                           Sent/Received, File
+                           Transfers Completed)
+                • Transaction Logs
+                • System Performance and
+                    Operational Characteristics
+                        o Resource Utilization
+                        o Process Status
+                        o Errors (Input
+                           Validation, Dis-
+                           Allowed Operations)
+                        o System Events
+                        o Service Status Changes
+                           (e.g., Started, Stopped)
+                • Application Configuration and
+                    Version
+Application   General – Non-COTS                      Log          2   12 Months
+Level           • User Authentication                                  Active
+                    (Success/Failure)                                  Storage
+                • User Access of Application
+                    Components                                         18 Months
+                        o File and Object Access                       Cold Data
+                        o Audit Log Access                             Storage
+                           (Success/Failure)
+                        o System Access (Failure)
+                        o Application
+                           Transactions
+                • Transaction Logs
+                • System Performance and
+                    Operational Characteristics
+                        o Resource Utilization
+                        o Errors (Input
+                           Validation, Dis-
+
+                                           40
+                         Allowed Operations)
+                         and Exit Codes
+                     o Process Status
+                     o Service Status Changes
+                         (e.g., Started, Stopped)
+              •   Application Configuration and
+                  Version, Middleware
+                  Configuration and Version
+              •   Usage Information, if
+                  Applicable
+              •   User Request and Response
+                  Events, if Applicable
+
+
+
+
+Container -   •   Vulnerability Scan Log         Log      2   12 Months
+Image         •   Hash of the Binary                          Active Storage
+              •   Hash of the Executables        File
+              •   Container-Aware Network                     18 Months
+                  Monitoring                     Script       Cold Data
+              •   Container-Aware Process                     Storage
+                  Monitoring
+              •   Container-Aware Malware
+                  Detection
+              •   Filesystem Changes Log
+              •   Data Monitoring
+              •   Read and/or Writes to Well-
+                  Known Directories (e.g., /ETC,
+                  /USR/BIN, USR/SBIN, etc.)
+              •   Creating Symlink
+              •   Changes in File/Resource
+                  Ownership or Mode Changes
+                  (CHMOD)
+              •   Access Control Log
+              •   Runtime Vulnerability Scan Log
+                  Scan for Malware Log
+              •   Digital Signature Verification
+              •   Unexpected Network
+                  Connections or Socket
+                  Mutations
+              •   Spawned Processes Using
+                  Things Like <Execve>
+              •   Executing Shell and/or SSH
+                  Binaries
+
+                                          41
+Container -    •   Audit Log                      Log           2   12 Months
+Engine         •   Account Access Log                               Active Storage
+(Managemen     •   Account Permission Changes     Application
+t/             •   Configuration Log              Monitoring        18 Months
+Orchestratio   •   Resource Allocation and        Dashboards        Cold Data
+n)                 Consumption                                      Storage
+               •   Registration Changes
+
+
+
+
+Container -    •   User and Administrator Access Log            2   12 Months
+OS                 to OS Components and                             Active Storage
+                   Applications
+                       o File and Object Access                     18 Months
+                       o Audit Log Access                           Cold Data
+                          (Success/Failure)                         Storage
+                       o System Access and Log
+                          Off (Success/Failure)
+                       o Privilege Access and Log
+                          Off (Success/Failure)
+                       o RDP Access and Log Off
+                          (Success/Failure)
+                       o SMB Access
+               •   System Performance and
+                   Operational Characteristics
+                       o Resource Utilization,
+                          Process Status
+                       o System Events
+                       o Service Status Changes
+                          (Start, Stop, Fail, Restart,
+                          etc.)
+                       o Service Failures and
+                          Restarts
+                       o Process Creation and
+                          Termination
+               •   System Configuration
+                       o Changes to Security
+                          Configuration
+                          (Success/Failure)
+                       o Audit Log Cleared
+                       o Changes to Accounts
+                          User or Group
+                          Management Changes
+                       o Scheduled Task Changes
+               •   File Access
+
+                                         42
+                            o Transfer of Data to
+                                External Media
+                     •   Powershell Execution
+                         Commands
+                     •   WMI Events
+                     •   Registry Access
+                     •   Command-Line Interface (CLI)
+
+
+
+
+ System          Software Updates                               Log            3             12 Months
+ Configurati        • User Agent                                                             Active
+ on and                                                         Database                     Storage
+ Performanc                                                     Record
+ e                                                                                           18 Months
+                                                                Script                       Cold Data
+                                                                                             Storage
+ Email           Spam Dictionary Modifications                  Log            3             12 Months
+ Filtering,                                                                                  Active
+ Spam, and                                                                                   Storage
+ Phishing
+                                                                                             18 Months
+                                                                                             Cold Data
+                                                                                             Storage
+Mainframes           •   Syslog & Syslogd Data            Log                 3             12 Months
+                     •   Log4j Data                                                         Active Storage
+                     •   Sysout Data
+                         Resource Measurement Facility                                      18 Months
+                         (RMF) Data                                                         Cold Data
+                     •   System Management Facility                                         Storage
+                         (SMF)16
+                     •   Output from Integrated Intrusion
+                         Detection Services
+
+
+
+
+16
+   DOD Security and Technical Implementation Guide (STIG) for zOS for log configuration guidance,
+https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_IBM_zOS_Y21M07_STIG.zip
+
+                                                     43
+Container -   •   Container User and Service Logs Log   3   Container -
+Cluster/Pod   •   Container and Application API             Cluster/Pod
+Events            Audit Logs                                Events
+              •   Container Management Access
+                  Logs
+              •   Changes to Container Resources
+                  Across Containers and Container
+                  Management Environment
+
+
+
+
+                                        44
+

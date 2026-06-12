@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/anboas/governance-artifact-library/schemas/governance-artifact.schema.json",
+  "title": "Governance Artifact",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "artifact_type",
+    "issuing_authority",
+    "issuing_organization",
+    "source_url",
+    "pipeline_state",
+    "mirror_status",
+    "parser_status",
+    "review_status",
+    "provenance"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]+$" },
+    "title": { "type": "string", "minLength": 1 },
+    "short_title": { "type": "string" },
+    "artifact_type": { "type": "string" },
+    "domain": { "type": "string", "const": "policy" },
+    "issuing_authority": { "type": "string" },
+    "issuing_organization": { "type": "string" },
+    "source_url": { "type": "string", "format": "uri" },
+    "source_mime_type": { "type": ["string", "null"] },
+    "source_date": { "type": ["string", "null"] },
+    "publication_date": { "type": ["string", "null"] },
+    "effective_date": { "type": ["string", "null"] },
+    "captured_at": { "type": ["string", "null"] },
+    "checksum_sha256": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" },
+    "raw_path": { "type": ["string", "null"] },
+    "extracted_text_path": { "type": ["string", "null"] },
+    "structured_json_path": { "type": ["string", "null"] },
+    "pipeline_state": {
+      "type": "string",
+      "enum": ["source_known", "mirrored", "text_extracted", "normalized", "structured", "reviewed"]
+    },
+    "mirror_status": {
+      "type": "string",
+      "enum": ["mirrored", "blocked", "queued", "retired"]
+    },
+    "parser_status": {
+      "type": "string",
+      "enum": ["not_started", "blocked", "parsed", "partial", "failed"]
+    },
+    "review_status": {
+      "type": "string",
+      "enum": ["unreviewed", "machine_reviewed", "analyst_review_needed", "analyst_reviewed"]
+    },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "target"],
+        "properties": {
+          "type": { "type": "string" },
+          "target": { "type": "string" },
+          "confidence": { "type": "string" },
+          "provenance": { "type": "string" }
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["source_system", "capture_method"],
+      "properties": {
+        "source_system": { "type": "string" },
+        "capture_method": { "type": "string" },
+        "capture_notes": { "type": "string" }
+      }
+    }
+  },
+  "additionalProperties": true
+}
