@@ -42,25 +42,30 @@ for (const entry of manifest.artifacts) {
   assertSidecar(artifact, "analytics_path", "analytics sidecar");
   assertSidecar(artifact, "analysis_path", "analysis sidecar");
   assertSidecar(artifact, "extraction_path", "entity/reference/concept extraction sidecar");
+  assertSidecar(artifact, "claims_path", "claims sidecar");
   assertSidecar(artifact, "version_index_path", "version index");
 
   const metadata = readJson(artifact.metadata_path);
   const analytics = readJson(artifact.analytics_path);
   const analysis = readJson(artifact.analysis_path);
   const extractions = readJson(artifact.extraction_path);
+  const claims = readJson(artifact.claims_path);
   const versions = readJson(artifact.version_index_path);
   assert.equal(metadata.id, artifact.id, `${entry.id} metadata id mismatch`);
   assert.equal(analytics.id, artifact.id, `${entry.id} analytics id mismatch`);
   assert.equal(analysis.id, artifact.id, `${entry.id} analysis id mismatch`);
   assert.equal(extractions.id, artifact.id, `${entry.id} extraction id mismatch`);
+  assert.equal(claims.id, artifact.id, `${entry.id} claims id mismatch`);
   assert.equal(versions.id, artifact.id, `${entry.id} version index id mismatch`);
   assert.equal(Array.isArray(versions.versions), true, `${entry.id} versions must be an array`);
   assert.ok(artifact.analytic_lanes?.includes("obligation_extraction"), `${entry.id} should declare analytic lanes`);
   assert.ok(artifact.analytic_lanes?.includes("entity_reference_concept_extraction"), `${entry.id} should declare entity/reference/concept extraction lane`);
+  assert.ok(artifact.analytic_lanes?.includes("claims_extraction"), `${entry.id} should declare claims extraction lane`);
   assert.equal(Array.isArray(extractions.entities), true, `${entry.id} extraction entities must be an array`);
   assert.equal(Array.isArray(extractions.references), true, `${entry.id} extraction references must be an array`);
   assert.equal(Array.isArray(extractions.concepts), true, `${entry.id} extraction concepts must be an array`);
   assert.equal(Array.isArray(extractions.line_annotations), true, `${entry.id} extraction line_annotations must be an array`);
+  assert.equal(Array.isArray(claims.claims), true, `${entry.id} claims must be an array`);
 
   if (artifact.mirror_status === "mirrored") {
     mirrored += 1;
@@ -76,6 +81,8 @@ for (const entry of manifest.artifacts) {
     assert.ok(["parsed", "source_text_unavailable"].includes(extractions.extraction_status), `${entry.id} mirrored artifact should expose extraction status`);
     if (extractions.extraction_status === "parsed") {
       assert.ok(extractions.summary?.annotated_line_count > 0, `${entry.id} should have line annotations`);
+      assert.equal(claims.claims_status, "parsed", `${entry.id} claims should be parsed when extraction text is parsed`);
+      assert.ok(claims.summary?.claim_count > 0, `${entry.id} should have extracted claim candidates`);
     }
   }
 
@@ -84,6 +91,7 @@ for (const entry of manifest.artifacts) {
     assert.equal(artifact.raw_path, null, `${entry.id} blocked artifact should not claim raw_path`);
     assert.equal(artifact.pipeline_state, "source_known", `${entry.id} blocked artifact should stay source_known`);
     assert.equal(extractions.extraction_status, "source_text_unavailable", `${entry.id} blocked artifact should expose unavailable extraction status`);
+    assert.equal(claims.claims_status, "source_text_unavailable", `${entry.id} blocked artifact should expose unavailable claims status`);
   }
 
   if (artifact.artifact_type === "Public Law") publicLaws += 1;
