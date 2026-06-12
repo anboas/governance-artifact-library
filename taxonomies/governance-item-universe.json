@@ -1,0 +1,259 @@
+{
+  "description": "Coverage universe for Policy Intelligence governance artifacts. This is a target map, not a claim that every individual document is already known.",
+  "items": [
+    {
+      "id": "public-law-ndaa",
+      "label": "Public Law / NDAA",
+      "authority_level": "law",
+      "hierarchy_rank": 10,
+      "artifact_types": ["Public Law"],
+      "families": ["defense_authorization"],
+      "required_tags": ["ndaa"],
+      "source_location_types": ["govinfo_public_law_pdf"],
+      "examples": ["FY2024 NDAA", "FY2025 NDAA"]
+    },
+    {
+      "id": "appropriations-law",
+      "label": "Appropriations Law",
+      "authority_level": "law",
+      "hierarchy_rank": 10,
+      "artifact_types": ["Public Law"],
+      "families": ["appropriations"],
+      "required_tags": ["appropriations"],
+      "source_location_types": ["govinfo_public_law_pdf"],
+      "examples": ["Defense Appropriations Act"]
+    },
+    {
+      "id": "us-code",
+      "label": "U.S. Code",
+      "authority_level": "us_code",
+      "hierarchy_rank": 20,
+      "artifact_types": ["U.S. Code"],
+      "families": ["defense_business_systems", "acquisition", "cybersecurity"],
+      "source_location_types": ["us_code_html"],
+      "examples": ["10 U.S.C.", "41 U.S.C.", "44 U.S.C."]
+    },
+    {
+      "id": "executive-order",
+      "label": "Executive Order",
+      "authority_level": "presidential_directive",
+      "hierarchy_rank": 30,
+      "artifact_types": ["Executive Order"],
+      "families": ["cybersecurity", "ai_governance"],
+      "source_location_types": ["federal_register_html"],
+      "examples": ["EO 14028", "EO 14110"]
+    },
+    {
+      "id": "presidential-memorandum",
+      "label": "Presidential Memorandum",
+      "authority_level": "presidential_directive",
+      "hierarchy_rank": 30,
+      "artifact_types": ["Presidential Memorandum"],
+      "families": ["cybersecurity", "ai_governance", "national_security"],
+      "source_location_types": ["federal_register_html", "white_house_pdf"],
+      "examples": ["national security memorandum", "presidential memorandum"]
+    },
+    {
+      "id": "omb-memorandum",
+      "label": "OMB Memorandum",
+      "authority_level": "executive_branch_guidance",
+      "hierarchy_rank": 40,
+      "artifact_types": ["OMB Memorandum"],
+      "families": ["cybersecurity", "ai_governance", "risk_management"],
+      "source_location_types": ["white_house_pdf"],
+      "examples": ["OMB M-24-10", "OMB M-21-31"]
+    },
+    {
+      "id": "ostp-guidance",
+      "label": "OSTP / Executive Office Guidance",
+      "authority_level": "executive_branch_guidance",
+      "hierarchy_rank": 40,
+      "artifact_types": ["Implementation Guidance", "Memorandum"],
+      "families": ["ai_governance", "technology_policy"],
+      "source_location_types": ["white_house_pdf"],
+      "examples": ["OSTP AI guidance", "EOP implementation guidance"]
+    },
+    {
+      "id": "far",
+      "label": "FAR",
+      "authority_level": "federal_regulation",
+      "hierarchy_rank": 50,
+      "artifact_types": ["Regulation"],
+      "families": ["acquisition"],
+      "required_tags": ["far"],
+      "source_location_types": ["acquisition_gov_html"],
+      "examples": ["FAR Part 39"]
+    },
+    {
+      "id": "dfars",
+      "label": "DFARS / Defense Acquisition Regulation",
+      "authority_level": "federal_regulation",
+      "hierarchy_rank": 50,
+      "artifact_types": ["Regulation"],
+      "families": ["acquisition", "defense_contracting"],
+      "required_tags": ["dfars"],
+      "source_location_types": ["acquisition_gov_html"],
+      "examples": ["DFARS Part 239", "DFARS clauses"]
+    },
+    {
+      "id": "nist-standard",
+      "label": "NIST Standard / Special Publication",
+      "authority_level": "federal_standard",
+      "hierarchy_rank": 60,
+      "artifact_types": ["Standard"],
+      "families": ["security_controls", "zero_trust", "risk_management"],
+      "source_location_types": ["nist_csrc_html", "nist_nvlpubs_pdf"],
+      "examples": ["NIST SP 800-53", "NIST SP 800-207"]
+    },
+    {
+      "id": "cisa-guidance",
+      "label": "CISA Guidance / Model",
+      "authority_level": "federal_standard",
+      "hierarchy_rank": 60,
+      "artifact_types": ["Implementation Guidance", "Standard"],
+      "families": ["zero_trust", "cybersecurity"],
+      "source_location_types": ["cisa_pdf", "cisa_html"],
+      "examples": ["Zero Trust Maturity Model", "Secure by Design guidance"]
+    },
+    {
+      "id": "dod-directive",
+      "label": "DoW/DoD Directive",
+      "authority_level": "defense_department_directive",
+      "hierarchy_rank": 70,
+      "artifact_types": ["DoD Directive"],
+      "families": ["acquisition", "cybersecurity", "records_management"],
+      "source_location_types": ["dod_issuances_pdf"],
+      "examples": ["DoDD 5000.01"]
+    },
+    {
+      "id": "dod-instruction",
+      "label": "DoW/DoD Instruction",
+      "authority_level": "defense_department_instruction",
+      "hierarchy_rank": 72,
+      "artifact_types": ["DoD Instruction"],
+      "families": ["software_acquisition", "risk_management", "cybersecurity"],
+      "source_location_types": ["dod_issuances_pdf"],
+      "examples": ["DoDI 5000.87", "DoDI 8510.01"]
+    },
+    {
+      "id": "dod-manual",
+      "label": "DoW/DoD Manual",
+      "authority_level": "defense_department_instruction",
+      "hierarchy_rank": 72,
+      "artifact_types": ["DoD Manual"],
+      "families": ["records_management", "cybersecurity", "acquisition"],
+      "source_location_types": ["dod_issuances_pdf"],
+      "examples": ["DoDM", "manual implementation volumes"]
+    },
+    {
+      "id": "dod-dtm",
+      "label": "DoW/DoD DTM",
+      "authority_level": "defense_department_instruction",
+      "hierarchy_rank": 72,
+      "artifact_types": ["Directive-Type Memorandum"],
+      "families": ["cybersecurity", "acquisition", "ai_governance"],
+      "source_location_types": ["dod_issuances_pdf"],
+      "examples": ["Directive-Type Memorandum"]
+    },
+    {
+      "id": "dod-strategy",
+      "label": "DoW/DoD Strategy",
+      "authority_level": "defense_department_strategy",
+      "hierarchy_rank": 74,
+      "artifact_types": ["Strategy"],
+      "families": ["zero_trust", "cybersecurity", "data", "ai_governance"],
+      "source_location_types": ["dod_cio_pdf"],
+      "examples": ["DoD Zero Trust Strategy"]
+    },
+    {
+      "id": "dod-cio-guidance",
+      "label": "DoD CIO Guidance",
+      "authority_level": "implementation_guidance",
+      "hierarchy_rank": 85,
+      "artifact_types": ["Implementation Guidance"],
+      "families": ["zero_trust", "cybersecurity", "cloud"],
+      "source_location_types": ["dod_cio_pdf", "dod_cio_html"],
+      "examples": ["DoD CIO implementation guidance"]
+    },
+    {
+      "id": "joint-staff-instruction",
+      "label": "Joint Staff Instruction / Manual",
+      "authority_level": "implementation_guidance",
+      "hierarchy_rank": 85,
+      "artifact_types": ["CJCSI", "CJCSM"],
+      "families": ["joint_policy", "cybersecurity", "operations"],
+      "source_location_types": ["joint_staff_pdf"],
+      "examples": ["CJCSI", "CJCSM"]
+    },
+    {
+      "id": "secnav-instruction",
+      "label": "SECNAV Instruction",
+      "authority_level": "service_secretariat_manual",
+      "hierarchy_rank": 80,
+      "artifact_types": ["SECNAV Instruction"],
+      "families": ["cybersecurity", "records_management", "acquisition"],
+      "source_location_types": ["don_issuances_pdf"],
+      "examples": ["SECNAVINST"]
+    },
+    {
+      "id": "secnav-manual",
+      "label": "SECNAV Manual",
+      "authority_level": "service_secretariat_manual",
+      "hierarchy_rank": 80,
+      "artifact_types": ["SECNAV Manual"],
+      "families": ["cybersecurity", "records_management"],
+      "source_location_types": ["don_issuances_pdf"],
+      "examples": ["SECNAV M-5210.1", "SECNAV M-5239.3"]
+    },
+    {
+      "id": "opnav-instruction",
+      "label": "OPNAV Instruction",
+      "authority_level": "service_headquarters_instruction",
+      "hierarchy_rank": 82,
+      "artifact_types": ["OPNAV Instruction"],
+      "families": ["cybersecurity", "operations", "records_management"],
+      "source_location_types": ["don_issuances_pdf"],
+      "examples": ["OPNAVINST 5239.1E"]
+    },
+    {
+      "id": "alnav",
+      "label": "ALNAV",
+      "authority_level": "service_operational_guidance",
+      "hierarchy_rank": 90,
+      "artifact_types": ["ALNAV"],
+      "families": ["operations", "personnel", "cybersecurity"],
+      "source_location_types": ["mynavyhr_alnav_txt"],
+      "examples": ["ALNAV message"]
+    },
+    {
+      "id": "navadmin",
+      "label": "NAVADMIN",
+      "authority_level": "service_operational_guidance",
+      "hierarchy_rank": 90,
+      "artifact_types": ["NAVADMIN"],
+      "families": ["cyber_training", "operations", "personnel"],
+      "source_location_types": ["mynavyhr_navadmin_txt"],
+      "examples": ["NAVADMIN 214/24"]
+    },
+    {
+      "id": "fleet-guidance",
+      "label": "Fleet / Type Command Guidance",
+      "authority_level": "service_operational_guidance",
+      "hierarchy_rank": 90,
+      "artifact_types": ["Fleet Guidance", "Command Policy"],
+      "families": ["operations", "cybersecurity", "implementation"],
+      "source_location_types": ["fleet_command_pdf", "fleet_command_html"],
+      "examples": ["Fleet message", "TYCOM policy"]
+    },
+    {
+      "id": "program-office-guidance",
+      "label": "Program Office / Echelon 4 Guidance",
+      "authority_level": "service_operational_guidance",
+      "hierarchy_rank": 90,
+      "artifact_types": ["Program Guidance", "Local Policy"],
+      "families": ["implementation", "cybersecurity", "acquisition"],
+      "source_location_types": ["program_office_pdf", "program_office_html"],
+      "examples": ["PEO guide", "program office operating instruction"]
+    }
+  ]
+}

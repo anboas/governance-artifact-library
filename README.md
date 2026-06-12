@@ -61,15 +61,18 @@ manifest.json
 ```
 
 See `docs/repo-hierarchy.md` for the artifact envelope and authority stack.
+See `docs/coverage-map.md` for generated coverage across the governance-item universe.
 
 ## Commands
 
 ```bash
+npm run coverage
 npm run seed
 npm run validate
 ```
 
 `npm run seed` fetches the current seed set from official sources where automation is allowed. `npm run validate` checks schema-critical fields, paths, checksums, and lifecycle consistency.
+`npm run coverage` regenerates `data/coverage-map.json` and `docs/coverage-map.md`.
 
 ## Policy
 

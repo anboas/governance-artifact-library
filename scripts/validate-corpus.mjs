@@ -84,6 +84,7 @@ assert.ok(operationalGuidance >= 1, "expected at least one lower-echelon operati
 assert.equal(existsSync(join(ROOT, "sources", "source-registry.json")), true, "source registry missing");
 assert.equal(existsSync(join(ROOT, "taxonomies", "authority-echelons.json")), true, "authority taxonomy missing");
 assert.equal(existsSync(join(ROOT, "taxonomies", "source-locations.json")), true, "source location taxonomy missing");
+assert.equal(existsSync(join(ROOT, "taxonomies", "governance-item-universe.json")), true, "governance item universe missing");
 
 console.log(`Validated ${manifest.artifact_count} artifacts (${mirrored} mirrored, ${blocked} source-known blocked).`);
 

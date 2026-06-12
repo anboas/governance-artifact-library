@@ -5,8 +5,9 @@
   "type": "module",
   "description": "Canonical public corpus storage for mirrored Governance Artifacts.",
   "scripts": {
+    "coverage": "node scripts/generate-coverage-map.mjs",
     "seed": "node scripts/seed-corpus.mjs",
-    "validate": "node scripts/validate-corpus.mjs"
+    "validate": "node scripts/validate-corpus.mjs && node scripts/generate-coverage-map.mjs --check"
   },
   "license": "CC0-1.0"
 }
