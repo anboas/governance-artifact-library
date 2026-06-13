@@ -113,6 +113,7 @@ assert.equal(existsSync(join(ROOT, "sources", "source-discovery-registry.json"))
 assert.equal(existsSync(join(ROOT, "taxonomies", "authority-echelons.json")), true, "authority taxonomy missing");
 assert.equal(existsSync(join(ROOT, "taxonomies", "source-locations.json")), true, "source location taxonomy missing");
 assert.equal(existsSync(join(ROOT, "taxonomies", "governance-item-universe.json")), true, "governance item universe missing");
+assert.equal(existsSync(join(ROOT, "data", "artifact-index.json")), true, "artifact index missing");
 assert.equal(existsSync(join(ROOT, "data", "reference-coverage-map.json")), true, "reference coverage map missing");
 assert.equal(existsSync(join(ROOT, "docs", "reference-coverage-map.md")), true, "reference coverage docs missing");
 assert.equal(existsSync(join(ROOT, "data", "reference-ingestion-queue.json")), true, "reference ingestion queue missing");
@@ -120,8 +121,12 @@ assert.equal(existsSync(join(ROOT, "data", "reference-ingestion-queue-summary.js
 assert.equal(existsSync(join(ROOT, "docs", "reference-ingestion-queue.md")), true, "reference ingestion queue docs missing");
 
 const referenceCoverage = readJson("data/reference-coverage-map.json");
+const artifactIndex = readJson("data/artifact-index.json");
 const ingestionQueue = readJson("data/reference-ingestion-queue.json");
 const ingestionQueueSummary = readJson("data/reference-ingestion-queue-summary.json");
+assert.equal(artifactIndex.artifact_count, manifest.artifact_count, "artifact index count should match manifest");
+assert.equal(artifactIndex.artifacts?.length, manifest.artifact_count, "artifact index artifacts should match manifest");
+assert.ok(artifactIndex.artifacts.every(artifact => artifact.id && artifact.manifest_path), "artifact index rows need ids and manifest paths");
 assert.equal(Array.isArray(ingestionQueue.queue_items), true, "reference ingestion queue items must be an array");
 assert.equal(ingestionQueue.summary?.queue_item_count, referenceCoverage.uncatalogued_references.length, "reference ingestion queue should cover every uncatalogued reference");
 assert.equal(ingestionQueue.queue_items.length, referenceCoverage.uncatalogued_references.length, "reference ingestion queue item count mismatch");
