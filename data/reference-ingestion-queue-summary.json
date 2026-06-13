@@ -2,50 +2,50 @@
   "generated_at": "2026-06-12T23:25:00.000Z",
   "queue_version": "governance-reference-ingestion-queue-v1",
   "summary": {
-    "queue_item_count": 905,
-    "p0_count": 9,
-    "p1_count": 132,
-    "p2_count": 760,
-    "p3_count": 4,
-    "high_authority_count": 901,
-    "source_artifact_count": 7
+    "queue_item_count": 927,
+    "p0_count": 10,
+    "p1_count": 140,
+    "p2_count": 770,
+    "p3_count": 7,
+    "high_authority_count": 920,
+    "source_artifact_count": 9
   },
   "family_summary": [
     {
       "reference_family": "usc",
-      "item_count": 879,
-      "occurrence_count": 1550,
-      "p0_count": 9,
-      "p1_count": 129,
+      "item_count": 884,
+      "occurrence_count": 1569,
+      "p0_count": 10,
+      "p1_count": 133,
       "p2_count": 741,
       "p3_count": 0
     },
     {
       "reference_family": "executive-order",
-      "item_count": 18,
-      "occurrence_count": 36,
+      "item_count": 23,
+      "occurrence_count": 50,
+      "p0_count": 0,
+      "p1_count": 5,
+      "p2_count": 18,
+      "p3_count": 0
+    },
+    {
+      "reference_family": "public-law",
+      "item_count": 12,
+      "occurrence_count": 16,
       "p0_count": 0,
       "p1_count": 2,
-      "p2_count": 16,
+      "p2_count": 10,
       "p3_count": 0
     },
     {
       "reference_family": "cfr",
-      "item_count": 1,
-      "occurrence_count": 6,
+      "item_count": 4,
+      "occurrence_count": 9,
       "p0_count": 0,
       "p1_count": 0,
       "p2_count": 0,
-      "p3_count": 1
-    },
-    {
-      "reference_family": "public-law",
-      "item_count": 3,
-      "occurrence_count": 5,
-      "p0_count": 0,
-      "p1_count": 1,
-      "p2_count": 2,
-      "p3_count": 0
+      "p3_count": 4
     },
     {
       "reference_family": "nist-sp",
@@ -84,17 +84,19 @@
       "reference_type": "U.S. Code",
       "authority_tier": "high",
       "queue_priority": "P0",
-      "score": 185,
-      "occurrence_count": 22,
-      "source_artifact_count": 3,
+      "score": 196,
+      "occurrence_count": 23,
+      "source_artifact_count": 4,
       "source_artifact_ids": [
         "pl-118-159-fy2025-ndaa",
         "pl-118-31-fy2024-ndaa",
+        "eo-14028-cybersecurity",
         "omb-m-24-10-ai-governance"
       ],
       "source_artifact_titles": [
         "FY2025 NDAA",
         "FY2024 NDAA",
+        "EO 14028",
         "OMB M-24-10"
       ],
       "first_line": 26264,
@@ -138,7 +140,7 @@
         "Regenerate reference coverage and ingestion queue"
       ],
       "analyst_notes": [
-        "P0 because 50 U.S.C. 3003 appears 22 time(s) across 3 catalogued artifact(s).",
+        "P0 because 50 U.S.C. 3003 appears 23 time(s) across 4 catalogued artifact(s).",
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
@@ -348,6 +350,68 @@
       "queue_rank": 4
     },
     {
+      "id": "ingest-usc-44-3502",
+      "reference_key": "usc:44:3502",
+      "label": "44 U.S.C. 3502",
+      "reference_family": "usc",
+      "reference_type": "U.S. Code",
+      "authority_tier": "high",
+      "queue_priority": "P0",
+      "score": 172,
+      "occurrence_count": 11,
+      "source_artifact_count": 4,
+      "source_artifact_ids": [
+        "eo-14028-cybersecurity",
+        "eo-14110-ai",
+        "omb-m-21-31-cyber-logging",
+        "omb-m-24-10-ai-governance"
+      ],
+      "source_artifact_titles": [
+        "EO 14028",
+        "EO 14110",
+        "OMB M-21-31",
+        "OMB M-24-10"
+      ],
+      "first_line": 1077,
+      "lines_sample": [
+        1077
+      ],
+      "recommended_artifact_id": "usc-title-44-section-3502",
+      "recommended_title": "44 U.S.C. 3502",
+      "recommended_artifact_type": "U.S. Code",
+      "recommended_authority_level": "law",
+      "recommended_source_system": "U.S. Code",
+      "recommended_source_location_type": "uscode_house_gov_section_html",
+      "capture_strategy": "official_html_snapshot",
+      "official_source_candidates": [
+        {
+          "label": "U.S. Code section view",
+          "url": "https://uscode.house.gov/view.xhtml?req=(title:44%20section:3502%20edition:prelim)",
+          "source_system": "U.S. Code",
+          "expected_capture_method": "official_html_snapshot"
+        },
+        {
+          "label": "GovInfo U.S. Code collection",
+          "url": "https://www.govinfo.gov/app/collection/uscode",
+          "source_system": "GovInfo",
+          "expected_capture_method": "collection_search"
+        }
+      ],
+      "ingestion_status": "queued",
+      "mirror_requirements": [
+        "Identify authoritative landing/source URL",
+        "Mirror source document or authoritative HTML snapshot",
+        "Extract full text",
+        "Generate metadata, analytics, analysis, structured summary, claims, extractions, and reference map",
+        "Regenerate reference coverage and ingestion queue"
+      ],
+      "analyst_notes": [
+        "P0 because 44 U.S.C. 3502 appears 11 time(s) across 4 catalogued artifact(s).",
+        "High-authority family should be catalogued before lower-echelon guidance that depends on it."
+      ],
+      "queue_rank": 5
+    },
+    {
       "id": "ingest-usc-22-2651a",
       "reference_key": "usc:22:2651a",
       "label": "22 U.S.C. 2651a",
@@ -406,7 +470,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 5
+      "queue_rank": 6
     },
     {
       "id": "ingest-usc-10-111",
@@ -471,7 +535,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 6
+      "queue_rank": 7
     },
     {
       "id": "ingest-usc-50-3024",
@@ -532,7 +596,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 7
+      "queue_rank": 8
     },
     {
       "id": "ingest-usc-10-4205",
@@ -600,7 +664,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 8
+      "queue_rank": 9
     },
     {
       "id": "ingest-usc-42-4321",
@@ -661,7 +725,69 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 9
+      "queue_rank": 10
+    },
+    {
+      "id": "ingest-usc-50-1701",
+      "reference_key": "usc:50:1701",
+      "label": "50 U.S.C. 1701",
+      "reference_family": "usc",
+      "reference_type": "U.S. Code",
+      "authority_tier": "high",
+      "queue_priority": "P1",
+      "score": 149,
+      "occurrence_count": 4,
+      "source_artifact_count": 3,
+      "source_artifact_ids": [
+        "pl-118-159-fy2025-ndaa",
+        "pl-118-31-fy2024-ndaa",
+        "eo-14110-ai"
+      ],
+      "source_artifact_titles": [
+        "FY2025 NDAA",
+        "FY2024 NDAA",
+        "EO 14110"
+      ],
+      "first_line": 49140,
+      "lines_sample": [
+        49140,
+        54294
+      ],
+      "recommended_artifact_id": "usc-title-50-section-1701",
+      "recommended_title": "50 U.S.C. 1701",
+      "recommended_artifact_type": "U.S. Code",
+      "recommended_authority_level": "law",
+      "recommended_source_system": "U.S. Code",
+      "recommended_source_location_type": "uscode_house_gov_section_html",
+      "capture_strategy": "official_html_snapshot",
+      "official_source_candidates": [
+        {
+          "label": "U.S. Code section view",
+          "url": "https://uscode.house.gov/view.xhtml?req=(title:50%20section:1701%20edition:prelim)",
+          "source_system": "U.S. Code",
+          "expected_capture_method": "official_html_snapshot"
+        },
+        {
+          "label": "GovInfo U.S. Code collection",
+          "url": "https://www.govinfo.gov/app/collection/uscode",
+          "source_system": "GovInfo",
+          "expected_capture_method": "collection_search"
+        }
+      ],
+      "ingestion_status": "queued",
+      "mirror_requirements": [
+        "Identify authoritative landing/source URL",
+        "Mirror source document or authoritative HTML snapshot",
+        "Extract full text",
+        "Generate metadata, analytics, analysis, structured summary, claims, extractions, and reference map",
+        "Regenerate reference coverage and ingestion queue"
+      ],
+      "analyst_notes": [
+        "P1 because 50 U.S.C. 1701 appears 4 time(s) across 3 catalogued artifact(s).",
+        "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
+        "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
+      ],
+      "queue_rank": 11
     },
     {
       "id": "ingest-usc-10-3201",
@@ -726,7 +852,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 10
+      "queue_rank": 12
     },
     {
       "id": "ingest-usc-10-333",
@@ -786,7 +912,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 11
+      "queue_rank": 13
     },
     {
       "id": "ingest-usc-10-2802",
@@ -848,7 +974,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 12
+      "queue_rank": 14
     },
     {
       "id": "ingest-usc-15-632",
@@ -911,65 +1037,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 13
-    },
-    {
-      "id": "ingest-usc-44-3502",
-      "reference_key": "usc:44:3502",
-      "label": "44 U.S.C. § 3502",
-      "reference_family": "usc",
-      "reference_type": "U.S. Code",
-      "authority_tier": "high",
-      "queue_priority": "P1",
-      "score": 148,
-      "occurrence_count": 8,
-      "source_artifact_count": 2,
-      "source_artifact_ids": [
-        "omb-m-21-31-cyber-logging",
-        "omb-m-24-10-ai-governance"
-      ],
-      "source_artifact_titles": [
-        "OMB M-21-31",
-        "OMB M-24-10"
-      ],
-      "first_line": 50,
-      "lines_sample": [
-        50
-      ],
-      "recommended_artifact_id": "usc-title-44-section-3502",
-      "recommended_title": "44 U.S.C. 3502",
-      "recommended_artifact_type": "U.S. Code",
-      "recommended_authority_level": "law",
-      "recommended_source_system": "U.S. Code",
-      "recommended_source_location_type": "uscode_house_gov_section_html",
-      "capture_strategy": "official_html_snapshot",
-      "official_source_candidates": [
-        {
-          "label": "U.S. Code section view",
-          "url": "https://uscode.house.gov/view.xhtml?req=(title:44%20section:3502%20edition:prelim)",
-          "source_system": "U.S. Code",
-          "expected_capture_method": "official_html_snapshot"
-        },
-        {
-          "label": "GovInfo U.S. Code collection",
-          "url": "https://www.govinfo.gov/app/collection/uscode",
-          "source_system": "GovInfo",
-          "expected_capture_method": "collection_search"
-        }
-      ],
-      "ingestion_status": "queued",
-      "mirror_requirements": [
-        "Identify authoritative landing/source URL",
-        "Mirror source document or authoritative HTML snapshot",
-        "Extract full text",
-        "Generate metadata, analytics, analysis, structured summary, claims, extractions, and reference map",
-        "Regenerate reference coverage and ingestion queue"
-      ],
-      "analyst_notes": [
-        "P1 because 44 U.S.C. § 3502 appears 8 time(s) across 2 catalogued artifact(s).",
-        "High-authority family should be catalogued before lower-echelon guidance that depends on it."
-      ],
-      "queue_rank": 14
+      "queue_rank": 15
     },
     {
       "id": "ingest-usc-5-3330d",
@@ -1033,7 +1101,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 15
+      "queue_rank": 16
     },
     {
       "id": "ingest-usc-50-3161",
@@ -1095,7 +1163,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 16
+      "queue_rank": 17
     },
     {
       "id": "ingest-usc-50-3373",
@@ -1157,7 +1225,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 17
+      "queue_rank": 18
     },
     {
       "id": "ingest-usc-8-1101",
@@ -1219,7 +1287,68 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 18
+      "queue_rank": 19
+    },
+    {
+      "id": "ingest-usc-10-504",
+      "reference_key": "usc:10:504",
+      "label": "10 USC 504",
+      "reference_family": "usc",
+      "reference_type": "U.S. Code",
+      "authority_tier": "high",
+      "queue_priority": "P1",
+      "score": 147,
+      "occurrence_count": 3,
+      "source_artifact_count": 3,
+      "source_artifact_ids": [
+        "pl-118-159-fy2025-ndaa",
+        "pl-118-31-fy2024-ndaa",
+        "eo-14110-ai"
+      ],
+      "source_artifact_titles": [
+        "FY2025 NDAA",
+        "FY2024 NDAA",
+        "EO 14110"
+      ],
+      "first_line": 7932,
+      "lines_sample": [
+        7932
+      ],
+      "recommended_artifact_id": "usc-title-10-section-504",
+      "recommended_title": "10 U.S.C. 504",
+      "recommended_artifact_type": "U.S. Code",
+      "recommended_authority_level": "law",
+      "recommended_source_system": "U.S. Code",
+      "recommended_source_location_type": "uscode_house_gov_section_html",
+      "capture_strategy": "official_html_snapshot",
+      "official_source_candidates": [
+        {
+          "label": "U.S. Code section view",
+          "url": "https://uscode.house.gov/view.xhtml?req=(title:10%20section:504%20edition:prelim)",
+          "source_system": "U.S. Code",
+          "expected_capture_method": "official_html_snapshot"
+        },
+        {
+          "label": "GovInfo U.S. Code collection",
+          "url": "https://www.govinfo.gov/app/collection/uscode",
+          "source_system": "GovInfo",
+          "expected_capture_method": "collection_search"
+        }
+      ],
+      "ingestion_status": "queued",
+      "mirror_requirements": [
+        "Identify authoritative landing/source URL",
+        "Mirror source document or authoritative HTML snapshot",
+        "Extract full text",
+        "Generate metadata, analytics, analysis, structured summary, claims, extractions, and reference map",
+        "Regenerate reference coverage and ingestion queue"
+      ],
+      "analyst_notes": [
+        "P1 because 10 USC 504 appears 3 time(s) across 3 catalogued artifact(s).",
+        "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
+        "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
+      ],
+      "queue_rank": 20
     },
     {
       "id": "ingest-executive-order-13526",
@@ -1282,7 +1411,67 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 19
+      "queue_rank": 21
+    },
+    {
+      "id": "ingest-executive-order-14091",
+      "reference_key": "executive-order:14091",
+      "label": "Executive Order 14091",
+      "reference_family": "executive-order",
+      "reference_type": "Executive Order",
+      "authority_tier": "high",
+      "queue_priority": "P1",
+      "score": 146,
+      "occurrence_count": 9,
+      "source_artifact_count": 2,
+      "source_artifact_ids": [
+        "eo-14110-ai",
+        "omb-m-24-10-ai-governance"
+      ],
+      "source_artifact_titles": [
+        "EO 14110",
+        "OMB M-24-10"
+      ],
+      "first_line": 184,
+      "lines_sample": [
+        184,
+        1668,
+        2252
+      ],
+      "recommended_artifact_id": "eo-14091",
+      "recommended_title": "Executive Order 14091",
+      "recommended_artifact_type": "Executive Order",
+      "recommended_authority_level": "executive_order",
+      "recommended_source_system": "Federal Register",
+      "recommended_source_location_type": "federal_register_document",
+      "capture_strategy": "federal_register_api_or_html",
+      "official_source_candidates": [
+        {
+          "label": "Federal Register search",
+          "url": "https://www.federalregister.gov/documents/search?conditions%5Bterm%5D=Executive%20Order%2014091",
+          "source_system": "Federal Register",
+          "expected_capture_method": "api_or_html_search"
+        },
+        {
+          "label": "National Archives executive orders",
+          "url": "https://www.archives.gov/federal-register/executive-orders",
+          "source_system": "National Archives",
+          "expected_capture_method": "official_index_search"
+        }
+      ],
+      "ingestion_status": "queued",
+      "mirror_requirements": [
+        "Identify authoritative landing/source URL",
+        "Mirror source document or authoritative HTML snapshot",
+        "Extract full text",
+        "Generate metadata, analytics, analysis, structured summary, claims, extractions, and reference map",
+        "Regenerate reference coverage and ingestion queue"
+      ],
+      "analyst_notes": [
+        "P1 because Executive Order 14091 appears 9 time(s) across 2 catalogued artifact(s).",
+        "High-authority family should be catalogued before lower-echelon guidance that depends on it."
+      ],
+      "queue_rank": 22
     },
     {
       "id": "ingest-usc-10-20001",
@@ -1344,7 +1533,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 20
+      "queue_rank": 23
     },
     {
       "id": "ingest-usc-10-4811",
@@ -1406,7 +1595,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 21
+      "queue_rank": 24
     },
     {
       "id": "ingest-usc-10-2241",
@@ -1466,7 +1655,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 22
+      "queue_rank": 25
     },
     {
       "id": "ingest-usc-10-8013",
@@ -1528,7 +1717,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 23
+      "queue_rank": 26
     },
     {
       "id": "ingest-usc-22-1741",
@@ -1592,7 +1781,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 24
+      "queue_rank": 27
     },
     {
       "id": "ingest-usc-22-2656",
@@ -1653,7 +1842,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 25
+      "queue_rank": 28
     },
     {
       "id": "ingest-usc-10-2271",
@@ -1714,7 +1903,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 26
+      "queue_rank": 29
     },
     {
       "id": "ingest-usc-10-394",
@@ -1773,7 +1962,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 27
+      "queue_rank": 30
     },
     {
       "id": "ingest-usc-22-211a",
@@ -1834,7 +2023,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 28
+      "queue_rank": 31
     },
     {
       "id": "ingest-usc-22-213",
@@ -1894,7 +2083,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 29
+      "queue_rank": 32
     },
     {
       "id": "ingest-usc-22-2151",
@@ -1956,7 +2145,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 30
+      "queue_rank": 33
     },
     {
       "id": "ingest-usc-50-3383",
@@ -2015,7 +2204,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 31
+      "queue_rank": 34
     },
     {
       "id": "ingest-usc-10-1580",
@@ -2075,7 +2264,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 32
+      "queue_rank": 35
     },
     {
       "id": "ingest-usc-10-301",
@@ -2136,7 +2325,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 33
+      "queue_rank": 36
     },
     {
       "id": "ingest-usc-10-311",
@@ -2197,7 +2386,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 34
+      "queue_rank": 37
     },
     {
       "id": "ingest-usc-10-4571",
@@ -2258,7 +2447,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 35
+      "queue_rank": 38
     },
     {
       "id": "ingest-usc-10-9081",
@@ -2319,7 +2508,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 36
+      "queue_rank": 39
     },
     {
       "id": "ingest-usc-2-661a",
@@ -2380,7 +2569,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 37
+      "queue_rank": 40
     },
     {
       "id": "ingest-usc-22-2371",
@@ -2440,7 +2629,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 38
+      "queue_rank": 41
     },
     {
       "id": "ingest-usc-22-3301",
@@ -2501,7 +2690,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 39
+      "queue_rank": 42
     },
     {
       "id": "ingest-usc-22-2761",
@@ -2560,7 +2749,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 40
+      "queue_rank": 43
     },
     {
       "id": "ingest-usc-50-2401",
@@ -2622,7 +2811,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 41
+      "queue_rank": 44
     },
     {
       "id": "ingest-usc-50-98b",
@@ -2683,7 +2872,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 42
+      "queue_rank": 45
     },
     {
       "id": "ingest-usc-50-98h",
@@ -2742,7 +2931,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 43
+      "queue_rank": 46
     },
     {
       "id": "ingest-usc-42-300mm",
@@ -2807,7 +2996,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 44
+      "queue_rank": 47
     },
     {
       "id": "ingest-usc-10-167b",
@@ -2867,7 +3056,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 45
+      "queue_rank": 48
     },
     {
       "id": "ingest-usc-10-221",
@@ -2927,7 +3116,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 46
+      "queue_rank": 49
     },
     {
       "id": "ingest-usc-10-2276",
@@ -2985,186 +3174,6 @@
       ],
       "analyst_notes": [
         "P1 because 10 U.S.C. 2276 appears 4 time(s) across 2 catalogued artifact(s).",
-        "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
-        "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
-      ],
-      "queue_rank": 47
-    },
-    {
-      "id": "ingest-usc-10-2687",
-      "reference_key": "usc:10:2687",
-      "label": "10 U.S.C. 2687",
-      "reference_family": "usc",
-      "reference_type": "U.S. Code",
-      "authority_tier": "high",
-      "queue_priority": "P1",
-      "score": 140,
-      "occurrence_count": 4,
-      "source_artifact_count": 2,
-      "source_artifact_ids": [
-        "pl-118-159-fy2025-ndaa",
-        "pl-118-31-fy2024-ndaa"
-      ],
-      "source_artifact_titles": [
-        "FY2025 NDAA",
-        "FY2024 NDAA"
-      ],
-      "first_line": 31807,
-      "lines_sample": [
-        31807,
-        32214
-      ],
-      "recommended_artifact_id": "usc-title-10-section-2687",
-      "recommended_title": "10 U.S.C. 2687",
-      "recommended_artifact_type": "U.S. Code",
-      "recommended_authority_level": "law",
-      "recommended_source_system": "U.S. Code",
-      "recommended_source_location_type": "uscode_house_gov_section_html",
-      "capture_strategy": "official_html_snapshot",
-      "official_source_candidates": [
-        {
-          "label": "U.S. Code section view",
-          "url": "https://uscode.house.gov/view.xhtml?req=(title:10%20section:2687%20edition:prelim)",
-          "source_system": "U.S. Code",
-          "expected_capture_method": "official_html_snapshot"
-        },
-        {
-          "label": "GovInfo U.S. Code collection",
-          "url": "https://www.govinfo.gov/app/collection/uscode",
-          "source_system": "GovInfo",
-          "expected_capture_method": "collection_search"
-        }
-      ],
-      "ingestion_status": "queued",
-      "mirror_requirements": [
-        "Identify authoritative landing/source URL",
-        "Mirror source document or authoritative HTML snapshot",
-        "Extract full text",
-        "Generate metadata, analytics, analysis, structured summary, claims, extractions, and reference map",
-        "Regenerate reference coverage and ingestion queue"
-      ],
-      "analyst_notes": [
-        "P1 because 10 U.S.C. 2687 appears 4 time(s) across 2 catalogued artifact(s).",
-        "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
-        "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
-      ],
-      "queue_rank": 48
-    },
-    {
-      "id": "ingest-usc-10-2821",
-      "reference_key": "usc:10:2821",
-      "label": "10 U.S.C. 2821",
-      "reference_family": "usc",
-      "reference_type": "U.S. Code",
-      "authority_tier": "high",
-      "queue_priority": "P1",
-      "score": 140,
-      "occurrence_count": 4,
-      "source_artifact_count": 2,
-      "source_artifact_ids": [
-        "pl-118-159-fy2025-ndaa",
-        "pl-118-31-fy2024-ndaa"
-      ],
-      "source_artifact_titles": [
-        "FY2025 NDAA",
-        "FY2024 NDAA"
-      ],
-      "first_line": 32691,
-      "lines_sample": [
-        32691
-      ],
-      "recommended_artifact_id": "usc-title-10-section-2821",
-      "recommended_title": "10 U.S.C. 2821",
-      "recommended_artifact_type": "U.S. Code",
-      "recommended_authority_level": "law",
-      "recommended_source_system": "U.S. Code",
-      "recommended_source_location_type": "uscode_house_gov_section_html",
-      "capture_strategy": "official_html_snapshot",
-      "official_source_candidates": [
-        {
-          "label": "U.S. Code section view",
-          "url": "https://uscode.house.gov/view.xhtml?req=(title:10%20section:2821%20edition:prelim)",
-          "source_system": "U.S. Code",
-          "expected_capture_method": "official_html_snapshot"
-        },
-        {
-          "label": "GovInfo U.S. Code collection",
-          "url": "https://www.govinfo.gov/app/collection/uscode",
-          "source_system": "GovInfo",
-          "expected_capture_method": "collection_search"
-        }
-      ],
-      "ingestion_status": "queued",
-      "mirror_requirements": [
-        "Identify authoritative landing/source URL",
-        "Mirror source document or authoritative HTML snapshot",
-        "Extract full text",
-        "Generate metadata, analytics, analysis, structured summary, claims, extractions, and reference map",
-        "Regenerate reference coverage and ingestion queue"
-      ],
-      "analyst_notes": [
-        "P1 because 10 U.S.C. 2821 appears 4 time(s) across 2 catalogued artifact(s).",
-        "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
-        "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
-      ],
-      "queue_rank": 49
-    },
-    {
-      "id": "ingest-usc-10-4871",
-      "reference_key": "usc:10:4871",
-      "label": "10 U.S.C. 4871",
-      "reference_family": "usc",
-      "reference_type": "U.S. Code",
-      "authority_tier": "high",
-      "queue_priority": "P1",
-      "score": 140,
-      "occurrence_count": 4,
-      "source_artifact_count": 2,
-      "source_artifact_ids": [
-        "pl-118-159-fy2025-ndaa",
-        "pl-118-31-fy2024-ndaa"
-      ],
-      "source_artifact_titles": [
-        "FY2025 NDAA",
-        "FY2024 NDAA"
-      ],
-      "first_line": 3067,
-      "lines_sample": [
-        3067,
-        3179,
-        29318
-      ],
-      "recommended_artifact_id": "usc-title-10-section-4871",
-      "recommended_title": "10 U.S.C. 4871",
-      "recommended_artifact_type": "U.S. Code",
-      "recommended_authority_level": "law",
-      "recommended_source_system": "U.S. Code",
-      "recommended_source_location_type": "uscode_house_gov_section_html",
-      "capture_strategy": "official_html_snapshot",
-      "official_source_candidates": [
-        {
-          "label": "U.S. Code section view",
-          "url": "https://uscode.house.gov/view.xhtml?req=(title:10%20section:4871%20edition:prelim)",
-          "source_system": "U.S. Code",
-          "expected_capture_method": "official_html_snapshot"
-        },
-        {
-          "label": "GovInfo U.S. Code collection",
-          "url": "https://www.govinfo.gov/app/collection/uscode",
-          "source_system": "GovInfo",
-          "expected_capture_method": "collection_search"
-        }
-      ],
-      "ingestion_status": "queued",
-      "mirror_requirements": [
-        "Identify authoritative landing/source URL",
-        "Mirror source document or authoritative HTML snapshot",
-        "Extract full text",
-        "Generate metadata, analytics, analysis, structured summary, claims, extractions, and reference map",
-        "Regenerate reference coverage and ingestion queue"
-      ],
-      "analyst_notes": [
-        "P1 because 10 U.S.C. 4871 appears 4 time(s) across 2 catalogued artifact(s).",
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],

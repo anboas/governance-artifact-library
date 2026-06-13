@@ -6,8 +6,8 @@ The initial seed set intentionally mixes fully mirrored official artifacts with 
 
 - `pl-118-31-fy2024-ndaa`: GovInfo Public Law PDF
 - `pl-118-159-fy2025-ndaa`: GovInfo Public Law PDF
-- `eo-14110-ai`: Federal Register HTML
-- `eo-14028-cybersecurity`: Federal Register HTML
+- `eo-14110-ai`: Federal Register API raw text
+- `eo-14028-cybersecurity`: Federal Register API raw text
 - `omb-m-24-10-ai-governance`: White House PDF
 - `omb-m-21-31-cyber-logging`: White House PDF
 - `usc-title-10-section-2222`: U.S. Code HTML

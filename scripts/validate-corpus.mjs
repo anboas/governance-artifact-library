@@ -83,13 +83,13 @@ for (const entry of manifest.artifacts) {
     assert.equal(existsSync(join(ROOT, artifact.structured_json_path)), true, `${entry.id} structured summary missing`);
     const checksum = createHash("sha256").update(readFileSync(join(ROOT, artifact.raw_path))).digest("hex");
     assert.equal(checksum, artifact.checksum_sha256, `${entry.id} raw checksum mismatch`);
-    assert.ok(readFileSync(join(ROOT, artifact.extracted_text_path), "utf8").trim().length > 100, `${entry.id} extracted text should be non-empty`);
-    assert.ok(["parsed", "source_text_unavailable"].includes(extractions.extraction_status), `${entry.id} mirrored artifact should expose extraction status`);
-    if (extractions.extraction_status === "parsed") {
-      assert.ok(extractions.summary?.annotated_line_count > 0, `${entry.id} should have line annotations`);
-      assert.equal(claims.claims_status, "parsed", `${entry.id} claims should be parsed when extraction text is parsed`);
-      assert.ok(claims.summary?.claim_count > 0, `${entry.id} should have extracted claim candidates`);
-    }
+    const extractedText = readFileSync(join(ROOT, artifact.extracted_text_path), "utf8");
+    assert.ok(extractedText.trim().length > 100, `${entry.id} extracted text should be non-empty`);
+    assert.equal(hasMeaningfulSourceText(extractedText), true, `${entry.id} mirrored artifact captured an access wall or placeholder instead of source text`);
+    assert.equal(extractions.extraction_status, "parsed", `${entry.id} mirrored artifact should expose parsed extraction status`);
+    assert.ok(extractions.summary?.annotated_line_count > 0, `${entry.id} should have line annotations`);
+    assert.equal(claims.claims_status, "parsed", `${entry.id} claims should be parsed when extraction text is parsed`);
+    assert.ok(claims.summary?.claim_count > 0, `${entry.id} should have extracted claim candidates`);
   }
 
   if (artifact.mirror_status === "blocked") {
@@ -145,4 +145,14 @@ function readJson(path) {
 function assertSidecar(artifact, field, label) {
   assert.ok(artifact[field], `${artifact.id} needs ${field}`);
   assert.equal(existsSync(join(ROOT, artifact[field])), true, `${artifact.id} missing ${label}`);
+}
+
+function hasMeaningfulSourceText(text) {
+  const normalized = String(text || "").replace(/\s+/g, " ").trim();
+  if (normalized.length < 100) return false;
+  if (/Request Access Due to aggressive automated scraping/i.test(normalized)) return false;
+  if (/Your request has been flagged as potentially automated/i.test(normalized)) return false;
+  if (/complete the CAPTCHA/i.test(normalized)) return false;
+  if (/Access Denied|Cloudflare Ray ID|temporarily blocked/i.test(normalized)) return false;
+  return true;
 }

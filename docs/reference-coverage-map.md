@@ -3,9 +3,9 @@
 Generated: 2026-06-12T23:25:00.000Z
 
 - Artifacts: 19
-- Resolved reference edges: 7
-- Uncatalogued references: 905
-- Artifacts with uncatalogued references: 7
+- Resolved reference edges: 9
+- Uncatalogued references: 927
+- Artifacts with uncatalogued references: 9
 
 ## Artifact Summary
 
@@ -14,8 +14,8 @@ Generated: 2026-06-12T23:25:00.000Z
 | pl-118-159-fy2025-ndaa | 1 | 435 | 1 |
 | pl-118-31-fy2024-ndaa | 1 | 582 | 1 |
 | usc-title-10-section-2222 | 1 | 1 | 1 |
-| eo-14028-cybersecurity | 0 | 0 | 0 |
-| eo-14110-ai | 0 | 0 | 0 |
+| eo-14028-cybersecurity | 1 | 5 | 1 |
+| eo-14110-ai | 1 | 31 | 1 |
 | omb-m-21-31-cyber-logging | 1 | 3 | 1 |
 | omb-m-24-10-ai-governance | 1 | 9 | 1 |
 | far-part-39-acquisition-of-it | 0 | 6 | 0 |
@@ -37,20 +37,21 @@ Generated: 2026-06-12T23:25:00.000Z
 | --- | --- | ---: | ---: | --- |
 | 10 U.S.C. 113 | usc | 32 | 2 | high |
 | 10 U.S.C. 4001 | usc | 26 | 2 | high |
+| 50 U.S.C. 3003 | usc | 23 | 4 | high |
 | 10 U.S.C. 2224 | usc | 22 | 2 | high |
-| 50 U.S.C. 3003 | usc | 22 | 3 | high |
 | 22 U.S.C. 2651a | usc | 17 | 2 | high |
 | 10 U.S.C. 4205 | usc | 14 | 1 | high |
 | 10 U.S.C. 111 | usc | 13 | 2 | high |
+| 44 U.S.C. 3502 | usc | 11 | 4 | high |
 | 50 U.S.C. 3024 | usc | 11 | 2 | high |
 | 42 U.S.C. 300mm | usc | 9 | 1 | high |
 | 42 U.S.C. 4321 | usc | 9 | 2 | high |
 | Executive Order 13526 | executive-order | 9 | 2 | high |
+| Executive Order 14091 | executive-order | 9 | 2 | high |
 | 10 U.S.C. 3201 | usc | 8 | 2 | high |
 | 10 U.S.C. 333 | usc | 8 | 2 | high |
 | 10 USC 2802 | usc | 8 | 2 | high |
 | 15 U.S.C. 632 | usc | 8 | 2 | high |
-| 44 U.S.C. § 3502 | usc | 8 | 2 | high |
 | 5 U.S.C. 3330d | usc | 8 | 2 | high |
 | 50 U.S.C. 3161 | usc | 8 | 2 | high |
 | 50 U.S.C. 3373 | usc | 8 | 2 | high |
@@ -72,7 +73,6 @@ Generated: 2026-06-12T23:25:00.000Z
 | 44 U.S.C. 3601 | usc | 6 | 1 | high |
 | 50 U.S.C. 3383 | usc | 6 | 2 | high |
 | 50 U.S.C. 3519b | usc | 6 | 1 | high |
-| Executive Order 14091 | executive-order | 6 | 1 | high |
 | 10 U.S.C. 1580 | usc | 5 | 2 | high |
 | 10 U.S.C. 301 | usc | 5 | 2 | high |
 | 10 U.S.C. 311 | usc | 5 | 2 | high |
@@ -87,6 +87,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | 50 U.S.C. 98b | usc | 5 | 2 | high |
 | 50 U.S.C. 98h | usc | 5 | 2 | high |
 | 50 USC 3062 | usc | 5 | 1 | high |
+| Executive Order 13960 | executive-order | 5 | 2 | high |
 | 10 U.S.C. 167b | usc | 4 | 2 | high |
 | 10 U.S.C. 1784 | usc | 4 | 1 | high |
 | 10 U.S.C. 2200 | usc | 4 | 1 | high |
@@ -111,8 +112,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | 22 U.S.C. 277d | usc | 4 | 1 | high |
 | 22 U.S.C. 8606 | usc | 4 | 2 | high |
 | 31 U.S.C. 3801 | usc | 4 | 1 | high |
+| 31 U.S.C. 901 | usc | 4 | 2 | high |
 | 47 U.S.C. 309 | usc | 4 | 1 | high |
-| 50 U.S.C. 3073a | usc | 4 | 1 | high |
-| 50 U.S.C. 3091 | usc | 4 | 2 | high |
-| 8 U.S.C. 1153 | usc | 4 | 1 | high |
+| 50 U.S.C. 1701 | usc | 4 | 3 | high |
 

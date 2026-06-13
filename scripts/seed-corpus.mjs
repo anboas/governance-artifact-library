@@ -90,8 +90,9 @@ const SEEDS = [
     issuing_authority: "President",
     issuing_organization: "Executive Office of the President",
     source_system: "Federal Register",
-    source_location_type: "federal_register_html",
+    source_location_type: "federal_register_api",
     source_url: "https://www.federalregister.gov/documents/2023/11/01/2023-24283/safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence",
+    fetch_url: "https://www.federalregister.gov/documents/full_text/text/2023/11/01/2023-24283.txt",
     source_date: "2023-10-30",
     publication_date: "2023-11-01",
     effective_date: "2023-10-30",
@@ -110,8 +111,9 @@ const SEEDS = [
     issuing_authority: "President",
     issuing_organization: "Executive Office of the President",
     source_system: "Federal Register",
-    source_location_type: "federal_register_html",
+    source_location_type: "federal_register_api",
     source_url: "https://www.federalregister.gov/documents/2021/05/17/2021-10460/improving-the-nations-cybersecurity",
+    fetch_url: "https://www.federalregister.gov/documents/full_text/text/2021/05/17/2021-10460.txt",
     source_date: "2021-05-12",
     publication_date: "2021-05-17",
     effective_date: "2021-05-12",
@@ -473,7 +475,7 @@ for (const seed of SEEDS) {
   let captureNotes = "Official source identified. Raw mirroring blocked by source host during automated capture.";
 
   if (!seed.blocked) {
-    const response = await fetch(seed.source_url, {
+    const response = await fetch(seed.fetch_url || seed.source_url, {
       headers: { "user-agent": "governance-artifact-library-seeder/0.2" },
       redirect: "follow",
     });
@@ -487,7 +489,9 @@ for (const seed of SEEDS) {
     mirrorStatus = "mirrored";
     parserStatus = extractedText.trim() ? "parsed" : "partial";
     pipelineState = PIPELINE.structured;
-    captureNotes = "Raw artifact mirrored and text extracted by seed-corpus.mjs.";
+    captureNotes = seed.fetch_url
+      ? `Raw artifact mirrored from official machine-readable source ${seed.fetch_url} and text extracted by seed-corpus.mjs.`
+      : "Raw artifact mirrored and text extracted by seed-corpus.mjs.";
   }
 
   const artifact = {

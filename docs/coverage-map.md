@@ -5,8 +5,8 @@ Generated from `manifest.json` and `taxonomies/governance-item-universe.json`.
 ## Summary
 
 - Universe item types: 25
-- Covered item types: 12
-- Empty item types: 13
+- Covered item types: 11
+- Empty item types: 14
 - Artifacts in repo: 19
 - Mirrored artifacts: 10
 - Source-known blocked artifacts: 9
@@ -22,7 +22,7 @@ Generated from `manifest.json` and `taxonomies/governance-item-universe.json`.
 | ---: | --- | ---: | ---: | ---: | ---: |
 | 10 | law | 1/2 | 2 | 2 | 0 |
 | 20 | us_code | 1/1 | 1 | 1 | 0 |
-| 30 | presidential_directive | 1/2 | 2 | 2 | 0 |
+| 30 | presidential_directive | 0/2 | 0 | 0 | 0 |
 | 40 | executive_branch_guidance | 1/2 | 2 | 2 | 0 |
 | 50 | federal_regulation | 1/2 | 1 | 1 | 0 |
 | 60 | federal_standard | 1/2 | 2 | 2 | 0 |
@@ -41,7 +41,7 @@ Generated from `manifest.json` and `taxonomies/governance-item-universe.json`.
 | 10 | Appropriations Law | not_started | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | none |
 | 10 | Public Law / NDAA | analysis_ready | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | pl-118-159-fy2025-ndaa<br>pl-118-31-fy2024-ndaa |
 | 20 | U.S. Code | analysis_ready | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | usc-title-10-section-2222 |
-| 30 | Executive Order | analysis_ready | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | eo-14028-cybersecurity<br>eo-14110-ai |
+| 30 | Executive Order | not_started | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | none |
 | 30 | Presidential Memorandum | not_started | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | none |
 | 40 | OMB Memorandum | analysis_ready | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | omb-m-21-31-cyber-logging<br>omb-m-24-10-ai-governance |
 | 40 | OSTP / Executive Office Guidance | not_started | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | none |
@@ -75,7 +75,7 @@ Generated from `manifest.json` and `taxonomies/governance-item-universe.json`.
 | dod_cio_pdf | 2 | 1 | 0 | 1 |
 | dod_issuances_pdf | 4 | 3 | 0 | 3 |
 | don_issuances_pdf | 3 | 3 | 0 | 3 |
-| federal_register_html | 2 | 2 | 2 | 0 |
+| federal_register_html | 2 | 0 | 0 | 0 |
 | fleet_command_html | 1 | 0 | 0 | 0 |
 | fleet_command_pdf | 1 | 0 | 0 | 0 |
 | govinfo_public_law_pdf | 2 | 2 | 2 | 0 |
