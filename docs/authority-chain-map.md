@@ -45,7 +45,7 @@ Generated: 2026-06-13T13:55:00.000Z
 | dodd-1000-26e | 0 | 4 | 0 | authority_gap |
 | dodd-1000-33e | 0 | 4 | 0 | authority_gap |
 | dodd-1015-17e | 0 | 4 | 0 | authority_gap |
-| dodd-1015-5 | 0 | 4 | 0 | authority_gap |
+| dodd-1015-5 | 0 | 4 | 4 | authority_gap |
 | dodd-1020-02e | 0 | 4 | 0 | authority_gap |
 | dodd-1020-1 | 0 | 4 | 0 | authority_gap |
 | dodd-1100-4 | 0 | 4 | 0 | authority_gap |

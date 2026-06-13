@@ -2,21 +2,21 @@
 
 Generated: 2026-06-12T23:25:00.000Z
 
-- Queue items: 963
+- Queue items: 969
 - P0: 14
-- P1: 151
+- P1: 152
 - P2: 790
-- P3: 8
-- Source artifacts with gaps: 14
+- P3: 13
+- Source artifacts with gaps: 15
 
 ## Family Summary
 
 | Family | Items | Occurrences | P0 | P1 | P2 | P3 |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| usc | 918 | 1564 | 14 | 144 | 760 | 0 |
+| usc | 918 | 1565 | 14 | 145 | 759 | 0 |
 | executive-order | 24 | 52 | 0 | 5 | 19 | 0 |
-| public-law | 12 | 17 | 0 | 2 | 10 | 0 |
-| cfr | 4 | 9 | 0 | 0 | 0 | 4 |
+| cfr | 9 | 21 | 0 | 0 | 0 | 9 |
+| public-law | 13 | 18 | 0 | 2 | 11 | 0 |
 | nist-sp | 2 | 2 | 0 | 0 | 0 | 2 |
 | far | 1 | 1 | 0 | 0 | 0 | 1 |
 | omb-memo | 1 | 1 | 0 | 0 | 1 | 0 |

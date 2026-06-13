@@ -4,8 +4,8 @@ Generated: 2026-06-12T23:25:00.000Z
 
 - Artifacts: 1158
 - Resolved reference edges: 32
-- Uncatalogued references: 963
-- Artifacts with uncatalogued references: 14
+- Uncatalogued references: 969
+- Artifacts with uncatalogued references: 15
 
 ## Artifact Summary
 
@@ -31,7 +31,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodd-1000-26e | 0 | 0 | 0 |
 | dodd-1000-33e | 0 | 0 | 0 |
 | dodd-1015-17e | 0 | 0 | 0 |
-| dodd-1015-5 | 0 | 0 | 0 |
+| dodd-1015-5 | 0 | 7 | 0 |
 | dodd-1020-02e | 0 | 0 | 0 |
 | dodd-1020-1 | 0 | 0 | 0 |
 | dodd-1100-4 | 0 | 0 | 0 |
@@ -1228,6 +1228,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | 50 U.S.C. 98b | usc | 5 | 2 | high |
 | 50 U.S.C. 98h | usc | 5 | 2 | high |
 | 50 USC 3062 | usc | 5 | 1 | high |
+| 7 CFR 210 | cfr | 5 | 1 | medium |
 | Executive Order 13960 | executive-order | 5 | 2 | high |
 | 10 U.S.C. 167b | usc | 4 | 2 | high |
 | 10 U.S.C. 1784 | usc | 4 | 1 | high |
@@ -1253,5 +1254,4 @@ Generated: 2026-06-12T23:25:00.000Z
 | 22 U.S.C. 10401 | usc | 4 | 2 | high |
 | 22 U.S.C. 2321h | usc | 4 | 1 | high |
 | 22 U.S.C. 2751 | usc | 4 | 3 | high |
-| 22 U.S.C. 277d | usc | 4 | 1 | high |
 

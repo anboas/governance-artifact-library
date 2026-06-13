@@ -8,12 +8,12 @@ Generated from `manifest.json` and `taxonomies/governance-item-universe.json`.
 - Covered item types: 9
 - Empty item types: 16
 - Artifacts in repo: 1158
-- Mirrored artifacts: 15
+- Mirrored artifacts: 16
 - Source-known blocked artifacts: 9
-- Text extracted: 15
+- Text extracted: 16
 - Analytics sidecars: 1158
 - Analysis sidecars: 1158
-- Structured summaries: 15
+- Structured summaries: 16
 - Version ledgers: 1158
 
 ## Authority Coverage
