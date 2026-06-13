@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-06-13T13:55:00.000Z",
   "authority_chain_version": "governance-authority-chain-v1",
-  "artifact_count": 19,
+  "artifact_count": 24,
   "lanes": [
     {
       "id": "law",
@@ -45,12 +45,12 @@
     }
   ],
   "summary": {
-    "node_count": 19,
-    "edge_count": 40,
-    "resolved_reference_edge_count": 4,
-    "inferred_flowdown_edge_count": 36,
-    "artifacts_with_upstream_authority": 14,
-    "artifacts_with_downstream_implementation": 16
+    "node_count": 24,
+    "edge_count": 64,
+    "resolved_reference_edge_count": 22,
+    "inferred_flowdown_edge_count": 42,
+    "artifacts_with_upstream_authority": 19,
+    "artifacts_with_downstream_implementation": 21
   },
   "nodes": [
     {
@@ -84,6 +84,21 @@
       "status": "catalogued"
     },
     {
+      "id": "usc-title-10-section-113",
+      "label": "10 U.S.C. 113",
+      "title": "10 U.S.C. 113: Secretary of Defense",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "usc-title-10-section-2222",
       "label": "10 U.S.C. 2222",
       "title": "10 U.S.C. 2222: Defense business systems",
@@ -92,6 +107,66 @@
       "lane_label": "Statute",
       "hierarchy_rank": 20,
       "family": "defense_business_systems",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-10-section-2224",
+      "label": "10 U.S.C. 2224",
+      "title": "10 U.S.C. 2224: Defense Information Assurance Program",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-10-section-4001",
+      "label": "10 U.S.C. 4001",
+      "title": "10 U.S.C. 4001: Research and development projects",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_acquisition",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-44-section-3502",
+      "label": "44 U.S.C. 3502",
+      "title": "44 U.S.C. 3502: Definitions",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "information_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-50-section-3003",
+      "label": "50 U.S.C. 3003",
+      "title": "50 U.S.C. 3003: Definitions",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "national_security",
       "issuing_authority": "Congress",
       "source_system": "U.S. Code",
       "mirror_status": "mirrored",
@@ -969,6 +1044,58 @@
       }
     },
     {
+      "id": "pl-118-31-fy2024-ndaa->usc-title-10-section-113:codifies_or_creates_note:resolved_reference",
+      "source_artifact_id": "pl-118-31-fy2024-ndaa",
+      "source_label": "FY2024 NDAA",
+      "source_lane": "law",
+      "target_artifact_id": "usc-title-10-section-113",
+      "target_label": "10 U.S.C. 113",
+      "target_lane": "statute",
+      "relationship": "codifies_or_creates_note",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_artifact_id": "pl-118-31-fy2024-ndaa",
+        "source_reference_id": "usc:10:113",
+        "label": "10 U.S.C. 113",
+        "first_line": 9355,
+        "lines_sample": [
+          9355,
+          12313,
+          14349,
+          19301,
+          19307,
+          22354,
+          23590,
+          23608,
+          23676,
+          24029,
+          32740,
+          56473
+        ],
+        "count": 12
+      }
+    },
+    {
+      "id": "pl-118-31-fy2024-ndaa->usc-title-10-section-113:codifies_or_creates_note:inferred_flowdown",
+      "source_artifact_id": "pl-118-31-fy2024-ndaa",
+      "source_label": "FY2024 NDAA",
+      "source_lane": "law",
+      "target_artifact_id": "usc-title-10-section-113",
+      "target_label": "10 U.S.C. 113",
+      "target_lane": "statute",
+      "relationship": "codifies_or_creates_note",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.66,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [],
+        "shared_family": ""
+      }
+    },
+    {
       "id": "pl-118-31-fy2024-ndaa->usc-title-10-section-2222:codifies_or_creates_note:resolved_reference",
       "source_artifact_id": "pl-118-31-fy2024-ndaa",
       "source_label": "FY2024 NDAA",
@@ -999,6 +1126,196 @@
       "source_lane": "law",
       "target_artifact_id": "usc-title-10-section-2222",
       "target_label": "10 U.S.C. 2222",
+      "target_lane": "statute",
+      "relationship": "codifies_or_creates_note",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.66,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "pl-118-31-fy2024-ndaa->usc-title-10-section-2224:codifies_or_creates_note:resolved_reference",
+      "source_artifact_id": "pl-118-31-fy2024-ndaa",
+      "source_label": "FY2024 NDAA",
+      "source_lane": "law",
+      "target_artifact_id": "usc-title-10-section-2224",
+      "target_label": "10 U.S.C. 2224",
+      "target_lane": "statute",
+      "relationship": "codifies_or_creates_note",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_artifact_id": "pl-118-31-fy2024-ndaa",
+        "source_reference_id": "usc:10:2224",
+        "label": "10 U.S.C. 2224",
+        "first_line": 27207,
+        "lines_sample": [
+          27207,
+          27242,
+          27306,
+          27314,
+          27326,
+          27348,
+          27497,
+          27587,
+          27823,
+          27880,
+          27929,
+          28025
+        ],
+        "count": 16
+      }
+    },
+    {
+      "id": "pl-118-31-fy2024-ndaa->usc-title-10-section-2224:codifies_or_creates_note:inferred_flowdown",
+      "source_artifact_id": "pl-118-31-fy2024-ndaa",
+      "source_label": "FY2024 NDAA",
+      "source_lane": "law",
+      "target_artifact_id": "usc-title-10-section-2224",
+      "target_label": "10 U.S.C. 2224",
+      "target_lane": "statute",
+      "relationship": "codifies_or_creates_note",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.66,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "pl-118-31-fy2024-ndaa->usc-title-10-section-4001:codifies_or_creates_note:resolved_reference",
+      "source_artifact_id": "pl-118-31-fy2024-ndaa",
+      "source_label": "FY2024 NDAA",
+      "source_lane": "law",
+      "target_artifact_id": "usc-title-10-section-4001",
+      "target_label": "10 U.S.C. 4001",
+      "target_lane": "statute",
+      "relationship": "codifies_or_creates_note",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_artifact_id": "pl-118-31-fy2024-ndaa",
+        "source_reference_id": "usc:10:4001",
+        "label": "10 U.S.C. 4001",
+        "first_line": 4766,
+        "lines_sample": [
+          4766,
+          4778,
+          6295,
+          12767,
+          21665,
+          21737,
+          21740,
+          28257,
+          28262,
+          29654,
+          29714,
+          29821
+        ],
+        "count": 15
+      }
+    },
+    {
+      "id": "pl-118-31-fy2024-ndaa->usc-title-10-section-4001:codifies_or_creates_note:inferred_flowdown",
+      "source_artifact_id": "pl-118-31-fy2024-ndaa",
+      "source_label": "FY2024 NDAA",
+      "source_lane": "law",
+      "target_artifact_id": "usc-title-10-section-4001",
+      "target_label": "10 U.S.C. 4001",
+      "target_lane": "statute",
+      "relationship": "codifies_or_creates_note",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.66,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "pl-118-31-fy2024-ndaa->usc-title-50-section-3003:codifies_or_creates_note:resolved_reference",
+      "source_artifact_id": "pl-118-31-fy2024-ndaa",
+      "source_label": "FY2024 NDAA",
+      "source_lane": "law",
+      "target_artifact_id": "usc-title-50-section-3003",
+      "target_label": "50 U.S.C. 3003",
+      "target_lane": "statute",
+      "relationship": "codifies_or_creates_note",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_artifact_id": "pl-118-31-fy2024-ndaa",
+        "source_reference_id": "usc:50:3003",
+        "label": "50 U.S.C. 3003",
+        "first_line": 23781,
+        "lines_sample": [
+          23781,
+          28802,
+          28844,
+          29241,
+          32363,
+          37770,
+          61282,
+          61288,
+          62071,
+          62317,
+          64249,
+          65001
+        ],
+        "count": 12
+      }
+    },
+    {
+      "id": "pl-118-159-fy2025-ndaa->usc-title-10-section-113:codifies_or_creates_note:resolved_reference",
+      "source_artifact_id": "pl-118-159-fy2025-ndaa",
+      "source_label": "FY2025 NDAA",
+      "source_lane": "law",
+      "target_artifact_id": "usc-title-10-section-113",
+      "target_label": "10 U.S.C. 113",
+      "target_lane": "statute",
+      "relationship": "codifies_or_creates_note",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_artifact_id": "pl-118-159-fy2025-ndaa",
+        "source_reference_id": "usc:10:113",
+        "label": "10 U.S.C. 113",
+        "first_line": 3121,
+        "lines_sample": [
+          3121,
+          3282,
+          5238,
+          5992,
+          15097,
+          17611,
+          19813,
+          19927,
+          20527,
+          20689,
+          21022,
+          21103
+        ],
+        "count": 20
+      }
+    },
+    {
+      "id": "pl-118-159-fy2025-ndaa->usc-title-10-section-113:codifies_or_creates_note:inferred_flowdown",
+      "source_artifact_id": "pl-118-159-fy2025-ndaa",
+      "source_label": "FY2025 NDAA",
+      "source_lane": "law",
+      "target_artifact_id": "usc-title-10-section-113",
+      "target_label": "10 U.S.C. 113",
       "target_lane": "statute",
       "relationship": "codifies_or_creates_note",
       "evidence_type": "inferred_flowdown",
@@ -1049,6 +1366,133 @@
         "basis": "shared_family_tags_and_authority_rank",
         "shared_tags": [],
         "shared_family": ""
+      }
+    },
+    {
+      "id": "pl-118-159-fy2025-ndaa->usc-title-10-section-2224:codifies_or_creates_note:resolved_reference",
+      "source_artifact_id": "pl-118-159-fy2025-ndaa",
+      "source_label": "FY2025 NDAA",
+      "source_lane": "law",
+      "target_artifact_id": "usc-title-10-section-2224",
+      "target_label": "10 U.S.C. 2224",
+      "target_lane": "statute",
+      "relationship": "codifies_or_creates_note",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_artifact_id": "pl-118-159-fy2025-ndaa",
+        "source_reference_id": "usc:10:2224",
+        "label": "10 U.S.C. 2224",
+        "first_line": 24215,
+        "lines_sample": [
+          24215,
+          24530,
+          24555,
+          24563,
+          24697,
+          24930
+        ],
+        "count": 6
+      }
+    },
+    {
+      "id": "pl-118-159-fy2025-ndaa->usc-title-10-section-2224:codifies_or_creates_note:inferred_flowdown",
+      "source_artifact_id": "pl-118-159-fy2025-ndaa",
+      "source_label": "FY2025 NDAA",
+      "source_lane": "law",
+      "target_artifact_id": "usc-title-10-section-2224",
+      "target_label": "10 U.S.C. 2224",
+      "target_lane": "statute",
+      "relationship": "codifies_or_creates_note",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.66,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "pl-118-159-fy2025-ndaa->usc-title-10-section-4001:codifies_or_creates_note:resolved_reference",
+      "source_artifact_id": "pl-118-159-fy2025-ndaa",
+      "source_label": "FY2025 NDAA",
+      "source_lane": "law",
+      "target_artifact_id": "usc-title-10-section-4001",
+      "target_label": "10 U.S.C. 4001",
+      "target_lane": "statute",
+      "relationship": "codifies_or_creates_note",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_artifact_id": "pl-118-159-fy2025-ndaa",
+        "source_reference_id": "usc:10:4001",
+        "label": "10 U.S.C. 4001",
+        "first_line": 4207,
+        "lines_sample": [
+          4207,
+          4498,
+          4534,
+          4722,
+          4924,
+          4976,
+          5058,
+          14011,
+          24950,
+          25053,
+          34253
+        ],
+        "count": 11
+      }
+    },
+    {
+      "id": "pl-118-159-fy2025-ndaa->usc-title-10-section-4001:codifies_or_creates_note:inferred_flowdown",
+      "source_artifact_id": "pl-118-159-fy2025-ndaa",
+      "source_label": "FY2025 NDAA",
+      "source_lane": "law",
+      "target_artifact_id": "usc-title-10-section-4001",
+      "target_label": "10 U.S.C. 4001",
+      "target_lane": "statute",
+      "relationship": "codifies_or_creates_note",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.66,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "pl-118-159-fy2025-ndaa->usc-title-50-section-3003:codifies_or_creates_note:resolved_reference",
+      "source_artifact_id": "pl-118-159-fy2025-ndaa",
+      "source_label": "FY2025 NDAA",
+      "source_lane": "law",
+      "target_artifact_id": "usc-title-50-section-3003",
+      "target_label": "50 U.S.C. 3003",
+      "target_lane": "statute",
+      "relationship": "codifies_or_creates_note",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_artifact_id": "pl-118-159-fy2025-ndaa",
+        "source_reference_id": "usc:50:3003",
+        "label": "50 U.S.C. 3003",
+        "first_line": 26264,
+        "lines_sample": [
+          26264,
+          47280,
+          48206,
+          48212,
+          48575,
+          50523,
+          51224,
+          53386
+        ],
+        "count": 8
       }
     },
     {
@@ -1194,30 +1638,280 @@
         ],
         "shared_family": "cybersecurity"
       }
+    },
+    {
+      "id": "usc-title-44-section-3502->eo-14028-cybersecurity:authorizes:resolved_reference",
+      "source_artifact_id": "usc-title-44-section-3502",
+      "source_label": "44 U.S.C. 3502",
+      "source_lane": "statute",
+      "target_artifact_id": "eo-14028-cybersecurity",
+      "target_label": "EO 14028",
+      "target_lane": "executive",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_artifact_id": "eo-14028-cybersecurity",
+        "source_reference_id": "usc:44:3502",
+        "label": "44 U.S.C. 3502",
+        "first_line": 1073,
+        "lines_sample": [
+          1073
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-44-section-3502->eo-14110-ai:authorizes:resolved_reference",
+      "source_artifact_id": "usc-title-44-section-3502",
+      "source_label": "44 U.S.C. 3502",
+      "source_lane": "statute",
+      "target_artifact_id": "eo-14110-ai",
+      "target_label": "EO 14110",
+      "target_lane": "executive",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_artifact_id": "eo-14110-ai",
+        "source_reference_id": "usc:44:3502",
+        "label": "44 U.S.C. 3502",
+        "first_line": 279,
+        "lines_sample": [
+          279,
+          280
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "usc-title-50-section-3003->eo-14028-cybersecurity:authorizes:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-3003",
+      "source_label": "50 U.S.C. 3003",
+      "source_lane": "statute",
+      "target_artifact_id": "eo-14028-cybersecurity",
+      "target_label": "EO 14028",
+      "target_lane": "executive",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_artifact_id": "eo-14028-cybersecurity",
+        "source_reference_id": "usc:50:3003",
+        "label": "50 U.S.C. 3003",
+        "first_line": 1096,
+        "lines_sample": [
+          1096
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-44-section-3502->omb-m-21-31-cyber-logging:authorizes:resolved_reference",
+      "source_artifact_id": "usc-title-44-section-3502",
+      "source_label": "44 U.S.C. 3502",
+      "source_lane": "statute",
+      "target_artifact_id": "omb-m-21-31-cyber-logging",
+      "target_label": "OMB M-21-31",
+      "target_lane": "govwide",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_artifact_id": "omb-m-21-31-cyber-logging",
+        "source_reference_id": "usc:44:3502",
+        "label": "44 U.S.C. § 3502",
+        "first_line": 50,
+        "lines_sample": [
+          50
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-44-section-3502->omb-m-24-10-ai-governance:authorizes:resolved_reference",
+      "source_artifact_id": "usc-title-44-section-3502",
+      "source_label": "44 U.S.C. 3502",
+      "source_lane": "statute",
+      "target_artifact_id": "omb-m-24-10-ai-governance",
+      "target_label": "OMB M-24-10",
+      "target_lane": "govwide",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_artifact_id": "omb-m-24-10-ai-governance",
+        "source_reference_id": "usc:44:3502",
+        "label": "44 U.S.C. § 3502",
+        "first_line": 120,
+        "lines_sample": [
+          120,
+          146,
+          148,
+          928,
+          1324,
+          1411,
+          1445
+        ],
+        "count": 7
+      }
+    },
+    {
+      "id": "usc-title-50-section-3003->omb-m-24-10-ai-governance:authorizes:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-3003",
+      "source_label": "50 U.S.C. 3003",
+      "source_lane": "statute",
+      "target_artifact_id": "omb-m-24-10-ai-governance",
+      "target_label": "OMB M-24-10",
+      "target_lane": "govwide",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_artifact_id": "omb-m-24-10-ai-governance",
+        "source_reference_id": "usc:50:3003",
+        "label": "50 U.S.C. § 3003",
+        "first_line": 123,
+        "lines_sample": [
+          123,
+          513
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "usc-title-10-section-113->usc-title-10-section-2224:references:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-113",
+      "source_label": "10 U.S.C. 113",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-2224",
+      "target_label": "10 U.S.C. 2224",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_artifact_id": "usc-title-10-section-2224",
+        "source_reference_id": "usc:10:113",
+        "label": "10 U.S.C. 113",
+        "first_line": 480,
+        "lines_sample": [
+          480
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-10-section-113->usc-title-10-section-4001:references:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-113",
+      "source_label": "10 U.S.C. 113",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-4001",
+      "target_label": "10 U.S.C. 4001",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_artifact_id": "usc-title-10-section-4001",
+        "source_reference_id": "usc:10:113",
+        "label": "10 U.S.C. 113",
+        "first_line": 251,
+        "lines_sample": [
+          251
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-10-section-2224->usc-title-10-section-4001:references:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-2224",
+      "source_label": "10 U.S.C. 2224",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-4001",
+      "target_label": "10 U.S.C. 4001",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_artifact_id": "usc-title-10-section-4001",
+        "source_reference_id": "usc:10:2224",
+        "label": "10 U.S.C. 2224",
+        "first_line": 354,
+        "lines_sample": [
+          354
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-50-section-3003->usc-title-10-section-4001:references:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-3003",
+      "source_label": "50 U.S.C. 3003",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-4001",
+      "target_label": "10 U.S.C. 4001",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_artifact_id": "usc-title-10-section-4001",
+        "source_reference_id": "usc:50:3003",
+        "label": "50 U.S.C. 3003",
+        "first_line": 2473,
+        "lines_sample": [
+          2473
+        ],
+        "count": 1
+      }
     }
   ],
   "artifact_summaries": [
     {
       "artifact_id": "pl-118-159-fy2025-ndaa",
       "title": "Public Law 118-159: Servicemember Quality of Life Improvement and National Defense Authorization Act for Fiscal Year 2025",
-      "upstream_edge_count": 1,
-      "downstream_edge_count": 1,
-      "catalogued_node_count": 2,
+      "upstream_edge_count": 5,
+      "downstream_edge_count": 4,
+      "catalogued_node_count": 6,
       "uncatalogued_gap_count": 18,
-      "evidence_backed_edge_count": 1,
-      "inferred_edge_count": 1,
+      "evidence_backed_edge_count": 5,
+      "inferred_edge_count": 4,
       "authority_path_status": "root_authority",
       "implementation_path_status": "has_downstream_trace"
     },
     {
       "artifact_id": "pl-118-31-fy2024-ndaa",
       "title": "Public Law 118-31: National Defense Authorization Act for Fiscal Year 2024",
-      "upstream_edge_count": 1,
-      "downstream_edge_count": 1,
-      "catalogued_node_count": 2,
+      "upstream_edge_count": 5,
+      "downstream_edge_count": 4,
+      "catalogued_node_count": 6,
       "uncatalogued_gap_count": 18,
-      "evidence_backed_edge_count": 1,
-      "inferred_edge_count": 1,
+      "evidence_backed_edge_count": 5,
+      "inferred_edge_count": 4,
+      "authority_path_status": "root_authority",
+      "implementation_path_status": "has_downstream_trace"
+    },
+    {
+      "artifact_id": "usc-title-10-section-113",
+      "title": "10 U.S.C. 113: Secretary of Defense",
+      "upstream_edge_count": 2,
+      "downstream_edge_count": 4,
+      "catalogued_node_count": 5,
+      "uncatalogued_gap_count": 18,
+      "evidence_backed_edge_count": 4,
+      "inferred_edge_count": 2,
       "authority_path_status": "root_authority",
       "implementation_path_status": "has_downstream_trace"
     },
@@ -1234,37 +1928,85 @@
       "implementation_path_status": "has_downstream_trace"
     },
     {
-      "artifact_id": "eo-14028-cybersecurity",
-      "title": "Executive Order 14028: Improving the Nation's Cybersecurity",
+      "artifact_id": "usc-title-10-section-2224",
+      "title": "10 U.S.C. 2224: Defense Information Assurance Program",
+      "upstream_edge_count": 3,
+      "downstream_edge_count": 3,
+      "catalogued_node_count": 5,
+      "uncatalogued_gap_count": 18,
+      "evidence_backed_edge_count": 4,
+      "inferred_edge_count": 2,
+      "authority_path_status": "root_authority",
+      "implementation_path_status": "has_downstream_trace"
+    },
+    {
+      "artifact_id": "usc-title-10-section-4001",
+      "title": "10 U.S.C. 4001: Research and development projects",
+      "upstream_edge_count": 5,
+      "downstream_edge_count": 2,
+      "catalogued_node_count": 6,
+      "uncatalogued_gap_count": 18,
+      "evidence_backed_edge_count": 5,
+      "inferred_edge_count": 2,
+      "authority_path_status": "root_authority",
+      "implementation_path_status": "has_downstream_trace"
+    },
+    {
+      "artifact_id": "usc-title-44-section-3502",
+      "title": "44 U.S.C. 3502: Definitions",
       "upstream_edge_count": 0,
       "downstream_edge_count": 4,
-      "catalogued_node_count": 4,
-      "uncatalogued_gap_count": 5,
-      "evidence_backed_edge_count": 1,
+      "catalogued_node_count": 5,
+      "uncatalogued_gap_count": 3,
+      "evidence_backed_edge_count": 4,
+      "inferred_edge_count": 0,
+      "authority_path_status": "root_authority",
+      "implementation_path_status": "has_downstream_trace"
+    },
+    {
+      "artifact_id": "usc-title-50-section-3003",
+      "title": "50 U.S.C. 3003: Definitions",
+      "upstream_edge_count": 0,
+      "downstream_edge_count": 5,
+      "catalogued_node_count": 6,
+      "uncatalogued_gap_count": 1,
+      "evidence_backed_edge_count": 5,
+      "inferred_edge_count": 0,
+      "authority_path_status": "root_authority",
+      "implementation_path_status": "has_downstream_trace"
+    },
+    {
+      "artifact_id": "eo-14028-cybersecurity",
+      "title": "Executive Order 14028: Improving the Nation's Cybersecurity",
+      "upstream_edge_count": 2,
+      "downstream_edge_count": 4,
+      "catalogued_node_count": 6,
+      "uncatalogued_gap_count": 3,
+      "evidence_backed_edge_count": 3,
       "inferred_edge_count": 3,
-      "authority_path_status": "authority_gap",
+      "authority_path_status": "evidence_backed",
       "implementation_path_status": "has_downstream_trace"
     },
     {
       "artifact_id": "eo-14110-ai",
       "title": "Executive Order 14110: Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence",
-      "upstream_edge_count": 0,
+      "upstream_edge_count": 1,
       "downstream_edge_count": 2,
-      "catalogued_node_count": 2,
+      "catalogued_node_count": 3,
       "uncatalogued_gap_count": 18,
-      "evidence_backed_edge_count": 1,
+      "evidence_backed_edge_count": 2,
       "inferred_edge_count": 1,
-      "authority_path_status": "authority_gap",
+      "authority_path_status": "evidence_backed",
       "implementation_path_status": "has_downstream_trace"
     },
     {
       "artifact_id": "omb-m-21-31-cyber-logging",
       "title": "OMB Memorandum M-21-31: Improving the Federal Government's Investigative and Remediation Capabilities Related to Cybersecurity Incidents",
-      "upstream_edge_count": 2,
+      "upstream_edge_count": 3,
       "downstream_edge_count": 3,
-      "catalogued_node_count": 5,
-      "uncatalogued_gap_count": 2,
-      "evidence_backed_edge_count": 1,
+      "catalogued_node_count": 6,
+      "uncatalogued_gap_count": 1,
+      "evidence_backed_edge_count": 2,
       "inferred_edge_count": 4,
       "authority_path_status": "evidence_backed",
       "implementation_path_status": "has_downstream_trace"
@@ -1272,11 +2014,11 @@
     {
       "artifact_id": "omb-m-24-10-ai-governance",
       "title": "OMB Memorandum M-24-10: Advancing Governance, Innovation, and Risk Management for Agency Use of Artificial Intelligence",
-      "upstream_edge_count": 2,
+      "upstream_edge_count": 4,
       "downstream_edge_count": 0,
-      "catalogued_node_count": 2,
-      "uncatalogued_gap_count": 9,
-      "evidence_backed_edge_count": 1,
+      "catalogued_node_count": 4,
+      "uncatalogued_gap_count": 7,
+      "evidence_backed_edge_count": 3,
       "inferred_edge_count": 1,
       "authority_path_status": "evidence_backed",
       "implementation_path_status": "no_downstream_trace_yet"

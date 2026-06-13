@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 2,
+    "upstream_edge_count": 4,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 2,
-    "uncatalogued_gap_count": 9,
-    "evidence_backed_edge_count": 1,
+    "catalogued_node_count": 4,
+    "uncatalogued_gap_count": 7,
+    "evidence_backed_edge_count": 3,
     "inferred_edge_count": 1,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
@@ -106,29 +106,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:44:3502",
-      "label": "44 U.S.C. § 3502",
-      "title": "44 U.S.C. § 3502",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:44:3502",
-      "count": 7,
-      "lines_sample": [
-        120,
-        146,
-        148,
-        928,
-        1324,
-        1411,
-        1445
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:44:3507",
       "label": "44 U.S.C. § 3507",
       "title": "44 U.S.C. § 3507",
@@ -146,22 +123,34 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:50:3003",
-      "label": "50 U.S.C. § 3003",
-      "title": "50 U.S.C. § 3003",
+      "id": "usc-title-44-section-3502",
+      "label": "44 U.S.C. 3502",
+      "title": "44 U.S.C. 3502: Definitions",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:50:3003",
-      "count": 2,
-      "lines_sample": [
-        123,
-        513
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "information_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-50-section-3003",
+      "label": "50 U.S.C. 3003",
+      "title": "50 U.S.C. 3003: Definitions",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "national_security",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "eo-14110-ai",
@@ -324,33 +313,61 @@
         ],
         "shared_family": "ai_governance"
       }
+    },
+    {
+      "id": "usc-title-44-section-3502->omb-m-24-10-ai-governance:authorizes:resolved_reference",
+      "source_artifact_id": "usc-title-44-section-3502",
+      "source_label": "44 U.S.C. 3502",
+      "source_lane": "statute",
+      "target_artifact_id": "omb-m-24-10-ai-governance",
+      "target_label": "OMB M-24-10",
+      "target_lane": "govwide",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:44:3502",
+        "label": "44 U.S.C. § 3502",
+        "first_line": 120,
+        "lines_sample": [
+          120,
+          146,
+          148,
+          928,
+          1324,
+          1411,
+          1445
+        ],
+        "count": 7
+      }
+    },
+    {
+      "id": "usc-title-50-section-3003->omb-m-24-10-ai-governance:authorizes:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-3003",
+      "source_label": "50 U.S.C. 3003",
+      "source_lane": "statute",
+      "target_artifact_id": "omb-m-24-10-ai-governance",
+      "target_label": "OMB M-24-10",
+      "target_lane": "govwide",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:3003",
+        "label": "50 U.S.C. § 3003",
+        "first_line": 123,
+        "lines_sample": [
+          123,
+          513
+        ],
+        "count": 2
+      }
     }
   ],
   "downstream_edges": [],
   "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:usc:44:3502",
-      "label": "44 U.S.C. § 3502",
-      "title": "44 U.S.C. § 3502",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:44:3502",
-      "count": 7,
-      "lines_sample": [
-        120,
-        146,
-        148,
-        928,
-        1324,
-        1411,
-        1445
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
     {
       "id": "gap:executive-order:14091",
       "label": "Executive Order 14091",
@@ -388,24 +405,6 @@
         149,
         304,
         787
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:usc:50:3003",
-      "label": "50 U.S.C. § 3003",
-      "title": "50 U.S.C. § 3003",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:50:3003",
-      "count": 2,
-      "lines_sample": [
-        123,
-        513
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -503,7 +502,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "omb-m-24-10-ai-governance",
       "direction": "upstream",
-      "edge_count": 2
+      "edge_count": 4
     },
     {
       "id": "trace-downstream",

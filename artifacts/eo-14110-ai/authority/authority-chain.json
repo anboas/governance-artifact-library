@@ -61,13 +61,13 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 1,
     "downstream_edge_count": 2,
-    "catalogued_node_count": 2,
+    "catalogued_node_count": 3,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 1,
+    "evidence_backed_edge_count": 2,
     "inferred_edge_count": 1,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
@@ -159,22 +159,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:44:3502",
+      "id": "usc-title-44-section-3502",
       "label": "44 U.S.C. 3502",
-      "title": "44 U.S.C. 3502",
+      "title": "44 U.S.C. 3502: Definitions",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:44:3502",
-      "count": 2,
-      "lines_sample": [
-        279,
-        280
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "information_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:44:3511",
@@ -328,6 +325,23 @@
       "priority": "high"
     },
     {
+      "id": "gap:executive-order:13757",
+      "label": "Executive Order 13757",
+      "title": "Executive Order 13757",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:13757",
+      "count": 1,
+      "lines_sample": [
+        623
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
       "id": "gap:executive-order:13960",
       "label": "Executive Order 13960",
       "title": "Executive Order 13960",
@@ -417,7 +431,31 @@
       "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "usc-title-44-section-3502->eo-14110-ai:authorizes:resolved_reference",
+      "source_artifact_id": "usc-title-44-section-3502",
+      "source_label": "44 U.S.C. 3502",
+      "source_lane": "statute",
+      "target_artifact_id": "eo-14110-ai",
+      "target_label": "EO 14110",
+      "target_lane": "executive",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:44:3502",
+        "label": "44 U.S.C. 3502",
+        "first_line": 279,
+        "lines_sample": [
+          279,
+          280
+        ],
+        "count": 2
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "eo-14110-ai->omb-m-24-10-ai-governance:directs:resolved_reference",
@@ -528,24 +566,6 @@
         181,
         1665,
         2249
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:usc:44:3502",
-      "label": "44 U.S.C. 3502",
-      "title": "44 U.S.C. 3502",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:44:3502",
-      "count": 2,
-      "lines_sample": [
-        279,
-        280
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -789,6 +809,23 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:13757",
+      "label": "Executive Order 13757",
+      "title": "Executive Order 13757",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:13757",
+      "count": 1,
+      "lines_sample": [
+        623
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -797,7 +834,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "eo-14110-ai",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",

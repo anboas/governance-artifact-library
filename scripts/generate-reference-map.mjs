@@ -143,10 +143,12 @@ function aliasCandidates(artifact) {
     push(`Public Law ${publicLaw[1]}-${publicLaw[2]}`);
     push(`PL ${publicLaw[1]}-${publicLaw[2]}`);
   }
-  const usc = id.match(/usc-title-(\d+)-section-(\d+)/);
+  const usc = id.match(/usc-title-(\d+)-section-([a-z0-9.-]+)/);
   if (usc) {
     push(`${usc[1]} U.S.C. ${usc[2]}`);
+    push(`${usc[1]} U.S.C. § ${usc[2]}`);
     push(`${usc[1]} USC ${usc[2]}`);
+    push(`${usc[1]} USC § ${usc[2]}`);
   }
   const eo = id.match(/eo-(\d+)/);
   if (eo) push(`Executive Order ${eo[1]}`);
@@ -176,7 +178,11 @@ function aliasCandidates(artifact) {
 
 function resolveReference(ref, catalog) {
   const candidates = [ref.label];
-  if (ref.reference_family === "usc") candidates.push(ref.label.replace(/\bU\.?S\.?C\.?\b/i, "USC"));
+  if (ref.reference_family === "usc") {
+    candidates.push(ref.label.replace(/\bU\.?S\.?C\.?\b/i, "USC"));
+    candidates.push(ref.label.replace(/§\s*/g, ""));
+    candidates.push(ref.label.replace(/\bU\.?S\.?C\.?\b/i, "USC").replace(/§\s*/g, ""));
+  }
   if (ref.reference_family === "public-law") candidates.push(ref.label.replace(/^Public Law/i, "PL"));
   for (const candidate of candidates) {
     const target = catalog.get(normalizeKey(candidate));

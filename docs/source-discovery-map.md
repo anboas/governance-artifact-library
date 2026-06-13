@@ -28,7 +28,7 @@ Generated from `sources/source-discovery-registry.json`, `manifest.json`, and `t
 | critical | GovInfo | U.S. Government Publishing Office | mirrored | direct_fetch_ready | api<br>direct_fetch<br>content_package_fetch | 2 | 2 | 0 | 2 | 2 | 2 | 2 | 2 |
 | critical | NIST CSRC | National Institute of Standards and Technology | mirrored | direct_fetch_ready | direct_fetch<br>html_parse<br>pdf_fetch | 2 | 2 | 0 | 2 | 2 | 2 | 2 | 2 |
 | critical | OMB | Office of Management and Budget | mirrored | direct_fetch_ready | direct_fetch<br>sitemap_crawl | 2 | 2 | 0 | 2 | 2 | 2 | 2 | 2 |
-| critical | U.S. Code | Office of the Law Revision Counsel | mirrored | direct_fetch_ready | direct_fetch<br>html_parse | 1 | 1 | 0 | 1 | 1 | 1 | 1 | 1 |
+| critical | U.S. Code | Office of the Law Revision Counsel | mirrored | direct_fetch_ready | direct_fetch<br>html_parse | 6 | 6 | 0 | 6 | 6 | 6 | 6 | 6 |
 | critical | White House | Executive Office of the President | mirrored | direct_fetch_ready | direct_fetch<br>rss<br>sitemap_crawl | 2 | 2 | 0 | 2 | 2 | 2 | 2 | 2 |
 | high | CISA | Cybersecurity and Infrastructure Security Agency | not_started | direct_fetch_ready | direct_fetch<br>sitemap_crawl<br>rss | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | high | DoD Cyber Exchange | DoD Cyber Exchange | source_known_blocked | browser_shell_detected | browser_fetch<br>manual_import<br>source_known_registration | 1 | 0 | 1 | 0 | 1 | 1 | 0 | 1 |
@@ -56,7 +56,7 @@ Generated from `sources/source-discovery-registry.json`, `manifest.json`, and `t
 | GovInfo | 1 | 2 | 0 | 1 | 1 | yes | govinfo_public_law_pdf | pl-118-159-fy2025-ndaa<br>pl-118-31-fy2024-ndaa |
 | NIST CSRC | 1 | 0 | 1 | 1 | 1 | yes | nist_csrc_html<br>nist_nvlpubs_pdf | nist-sp-800-207-zero-trust-architecture<br>nist-sp-800-53-r5-security-privacy-controls |
 | OMB | 1 | 0 | 0 | 1 | 1 | yes | white_house_pdf<br>white_house_html | omb-m-21-31-cyber-logging<br>omb-m-24-10-ai-governance |
-| U.S. Code | 1 | 0 | 0 | 1 | 0 | yes | us_code_html<br>us_code_xml | usc-title-10-section-2222 |
+| U.S. Code | 1 | 0 | 0 | 1 | 0 | yes | us_code_html<br>us_code_xml | usc-title-10-section-113<br>usc-title-10-section-2222<br>usc-title-10-section-2224<br>usc-title-10-section-4001<br>usc-title-44-section-3502<br>usc-title-50-section-3003 |
 | White House | 1 | 0 | 1 | 1 | 1 | yes | white_house_pdf<br>white_house_html | omb-m-21-31-cyber-logging<br>omb-m-24-10-ai-governance |
 | CISA | 1 | 0 | 1 | 1 | 1 | yes | cisa_html<br>cisa_pdf | none |
 | DoD Cyber Exchange | 1 | 0 | 0 | 1 | 1 | yes | cyber_mil_html | cyber-mil-cyber-awareness-challenge |

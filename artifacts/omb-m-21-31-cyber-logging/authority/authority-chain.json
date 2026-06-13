@@ -61,33 +61,16 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 2,
+    "upstream_edge_count": 3,
     "downstream_edge_count": 3,
-    "catalogued_node_count": 5,
-    "uncatalogued_gap_count": 2,
-    "evidence_backed_edge_count": 1,
+    "catalogued_node_count": 6,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 2,
     "inferred_edge_count": 4,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
-    {
-      "id": "gap:usc:44:3502",
-      "label": "44 U.S.C. § 3502",
-      "title": "44 U.S.C. § 3502",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:44:3502",
-      "count": 1,
-      "lines_sample": [
-        50
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
     {
       "id": "gap:usc:44:3553",
       "label": "44 U.S.C. § 3553",
@@ -104,6 +87,21 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "usc-title-44-section-3502",
+      "label": "44 U.S.C. 3502",
+      "title": "44 U.S.C. 3502: Definitions",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "information_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "eo-14028-cybersecurity",
@@ -226,6 +224,28 @@
         ],
         "shared_family": "cybersecurity"
       }
+    },
+    {
+      "id": "usc-title-44-section-3502->omb-m-21-31-cyber-logging:authorizes:resolved_reference",
+      "source_artifact_id": "usc-title-44-section-3502",
+      "source_label": "44 U.S.C. 3502",
+      "source_lane": "statute",
+      "target_artifact_id": "omb-m-21-31-cyber-logging",
+      "target_label": "OMB M-21-31",
+      "target_lane": "govwide",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:44:3502",
+        "label": "44 U.S.C. § 3502",
+        "first_line": 50,
+        "lines_sample": [
+          50
+        ],
+        "count": 1
+      }
     }
   ],
   "downstream_edges": [
@@ -294,23 +314,6 @@
   ],
   "uncatalogued_authority_gaps": [
     {
-      "id": "gap:usc:44:3502",
-      "label": "44 U.S.C. § 3502",
-      "title": "44 U.S.C. § 3502",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:44:3502",
-      "count": 1,
-      "lines_sample": [
-        50
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:44:3553",
       "label": "44 U.S.C. § 3553",
       "title": "44 U.S.C. § 3553",
@@ -334,7 +337,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "omb-m-21-31-cyber-logging",
       "direction": "upstream",
-      "edge_count": 2
+      "edge_count": 3
     },
     {
       "id": "trace-downstream",
