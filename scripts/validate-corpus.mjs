@@ -130,12 +130,17 @@ assert.equal(existsSync(join(ROOT, "docs", "authority-chain-map.md")), true, "au
 assert.equal(existsSync(join(ROOT, "data", "reference-ingestion-queue.json")), true, "reference ingestion queue missing");
 assert.equal(existsSync(join(ROOT, "data", "reference-ingestion-queue-summary.json")), true, "reference ingestion queue summary missing");
 assert.equal(existsSync(join(ROOT, "docs", "reference-ingestion-queue.md")), true, "reference ingestion queue docs missing");
+assert.equal(existsSync(join(ROOT, "data", "source-acquisition-queue.json")), true, "source acquisition queue missing");
+assert.equal(existsSync(join(ROOT, "data", "source-acquisition-queue-summary.json")), true, "source acquisition queue summary missing");
+assert.equal(existsSync(join(ROOT, "docs", "source-acquisition-queue.md")), true, "source acquisition queue docs missing");
 
 const referenceCoverage = readJson("data/reference-coverage-map.json");
 const authorityChainMap = readJson("data/authority-chain-map.json");
 const artifactIndex = readJson("data/artifact-index.json");
 const ingestionQueue = readJson("data/reference-ingestion-queue.json");
 const ingestionQueueSummary = readJson("data/reference-ingestion-queue-summary.json");
+const sourceAcquisitionQueue = readJson("data/source-acquisition-queue.json");
+const sourceAcquisitionQueueSummary = readJson("data/source-acquisition-queue-summary.json");
 assert.equal(artifactIndex.artifact_count, manifest.artifact_count, "artifact index count should match manifest");
 assert.equal(artifactIndex.artifacts?.length, manifest.artifact_count, "artifact index artifacts should match manifest");
 assert.ok(artifactIndex.artifacts.every(artifact => artifact.id && artifact.manifest_path), "artifact index rows need ids and manifest paths");
@@ -151,6 +156,13 @@ assert.ok(ingestionQueueSummary.top_queue_items?.length <= 50, "reference ingest
 assert.ok(ingestionQueue.queue_items[0]?.queue_rank === 1, "reference ingestion queue should be ranked");
 assert.ok(ingestionQueue.queue_items.some(item => item.queue_priority === "P0"), "reference ingestion queue should identify P0 items");
 assert.ok(ingestionQueue.queue_items.every(item => item.official_source_candidates?.length), "reference ingestion queue items need official source candidates");
+assert.equal(Array.isArray(sourceAcquisitionQueue.queue_items), true, "source acquisition queue items must be an array");
+assert.ok(sourceAcquisitionQueue.summary?.queue_item_count >= 10, "source acquisition queue should expose corpus acquisition work");
+assert.deepEqual(sourceAcquisitionQueueSummary.summary, sourceAcquisitionQueue.summary, "source acquisition queue summary should mirror queue counts");
+assert.ok(sourceAcquisitionQueueSummary.top_queue_items?.length <= 50, "source acquisition queue summary should stay compact");
+assert.ok(sourceAcquisitionQueue.queue_items[0]?.queue_rank === 1, "source acquisition queue should be ranked");
+assert.ok(sourceAcquisitionQueue.queue_items.some(item => item.item_type === "source_recovery"), "source acquisition queue should include source recovery work");
+assert.ok(sourceAcquisitionQueue.queue_items.some(item => item.item_type === "governance_gap"), "source acquisition queue should include governance gap work");
 
 console.log(`Validated ${manifest.artifact_count} artifacts (${mirrored} mirrored, ${blocked} source-known blocked).`);
 

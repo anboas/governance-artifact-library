@@ -1,0 +1,1825 @@
+{
+  "generated_at": "2026-06-12T21:10:45.541Z",
+  "queue_version": "source-acquisition-queue-v1",
+  "summary": {
+    "queue_item_count": 36,
+    "p0_count": 14,
+    "p1_count": 9,
+    "p2_count": 13,
+    "governance_gap_count": 14,
+    "source_start_count": 11,
+    "source_recovery_count": 5,
+    "coverage_completion_count": 6,
+    "critical_source_count": 18,
+    "blocked_or_browser_needed_count": 16
+  },
+  "queue_items": [
+    {
+      "id": "source-recovery-doni",
+      "item_type": "source_recovery",
+      "label": "Department of the Navy Issuances mirror recovery",
+      "queue_priority": "P0",
+      "score": 107,
+      "reason": "3 registered artifacts blocked or browser-needed.",
+      "recommended_action": "Capture official source files through browser/manual import fallback.",
+      "source_id": "doni",
+      "source_name": "Department of the Navy Issuances",
+      "source_owner": "Department of the Navy",
+      "source_priority": "critical",
+      "automation_status": "blocked_by_host",
+      "coverage_status": "source_known_blocked",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "source_location_types": [
+        "don_issuances_pdf"
+      ],
+      "source_url": "https://www.secnav.navy.mil/doni/",
+      "search_url": "https://www.secnav.navy.mil/doni/default.aspx",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 3,
+        "mirrored": 0,
+        "blocked": 3,
+        "text_extracted": 0,
+        "analytics": 3,
+        "analysis": 3,
+        "structured": 0,
+        "versioned": 3
+      },
+      "artifact_ids": [
+        "secnav-m-5210-1-records-management",
+        "secnav-m-5239-3-don-cybersecurity",
+        "opnavinst-5239-1e-navy-cybersecurity"
+      ],
+      "source_candidates": [],
+      "queue_rank": 1
+    },
+    {
+      "id": "source-recovery-dod-issuances",
+      "item_type": "source_recovery",
+      "label": "DoW/DoD Issuances mirror recovery",
+      "queue_priority": "P0",
+      "score": 107,
+      "reason": "3 registered artifacts blocked or browser-needed.",
+      "recommended_action": "Capture official source files through browser/manual import fallback.",
+      "source_id": "dod-issuances",
+      "source_name": "DoW/DoD Issuances",
+      "source_owner": "Washington Headquarters Services / Executive Services Directorate",
+      "source_priority": "critical",
+      "automation_status": "blocked_by_host",
+      "coverage_status": "source_known_blocked",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "source_location_types": [
+        "dod_issuances_pdf"
+      ],
+      "source_url": "https://www.esd.whs.mil/DD/",
+      "search_url": "https://www.esd.whs.mil/DD/DoD-Issuances/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 3,
+        "mirrored": 0,
+        "blocked": 3,
+        "text_extracted": 0,
+        "analytics": 3,
+        "analysis": 3,
+        "structured": 0,
+        "versioned": 3
+      },
+      "artifact_ids": [
+        "dodd-5000-01-defense-acquisition-system",
+        "dodi-5000-87-software-acquisition-pathway",
+        "dodi-8510-01-risk-management-framework"
+      ],
+      "source_candidates": [],
+      "queue_rank": 2
+    },
+    {
+      "id": "source-recovery-dod-cio",
+      "item_type": "source_recovery",
+      "label": "DoD CIO mirror recovery",
+      "queue_priority": "P0",
+      "score": 105,
+      "reason": "1 registered artifact blocked or browser-needed.",
+      "recommended_action": "Capture official source files through browser/manual import fallback.",
+      "source_id": "dod-cio",
+      "source_name": "DoD CIO",
+      "source_owner": "DoD Chief Information Officer",
+      "source_priority": "critical",
+      "automation_status": "blocked_by_host",
+      "coverage_status": "source_known_blocked",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "source_location_types": [
+        "dod_cio_pdf",
+        "dod_cio_html"
+      ],
+      "source_url": "https://dodcio.defense.gov/",
+      "search_url": "https://dodcio.defense.gov/Search/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 1,
+        "mirrored": 0,
+        "blocked": 1,
+        "text_extracted": 0,
+        "analytics": 1,
+        "analysis": 1,
+        "structured": 0,
+        "versioned": 1
+      },
+      "artifact_ids": [
+        "dod-zero-trust-strategy"
+      ],
+      "source_candidates": [],
+      "queue_rank": 3
+    },
+    {
+      "id": "governance-gap-appropriations-law",
+      "item_type": "governance_gap",
+      "label": "Appropriations Law coverage gap",
+      "queue_priority": "P0",
+      "score": 102,
+      "reason": "Appropriations Law has no artifact in the corpus universe.",
+      "recommended_action": "Use GovInfo to discover and register the first Appropriations Law artifact.",
+      "source_id": "govinfo",
+      "source_name": "GovInfo",
+      "source_owner": "U.S. Government Publishing Office",
+      "source_priority": "critical",
+      "automation_status": "direct_fetch_ready",
+      "coverage_status": "mirrored",
+      "capture_strategies": [
+        "api",
+        "direct_fetch",
+        "content_package_fetch"
+      ],
+      "source_location_types": [
+        "govinfo_public_law_pdf"
+      ],
+      "source_url": "https://www.govinfo.gov/",
+      "search_url": "https://www.govinfo.gov/app/search/",
+      "api_url": "https://api.govinfo.gov/docs/",
+      "governance_item_id": "appropriations-law",
+      "governance_item_label": "Appropriations Law",
+      "hierarchy_rank": 10,
+      "counts": {
+        "in_repo": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "raw": 0,
+        "text": 0,
+        "metadata": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versions": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [
+        {
+          "id": "govinfo",
+          "name": "GovInfo",
+          "priority": "critical",
+          "automation_status": "direct_fetch_ready",
+          "url": "https://www.govinfo.gov/"
+        }
+      ],
+      "queue_rank": 4
+    },
+    {
+      "id": "source-recovery-dod-cyber-exchange",
+      "item_type": "source_recovery",
+      "label": "DoD Cyber Exchange mirror recovery",
+      "queue_priority": "P0",
+      "score": 101,
+      "reason": "1 registered artifact blocked or browser-needed.",
+      "recommended_action": "Run browser-assisted source capture and store raw mirrors.",
+      "source_id": "dod-cyber-exchange",
+      "source_name": "DoD Cyber Exchange",
+      "source_owner": "DoD Cyber Exchange",
+      "source_priority": "high",
+      "automation_status": "browser_shell_detected",
+      "coverage_status": "source_known_blocked",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "source_location_types": [
+        "cyber_mil_html"
+      ],
+      "source_url": "https://www.cyber.mil/",
+      "search_url": "https://www.cyber.mil/search",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 1,
+        "mirrored": 0,
+        "blocked": 1,
+        "text_extracted": 0,
+        "analytics": 1,
+        "analysis": 1,
+        "structured": 0,
+        "versioned": 1
+      },
+      "artifact_ids": [
+        "cyber-mil-cyber-awareness-challenge"
+      ],
+      "source_candidates": [],
+      "queue_rank": 5
+    },
+    {
+      "id": "source-recovery-mynavyhr",
+      "item_type": "source_recovery",
+      "label": "MyNavyHR mirror recovery",
+      "queue_priority": "P0",
+      "score": 101,
+      "reason": "1 registered artifact blocked or browser-needed.",
+      "recommended_action": "Capture official source files through browser/manual import fallback.",
+      "source_id": "mynavyhr",
+      "source_name": "MyNavyHR",
+      "source_owner": "Navy Personnel Command",
+      "source_priority": "high",
+      "automation_status": "blocked_by_host",
+      "coverage_status": "source_known_blocked",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "source_location_types": [
+        "mynavyhr_navadmin_txt",
+        "mynavyhr_alnav_txt"
+      ],
+      "source_url": "https://www.mynavyhr.navy.mil/References/Messages/",
+      "search_url": "https://www.mynavyhr.navy.mil/References/Messages/NAVADMIN-2024/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 1,
+        "mirrored": 0,
+        "blocked": 1,
+        "text_extracted": 0,
+        "analytics": 1,
+        "analysis": 1,
+        "structured": 0,
+        "versioned": 1
+      },
+      "artifact_ids": [
+        "navadmin-214-24-fy2025-cybersecurity-awareness"
+      ],
+      "source_candidates": [],
+      "queue_rank": 6
+    },
+    {
+      "id": "governance-gap-dfars",
+      "item_type": "governance_gap",
+      "label": "DFARS / Defense Acquisition Regulation coverage gap",
+      "queue_priority": "P0",
+      "score": 100,
+      "reason": "DFARS / Defense Acquisition Regulation has no artifact in the corpus universe.",
+      "recommended_action": "Use Acquisition.gov to discover and register the first DFARS / Defense Acquisition Regulation artifact.",
+      "source_id": "acquisition-gov",
+      "source_name": "Acquisition.gov",
+      "source_owner": "General Services Administration",
+      "source_priority": "critical",
+      "automation_status": "direct_fetch_ready",
+      "coverage_status": "mirrored",
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse"
+      ],
+      "source_location_types": [
+        "acquisition_gov_html"
+      ],
+      "source_url": "https://www.acquisition.gov/",
+      "search_url": "https://www.acquisition.gov/search",
+      "api_url": null,
+      "governance_item_id": "dfars",
+      "governance_item_label": "DFARS / Defense Acquisition Regulation",
+      "hierarchy_rank": 50,
+      "counts": {
+        "in_repo": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "raw": 0,
+        "text": 0,
+        "metadata": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versions": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [
+        {
+          "id": "acquisition-gov",
+          "name": "Acquisition.gov",
+          "priority": "critical",
+          "automation_status": "direct_fetch_ready",
+          "url": "https://www.acquisition.gov/"
+        }
+      ],
+      "queue_rank": 7
+    },
+    {
+      "id": "governance-gap-executive-order",
+      "item_type": "governance_gap",
+      "label": "Executive Order coverage gap",
+      "queue_priority": "P0",
+      "score": 100,
+      "reason": "Executive Order has no artifact in the corpus universe.",
+      "recommended_action": "Use Federal Register to discover and register the first Executive Order artifact.",
+      "source_id": "federal-register",
+      "source_name": "Federal Register",
+      "source_owner": "Office of the Federal Register / National Archives and Records Administration",
+      "source_priority": "critical",
+      "automation_status": "direct_fetch_ready",
+      "coverage_status": "mirrored",
+      "capture_strategies": [
+        "api",
+        "direct_fetch",
+        "rss"
+      ],
+      "source_location_types": [
+        "federal_register_html"
+      ],
+      "source_url": "https://www.federalregister.gov/",
+      "search_url": "https://www.federalregister.gov/documents/search",
+      "api_url": "https://www.federalregister.gov/developers/documentation/api/v1",
+      "governance_item_id": "executive-order",
+      "governance_item_label": "Executive Order",
+      "hierarchy_rank": 30,
+      "counts": {
+        "in_repo": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "raw": 0,
+        "text": 0,
+        "metadata": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versions": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [
+        {
+          "id": "federal-register",
+          "name": "Federal Register",
+          "priority": "critical",
+          "automation_status": "direct_fetch_ready",
+          "url": "https://www.federalregister.gov/"
+        }
+      ],
+      "queue_rank": 8
+    },
+    {
+      "id": "governance-gap-ostp-guidance",
+      "item_type": "governance_gap",
+      "label": "OSTP / Executive Office Guidance coverage gap",
+      "queue_priority": "P0",
+      "score": 100,
+      "reason": "OSTP / Executive Office Guidance has no artifact in the corpus universe.",
+      "recommended_action": "Use OMB to discover and register the first OSTP / Executive Office Guidance artifact.",
+      "source_id": "omb",
+      "source_name": "OMB",
+      "source_owner": "Office of Management and Budget",
+      "source_priority": "critical",
+      "automation_status": "direct_fetch_ready",
+      "coverage_status": "mirrored",
+      "capture_strategies": [
+        "direct_fetch",
+        "sitemap_crawl"
+      ],
+      "source_location_types": [
+        "white_house_pdf"
+      ],
+      "source_url": "https://www.whitehouse.gov/omb/",
+      "search_url": "https://www.whitehouse.gov/omb/information-for-agencies/memoranda/",
+      "api_url": null,
+      "governance_item_id": "ostp-guidance",
+      "governance_item_label": "OSTP / Executive Office Guidance",
+      "hierarchy_rank": 40,
+      "counts": {
+        "in_repo": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "raw": 0,
+        "text": 0,
+        "metadata": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versions": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [
+        {
+          "id": "omb",
+          "name": "OMB",
+          "priority": "critical",
+          "automation_status": "direct_fetch_ready",
+          "url": "https://www.whitehouse.gov/omb/"
+        },
+        {
+          "id": "white-house",
+          "name": "White House",
+          "priority": "critical",
+          "automation_status": "direct_fetch_ready",
+          "url": "https://www.whitehouse.gov/"
+        }
+      ],
+      "queue_rank": 9
+    },
+    {
+      "id": "governance-gap-presidential-memorandum",
+      "item_type": "governance_gap",
+      "label": "Presidential Memorandum coverage gap",
+      "queue_priority": "P0",
+      "score": 100,
+      "reason": "Presidential Memorandum has no artifact in the corpus universe.",
+      "recommended_action": "Use Federal Register to discover and register the first Presidential Memorandum artifact.",
+      "source_id": "federal-register",
+      "source_name": "Federal Register",
+      "source_owner": "Office of the Federal Register / National Archives and Records Administration",
+      "source_priority": "critical",
+      "automation_status": "direct_fetch_ready",
+      "coverage_status": "mirrored",
+      "capture_strategies": [
+        "api",
+        "direct_fetch",
+        "rss"
+      ],
+      "source_location_types": [
+        "federal_register_html",
+        "white_house_pdf"
+      ],
+      "source_url": "https://www.federalregister.gov/",
+      "search_url": "https://www.federalregister.gov/documents/search",
+      "api_url": "https://www.federalregister.gov/developers/documentation/api/v1",
+      "governance_item_id": "presidential-memorandum",
+      "governance_item_label": "Presidential Memorandum",
+      "hierarchy_rank": 30,
+      "counts": {
+        "in_repo": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "raw": 0,
+        "text": 0,
+        "metadata": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versions": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [
+        {
+          "id": "federal-register",
+          "name": "Federal Register",
+          "priority": "critical",
+          "automation_status": "direct_fetch_ready",
+          "url": "https://www.federalregister.gov/"
+        },
+        {
+          "id": "omb",
+          "name": "OMB",
+          "priority": "critical",
+          "automation_status": "direct_fetch_ready",
+          "url": "https://www.whitehouse.gov/omb/"
+        },
+        {
+          "id": "white-house",
+          "name": "White House",
+          "priority": "critical",
+          "automation_status": "direct_fetch_ready",
+          "url": "https://www.whitehouse.gov/"
+        }
+      ],
+      "queue_rank": 10
+    },
+    {
+      "id": "governance-gap-dod-dtm",
+      "item_type": "governance_gap",
+      "label": "DoW/DoD DTM coverage gap",
+      "queue_priority": "P0",
+      "score": 98,
+      "reason": "DoW/DoD DTM has no artifact in the corpus universe.",
+      "recommended_action": "Use DoW/DoD Issuances to discover and register the first DoW/DoD DTM artifact.",
+      "source_id": "dod-issuances",
+      "source_name": "DoW/DoD Issuances",
+      "source_owner": "Washington Headquarters Services / Executive Services Directorate",
+      "source_priority": "critical",
+      "automation_status": "blocked_by_host",
+      "coverage_status": "source_known_blocked",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "source_location_types": [
+        "dod_issuances_pdf"
+      ],
+      "source_url": "https://www.esd.whs.mil/DD/",
+      "search_url": "https://www.esd.whs.mil/DD/DoD-Issuances/",
+      "api_url": null,
+      "governance_item_id": "dod-dtm",
+      "governance_item_label": "DoW/DoD DTM",
+      "hierarchy_rank": 72,
+      "counts": {
+        "in_repo": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "raw": 0,
+        "text": 0,
+        "metadata": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versions": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [
+        {
+          "id": "dod-issuances",
+          "name": "DoW/DoD Issuances",
+          "priority": "critical",
+          "automation_status": "blocked_by_host",
+          "url": "https://www.esd.whs.mil/DD/"
+        }
+      ],
+      "queue_rank": 11
+    },
+    {
+      "id": "governance-gap-dod-manual",
+      "item_type": "governance_gap",
+      "label": "DoW/DoD Manual coverage gap",
+      "queue_priority": "P0",
+      "score": 98,
+      "reason": "DoW/DoD Manual has no artifact in the corpus universe.",
+      "recommended_action": "Use DoW/DoD Issuances to discover and register the first DoW/DoD Manual artifact.",
+      "source_id": "dod-issuances",
+      "source_name": "DoW/DoD Issuances",
+      "source_owner": "Washington Headquarters Services / Executive Services Directorate",
+      "source_priority": "critical",
+      "automation_status": "blocked_by_host",
+      "coverage_status": "source_known_blocked",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "source_location_types": [
+        "dod_issuances_pdf"
+      ],
+      "source_url": "https://www.esd.whs.mil/DD/",
+      "search_url": "https://www.esd.whs.mil/DD/DoD-Issuances/",
+      "api_url": null,
+      "governance_item_id": "dod-manual",
+      "governance_item_label": "DoW/DoD Manual",
+      "hierarchy_rank": 72,
+      "counts": {
+        "in_repo": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "raw": 0,
+        "text": 0,
+        "metadata": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versions": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [
+        {
+          "id": "dod-issuances",
+          "name": "DoW/DoD Issuances",
+          "priority": "critical",
+          "automation_status": "blocked_by_host",
+          "url": "https://www.esd.whs.mil/DD/"
+        }
+      ],
+      "queue_rank": 12
+    },
+    {
+      "id": "governance-gap-dod-cio-guidance",
+      "item_type": "governance_gap",
+      "label": "DoD CIO Guidance coverage gap",
+      "queue_priority": "P0",
+      "score": 96,
+      "reason": "DoD CIO Guidance has no artifact in the corpus universe.",
+      "recommended_action": "Use DoD CIO to discover and register the first DoD CIO Guidance artifact.",
+      "source_id": "dod-cio",
+      "source_name": "DoD CIO",
+      "source_owner": "DoD Chief Information Officer",
+      "source_priority": "critical",
+      "automation_status": "blocked_by_host",
+      "coverage_status": "source_known_blocked",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "source_location_types": [
+        "dod_cio_pdf",
+        "dod_cio_html"
+      ],
+      "source_url": "https://dodcio.defense.gov/",
+      "search_url": "https://dodcio.defense.gov/Search/",
+      "api_url": null,
+      "governance_item_id": "dod-cio-guidance",
+      "governance_item_label": "DoD CIO Guidance",
+      "hierarchy_rank": 85,
+      "counts": {
+        "in_repo": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "raw": 0,
+        "text": 0,
+        "metadata": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versions": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [
+        {
+          "id": "dod-cio",
+          "name": "DoD CIO",
+          "priority": "critical",
+          "automation_status": "blocked_by_host",
+          "url": "https://dodcio.defense.gov/"
+        }
+      ],
+      "queue_rank": 13
+    },
+    {
+      "id": "governance-gap-secnav-instruction",
+      "item_type": "governance_gap",
+      "label": "SECNAV Instruction coverage gap",
+      "queue_priority": "P0",
+      "score": 96,
+      "reason": "SECNAV Instruction has no artifact in the corpus universe.",
+      "recommended_action": "Use Department of the Navy Issuances to discover and register the first SECNAV Instruction artifact.",
+      "source_id": "doni",
+      "source_name": "Department of the Navy Issuances",
+      "source_owner": "Department of the Navy",
+      "source_priority": "critical",
+      "automation_status": "blocked_by_host",
+      "coverage_status": "source_known_blocked",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "source_location_types": [
+        "don_issuances_pdf"
+      ],
+      "source_url": "https://www.secnav.navy.mil/doni/",
+      "search_url": "https://www.secnav.navy.mil/doni/default.aspx",
+      "api_url": null,
+      "governance_item_id": "secnav-instruction",
+      "governance_item_label": "SECNAV Instruction",
+      "hierarchy_rank": 80,
+      "counts": {
+        "in_repo": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "raw": 0,
+        "text": 0,
+        "metadata": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versions": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [
+        {
+          "id": "doni",
+          "name": "Department of the Navy Issuances",
+          "priority": "critical",
+          "automation_status": "blocked_by_host",
+          "url": "https://www.secnav.navy.mil/doni/"
+        }
+      ],
+      "queue_rank": 14
+    },
+    {
+      "id": "governance-gap-cisa-guidance",
+      "item_type": "governance_gap",
+      "label": "CISA Guidance / Model coverage gap",
+      "queue_priority": "P1",
+      "score": 94,
+      "reason": "CISA Guidance / Model has no artifact in the corpus universe.",
+      "recommended_action": "Use CISA to discover and register the first CISA Guidance / Model artifact.",
+      "source_id": "cisa",
+      "source_name": "CISA",
+      "source_owner": "Cybersecurity and Infrastructure Security Agency",
+      "source_priority": "high",
+      "automation_status": "direct_fetch_ready",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "sitemap_crawl",
+        "rss"
+      ],
+      "source_location_types": [
+        "cisa_pdf",
+        "cisa_html"
+      ],
+      "source_url": "https://www.cisa.gov/",
+      "search_url": "https://www.cisa.gov/search",
+      "api_url": null,
+      "governance_item_id": "cisa-guidance",
+      "governance_item_label": "CISA Guidance / Model",
+      "hierarchy_rank": 60,
+      "counts": {
+        "in_repo": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "raw": 0,
+        "text": 0,
+        "metadata": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versions": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [
+        {
+          "id": "cisa",
+          "name": "CISA",
+          "priority": "high",
+          "automation_status": "direct_fetch_ready",
+          "url": "https://www.cisa.gov/"
+        }
+      ],
+      "queue_rank": 15
+    },
+    {
+      "id": "source-start-congress-gov",
+      "item_type": "source_start",
+      "label": "Congress.gov initial ingest",
+      "queue_priority": "P1",
+      "score": 93,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Configure API access or fallback search capture, then seed first source-known artifacts.",
+      "source_id": "congress-gov",
+      "source_name": "Congress.gov",
+      "source_owner": "Library of Congress",
+      "source_priority": "critical",
+      "automation_status": "api_key_required",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "api",
+        "direct_fetch"
+      ],
+      "source_location_types": [
+        "congress_gov_api",
+        "congress_gov_html"
+      ],
+      "source_url": "https://www.congress.gov/",
+      "search_url": "https://www.congress.gov/search",
+      "api_url": "https://api.congress.gov/",
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 16
+    },
+    {
+      "id": "source-start-cisa",
+      "item_type": "source_start",
+      "label": "CISA initial ingest",
+      "queue_priority": "P1",
+      "score": 92,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "cisa",
+      "source_name": "CISA",
+      "source_owner": "Cybersecurity and Infrastructure Security Agency",
+      "source_priority": "high",
+      "automation_status": "direct_fetch_ready",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "sitemap_crawl",
+        "rss"
+      ],
+      "source_location_types": [
+        "cisa_html",
+        "cisa_pdf"
+      ],
+      "source_url": "https://www.cisa.gov/",
+      "search_url": "https://www.cisa.gov/search",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 17
+    },
+    {
+      "id": "source-start-ecfr",
+      "item_type": "source_start",
+      "label": "eCFR initial ingest",
+      "queue_priority": "P1",
+      "score": 92,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "ecfr",
+      "source_name": "eCFR",
+      "source_owner": "Office of the Federal Register / National Archives and Records Administration",
+      "source_priority": "high",
+      "automation_status": "direct_fetch_ready",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "api",
+        "direct_fetch"
+      ],
+      "source_location_types": [
+        "ecfr_api",
+        "ecfr_html"
+      ],
+      "source_url": "https://www.ecfr.gov/",
+      "search_url": "https://www.ecfr.gov/search",
+      "api_url": "https://www.ecfr.gov/developers/documentation/api/v1",
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 18
+    },
+    {
+      "id": "governance-gap-alnav",
+      "item_type": "governance_gap",
+      "label": "ALNAV coverage gap",
+      "queue_priority": "P1",
+      "score": 90,
+      "reason": "ALNAV has no artifact in the corpus universe.",
+      "recommended_action": "Use MyNavyHR to discover and register the first ALNAV artifact.",
+      "source_id": "mynavyhr",
+      "source_name": "MyNavyHR",
+      "source_owner": "Navy Personnel Command",
+      "source_priority": "high",
+      "automation_status": "blocked_by_host",
+      "coverage_status": "source_known_blocked",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "source_location_types": [
+        "mynavyhr_alnav_txt"
+      ],
+      "source_url": "https://www.mynavyhr.navy.mil/References/Messages/",
+      "search_url": "https://www.mynavyhr.navy.mil/References/Messages/NAVADMIN-2024/",
+      "api_url": null,
+      "governance_item_id": "alnav",
+      "governance_item_label": "ALNAV",
+      "hierarchy_rank": 90,
+      "counts": {
+        "in_repo": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "raw": 0,
+        "text": 0,
+        "metadata": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versions": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [
+        {
+          "id": "mynavyhr",
+          "name": "MyNavyHR",
+          "priority": "high",
+          "automation_status": "blocked_by_host",
+          "url": "https://www.mynavyhr.navy.mil/References/Messages/"
+        }
+      ],
+      "queue_rank": 19
+    },
+    {
+      "id": "coverage-complete-dod-directive",
+      "item_type": "coverage_completion",
+      "label": "DoW/DoD Directive completion",
+      "queue_priority": "P1",
+      "score": 88,
+      "reason": "1 artifact in repo, missing raw mirror, text extraction, structured summary.",
+      "recommended_action": "Recover blocked raw source files, then regenerate extraction, claims, references, authority chain, and structured summary.",
+      "source_id": "dod-issuances",
+      "source_name": "DoW/DoD Issuances",
+      "source_owner": "Washington Headquarters Services / Executive Services Directorate",
+      "source_priority": "critical",
+      "automation_status": "blocked_by_host",
+      "coverage_status": "source_known_blocked",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "source_location_types": [
+        "dod_issuances_pdf"
+      ],
+      "source_url": "https://www.esd.whs.mil/DD/",
+      "search_url": "https://www.esd.whs.mil/DD/DoD-Issuances/",
+      "api_url": null,
+      "governance_item_id": "dod-directive",
+      "governance_item_label": "DoW/DoD Directive",
+      "hierarchy_rank": 70,
+      "counts": {
+        "in_repo": 1,
+        "mirrored": 0,
+        "blocked": 1,
+        "raw": 0,
+        "text": 0,
+        "metadata": 1,
+        "analytics": 1,
+        "analysis": 1,
+        "structured": 0,
+        "versions": 1
+      },
+      "artifact_ids": [
+        "dodd-5000-01-defense-acquisition-system"
+      ],
+      "source_candidates": [
+        {
+          "id": "dod-issuances",
+          "name": "DoW/DoD Issuances",
+          "priority": "critical",
+          "automation_status": "blocked_by_host",
+          "url": "https://www.esd.whs.mil/DD/"
+        }
+      ],
+      "queue_rank": 20
+    },
+    {
+      "id": "coverage-complete-dod-instruction",
+      "item_type": "coverage_completion",
+      "label": "DoW/DoD Instruction completion",
+      "queue_priority": "P1",
+      "score": 88,
+      "reason": "2 artifacts in repo, missing raw mirror, text extraction, structured summary.",
+      "recommended_action": "Recover blocked raw source files, then regenerate extraction, claims, references, authority chain, and structured summary.",
+      "source_id": "dod-issuances",
+      "source_name": "DoW/DoD Issuances",
+      "source_owner": "Washington Headquarters Services / Executive Services Directorate",
+      "source_priority": "critical",
+      "automation_status": "blocked_by_host",
+      "coverage_status": "source_known_blocked",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "source_location_types": [
+        "dod_issuances_pdf"
+      ],
+      "source_url": "https://www.esd.whs.mil/DD/",
+      "search_url": "https://www.esd.whs.mil/DD/DoD-Issuances/",
+      "api_url": null,
+      "governance_item_id": "dod-instruction",
+      "governance_item_label": "DoW/DoD Instruction",
+      "hierarchy_rank": 72,
+      "counts": {
+        "in_repo": 2,
+        "mirrored": 0,
+        "blocked": 2,
+        "raw": 0,
+        "text": 0,
+        "metadata": 2,
+        "analytics": 2,
+        "analysis": 2,
+        "structured": 0,
+        "versions": 2
+      },
+      "artifact_ids": [
+        "dodi-5000-87-software-acquisition-pathway",
+        "dodi-8510-01-risk-management-framework"
+      ],
+      "source_candidates": [
+        {
+          "id": "dod-issuances",
+          "name": "DoW/DoD Issuances",
+          "priority": "critical",
+          "automation_status": "blocked_by_host",
+          "url": "https://www.esd.whs.mil/DD/"
+        }
+      ],
+      "queue_rank": 21
+    },
+    {
+      "id": "coverage-complete-dod-strategy",
+      "item_type": "coverage_completion",
+      "label": "DoW/DoD Strategy completion",
+      "queue_priority": "P1",
+      "score": 88,
+      "reason": "1 artifact in repo, missing raw mirror, text extraction, structured summary.",
+      "recommended_action": "Recover blocked raw source files, then regenerate extraction, claims, references, authority chain, and structured summary.",
+      "source_id": "dod-cio",
+      "source_name": "DoD CIO",
+      "source_owner": "DoD Chief Information Officer",
+      "source_priority": "critical",
+      "automation_status": "blocked_by_host",
+      "coverage_status": "source_known_blocked",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "source_location_types": [
+        "dod_cio_pdf"
+      ],
+      "source_url": "https://dodcio.defense.gov/",
+      "search_url": "https://dodcio.defense.gov/Search/",
+      "api_url": null,
+      "governance_item_id": "dod-strategy",
+      "governance_item_label": "DoW/DoD Strategy",
+      "hierarchy_rank": 74,
+      "counts": {
+        "in_repo": 1,
+        "mirrored": 0,
+        "blocked": 1,
+        "raw": 0,
+        "text": 0,
+        "metadata": 1,
+        "analytics": 1,
+        "analysis": 1,
+        "structured": 0,
+        "versions": 1
+      },
+      "artifact_ids": [
+        "dod-zero-trust-strategy"
+      ],
+      "source_candidates": [
+        {
+          "id": "dod-cio",
+          "name": "DoD CIO",
+          "priority": "critical",
+          "automation_status": "blocked_by_host",
+          "url": "https://dodcio.defense.gov/"
+        }
+      ],
+      "queue_rank": 22
+    },
+    {
+      "id": "governance-gap-joint-staff-instruction",
+      "item_type": "governance_gap",
+      "label": "Joint Staff Instruction / Manual coverage gap",
+      "queue_priority": "P1",
+      "score": 88,
+      "reason": "Joint Staff Instruction / Manual has no artifact in the corpus universe.",
+      "recommended_action": "Use Joint Staff Directives to discover and register the first Joint Staff Instruction / Manual artifact.",
+      "source_id": "joint-staff",
+      "source_name": "Joint Staff Directives",
+      "source_owner": "Joint Staff",
+      "source_priority": "medium",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "joint_staff_pdf"
+      ],
+      "source_url": "https://www.jcs.mil/Library/CJCS-Instructions/",
+      "search_url": "https://www.jcs.mil/Search/",
+      "api_url": null,
+      "governance_item_id": "joint-staff-instruction",
+      "governance_item_label": "Joint Staff Instruction / Manual",
+      "hierarchy_rank": 85,
+      "counts": {
+        "in_repo": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "raw": 0,
+        "text": 0,
+        "metadata": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versions": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [
+        {
+          "id": "joint-staff",
+          "name": "Joint Staff Directives",
+          "priority": "medium",
+          "automation_status": "needs_probe",
+          "url": "https://www.jcs.mil/Library/CJCS-Instructions/"
+        }
+      ],
+      "queue_rank": 23
+    },
+    {
+      "id": "governance-gap-fleet-guidance",
+      "item_type": "governance_gap",
+      "label": "Fleet / Type Command Guidance coverage gap",
+      "queue_priority": "P2",
+      "score": 86,
+      "reason": "Fleet / Type Command Guidance has no artifact in the corpus universe.",
+      "recommended_action": "Use NAVAIR to discover and register the first Fleet / Type Command Guidance artifact.",
+      "source_id": "navair",
+      "source_name": "NAVAIR",
+      "source_owner": "Naval Air Systems Command",
+      "source_priority": "medium",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "fleet_command_pdf",
+        "fleet_command_html"
+      ],
+      "source_url": "https://www.navair.navy.mil/",
+      "search_url": "https://www.navair.navy.mil/search",
+      "api_url": null,
+      "governance_item_id": "fleet-guidance",
+      "governance_item_label": "Fleet / Type Command Guidance",
+      "hierarchy_rank": 90,
+      "counts": {
+        "in_repo": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "raw": 0,
+        "text": 0,
+        "metadata": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versions": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [
+        {
+          "id": "navair",
+          "name": "NAVAIR",
+          "priority": "medium",
+          "automation_status": "needs_probe",
+          "url": "https://www.navair.navy.mil/"
+        },
+        {
+          "id": "navsea",
+          "name": "NAVSEA",
+          "priority": "medium",
+          "automation_status": "needs_probe",
+          "url": "https://www.navsea.navy.mil/"
+        },
+        {
+          "id": "navwar",
+          "name": "NAVWAR",
+          "priority": "medium",
+          "automation_status": "needs_probe",
+          "url": "https://www.navwar.navy.mil/"
+        }
+      ],
+      "queue_rank": 24
+    },
+    {
+      "id": "coverage-complete-opnav-instruction",
+      "item_type": "coverage_completion",
+      "label": "OPNAV Instruction completion",
+      "queue_priority": "P2",
+      "score": 86,
+      "reason": "1 artifact in repo, missing raw mirror, text extraction, structured summary.",
+      "recommended_action": "Recover blocked raw source files, then regenerate extraction, claims, references, authority chain, and structured summary.",
+      "source_id": "doni",
+      "source_name": "Department of the Navy Issuances",
+      "source_owner": "Department of the Navy",
+      "source_priority": "critical",
+      "automation_status": "blocked_by_host",
+      "coverage_status": "source_known_blocked",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "source_location_types": [
+        "don_issuances_pdf"
+      ],
+      "source_url": "https://www.secnav.navy.mil/doni/",
+      "search_url": "https://www.secnav.navy.mil/doni/default.aspx",
+      "api_url": null,
+      "governance_item_id": "opnav-instruction",
+      "governance_item_label": "OPNAV Instruction",
+      "hierarchy_rank": 82,
+      "counts": {
+        "in_repo": 1,
+        "mirrored": 0,
+        "blocked": 1,
+        "raw": 0,
+        "text": 0,
+        "metadata": 1,
+        "analytics": 1,
+        "analysis": 1,
+        "structured": 0,
+        "versions": 1
+      },
+      "artifact_ids": [
+        "opnavinst-5239-1e-navy-cybersecurity"
+      ],
+      "source_candidates": [
+        {
+          "id": "doni",
+          "name": "Department of the Navy Issuances",
+          "priority": "critical",
+          "automation_status": "blocked_by_host",
+          "url": "https://www.secnav.navy.mil/doni/"
+        }
+      ],
+      "queue_rank": 25
+    },
+    {
+      "id": "governance-gap-program-office-guidance",
+      "item_type": "governance_gap",
+      "label": "Program Office / Echelon 4 Guidance coverage gap",
+      "queue_priority": "P2",
+      "score": 86,
+      "reason": "Program Office / Echelon 4 Guidance has no artifact in the corpus universe.",
+      "recommended_action": "Use NAVAIR to discover and register the first Program Office / Echelon 4 Guidance artifact.",
+      "source_id": "navair",
+      "source_name": "NAVAIR",
+      "source_owner": "Naval Air Systems Command",
+      "source_priority": "medium",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "program_office_pdf",
+        "program_office_html"
+      ],
+      "source_url": "https://www.navair.navy.mil/",
+      "search_url": "https://www.navair.navy.mil/search",
+      "api_url": null,
+      "governance_item_id": "program-office-guidance",
+      "governance_item_label": "Program Office / Echelon 4 Guidance",
+      "hierarchy_rank": 90,
+      "counts": {
+        "in_repo": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "raw": 0,
+        "text": 0,
+        "metadata": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versions": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [
+        {
+          "id": "navair",
+          "name": "NAVAIR",
+          "priority": "medium",
+          "automation_status": "needs_probe",
+          "url": "https://www.navair.navy.mil/"
+        },
+        {
+          "id": "navsea",
+          "name": "NAVSEA",
+          "priority": "medium",
+          "automation_status": "needs_probe",
+          "url": "https://www.navsea.navy.mil/"
+        },
+        {
+          "id": "navwar",
+          "name": "NAVWAR",
+          "priority": "medium",
+          "automation_status": "needs_probe",
+          "url": "https://www.navwar.navy.mil/"
+        }
+      ],
+      "queue_rank": 26
+    },
+    {
+      "id": "coverage-complete-secnav-manual",
+      "item_type": "coverage_completion",
+      "label": "SECNAV Manual completion",
+      "queue_priority": "P2",
+      "score": 86,
+      "reason": "2 artifacts in repo, missing raw mirror, text extraction, structured summary.",
+      "recommended_action": "Recover blocked raw source files, then regenerate extraction, claims, references, authority chain, and structured summary.",
+      "source_id": "doni",
+      "source_name": "Department of the Navy Issuances",
+      "source_owner": "Department of the Navy",
+      "source_priority": "critical",
+      "automation_status": "blocked_by_host",
+      "coverage_status": "source_known_blocked",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "source_location_types": [
+        "don_issuances_pdf"
+      ],
+      "source_url": "https://www.secnav.navy.mil/doni/",
+      "search_url": "https://www.secnav.navy.mil/doni/default.aspx",
+      "api_url": null,
+      "governance_item_id": "secnav-manual",
+      "governance_item_label": "SECNAV Manual",
+      "hierarchy_rank": 80,
+      "counts": {
+        "in_repo": 2,
+        "mirrored": 0,
+        "blocked": 2,
+        "raw": 0,
+        "text": 0,
+        "metadata": 2,
+        "analytics": 2,
+        "analysis": 2,
+        "structured": 0,
+        "versions": 2
+      },
+      "artifact_ids": [
+        "secnav-m-5210-1-records-management",
+        "secnav-m-5239-3-don-cybersecurity"
+      ],
+      "source_candidates": [
+        {
+          "id": "doni",
+          "name": "Department of the Navy Issuances",
+          "priority": "critical",
+          "automation_status": "blocked_by_host",
+          "url": "https://www.secnav.navy.mil/doni/"
+        }
+      ],
+      "queue_rank": 27
+    },
+    {
+      "id": "coverage-complete-navadmin",
+      "item_type": "coverage_completion",
+      "label": "NAVADMIN completion",
+      "queue_priority": "P2",
+      "score": 84,
+      "reason": "1 artifact in repo, missing raw mirror, text extraction, structured summary.",
+      "recommended_action": "Recover blocked raw source files, then regenerate extraction, claims, references, authority chain, and structured summary.",
+      "source_id": "mynavyhr",
+      "source_name": "MyNavyHR",
+      "source_owner": "Navy Personnel Command",
+      "source_priority": "high",
+      "automation_status": "blocked_by_host",
+      "coverage_status": "source_known_blocked",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "source_location_types": [
+        "mynavyhr_navadmin_txt"
+      ],
+      "source_url": "https://www.mynavyhr.navy.mil/References/Messages/",
+      "search_url": "https://www.mynavyhr.navy.mil/References/Messages/NAVADMIN-2024/",
+      "api_url": null,
+      "governance_item_id": "navadmin",
+      "governance_item_label": "NAVADMIN",
+      "hierarchy_rank": 90,
+      "counts": {
+        "in_repo": 1,
+        "mirrored": 0,
+        "blocked": 1,
+        "raw": 0,
+        "text": 0,
+        "metadata": 1,
+        "analytics": 1,
+        "analysis": 1,
+        "structured": 0,
+        "versions": 1
+      },
+      "artifact_ids": [
+        "navadmin-214-24-fy2025-cybersecurity-awareness"
+      ],
+      "source_candidates": [
+        {
+          "id": "mynavyhr",
+          "name": "MyNavyHR",
+          "priority": "high",
+          "automation_status": "blocked_by_host",
+          "url": "https://www.mynavyhr.navy.mil/References/Messages/"
+        }
+      ],
+      "queue_rank": 28
+    },
+    {
+      "id": "source-start-air-force-epubs",
+      "item_type": "source_start",
+      "label": "Air Force e-Publishing initial ingest",
+      "queue_priority": "P2",
+      "score": 82,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "air-force-epubs",
+      "source_name": "Air Force e-Publishing",
+      "source_owner": "Department of the Air Force",
+      "source_priority": "medium",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "air_force_epubs_pdf",
+        "air_force_epubs_html"
+      ],
+      "source_url": "https://www.e-publishing.af.mil/",
+      "search_url": "https://www.e-publishing.af.mil/Product-Index/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 29
+    },
+    {
+      "id": "source-start-army-pubs",
+      "item_type": "source_start",
+      "label": "Army Publishing Directorate initial ingest",
+      "queue_priority": "P2",
+      "score": 82,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "army-pubs",
+      "source_name": "Army Publishing Directorate",
+      "source_owner": "Department of the Army",
+      "source_priority": "medium",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "army_pubs_pdf",
+        "army_pubs_html"
+      ],
+      "source_url": "https://armypubs.army.mil/",
+      "search_url": "https://armypubs.army.mil/ProductMaps/PubForm/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 30
+    },
+    {
+      "id": "source-start-disa",
+      "item_type": "source_start",
+      "label": "DISA initial ingest",
+      "queue_priority": "P2",
+      "score": 82,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "disa",
+      "source_name": "DISA",
+      "source_owner": "Defense Information Systems Agency",
+      "source_priority": "medium",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "disa_html",
+        "disa_pdf"
+      ],
+      "source_url": "https://www.disa.mil/",
+      "search_url": "https://www.disa.mil/Search",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 31
+    },
+    {
+      "id": "source-start-joint-staff",
+      "item_type": "source_start",
+      "label": "Joint Staff Directives initial ingest",
+      "queue_priority": "P2",
+      "score": 82,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "joint-staff",
+      "source_name": "Joint Staff Directives",
+      "source_owner": "Joint Staff",
+      "source_priority": "medium",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "joint_staff_pdf"
+      ],
+      "source_url": "https://www.jcs.mil/Library/CJCS-Instructions/",
+      "search_url": "https://www.jcs.mil/Search/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 32
+    },
+    {
+      "id": "source-start-marine-corps-pubs",
+      "item_type": "source_start",
+      "label": "Marine Corps Publications Electronic Library initial ingest",
+      "queue_priority": "P2",
+      "score": 82,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "marine-corps-pubs",
+      "source_name": "Marine Corps Publications Electronic Library",
+      "source_owner": "United States Marine Corps",
+      "source_priority": "medium",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "marine_corps_pubs_pdf",
+        "marine_corps_pubs_html"
+      ],
+      "source_url": "https://www.marines.mil/News/Publications/",
+      "search_url": "https://www.marines.mil/Search/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 33
+    },
+    {
+      "id": "source-start-navair",
+      "item_type": "source_start",
+      "label": "NAVAIR initial ingest",
+      "queue_priority": "P2",
+      "score": 82,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "navair",
+      "source_name": "NAVAIR",
+      "source_owner": "Naval Air Systems Command",
+      "source_priority": "medium",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "fleet_command_pdf",
+        "fleet_command_html",
+        "program_office_pdf",
+        "program_office_html"
+      ],
+      "source_url": "https://www.navair.navy.mil/",
+      "search_url": "https://www.navair.navy.mil/search",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 34
+    },
+    {
+      "id": "source-start-navsea",
+      "item_type": "source_start",
+      "label": "NAVSEA initial ingest",
+      "queue_priority": "P2",
+      "score": 82,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "navsea",
+      "source_name": "NAVSEA",
+      "source_owner": "Naval Sea Systems Command",
+      "source_priority": "medium",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "fleet_command_pdf",
+        "fleet_command_html",
+        "program_office_pdf",
+        "program_office_html"
+      ],
+      "source_url": "https://www.navsea.navy.mil/",
+      "search_url": "https://www.navsea.navy.mil/Search/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 35
+    },
+    {
+      "id": "source-start-navwar",
+      "item_type": "source_start",
+      "label": "NAVWAR initial ingest",
+      "queue_priority": "P2",
+      "score": 82,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "navwar",
+      "source_name": "NAVWAR",
+      "source_owner": "Naval Information Warfare Systems Command",
+      "source_priority": "medium",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "fleet_command_pdf",
+        "fleet_command_html",
+        "program_office_pdf",
+        "program_office_html"
+      ],
+      "source_url": "https://www.navwar.navy.mil/",
+      "search_url": "https://www.navwar.navy.mil/search",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 36
+    }
+  ]
+}

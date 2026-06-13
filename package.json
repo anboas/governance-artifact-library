@@ -10,12 +10,13 @@
     "extract": "node scripts/generate-extractions.mjs",
     "authority": "node scripts/generate-authority-chain.mjs",
     "index": "node scripts/generate-artifact-index.mjs",
+    "acquisition": "node scripts/generate-source-acquisition-queue.mjs",
     "queue": "node scripts/generate-reference-ingestion-queue.mjs",
     "references": "node scripts/generate-reference-map.mjs",
     "refresh:federal-register": "node scripts/refresh-federal-register-text.mjs",
     "seed": "node scripts/seed-corpus.mjs",
     "sources": "node scripts/generate-source-discovery-map.mjs",
-    "validate": "node scripts/validate-corpus.mjs && node scripts/generate-artifact-index.mjs --check && node scripts/generate-extractions.mjs --check && node scripts/generate-claims.mjs --check && node scripts/generate-reference-map.mjs --check && node scripts/generate-authority-chain.mjs --check && node scripts/generate-reference-ingestion-queue.mjs --check && node scripts/generate-coverage-map.mjs --check && node scripts/generate-source-discovery-map.mjs --check"
+    "validate": "node scripts/validate-corpus.mjs && node scripts/generate-artifact-index.mjs --check && node scripts/generate-extractions.mjs --check && node scripts/generate-claims.mjs --check && node scripts/generate-reference-map.mjs --check && node scripts/generate-authority-chain.mjs --check && node scripts/generate-reference-ingestion-queue.mjs --check && node scripts/generate-coverage-map.mjs --check && node scripts/generate-source-discovery-map.mjs --check && node scripts/generate-source-acquisition-queue.mjs --check"
   },
   "license": "CC0-1.0"
 }
