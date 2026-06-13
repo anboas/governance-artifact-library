@@ -85,6 +85,7 @@ for (const entry of manifest.artifacts) {
     assert.equal(checksum, artifact.checksum_sha256, `${entry.id} raw checksum mismatch`);
     const extractedText = readFileSync(join(ROOT, artifact.extracted_text_path), "utf8");
     assert.ok(extractedText.trim().length > 100, `${entry.id} extracted text should be non-empty`);
+    assert.equal(extractedText.includes("\u0000"), false, `${entry.id} extracted text should not contain NUL/control padding`);
     assert.equal(hasMeaningfulSourceText(extractedText), true, `${entry.id} mirrored artifact captured an access wall or placeholder instead of source text`);
     assert.equal(extractions.extraction_status, "parsed", `${entry.id} mirrored artifact should expose parsed extraction status`);
     assert.ok(extractions.summary?.annotated_line_count > 0, `${entry.id} should have line annotations`);
@@ -150,6 +151,7 @@ function assertSidecar(artifact, field, label) {
 function hasMeaningfulSourceText(text) {
   const normalized = String(text || "").replace(/\s+/g, " ").trim();
   if (normalized.length < 100) return false;
+  if (normalized.includes("\u0000")) return false;
   if (/Request Access Due to aggressive automated scraping/i.test(normalized)) return false;
   if (/Your request has been flagged as potentially automated/i.test(normalized)) return false;
   if (/complete the CAPTCHA/i.test(normalized)) return false;

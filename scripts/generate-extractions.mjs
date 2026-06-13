@@ -246,6 +246,7 @@ function normalizeWhitespace(value) {
 function hasMeaningfulSourceText(text) {
   const normalized = normalizeWhitespace(text);
   if (normalized.length < 100) return false;
+  if (normalized.includes("\u0000")) return false;
   if (/Request Access Due to aggressive automated scraping/i.test(normalized)) return false;
   if (/Your request has been flagged as potentially automated/i.test(normalized)) return false;
   if (/complete the CAPTCHA/i.test(normalized)) return false;

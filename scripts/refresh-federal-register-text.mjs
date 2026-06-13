@@ -276,6 +276,7 @@ function countTerm(text, term) {
 function hasMeaningfulSourceText(text) {
   const normalized = String(text || "").replace(/\s+/g, " ").trim();
   if (normalized.length < 100) return false;
+  if (normalized.includes("\u0000")) return false;
   if (/Request Access Due to aggressive automated scraping/i.test(normalized)) return false;
   if (/Your request has been flagged as potentially automated/i.test(normalized)) return false;
   if (/complete the CAPTCHA/i.test(normalized)) return false;
@@ -289,6 +290,7 @@ function looksLikeHtml(value) {
 
 function htmlToText(html) {
   return html
+    .replace(/\u0000/g, "")
     .replace(/<script[\s\S]*?<\/script>/gi, " ")
     .replace(/<style[\s\S]*?<\/style>/gi, " ")
     .replace(/<noscript[\s\S]*?<\/noscript>/gi, " ")
