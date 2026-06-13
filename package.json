@@ -8,10 +8,11 @@
     "coverage": "node scripts/generate-coverage-map.mjs",
     "claims": "node scripts/generate-claims.mjs",
     "extract": "node scripts/generate-extractions.mjs",
+    "queue": "node scripts/generate-reference-ingestion-queue.mjs",
     "references": "node scripts/generate-reference-map.mjs",
     "seed": "node scripts/seed-corpus.mjs",
     "sources": "node scripts/generate-source-discovery-map.mjs",
-    "validate": "node scripts/validate-corpus.mjs && node scripts/generate-extractions.mjs --check && node scripts/generate-claims.mjs --check && node scripts/generate-reference-map.mjs --check && node scripts/generate-coverage-map.mjs --check && node scripts/generate-source-discovery-map.mjs --check"
+    "validate": "node scripts/validate-corpus.mjs && node scripts/generate-extractions.mjs --check && node scripts/generate-claims.mjs --check && node scripts/generate-reference-map.mjs --check && node scripts/generate-reference-ingestion-queue.mjs --check && node scripts/generate-coverage-map.mjs --check && node scripts/generate-source-discovery-map.mjs --check"
   },
   "license": "CC0-1.0"
 }
