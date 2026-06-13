@@ -44,12 +44,13 @@ for (const entry of manifest.artifacts) {
     throw new Error(`${artifact.id} Federal Register API returned an access wall or placeholder`);
   }
 
-  const rawPath = `artifacts/${artifact.id}/raw/source.${looksLikeHtml(rawText) ? "html" : "txt"}`;
-  const textPath = `artifacts/${artifact.id}/text/extracted.txt`;
+  const rawPath = `artifacts/${artifact.id}/raw/source-federal-register.${looksLikeHtml(rawText) ? "html" : "txt"}`;
+  const textPath = `artifacts/${artifact.id}/text/extracted-federal-register.txt`;
   await writeFileChecked(rawPath, rawText);
   await writeFileChecked(textPath, extractedText);
 
   if (artifact.raw_path && artifact.raw_path !== rawPath) await rm(join(ROOT, artifact.raw_path), { force: true });
+  if (artifact.extracted_text_path && artifact.extracted_text_path !== textPath) await rm(join(ROOT, artifact.extracted_text_path), { force: true });
 
   const bytes = Buffer.from(rawText, "utf8");
   const checksum = createHash("sha256").update(bytes).digest("hex");
