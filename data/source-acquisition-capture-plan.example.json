@@ -1,0 +1,108 @@
+{
+  "planVersion": "source-acquisition-capture-plan-v1",
+  "packetVersion": "policy-source-acquisition-packet-v1",
+  "packetGeneratedAt": "2026-06-13T15:56:00.000Z",
+  "packetGeneratedBy": "Local Analyst",
+  "plannedFrom": "Policy Intelligence Source Acquisition Queue",
+  "summary": {
+    "itemCount": 1,
+    "p0": 1,
+    "p1": 0,
+    "p2": 0,
+    "sourceRecovery": 1,
+    "governanceGaps": 0,
+    "existingArtifactTargets": 3,
+    "candidateArtifactTargets": 0
+  },
+  "workItems": [
+    {
+      "id": "source-recovery-doni",
+      "queueRank": 1,
+      "queuePriority": "P0",
+      "itemType": "source_recovery",
+      "label": "Department of the Navy Issuances mirror recovery",
+      "queueReason": "3 registered artifacts blocked or browser-needed.",
+      "recommendedAction": "Capture official source files through browser/manual import fallback.",
+      "localExecution": {
+        "status": "Capturing",
+        "owner": "Local Analyst",
+        "notes": "Recover DONI PDFs through browser/manual capture.",
+        "updatedAt": "2026-06-13T15:56:00.000Z"
+      },
+      "source": {
+        "id": "doni",
+        "name": "Department of the Navy Issuances",
+        "owner": "Department of the Navy",
+        "priority": "critical",
+        "automationStatus": "blocked_by_host",
+        "coverageStatus": "source_known_blocked",
+        "url": "https://www.secnav.navy.mil/doni/",
+        "searchUrl": "https://www.secnav.navy.mil/doni/default.aspx",
+        "apiUrl": "",
+        "candidates": []
+      },
+      "governanceTarget": {
+        "id": "",
+        "label": "",
+        "hierarchyRank": null
+      },
+      "captureMode": "browser_assisted_capture",
+      "captureStrategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "sourceLocationTypes": [
+        "don_issuances_pdf"
+      ],
+      "sourceUrls": [
+        "https://www.secnav.navy.mil/doni/",
+        "https://www.secnav.navy.mil/doni/default.aspx"
+      ],
+      "artifactIds": [
+        "secnav-m-5210-1-records-management",
+        "secnav-m-5239-3-don-cybersecurity",
+        "opnavinst-5239-1e-navy-cybersecurity"
+      ],
+      "corpusTargets": [
+        {
+          "artifactId": "secnav-m-5210-1-records-management",
+          "artifactPath": "artifacts/secnav-m-5210-1-records-management/artifact.json",
+          "rawMirrorDirectory": "artifacts/secnav-m-5210-1-records-management/raw/",
+          "extractedTextPath": "artifacts/secnav-m-5210-1-records-management/text/extracted-source.txt",
+          "provenancePath": "artifacts/secnav-m-5210-1-records-management/provenance.json",
+          "targetState": "existing_artifact"
+        },
+        {
+          "artifactId": "secnav-m-5239-3-don-cybersecurity",
+          "artifactPath": "artifacts/secnav-m-5239-3-don-cybersecurity/artifact.json",
+          "rawMirrorDirectory": "artifacts/secnav-m-5239-3-don-cybersecurity/raw/",
+          "extractedTextPath": "artifacts/secnav-m-5239-3-don-cybersecurity/text/extracted-source.txt",
+          "provenancePath": "artifacts/secnav-m-5239-3-don-cybersecurity/provenance.json",
+          "targetState": "existing_artifact"
+        },
+        {
+          "artifactId": "opnavinst-5239-1e-navy-cybersecurity",
+          "artifactPath": "artifacts/opnavinst-5239-1e-navy-cybersecurity/artifact.json",
+          "rawMirrorDirectory": "artifacts/opnavinst-5239-1e-navy-cybersecurity/raw/",
+          "extractedTextPath": "artifacts/opnavinst-5239-1e-navy-cybersecurity/text/extracted-source.txt",
+          "provenancePath": "artifacts/opnavinst-5239-1e-navy-cybersecurity/provenance.json",
+          "targetState": "existing_artifact"
+        }
+      ],
+      "nextActions": [
+        "Open the official source/search/API URL from the packet.",
+        "Capture the authoritative raw source file or HTML snapshot.",
+        "Write provenance with capture method, source URL, timestamp, and analyst/agent notes.",
+        "Update existing artifact records and raw mirror paths for each listed artifact ID.",
+        "Regenerate extraction, claims, reference map, authority chain, coverage, source discovery, acquisition queue, and validate."
+      ],
+      "acceptanceCriteria": [
+        "Raw source mirror or source-known registration exists at the packet corpus target.",
+        "Artifact metadata/provenance references the official source URL from the packet.",
+        "Generated sidecars match the artifact state: text extraction where mirrored, unavailable status where still blocked.",
+        "The source acquisition queue item source-recovery-doni is reduced or removed after regeneration."
+      ]
+    }
+  ]
+}

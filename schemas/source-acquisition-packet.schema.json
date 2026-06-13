@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/anboas/governance-artifact-library/schemas/source-acquisition-packet.schema.json",
+  "title": "Policy Source Acquisition Packet",
+  "type": "object",
+  "required": ["packetVersion", "generatedAt", "generatedBy", "source", "summary", "instructions", "items"],
+  "properties": {
+    "packetVersion": { "type": "string", "const": "policy-source-acquisition-packet-v1" },
+    "generatedAt": { "type": "string" },
+    "generatedBy": { "type": "string", "minLength": 1 },
+    "source": { "type": "string", "minLength": 1 },
+    "summary": {
+      "type": "object",
+      "required": ["exportedItems"],
+      "properties": {
+        "queueItems": { "type": "integer", "minimum": 0 },
+        "p0": { "type": "integer", "minimum": 0 },
+        "p1": { "type": "integer", "minimum": 0 },
+        "p2": { "type": "integer", "minimum": 0 },
+        "exportedItems": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": true
+    },
+    "instructions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "queueRank",
+          "queuePriority",
+          "itemType",
+          "label",
+          "recommendedAction",
+          "source",
+          "captureStrategies",
+          "sourceLocationTypes",
+          "artifactIds",
+          "corpusTargets",
+          "localExecution"
+        ],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]+$" },
+          "queueRank": { "type": "integer", "minimum": 1 },
+          "queuePriority": { "type": "string", "enum": ["P0", "P1", "P2", "P3"] },
+          "itemType": { "type": "string", "enum": ["source_recovery", "source_start", "governance_gap", "coverage_completion"] },
+          "label": { "type": "string", "minLength": 1 },
+          "reason": { "type": "string" },
+          "recommendedAction": { "type": "string", "minLength": 1 },
+          "source": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "name": { "type": "string" },
+              "owner": { "type": "string" },
+              "priority": { "type": "string" },
+              "automationStatus": { "type": "string" },
+              "coverageStatus": { "type": "string" },
+              "url": { "type": "string" },
+              "searchUrl": { "type": "string" },
+              "apiUrl": { "type": "string" },
+              "candidates": { "type": "array" }
+            },
+            "additionalProperties": true
+          },
+          "governanceTarget": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "label": { "type": "string" },
+              "hierarchyRank": { "type": ["integer", "null"] }
+            },
+            "additionalProperties": true
+          },
+          "captureStrategies": { "type": "array", "items": { "type": "string" } },
+          "sourceLocationTypes": { "type": "array", "items": { "type": "string" } },
+          "counts": { "type": "object" },
+          "artifactIds": { "type": "array", "items": { "type": "string" } },
+          "corpusTargets": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["artifactId", "artifactPath", "rawMirrorDirectory", "extractedTextPath", "provenancePath"],
+              "properties": {
+                "artifactId": { "type": "string", "minLength": 1 },
+                "artifactPath": { "type": "string" },
+                "rawMirrorDirectory": { "type": "string" },
+                "extractedTextPath": { "type": "string" },
+                "provenancePath": { "type": "string" }
+              },
+              "additionalProperties": false
+            }
+          },
+          "localExecution": {
+            "type": "object",
+            "required": ["status"],
+            "properties": {
+              "status": { "type": "string", "enum": ["Unclaimed", "Claimed", "Capturing", "Needs Browser", "Captured", "Blocked"] },
+              "owner": { "type": "string" },
+              "notes": { "type": "string" },
+              "updatedAt": { "type": "string" }
+            },
+            "additionalProperties": true
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

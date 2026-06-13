@@ -49,6 +49,7 @@ artifacts/<artifact-id>/
 schemas/
   governance-artifact.schema.json
   manifest.schema.json
+  source-acquisition-packet.schema.json
 
 sources/
   source-registry.json
@@ -64,11 +65,13 @@ manifest.json
 See `docs/repo-hierarchy.md` for the artifact envelope and authority stack.
 See `docs/coverage-map.md` for generated coverage across the governance-item universe.
 See `docs/source-discovery-map.md` for generated coverage across official source systems and capture strategies.
+See `docs/source-acquisition-packets.md` for the Policy Intelligence capture-packet handoff contract.
 
 ## Commands
 
 ```bash
 npm run coverage
+npm run packet:plan -- --packet data/source-acquisition-packet-example.json
 npm run seed
 npm run sources
 npm run validate
@@ -77,6 +80,7 @@ npm run validate
 `npm run seed` fetches the current seed set from official sources where automation is allowed. `npm run validate` checks schema-critical fields, paths, checksums, and lifecycle consistency.
 `npm run coverage` regenerates `data/coverage-map.json` and `docs/coverage-map.md`.
 `npm run sources` regenerates `data/source-discovery-map.json` and `docs/source-discovery-map.md`.
+`npm run packet:plan` validates a Policy Intelligence `policy-source-acquisition-packet-v1` export and emits a corpus capture plan.
 
 ## Policy
 

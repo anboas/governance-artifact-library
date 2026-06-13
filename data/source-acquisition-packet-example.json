@@ -1,0 +1,98 @@
+{
+  "packetVersion": "policy-source-acquisition-packet-v1",
+  "generatedAt": "2026-06-13T15:56:00.000Z",
+  "generatedBy": "Local Analyst",
+  "source": "Policy Intelligence Source Acquisition Queue",
+  "summary": {
+    "queueItems": 36,
+    "p0": 14,
+    "p1": 9,
+    "p2": 13,
+    "exportedItems": 1
+  },
+  "instructions": [
+    "Capture official source files using the listed source/search/API URLs.",
+    "Store raw mirrors under each corpusTargets.rawMirrorDirectory.",
+    "Update artifact metadata/provenance, regenerate text/claims/reference/authority sidecars, then run corpus validation."
+  ],
+  "items": [
+    {
+      "id": "source-recovery-doni",
+      "queueRank": 1,
+      "queuePriority": "P0",
+      "itemType": "source_recovery",
+      "label": "Department of the Navy Issuances mirror recovery",
+      "reason": "3 registered artifacts blocked or browser-needed.",
+      "recommendedAction": "Capture official source files through browser/manual import fallback.",
+      "source": {
+        "id": "doni",
+        "name": "Department of the Navy Issuances",
+        "owner": "Department of the Navy",
+        "priority": "critical",
+        "automationStatus": "blocked_by_host",
+        "coverageStatus": "source_known_blocked",
+        "url": "https://www.secnav.navy.mil/doni/",
+        "searchUrl": "https://www.secnav.navy.mil/doni/default.aspx",
+        "apiUrl": "",
+        "candidates": []
+      },
+      "governanceTarget": {
+        "id": "",
+        "label": "",
+        "hierarchyRank": null
+      },
+      "captureStrategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "sourceLocationTypes": [
+        "don_issuances_pdf"
+      ],
+      "counts": {
+        "artifacts": 3,
+        "mirrored": 0,
+        "blocked": 3,
+        "text_extracted": 0,
+        "analytics": 3,
+        "analysis": 3,
+        "structured": 0,
+        "versioned": 3
+      },
+      "artifactIds": [
+        "secnav-m-5210-1-records-management",
+        "secnav-m-5239-3-don-cybersecurity",
+        "opnavinst-5239-1e-navy-cybersecurity"
+      ],
+      "corpusTargets": [
+        {
+          "artifactId": "secnav-m-5210-1-records-management",
+          "artifactPath": "artifacts/secnav-m-5210-1-records-management/artifact.json",
+          "rawMirrorDirectory": "artifacts/secnav-m-5210-1-records-management/raw/",
+          "extractedTextPath": "artifacts/secnav-m-5210-1-records-management/text/extracted-source.txt",
+          "provenancePath": "artifacts/secnav-m-5210-1-records-management/provenance.json"
+        },
+        {
+          "artifactId": "secnav-m-5239-3-don-cybersecurity",
+          "artifactPath": "artifacts/secnav-m-5239-3-don-cybersecurity/artifact.json",
+          "rawMirrorDirectory": "artifacts/secnav-m-5239-3-don-cybersecurity/raw/",
+          "extractedTextPath": "artifacts/secnav-m-5239-3-don-cybersecurity/text/extracted-source.txt",
+          "provenancePath": "artifacts/secnav-m-5239-3-don-cybersecurity/provenance.json"
+        },
+        {
+          "artifactId": "opnavinst-5239-1e-navy-cybersecurity",
+          "artifactPath": "artifacts/opnavinst-5239-1e-navy-cybersecurity/artifact.json",
+          "rawMirrorDirectory": "artifacts/opnavinst-5239-1e-navy-cybersecurity/raw/",
+          "extractedTextPath": "artifacts/opnavinst-5239-1e-navy-cybersecurity/text/extracted-source.txt",
+          "provenancePath": "artifacts/opnavinst-5239-1e-navy-cybersecurity/provenance.json"
+        }
+      ],
+      "localExecution": {
+        "status": "Capturing",
+        "owner": "Local Analyst",
+        "notes": "Recover DONI PDFs through browser/manual capture.",
+        "updatedAt": "2026-06-13T15:56:00.000Z"
+      }
+    }
+  ]
+}
