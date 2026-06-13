@@ -1,7 +1,7 @@
 {
   "id": "dodi-8510-01-risk-management-framework",
-  "generated_at": "2026-06-12T21:10:45.541Z",
-  "analysis_type": "machine_bootstrap",
+  "generated_at": "2026-06-13T19:27:18.966Z",
+  "analysis_type": "dod_issuance_catalog_ingestion",
   "authority_interpretation": {
     "authority_level": "defense_department_instruction",
     "hierarchy_rank": 72,
@@ -9,21 +9,10 @@
     "downstream_guidance_expected": true
   },
   "extraction_readiness": {
-    "obligation_extraction": "needs_review",
-    "deadline_extraction": "needs_review",
-    "implementation_extraction": "needs_review",
-    "blocked_reason": "Official source identified. Raw mirroring blocked by source host during automated capture."
+    "obligation_extraction": "source_text_queued",
+    "deadline_extraction": "source_text_queued",
+    "implementation_extraction": "source_text_queued",
+    "blocked_reason": "Official source requires browser/CAC/manual recovery."
   },
-  "likely_analytics": [
-    "authority_lineage",
-    "obligation_extraction",
-    "deadline_detection",
-    "defined_terms",
-    "issuing_org_graph",
-    "implementation_tasks",
-    "supersession_tracking",
-    "compliance_evidence"
-  ],
-  "primary_term_signals": [],
-  "review_notes": "Official source is registered but raw mirroring is blocked. Re-run with a browser-authenticated fetcher or manual import before relying on text analytics."
+  "review_notes": "Exhaustive catalog ingestion from official DoD Issuances index. Raw source mirroring and text analytics should be batched separately."
 }

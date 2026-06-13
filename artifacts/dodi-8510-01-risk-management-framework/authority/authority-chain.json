@@ -6,13 +6,13 @@
   "source_artifact": {
     "id": "dodi-8510-01-risk-management-framework",
     "label": "DoDI 8510.01",
-    "title": "DoD Instruction 8510.01: Risk Management Framework for DoD Systems",
+    "title": "DoDI 8510.01: Risk Management Framework for DoD Systems",
     "artifact_type": "DoD Instruction",
     "lane": "dod",
     "lane_label": "DoD",
     "hierarchy_rank": 72,
-    "family": "risk_management",
-    "issuing_authority": "DoW/DoD",
+    "family": "dod_instruction",
+    "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "blocked",
     "parser_status": "blocked",
@@ -61,12 +61,12 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 2,
+    "upstream_edge_count": 1,
     "downstream_edge_count": 4,
-    "catalogued_node_count": 7,
+    "catalogued_node_count": 6,
     "uncatalogued_gap_count": 0,
     "evidence_backed_edge_count": 0,
-    "inferred_edge_count": 6,
+    "inferred_edge_count": 5,
     "authority_path_status": "inferred_review_needed",
     "implementation_path_status": "has_downstream_trace"
   },
@@ -87,30 +87,15 @@
       "status": "catalogued"
     },
     {
-      "id": "dodd-5000-01-defense-acquisition-system",
-      "label": "DoDD 5000.01",
-      "title": "DoD Directive 5000.01: The Defense Acquisition System",
-      "artifact_type": "DoD Directive",
-      "lane": "dod",
-      "lane_label": "DoD",
-      "hierarchy_rank": 70,
-      "family": "acquisition",
-      "issuing_authority": "DoW/DoD",
-      "source_system": "DoW/DoD Issuances",
-      "mirror_status": "blocked",
-      "parser_status": "blocked",
-      "status": "catalogued"
-    },
-    {
       "id": "dodi-8510-01-risk-management-framework",
       "label": "DoDI 8510.01",
-      "title": "DoD Instruction 8510.01: Risk Management Framework for DoD Systems",
+      "title": "DoDI 8510.01: Risk Management Framework for DoD Systems",
       "artifact_type": "DoD Instruction",
       "lane": "dod",
       "lane_label": "DoD",
       "hierarchy_rank": 72,
-      "family": "risk_management",
-      "issuing_authority": "DoW/DoD",
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "blocked",
       "parser_status": "blocked",
@@ -179,27 +164,6 @@
   ],
   "upstream_edges": [
     {
-      "id": "dodd-5000-01-defense-acquisition-system->dodi-8510-01-risk-management-framework:flows_down:inferred_flowdown",
-      "source_artifact_id": "dodd-5000-01-defense-acquisition-system",
-      "source_label": "DoDD 5000.01",
-      "source_lane": "dod",
-      "target_artifact_id": "dodi-8510-01-risk-management-framework",
-      "target_label": "DoDI 8510.01",
-      "target_lane": "dod",
-      "relationship": "flows_down",
-      "evidence_type": "inferred_flowdown",
-      "confidence": 0.73,
-      "direction": "upstream",
-      "evidence": {
-        "basis": "shared_family_tags_and_authority_rank",
-        "shared_tags": [
-          "dod",
-          "dow"
-        ],
-        "shared_family": ""
-      }
-    },
-    {
       "id": "nist-sp-800-207-zero-trust-architecture->dodi-8510-01-risk-management-framework:implements:inferred_flowdown",
       "source_artifact_id": "nist-sp-800-207-zero-trust-architecture",
       "source_label": "NIST SP 800-207",
@@ -231,7 +195,7 @@
       "target_lane": "dod",
       "relationship": "flows_down",
       "evidence_type": "inferred_flowdown",
-      "confidence": 0.78,
+      "confidence": 0.73,
       "direction": "downstream",
       "evidence": {
         "basis": "shared_family_tags_and_authority_rank",
@@ -253,7 +217,7 @@
       "target_lane": "echelon2",
       "relationship": "flows_down",
       "evidence_type": "inferred_flowdown",
-      "confidence": 0.78,
+      "confidence": 0.73,
       "direction": "downstream",
       "evidence": {
         "basis": "shared_family_tags_and_authority_rank",
@@ -315,7 +279,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-8510-01-risk-management-framework",
       "direction": "upstream",
-      "edge_count": 2
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",

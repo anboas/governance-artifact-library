@@ -5,16 +5,16 @@ Generated from `manifest.json` and `taxonomies/governance-item-universe.json`.
 ## Summary
 
 - Universe item types: 25
-- Covered item types: 11
-- Empty item types: 14
-- Artifacts in repo: 24
+- Covered item types: 9
+- Empty item types: 16
+- Artifacts in repo: 1158
 - Mirrored artifacts: 15
 - Source-known blocked artifacts: 9
 - Text extracted: 15
-- Analytics sidecars: 24
-- Analysis sidecars: 24
+- Analytics sidecars: 1158
+- Analysis sidecars: 1158
 - Structured summaries: 15
-- Version ledgers: 24
+- Version ledgers: 1158
 
 ## Authority Coverage
 
@@ -26,8 +26,8 @@ Generated from `manifest.json` and `taxonomies/governance-item-universe.json`.
 | 40 | executive_branch_guidance | 1/2 | 2 | 2 | 0 |
 | 50 | federal_regulation | 1/2 | 1 | 1 | 0 |
 | 60 | federal_standard | 1/2 | 2 | 2 | 0 |
-| 70 | defense_department_directive | 1/1 | 1 | 0 | 1 |
-| 72 | defense_department_instruction | 1/3 | 2 | 0 | 2 |
+| 70 | defense_department_directive | 0/1 | 0 | 0 | 0 |
+| 72 | defense_department_instruction | 0/3 | 0 | 0 | 0 |
 | 74 | defense_department_strategy | 1/1 | 1 | 0 | 1 |
 | 80 | service_secretariat_manual | 1/2 | 2 | 0 | 2 |
 | 82 | service_headquarters_instruction | 1/1 | 1 | 0 | 1 |
@@ -49,9 +49,9 @@ Generated from `manifest.json` and `taxonomies/governance-item-universe.json`.
 | 50 | FAR | analysis_ready | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | far-part-39-acquisition-of-it |
 | 60 | CISA Guidance / Model | not_started | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | none |
 | 60 | NIST Standard / Special Publication | analysis_ready | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | nist-sp-800-207-zero-trust-architecture<br>nist-sp-800-53-r5-security-privacy-controls |
-| 70 | DoW/DoD Directive | source_known_blocked | 1 | 0 | 0 | 1 | 1 | 1 | 0 | 1 | dodd-5000-01-defense-acquisition-system |
+| 70 | DoW/DoD Directive | not_started | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | none |
 | 72 | DoW/DoD DTM | not_started | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | none |
-| 72 | DoW/DoD Instruction | source_known_blocked | 2 | 0 | 0 | 2 | 2 | 2 | 0 | 2 | dodi-5000-87-software-acquisition-pathway<br>dodi-8510-01-risk-management-framework |
+| 72 | DoW/DoD Instruction | not_started | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | none |
 | 72 | DoW/DoD Manual | not_started | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | none |
 | 74 | DoW/DoD Strategy | source_known_blocked | 1 | 0 | 0 | 1 | 1 | 1 | 0 | 1 | dod-zero-trust-strategy |
 | 80 | SECNAV Instruction | not_started | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | none |
@@ -73,7 +73,7 @@ Generated from `manifest.json` and `taxonomies/governance-item-universe.json`.
 | cisa_pdf | 1 | 0 | 0 | 0 |
 | dod_cio_html | 1 | 0 | 0 | 0 |
 | dod_cio_pdf | 2 | 1 | 0 | 1 |
-| dod_issuances_pdf | 4 | 3 | 0 | 3 |
+| dod_issuances_pdf | 4 | 0 | 0 | 0 |
 | don_issuances_pdf | 3 | 3 | 0 | 3 |
 | federal_register_html | 2 | 0 | 0 | 0 |
 | fleet_command_html | 1 | 0 | 0 | 0 |

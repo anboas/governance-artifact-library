@@ -133,6 +133,8 @@ assert.equal(existsSync(join(ROOT, "docs", "reference-ingestion-queue.md")), tru
 assert.equal(existsSync(join(ROOT, "data", "source-acquisition-queue.json")), true, "source acquisition queue missing");
 assert.equal(existsSync(join(ROOT, "data", "source-acquisition-queue-summary.json")), true, "source acquisition queue summary missing");
 assert.equal(existsSync(join(ROOT, "docs", "source-acquisition-queue.md")), true, "source acquisition queue docs missing");
+assert.equal(existsSync(join(ROOT, "data", "dod-issuances-catalog.json")), true, "DoD issuances catalog missing");
+assert.equal(existsSync(join(ROOT, "docs", "dod-issuances-catalog.md")), true, "DoD issuances catalog docs missing");
 assert.equal(existsSync(join(ROOT, "schemas", "source-acquisition-packet.schema.json")), true, "source acquisition packet schema missing");
 assert.equal(existsSync(join(ROOT, "docs", "source-acquisition-packets.md")), true, "source acquisition packet docs missing");
 assert.equal(existsSync(join(ROOT, "data", "source-acquisition-packet-example.json")), true, "source acquisition packet example missing");
@@ -145,6 +147,7 @@ const ingestionQueue = readJson("data/reference-ingestion-queue.json");
 const ingestionQueueSummary = readJson("data/reference-ingestion-queue-summary.json");
 const sourceAcquisitionQueue = readJson("data/source-acquisition-queue.json");
 const sourceAcquisitionQueueSummary = readJson("data/source-acquisition-queue-summary.json");
+const dodIssuancesCatalog = readJson("data/dod-issuances-catalog.json");
 const sourceAcquisitionPacketExample = readJson("data/source-acquisition-packet-example.json");
 const sourceAcquisitionCapturePlanExample = readJson("data/source-acquisition-capture-plan.example.json");
 assert.equal(artifactIndex.artifact_count, manifest.artifact_count, "artifact index count should match manifest");
@@ -169,6 +172,13 @@ assert.ok(sourceAcquisitionQueueSummary.top_queue_items?.length <= 50, "source a
 assert.ok(sourceAcquisitionQueue.queue_items[0]?.queue_rank === 1, "source acquisition queue should be ranked");
 assert.ok(sourceAcquisitionQueue.queue_items.some(item => item.item_type === "source_recovery"), "source acquisition queue should include source recovery work");
 assert.ok(sourceAcquisitionQueue.queue_items.some(item => item.item_type === "governance_gap"), "source acquisition queue should include governance gap work");
+assert.ok(dodIssuancesCatalog.summary?.dodi_count >= 800, "DoD issuances catalog should exhaustively cover DoDI page records");
+assert.ok(dodIssuancesCatalog.summary?.dodd_count >= 250, "DoD issuances catalog should exhaustively cover DoDD page records");
+assert.equal(
+  manifest.artifacts.filter(entry => ["dod_instruction", "dod_directive"].includes(entry.family)).length,
+  dodIssuancesCatalog.summary.total_count,
+  "manifest should include every DoDI/DoDD catalog row as a policy artifact",
+);
 assert.equal(sourceAcquisitionPacketExample.packetVersion, "policy-source-acquisition-packet-v1", "source acquisition packet example should use the product packet contract");
 assert.ok(sourceAcquisitionPacketExample.items?.[0]?.corpusTargets?.length >= 1, "source acquisition packet example should include corpus targets");
 assert.equal(sourceAcquisitionCapturePlanExample.planVersion, "source-acquisition-capture-plan-v1", "source acquisition capture plan example should use the corpus plan contract");
