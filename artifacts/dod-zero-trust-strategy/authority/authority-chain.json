@@ -1,0 +1,401 @@
+{
+  "id": "dod-zero-trust-strategy",
+  "generated_at": "2026-06-13T13:55:00.000Z",
+  "authority_chain_version": "governance-authority-chain-v1",
+  "authority_chain_path": "artifacts/dod-zero-trust-strategy/authority/authority-chain.json",
+  "source_artifact": {
+    "id": "dod-zero-trust-strategy",
+    "label": "DoD Zero Trust Strategy",
+    "title": "Department of Defense Zero Trust Strategy",
+    "artifact_type": "Strategy",
+    "lane": "dod",
+    "lane_label": "DoD",
+    "hierarchy_rank": 74,
+    "family": "zero_trust",
+    "issuing_authority": "DoW/DoD",
+    "source_system": "DoD CIO",
+    "mirror_status": "blocked",
+    "parser_status": "blocked",
+    "status": "current"
+  },
+  "lanes": [
+    {
+      "id": "law",
+      "label": "Law",
+      "meta": "Public law / NDAA"
+    },
+    {
+      "id": "statute",
+      "label": "Statute",
+      "meta": "U.S. Code / statutory note"
+    },
+    {
+      "id": "executive",
+      "label": "Executive",
+      "meta": "Executive order / presidential directive"
+    },
+    {
+      "id": "govwide",
+      "label": "Gov-wide",
+      "meta": "OMB / NIST / CFR / FAR"
+    },
+    {
+      "id": "dod",
+      "label": "DoD",
+      "meta": "DoDD / DoDI / DoDM / strategy"
+    },
+    {
+      "id": "service",
+      "label": "Service",
+      "meta": "SECNAV / OPNAV / service pubs"
+    },
+    {
+      "id": "echelon2",
+      "label": "Echelon 2",
+      "meta": "component / program implementation"
+    },
+    {
+      "id": "echelon4",
+      "label": "Echelon 3-4",
+      "meta": "operational guidance / SOP / evidence"
+    }
+  ],
+  "summary": {
+    "upstream_edge_count": 4,
+    "downstream_edge_count": 4,
+    "catalogued_node_count": 9,
+    "uncatalogued_gap_count": 0,
+    "evidence_backed_edge_count": 0,
+    "inferred_edge_count": 8,
+    "authority_path_status": "inferred_review_needed",
+    "implementation_path_status": "has_downstream_trace"
+  },
+  "nodes": [
+    {
+      "id": "nist-sp-800-207-zero-trust-architecture",
+      "label": "NIST SP 800-207",
+      "title": "NIST SP 800-207: Zero Trust Architecture",
+      "artifact_type": "Standard",
+      "lane": "govwide",
+      "lane_label": "Gov-wide",
+      "hierarchy_rank": 60,
+      "family": "zero_trust",
+      "issuing_authority": "NIST",
+      "source_system": "NIST NVL Publications",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodd-5000-01-defense-acquisition-system",
+      "label": "DoDD 5000.01",
+      "title": "DoD Directive 5000.01: The Defense Acquisition System",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "acquisition",
+      "issuing_authority": "DoW/DoD",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5000-87-software-acquisition-pathway",
+      "label": "DoDI 5000.87",
+      "title": "DoD Instruction 5000.87: Operation of the Software Acquisition Pathway",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "software_acquisition",
+      "issuing_authority": "DoW/DoD",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-8510-01-risk-management-framework",
+      "label": "DoDI 8510.01",
+      "title": "DoD Instruction 8510.01: Risk Management Framework for DoD Systems",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "risk_management",
+      "issuing_authority": "DoW/DoD",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
+      "id": "dod-zero-trust-strategy",
+      "label": "DoD Zero Trust Strategy",
+      "title": "Department of Defense Zero Trust Strategy",
+      "artifact_type": "Strategy",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 74,
+      "family": "zero_trust",
+      "issuing_authority": "DoW/DoD",
+      "source_system": "DoD CIO",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "current"
+    },
+    {
+      "id": "secnav-m-5239-3-don-cybersecurity",
+      "label": "SECNAV M-5239.3",
+      "title": "SECNAV M-5239.3: Department of the Navy Cybersecurity Program",
+      "artifact_type": "SECNAV Manual",
+      "lane": "service",
+      "lane_label": "Service",
+      "hierarchy_rank": 80,
+      "family": "cybersecurity",
+      "issuing_authority": "SECNAV",
+      "source_system": "Department of the Navy Issuances",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
+      "id": "opnavinst-5239-1e-navy-cybersecurity",
+      "label": "OPNAVINST 5239.1E",
+      "title": "OPNAVINST 5239.1E: U.S. Navy Cybersecurity Program",
+      "artifact_type": "OPNAV Instruction",
+      "lane": "service",
+      "lane_label": "Service",
+      "hierarchy_rank": 82,
+      "family": "cybersecurity",
+      "issuing_authority": "OPNAV",
+      "source_system": "Department of the Navy Issuances",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
+      "id": "cyber-mil-cyber-awareness-challenge",
+      "label": "Cyber Awareness Challenge",
+      "title": "DoD Cyber Awareness Challenge",
+      "artifact_type": "Implementation Guidance",
+      "lane": "echelon2",
+      "lane_label": "Echelon 2",
+      "hierarchy_rank": 85,
+      "family": "cyber_training",
+      "issuing_authority": "DoW/DoD",
+      "source_system": "DoD Cyber Exchange",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
+      "id": "navadmin-214-24-fy2025-cybersecurity-awareness",
+      "label": "NAVADMIN 214/24",
+      "title": "NAVADMIN 214/24: Fiscal Year 2025 Cybersecurity Awareness Challenge",
+      "artifact_type": "NAVADMIN",
+      "lane": "echelon4",
+      "lane_label": "Echelon 3-4",
+      "hierarchy_rank": 90,
+      "family": "cyber_training",
+      "issuing_authority": "CNO",
+      "source_system": "MyNavyHR",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    }
+  ],
+  "upstream_edges": [
+    {
+      "id": "dodd-5000-01-defense-acquisition-system->dod-zero-trust-strategy:flows_down:inferred_flowdown",
+      "source_artifact_id": "dodd-5000-01-defense-acquisition-system",
+      "source_label": "DoDD 5000.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dod-zero-trust-strategy",
+      "target_label": "DoD Zero Trust Strategy",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.73,
+      "direction": "upstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "dod",
+          "dow"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "dodi-5000-87-software-acquisition-pathway->dod-zero-trust-strategy:flows_down:inferred_flowdown",
+      "source_artifact_id": "dodi-5000-87-software-acquisition-pathway",
+      "source_label": "DoDI 5000.87",
+      "source_lane": "dod",
+      "target_artifact_id": "dod-zero-trust-strategy",
+      "target_label": "DoD Zero Trust Strategy",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.73,
+      "direction": "upstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "dod",
+          "dow"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "dodi-8510-01-risk-management-framework->dod-zero-trust-strategy:flows_down:inferred_flowdown",
+      "source_artifact_id": "dodi-8510-01-risk-management-framework",
+      "source_label": "DoDI 8510.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dod-zero-trust-strategy",
+      "target_label": "DoD Zero Trust Strategy",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.78,
+      "direction": "upstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "dod",
+          "dow",
+          "cybersecurity"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "nist-sp-800-207-zero-trust-architecture->dod-zero-trust-strategy:implements:inferred_flowdown",
+      "source_artifact_id": "nist-sp-800-207-zero-trust-architecture",
+      "source_label": "NIST SP 800-207",
+      "source_lane": "govwide",
+      "target_artifact_id": "dod-zero-trust-strategy",
+      "target_label": "DoD Zero Trust Strategy",
+      "target_lane": "dod",
+      "relationship": "implements",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.78,
+      "direction": "upstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "zero_trust",
+          "zero-trust",
+          "cybersecurity"
+        ],
+        "shared_family": "zero_trust"
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dod-zero-trust-strategy->cyber-mil-cyber-awareness-challenge:flows_down:inferred_flowdown",
+      "source_artifact_id": "dod-zero-trust-strategy",
+      "source_label": "DoD Zero Trust Strategy",
+      "source_lane": "dod",
+      "target_artifact_id": "cyber-mil-cyber-awareness-challenge",
+      "target_label": "Cyber Awareness Challenge",
+      "target_lane": "echelon2",
+      "relationship": "flows_down",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.78,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "dod",
+          "dow",
+          "cybersecurity"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "dod-zero-trust-strategy->navadmin-214-24-fy2025-cybersecurity-awareness:verifies_or_localizes:inferred_flowdown",
+      "source_artifact_id": "dod-zero-trust-strategy",
+      "source_label": "DoD Zero Trust Strategy",
+      "source_lane": "dod",
+      "target_artifact_id": "navadmin-214-24-fy2025-cybersecurity-awareness",
+      "target_label": "NAVADMIN 214/24",
+      "target_lane": "echelon4",
+      "relationship": "verifies_or_localizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.59,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "cybersecurity"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "dod-zero-trust-strategy->opnavinst-5239-1e-navy-cybersecurity:service_adopts:inferred_flowdown",
+      "source_artifact_id": "dod-zero-trust-strategy",
+      "source_label": "DoD Zero Trust Strategy",
+      "source_lane": "dod",
+      "target_artifact_id": "opnavinst-5239-1e-navy-cybersecurity",
+      "target_label": "OPNAVINST 5239.1E",
+      "target_lane": "service",
+      "relationship": "service_adopts",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.66,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "cybersecurity",
+          "cybersecurity"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "dod-zero-trust-strategy->secnav-m-5239-3-don-cybersecurity:service_adopts:inferred_flowdown",
+      "source_artifact_id": "dod-zero-trust-strategy",
+      "source_label": "DoD Zero Trust Strategy",
+      "source_lane": "dod",
+      "target_artifact_id": "secnav-m-5239-3-don-cybersecurity",
+      "target_label": "SECNAV M-5239.3",
+      "target_lane": "service",
+      "relationship": "service_adopts",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.66,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "cybersecurity",
+          "cybersecurity"
+        ],
+        "shared_family": ""
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [],
+  "trace_playbooks": [
+    {
+      "id": "trace-upstream",
+      "label": "Trace upstream to controlling authority",
+      "start_artifact_id": "dod-zero-trust-strategy",
+      "direction": "upstream",
+      "edge_count": 4
+    },
+    {
+      "id": "trace-downstream",
+      "label": "Trace downstream to implementation and evidence",
+      "start_artifact_id": "dod-zero-trust-strategy",
+      "direction": "downstream",
+      "edge_count": 4
+    }
+  ]
+}

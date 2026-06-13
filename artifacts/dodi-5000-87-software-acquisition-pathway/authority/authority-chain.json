@@ -1,0 +1,219 @@
+{
+  "id": "dodi-5000-87-software-acquisition-pathway",
+  "generated_at": "2026-06-13T13:55:00.000Z",
+  "authority_chain_version": "governance-authority-chain-v1",
+  "authority_chain_path": "artifacts/dodi-5000-87-software-acquisition-pathway/authority/authority-chain.json",
+  "source_artifact": {
+    "id": "dodi-5000-87-software-acquisition-pathway",
+    "label": "DoDI 5000.87",
+    "title": "DoD Instruction 5000.87: Operation of the Software Acquisition Pathway",
+    "artifact_type": "DoD Instruction",
+    "lane": "dod",
+    "lane_label": "DoD",
+    "hierarchy_rank": 72,
+    "family": "software_acquisition",
+    "issuing_authority": "DoW/DoD",
+    "source_system": "DoW/DoD Issuances",
+    "mirror_status": "blocked",
+    "parser_status": "blocked",
+    "status": "current"
+  },
+  "lanes": [
+    {
+      "id": "law",
+      "label": "Law",
+      "meta": "Public law / NDAA"
+    },
+    {
+      "id": "statute",
+      "label": "Statute",
+      "meta": "U.S. Code / statutory note"
+    },
+    {
+      "id": "executive",
+      "label": "Executive",
+      "meta": "Executive order / presidential directive"
+    },
+    {
+      "id": "govwide",
+      "label": "Gov-wide",
+      "meta": "OMB / NIST / CFR / FAR"
+    },
+    {
+      "id": "dod",
+      "label": "DoD",
+      "meta": "DoDD / DoDI / DoDM / strategy"
+    },
+    {
+      "id": "service",
+      "label": "Service",
+      "meta": "SECNAV / OPNAV / service pubs"
+    },
+    {
+      "id": "echelon2",
+      "label": "Echelon 2",
+      "meta": "component / program implementation"
+    },
+    {
+      "id": "echelon4",
+      "label": "Echelon 3-4",
+      "meta": "operational guidance / SOP / evidence"
+    }
+  ],
+  "summary": {
+    "upstream_edge_count": 1,
+    "downstream_edge_count": 2,
+    "catalogued_node_count": 4,
+    "uncatalogued_gap_count": 0,
+    "evidence_backed_edge_count": 0,
+    "inferred_edge_count": 3,
+    "authority_path_status": "inferred_review_needed",
+    "implementation_path_status": "has_downstream_trace"
+  },
+  "nodes": [
+    {
+      "id": "dodd-5000-01-defense-acquisition-system",
+      "label": "DoDD 5000.01",
+      "title": "DoD Directive 5000.01: The Defense Acquisition System",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "acquisition",
+      "issuing_authority": "DoW/DoD",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5000-87-software-acquisition-pathway",
+      "label": "DoDI 5000.87",
+      "title": "DoD Instruction 5000.87: Operation of the Software Acquisition Pathway",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "software_acquisition",
+      "issuing_authority": "DoW/DoD",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "current"
+    },
+    {
+      "id": "dod-zero-trust-strategy",
+      "label": "DoD Zero Trust Strategy",
+      "title": "Department of Defense Zero Trust Strategy",
+      "artifact_type": "Strategy",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 74,
+      "family": "zero_trust",
+      "issuing_authority": "DoW/DoD",
+      "source_system": "DoD CIO",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
+      "id": "cyber-mil-cyber-awareness-challenge",
+      "label": "Cyber Awareness Challenge",
+      "title": "DoD Cyber Awareness Challenge",
+      "artifact_type": "Implementation Guidance",
+      "lane": "echelon2",
+      "lane_label": "Echelon 2",
+      "hierarchy_rank": 85,
+      "family": "cyber_training",
+      "issuing_authority": "DoW/DoD",
+      "source_system": "DoD Cyber Exchange",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    }
+  ],
+  "upstream_edges": [
+    {
+      "id": "dodd-5000-01-defense-acquisition-system->dodi-5000-87-software-acquisition-pathway:flows_down:inferred_flowdown",
+      "source_artifact_id": "dodd-5000-01-defense-acquisition-system",
+      "source_label": "DoDD 5000.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5000-87-software-acquisition-pathway",
+      "target_label": "DoDI 5000.87",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.73,
+      "direction": "upstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "dod",
+          "dow"
+        ],
+        "shared_family": ""
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-5000-87-software-acquisition-pathway->dod-zero-trust-strategy:flows_down:inferred_flowdown",
+      "source_artifact_id": "dodi-5000-87-software-acquisition-pathway",
+      "source_label": "DoDI 5000.87",
+      "source_lane": "dod",
+      "target_artifact_id": "dod-zero-trust-strategy",
+      "target_label": "DoD Zero Trust Strategy",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.73,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "dod",
+          "dow"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "dodi-5000-87-software-acquisition-pathway->cyber-mil-cyber-awareness-challenge:flows_down:inferred_flowdown",
+      "source_artifact_id": "dodi-5000-87-software-acquisition-pathway",
+      "source_label": "DoDI 5000.87",
+      "source_lane": "dod",
+      "target_artifact_id": "cyber-mil-cyber-awareness-challenge",
+      "target_label": "Cyber Awareness Challenge",
+      "target_lane": "echelon2",
+      "relationship": "flows_down",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.73,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "dod",
+          "dow"
+        ],
+        "shared_family": ""
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [],
+  "trace_playbooks": [
+    {
+      "id": "trace-upstream",
+      "label": "Trace upstream to controlling authority",
+      "start_artifact_id": "dodi-5000-87-software-acquisition-pathway",
+      "direction": "upstream",
+      "edge_count": 1
+    },
+    {
+      "id": "trace-downstream",
+      "label": "Trace downstream to implementation and evidence",
+      "start_artifact_id": "dodi-5000-87-software-acquisition-pathway",
+      "direction": "downstream",
+      "edge_count": 2
+    }
+  ]
+}

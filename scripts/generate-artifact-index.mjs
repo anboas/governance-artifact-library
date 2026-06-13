@@ -37,6 +37,7 @@ const artifacts = manifest.artifacts.map(entry => {
     extraction_path: artifact.extraction_path,
     claims_path: artifact.claims_path,
     reference_resolution_path: artifact.reference_resolution_path,
+    authority_chain_path: artifact.authority_chain_path,
     pipeline_state: artifact.pipeline_state,
     mirror_status: artifact.mirror_status,
     parser_status: artifact.parser_status,

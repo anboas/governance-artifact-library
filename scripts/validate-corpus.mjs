@@ -44,6 +44,7 @@ for (const entry of manifest.artifacts) {
   assertSidecar(artifact, "extraction_path", "entity/reference/concept extraction sidecar");
   assertSidecar(artifact, "claims_path", "claims sidecar");
   assertSidecar(artifact, "reference_resolution_path", "reference resolution sidecar");
+  assertSidecar(artifact, "authority_chain_path", "authority chain sidecar");
   assertSidecar(artifact, "version_index_path", "version index");
 
   const metadata = readJson(artifact.metadata_path);
@@ -52,6 +53,7 @@ for (const entry of manifest.artifacts) {
   const extractions = readJson(artifact.extraction_path);
   const claims = readJson(artifact.claims_path);
   const referenceResolution = readJson(artifact.reference_resolution_path);
+  const authorityChain = readJson(artifact.authority_chain_path);
   const versions = readJson(artifact.version_index_path);
   assert.equal(metadata.id, artifact.id, `${entry.id} metadata id mismatch`);
   assert.equal(analytics.id, artifact.id, `${entry.id} analytics id mismatch`);
@@ -59,12 +61,14 @@ for (const entry of manifest.artifacts) {
   assert.equal(extractions.id, artifact.id, `${entry.id} extraction id mismatch`);
   assert.equal(claims.id, artifact.id, `${entry.id} claims id mismatch`);
   assert.equal(referenceResolution.id, artifact.id, `${entry.id} reference resolution id mismatch`);
+  assert.equal(authorityChain.id, artifact.id, `${entry.id} authority chain id mismatch`);
   assert.equal(versions.id, artifact.id, `${entry.id} version index id mismatch`);
   assert.equal(Array.isArray(versions.versions), true, `${entry.id} versions must be an array`);
   assert.ok(artifact.analytic_lanes?.includes("obligation_extraction"), `${entry.id} should declare analytic lanes`);
   assert.ok(artifact.analytic_lanes?.includes("entity_reference_concept_extraction"), `${entry.id} should declare entity/reference/concept extraction lane`);
   assert.ok(artifact.analytic_lanes?.includes("claims_extraction"), `${entry.id} should declare claims extraction lane`);
   assert.ok(artifact.analytic_lanes?.includes("reference_resolution"), `${entry.id} should declare reference resolution lane`);
+  assert.ok(artifact.analytic_lanes?.includes("authority_chain"), `${entry.id} should declare authority chain lane`);
   assert.equal(Array.isArray(extractions.entities), true, `${entry.id} extraction entities must be an array`);
   assert.equal(Array.isArray(extractions.references), true, `${entry.id} extraction references must be an array`);
   assert.equal(Array.isArray(extractions.concepts), true, `${entry.id} extraction concepts must be an array`);
@@ -72,6 +76,10 @@ for (const entry of manifest.artifacts) {
   assert.equal(Array.isArray(claims.claims), true, `${entry.id} claims must be an array`);
   assert.equal(Array.isArray(referenceResolution.resolved_references), true, `${entry.id} resolved references must be an array`);
   assert.equal(Array.isArray(referenceResolution.uncatalogued_references), true, `${entry.id} uncatalogued references must be an array`);
+  assert.equal(Array.isArray(authorityChain.nodes), true, `${entry.id} authority chain nodes must be an array`);
+  assert.equal(Array.isArray(authorityChain.upstream_edges), true, `${entry.id} authority chain upstream_edges must be an array`);
+  assert.equal(Array.isArray(authorityChain.downstream_edges), true, `${entry.id} authority chain downstream_edges must be an array`);
+  assert.ok(authorityChain.summary?.authority_path_status, `${entry.id} authority chain needs path status`);
 
   if (artifact.mirror_status === "mirrored") {
     mirrored += 1;
@@ -117,17 +125,24 @@ assert.equal(existsSync(join(ROOT, "taxonomies", "governance-item-universe.json"
 assert.equal(existsSync(join(ROOT, "data", "artifact-index.json")), true, "artifact index missing");
 assert.equal(existsSync(join(ROOT, "data", "reference-coverage-map.json")), true, "reference coverage map missing");
 assert.equal(existsSync(join(ROOT, "docs", "reference-coverage-map.md")), true, "reference coverage docs missing");
+assert.equal(existsSync(join(ROOT, "data", "authority-chain-map.json")), true, "authority chain map missing");
+assert.equal(existsSync(join(ROOT, "docs", "authority-chain-map.md")), true, "authority chain docs missing");
 assert.equal(existsSync(join(ROOT, "data", "reference-ingestion-queue.json")), true, "reference ingestion queue missing");
 assert.equal(existsSync(join(ROOT, "data", "reference-ingestion-queue-summary.json")), true, "reference ingestion queue summary missing");
 assert.equal(existsSync(join(ROOT, "docs", "reference-ingestion-queue.md")), true, "reference ingestion queue docs missing");
 
 const referenceCoverage = readJson("data/reference-coverage-map.json");
+const authorityChainMap = readJson("data/authority-chain-map.json");
 const artifactIndex = readJson("data/artifact-index.json");
 const ingestionQueue = readJson("data/reference-ingestion-queue.json");
 const ingestionQueueSummary = readJson("data/reference-ingestion-queue-summary.json");
 assert.equal(artifactIndex.artifact_count, manifest.artifact_count, "artifact index count should match manifest");
 assert.equal(artifactIndex.artifacts?.length, manifest.artifact_count, "artifact index artifacts should match manifest");
 assert.ok(artifactIndex.artifacts.every(artifact => artifact.id && artifact.manifest_path), "artifact index rows need ids and manifest paths");
+assert.equal(authorityChainMap.artifact_count, manifest.artifact_count, "authority chain map count should match manifest");
+assert.equal(Array.isArray(authorityChainMap.nodes), true, "authority chain map nodes must be an array");
+assert.equal(Array.isArray(authorityChainMap.edges), true, "authority chain map edges must be an array");
+assert.ok(authorityChainMap.summary?.edge_count >= authorityChainMap.summary?.resolved_reference_edge_count, "authority chain summary should count edges");
 assert.equal(Array.isArray(ingestionQueue.queue_items), true, "reference ingestion queue items must be an array");
 assert.equal(ingestionQueue.summary?.queue_item_count, referenceCoverage.uncatalogued_references.length, "reference ingestion queue should cover every uncatalogued reference");
 assert.equal(ingestionQueue.queue_items.length, referenceCoverage.uncatalogued_references.length, "reference ingestion queue item count mismatch");
