@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,13 +61,13 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 2,
     "downstream_edge_count": 4,
-    "catalogued_node_count": 5,
+    "catalogued_node_count": 7,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 2,
     "inferred_edge_count": 4,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
@@ -83,7 +83,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     },
     {
@@ -98,7 +98,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -113,7 +113,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -128,7 +128,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -143,11 +143,87 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-3000-12",
+      "label": "DoDI 3000.12",
+      "title": "DoDI 3000.12: Management of U.S. Global Defense Posture (GDP)",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5015-02",
+      "label": "DoDI 5015.02",
+      "title": "DoDI 5015.02: DoD Records Management Program",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
       "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-3000-12->dodd-2010-05:references_upstream:resolved_reference",
+      "source_artifact_id": "dodi-3000-12",
+      "source_label": "DoDI 3000.12",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-2010-05",
+      "target_label": "DoDD 2010.05",
+      "target_lane": "dod",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:3000.12",
+        "label": "DoDI 3000.12",
+        "first_line": 349,
+        "lines_sample": [
+          349,
+          387
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "dodi-5015-02->dodd-2010-05:references_upstream:resolved_reference",
+      "source_artifact_id": "dodi-5015-02",
+      "source_label": "DoDI 5015.02",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-2010-05",
+      "target_label": "DoDD 2010.05",
+      "target_lane": "dod",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5015.02",
+        "label": "DoDI 5015.02",
+        "first_line": 558,
+        "lines_sample": [
+          558
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "dodd-2010-05->dodi-1000-04:flows_down:inferred_flowdown",
@@ -245,7 +321,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodd-2010-05",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",

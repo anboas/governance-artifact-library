@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 1,
-    "downstream_edge_count": 2,
-    "catalogued_node_count": 3,
+    "downstream_edge_count": 3,
+    "catalogued_node_count": 4,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 2,
+    "evidence_backed_edge_count": 3,
     "inferred_edge_count": 1,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -429,6 +429,21 @@
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "catalogued"
+    },
+    {
+      "id": "dodd-5105-89",
+      "label": "DoDD 5105.89",
+      "title": "DoDD 5105.89: Chief Digital and Artificial Intelligence Officer",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [
@@ -457,6 +472,28 @@
     }
   ],
   "downstream_edges": [
+    {
+      "id": "eo-14110-ai->dodd-5105-89:directs:resolved_reference",
+      "source_artifact_id": "eo-14110-ai",
+      "source_label": "EO 14110",
+      "source_lane": "executive",
+      "target_artifact_id": "dodd-5105-89",
+      "target_label": "DoDD 5105.89",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:14110",
+        "label": "Executive Order 14110",
+        "first_line": 519,
+        "lines_sample": [
+          519
+        ],
+        "count": 1
+      }
+    },
     {
       "id": "eo-14110-ai->omb-m-24-10-ai-governance:directs:resolved_reference",
       "source_artifact_id": "eo-14110-ai",
@@ -841,7 +878,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "eo-14110-ai",
       "direction": "downstream",
-      "edge_count": 2
+      "edge_count": 3
     }
   ]
 }

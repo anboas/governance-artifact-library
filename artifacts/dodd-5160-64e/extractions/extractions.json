@@ -2,19 +2,835 @@
   "id": "dodd-5160-64e",
   "generated_at": "2026-06-12T22:50:00.000Z",
   "extractor_version": "governance-extractor-rules-v1",
-  "extraction_status": "source_text_unavailable",
-  "source_text_path": null,
+  "extraction_status": "parsed",
+  "source_text_path": "artifacts/dodd-5160-64e/text/extracted.txt",
   "extraction_path": "artifacts/dodd-5160-64e/extractions/extractions.json",
   "summary": {
-    "entity_count": 0,
-    "reference_count": 0,
-    "concept_count": 0,
-    "annotated_line_count": 0,
-    "total_line_count": 0
+    "entity_count": 4,
+    "reference_count": 2,
+    "concept_count": 3,
+    "annotated_line_count": 50,
+    "total_line_count": 194
   },
-  "entities": [],
-  "references": [],
-  "concepts": [],
-  "line_annotations": [],
-  "blocked_reason": "No extracted_text_path is currently mirrored for this source-known artifact."
+  "entities": [
+    {
+      "id": "department-of-defense",
+      "type": "department",
+      "label": "Department of Defense",
+      "aliases": [
+        "Department of Defense",
+        "DoD",
+        "Department of War",
+        "DoW"
+      ],
+      "count": 27,
+      "first_line": 1,
+      "lines_sample": [
+        1,
+        8,
+        10,
+        12,
+        13,
+        14,
+        22,
+        24,
+        29,
+        30,
+        31,
+        38
+      ]
+    },
+    {
+      "id": "air-force",
+      "type": "service",
+      "label": "Department of the Air Force",
+      "aliases": [
+        "Air Force",
+        "Department of the Air Force"
+      ],
+      "count": 7,
+      "first_line": 24,
+      "lines_sample": [
+        24,
+        38,
+        43,
+        75,
+        99,
+        161,
+        165
+      ]
+    },
+    {
+      "id": "secretary-of-defense",
+      "type": "role",
+      "label": "Secretary of Defense",
+      "aliases": [
+        "Secretary of Defense",
+        "SecDef"
+      ],
+      "count": 3,
+      "first_line": 27,
+      "lines_sample": [
+        27,
+        62,
+        90
+      ]
+    },
+    {
+      "id": "joint-staff",
+      "type": "joint",
+      "label": "Joint Staff",
+      "aliases": [
+        "Joint Staff",
+        "Chairman of the Joint Chiefs of Staff"
+      ],
+      "count": 1,
+      "first_line": 28,
+      "lines_sample": [
+        28
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "section:section-1535",
+      "type": "Section",
+      "label": "Section 1535",
+      "reference_family": "section",
+      "count": 2,
+      "first_line": 15,
+      "lines_sample": [
+        15,
+        176
+      ]
+    },
+    {
+      "id": "dodd:dodd-5160-64",
+      "type": "DoD Directive",
+      "label": "DoDD 5160.64",
+      "reference_family": "dodd",
+      "count": 1,
+      "first_line": 34,
+      "lines_sample": [
+        34
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "governance",
+      "type": "governance",
+      "label": "Governance",
+      "aliases": [
+        "governance",
+        "oversight",
+        "policy"
+      ],
+      "category": "governance",
+      "count": 5,
+      "first_line": 22,
+      "lines_sample": [
+        22,
+        49,
+        51,
+        59,
+        63
+      ]
+    },
+    {
+      "id": "acquisition",
+      "type": "acquisition",
+      "label": "Acquisition",
+      "aliases": [
+        "acquisition",
+        "procurement",
+        "contracting"
+      ],
+      "category": "acquisition",
+      "count": 2,
+      "first_line": 105,
+      "lines_sample": [
+        105,
+        178
+      ]
+    },
+    {
+      "id": "reporting",
+      "type": "oversight",
+      "label": "Reporting",
+      "aliases": [
+        "report",
+        "reporting",
+        "submit to Congress"
+      ],
+      "category": "oversight",
+      "count": 2,
+      "first_line": 14,
+      "lines_sample": [
+        14,
+        83
+      ]
+    }
+  ],
+  "line_annotations": [
+    {
+      "line": 1,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 8,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 10,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 12,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 13,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 14,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Reporting",
+          "id": "reporting"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 15,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "Section",
+          "label": "Section 1535",
+          "id": "section:section-1535"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 22,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 24,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "entity",
+          "type": "service",
+          "label": "Department of the Air Force",
+          "id": "air-force"
+        }
+      ]
+    },
+    {
+      "line": 27,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 28,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "joint",
+          "label": "Joint Staff",
+          "id": "joint-staff"
+        }
+      ]
+    },
+    {
+      "line": 29,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 30,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 31,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 34,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Directive",
+          "label": "DoDD 5160.64",
+          "id": "dodd:dodd-5160-64"
+        }
+      ]
+    },
+    {
+      "line": 38,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "entity",
+          "type": "service",
+          "label": "Department of the Air Force",
+          "id": "air-force"
+        }
+      ]
+    },
+    {
+      "line": 39,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 43,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "entity",
+          "type": "service",
+          "label": "Department of the Air Force",
+          "id": "air-force"
+        }
+      ]
+    },
+    {
+      "line": 44,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 49,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        }
+      ]
+    },
+    {
+      "line": 51,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        }
+      ]
+    },
+    {
+      "line": 57,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 59,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        }
+      ]
+    },
+    {
+      "line": 62,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 63,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        }
+      ]
+    },
+    {
+      "line": 67,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 75,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "service",
+          "label": "Department of the Air Force",
+          "id": "air-force"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 83,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Reporting",
+          "id": "reporting"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 84,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 90,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 99,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "service",
+          "label": "Department of the Air Force",
+          "id": "air-force"
+        }
+      ]
+    },
+    {
+      "line": 100,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 105,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "acquisition",
+          "label": "Acquisition",
+          "id": "acquisition"
+        }
+      ]
+    },
+    {
+      "line": 128,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 130,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 136,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 146,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 148,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 151,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 153,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 155,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 161,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "service",
+          "label": "Department of the Air Force",
+          "id": "air-force"
+        }
+      ]
+    },
+    {
+      "line": 165,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "service",
+          "label": "Department of the Air Force",
+          "id": "air-force"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 170,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 174,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 175,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 176,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "Section",
+          "label": "Section 1535",
+          "id": "section:section-1535"
+        }
+      ]
+    },
+    {
+      "line": 178,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "acquisition",
+          "label": "Acquisition",
+          "id": "acquisition"
+        }
+      ]
+    },
+    {
+      "line": 179,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 191,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    }
+  ],
+  "blocked_reason": null
 }

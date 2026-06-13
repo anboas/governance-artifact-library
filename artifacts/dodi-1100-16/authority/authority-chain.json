@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -64,13 +64,67 @@
     "upstream_edge_count": 0,
     "downstream_edge_count": 0,
     "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
+    "uncatalogued_gap_count": 3,
     "evidence_backed_edge_count": 0,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:100-430",
+      "label": "Public Law 100-430",
+      "title": "Public Law 100-430",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:100-430",
+      "count": 2,
+      "lines_sample": [
+        244,
+        862
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:90-284",
+      "label": "Public Law 90-284",
+      "title": "Public Law 90-284",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:90-284",
+      "count": 1,
+      "lines_sample": [
+        17
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:42:1982",
+      "label": "42 U.S.C. 1982",
+      "title": "42 U.S.C. 1982",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:42:1982",
+      "count": 3,
+      "lines_sample": [
+        98,
+        137,
+        173
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
     {
       "id": "dodi-1100-16",
       "label": "DoDI 1100.16",
@@ -83,13 +137,68 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     }
   ],
   "upstream_edges": [],
   "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:usc:42:1982",
+      "label": "42 U.S.C. 1982",
+      "title": "42 U.S.C. 1982",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:42:1982",
+      "count": 3,
+      "lines_sample": [
+        98,
+        137,
+        173
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:100-430",
+      "label": "Public Law 100-430",
+      "title": "Public Law 100-430",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:100-430",
+      "count": 2,
+      "lines_sample": [
+        244,
+        862
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:90-284",
+      "label": "Public Law 90-284",
+      "title": "Public Law 90-284",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:90-284",
+      "count": 1,
+      "lines_sample": [
+        17
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",

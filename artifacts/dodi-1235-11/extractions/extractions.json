@@ -2,19 +2,1484 @@
   "id": "dodi-1235-11",
   "generated_at": "2026-06-12T22:50:00.000Z",
   "extractor_version": "governance-extractor-rules-v1",
-  "extraction_status": "source_text_unavailable",
-  "source_text_path": null,
+  "extraction_status": "parsed",
+  "source_text_path": "artifacts/dodi-1235-11/text/extracted.txt",
   "extraction_path": "artifacts/dodi-1235-11/extractions/extractions.json",
   "summary": {
-    "entity_count": 0,
-    "reference_count": 0,
-    "concept_count": 0,
-    "annotated_line_count": 0,
-    "total_line_count": 0
+    "entity_count": 3,
+    "reference_count": 6,
+    "concept_count": 5,
+    "annotated_line_count": 96,
+    "total_line_count": 427
   },
-  "entities": [],
-  "references": [],
-  "concepts": [],
-  "line_annotations": [],
-  "blocked_reason": "No extracted_text_path is currently mirrored for this source-known artifact."
+  "entities": [
+    {
+      "id": "department-of-defense",
+      "type": "department",
+      "label": "Department of Defense",
+      "aliases": [
+        "Department of Defense",
+        "DoD",
+        "Department of War",
+        "DoW"
+      ],
+      "count": 33,
+      "first_line": 1,
+      "lines_sample": [
+        1,
+        14,
+        15,
+        24,
+        25,
+        26,
+        29,
+        32,
+        52,
+        56,
+        90,
+        118
+      ]
+    },
+    {
+      "id": "secretary-of-defense",
+      "type": "role",
+      "label": "Secretary of Defense",
+      "aliases": [
+        "Secretary of Defense",
+        "SecDef"
+      ],
+      "count": 15,
+      "first_line": 84,
+      "lines_sample": [
+        84,
+        86,
+        88,
+        118,
+        158,
+        167,
+        190,
+        197,
+        276,
+        282,
+        333,
+        356
+      ]
+    },
+    {
+      "id": "joint-staff",
+      "type": "joint",
+      "label": "Joint Staff",
+      "aliases": [
+        "Joint Staff",
+        "Chairman of the Joint Chiefs of Staff"
+      ],
+      "count": 3,
+      "first_line": 22,
+      "lines_sample": [
+        22,
+        23,
+        362
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "dodi:dodi-1235-11",
+      "type": "DoD Instruction",
+      "label": "DoDI 1235.11",
+      "reference_family": "dodi",
+      "count": 9,
+      "first_line": 45,
+      "lines_sample": [
+        45,
+        74,
+        110,
+        150,
+        203,
+        254,
+        306,
+        347,
+        401
+      ]
+    },
+    {
+      "id": "section:section-460",
+      "type": "Section",
+      "label": "Section 460",
+      "reference_family": "section",
+      "count": 2,
+      "first_line": 132,
+      "lines_sample": [
+        132,
+        277
+      ]
+    },
+    {
+      "id": "dodd:dodd-1235-10",
+      "type": "DoD Directive",
+      "label": "DoDD 1235.10",
+      "reference_family": "dodd",
+      "count": 1,
+      "first_line": 338,
+      "lines_sample": [
+        338
+      ]
+    },
+    {
+      "id": "dodd:dodd-3025-18",
+      "type": "DoD Directive",
+      "label": "DoDD 3025.18",
+      "reference_family": "dodd",
+      "count": 1,
+      "first_line": 198,
+      "lines_sample": [
+        198
+      ]
+    },
+    {
+      "id": "dodi:dodi-1215-06",
+      "type": "DoD Instruction",
+      "label": "DoDI 1215.06",
+      "reference_family": "dodi",
+      "count": 1,
+      "first_line": 341,
+      "lines_sample": [
+        341
+      ]
+    },
+    {
+      "id": "dodi:dodi-1300-19",
+      "type": "DoD Instruction",
+      "label": "DoDI 1300.19",
+      "reference_family": "dodi",
+      "count": 1,
+      "first_line": 237,
+      "lines_sample": [
+        237
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "governance",
+      "type": "governance",
+      "label": "Governance",
+      "aliases": [
+        "governance",
+        "oversight",
+        "policy"
+      ],
+      "category": "governance",
+      "count": 7,
+      "first_line": 15,
+      "lines_sample": [
+        15,
+        29,
+        192,
+        194,
+        311,
+        314,
+        387
+      ]
+    },
+    {
+      "id": "reporting",
+      "type": "oversight",
+      "label": "Reporting",
+      "aliases": [
+        "report",
+        "reporting",
+        "submit to Congress"
+      ],
+      "category": "oversight",
+      "count": 2,
+      "first_line": 51,
+      "lines_sample": [
+        51,
+        123
+      ]
+    },
+    {
+      "id": "compliance",
+      "type": "compliance",
+      "label": "Compliance",
+      "aliases": [
+        "compliance",
+        "comply",
+        "shall comply"
+      ],
+      "category": "compliance",
+      "count": 1,
+      "first_line": 337,
+      "lines_sample": [
+        337
+      ]
+    },
+    {
+      "id": "implementation",
+      "type": "execution",
+      "label": "Implementation",
+      "aliases": [
+        "implementation",
+        "implementing",
+        "execute",
+        "execution"
+      ],
+      "category": "execution",
+      "count": 1,
+      "first_line": 226,
+      "lines_sample": [
+        226
+      ]
+    },
+    {
+      "id": "mission",
+      "type": "operations",
+      "label": "Mission",
+      "aliases": [
+        "mission",
+        "operational",
+        "warfighting"
+      ],
+      "category": "operations",
+      "count": 1,
+      "first_line": 405,
+      "lines_sample": [
+        405
+      ]
+    }
+  ],
+  "line_annotations": [
+    {
+      "line": 1,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 14,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 15,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 22,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "joint",
+          "label": "Joint Staff",
+          "id": "joint-staff"
+        }
+      ]
+    },
+    {
+      "line": 23,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "joint",
+          "label": "Joint Staff",
+          "id": "joint-staff"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 24,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 25,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 26,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 29,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        }
+      ]
+    },
+    {
+      "line": 32,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 45,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Instruction",
+          "label": "DoDI 1235.11",
+          "id": "dodi:dodi-1235-11"
+        }
+      ]
+    },
+    {
+      "line": 51,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Reporting",
+          "id": "reporting"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 52,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 56,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 74,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Instruction",
+          "label": "DoDI 1235.11",
+          "id": "dodi:dodi-1235-11"
+        }
+      ]
+    },
+    {
+      "line": 84,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 86,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 88,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 90,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 103,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 104,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 110,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Instruction",
+          "label": "DoDI 1235.11",
+          "id": "dodi:dodi-1235-11"
+        }
+      ]
+    },
+    {
+      "line": 118,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        },
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 120,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 122,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 123,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Reporting",
+          "id": "reporting"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 124,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 126,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 128,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 131,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 132,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "Section",
+          "label": "Section 460",
+          "id": "section:section-460"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 133,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 135,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 137,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 150,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Instruction",
+          "label": "DoDI 1235.11",
+          "id": "dodi:dodi-1235-11"
+        }
+      ]
+    },
+    {
+      "line": 158,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 166,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 167,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 190,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 192,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        }
+      ]
+    },
+    {
+      "line": 194,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        }
+      ]
+    },
+    {
+      "line": 195,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 197,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 198,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Directive",
+          "label": "DoDD 3025.18",
+          "id": "dodd:dodd-3025-18"
+        }
+      ]
+    },
+    {
+      "line": 203,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Instruction",
+          "label": "DoDI 1235.11",
+          "id": "dodi:dodi-1235-11"
+        }
+      ]
+    },
+    {
+      "line": 207,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 211,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 212,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 220,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 223,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 226,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 231,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 237,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Instruction",
+          "label": "DoDI 1300.19",
+          "id": "dodi:dodi-1300-19"
+        }
+      ]
+    },
+    {
+      "line": 247,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 254,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Instruction",
+          "label": "DoDI 1235.11",
+          "id": "dodi:dodi-1235-11"
+        }
+      ]
+    },
+    {
+      "line": 264,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 267,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 269,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 270,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 273,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 276,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 277,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "Section",
+          "label": "section 460",
+          "id": "section:section-460"
+        }
+      ]
+    },
+    {
+      "line": 279,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 282,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 290,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 293,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 299,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 306,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Instruction",
+          "label": "DoDI 1235.11",
+          "id": "dodi:dodi-1235-11"
+        }
+      ]
+    },
+    {
+      "line": 309,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 311,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        }
+      ]
+    },
+    {
+      "line": 314,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        }
+      ]
+    },
+    {
+      "line": 315,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 317,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 322,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 328,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 329,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 331,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 333,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 334,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 337,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "compliance",
+          "label": "Compliance",
+          "id": "compliance"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 338,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Directive",
+          "label": "DoDD 1235.10",
+          "id": "dodd:dodd-1235-10"
+        }
+      ]
+    },
+    {
+      "line": 340,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 341,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Instruction",
+          "label": "DoDI 1215.06",
+          "id": "dodi:dodi-1215-06"
+        }
+      ]
+    },
+    {
+      "line": 347,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Instruction",
+          "label": "DoDI 1235.11",
+          "id": "dodi:dodi-1235-11"
+        }
+      ]
+    },
+    {
+      "line": 352,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 356,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 359,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 362,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "joint",
+          "label": "Joint Staff",
+          "id": "joint-staff"
+        }
+      ]
+    },
+    {
+      "line": 366,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 367,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 387,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        },
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        }
+      ]
+    },
+    {
+      "line": 388,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 391,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 401,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Instruction",
+          "label": "DoDI 1235.11",
+          "id": "dodi:dodi-1235-11"
+        }
+      ]
+    },
+    {
+      "line": 405,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "operations",
+          "label": "Mission",
+          "id": "mission"
+        }
+      ]
+    },
+    {
+      "line": 420,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    }
+  ],
+  "blocked_reason": null
 }

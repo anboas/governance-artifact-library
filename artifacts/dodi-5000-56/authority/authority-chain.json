@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,65 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "downstream_edge_count": 2,
+    "catalogued_node_count": 3,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 2,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:116-92",
+      "label": "Public Law 116-92",
+      "title": "Public Law 116-92",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:116-92",
+      "count": 2,
+      "lines_sample": [
+        64,
+        98
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodi-3115-15",
+      "label": "DoDI 3115.15",
+      "title": "DoDI 3115.15: Geospatial Intelligence (GEOINT)",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "gap:dodi:5000.02",
+      "label": "DoDI 5000.02",
+      "title": "DoDI 5000.02",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodi",
+      "source_reference_id": "dodi:5000.02",
+      "count": 1,
+      "lines_sample": [
+        20
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
     {
       "id": "dodi-5000-56",
       "label": "DoDI 5000.56",
@@ -83,13 +133,110 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-8310-01",
+      "label": "DoDI 8310.01",
+      "title": "DoDI 8310.01: Information Technology Standards in the DoD",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "downstream_edges": [
+    {
+      "id": "dodi-5000-56->dodi-3115-15:references:resolved_reference",
+      "source_artifact_id": "dodi-5000-56",
+      "source_label": "DoDI 5000.56",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-3115-15",
+      "target_label": "DoDI 3115.15",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5000.56",
+        "label": "DoDI 5000.56",
+        "first_line": 285,
+        "lines_sample": [
+          285
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5000-56->dodi-8310-01:references:resolved_reference",
+      "source_artifact_id": "dodi-5000-56",
+      "source_label": "DoDI 5000.56",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-8310-01",
+      "target_label": "DoDI 8310.01",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5000.56",
+        "label": "DoDI 5000.56",
+        "first_line": 632,
+        "lines_sample": [
+          632,
+          786
+        ],
+        "count": 2
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:public-law:116-92",
+      "label": "Public Law 116-92",
+      "title": "Public Law 116-92",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:116-92",
+      "count": 2,
+      "lines_sample": [
+        64,
+        98
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:dodi:5000.02",
+      "label": "DoDI 5000.02",
+      "title": "DoDI 5000.02",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodi",
+      "source_reference_id": "dodi:5000.02",
+      "count": 1,
+      "lines_sample": [
+        20
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
@@ -103,7 +250,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-5000-56",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 2
     }
   ]
 }

@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,68 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 3,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "catalogued_node_count": 4,
+    "uncatalogued_gap_count": 3,
+    "evidence_backed_edge_count": 3,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:114-328",
+      "label": "Public Law 114-328",
+      "title": "Public Law 114-328",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:114-328",
+      "count": 1,
+      "lines_sample": [
+        563
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:114-92",
+      "label": "Public Law 114-92",
+      "title": "Public Law 114-92",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:114-92",
+      "count": 2,
+      "lines_sample": [
+        561,
+        2164
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:14168",
+      "label": "Executive Order 14168",
+      "title": "Executive Order 14168",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:14168",
+      "count": 1,
+      "lines_sample": [
+        2154
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
     {
       "id": "dodi-7770-01",
       "label": "DoDI 7770.01",
@@ -83,20 +135,186 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-8320-02",
+      "label": "DoDI 8320.02",
+      "title": "DoDI 8320.02: Sharing Data, Information, and Information Technology (IT) Services in the Department of Defense",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-8500-01",
+      "label": "DoDI 8500.01",
+      "title": "DoDI 8500.01: Cybersecurity",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-8910-01",
+      "label": "DoDI 8910.01",
+      "title": "DoDI 8910.01: DoD Implementation of the Paperwork Reduction Act",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-8320-02->dodi-7770-01:references:resolved_reference",
+      "source_artifact_id": "dodi-8320-02",
+      "source_label": "DoDI 8320.02",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-7770-01",
+      "target_label": "DoDI 7770.01",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:8320.02",
+        "label": "DoDI 8320.02",
+        "first_line": 252,
+        "lines_sample": [
+          252
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-8500-01->dodi-7770-01:references:resolved_reference",
+      "source_artifact_id": "dodi-8500-01",
+      "source_label": "DoDI 8500.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-7770-01",
+      "target_label": "DoDI 7770.01",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:8500.01",
+        "label": "DoDI 8500.01",
+        "first_line": 298,
+        "lines_sample": [
+          298
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-8910-01->dodi-7770-01:references:resolved_reference",
+      "source_artifact_id": "dodi-8910-01",
+      "source_label": "DoDI 8910.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-7770-01",
+      "target_label": "DoDI 7770.01",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:8910.01",
+        "label": "DoDI 8910.01",
+        "first_line": 113,
+        "lines_sample": [
+          113,
+          251
+        ],
+        "count": 2
+      }
+    }
+  ],
   "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:public-law:114-92",
+      "label": "Public Law 114-92",
+      "title": "Public Law 114-92",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:114-92",
+      "count": 2,
+      "lines_sample": [
+        561,
+        2164
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:14168",
+      "label": "Executive Order 14168",
+      "title": "Executive Order 14168",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:14168",
+      "count": 1,
+      "lines_sample": [
+        2154
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:114-328",
+      "label": "Public Law 114-328",
+      "title": "Public Law 114-328",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:114-328",
+      "count": 1,
+      "lines_sample": [
+        563
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-7770-01",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 3
     },
     {
       "id": "trace-downstream",

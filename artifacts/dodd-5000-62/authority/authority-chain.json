@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 4,
-    "catalogued_node_count": 5,
+    "downstream_edge_count": 5,
+    "catalogued_node_count": 6,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 1,
     "inferred_edge_count": 4,
     "authority_path_status": "authority_gap",
     "implementation_path_status": "has_downstream_trace"
@@ -83,8 +83,23 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodd-5145-01",
+      "label": "DoDD 5145.01",
+      "title": "DoDD 5145.01: General Counsel of The Department of Defense",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodi-1000-04",
@@ -98,7 +113,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -113,7 +128,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -128,7 +143,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -143,12 +158,34 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     }
   ],
   "upstream_edges": [],
   "downstream_edges": [
+    {
+      "id": "dodd-5000-62->dodd-5145-01:references:resolved_reference",
+      "source_artifact_id": "dodd-5000-62",
+      "source_label": "DoDD 5000.62",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-5145-01",
+      "target_label": "DoDD 5145.01",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5000.62",
+        "label": "DoDD 5000.62",
+        "first_line": 226,
+        "lines_sample": [
+          226
+        ],
+        "count": 1
+      }
+    },
     {
       "id": "dodd-5000-62->dodi-1000-04:flows_down:inferred_flowdown",
       "source_artifact_id": "dodd-5000-62",
@@ -252,7 +289,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodd-5000-62",
       "direction": "downstream",
-      "edge_count": 4
+      "edge_count": 5
     }
   ]
 }

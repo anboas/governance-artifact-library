@@ -2,19 +2,239 @@
   "id": "dodd-5100-09",
   "generated_at": "2026-06-12T22:50:00.000Z",
   "extractor_version": "governance-extractor-rules-v1",
-  "extraction_status": "source_text_unavailable",
-  "source_text_path": null,
+  "extraction_status": "parsed",
+  "source_text_path": "artifacts/dodd-5100-09/text/extracted.txt",
   "extraction_path": "artifacts/dodd-5100-09/extractions/extractions.json",
   "summary": {
-    "entity_count": 0,
-    "reference_count": 0,
+    "entity_count": 5,
+    "reference_count": 1,
     "concept_count": 0,
-    "annotated_line_count": 0,
-    "total_line_count": 0
+    "annotated_line_count": 10,
+    "total_line_count": 31
   },
-  "entities": [],
-  "references": [],
+  "entities": [
+    {
+      "id": "department-of-defense",
+      "type": "department",
+      "label": "Department of Defense",
+      "aliases": [
+        "Department of Defense",
+        "DoD",
+        "Department of War",
+        "DoW"
+      ],
+      "count": 3,
+      "first_line": 1,
+      "lines_sample": [
+        1,
+        7,
+        12
+      ]
+    },
+    {
+      "id": "navy",
+      "type": "service",
+      "label": "United States Navy",
+      "aliases": [
+        "Navy",
+        "United States Navy"
+      ],
+      "count": 3,
+      "first_line": 20,
+      "lines_sample": [
+        20,
+        22,
+        23
+      ]
+    },
+    {
+      "id": "department-of-the-navy",
+      "type": "department",
+      "label": "Department of the Navy",
+      "aliases": [
+        "Department of the Navy",
+        "DON"
+      ],
+      "count": 1,
+      "first_line": 23,
+      "lines_sample": [
+        23
+      ]
+    },
+    {
+      "id": "secretary-of-defense",
+      "type": "role",
+      "label": "Secretary of Defense",
+      "aliases": [
+        "Secretary of Defense",
+        "SecDef"
+      ],
+      "count": 1,
+      "first_line": 15,
+      "lines_sample": [
+        15
+      ]
+    },
+    {
+      "id": "secretary-of-the-navy",
+      "type": "role",
+      "label": "Secretary of the Navy",
+      "aliases": [
+        "Secretary of the Navy",
+        "SECNAV"
+      ],
+      "count": 1,
+      "first_line": 20,
+      "lines_sample": [
+        20
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "executive-order:executive-order-10621",
+      "type": "Executive Order",
+      "label": "Executive Order 10621",
+      "reference_family": "executive-order",
+      "count": 3,
+      "first_line": 10,
+      "lines_sample": [
+        10,
+        14,
+        24
+      ]
+    }
+  ],
   "concepts": [],
-  "line_annotations": [],
-  "blocked_reason": "No extracted_text_path is currently mirrored for this source-known artifact."
+  "line_annotations": [
+    {
+      "line": 1,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 7,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 10,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "Executive Order",
+          "label": "Executive Order 10621",
+          "id": "executive-order:executive-order-10621"
+        }
+      ]
+    },
+    {
+      "line": 12,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 14,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "Executive Order",
+          "label": "Executive Order 10621",
+          "id": "executive-order:executive-order-10621"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 15,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 20,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of the Navy",
+          "id": "secretary-of-the-navy"
+        },
+        {
+          "kind": "entity",
+          "type": "service",
+          "label": "United States Navy",
+          "id": "navy"
+        }
+      ]
+    },
+    {
+      "line": 22,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "service",
+          "label": "United States Navy",
+          "id": "navy"
+        }
+      ]
+    },
+    {
+      "line": 23,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of the Navy",
+          "id": "department-of-the-navy"
+        },
+        {
+          "kind": "entity",
+          "type": "service",
+          "label": "United States Navy",
+          "id": "navy"
+        }
+      ]
+    },
+    {
+      "line": 24,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "Executive Order",
+          "label": "Executive Order 10621",
+          "id": "executive-order:executive-order-10621"
+        }
+      ]
+    }
+  ],
+  "blocked_reason": null
 }

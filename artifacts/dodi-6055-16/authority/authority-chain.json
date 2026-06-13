@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,76 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "upstream_edge_count": 2,
+    "downstream_edge_count": 2,
+    "catalogued_node_count": 5,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "dodd-3000-10",
+      "label": "DoDD 3000.10",
+      "title": "DoDD 3000.10: Contingency Basing Outside the United States",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-4140-62",
+      "label": "DoDI 4140.62",
+      "title": "DoDI 4140.62: Material Potentially Presenting An Explosive Hazard (MPPEH)",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5100-76",
+      "label": "DoDI 5100.76",
+      "title": "DoDI 5100.76: Safeguarding Sensitive Conventional Arms, Ammunition, and Explosives (AA&E)",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-6055-07",
+      "label": "DoDI 6055.07",
+      "title": "DoDI 6055.07: Mishap Notification, Investigation, Reporting, and Record Keeping",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-6055-16",
       "label": "DoDI 6055.16",
@@ -83,12 +143,102 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-4140-62->dodi-6055-16:references:resolved_reference",
+      "source_artifact_id": "dodi-4140-62",
+      "source_label": "DoDI 4140.62",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6055-16",
+      "target_label": "DoDI 6055.16",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:4140.62",
+        "label": "DoDI 4140.62",
+        "first_line": 831,
+        "lines_sample": [
+          831
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-6055-07->dodi-6055-16:references:resolved_reference",
+      "source_artifact_id": "dodi-6055-07",
+      "source_label": "DoDI 6055.07",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6055-16",
+      "target_label": "DoDI 6055.16",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6055.07",
+        "label": "DoDI 6055.07",
+        "first_line": 1650,
+        "lines_sample": [
+          1650
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-6055-16->dodd-3000-10:references_upstream:resolved_reference",
+      "source_artifact_id": "dodi-6055-16",
+      "source_label": "DoDI 6055.16",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-3000-10",
+      "target_label": "DoDD 3000.10",
+      "target_lane": "dod",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6055.16",
+        "label": "DoDI 6055.16",
+        "first_line": 86,
+        "lines_sample": [
+          86
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-6055-16->dodi-5100-76:references:resolved_reference",
+      "source_artifact_id": "dodi-6055-16",
+      "source_label": "DoDI 6055.16",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5100-76",
+      "target_label": "DoDI 5100.76",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6055.16",
+        "label": "DoDI 6055.16",
+        "first_line": 357,
+        "lines_sample": [
+          357
+        ],
+        "count": 1
+      }
+    }
+  ],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
@@ -96,14 +246,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-6055-16",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-6055-16",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 2
     }
   ]
 }

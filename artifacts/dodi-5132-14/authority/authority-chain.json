@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,98 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "downstream_edge_count": 2,
+    "catalogued_node_count": 3,
+    "uncatalogued_gap_count": 3,
+    "evidence_backed_edge_count": 2,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:111-352",
+      "label": "Public Law 111-352",
+      "title": "Public Law 111-352",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:111-352",
+      "count": 2,
+      "lines_sample": [
+        21,
+        1056
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:114-92",
+      "label": "Public Law 114-92",
+      "title": "Public Law 114-92",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:114-92",
+      "count": 2,
+      "lines_sample": [
+        20,
+        1058
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:87-195",
+      "label": "Public Law 87-195",
+      "title": "Public Law 87-195",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:87-195",
+      "count": 1,
+      "lines_sample": [
+        1054
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodd-5111-01",
+      "label": "DoDD 5111.01",
+      "title": "DoDD 5111.01: Under Secretary of Defense for Policy (USD(P))",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-2000-30",
+      "label": "DoDI 2000.30",
+      "title": "DoDI 2000.30: Global Health Engagement (GHE) Activities",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-5132-14",
       "label": "DoDI 5132.14",
@@ -83,13 +166,114 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     }
   ],
   "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "downstream_edges": [
+    {
+      "id": "dodi-5132-14->dodd-5111-01:references_upstream:resolved_reference",
+      "source_artifact_id": "dodi-5132-14",
+      "source_label": "DoDI 5132.14",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-5111-01",
+      "target_label": "DoDD 5111.01",
+      "target_lane": "dod",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5132.14",
+        "label": "DoDI 5132.14",
+        "first_line": 151,
+        "lines_sample": [
+          151
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5132-14->dodi-2000-30:references:resolved_reference",
+      "source_artifact_id": "dodi-5132-14",
+      "source_label": "DoDI 5132.14",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-2000-30",
+      "target_label": "DoDI 2000.30",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5132.14",
+        "label": "DoDI 5132.14",
+        "first_line": 180,
+        "lines_sample": [
+          180,
+          231,
+          476
+        ],
+        "count": 3
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:public-law:111-352",
+      "label": "Public Law 111-352",
+      "title": "Public Law 111-352",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:111-352",
+      "count": 2,
+      "lines_sample": [
+        21,
+        1056
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:114-92",
+      "label": "Public Law 114-92",
+      "title": "Public Law 114-92",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:114-92",
+      "count": 2,
+      "lines_sample": [
+        20,
+        1058
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:87-195",
+      "label": "Public Law 87-195",
+      "title": "Public Law 87-195",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:87-195",
+      "count": 1,
+      "lines_sample": [
+        1054
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
@@ -103,7 +287,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-5132-14",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 2
     }
   ]
 }

@@ -1,0 +1,1083 @@
+                             DOD INSTRUCTION 4630.09
+         COMMUNICATIONS WAVEFORM MANAGEMENT AND
+                     STANDARDIZATION
+
+Originating Component:       Office of the DoD Chief Information Officer
+
+Effective:                   November 23, 2020
+
+Releasability:               Cleared for public release. Available on the Directives Division Website
+                             at https://www.esd.whs.mil/DD/.
+
+Reissues and Cancels:        DoD Instruction 4630.09, “Communications Waveform Management and
+                             Standardization” July 15, 2015, as amended
+
+Approved by:                 Dana Deasy, DoD Chief Information Officer
+
+
+Purpose: In accordance with the authority provided the DoD Chief Information Officer (CIO) in DoD
+Directive (DoDD) 5144.02, this issuance establishes policy, assigns responsibilities, and provides
+procedures for:
+ Periodically reviewing waveforms as they mature to evaluate the capabilities’ interoperability,
+security, reusability, exportability, and operational value for DoD use.
+ Fostering innovation by creating a process that allows waveform developers, in coordination with a
+Lead Military Service or Sponsor, to submit conceptual waveforms for analysis and recommendations
+before either the developer or DoD make significant investments in duplicative capabilities.
+                                                                                         DoDI 4630.09, November 23, 2020
+
+
+                                                TABLE OF CONTENTS
+SECTION 1: GENERAL ISSUANCE INFORMATION ............................................................................3
+   1.1. Applicability. .................................................................................................................3
+   1.2. Policy. ...........................................................................................................................3
+SECTION 2: RESPONSIBILITIES ......................................................................................................5
+   2.1. DoD CIO. .......................................................................................................................5
+   2.2. Director, Defense Information Systems Agency (DISA) ................................................6
+   2.3. USD (A&S). ..................................................................................................................6
+   2.4. DOT&E. ........................................................................................................................6
+   2.5. Under Secretary of Defense for Intelligence and Security (USD(I&S)). .........................7
+   2.6. DIRNSA/CHCSS. .........................................................................................................7
+   2.7. DoD Component Heads. ................................................................................................7
+   2.8. Secretary of the Army. ...................................................................................................9
+   2.9. CJCS. .......................................................................................................................... 11
+SECTION 3: PROCEDURES........................................................................................................... 12
+   3.1. Waveform Analysis Process Overview ........................................................................ 12
+   3.2. Conceptual Stage. ........................................................................................................ 15
+   3.3. Prototype Stage............................................................................................................ 16
+   3.4. Production Stage. ......................................................................................................... 16
+   3.5. Operational Stage. ....................................................................................................... 17
+   3.6. Registration Stage. ....................................................................................................... 17
+   3.7. DoD Waveform Sustainment. ...................................................................................... 18
+   3.8. Exportability Analysis. ................................................................................................ 18
+GLOSSARY ................................................................................................................................. 20
+   G.1. Acronyms. .................................................................................................................. 20
+   G.2. Definitions. ................................................................................................................. 21
+REFERENCES .............................................................................................................................. 24
+
+TABLES
+Table 1. Waveform Review Stages and Disposition Outcomes ................................................. 15
+
+FIGURES
+Figure 1. Waveform Analysis Process Stages ........................................................................... 12
+
+
+
+
+TABLE OF CONTENTS                                                                                                                         2
+                                                                DoDI 4630.09, November 23, 2020
+
+
+                 SECTION 1: GENERAL ISSUANCE INFORMATION
+
+1.1. APPLICABILITY.
+
+This issuance:
+
+   a. Applies to:
+
+        (1) OSD, the Military Departments, the Office of the Chairman of the Joint Chiefs of
+Staff (CJCS) and the Joint Staff, the Combatant Commands, the Office of Inspector General of
+the Department of Defense, the Defense Agencies, the DoD Field Activities, and all other
+organizational entities within the DoD (referred to collectively in this issuance as the “DoD
+Components”).
+
+       (2) All information technology (IT) and national security systems communication
+waveforms acquired, procured (systems or services), or operated by any DoD Component, to
+include wireless communication products and associated technology, processes, personnel,
+programs, and organizations that initiate, develop, test, and use waveforms.
+
+      (3) Foreign disclosure and technology security processes in accordance with DoDD
+5230.11 and DoD Instruction (DoDI) 2040.02.
+
+   b. Does not apply to:
+
+       (1) Programs and procurements that use standards-based commercial communication
+services or commercial off-the-shelf (COTS) waveforms that have not been modified for use by
+DoD. COTS equipment is subject to the policy in the January 19, 2017 Memorandum of
+Agreement between DoD and the Department of Homeland Security.
+
+       (2) Science and technology efforts for research purposes and the pre-system acquisition
+phase. However, this instruction does apply to those waveform technology demonstration efforts
+serving as a precursor to either system fielding or transition to a formal Program of Record
+(PoR).
+
+    c. Will not alter or supersede the existing authorities and policies of the Director of National
+Intelligence regarding the protection of sensitive compartmented information and special access
+programs for intelligence as directed by Executive Order 12333 and other laws and regulations.
+Application of the provisions and procedures of this issuance to sensitive compartmented
+information or other special access programs for intelligence information systems is encouraged,
+where these provisions and procedures may complement or discuss areas not otherwise
+specifically addressed.
+
+
+1.2. POLICY.
+
+   a. The DoD’s annual inventory of DoD communication waveforms is the authoritative
+source for DoD waveforms.
+
+
+SECTION 1: GENERAL ISSUANCE INFORMATION                                                            3
+                                                             DoDI 4630.09, November 23, 2020
+
+
+        (1) Waveforms are categorized as either Core or Non-core. Core waveforms are those
+waveforms that are essential to conducting command and control in multi-domain, joint, or
+combined environments. Non-core waveforms are typically operated by a single Service for a
+specific purpose within a Service-unique environment.
+
+       (2) The Command, Control, and Communications Leadership Board (C3LB) will
+categorize waveforms. Core waveforms require either a Lead Service or Sponsor level of
+stewardship. Non-core waveforms require a Sponsor level of stewardship. Roles,
+responsibilities, and assignment processes for Lead Service and Sponsor-level stewardship of
+Core and Non-core waveforms are defined in Section 2.
+
+   b. The DoD Information Repository (DoD IR), maintained by the Joint Tactical Networking
+Center (JTNC), is the authoritative storage repository for DoD waveforms and associated
+communication products, excluding hardware.
+
+    c. Before procurement of a COTS or non-development item (NDI) waveform, due
+consideration should be given to using or enhancing existing waveforms by consulting the DoD
+IR and the joint communication marketplace to determine if an existing waveform can fulfill the
+requirement.
+
+    d. Waveforms will be analyzed to ensure that they meet interoperability, security,
+reusability, and exportability standards and provide operational value. Analysis will consider
+technology that supports waveforms, such as radios and network managers, in accordance with
+the procedures specified in this instruction.
+
+    e. Pursuant to DoDI 5000.02, all waveforms will enter a review process and be considered
+for analysis when a Lead Service or Sponsor submits a waveform analysis application (WAA) to
+the DoD CIO via the JTNC at: https://www.dodir.mil/waveform_submission. This includes:
+
+       (1) Development of new, modified, or enhanced waveforms; and
+
+       (2) Use of independently developed waveforms.
+
+   f. Waveforms will provide interoperability with IT and national security systems in
+compliance with DoDI 8330.01.
+
+
+
+
+SECTION 1: GENERAL ISSUANCE INFORMATION                                                           4
+                                                             DoDI 4630.09, November 23, 2020
+
+
+                          SECTION 2: RESPONSIBILITIES
+
+2.1. DOD CIO.
+
+The DoD CIO:
+
+   a. Oversees implementation of this issuance and serves as the disposition authority for DoD
+waveforms and standardization.
+
+    b. Coordinates with the Under Secretary of Defense for Acquisition and Sustainment
+(USD(A&S)) and other acquisition authorities in the enforcement of the standards, policies, and
+procedures provided in this issuance. The DoD CIO provides waveform analysis reports and
+recommendations to the USD(A&S), the Lead Service and Sponsors, and waveform developers.
+
+  c. In coordination with the USD(A&S) and the Director of JTNC, ensures information on all
+DoD waveforms is present and accessible in the DoD IR.
+
+    d. Verifies that the applicable waveforms in the DoD IR are referenced in the DoD
+Information Technology Standards Registry (DISR).
+
+    e. Annually issues the DoD Communications Waveform Inventory. The inventory will be
+reviewed by the C3LB, which will make recommendations to the Deputy Secretary of Defense
+for the assignment of Lead Service responsibilities.
+
+   f. Reviews each new, modified, or enhanced waveform with technical support and
+procedures in accordance with Section 3.
+
+    g. Reviews the DoD IR as necessary to identify those waveforms that have served their
+intended purpose for use in military operations and are now obsolete.
+
+    h. Determines the appropriate Waveform Analysis Process Stages, as defined in Section 3,
+for waveforms based on their maturity and issues disposition memoranda.
+
+   i. In coordination with the Director, National Security Agency/Chief, Central Security
+Service (DIRNSA/CHCSS), the CJCS, and the Secretaries of the Military Departments, develops
+and maintains a tactical communications modernization plan.
+
+   j. Ensures waveform dispositions are added to Information Support Plan documentation.
+
+   k. Provides guidance to, and consults with, the Secretary of Defense, USD(A&S),
+Secretaries of the Military Departments, Director of Operational Test and Evaluation (DOT&E),
+and Director of JTNC with respect to:
+
+       (1) General and specific waveform testing and evaluation in DoD.
+
+       (2) Monitoring and reviewing of waveform testing activities.
+
+
+
+SECTION 2: RESPONSIBILITIES                                                                       5
+                                                               DoDI 4630.09, November 23, 2020
+
+
+    l. Reviews JTNC recommendations for the exportability of tactical communication products.
+In coordination with the USD(A&S), reviews WAAs to determine analysis requirements and
+provides disposition on waveform development or modification for programs.
+
+   m. In coordination with the DIRNSA/CHCSS, assesses waveforms for inherent
+vulnerabilities to adversary cyber or intelligence collection operations and mitigates as
+appropriate.
+
+
+2.2. DIRECTOR, DEFENSE INFORMATION SYSTEMS AGENCY (DISA)
+
+Under the authority, direction, and control of the DoD CIO and in addition to the responsibilities
+in Paragraph 2.7., the Director, DISA:
+
+   a. Provides subject matter expertise to the DoD CIO for the review process of individual
+communication waveforms.
+
+   b. Supports the DoD CIO in ensuring that waveform standards are referenced in the DISR in
+compliance with this instruction.
+
+  c. Provides the DoD CIO with certificates and reports from the Joint Interoperability Test
+Command and any other relevant waveform analysis activities.
+
+    d. Conducts additional waveform testing when necessary using available DoD test facilities.
+If needed, uses unique test capabilities beyond what are already available within DoD or
+commercially (e.g., Federally Funded Research and Development Centers, academia).
+
+
+2.3. USD(A&S).
+
+The USD(A&S):
+
+   a. As the Defense Acquisition Executive and with the support of the DoD CIO and the
+Director of JTNC, enforces the policies and procedures of this instruction during systems
+acquisitions.
+
+   b. Ensures programs reuse existing waveforms from the DoD IR before adopting or
+developing new waveforms. Provides oversight to confirm that programs that develop or adopt
+new waveforms follow processes in accordance with this issuance, giving priority to rapid
+acquisitions to allow employment in a timely manner.
+
+   c. In coordination with the DoD CIO, reviews WAAs to determine analysis requirements
+and provide disposition on waveform development or modification for programs.
+
+
+2.4. DOT&E.
+
+The DOT&E ensures that adequate plans are available to test and analyze waveform operational
+performance when waveforms are used in programs under DOT&E oversight.
+
+
+SECTION 2: RESPONSIBILITIES                                                                      6
+                                                              DoDI 4630.09, November 23, 2020
+
+
+2.5. UNDER SECRETARY OF DEFENSE FOR INTELLIGENCE AND SECURITY
+(USD(I&S)).
+
+The USD(I&S) serves as the DoD focal point to the intelligence community for waveform policy
+and oversight matters relating to intelligence information sharing and interoperability of DoD
+intelligence systems and processes in accordance with DoDD 5143.01.
+
+
+2.6. DIRNSA/CHCSS.
+
+Under the authority, direction, and control of the USD(I&S), consistent with Section 142 of Title
+10, United States Code, and in addition to the responsibilities in Paragraph 2.7., the
+DIRNSA/CHCSS:
+
+    a. Leads, with the support of the Lead Services and Sponsors, the development of suitable
+technical standards; administrative guidance; key-management protocols, devices, and systems;
+encryption methods; and other items as required to enable waveforms to comply with applicable
+security controls.
+
+    b. Prescribes the standards, methods, and procedures for secure operation, management, and
+protection of waveforms.
+
+   c. Coordinates with the DoD CIO to develop and maintain the DoD CIO tactical
+communications modernization plan.
+
+    d. Coordinates with the JTNC on security standards, compliance, and certification regarding
+software-defined radios and waveforms, including those applicable to export.
+
+   e. Provides the DoD CIO with National Security Agency certifications as needed for
+waveform analysis.
+
+
+2.7. DOD COMPONENT HEADS.
+
+The DoD Component heads, as assigned, plan and budget for Lead Service and Sponsor
+responsibilities necessary to comply with this issuance:
+
+    a. The waveform Lead Service is responsible for establishing and maintaining a joint
+enterprise-level view of assigned waveforms or systems; maintaining and monitoring compliance
+with associated Joint or Service standards; and providing enterprise-level engineering analysis
+and recommendations to the Military Services and the DoD CIO as the Principal Staff Assistant
+(PSA). The waveform Lead Service will:
+
+       (1) Conduct joint enterprise-level system engineering and analysis activities, including
+analysis to understand and characterize the impacts and potential tradeoffs for solutions or
+approaches that vary from the PoR (e.g., NDIs, small form-factor terminals, etc.).
+
+
+
+
+SECTION 2: RESPONSIBILITIES                                                                       7
+                                                              DoDI 4630.09, November 23, 2020
+
+
+       (2) Compile joint fielding and terminal development strategies and recommend
+associated priorities.
+
+      (3) Develop, update, and monitor compliance of PoR and NDI systems with Reference
+Implementations, message sets, specifications, and classifications guidance.
+
+        (4) Establish and update policy for minimum implementations and common interfaces,
+using the Reference Implementation or Implementation as a basis.
+
+       (5) Collect cost and schedule data on Service modernization and fielding plans, and
+maintain a history of such data.
+
+      (6) Document prioritized joint mission threads/kill chains and associated information
+exchange requirements.
+
+        (7) Maintain network management, design, and testing tools, their associated
+infrastructure, and human expertise.
+
+        (8) Resolve cross-Service disconnects and elevate such matters to the PSA when
+resolution is not possible.
+
+        (9) Serve as the technical advisor for foreign military sales (FMS), direct commercial
+sales (DCS), export controls, and communications security in accordance with DoDD 5230.11,
+DoDI 2040.02, and DoDI 8330.01.
+
+       (10) In conjunction with the PSA, make policy recommendations and develop roadmaps
+to support the development and maturity of the waveform and associated applications.
+
+       (11) Coordinate with the PSA, USD(A&S), and Under Secretary of Defense for
+Research and Engineering to advocate for waveform and terminal development with the Service
+budget process.
+
+       (12) Coordinate with the PSA, USD(A&S), and Under Secretary of Defense for
+Research and Engineering to ensure appropriate technology protection requirements and
+processes are in place to advance waveform and terminal development with the Military
+Services.
+
+    b. The waveform Sponsor is responsible for establishing and maintaining an enterprise-level
+view of assigned waveforms or systems, maintaining and monitoring compliance with associated
+military standards, and providing enterprise-level engineering analysis and recommendations to
+the other Military Services and the PSA. In this capacity, the waveform Sponsor will:
+
+       (1) Conduct engineering and analysis activities, including integration into the Joint
+Information Environment framework.
+
+        (2) Perform analyses to understand and characterize the impacts and potential tradeoffs
+for solutions or approaches that vary from the PoR (e.g., NDI, small form-factor terminals).
+
+
+
+SECTION 2: RESPONSIBILITIES                                                                       8
+                                                               DoDI 4630.09, November 23, 2020
+
+
+      (3) Develop, update, and monitor compliance of PoR and NDI systems with a reference
+implementation, message sets, specifications, and classification guidance.
+
+        (4) Establish and update policy for waveform implementations and common interfaces,
+using a reference implementation.
+
+      (5) Maintain network management, design, testing tools, and associated infrastructure for
+waveform management.
+
+        (6) Serve as the technical advisor for FMS, DCS, export controls, and communications
+security.
+
+       (7) Notify the C3LB of waveform modifications or enhancements that impact command
+and control interoperability.
+
+     (8) Ensure compliance with this issuance throughout the systems acquisition process as
+communication waveforms are developed, modified, or enhanced.
+
+       (9) Encourage vendors, and ensure that the U.S. Government sponsor/Program Office
+coordinates with the JTNC when modifying registered DoD waveforms or developing new
+concepts, to align efforts with needed DoD capabilities.
+
+       (10) Provide subject matter expertise to the DoD CIO in the analysis process of
+individual communication waveforms.
+
+       (11) Ensure updates to the waveforms and wireless communication software products
+and standards are submitted to the JTNC in accordance with procedures in the JTNC waveform
+submission process at: https://www.dodir.mil/waveform_submission.
+
+      (12) Notify the DoD CIO of the planned development of new, modified, or enhanced
+waveforms or the use of independently developed waveforms.
+
+
+2.8. SECRETARY OF THE ARMY.
+
+In addition to the responsibilities in Paragraph 2.7, the Secretary of the Army, through the
+Director of JTNC:
+
+   a. Performs independent technical tests and analyses as identified in this issuance and
+maintains the capability to conduct these waveform analyses.
+
+   b. Coordinates with the DoD CIO, USD(A&S), DOT&E, waveform developers, and
+Sponsors to schedule tests, develop procedures for test events, and provide cost information to
+enable developers and Sponsors to plan and budget for these test activities.
+
+   c. Tests and certifies waveforms to ensure compliance with DoD radio architecture standards
+and Application Programming Interface Standards. Provides certification reports to the DoD
+CIO.
+
+
+
+SECTION 2: RESPONSIBILITIES                                                                       9
+                                                               DoDI 4630.09, November 23, 2020
+
+
+   d. Provides subject matter expertise to the DoD CIO for the analysis of communication
+waveforms and wireless communication software products.
+
+    e. Establishes and maintains a comprehensive cyber-hardened, controlled-access, DoD-wide
+IR on both the Secure Internet Protocol Router and Non-secure Internet Protocol Router
+networks that centralizes software code, documentation, and artifacts of DoD waveforms to
+enable authorized users to access content of the DoD IR and contribute to it.
+
+    f. Establishes and maintains a DoD IR catalog of waveform users, noting specific waveform
+versions, radios, and platforms. This catalog will be used to aid DoD CIO waveform reviews
+and to assist in radio frequency spectrum allocation.
+
+    g. Implements authentication and access controls for information in the DoD IR based on
+intellectual property (IP) rights markings (including restrictive notices or legends) governing the
+waveform information (e.g., software, technical data, and supporting materials). These controls
+will ensure that users are notified that IR information is provided only to users that are
+authorized to access and use that information in accordance with applicable IP rights and
+restrictions.
+
+    h. Implements procedures to ensure that users accessing or reproducing waveform
+information in the DoD IR are subject to appropriate use and confidentiality obligations (e.g., a
+restricted-use and nondisclosure agreement) in accordance with the IP rights governing the
+information.
+
+    i. Maintains a secure continuity of operations site. Maintains updated disaster recovery
+plans and ensures that authorized users are aware of procedures.
+
+    j. In coordination with the DoD CIO and USD(A&S), develops, reviews, and maintains an
+implementation guide that provides guidance to the Lead Services and Sponsors, further explains
+the waveform analysis and disposition process, and provides information on how to access and
+use the IR.
+
+    k. In coordination with the DIRNSA/CHCSS, supports the Lead Service and Sponsor in
+incorporating updates to the waveform and wireless communication standards.
+
+    l. Supports the Lead Service and Sponsor by submitting applicable waveform standards to
+the DISR.
+
+   m. Supports the Lead Service and Sponsor by providing guidance on the integration of
+waveform and wireless communications into the Joint Information Environment framework.
+
+   n. Supports the Lead Service and Sponsor by providing guidance on waveform and wireless
+communication architectures, utilizing the WAA.
+
+   o. Supports the DoD CIO, Lead Service, and Sponsor by providing exportability analyses of
+waveforms.
+
+
+
+
+SECTION 2: RESPONSIBILITIES                                                                      10
+                                                                  DoDI 4630.09, November 23, 2020
+
+
+   p. Analyzes Program Management Office Milestone B (MS B), Milestone C (MS C), and
+post MS C WAA submissions for evidence of waveform interoperability, security, reusability,
+exportability, and operational value and provides recommendations to the DoD CIO.
+
+  q. Develops a Waveform Abstract containing minimal essential information required by
+DoD to manage each waveform captured in the DoD Communications Waveform Inventory.
+
+  r. Maintains a Waveform Abstract in the DoD IR for all waveforms listed in the DoD
+Communications Waveform Inventory.
+
+
+2.9. CJCS.
+
+In addition to the responsibilities in Paragraph 2.7, the CJCS:
+
+    a. Validates requirements for new or modified waveforms in accordance with CJCS
+Instruction 5123.01H.
+
+   b. Develops joint and mission-partner tactical networking concepts of employment for
+contested environments that will inform joint tactical networking roadmaps and requirements.
+
+
+
+
+SECTION 2: RESPONSIBILITIES                                                                    11
+                                                              DoDI 4630.09, November 23, 2020
+
+
+                              SECTION 3: PROCEDURES
+
+3.1. WAVEFORM ANALYSIS PROCESS OVERVIEW
+
+    a. The waveform analysis process provides a framework for evaluating a waveform at five
+distinct stages during its development. The process stages at Figure 1 allows the Lead Service or
+Sponsor to develop new, or to enhance old, waveforms and gain a DoD-wide position on their
+waveform before making significant resource commitments. The analysis process provides for
+periodic evaluations to ensure that the waveform is properly matured, tested, documented, and
+ultimately registered as a DoD waveform.
+
+                        Figure 1. Waveform Analysis Process Stages
+
+
+
+
+    b. Developments and processes for waveform analysis are completed in accordance with the
+following:
+
+       (1) Requirements, in accordance with Section 142 of Title 10, U.S. Code.
+
+       (2) Tactical data link standardization, in accordance with CJCS Instruction 5123.01H.
+
+       (3) Acquisition, in accordance with DoDI 5000.02.
+
+       (4) Interoperability, in accordance with DoDI 8330.01.
+
+    c. Pursuant to DoDI 5000.02, programs that have a new, modified, or enhanced waveform
+will submit a WAA to the DoD CIO through the JTNC at MS B, and at MS C if a waveform is
+added or modified after MS B.
+
+   d. The waveform analysis process requires a waveform development effort to have a DoD
+Lead Service or Sponsor identified before the commitment of DoD funding resources.
+Waveforms require a Lead Service or Sponsor, at a minimum, before the production stage of this
+
+
+SECTION 3: PROCEDURES                                                                          12
+                                                               DoDI 4630.09, November 23, 2020
+
+
+process, which is when any fielding or operational usage occurs. As a waveform matures, the
+Lead Service or Sponsor may change. When this occurs, the requirements specified in this
+instruction transfer to the new Lead Service or Sponsor.
+
+    e. For non-software-defined radio waveforms, the Office of the DoD CIO will work with the
+Lead Service or Sponsor to determine whether additional effort or information is needed to
+complete the waveform analysis process. This determination will also place the waveform into
+the appropriate stage of the review process.
+
+    f. The procedures to analyze DoD waveforms are based on the DoD IR entrance criteria
+available at https://www.dodir.mil/waveform_submission. Waveforms are analyzed using the
+criteria identified by the JTNC in the waveform analysis process.
+
+    g. Information on all waveforms available or under review for use by the DoD, including
+those developed by public sources (e.g., a U.S. Government laboratory) or private entities, will
+be stored in the DoD IR. The DoD IR will document all waveforms in the waveform analysis
+process. The DoD IR and tactical communication marketplace will contain information and
+statuses on all waveforms that are available for potential use or reuse, or are in the review
+process. These two repositories will inform DoD program managers and waveform developers
+of communication waveform products, minimize duplication of effort, and lower the cost of
+future waveform development.
+
+   h. The waveform analysis process begins with submission of a WAA. The Office of the
+DoD CIO will work with the Lead Service or Sponsor and the Director of JTNC to enter the
+candidate waveform or registered waveform into the process at the appropriate stage.
+
+   i. The stages of the waveform analysis process progressively steer waveform development
+toward formal registration by the Office of the DoD CIO and designation as a registered DoD
+waveform. Figure 1 depicts the main stages of the process.
+
+   j. New waveform developments within DoD are expected to enter the process at the
+conceptual stage.
+
+    k. If multiple DoD Components are sponsoring similar waveform technologies, the
+waveform sponsors are encouraged to collaborate on submission of the WAA. To the extent
+practical, waveform sponsors will collaborate with all program managers that use a given
+waveform to gather information and complete requirements of this instruction. The DoD CIO
+will work to resolve any differences among submissions of similar waveform technologies.
+
+    l. The Director of JTNC will ensure that waveform updates, modifications, or enhancements
+are tracked by this process. Any change made to a waveform that diverges from its baseline
+capability requirements and lifecycle sustainment plan submitted as a part of this process will be
+subject to another review. Changes made to a waveform while in development (before
+completion of the registration stage) that affect interoperability with the existing waveform or
+alter the parameters and features outlined by the waveform’s specification, require review of the
+documentation of the process to describe the changes at the next stage. Waveform updates,
+modifications, and enhancements will be tracked by version numbers.
+
+
+
+SECTION 3: PROCEDURES                                                                              13
+                                                               DoDI 4630.09, November 23, 2020
+
+
+    m. If DoD has sufficient technical information and IP rights in the waveform to support
+reuse, the Lead Service or Sponsor will initiate standardization through the Defense
+Standardization Program outlined in DoDI 4120.24 and DoD Manual 4120.24. The
+standardization developed or adopted through this process must adequately describe the entire
+waveform. If DoD does not have sufficient technical information or IP rights to support reuse,
+the Lead Service or Sponsor, in coordination with the USD(A&S) and DoD CIO, will determine,
+based on a business case analysis that considers potential cost and technical tradeoffs, whether to
+request additional technical information or IP rights to support DoD’s reuse of the waveform.
+
+    n. The Lead Service or Sponsor will ensure that the waveform’s complete software and
+documentation (e.g., adherence to standards) reside in the DoD IR. All content will be clearly
+labeled with markings of official release dates and version numbers, as well as all appropriate IP
+rights notices and restrictive markings. Specific materials to be submitted will be in accordance
+with the DoD IR entrance criteria.
+
+    o. Waveforms for which DoD has sufficient IP rights and supporting technical information
+to allow for reuse will be standardized to further DoD interoperability, security, and cost
+efficiencies. Standardization and technical materials sufficient to provide products using that
+waveform will be made available in the DoD IR in accordance with DoD’s IP rights.
+
+    p. The Office of the DoD CIO serves as the disposition authority for waveform reviews,
+issuing dispositions at each stage as outlined in Table 1. Reviews will be conducted with input
+from the CJCS, Director of JTNC, Secretaries of the Military Departments, USD(A&S), and
+USD(I&S). Disposition memorandums are issued at the appropriate stages as input to the
+acquisition authority, waveform developer, Lead Service or Sponsor, and DoD IR as appropriate.
+At each stage of the review process, the DoD CIO will assess whether the candidate waveform
+continues to meet its originally stated requirements or whether requirements changed such that
+the application should be revisited.
+
+
+
+
+SECTION 3: PROCEDURES                                                                             14
+                                                               DoDI 4630.09, November 23, 2020
+
+
+                Table 1. Waveform Review Stages and Disposition Outcomes
+ Stage              Purpose                                Disposition Outcome
+
+ Conceptual         Determines that a new, modified,     Analysis and recommendation on
+                    or enhanced waveform concept         continued development at the appropriate
+                    does not duplicate existing DoD      milestone to the relevant acquisition
+                    waveform capabilities                authority or waveform developer;
+                                                         identifies potential waveform value to
+                                                         DoD
+ Prototype          Determines the technical feasibility Analysis and recommendation on
+                    of further waveform development continued development at the appropriate
+                    and systems integration              milestone to the relevant acquisition
+                                                         authority or waveform developer;
+                                                         identifies waveform as providing unique,
+                                                         functionally attainable capabilities within
+                                                         DoD
+Production          Integrates waveforms on              Analysis and recommendation at the
+                    production radios. Confirms the      appropriate milestone decision to the
+                    waveform system meets capability relevant acquisition authority to permit
+                    requirements verified by final       DoD use in production radio or proceed to
+                    developmental and pre-operational operational test
+                    testing
+
+Operational         Verifies functionality in an           Analysis and recommendation at the
+                    operational system environment         appropriate acquisition decision point to
+                    and that interoperability, security,   the acquisition authority to allow DoD use
+                    and other standards are met            of the waveform through the end of the
+                                                           registration stage
+
+ Registration       Verifies cataloging of all             Registration as a DoD waveform subject
+                    waveform materials in IR               to recurring reviews and storage of
+                                                           waveform materials in the DoD IR
+
+   q. Waveform disposition recommendations are provided as input into the Defense
+Acquisition System (DAS), as required.
+
+
+3.2. CONCEPTUAL STAGE.
+
+   a. The purpose of this stage is to analyze initial waveform concepts to determine their
+potential benefit to the DoD and to determine if they duplicate existing DoD waveform
+capabilities. The conceptual stage review allows the DoD to analyze the merits of new and
+innovative technologies before investing in them. This stage limits risks to the Lead Service and
+Sponsor by considering whether existing waveforms across the DoD can be used or modified to
+meet their requirements before new development begins. Similarly, this stage allows waveform
+
+
+SECTION 3: PROCEDURES                                                                           15
+                                                                 DoDI 4630.09, November 23, 2020
+
+
+developers to obtain a review from the DoD of the potential benefits to the DoD of the new
+waveform development.
+
+    b. The Office of the DoD CIO will issue a conceptual stage waveform disposition
+memorandum to the Lead Service, Sponsor, Milestone Decision Authority (MDA), any other
+relevant acquisition authorities, and the JTNC, as appropriate. The memorandum will provide a
+recommendation for interim registration or disapproval with accompanying rationale. The
+memorandum will also provide an observation of the JTNC analyses in interoperability, security,
+reusability, and exportability and will serve as the DoD CIO’s input at the appropriate milestone.
+
+
+3.3. PROTOTYPE STAGE.
+
+     a. The purpose of this stage is to demonstrate that the waveform is functionally attainable on
+at least one prototype, existing, or legacy radio. The prototype can be implemented as an
+embedded radio that is part of a larger system. The Office of the DoD CIO will provide a
+waveform review and recommendation for the conceptual stage (or entry into the prototype
+stage) before this stage begins.
+
+    b. The waveform Lead Service or Sponsor will submit an updated WAA in accordance with
+the DoD IR entrance criteria.
+
+   c. The Lead Service or Sponsor will initiate a Global Information Grid technical profile that
+provides waveform implementation guidance in accordance with the Global Information Grid
+Technical Guidance Federation and DoDI 8410.03.
+
+    d. The Office of the DoD CIO will issue a prototype stage waveform disposition
+memorandum to the Lead Service, Sponsor, MDA, any other relevant acquisition authorities, and
+the JTNC, as appropriate. The memorandum will provide a recommendation for interim
+registration or disapproval with accompanying rationale. The memorandum will also provide an
+observation of the JTNC analyses in interoperability, security, reusability, and exportability and
+will serve as the DoD CIO’s input at the appropriate milestone.
+
+
+3.4. PRODUCTION STAGE.
+
+    a. The purpose of this stage is to demonstrate that a stable design of the completed waveform
+software has been successfully integrated into production radios functioning in a system. The
+system meets capability requirements verified by final developmental and pre-operational
+testing. The DoD CIO will provide a waveform review recommendation for the prototype stage
+(or entry into the production stage) before this stage begins.
+
+     b. This stage dictates a maturity level where the waveform has completed design and
+development, including developmental testing. The waveform software has no outstanding
+critical deficiencies, has been integrated into the radio platform, and is ready for validation in a
+relevant operational environment. The waveform sponsor will submit an updated WAA in
+accordance with the DoD IR entrance criteria.
+
+
+
+SECTION 3: PROCEDURES                                                                                  16
+                                                              DoDI 4630.09, November 23, 2020
+
+
+    c. The DoD CIO will issue a production stage waveform disposition memorandum to the
+Lead Service, Sponsor, MDA, any other relevant acquisition authorities, and the Director of
+JTNC, as appropriate. The memorandum will recommend either interim registration of the
+waveform or disapproval of the waveform with the rationale for disapproval. The memorandum
+will also provide an observation of the JTNC analyses in interoperability, security, reusability,
+and exportability and will serve as the DoD CIO’s input at the appropriate milestone.
+
+
+3.5. OPERATIONAL STAGE.
+
+    a. The purpose of this stage is to demonstrate waveform maturity and, if available,
+completeness of software and documentation. This is done by analyzing operational test results
+and ensuring that waveform materials are stored in the DoD IR. The DoD CIO will provide a
+waveform review recommendation for the production stage (or entry into the operational stage)
+before this stage begins. The waveform sponsor will submit an updated WAA in accordance
+with the DoD IR entrance criteria.
+
+    b. The DoD CIO will issue an operational stage waveform disposition memorandum to the
+Lead Service, Sponsor, MDA, any other relevant acquisition authorities, and the Director of
+JTNC, as appropriate. The memorandum will recommend either interim registration of the
+waveform or disapproval of the waveform with the rationale for disapproval. The memorandum
+will also provide an observation of the JTNC analyses with regard to interoperability, security,
+reusability, and exportability and will serve as the DoD CIO’s input at the appropriate milestone.
+
+
+3.6. REGISTRATION STAGE.
+
+    a. The purpose of this stage is to ensure that waveform software, documentation, and
+standards are properly catalogued, to the extent possible, before adding the waveform to the DoD
+IR. The DoD CIO will provide a waveform review recommendation for the operational stage (or
+entry into the registration stage) before this stage begins.
+
+   b. If changes are made to the waveform technical information in the DoD IR, those changes
+must be documented during this stage.
+
+    c. The Lead Service or Sponsor will submit the waveform standard to DISA for inclusion in
+the DISR, if applicable.
+
+    d. The Lead Service or Sponsor will submit the finalized Global Information Grid technical
+profile to the Office of the DoD CIO containing minimum interoperability implementation
+guidance to cover instances where the waveform is part of a system that connects to the DoD
+Information Networks.
+
+   e. Upon the successful completion of the operational stage, the DoD CIO will review the
+waveform assessment and draft a disposition waveform memorandum. This disposition
+memorandum will be provided to the C3LB for consideration of entrance into the DoD IR. Any
+waveforms disapproved by the C3LB will be provided to the Lead Service or Sponsor for
+
+
+
+SECTION 3: PROCEDURES                                                                           17
+                                                              DoDI 4630.09, November 23, 2020
+
+
+appropriate action. C3LB approved waveforms will be added to the DoD IR as a registered
+waveform.
+
+
+3.7. DOD WAVEFORM SUSTAINMENT.
+
+   a. The purpose of this recurring activity is to ensure that registered DoD waveforms are well
+maintained and accurately catalogued over time. This will aid DoD efforts to reuse existing
+waveforms and wireless communication products.
+
+    b. The Lead Service or Sponsor will ensure that a registered DoD waveform’s materials in
+the DoD IR are maintained in accordance with the DoD IR entrance criteria throughout the
+waveform’s lifecycle. All materials must be marked with accurate release dates and waveform
+version numbers, and applicable IP rights restrictions.
+
+    c. The DoD CIO will review the DoD IR as necessary with input from the Director, DISA;
+CJCS; Director of JTNC; the Secretaries of the Military Departments; DIRNSA/CHCSS;
+USD(A&S); and USD(I&S) to retire obsolete waveforms. This review will include verification
+that the waveforms in the DISR match the DoD IR. At a minimum, the materials for each
+waveform in the DoD IR will be reviewed annually.
+
+    d. Life-cycle sustainment of the waveforms residing in the DoD IR is the responsibility of
+the waveform Lead Service or Sponsor. Life-cycle sustainment considerations include:
+maintenance; sustainment engineering; data management; configuration management; cyber-
+security; and protection of critical program information including anti-tamper provisions;
+supportability; exportability; and interoperability
+
+
+3.8. EXPORTABILITY ANALYSIS.
+
+An exportability analysis:
+
+    a. Provides technical analysis of the waveform and its associated software artifacts against
+published requirements for interoperability, security, and reusability, as they pertain to the
+transfer of the waveform capability to foreign partners. The exportability analysis will provide
+technical information aggregating the waveform’s interoperability, security, and reusability
+characteristics, as well as identifying potential impact areas to support a transfer
+recommendation.
+
+   b. Assists DoD agencies with overseeing the protection of critical technologies of wireless
+communications exported under FMS or DCS and licenses or international agreements.
+
+    c. Provides a recommendation on whether the waveform capability should be transferred to
+foreign partners. Each recommendation will be based on an evaluation of aggregate factors that
+affect the waveform’s capability for interoperable and secure operations within a coalition
+environment. This recommendation will be submitted to the Lead Service or Sponsor for review.
+If accepted by the Lead Service or Sponsor, the recommendation may become a formal
+technology transfer position and can be used by stakeholders evaluating requests via FMS or
+
+
+SECTION 3: PROCEDURES                                                                              18
+                                                              DoDI 4630.09, November 23, 2020
+
+
+DCS or, in the context of an international agreement, for the export of the waveform capability
+on a properly protected U.S. platform.
+
+
+
+
+SECTION 3: PROCEDURES                                                                             19
+                                                    DoDI 4630.09, November 23, 2020
+
+
+
+                                GLOSSARY
+
+G.1. ACRONYMS.
+
+Acronym          Meaning
+
+C3LB             Command, Control, and Communications Leadership Board
+CJCS             Chairman of the Joint Chiefs of Staff
+COTS             commercial off-the-shelf
+
+DAS              Defense Acquisition System
+DCS              direct commercial sales
+DIRNSA/CHCSS     Director, National Security Agency/Chief, Central Security Service
+DISA             Defense Information Systems Agency
+DISR             DoD Information Technology Standards Registry
+DoD CIO          Department of Defense Chief Information Officer
+DoD IR           DoD Information Repository
+DoDD             DoD directive
+DoDI             DoD instruction
+DOT&E            Director of Operational Test and Evaluation
+
+FMS              foreign military sales
+
+IP               intellectual property
+IT               information technology
+
+JTNC             Joint Tactical Networking Center
+
+MDA              Milestone Decision Authority
+MS B             Milestone B
+MS C             Milestone C
+
+NDI              non-development item
+
+PoR              Program of Record
+PSA              Principal Staff Assistant
+
+USD(A&S)         Under Secretary of Defense for Acquisition and Sustainment
+USD(I&S)         Under Secretary of Defense for Intelligence and Security
+
+WAA              waveform analysis application
+
+
+
+
+GLOSSARY                                                                              20
+                                                                DoDI 4630.09, November 23, 2020
+
+
+G.2. DEFINITIONS.
+
+Unless otherwise noted, these terms and their definitions are for the purpose of this issuance.
+
+ TERM                      DEFINITION
+
+ Application               A set of software instructions and standards that allows machine-to-
+ Programming               machine communications.
+ Interface
+
+ Core                      Core waveforms are those waveforms that are essential to conducting
+                           command and control in a multi-domain, joint or combined
+                           environments.
+
+ DoD IR                    The information system site storing the list of proposed and
+                           registered DoD waveforms, waveform software code, and supporting
+                           design, test, and waveform analysis materials. The DoD IR contains
+                           sufficient information to describe the waveform adequately,
+                           including but not limited to, linking to the appropriate software code,
+                           hardware description files, data dictionaries, parameters,
+                           development environment files necessary for compilation, and
+                           documentation to allow a user to assemble and compile or otherwise
+                           implement a waveform.
+
+ foreign disclosure        Displaying or revealing classified national intelligence or controlled
+                           unclassified information, whether orally, in writing, or in any other
+                           medium, to any foreign entities without providing the foreign entity a
+                           copy of such information for retention.
+
+ IP Rights                 The license rights or other legal authorization to use, modify,
+                           reproduce, perform, display, release, or disclose IP (e.g., patents,
+                           copyrights, trade secrets, trademarks).
+
+ IT                        Any equipment, or interconnected system(s) or subsystem(s) of
+                           equipment, that is used in the automatic acquisition, storage, analysis,
+                           evaluation, manipulation, management, movement, control, display,
+                           switching, interchange, transmission, or reception of data or
+                           information by the agency. Includes computers, ancillary equipment
+                           (including imaging peripherals, input, output, and storage devices
+                           necessary for security and surveillance), peripheral equipment
+                           designed to be controlled by the central processing unit of a
+                           computer, software, firmware and similar procedures, services
+                           (including support services), and related resources.
+
+                              Does not include any equipment that:
+
+                                  Is acquired by a contractor incidental to a contract.
+
+
+GLOSSARY                                                                                          21
+                                                            DoDI 4630.09, November 23, 2020
+
+
+TERM                    DEFINITION
+
+                                Contains imbedded IT that is used as an integral part of the
+                        product, but the principal function of which is not the acquisition,
+                        storage, analysis, evaluation, manipulation, management, movement,
+                        control, display, switching, interchange, transmission, or reception of
+                        data or information. For example, HVAC equipment, such as
+                        thermostats or temperature control devices, and medical equipment
+                        where IT is integral to its operation, are not IT.
+
+life-cycle sustainment For DAS programs, this refers to the Life Cycle Sustainment Plan
+plan                   form. For developments outside DAS, this is the plan used by the
+                       Office of the DoD CIO and waveform sponsor to outline waveform
+                       sustainment activities, regression testing requirements, and testing
+                       thresholds. The plan will provide authority for modifying a
+                       waveform within approved performance and security parameters
+                       during sustainment. Waveform changes outside of those outlined by
+                       this plan will be subject to review according to this issuances,
+                       beginning with the Conceptual, Prototype, Production, or Operational
+                       stages, as determined by the DoD CIO and waveform sponsor.
+
+National Security       Defined in Section 11103 of Title 40, U.S. Code.
+Systems
+
+Non-Core                Non-core waveforms are typically operated by a single Service for a
+                        specific purpose within a Service-unique environment.
+
+review process          The process for analyzing waveforms. These reviews are intended to
+                        ensure interoperability, security, reusability, exportability, and
+                        operational value of waveform technology.
+
+tactical data link      A Joint Staff-approved, standardized communication link suitable for
+                        transmission of digital information, which interfaces two or more
+                        command and control or weapons systems via a single or multiple
+                        network architecture and multiple communication media for
+                        exchange of tactical information.
+
+joint communication     A reference repository of vendor-submitted waveforms capabilities
+marketplace             that may be of use to the DoD.
+
+waveform                An electromagnetic signal-in-space, typically defined by Open
+                        Systems Interconnection model layers 1 through 3, along with the
+                        controls and processes for a desired function or application. These
+                        processes do not include the message content.
+
+
+
+
+GLOSSARY                                                                                      22
+                                                          DoDI 4630.09, November 23, 2020
+
+
+TERM                   DEFINITION
+
+waveform developer     The person, business, group, or organization responsible for
+                       designing and developing the waveform.
+
+waveform disposition   The outcome of a waveform review as determined by the Office of
+                       the DoD CIO and key stakeholders.
+
+wireless               Defined in DoDD 8100.02.
+
+
+
+
+GLOSSARY                                                                                 23
+                                                                              DoDI 4630.09, November 23, 2020
+
+
+                                                 REFERENCES
+Chairman of the Joint Chiefs of Staff Instruction 5123.01H, “Charter of the Joint Requirements
+   Oversight Council (JROC) and the Implementation of the Joint Capabilities Integration and
+   Development System,” August 31, 2018
+Deputy Secretary of Defense Memorandum, “Enhancing DoD’s Joint Tactical Networks and
+   Datalink Modernization,” March 29, 2019
+DoD Directive 5143.01, “Under Secretary of Defense for Intelligence and Security
+   (USD(I&S)),” October 24, 2014, as amended
+DoD Directive 5144.02, “DoD Chief Information Officer (DoD CIO),” November 21, 2014, as
+   amended
+DoD Directive 5230.11, “Disclosure of Classified Military Information to Foreign Governments
+   and International Organizations,” June 16, 1992
+DoD Directive 8100.02, “Use of Commercial Wireless Devices, Services, and Technologies in
+   the Department of Defense (DoD) Global Information Grid (GIG),” April 14, 2004
+DoD Instruction 2040.02, “International Transfer of Technology, Articles, and Services,” July
+   31, 2017
+DoD Instruction 4120.24, “Defense Standardization Program (DSP),” July 13, 2011, as amended
+DoD Instruction 5000.02, “Operation of the Adaptive Acquisition Framework,” January 23,
+   2020
+DoD Instruction 8330.01, “Interoperability of Information Technology (IT), Including National
+   Security Systems (NSS),” May 21, 2014, as amended
+DoD Instruction 8410.03, “Network Management (NM),” August 29, 2012, as amended
+DoD Manual 4120.24, “Defense Standardization Program (DSP) Procedures,” September 24,
+   2014, as amended
+Executive Order 12333, “United States Intelligence Activities,” December 4, 1981
+Memorandum of Agreement between the Department of Defense and the Department of
+   Homeland Security Regarding Department of Defense and U.S. Coast Guard Cooperation on
+   Cybersecurity and Cyberspace Operations, January 19, 20171
+U.S. Code, Title 10, Section 142
+U.S. Code, Title 40, Section 11103
+
+
+
+
+1 Available at https://dcms.uscg.afpims.mil/publicmedia/2017/Jul/19/2001780017/-1/-1/0/DHS-DOD%20USCG%20CYBER%20MOA.PDF
+
+
+
+
+REFERENCES                                                                                                                24

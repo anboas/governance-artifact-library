@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,100 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 1,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "catalogued_node_count": 2,
+    "uncatalogued_gap_count": 4,
+    "evidence_backed_edge_count": 1,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:111-84",
+      "label": "Public Law 111-84",
+      "title": "Public Law 111-84",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:111-84",
+      "count": 1,
+      "lines_sample": [
+        174
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:13160",
+      "label": "Executive Order 13160",
+      "title": "Executive Order 13160",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:13160",
+      "count": 2,
+      "lines_sample": [
+        190,
+        615
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodd-1342-20",
+      "label": "DoDD 1342.20",
+      "title": "DoDD 1342.20: Department of Defense Education Activity (DoDEA)",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "gap:dodd:5400.11",
+      "label": "DoDD 5400.11",
+      "title": "DoDD 5400.11",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodd",
+      "source_reference_id": "dodd:5400.11",
+      "count": 1,
+      "lines_sample": [
+        16
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:dodi:1342.15",
+      "label": "DoDI 1342.15",
+      "title": "DoDI 1342.15",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodi",
+      "source_reference_id": "dodi:1342.15",
+      "count": 1,
+      "lines_sample": [
+        243
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
     {
       "id": "dodi-1342-29",
       "label": "DoDI 1342.29",
@@ -83,20 +167,113 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodd-1342-20->dodi-1342-29:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-1342-20",
+      "source_label": "DoDD 1342.20",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1342-29",
+      "target_label": "DoDI 1342.29",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:1342.20",
+        "label": "DoDD 1342.20",
+        "first_line": 240,
+        "lines_sample": [
+          240
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:executive-order:13160",
+      "label": "Executive Order 13160",
+      "title": "Executive Order 13160",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:13160",
+      "count": 2,
+      "lines_sample": [
+        190,
+        615
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:dodd:5400.11",
+      "label": "DoDD 5400.11",
+      "title": "DoDD 5400.11",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodd",
+      "source_reference_id": "dodd:5400.11",
+      "count": 1,
+      "lines_sample": [
+        16
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:dodi:1342.15",
+      "label": "DoDI 1342.15",
+      "title": "DoDI 1342.15",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodi",
+      "source_reference_id": "dodi:1342.15",
+      "count": 1,
+      "lines_sample": [
+        243
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:111-84",
+      "label": "Public Law 111-84",
+      "title": "Public Law 111-84",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:111-84",
+      "count": 1,
+      "lines_sample": [
+        174
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-1342-29",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",

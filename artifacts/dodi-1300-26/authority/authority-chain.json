@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,64 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "upstream_edge_count": 2,
+    "downstream_edge_count": 2,
+    "catalogued_node_count": 5,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:executive-order:12333",
+      "label": "Executive Order 12333",
+      "title": "Executive Order 12333",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:12333",
+      "count": 2,
+      "lines_sample": [
+        216,
+        1044
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodd-5118-03",
+      "label": "DoDD 5118.03",
+      "title": "DoDD 5118.03: Under Secretary of Defense (Comptroller)/Chief Financial Officer, Department of Defense",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1025-10",
+      "label": "DoDI 1025.10",
+      "title": "DoDI 1025.10: Chief Financial Officer (CFO) Academy",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-1300-26",
       "label": "DoDI 1300.26",
@@ -83,27 +131,169 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-1400-25",
+      "label": "DoDI 1400.25",
+      "title": "DoDI 1400.25: DoD Civilian Personnel Management System",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-7600-02",
+      "label": "DoDI 7600.02",
+      "title": "DoDI 7600.02: Audit Policies",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-1400-25->dodi-1300-26:references:resolved_reference",
+      "source_artifact_id": "dodi-1400-25",
+      "source_label": "DoDI 1400.25",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1300-26",
+      "target_label": "DoDI 1300.26",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1400.25",
+        "label": "DoDI 1400.25",
+        "first_line": 358,
+        "lines_sample": [
+          358,
+          396,
+          452
+        ],
+        "count": 3
+      }
+    },
+    {
+      "id": "dodi-7600-02->dodi-1300-26:references:resolved_reference",
+      "source_artifact_id": "dodi-7600-02",
+      "source_label": "DoDI 7600.02",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1300-26",
+      "target_label": "DoDI 1300.26",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:7600.02",
+        "label": "DoDI 7600.02",
+        "first_line": 203,
+        "lines_sample": [
+          203
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-1300-26->dodd-5118-03:references_upstream:resolved_reference",
+      "source_artifact_id": "dodi-1300-26",
+      "source_label": "DoDI 1300.26",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-5118-03",
+      "target_label": "DoDD 5118.03",
+      "target_lane": "dod",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1300.26",
+        "label": "DoDI 1300.26",
+        "first_line": 272,
+        "lines_sample": [
+          272
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1300-26->dodi-1025-10:references:resolved_reference",
+      "source_artifact_id": "dodi-1300-26",
+      "source_label": "DoDI 1300.26",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1025-10",
+      "target_label": "DoDI 1025.10",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1300.26",
+        "label": "DoDI 1300.26",
+        "first_line": 101,
+        "lines_sample": [
+          101,
+          216
+        ],
+        "count": 2
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:executive-order:12333",
+      "label": "Executive Order 12333",
+      "title": "Executive Order 12333",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:12333",
+      "count": 2,
+      "lines_sample": [
+        216,
+        1044
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-1300-26",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-1300-26",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 2
     }
   ]
 }

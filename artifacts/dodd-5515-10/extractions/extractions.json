@@ -2,19 +2,427 @@
   "id": "dodd-5515-10",
   "generated_at": "2026-06-12T22:50:00.000Z",
   "extractor_version": "governance-extractor-rules-v1",
-  "extraction_status": "source_text_unavailable",
-  "source_text_path": null,
+  "extraction_status": "parsed",
+  "source_text_path": "artifacts/dodd-5515-10/text/extracted.txt",
   "extraction_path": "artifacts/dodd-5515-10/extractions/extractions.json",
   "summary": {
-    "entity_count": 0,
-    "reference_count": 0,
-    "concept_count": 0,
-    "annotated_line_count": 0,
-    "total_line_count": 0
+    "entity_count": 7,
+    "reference_count": 2,
+    "concept_count": 1,
+    "annotated_line_count": 20,
+    "total_line_count": 68
   },
-  "entities": [],
-  "references": [],
-  "concepts": [],
-  "line_annotations": [],
-  "blocked_reason": "No extracted_text_path is currently mirrored for this source-known artifact."
+  "entities": [
+    {
+      "id": "department-of-defense",
+      "type": "department",
+      "label": "Department of Defense",
+      "aliases": [
+        "Department of Defense",
+        "DoD",
+        "Department of War",
+        "DoW"
+      ],
+      "count": 9,
+      "first_line": 1,
+      "lines_sample": [
+        1,
+        9,
+        16,
+        31,
+        32,
+        33,
+        38,
+        45,
+        52
+      ]
+    },
+    {
+      "id": "army",
+      "type": "service",
+      "label": "Department of the Army",
+      "aliases": [
+        "Army",
+        "Department of the Army"
+      ],
+      "count": 2,
+      "first_line": 51,
+      "lines_sample": [
+        51,
+        55
+      ]
+    },
+    {
+      "id": "air-force",
+      "type": "service",
+      "label": "Department of the Air Force",
+      "aliases": [
+        "Air Force",
+        "Department of the Air Force"
+      ],
+      "count": 1,
+      "first_line": 56,
+      "lines_sample": [
+        56
+      ]
+    },
+    {
+      "id": "joint-staff",
+      "type": "joint",
+      "label": "Joint Staff",
+      "aliases": [
+        "Joint Staff",
+        "Chairman of the Joint Chiefs of Staff"
+      ],
+      "count": 1,
+      "first_line": 30,
+      "lines_sample": [
+        30
+      ]
+    },
+    {
+      "id": "secretary-of-defense",
+      "type": "role",
+      "label": "Secretary of Defense",
+      "aliases": [
+        "Secretary of Defense",
+        "SecDef"
+      ],
+      "count": 1,
+      "first_line": 29,
+      "lines_sample": [
+        29
+      ]
+    },
+    {
+      "id": "secretary-of-the-navy",
+      "type": "role",
+      "label": "Secretary of the Navy",
+      "aliases": [
+        "Secretary of the Navy",
+        "SECNAV"
+      ],
+      "count": 1,
+      "first_line": 55,
+      "lines_sample": [
+        55
+      ]
+    },
+    {
+      "id": "navy",
+      "type": "service",
+      "label": "United States Navy",
+      "aliases": [
+        "Navy",
+        "United States Navy"
+      ],
+      "count": 1,
+      "first_line": 55,
+      "lines_sample": [
+        55
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "usc:31-u-s-c-3701",
+      "type": "U.S. Code",
+      "label": "31 U.S.C. 3701",
+      "reference_family": "usc",
+      "count": 1,
+      "first_line": 12,
+      "lines_sample": [
+        12
+      ]
+    },
+    {
+      "id": "dodd:dodd-5515-10",
+      "type": "DoD Directive",
+      "label": "DoDD 5515.10",
+      "reference_family": "dodd",
+      "count": 1,
+      "first_line": 40,
+      "lines_sample": [
+        40
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "governance",
+      "type": "governance",
+      "label": "Governance",
+      "aliases": [
+        "governance",
+        "oversight",
+        "policy"
+      ],
+      "category": "governance",
+      "count": 2,
+      "first_line": 36,
+      "lines_sample": [
+        36,
+        38
+      ]
+    }
+  ],
+  "line_annotations": [
+    {
+      "line": 1,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 9,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 12,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "U.S. Code",
+          "label": "31 U.S.C. 3701",
+          "id": "usc:31-u-s-c-3701"
+        }
+      ]
+    },
+    {
+      "line": 16,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 23,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 29,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 30,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "joint",
+          "label": "Joint Staff",
+          "id": "joint-staff"
+        }
+      ]
+    },
+    {
+      "line": 31,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 32,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 33,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 36,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        }
+      ]
+    },
+    {
+      "line": 38,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 40,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Directive",
+          "label": "DoDD 5515.10",
+          "id": "dodd:dodd-5515-10"
+        }
+      ]
+    },
+    {
+      "line": 45,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 46,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 48,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 51,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "service",
+          "label": "Department of the Army",
+          "id": "army"
+        }
+      ]
+    },
+    {
+      "line": 52,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 55,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of the Navy",
+          "id": "secretary-of-the-navy"
+        },
+        {
+          "kind": "entity",
+          "type": "service",
+          "label": "Department of the Army",
+          "id": "army"
+        },
+        {
+          "kind": "entity",
+          "type": "service",
+          "label": "United States Navy",
+          "id": "navy"
+        }
+      ]
+    },
+    {
+      "line": 56,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "service",
+          "label": "Department of the Air Force",
+          "id": "air-force"
+        }
+      ]
+    }
+  ],
+  "blocked_reason": null
 }

@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,78 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "upstream_edge_count": 4,
+    "downstream_edge_count": 2,
+    "catalogued_node_count": 5,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 6,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "dodd-3002-01",
+      "label": "DoDD 3002.01",
+      "title": "DoDD 3002.01: Personnel Recovery in the Department of Defense",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodd-5111-10",
+      "label": "DoDD 5111.10",
+      "title": "DoDD 5111.10: Assistant Secretary of Defense for Special Operations and Low-Intensity Conflict",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "gap:dodd:5400.11",
+      "label": "DoDD 5400.11",
+      "title": "DoDD 5400.11",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodd",
+      "source_reference_id": "dodd:5400.11",
+      "count": 1,
+      "lines_sample": [
+        673
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodi-1300-18",
+      "label": "DoDI 1300.18",
+      "title": "DoDI 1300.18: DoD Personnel Casualty Matters, Policies, and Procedures",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-3002-03",
       "label": "DoDI 3002.03",
@@ -83,27 +145,194 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-3020-41",
+      "label": "DoDI 3020.41",
+      "title": "DoDI 3020.41: Operational Contract Support Outside the United States",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "upstream_edges": [
+    {
+      "id": "dodd-3002-01->dodi-3002-03:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-3002-01",
+      "source_label": "DoDD 3002.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-3002-03",
+      "target_label": "DoDI 3002.03",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:3002.01",
+        "label": "DoDD 3002.01",
+        "first_line": 17,
+        "lines_sample": [
+          17
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodd-5111-10->dodi-3002-03:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-5111-10",
+      "source_label": "DoDD 5111.10",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-3002-03",
+      "target_label": "DoDI 3002.03",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5111.10",
+        "label": "DoDD 5111.10",
+        "first_line": 113,
+        "lines_sample": [
+          113
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1300-18->dodi-3002-03:references:resolved_reference",
+      "source_artifact_id": "dodi-1300-18",
+      "source_label": "DoDI 1300.18",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-3002-03",
+      "target_label": "DoDI 3002.03",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1300.18",
+        "label": "DoDI 1300.18",
+        "first_line": 298,
+        "lines_sample": [
+          298
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-3020-41->dodi-3002-03:references:resolved_reference",
+      "source_artifact_id": "dodi-3020-41",
+      "source_label": "DoDI 3020.41",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-3002-03",
+      "target_label": "DoDI 3002.03",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:3020.41",
+        "label": "DoDI 3020.41",
+        "first_line": 51,
+        "lines_sample": [
+          51
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-3002-03->dodd-3002-01:references_upstream:resolved_reference",
+      "source_artifact_id": "dodi-3002-03",
+      "source_label": "DoDI 3002.03",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-3002-01",
+      "target_label": "DoDD 3002.01",
+      "target_lane": "dod",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:3002.03",
+        "label": "DoDI 3002.03",
+        "first_line": 532,
+        "lines_sample": [
+          532
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-3002-03->dodi-3020-41:references:resolved_reference",
+      "source_artifact_id": "dodi-3002-03",
+      "source_label": "DoDI 3002.03",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-3020-41",
+      "target_label": "DoDI 3020.41",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:3002.03",
+        "label": "DoDI 3002.03",
+        "first_line": 2623,
+        "lines_sample": [
+          2623
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:dodd:5400.11",
+      "label": "DoDD 5400.11",
+      "title": "DoDD 5400.11",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodd",
+      "source_reference_id": "dodd:5400.11",
+      "count": 1,
+      "lines_sample": [
+        673
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-3002-03",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 4
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-3002-03",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 2
     }
   ]
 }

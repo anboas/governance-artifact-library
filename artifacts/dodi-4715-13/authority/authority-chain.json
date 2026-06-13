@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,46 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "upstream_edge_count": 5,
+    "downstream_edge_count": 1,
+    "catalogued_node_count": 6,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 6,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "dodi-3030-03",
+      "label": "DoDI 3030.03",
+      "title": "DoDI 3030.03: Joint Land Use Study (JLUS) Program",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-4165-57",
+      "label": "DoDI 4165.57",
+      "title": "DoDI 4165.57: Air Installations Compatible Use Zones",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-4715-13",
       "label": "DoDI 4715.13",
@@ -83,27 +113,278 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-4715-24",
+      "label": "DoDI 4715.24",
+      "title": "DoDI 4715.24: The Readiness and Environmental Protection Integration (REPI) Program and Encroachment Management",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "gap:dodi:5000.02",
+      "label": "DoDI 5000.02",
+      "title": "DoDI 5000.02",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodi",
+      "source_reference_id": "dodi:5000.02",
+      "count": 1,
+      "lines_sample": [
+        581
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodi-6055-05",
+      "label": "DoDI 6055.05",
+      "title": "DoDI 6055.05: Occupational and Environmental Health (OEH)",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-6055-12",
+      "label": "DoDI 6055.12",
+      "title": "DoDI 6055.12: Hearing Conservation Program",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "gap:opnavinst:3550.1a",
+      "label": "OPNAVINST 3550.1A",
+      "title": "OPNAVINST 3550.1A",
+      "artifact_type": "OPNAV Instruction",
+      "lane": "service",
+      "lane_label": "Service",
+      "hierarchy_rank": 82,
+      "reference_family": "opnavinst",
+      "source_reference_id": "opnavinst:3550.1a",
+      "count": 2,
+      "lines_sample": [
+        619,
+        744
+      ],
+      "status": "uncatalogued",
+      "priority": "low"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-3030-03->dodi-4715-13:references:resolved_reference",
+      "source_artifact_id": "dodi-3030-03",
+      "source_label": "DoDI 3030.03",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4715-13",
+      "target_label": "DoDI 4715.13",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:3030.03",
+        "label": "DoDI 3030.03",
+        "first_line": 606,
+        "lines_sample": [
+          606
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-4165-57->dodi-4715-13:references:resolved_reference",
+      "source_artifact_id": "dodi-4165-57",
+      "source_label": "DoDI 4165.57",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4715-13",
+      "target_label": "DoDI 4715.13",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:4165.57",
+        "label": "DoDI 4165.57",
+        "first_line": 609,
+        "lines_sample": [
+          609
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-4715-24->dodi-4715-13:references:resolved_reference",
+      "source_artifact_id": "dodi-4715-24",
+      "source_label": "DoDI 4715.24",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4715-13",
+      "target_label": "DoDI 4715.13",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:4715.24",
+        "label": "DoDI 4715.24",
+        "first_line": 120,
+        "lines_sample": [
+          120
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-6055-05->dodi-4715-13:references:resolved_reference",
+      "source_artifact_id": "dodi-6055-05",
+      "source_label": "DoDI 6055.05",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4715-13",
+      "target_label": "DoDI 4715.13",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6055.05",
+        "label": "DoDI 6055.05",
+        "first_line": 396,
+        "lines_sample": [
+          396,
+          582
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "dodi-6055-12->dodi-4715-13:references:resolved_reference",
+      "source_artifact_id": "dodi-6055-12",
+      "source_label": "DoDI 6055.12",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4715-13",
+      "target_label": "DoDI 4715.13",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6055.12",
+        "label": "DoDI 6055.12",
+        "first_line": 397,
+        "lines_sample": [
+          397
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-4715-13->dodi-4165-57:references:resolved_reference",
+      "source_artifact_id": "dodi-4715-13",
+      "source_label": "DoDI 4715.13",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4165-57",
+      "target_label": "DoDI 4165.57",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:4715.13",
+        "label": "DoDI 4715.13",
+        "first_line": 429,
+        "lines_sample": [
+          429
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:opnavinst:3550.1a",
+      "label": "OPNAVINST 3550.1A",
+      "title": "OPNAVINST 3550.1A",
+      "artifact_type": "OPNAV Instruction",
+      "lane": "service",
+      "lane_label": "Service",
+      "hierarchy_rank": 82,
+      "reference_family": "opnavinst",
+      "source_reference_id": "opnavinst:3550.1a",
+      "count": 2,
+      "lines_sample": [
+        619,
+        744
+      ],
+      "status": "uncatalogued",
+      "priority": "low"
+    },
+    {
+      "id": "gap:dodi:5000.02",
+      "label": "DoDI 5000.02",
+      "title": "DoDI 5000.02",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodi",
+      "source_reference_id": "dodi:5000.02",
+      "count": 1,
+      "lines_sample": [
+        581
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-4715-13",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 5
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-4715-13",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 1
     }
   ]
 }

@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -64,13 +64,32 @@
     "upstream_edge_count": 0,
     "downstream_edge_count": 0,
     "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
+    "uncatalogued_gap_count": 1,
     "evidence_backed_edge_count": 0,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
+    {
+      "id": "gap:executive-order:12473",
+      "label": "Executive Order 12473",
+      "title": "Executive Order 12473",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:12473",
+      "count": 3,
+      "lines_sample": [
+        19,
+        91,
+        413
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
     {
       "id": "dodi-5500-17",
       "label": "DoDI 5500.17",
@@ -83,13 +102,33 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     }
   ],
   "upstream_edges": [],
   "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:executive-order:12473",
+      "label": "Executive Order 12473",
+      "title": "Executive Order 12473",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:12473",
+      "count": 3,
+      "lines_sample": [
+        19,
+        91,
+        413
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",

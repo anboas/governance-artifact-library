@@ -2,19 +2,1680 @@
   "id": "dodi-5205-08",
   "generated_at": "2026-06-12T22:50:00.000Z",
   "extractor_version": "governance-extractor-rules-v1",
-  "extraction_status": "source_text_unavailable",
-  "source_text_path": null,
+  "extraction_status": "parsed",
+  "source_text_path": "artifacts/dodi-5205-08/text/extracted.txt",
   "extraction_path": "artifacts/dodi-5205-08/extractions/extractions.json",
   "summary": {
-    "entity_count": 0,
-    "reference_count": 0,
-    "concept_count": 0,
-    "annotated_line_count": 0,
-    "total_line_count": 0
+    "entity_count": 3,
+    "reference_count": 4,
+    "concept_count": 8,
+    "annotated_line_count": 114,
+    "total_line_count": 279
   },
-  "entities": [],
-  "references": [],
-  "concepts": [],
-  "line_annotations": [],
-  "blocked_reason": "No extracted_text_path is currently mirrored for this source-known artifact."
+  "entities": [
+    {
+      "id": "department-of-defense",
+      "type": "department",
+      "label": "Department of Defense",
+      "aliases": [
+        "Department of Defense",
+        "DoD",
+        "Department of War",
+        "DoW"
+      ],
+      "count": 38,
+      "first_line": 1,
+      "lines_sample": [
+        1,
+        12,
+        20,
+        23,
+        34,
+        57,
+        58,
+        61,
+        62,
+        101,
+        106,
+        108
+      ]
+    },
+    {
+      "id": "secretary-of-defense",
+      "type": "role",
+      "label": "Secretary of Defense",
+      "aliases": [
+        "Secretary of Defense",
+        "SecDef"
+      ],
+      "count": 8,
+      "first_line": 4,
+      "lines_sample": [
+        4,
+        15,
+        33,
+        119,
+        134,
+        135,
+        148,
+        247
+      ]
+    },
+    {
+      "id": "joint-staff",
+      "type": "joint",
+      "label": "Joint Staff",
+      "aliases": [
+        "Joint Staff",
+        "Chairman of the Joint Chiefs of Staff"
+      ],
+      "count": 1,
+      "first_line": 56,
+      "lines_sample": [
+        56
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "dodi:dodi-5205-08",
+      "type": "DoD Instruction",
+      "label": "DoDI 5205.08",
+      "reference_family": "dodi",
+      "count": 9,
+      "first_line": 24,
+      "lines_sample": [
+        24,
+        46,
+        99,
+        129,
+        176,
+        199,
+        207,
+        215,
+        233
+      ]
+    },
+    {
+      "id": "executive-order:executive-order-12333",
+      "type": "Executive Order",
+      "label": "Executive Order 12333",
+      "reference_family": "executive-order",
+      "count": 2,
+      "first_line": 95,
+      "lines_sample": [
+        95,
+        265
+      ]
+    },
+    {
+      "id": "public-law:public-law-116-92",
+      "type": "Public Law",
+      "label": "Public Law 116-92",
+      "reference_family": "public-law",
+      "count": 2,
+      "first_line": 120,
+      "lines_sample": [
+        120,
+        266
+      ]
+    },
+    {
+      "id": "section:section-552a",
+      "type": "Section",
+      "label": "Section 552a",
+      "reference_family": "section",
+      "count": 1,
+      "first_line": 268,
+      "lines_sample": [
+        268
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "encryption",
+      "type": "cybersecurity",
+      "label": "Encryption",
+      "aliases": [
+        "encryption",
+        "cryptographic",
+        "cryptography"
+      ],
+      "category": "cybersecurity",
+      "count": 32,
+      "first_line": 2,
+      "lines_sample": [
+        2,
+        12,
+        22,
+        40,
+        63,
+        67,
+        70,
+        72,
+        74,
+        78,
+        84,
+        89
+      ]
+    },
+    {
+      "id": "governance",
+      "type": "governance",
+      "label": "Governance",
+      "aliases": [
+        "governance",
+        "oversight",
+        "policy"
+      ],
+      "category": "governance",
+      "count": 6,
+      "first_line": 21,
+      "lines_sample": [
+        21,
+        30,
+        101,
+        156,
+        227,
+        241
+      ]
+    },
+    {
+      "id": "privacy",
+      "type": "compliance",
+      "label": "Privacy",
+      "aliases": [
+        "privacy",
+        "personally identifiable information",
+        "PII"
+      ],
+      "category": "compliance",
+      "count": 4,
+      "first_line": 157,
+      "lines_sample": [
+        157,
+        246,
+        258,
+        268
+      ]
+    },
+    {
+      "id": "records-management",
+      "type": "information_management",
+      "label": "Records Management",
+      "aliases": [
+        "records management",
+        "records disposition"
+      ],
+      "category": "information_management",
+      "count": 2,
+      "first_line": 161,
+      "lines_sample": [
+        161,
+        252
+      ]
+    },
+    {
+      "id": "reporting",
+      "type": "oversight",
+      "label": "Reporting",
+      "aliases": [
+        "report",
+        "reporting",
+        "submit to Congress"
+      ],
+      "category": "oversight",
+      "count": 2,
+      "first_line": 189,
+      "lines_sample": [
+        189,
+        250
+      ]
+    },
+    {
+      "id": "compliance",
+      "type": "compliance",
+      "label": "Compliance",
+      "aliases": [
+        "compliance",
+        "comply",
+        "shall comply"
+      ],
+      "category": "compliance",
+      "count": 1,
+      "first_line": 167,
+      "lines_sample": [
+        167
+      ]
+    },
+    {
+      "id": "implementation",
+      "type": "execution",
+      "label": "Implementation",
+      "aliases": [
+        "implementation",
+        "implementing",
+        "execute",
+        "execution"
+      ],
+      "category": "execution",
+      "count": 1,
+      "first_line": 135,
+      "lines_sample": [
+        135
+      ]
+    },
+    {
+      "id": "mission",
+      "type": "operations",
+      "label": "Mission",
+      "aliases": [
+        "mission",
+        "operational",
+        "warfighting"
+      ],
+      "category": "operations",
+      "count": 1,
+      "first_line": 68,
+      "lines_sample": [
+        68
+      ]
+    }
+  ],
+  "line_annotations": [
+    {
+      "line": 1,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 2,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 4,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 12,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 15,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 20,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 21,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 22,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 23,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 24,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Instruction",
+          "label": "DoDI 5205.08",
+          "id": "dodi:dodi-5205-08"
+        }
+      ]
+    },
+    {
+      "line": 28,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 30,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        }
+      ]
+    },
+    {
+      "line": 32,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 33,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 34,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 35,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 40,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 46,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Instruction",
+          "label": "DoDI 5205.08",
+          "id": "dodi:dodi-5205-08"
+        }
+      ]
+    },
+    {
+      "line": 49,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 55,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 56,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "joint",
+          "label": "Joint Staff",
+          "id": "joint-staff"
+        }
+      ]
+    },
+    {
+      "line": 57,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 58,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 61,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 62,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 63,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 67,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 68,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "operations",
+          "label": "Mission",
+          "id": "mission"
+        }
+      ]
+    },
+    {
+      "line": 70,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 72,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 74,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 77,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 78,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 81,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 83,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 84,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 88,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 89,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 91,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 95,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "Executive Order",
+          "label": "Executive Order 12333",
+          "id": "executive-order:executive-order-12333"
+        }
+      ]
+    },
+    {
+      "line": 98,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 99,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Instruction",
+          "label": "DoDI 5205.08",
+          "id": "dodi:dodi-5205-08"
+        }
+      ]
+    },
+    {
+      "line": 101,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        }
+      ]
+    },
+    {
+      "line": 102,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 106,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 108,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 111,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 119,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 120,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "Public Law",
+          "label": "Public Law 116-92",
+          "id": "public-law:public-law-116-92"
+        }
+      ]
+    },
+    {
+      "line": 123,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 128,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 129,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Instruction",
+          "label": "DoDI 5205.08",
+          "id": "dodi:dodi-5205-08"
+        }
+      ]
+    },
+    {
+      "line": 132,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 134,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 135,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        },
+        {
+          "kind": "concept",
+          "type": "execution",
+          "label": "Implementation",
+          "id": "implementation"
+        }
+      ]
+    },
+    {
+      "line": 139,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 141,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 142,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 143,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 146,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 147,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 148,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 149,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 152,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 155,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 156,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        }
+      ]
+    },
+    {
+      "line": 157,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "concept",
+          "type": "compliance",
+          "label": "Privacy",
+          "id": "privacy"
+        }
+      ]
+    },
+    {
+      "line": 158,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 160,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 161,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "concept",
+          "type": "information_management",
+          "label": "Records Management",
+          "id": "records-management"
+        }
+      ]
+    },
+    {
+      "line": 163,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 164,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 166,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 167,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "compliance",
+          "label": "Compliance",
+          "id": "compliance"
+        }
+      ]
+    },
+    {
+      "line": 169,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 175,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 176,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Instruction",
+          "label": "DoDI 5205.08",
+          "id": "dodi:dodi-5205-08"
+        }
+      ]
+    },
+    {
+      "line": 179,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 180,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 181,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 183,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 186,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 189,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Reporting",
+          "id": "reporting"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 190,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 193,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 198,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 199,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Instruction",
+          "label": "DoDI 5205.08",
+          "id": "dodi:dodi-5205-08"
+        }
+      ]
+    },
+    {
+      "line": 201,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 206,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 207,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Instruction",
+          "label": "DoDI 5205.08",
+          "id": "dodi:dodi-5205-08"
+        }
+      ]
+    },
+    {
+      "line": 209,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 214,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 215,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Instruction",
+          "label": "DoDI 5205.08",
+          "id": "dodi:dodi-5205-08"
+        }
+      ]
+    },
+    {
+      "line": 227,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        },
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        }
+      ]
+    },
+    {
+      "line": 233,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Instruction",
+          "label": "DoDI 5205.08",
+          "id": "dodi:dodi-5205-08"
+        }
+      ]
+    },
+    {
+      "line": 237,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 241,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        }
+      ]
+    },
+    {
+      "line": 242,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Encryption",
+          "id": "encryption"
+        }
+      ]
+    },
+    {
+      "line": 243,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 244,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 246,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "concept",
+          "type": "compliance",
+          "label": "Privacy",
+          "id": "privacy"
+        }
+      ]
+    },
+    {
+      "line": 247,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        },
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 249,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 250,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Reporting",
+          "id": "reporting"
+        }
+      ]
+    },
+    {
+      "line": 252,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "concept",
+          "type": "information_management",
+          "label": "Records Management",
+          "id": "records-management"
+        }
+      ]
+    },
+    {
+      "line": 254,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 256,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 258,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "concept",
+          "type": "compliance",
+          "label": "Privacy",
+          "id": "privacy"
+        }
+      ]
+    },
+    {
+      "line": 259,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 261,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 263,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 265,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "Executive Order",
+          "label": "Executive Order 12333",
+          "id": "executive-order:executive-order-12333"
+        }
+      ]
+    },
+    {
+      "line": 266,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "Public Law",
+          "label": "Public Law 116-92",
+          "id": "public-law:public-law-116-92"
+        }
+      ]
+    },
+    {
+      "line": 268,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "compliance",
+          "label": "Privacy",
+          "id": "privacy"
+        },
+        {
+          "kind": "reference",
+          "type": "Section",
+          "label": "Section 552a",
+          "id": "section:section-552a"
+        }
+      ]
+    }
+  ],
+  "blocked_reason": null
 }

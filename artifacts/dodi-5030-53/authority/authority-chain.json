@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,65 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 1,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "catalogued_node_count": 2,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 1,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:107-296",
+      "label": "Public Law 107-296",
+      "title": "Public Law 107-296",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:107-296",
+      "count": 1,
+      "lines_sample": [
+        112
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:92-313",
+      "label": "Public Law 92-313",
+      "title": "Public Law 92-313",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:92-313",
+      "count": 1,
+      "lines_sample": [
+        109
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodd-5105-68",
+      "label": "DoDD 5105.68",
+      "title": "DoDD 5105.68: Pentagon Force Protection Agency (PFPA)",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-5030-53",
       "label": "DoDI 5030.53",
@@ -83,20 +132,78 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodd-5105-68->dodi-5030-53:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-5105-68",
+      "source_label": "DoDD 5105.68",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5030-53",
+      "target_label": "DoDI 5030.53",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5105.68",
+        "label": "DoDD 5105.68",
+        "first_line": 31,
+        "lines_sample": [
+          31
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:public-law:107-296",
+      "label": "Public Law 107-296",
+      "title": "Public Law 107-296",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:107-296",
+      "count": 1,
+      "lines_sample": [
+        112
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:92-313",
+      "label": "Public Law 92-313",
+      "title": "Public Law 92-313",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:92-313",
+      "count": 1,
+      "lines_sample": [
+        109
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-5030-53",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",

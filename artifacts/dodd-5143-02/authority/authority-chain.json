@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,67 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 1,
     "downstream_edge_count": 4,
-    "catalogued_node_count": 5,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "catalogued_node_count": 6,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 1,
     "inferred_edge_count": 4,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:115-91",
+      "label": "Public Law 115-91",
+      "title": "Public Law 115-91",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:115-91",
+      "count": 2,
+      "lines_sample": [
+        24,
+        107
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:116-92",
+      "label": "Public Law 116-92",
+      "title": "Public Law 116-92",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:116-92",
+      "count": 2,
+      "lines_sample": [
+        25,
+        109
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodd-5143-01",
+      "label": "DoDD 5143.01",
+      "title": "DoDD 5143.01: Under Secretary of Defense for Intelligence and Security (USD(I&S))",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodd-5143-02",
       "label": "DoDD 5143.02",
@@ -83,7 +134,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     },
     {
@@ -98,7 +149,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -113,7 +164,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -128,7 +179,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -143,11 +194,35 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodd-5143-01->dodd-5143-02:references:resolved_reference",
+      "source_artifact_id": "dodd-5143-01",
+      "source_label": "DoDD 5143.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-5143-02",
+      "target_label": "DoDD 5143.02",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5143.01",
+        "label": "DoDD 5143.01",
+        "first_line": 67,
+        "lines_sample": [
+          67,
+          73
+        ],
+        "count": 2
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "dodd-5143-02->dodi-1000-04:flows_down:inferred_flowdown",
@@ -238,14 +313,51 @@
       }
     }
   ],
-  "uncatalogued_authority_gaps": [],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:public-law:115-91",
+      "label": "Public Law 115-91",
+      "title": "Public Law 115-91",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:115-91",
+      "count": 2,
+      "lines_sample": [
+        24,
+        107
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:116-92",
+      "label": "Public Law 116-92",
+      "title": "Public Law 116-92",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:116-92",
+      "count": 2,
+      "lines_sample": [
+        25,
+        109
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodd-5143-02",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",

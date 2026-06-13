@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,33 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "upstream_edge_count": 1,
+    "downstream_edge_count": 1,
+    "catalogued_node_count": 2,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 2,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:executive-order:14185",
+      "label": "Executive Order 14185",
+      "title": "Executive Order 14185",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:14185",
+      "count": 1,
+      "lines_sample": [
+        363
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
     {
       "id": "dodi-1320-13",
       "label": "DoDI 1320.13",
@@ -83,27 +100,119 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-1320-14",
+      "label": "DoDI 1320.14",
+      "title": "DoDI 1320.14: DoD Commissioned Officer Promotion Program Procedures",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-1320-14->dodi-1320-13:references:resolved_reference",
+      "source_artifact_id": "dodi-1320-14",
+      "source_label": "DoDI 1320.14",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1320-13",
+      "target_label": "DoDI 1320.13",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1320.14",
+        "label": "DoDI 1320.14",
+        "first_line": 139,
+        "lines_sample": [
+          139,
+          143,
+          153,
+          160,
+          172,
+          214,
+          217,
+          271,
+          327,
+          329,
+          335
+        ],
+        "count": 11
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-1320-13->dodi-1320-14:references:resolved_reference",
+      "source_artifact_id": "dodi-1320-13",
+      "source_label": "DoDI 1320.13",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1320-14",
+      "target_label": "DoDI 1320.14",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1320.13",
+        "label": "DoDI 1320.13",
+        "first_line": 311,
+        "lines_sample": [
+          311,
+          327,
+          815,
+          1051
+        ],
+        "count": 4
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:executive-order:14185",
+      "label": "Executive Order 14185",
+      "title": "Executive Order 14185",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:14185",
+      "count": 1,
+      "lines_sample": [
+        363
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-1320-13",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-1320-13",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 1
     }
   ]
 }

@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,67 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "downstream_edge_count": 2,
+    "catalogued_node_count": 3,
+    "uncatalogued_gap_count": 3,
+    "evidence_backed_edge_count": 2,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:110-181",
+      "label": "Public Law 110-181",
+      "title": "Public Law 110-181",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:110-181",
+      "count": 2,
+      "lines_sample": [
+        20,
+        155
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:13518",
+      "label": "Executive Order 13518",
+      "title": "Executive Order 13518",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:13518",
+      "count": 1,
+      "lines_sample": [
+        161
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:13548",
+      "label": "Executive Order 13548",
+      "title": "Executive Order 13548",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:13548",
+      "count": 1,
+      "lines_sample": [
+        163
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
     {
       "id": "dodi-1300-25",
       "label": "DoDI 1300.25",
@@ -83,13 +135,141 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-1322-06",
+      "label": "DoDI 1322.06",
+      "title": "DoDI 1322.06: Fellowships, Legislative Fellowships, Internships, Scholarships, Training-With-Industry (TWI), and Grants Provided to DoD or DoD Personnel for Education and Training",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-6025-22",
+      "label": "DoDI 6025.22",
+      "title": "DoDI 6025.22: Assistive Technology (AT) for Wounded, Ill, and Injured Service Members",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "downstream_edges": [
+    {
+      "id": "dodi-1300-25->dodi-1322-06:references:resolved_reference",
+      "source_artifact_id": "dodi-1300-25",
+      "source_label": "DoDI 1300.25",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1322-06",
+      "target_label": "DoDI 1322.06",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1300.25",
+        "label": "DoDI 1300.25",
+        "first_line": 57,
+        "lines_sample": [
+          57
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1300-25->dodi-6025-22:references:resolved_reference",
+      "source_artifact_id": "dodi-1300-25",
+      "source_label": "DoDI 1300.25",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6025-22",
+      "target_label": "DoDI 6025.22",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1300.25",
+        "label": "DoDI 1300.25",
+        "first_line": 57,
+        "lines_sample": [
+          57
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:public-law:110-181",
+      "label": "Public Law 110-181",
+      "title": "Public Law 110-181",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:110-181",
+      "count": 2,
+      "lines_sample": [
+        20,
+        155
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:13518",
+      "label": "Executive Order 13518",
+      "title": "Executive Order 13518",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:13518",
+      "count": 1,
+      "lines_sample": [
+        161
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:13548",
+      "label": "Executive Order 13548",
+      "title": "Executive Order 13548",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:13548",
+      "count": 1,
+      "lines_sample": [
+        163
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
@@ -103,7 +283,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-1300-25",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 2
     }
   ]
 }

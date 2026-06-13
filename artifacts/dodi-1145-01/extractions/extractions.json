@@ -2,19 +2,918 @@
   "id": "dodi-1145-01",
   "generated_at": "2026-06-12T22:50:00.000Z",
   "extractor_version": "governance-extractor-rules-v1",
-  "extraction_status": "source_text_unavailable",
-  "source_text_path": null,
+  "extraction_status": "parsed",
+  "source_text_path": "artifacts/dodi-1145-01/text/extracted.txt",
   "extraction_path": "artifacts/dodi-1145-01/extractions/extractions.json",
   "summary": {
-    "entity_count": 0,
-    "reference_count": 0,
-    "concept_count": 0,
-    "annotated_line_count": 0,
-    "total_line_count": 0
+    "entity_count": 4,
+    "reference_count": 5,
+    "concept_count": 6,
+    "annotated_line_count": 48,
+    "total_line_count": 216
   },
-  "entities": [],
-  "references": [],
-  "concepts": [],
-  "line_annotations": [],
-  "blocked_reason": "No extracted_text_path is currently mirrored for this source-known artifact."
+  "entities": [
+    {
+      "id": "department-of-defense",
+      "type": "department",
+      "label": "Department of Defense",
+      "aliases": [
+        "Department of Defense",
+        "DoD",
+        "Department of War",
+        "DoW"
+      ],
+      "count": 10,
+      "first_line": 1,
+      "lines_sample": [
+        1,
+        15,
+        16,
+        25,
+        26,
+        28,
+        82,
+        131,
+        133,
+        136
+      ]
+    },
+    {
+      "id": "secretary-of-defense",
+      "type": "role",
+      "label": "Secretary of Defense",
+      "aliases": [
+        "Secretary of Defense",
+        "SecDef"
+      ],
+      "count": 7,
+      "first_line": 40,
+      "lines_sample": [
+        40,
+        43,
+        68,
+        69,
+        88,
+        133,
+        155
+      ]
+    },
+    {
+      "id": "congress",
+      "type": "legislative_body",
+      "label": "Congress",
+      "aliases": [
+        "Congress",
+        "House of Representatives",
+        "Senate"
+      ],
+      "count": 2,
+      "first_line": 32,
+      "lines_sample": [
+        32,
+        47
+      ]
+    },
+    {
+      "id": "joint-staff",
+      "type": "joint",
+      "label": "Joint Staff",
+      "aliases": [
+        "Joint Staff",
+        "Chairman of the Joint Chiefs of Staff"
+      ],
+      "count": 1,
+      "first_line": 24,
+      "lines_sample": [
+        24
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "dodi:dodi-1145-01",
+      "type": "DoD Instruction",
+      "label": "DoDI 1145.01",
+      "reference_family": "dodi",
+      "count": 5,
+      "first_line": 44,
+      "lines_sample": [
+        44,
+        96,
+        124,
+        147,
+        198
+      ]
+    },
+    {
+      "id": "section:section-520",
+      "type": "Section",
+      "label": "Section 520",
+      "reference_family": "section",
+      "count": 3,
+      "first_line": 37,
+      "lines_sample": [
+        37,
+        62,
+        105
+      ]
+    },
+    {
+      "id": "section:section-456",
+      "type": "Section",
+      "label": "Section 456",
+      "reference_family": "section",
+      "count": 2,
+      "first_line": 140,
+      "lines_sample": [
+        140,
+        186
+      ]
+    },
+    {
+      "id": "public-law:public-law-118-31",
+      "type": "Public Law",
+      "label": "Public Law 118-31",
+      "reference_family": "public-law",
+      "count": 1,
+      "first_line": 138,
+      "lines_sample": [
+        138
+      ]
+    },
+    {
+      "id": "section:section-503",
+      "type": "Section",
+      "label": "section 503",
+      "reference_family": "section",
+      "count": 1,
+      "first_line": 193,
+      "lines_sample": [
+        193
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "identity-access",
+      "type": "cybersecurity",
+      "label": "Identity And Access",
+      "aliases": [
+        "identity",
+        "access management",
+        "authentication",
+        "credential"
+      ],
+      "category": "cybersecurity",
+      "count": 5,
+      "first_line": 34,
+      "lines_sample": [
+        34,
+        59,
+        61,
+        189,
+        195
+      ]
+    },
+    {
+      "id": "governance",
+      "type": "governance",
+      "label": "Governance",
+      "aliases": [
+        "governance",
+        "oversight",
+        "policy"
+      ],
+      "category": "governance",
+      "count": 3,
+      "first_line": 18,
+      "lines_sample": [
+        18,
+        28,
+        80
+      ]
+    },
+    {
+      "id": "reporting",
+      "type": "oversight",
+      "label": "Reporting",
+      "aliases": [
+        "report",
+        "reporting",
+        "submit to Congress"
+      ],
+      "category": "oversight",
+      "count": 2,
+      "first_line": 82,
+      "lines_sample": [
+        82,
+        162
+      ]
+    },
+    {
+      "id": "compliance",
+      "type": "compliance",
+      "label": "Compliance",
+      "aliases": [
+        "compliance",
+        "comply",
+        "shall comply"
+      ],
+      "category": "compliance",
+      "count": 1,
+      "first_line": 80,
+      "lines_sample": [
+        80
+      ]
+    },
+    {
+      "id": "continuous-monitoring",
+      "type": "cybersecurity",
+      "label": "Continuous Monitoring",
+      "aliases": [
+        "continuous monitoring",
+        "monitoring"
+      ],
+      "category": "cybersecurity",
+      "count": 1,
+      "first_line": 72,
+      "lines_sample": [
+        72
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "schedule",
+      "label": "Deadline",
+      "aliases": [
+        "deadline",
+        "not later than",
+        "within 180 days",
+        "within 1 year"
+      ],
+      "category": "schedule",
+      "count": 1,
+      "first_line": 47,
+      "lines_sample": [
+        47
+      ]
+    }
+  ],
+  "line_annotations": [
+    {
+      "line": 1,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 15,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 16,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 18,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 24,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "joint",
+          "label": "Joint Staff",
+          "id": "joint-staff"
+        }
+      ]
+    },
+    {
+      "line": 25,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 26,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 28,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        }
+      ]
+    },
+    {
+      "line": 32,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "legislative_body",
+          "label": "Congress",
+          "id": "congress"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 34,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 37,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "Section",
+          "label": "Section 520",
+          "id": "section:section-520"
+        }
+      ]
+    },
+    {
+      "line": 40,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 43,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 44,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Instruction",
+          "label": "DoDI 1145.01",
+          "id": "dodi:dodi-1145-01"
+        }
+      ]
+    },
+    {
+      "line": 47,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "legislative_body",
+          "label": "Congress",
+          "id": "congress"
+        },
+        {
+          "kind": "concept",
+          "type": "schedule",
+          "label": "Deadline",
+          "id": "deadline"
+        }
+      ]
+    },
+    {
+      "line": 53,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 59,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 61,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 62,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "Section",
+          "label": "section 520",
+          "id": "section:section-520"
+        }
+      ]
+    },
+    {
+      "line": 63,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 68,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 69,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 72,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Continuous Monitoring",
+          "id": "continuous-monitoring"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 75,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 80,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "governance",
+          "label": "Governance",
+          "id": "governance"
+        },
+        {
+          "kind": "concept",
+          "type": "compliance",
+          "label": "Compliance",
+          "id": "compliance"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 82,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Reporting",
+          "id": "reporting"
+        },
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 85,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 88,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 96,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Instruction",
+          "label": "DoDI 1145.01",
+          "id": "dodi:dodi-1145-01"
+        }
+      ]
+    },
+    {
+      "line": 105,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "Section",
+          "label": "section 520",
+          "id": "section:section-520"
+        }
+      ]
+    },
+    {
+      "line": 124,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Instruction",
+          "label": "DoDI 1145.01",
+          "id": "dodi:dodi-1145-01"
+        }
+      ]
+    },
+    {
+      "line": 131,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 133,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        },
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 135,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 136,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "department",
+          "label": "Department of Defense",
+          "id": "department-of-defense"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 138,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "Public Law",
+          "label": "Public Law 118-31",
+          "id": "public-law:public-law-118-31"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 140,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "Section",
+          "label": "Section 456",
+          "id": "section:section-456"
+        },
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 147,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Instruction",
+          "label": "DoDI 1145.01",
+          "id": "dodi:dodi-1145-01"
+        }
+      ]
+    },
+    {
+      "line": 152,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 155,
+      "tags": [
+        {
+          "kind": "entity",
+          "type": "role",
+          "label": "Secretary of Defense",
+          "id": "secretary-of-defense"
+        }
+      ]
+    },
+    {
+      "line": 158,
+      "tags": [
+        {
+          "kind": "structure",
+          "type": "section",
+          "label": "Section",
+          "id": "section"
+        }
+      ]
+    },
+    {
+      "line": 162,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "oversight",
+          "label": "Reporting",
+          "id": "reporting"
+        }
+      ]
+    },
+    {
+      "line": 166,
+      "tags": [
+        {
+          "kind": "obligation",
+          "type": "modal",
+          "label": "Obligation Candidate",
+          "id": "obligation-candidate"
+        }
+      ]
+    },
+    {
+      "line": 186,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "Section",
+          "label": "section 456",
+          "id": "section:section-456"
+        }
+      ]
+    },
+    {
+      "line": 189,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 193,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "Section",
+          "label": "section 503",
+          "id": "section:section-503"
+        }
+      ]
+    },
+    {
+      "line": 195,
+      "tags": [
+        {
+          "kind": "concept",
+          "type": "cybersecurity",
+          "label": "Identity And Access",
+          "id": "identity-access"
+        }
+      ]
+    },
+    {
+      "line": 198,
+      "tags": [
+        {
+          "kind": "reference",
+          "type": "DoD Instruction",
+          "label": "DoDI 1145.01",
+          "id": "dodi:dodi-1145-01"
+        }
+      ]
+    }
+  ],
+  "blocked_reason": null
 }

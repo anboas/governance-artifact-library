@@ -1,7 +1,7 @@
 {
   "id": "dodi-6055-06",
-  "generated_at": "2026-06-13T19:27:18.966Z",
-  "analysis_type": "dod_issuance_catalog_ingestion",
+  "generated_at": "2026-06-13T21:48:27.324Z",
+  "analysis_type": "dod_issuance_capture_bootstrap",
   "authority_interpretation": {
     "authority_level": "defense_department_instruction",
     "hierarchy_rank": 72,
@@ -9,10 +9,62 @@
     "downstream_guidance_expected": true
   },
   "extraction_readiness": {
-    "obligation_extraction": "source_text_queued",
-    "deadline_extraction": "source_text_queued",
-    "implementation_extraction": "source_text_queued",
+    "obligation_extraction": "candidate",
+    "deadline_extraction": "needs_review",
+    "implementation_extraction": "candidate",
     "blocked_reason": null
   },
-  "review_notes": "Exhaustive catalog ingestion from official DoD Issuances index. Raw source mirroring and text analytics should be batched separately."
+  "likely_analytics": [
+    "authority_lineage",
+    "reference_resolution",
+    "catalog_gap_detection",
+    "entity_reference_concept_extraction",
+    "line_annotation",
+    "claims_extraction",
+    "decision_authority_extraction",
+    "authority_chain",
+    "upstream_downstream_trace",
+    "obligation_extraction",
+    "deadline_detection",
+    "defined_terms",
+    "issuing_org_graph",
+    "implementation_tasks",
+    "supersession_tracking",
+    "compliance_evidence"
+  ],
+  "primary_term_signals": [
+    {
+      "term": "must",
+      "count": 25
+    },
+    {
+      "term": "risk",
+      "count": 24
+    },
+    {
+      "term": "report",
+      "count": 18
+    },
+    {
+      "term": "training",
+      "count": 13
+    },
+    {
+      "term": "may",
+      "count": 10
+    },
+    {
+      "term": "acquisition",
+      "count": 7
+    },
+    {
+      "term": "implementation",
+      "count": 4
+    },
+    {
+      "term": "meal",
+      "count": 1
+    }
+  ],
+  "review_notes": "Machine bootstrap analysis from official DoD issuance PDF capture. Human review is still required before treating obligations as authoritative."
 }

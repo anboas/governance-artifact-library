@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,83 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "upstream_edge_count": 2,
+    "downstream_edge_count": 1,
+    "catalogued_node_count": 4,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 3,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:dodd:3000.07",
+      "label": "DoDD 3000.07",
+      "title": "DoDD 3000.07",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodd",
+      "source_reference_id": "dodd:3000.07",
+      "count": 4,
+      "lines_sample": [
+        100,
+        122,
+        139,
+        142
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:dodd:5400.11",
+      "label": "DoDD 5400.11",
+      "title": "DoDD 5400.11",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodd",
+      "source_reference_id": "dodd:5400.11",
+      "count": 1,
+      "lines_sample": [
+        181
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodi-1400-25",
+      "label": "DoDI 1400.25",
+      "title": "DoDI 1400.25: DoD Civilian Personnel Management System",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-3000-07",
+      "label": "DoDI 3000.07",
+      "title": "DoDI 3000.07: Irregular Warfare",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-3000-11",
       "label": "DoDI 3000.11",
@@ -83,27 +150,151 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-5160-70",
+      "label": "DoDI 5160.70",
+      "title": "DoDI 5160.70: Management of the Defense Language, Regional Expertise, and Culture (LREC) Program",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-1400-25->dodi-3000-11:references:resolved_reference",
+      "source_artifact_id": "dodi-1400-25",
+      "source_label": "DoDI 1400.25",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-3000-11",
+      "target_label": "DoDI 3000.11",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1400.25",
+        "label": "DoDI 1400.25",
+        "first_line": 75,
+        "lines_sample": [
+          75,
+          117
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "dodi-5160-70->dodi-3000-11:references:resolved_reference",
+      "source_artifact_id": "dodi-5160-70",
+      "source_label": "DoDI 5160.70",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-3000-11",
+      "target_label": "DoDI 3000.11",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5160.70",
+        "label": "DoDI 5160.70",
+        "first_line": 125,
+        "lines_sample": [
+          125,
+          194
+        ],
+        "count": 2
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-3000-11->dodi-3000-07:references:resolved_reference",
+      "source_artifact_id": "dodi-3000-11",
+      "source_label": "DoDI 3000.11",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-3000-07",
+      "target_label": "DoDI 3000.07",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:3000.11",
+        "label": "DoDI 3000.11",
+        "first_line": 593,
+        "lines_sample": [
+          593,
+          1109
+        ],
+        "count": 2
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:dodd:3000.07",
+      "label": "DoDD 3000.07",
+      "title": "DoDD 3000.07",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodd",
+      "source_reference_id": "dodd:3000.07",
+      "count": 4,
+      "lines_sample": [
+        100,
+        122,
+        139,
+        142
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:dodd:5400.11",
+      "label": "DoDD 5400.11",
+      "title": "DoDD 5400.11",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodd",
+      "source_reference_id": "dodd:5400.11",
+      "count": 1,
+      "lines_sample": [
+        181
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-3000-11",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-3000-11",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 1
     }
   ]
 }

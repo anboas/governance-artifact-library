@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,31 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 2,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "catalogued_node_count": 3,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 2,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
+    {
+      "id": "dodd-5205-07",
+      "label": "DoDD 5205.07",
+      "title": "DoDD 5205.07: Special Access Program Policy",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-5500-16",
       "label": "DoDI 5500.16",
@@ -83,11 +98,71 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-7650-01",
+      "label": "DoDI 7650.01",
+      "title": "DoDI 7650.01: Government Accountability Office (GAO) and Comptroller General Requests for Access to Records",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodd-5205-07->dodi-5500-16:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-5205-07",
+      "source_label": "DoDD 5205.07",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5500-16",
+      "target_label": "DoDI 5500.16",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5205.07",
+        "label": "DoDD 5205.07",
+        "first_line": 224,
+        "lines_sample": [
+          224
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-7650-01->dodi-5500-16:references:resolved_reference",
+      "source_artifact_id": "dodi-7650-01",
+      "source_label": "DoDI 7650.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5500-16",
+      "target_label": "DoDI 5500.16",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:7650.01",
+        "label": "DoDI 7650.01",
+        "first_line": 286,
+        "lines_sample": [
+          286
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
@@ -96,7 +171,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-5500-16",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",

@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,13 +62,13 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "downstream_edge_count": 1,
+    "catalogued_node_count": 2,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 1,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
     {
@@ -83,12 +83,50 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-5030-61",
+      "label": "DoDI 5030.61",
+      "title": "DoDI 5030.61: DoD Airworthiness Policy",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [],
-  "downstream_edges": [],
+  "downstream_edges": [
+    {
+      "id": "dodi-4540-01->dodi-5030-61:references:resolved_reference",
+      "source_artifact_id": "dodi-4540-01",
+      "source_label": "DoDI 4540.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5030-61",
+      "target_label": "DoDI 5030.61",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:4540.01",
+        "label": "DoDI 4540.01",
+        "first_line": 335,
+        "lines_sample": [
+          335
+        ],
+        "count": 1
+      }
+    }
+  ],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
@@ -103,7 +141,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-4540-01",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 1
     }
   ]
 }

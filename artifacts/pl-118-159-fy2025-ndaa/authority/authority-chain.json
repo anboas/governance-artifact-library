@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 5,
-    "downstream_edge_count": 4,
-    "catalogued_node_count": 6,
+    "downstream_edge_count": 5,
+    "catalogued_node_count": 7,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 5,
+    "evidence_backed_edge_count": 6,
     "inferred_edge_count": 4,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -543,6 +543,21 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "dodi-1341-15",
+      "label": "DoDI 1341.15",
+      "title": "DoDI 1341.15: Basic Needs Allowance",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [
@@ -691,6 +706,29 @@
     }
   ],
   "downstream_edges": [
+    {
+      "id": "pl-118-159-fy2025-ndaa->dodi-1341-15:authorizes:resolved_reference",
+      "source_artifact_id": "pl-118-159-fy2025-ndaa",
+      "source_label": "FY2025 NDAA",
+      "source_lane": "law",
+      "target_artifact_id": "dodi-1341-15",
+      "target_label": "DoDI 1341.15",
+      "target_lane": "dod",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "public-law:118-159",
+        "label": "Public Law 118-159",
+        "first_line": 100,
+        "lines_sample": [
+          100,
+          817
+        ],
+        "count": 2
+      }
+    },
     {
       "id": "pl-118-159-fy2025-ndaa->usc-title-10-section-113:codifies_or_creates_note:inferred_flowdown",
       "source_artifact_id": "pl-118-159-fy2025-ndaa",
@@ -1162,7 +1200,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "pl-118-159-fy2025-ndaa",
       "direction": "downstream",
-      "edge_count": 4
+      "edge_count": 5
     }
   ]
 }

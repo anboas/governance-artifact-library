@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,61 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 4,
-    "catalogued_node_count": 5,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "upstream_edge_count": 2,
+    "downstream_edge_count": 5,
+    "catalogued_node_count": 8,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 3,
     "inferred_edge_count": 4,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "dodd-2060-02",
+      "label": "DoDD 2060.02",
+      "title": "DoDD 2060.02: DoD Countering Weapons of Mass Destruction (WMD) Policy",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodd-5160-05e",
+      "label": "DoDD 5160.05E",
+      "title": "DoDD 5160.05E: Roles and Responsibilities Associated with the Chemical and Biological Defense Program",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodd-6200-04",
+      "label": "DoDD 6200.04",
+      "title": "DoDD 6200.04: Force Health Protection (FHP)",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodd-6420-02",
       "label": "DoDD 6420.02",
@@ -83,8 +128,25 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "gap:dodd:5000.59",
+      "label": "DoDD 5000.59",
+      "title": "DoDD 5000.59",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodd",
+      "source_reference_id": "dodd:5000.59",
+      "count": 1,
+      "lines_sample": [
+        421
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     },
     {
       "id": "dodi-1000-01",
@@ -98,7 +160,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -113,7 +175,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -128,7 +190,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -143,12 +205,85 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodd-2060-02->dodd-6420-02:references:resolved_reference",
+      "source_artifact_id": "dodd-2060-02",
+      "source_label": "DoDD 2060.02",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-6420-02",
+      "target_label": "DoDD 6420.02",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:2060.02",
+        "label": "DoDD 2060.02",
+        "first_line": 634,
+        "lines_sample": [
+          634
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodd-6200-04->dodd-6420-02:references:resolved_reference",
+      "source_artifact_id": "dodd-6200-04",
+      "source_label": "DoDD 6200.04",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-6420-02",
+      "target_label": "DoDD 6420.02",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:6200.04",
+        "label": "DoDD 6200.04",
+        "first_line": 643,
+        "lines_sample": [
+          643
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [
+    {
+      "id": "dodd-6420-02->dodd-5160-05e:references:resolved_reference",
+      "source_artifact_id": "dodd-6420-02",
+      "source_label": "DoDD 6420.02",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-5160-05e",
+      "target_label": "DoDD 5160.05E",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:6420.02",
+        "label": "DoDD 6420.02",
+        "first_line": 232,
+        "lines_sample": [
+          232,
+          313,
+          353,
+          481,
+          553,
+          555,
+          574
+        ],
+        "count": 7
+      }
+    },
     {
       "id": "dodd-6420-02->dodi-1000-01:flows_down:inferred_flowdown",
       "source_artifact_id": "dodd-6420-02",
@@ -238,21 +373,39 @@
       }
     }
   ],
-  "uncatalogued_authority_gaps": [],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:dodd:5000.59",
+      "label": "DoDD 5000.59",
+      "title": "DoDD 5000.59",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodd",
+      "source_reference_id": "dodd:5000.59",
+      "count": 1,
+      "lines_sample": [
+        421
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodd-6420-02",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodd-6420-02",
       "direction": "downstream",
-      "edge_count": 4
+      "edge_count": 5
     }
   ]
 }

@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,47 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "downstream_edge_count": 1,
+    "catalogued_node_count": 2,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 1,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:usc:10:1501",
+      "label": "10 U.S.C. 1501",
+      "title": "10 U.S.C. 1501",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:10:1501",
+      "count": 1,
+      "lines_sample": [
+        527
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodd-3002-01",
+      "label": "DoDD 3002.01",
+      "title": "DoDD 3002.01: Personnel Recovery in the Department of Defense",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-2310-05",
       "label": "DoDI 2310.05",
@@ -83,13 +115,54 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     }
   ],
   "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "downstream_edges": [
+    {
+      "id": "dodi-2310-05->dodd-3002-01:references_upstream:resolved_reference",
+      "source_artifact_id": "dodi-2310-05",
+      "source_label": "DoDI 2310.05",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-3002-01",
+      "target_label": "DoDD 3002.01",
+      "target_lane": "dod",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:2310.05",
+        "label": "DoDI 2310.05",
+        "first_line": 512,
+        "lines_sample": [
+          512
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:usc:10:1501",
+      "label": "10 U.S.C. 1501",
+      "title": "10 U.S.C. 1501",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:10:1501",
+      "count": 1,
+      "lines_sample": [
+        527
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
@@ -103,7 +176,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-2310-05",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 1
     }
   ]
 }

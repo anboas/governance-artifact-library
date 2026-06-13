@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,117 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "upstream_edge_count": 2,
+    "downstream_edge_count": 1,
+    "catalogued_node_count": 4,
+    "uncatalogued_gap_count": 4,
+    "evidence_backed_edge_count": 3,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:115-232",
+      "label": "Public Law 115-232",
+      "title": "Public Law 115-232",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:115-232",
+      "count": 2,
+      "lines_sample": [
+        134,
+        2125
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:50:4565",
+      "label": "50 U.S.C. § 4565",
+      "title": "50 U.S.C. § 4565",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:50:4565",
+      "count": 1,
+      "lines_sample": [
+        935
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:11858",
+      "label": "Executive Order 11858",
+      "title": "Executive Order 11858",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:11858",
+      "count": 2,
+      "lines_sample": [
+        1395,
+        2117
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:13913",
+      "label": "Executive Order 13913",
+      "title": "Executive Order 13913",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:13913",
+      "count": 2,
+      "lines_sample": [
+        533,
+        2118
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodd-3020-40",
+      "label": "DoDD 3020.40",
+      "title": "DoDD 3020.40: Mission Assurance (MA)",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodd-5100-01",
+      "label": "DoDD 5100.01",
+      "title": "DoDD 5100.01: Functions of the Department of Defense and its Major Components",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-2000-25",
       "label": "DoDI 2000.25",
@@ -83,27 +184,183 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-2040-02",
+      "label": "DoDI 2040.02",
+      "title": "DoDI 2040.02: International Transfers of Technology, Articles, and Services",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "upstream_edges": [
+    {
+      "id": "dodd-3020-40->dodi-2000-25:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-3020-40",
+      "source_label": "DoDD 3020.40",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-2000-25",
+      "target_label": "DoDI 2000.25",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:3020.40",
+        "label": "DoDD 3020.40",
+        "first_line": 1313,
+        "lines_sample": [
+          1313,
+          1794
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "dodd-5100-01->dodi-2000-25:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-5100-01",
+      "source_label": "DoDD 5100.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-2000-25",
+      "target_label": "DoDI 2000.25",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5100.01",
+        "label": "DoDD 5100.01",
+        "first_line": 25,
+        "lines_sample": [
+          25
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-2000-25->dodi-2040-02:references:resolved_reference",
+      "source_artifact_id": "dodi-2000-25",
+      "source_label": "DoDI 2000.25",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-2040-02",
+      "target_label": "DoDI 2040.02",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:2000.25",
+        "label": "DoDI 2000.25",
+        "first_line": 441,
+        "lines_sample": [
+          441
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:executive-order:11858",
+      "label": "Executive Order 11858",
+      "title": "Executive Order 11858",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:11858",
+      "count": 2,
+      "lines_sample": [
+        1395,
+        2117
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:13913",
+      "label": "Executive Order 13913",
+      "title": "Executive Order 13913",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:13913",
+      "count": 2,
+      "lines_sample": [
+        533,
+        2118
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:115-232",
+      "label": "Public Law 115-232",
+      "title": "Public Law 115-232",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:115-232",
+      "count": 2,
+      "lines_sample": [
+        134,
+        2125
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:50:4565",
+      "label": "50 U.S.C. § 4565",
+      "title": "50 U.S.C. § 4565",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:50:4565",
+      "count": 1,
+      "lines_sample": [
+        935
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-2000-25",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-2000-25",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 1
     }
   ]
 }

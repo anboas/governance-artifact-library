@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,115 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "upstream_edge_count": 3,
+    "downstream_edge_count": 2,
+    "catalogued_node_count": 6,
+    "uncatalogued_gap_count": 3,
+    "evidence_backed_edge_count": 5,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:102-484",
+      "label": "Public Law 102-484",
+      "title": "Public Law 102-484",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:102-484",
+      "count": 2,
+      "lines_sample": [
+        293,
+        821
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:109-364",
+      "label": "Public Law 109-364",
+      "title": "Public Law 109-364",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:109-364",
+      "count": 2,
+      "lines_sample": [
+        305,
+        823
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:117-164",
+      "label": "Public Law 117-164",
+      "title": "Public Law 117-164",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:117-164",
+      "count": 2,
+      "lines_sample": [
+        20,
+        825
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodi-1030-02",
+      "label": "DoDI 1030.02",
+      "title": "DoDI 1030.02: Victim and Witness Assistance",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1300-18",
+      "label": "DoDI 1300.18",
+      "title": "DoDI 1300.18: DoD Personnel Casualty Matters, Policies, and Procedures",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1300-29",
+      "label": "DoDI 1300.29",
+      "title": "DoDI 1300.29: Mortuary Affairs Program",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-5505-10",
       "label": "DoDI 5505.10",
@@ -83,27 +182,227 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-5525-07",
+      "label": "DoDI 5525.07",
+      "title": "DoDI 5525.07: Implementation of the Memorandum of Understanding Between the Departments of Justice and Defense Relating to the Investigation and Prosecution of Certain Crimes",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-6490-16",
+      "label": "DoDI 6490.16",
+      "title": "DoDI 6490.16: Defense Suicide Prevention Program",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-1030-02->dodi-5505-10:references:resolved_reference",
+      "source_artifact_id": "dodi-1030-02",
+      "source_label": "DoDI 1030.02",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5505-10",
+      "target_label": "DoDI 5505.10",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1030.02",
+        "label": "DoDI 1030.02",
+        "first_line": 187,
+        "lines_sample": [
+          187,
+          340
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "dodi-1300-18->dodi-5505-10:references:resolved_reference",
+      "source_artifact_id": "dodi-1300-18",
+      "source_label": "DoDI 1300.18",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5505-10",
+      "target_label": "DoDI 5505.10",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1300.18",
+        "label": "DoDI 1300.18",
+        "first_line": 305,
+        "lines_sample": [
+          305,
+          359,
+          783
+        ],
+        "count": 3
+      }
+    },
+    {
+      "id": "dodi-5525-07->dodi-5505-10:references:resolved_reference",
+      "source_artifact_id": "dodi-5525-07",
+      "source_label": "DoDI 5525.07",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5505-10",
+      "target_label": "DoDI 5505.10",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5525.07",
+        "label": "DoDI 5525.07",
+        "first_line": 370,
+        "lines_sample": [
+          370
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-5505-10->dodi-1300-29:references:resolved_reference",
+      "source_artifact_id": "dodi-5505-10",
+      "source_label": "DoDI 5505.10",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1300-29",
+      "target_label": "DoDI 1300.29",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5505.10",
+        "label": "DoDI 5505.10",
+        "first_line": 729,
+        "lines_sample": [
+          729
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5505-10->dodi-6490-16:references:resolved_reference",
+      "source_artifact_id": "dodi-5505-10",
+      "source_label": "DoDI 5505.10",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6490-16",
+      "target_label": "DoDI 6490.16",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5505.10",
+        "label": "DoDI 5505.10",
+        "first_line": 691,
+        "lines_sample": [
+          691
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:public-law:102-484",
+      "label": "Public Law 102-484",
+      "title": "Public Law 102-484",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:102-484",
+      "count": 2,
+      "lines_sample": [
+        293,
+        821
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:109-364",
+      "label": "Public Law 109-364",
+      "title": "Public Law 109-364",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:109-364",
+      "count": 2,
+      "lines_sample": [
+        305,
+        823
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:117-164",
+      "label": "Public Law 117-164",
+      "title": "Public Law 117-164",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:117-164",
+      "count": 2,
+      "lines_sample": [
+        20,
+        825
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-5505-10",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 3
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-5505-10",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 2
     }
   ]
 }

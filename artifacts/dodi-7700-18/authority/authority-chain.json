@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,90 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "downstream_edge_count": 5,
+    "catalogued_node_count": 6,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 5,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "dodi-1015-10",
+      "label": "DoDI 1015.10",
+      "title": "DoDI 1015.10: Military Morale, Welfare, and Recreation (MWR) Programs",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1015-11",
+      "label": "DoDI 1015.11",
+      "title": "DoDI 1015.11: DoD Lodging Policy",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1330-17",
+      "label": "DoDI 1330.17",
+      "title": "DoDI 1330.17: DoD Commissary Program",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-4105-67",
+      "label": "DoDI 4105.67",
+      "title": "DoDI 4105.67: Nonappropriated Fund (NAF) Procurement Policy and Procedure",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-6060-04",
+      "label": "DoDI 6060.04",
+      "title": "DoDI 6060.04: Youth Services (YS) Policy",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-7700-18",
       "label": "DoDI 7700.18",
@@ -83,12 +158,124 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     }
   ],
   "upstream_edges": [],
-  "downstream_edges": [],
+  "downstream_edges": [
+    {
+      "id": "dodi-7700-18->dodi-1015-10:references:resolved_reference",
+      "source_artifact_id": "dodi-7700-18",
+      "source_label": "DoDI 7700.18",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1015-10",
+      "target_label": "DoDI 1015.10",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:7700.18",
+        "label": "DoDI 7700.18",
+        "first_line": 632,
+        "lines_sample": [
+          632
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-7700-18->dodi-1015-11:references:resolved_reference",
+      "source_artifact_id": "dodi-7700-18",
+      "source_label": "DoDI 7700.18",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1015-11",
+      "target_label": "DoDI 1015.11",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:7700.18",
+        "label": "DoDI 7700.18",
+        "first_line": 1594,
+        "lines_sample": [
+          1594,
+          1908
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "dodi-7700-18->dodi-1330-17:references:resolved_reference",
+      "source_artifact_id": "dodi-7700-18",
+      "source_label": "DoDI 7700.18",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1330-17",
+      "target_label": "DoDI 1330.17",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:7700.18",
+        "label": "DoDI 7700.18",
+        "first_line": 1599,
+        "lines_sample": [
+          1599
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-7700-18->dodi-4105-67:references:resolved_reference",
+      "source_artifact_id": "dodi-7700-18",
+      "source_label": "DoDI 7700.18",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4105-67",
+      "target_label": "DoDI 4105.67",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:7700.18",
+        "label": "DoDI 7700.18",
+        "first_line": 797,
+        "lines_sample": [
+          797
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-7700-18->dodi-6060-04:references:resolved_reference",
+      "source_artifact_id": "dodi-7700-18",
+      "source_label": "DoDI 7700.18",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6060-04",
+      "target_label": "DoDI 6060.04",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:7700.18",
+        "label": "DoDI 7700.18",
+        "first_line": 816,
+        "lines_sample": [
+          816
+        ],
+        "count": 1
+      }
+    }
+  ],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
@@ -103,7 +290,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-7700-18",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 5
     }
   ]
 }

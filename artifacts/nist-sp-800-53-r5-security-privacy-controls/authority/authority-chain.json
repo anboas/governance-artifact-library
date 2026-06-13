@@ -62,13 +62,13 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "downstream_edge_count": 4,
+    "catalogued_node_count": 5,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
     {
@@ -85,10 +85,162 @@
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-5000-77",
+      "label": "DoDI 5000.77",
+      "title": "DoDI 5000.77: DoD Federally Funded Research and Development Center (FFRDC) Program",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-8500-01",
+      "label": "DoDI 8500.01",
+      "title": "DoDI 8500.01: Cybersecurity",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-8510-01-risk-management-framework",
+      "label": "DoDI 8510.01",
+      "title": "DoDI 8510.01: Risk Management Framework for DoD Systems",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-8530-03",
+      "label": "DoDI 8530.03",
+      "title": "DoDI 8530.03: Cyber Incident Response",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [],
-  "downstream_edges": [],
+  "downstream_edges": [
+    {
+      "id": "nist-sp-800-53-r5-security-privacy-controls->dodi-5000-77:implements:resolved_reference",
+      "source_artifact_id": "nist-sp-800-53-r5-security-privacy-controls",
+      "source_label": "NIST SP 800-53 Rev. 5",
+      "source_lane": "govwide",
+      "target_artifact_id": "dodi-5000-77",
+      "target_label": "DoDI 5000.77",
+      "target_lane": "dod",
+      "relationship": "implements",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "nist-sp:800-53",
+        "label": "NIST SP 800-53",
+        "first_line": 687,
+        "lines_sample": [
+          687,
+          707,
+          713
+        ],
+        "count": 3
+      }
+    },
+    {
+      "id": "nist-sp-800-53-r5-security-privacy-controls->dodi-8500-01:implements:resolved_reference",
+      "source_artifact_id": "nist-sp-800-53-r5-security-privacy-controls",
+      "source_label": "NIST SP 800-53 Rev. 5",
+      "source_lane": "govwide",
+      "target_artifact_id": "dodi-8500-01",
+      "target_label": "DoDI 8500.01",
+      "target_lane": "dod",
+      "relationship": "implements",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "nist-sp:800-53",
+        "label": "NIST SP 800-53",
+        "first_line": 2758,
+        "lines_sample": [
+          2758
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "nist-sp-800-53-r5-security-privacy-controls->dodi-8510-01-risk-management-framework:implements:resolved_reference",
+      "source_artifact_id": "nist-sp-800-53-r5-security-privacy-controls",
+      "source_label": "NIST SP 800-53 Rev. 5",
+      "source_lane": "govwide",
+      "target_artifact_id": "dodi-8510-01-risk-management-framework",
+      "target_label": "DoDI 8510.01",
+      "target_lane": "dod",
+      "relationship": "implements",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "nist-sp:800-53",
+        "label": "NIST SP 800-53",
+        "first_line": 356,
+        "lines_sample": [
+          356,
+          1145
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "nist-sp-800-53-r5-security-privacy-controls->dodi-8530-03:implements:resolved_reference",
+      "source_artifact_id": "nist-sp-800-53-r5-security-privacy-controls",
+      "source_label": "NIST SP 800-53 Rev. 5",
+      "source_lane": "govwide",
+      "target_artifact_id": "dodi-8530-03",
+      "target_label": "DoDI 8530.03",
+      "target_lane": "dod",
+      "relationship": "implements",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "nist-sp:800-53",
+        "label": "NIST SP 800-53",
+        "first_line": 485,
+        "lines_sample": [
+          485
+        ],
+        "count": 1
+      }
+    }
+  ],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
@@ -103,7 +255,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "nist-sp-800-53-r5-security-privacy-controls",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 4
     }
   ]
 }

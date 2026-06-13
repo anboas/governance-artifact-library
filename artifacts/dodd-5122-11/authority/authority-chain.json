@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,49 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 4,
-    "catalogued_node_count": 5,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "downstream_edge_count": 6,
+    "catalogued_node_count": 7,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 2,
     "inferred_edge_count": 4,
     "authority_path_status": "authority_gap",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:executive-order:12958",
+      "label": "Executive Order 12958",
+      "title": "Executive Order 12958",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:12958",
+      "count": 1,
+      "lines_sample": [
+        435
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:14168",
+      "label": "Executive Order 14168",
+      "title": "Executive Order 14168",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:14168",
+      "count": 1,
+      "lines_sample": [
+        466
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
     {
       "id": "dodd-5122-11",
       "label": "DoDD 5122.11",
@@ -83,7 +117,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     },
     {
@@ -98,7 +132,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -113,7 +147,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -128,7 +162,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -143,7 +177,37 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5400-18",
+      "label": "DoDI 5400.18",
+      "title": "DoDI 5400.18: Public Affairs Procedures And Operations For Political Campaigns And Elections",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dowi-5120-04",
+      "label": "DoWI 5120.04",
+      "title": "DoWI 5120.04: DoW Newspapers, Magazines, Guides, and Installation Maps",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
       "status": "catalogued"
     }
   ],
@@ -236,9 +300,88 @@
         ],
         "shared_family": ""
       }
+    },
+    {
+      "id": "dodd-5122-11->dodi-5400-18:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-5122-11",
+      "source_label": "DoDD 5122.11",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5400-18",
+      "target_label": "DoDI 5400.18",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5122.11",
+        "label": "DoDD 5122.11",
+        "first_line": 464,
+        "lines_sample": [
+          464
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodd-5122-11->dowi-5120-04:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-5122-11",
+      "source_label": "DoDD 5122.11",
+      "source_lane": "dod",
+      "target_artifact_id": "dowi-5120-04",
+      "target_label": "DoWI 5120.04",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5122.11",
+        "label": "DoDD 5122.11",
+        "first_line": 30,
+        "lines_sample": [
+          30
+        ],
+        "count": 1
+      }
     }
   ],
-  "uncatalogued_authority_gaps": [],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:executive-order:12958",
+      "label": "Executive Order 12958",
+      "title": "Executive Order 12958",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:12958",
+      "count": 1,
+      "lines_sample": [
+        435
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:14168",
+      "label": "Executive Order 14168",
+      "title": "Executive Order 14168",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:14168",
+      "count": 1,
+      "lines_sample": [
+        466
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
@@ -252,7 +395,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodd-5122-11",
       "direction": "downstream",
-      "edge_count": 4
+      "edge_count": 6
     }
   ]
 }

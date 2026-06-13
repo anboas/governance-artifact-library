@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,93 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "upstream_edge_count": 3,
+    "downstream_edge_count": 5,
+    "catalogued_node_count": 7,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 8,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:dodd:1404.10",
+      "label": "DoDD 1404.10",
+      "title": "DoDD 1404.10",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodd",
+      "source_reference_id": "dodd:1404.10",
+      "count": 1,
+      "lines_sample": [
+        101
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodi-1332-45",
+      "label": "DoDI 1332.45",
+      "title": "DoDI 1332.45: Retention Determinations for Non-Deployable Service Members",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-3020-41",
+      "label": "DoDI 3020.41",
+      "title": "DoDI 3020.41: Operational Contract Support Outside the United States",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-6485-01",
+      "label": "DoDI 6485.01",
+      "title": "DoDI 6485.01: Human Immunodeficiency Virus (HIV) in Military Service Members",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-6490-03",
+      "label": "DoDI 6490.03",
+      "title": "DoDI 6490.03: Deployment Health",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-6490-07",
       "label": "DoDI 6490.07",
@@ -83,27 +160,257 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dowi-6025-19",
+      "label": "DoWI 6025.19",
+      "title": "DoWI 6025.19: Individual Medical Readiness Program",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dowi-6130-03-medical-standards-for-military-service-retention",
+      "label": "DoWI 6130.03",
+      "title": "DoWI 6130.03: Medical Standards for Military Service: Retention",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-3020-41->dodi-6490-07:references:resolved_reference",
+      "source_artifact_id": "dodi-3020-41",
+      "source_label": "DoDI 3020.41",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6490-07",
+      "target_label": "DoDI 6490.07",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:3020.41",
+        "label": "DoDI 3020.41",
+        "first_line": 41,
+        "lines_sample": [
+          41
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-6485-01->dodi-6490-07:references:resolved_reference",
+      "source_artifact_id": "dodi-6485-01",
+      "source_label": "DoDI 6485.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6490-07",
+      "target_label": "DoDI 6490.07",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6485.01",
+        "label": "DoDI 6485.01",
+        "first_line": 52,
+        "lines_sample": [
+          52
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-6490-03->dodi-6490-07:references:resolved_reference",
+      "source_artifact_id": "dodi-6490-03",
+      "source_label": "DoDI 6490.03",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6490-07",
+      "target_label": "DoDI 6490.07",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6490.03",
+        "label": "DoDI 6490.03",
+        "first_line": 79,
+        "lines_sample": [
+          79
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-6490-07->dodi-1332-45:references:resolved_reference",
+      "source_artifact_id": "dodi-6490-07",
+      "source_label": "DoDI 6490.07",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1332-45",
+      "target_label": "DoDI 1332.45",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6490.07",
+        "label": "DoDI 6490.07",
+        "first_line": 312,
+        "lines_sample": [
+          312
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-6490-07->dodi-6485-01:references:resolved_reference",
+      "source_artifact_id": "dodi-6490-07",
+      "source_label": "DoDI 6490.07",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6485-01",
+      "target_label": "DoDI 6485.01",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6490.07",
+        "label": "DoDI 6490.07",
+        "first_line": 236,
+        "lines_sample": [
+          236
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-6490-07->dodi-6490-03:references:resolved_reference",
+      "source_artifact_id": "dodi-6490-07",
+      "source_label": "DoDI 6490.07",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6490-03",
+      "target_label": "DoDI 6490.03",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6490.07",
+        "label": "DoDI 6490.07",
+        "first_line": 488,
+        "lines_sample": [
+          488,
+          662
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "dodi-6490-07->dowi-6025-19:references:resolved_reference",
+      "source_artifact_id": "dodi-6490-07",
+      "source_label": "DoDI 6490.07",
+      "source_lane": "dod",
+      "target_artifact_id": "dowi-6025-19",
+      "target_label": "DoWI 6025.19",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6490.07",
+        "label": "DoDI 6490.07",
+        "first_line": 291,
+        "lines_sample": [
+          291,
+          356,
+          487,
+          505
+        ],
+        "count": 4
+      }
+    },
+    {
+      "id": "dodi-6490-07->dowi-6130-03-medical-standards-for-military-service-retention:references:resolved_reference",
+      "source_artifact_id": "dodi-6490-07",
+      "source_label": "DoDI 6490.07",
+      "source_lane": "dod",
+      "target_artifact_id": "dowi-6130-03-medical-standards-for-military-service-retention",
+      "target_label": "DoWI 6130.03",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6490.07",
+        "label": "DoDI 6490.07",
+        "first_line": 134,
+        "lines_sample": [
+          134
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:dodd:1404.10",
+      "label": "DoDD 1404.10",
+      "title": "DoDD 1404.10",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodd",
+      "source_reference_id": "dodd:1404.10",
+      "count": 1,
+      "lines_sample": [
+        101
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-6490-07",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 3
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-6490-07",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 5
     }
   ]
 }

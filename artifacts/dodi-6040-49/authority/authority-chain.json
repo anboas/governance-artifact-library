@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,61 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 4,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "catalogued_node_count": 5,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
+    {
+      "id": "dodi-1300-18",
+      "label": "DoDI 1300.18",
+      "title": "DoDI 1300.18: DoD Personnel Casualty Matters, Policies, and Procedures",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5154-30",
+      "label": "DoDI 5154.30",
+      "title": "DoDI 5154.30: Armed Forces Medical Examiner System (AFMES) Operations",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-6040-45",
+      "label": "DoDI 6040.45",
+      "title": "DoDI 6040.45: DoD Health Record Life Cycle Management",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-6040-49",
       "label": "DoDI 6040.49",
@@ -83,11 +128,116 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-6055-07",
+      "label": "DoDI 6055.07",
+      "title": "DoDI 6055.07: Mishap Notification, Investigation, Reporting, and Record Keeping",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-1300-18->dodi-6040-49:references:resolved_reference",
+      "source_artifact_id": "dodi-1300-18",
+      "source_label": "DoDI 1300.18",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6040-49",
+      "target_label": "DoDI 6040.49",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1300.18",
+        "label": "DoDI 1300.18",
+        "first_line": 100,
+        "lines_sample": [
+          100
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5154-30->dodi-6040-49:references:resolved_reference",
+      "source_artifact_id": "dodi-5154-30",
+      "source_label": "DoDI 5154.30",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6040-49",
+      "target_label": "DoDI 6040.49",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5154.30",
+        "label": "DoDI 5154.30",
+        "first_line": 187,
+        "lines_sample": [
+          187
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-6040-45->dodi-6040-49:references:resolved_reference",
+      "source_artifact_id": "dodi-6040-45",
+      "source_label": "DoDI 6040.45",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6040-49",
+      "target_label": "DoDI 6040.49",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6040.45",
+        "label": "DoDI 6040.45",
+        "first_line": 113,
+        "lines_sample": [
+          113
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-6055-07->dodi-6040-49:references:resolved_reference",
+      "source_artifact_id": "dodi-6055-07",
+      "source_label": "DoDI 6055.07",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6040-49",
+      "target_label": "DoDI 6040.49",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6055.07",
+        "label": "DoDI 6055.07",
+        "first_line": 197,
+        "lines_sample": [
+          197,
+          245
+        ],
+        "count": 2
+      }
+    }
+  ],
   "downstream_edges": [],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
@@ -96,7 +246,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-6040-49",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 4
     },
     {
       "id": "trace-downstream",

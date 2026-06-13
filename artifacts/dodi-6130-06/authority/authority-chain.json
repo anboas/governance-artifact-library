@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,82 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 2,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "catalogued_node_count": 3,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 2,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:109-462",
+      "label": "Public Law 109-462",
+      "title": "Public Law 109-462",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:109-462",
+      "count": 2,
+      "lines_sample": [
+        451,
+        554
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:113-260",
+      "label": "Public Law 113-260",
+      "title": "Public Law 113-260",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:113-260",
+      "count": 2,
+      "lines_sample": [
+        406,
+        556
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodi-3216-02",
+      "label": "DoDI 3216.02",
+      "title": "DoDI 3216.02: Protection of Human Subjects and Adherence to Ethical Standards in DoD-Conducted and-Supported Research",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-6130-05",
+      "label": "DoDI 6130.05",
+      "title": "DoDI 6130.05: DoD Nutrition Committee",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-6130-06",
       "label": "DoDI 6130.06",
@@ -83,20 +149,103 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-3216-02->dodi-6130-06:references:resolved_reference",
+      "source_artifact_id": "dodi-3216-02",
+      "source_label": "DoDI 3216.02",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6130-06",
+      "target_label": "DoDI 6130.06",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:3216.02",
+        "label": "DoDI 3216.02",
+        "first_line": 426,
+        "lines_sample": [
+          426
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-6130-05->dodi-6130-06:references:resolved_reference",
+      "source_artifact_id": "dodi-6130-05",
+      "source_label": "DoDI 6130.05",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6130-06",
+      "target_label": "DoDI 6130.06",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6130.05",
+        "label": "DoDI 6130.05",
+        "first_line": 116,
+        "lines_sample": [
+          116,
+          141
+        ],
+        "count": 2
+      }
+    }
+  ],
   "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:public-law:109-462",
+      "label": "Public Law 109-462",
+      "title": "Public Law 109-462",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:109-462",
+      "count": 2,
+      "lines_sample": [
+        451,
+        554
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:113-260",
+      "label": "Public Law 113-260",
+      "title": "Public Law 113-260",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:113-260",
+      "count": 2,
+      "lines_sample": [
+        406,
+        556
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-6130-06",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",

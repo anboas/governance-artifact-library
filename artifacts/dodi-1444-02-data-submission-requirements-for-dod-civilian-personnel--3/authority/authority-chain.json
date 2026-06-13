@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,61 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 5,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "catalogued_node_count": 6,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 5,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
+    {
+      "id": "dodd-5100-87",
+      "label": "DoDD 5100.87",
+      "title": "DoDD 5100.87: Department of Defense Human Resources Activity (DoDHRA)",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1000-25",
+      "label": "DoDI 1000.25",
+      "title": "DoDI 1000.25: DoD Personnel Identity Protection (PIP) Program",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1400-25",
+      "label": "DoDI 1400.25",
+      "title": "DoDI 1400.25: DoD Civilian Personnel Management System",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-1444-02-data-submission-requirements-for-dod-civilian-personnel--3",
       "label": "DoDI 1444.02",
@@ -83,11 +128,163 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-1444-02-data-submission-requirements-for-dod-civilian-personnel--4",
+      "label": "DoDI 1444.02",
+      "title": "DoDI 1444.02: Data Submission Requirements for DoD Civilian Personnel: Workforce and Address Dynamic Records",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-6490-03",
+      "label": "DoDI 6490.03",
+      "title": "DoDI 6490.03: Deployment Health",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodd-5100-87->dodi-1444-02-data-submission-requirements-for-dod-civilian-personnel--3:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-5100-87",
+      "source_label": "DoDD 5100.87",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1444-02-data-submission-requirements-for-dod-civilian-personnel--3",
+      "target_label": "DoDI 1444.02",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5100.87",
+        "label": "DoDD 5100.87",
+        "first_line": 107,
+        "lines_sample": [
+          107
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1000-25->dodi-1444-02-data-submission-requirements-for-dod-civilian-personnel--3:references:resolved_reference",
+      "source_artifact_id": "dodi-1000-25",
+      "source_label": "DoDI 1000.25",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1444-02-data-submission-requirements-for-dod-civilian-personnel--3",
+      "target_label": "DoDI 1444.02",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1000.25",
+        "label": "DoDI 1000.25",
+        "first_line": 58,
+        "lines_sample": [
+          58
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1400-25->dodi-1444-02-data-submission-requirements-for-dod-civilian-personnel--3:references:resolved_reference",
+      "source_artifact_id": "dodi-1400-25",
+      "source_label": "DoDI 1400.25",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1444-02-data-submission-requirements-for-dod-civilian-personnel--3",
+      "target_label": "DoDI 1444.02",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1400.25",
+        "label": "DoDI 1400.25",
+        "first_line": 633,
+        "lines_sample": [
+          633
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1444-02-data-submission-requirements-for-dod-civilian-personnel--4->dodi-1444-02-data-submission-requirements-for-dod-civilian-personnel--3:references:resolved_reference",
+      "source_artifact_id": "dodi-1444-02-data-submission-requirements-for-dod-civilian-personnel--4",
+      "source_label": "DoDI 1444.02",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1444-02-data-submission-requirements-for-dod-civilian-personnel--3",
+      "target_label": "DoDI 1444.02",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1444.02",
+        "label": "DoDI 1444.02",
+        "first_line": 41,
+        "lines_sample": [
+          41,
+          93,
+          145,
+          165,
+          206,
+          261,
+          301,
+          364,
+          428,
+          492,
+          556,
+          576
+        ],
+        "count": 13
+      }
+    },
+    {
+      "id": "dodi-6490-03->dodi-1444-02-data-submission-requirements-for-dod-civilian-personnel--3:references:resolved_reference",
+      "source_artifact_id": "dodi-6490-03",
+      "source_label": "DoDI 6490.03",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1444-02-data-submission-requirements-for-dod-civilian-personnel--3",
+      "target_label": "DoDI 1444.02",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6490.03",
+        "label": "DoDI 6490.03",
+        "first_line": 54,
+        "lines_sample": [
+          54
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
@@ -96,7 +293,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-1444-02-data-submission-requirements-for-dod-civilian-personnel--3",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 5
     },
     {
       "id": "trace-downstream",

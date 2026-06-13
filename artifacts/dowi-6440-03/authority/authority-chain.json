@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,61 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 3,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "catalogued_node_count": 4,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 3,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
+    {
+      "id": "dodi-8320-02",
+      "label": "DoDI 8320.02",
+      "title": "DoDI 8320.02: Sharing Data, Information, and Information Technology (IT) Services in the Department of Defense",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-8320-07",
+      "label": "DoDI 8320.07",
+      "title": "DoDI 8320.07: Implementing the Sharing of Data, Information, and Information Technology (IT) Services in the Department of Defense",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-8330-01",
+      "label": "DoDI 8330.01",
+      "title": "DoDI 8330.01: Interoperability of Information Technology, Including National Security Systems",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dowi-6440-03",
       "label": "DoWI 6440.03",
@@ -83,11 +128,78 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-8320-02->dowi-6440-03:references:resolved_reference",
+      "source_artifact_id": "dodi-8320-02",
+      "source_label": "DoDI 8320.02",
+      "source_lane": "dod",
+      "target_artifact_id": "dowi-6440-03",
+      "target_label": "DoWI 6440.03",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:8320.02",
+        "label": "DoDI 8320.02",
+        "first_line": 122,
+        "lines_sample": [
+          122
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-8320-07->dowi-6440-03:references:resolved_reference",
+      "source_artifact_id": "dodi-8320-07",
+      "source_label": "DoDI 8320.07",
+      "source_lane": "dod",
+      "target_artifact_id": "dowi-6440-03",
+      "target_label": "DoWI 6440.03",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:8320.07",
+        "label": "DoDI 8320.07",
+        "first_line": 122,
+        "lines_sample": [
+          122
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-8330-01->dowi-6440-03:references:resolved_reference",
+      "source_artifact_id": "dodi-8330-01",
+      "source_label": "DoDI 8330.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dowi-6440-03",
+      "target_label": "DoWI 6440.03",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:8330.01",
+        "label": "DoDI 8330.01",
+        "first_line": 124,
+        "lines_sample": [
+          124
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
@@ -96,7 +208,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dowi-6440-03",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 3
     },
     {
       "id": "trace-downstream",

@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,60 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "downstream_edge_count": 4,
+    "catalogued_node_count": 5,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "dodd-5105-74",
+      "label": "DoDD 5105.74",
+      "title": "DoDD 5105.74: Defense Media Activity (DMA)",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1015-10",
+      "label": "DoDI 1015.10",
+      "title": "DoDI 1015.10: Military Morale, Welfare, and Recreation (MWR) Programs",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5040-07",
+      "label": "DoDI 5040.07",
+      "title": "DoDI 5040.07: Visual Information (VI) Productions",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-5120-20",
       "label": "DoDI 5120.20",
@@ -83,12 +128,116 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-5400-14",
+      "label": "DoDI 5400.14",
+      "title": "DoDI 5400.14: Procedures for Joint Public Affairs Operations",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [],
-  "downstream_edges": [],
+  "downstream_edges": [
+    {
+      "id": "dodi-5120-20->dodd-5105-74:references_upstream:resolved_reference",
+      "source_artifact_id": "dodi-5120-20",
+      "source_label": "DoDI 5120.20",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-5105-74",
+      "target_label": "DoDD 5105.74",
+      "target_lane": "dod",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5120.20",
+        "label": "DoDI 5120.20",
+        "first_line": 144,
+        "lines_sample": [
+          144
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5120-20->dodi-1015-10:references:resolved_reference",
+      "source_artifact_id": "dodi-5120-20",
+      "source_label": "DoDI 5120.20",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1015-10",
+      "target_label": "DoDI 1015.10",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5120.20",
+        "label": "DoDI 5120.20",
+        "first_line": 1860,
+        "lines_sample": [
+          1860
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5120-20->dodi-5040-07:references:resolved_reference",
+      "source_artifact_id": "dodi-5120-20",
+      "source_label": "DoDI 5120.20",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5040-07",
+      "target_label": "DoDI 5040.07",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5120.20",
+        "label": "DoDI 5120.20",
+        "first_line": 43,
+        "lines_sample": [
+          43
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5120-20->dodi-5400-14:references:resolved_reference",
+      "source_artifact_id": "dodi-5120-20",
+      "source_label": "DoDI 5120.20",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5400-14",
+      "target_label": "DoDI 5400.14",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5120.20",
+        "label": "DoDI 5120.20",
+        "first_line": 183,
+        "lines_sample": [
+          183
+        ],
+        "count": 1
+      }
+    }
+  ],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
@@ -103,7 +252,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-5120-20",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 4
     }
   ]
 }

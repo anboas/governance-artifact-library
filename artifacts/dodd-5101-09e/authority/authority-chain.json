@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,31 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 3,
     "downstream_edge_count": 4,
-    "catalogued_node_count": 5,
+    "catalogued_node_count": 8,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 3,
     "inferred_edge_count": 4,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "dodd-3025-18",
+      "label": "DoDD 3025.18",
+      "title": "DoDD 3025.18: Defense Support of Civil Authorities (DSCA)",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodd-5101-09e",
       "label": "DoDD 5101.09E",
@@ -83,8 +98,38 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodd-5136-01",
+      "label": "DoDD 5136.01",
+      "title": "DoDD 5136.01: Assistant Secretary of Defense for Health Affairs (ASD(HA))",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodd-5136-13",
+      "label": "DoDD 5136.13",
+      "title": "DoDD 5136.13: Defense Health Agency",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodi-1000-01",
@@ -98,7 +143,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -113,7 +158,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -128,7 +173,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -143,11 +188,78 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodd-3025-18->dodd-5101-09e:references:resolved_reference",
+      "source_artifact_id": "dodd-3025-18",
+      "source_label": "DoDD 3025.18",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-5101-09e",
+      "target_label": "DoDD 5101.09E",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:3025.18",
+        "label": "DoDD 3025.18",
+        "first_line": 26,
+        "lines_sample": [
+          26
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodd-5136-01->dodd-5101-09e:references:resolved_reference",
+      "source_artifact_id": "dodd-5136-01",
+      "source_label": "DoDD 5136.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-5101-09e",
+      "target_label": "DoDD 5101.09E",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5136.01",
+        "label": "DoDD 5136.01",
+        "first_line": 237,
+        "lines_sample": [
+          237
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodd-5136-13->dodd-5101-09e:references:resolved_reference",
+      "source_artifact_id": "dodd-5136-13",
+      "source_label": "DoDD 5136.13",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-5101-09e",
+      "target_label": "DoDD 5101.09E",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5136.13",
+        "label": "DoDD 5136.13",
+        "first_line": 256,
+        "lines_sample": [
+          256
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "dodd-5101-09e->dodi-1000-01:flows_down:inferred_flowdown",
@@ -245,7 +357,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodd-5101-09e",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 3
     },
     {
       "id": "trace-downstream",

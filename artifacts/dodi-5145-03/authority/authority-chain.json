@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,81 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "upstream_edge_count": 3,
+    "downstream_edge_count": 1,
+    "catalogued_node_count": 5,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:executive-order:13467",
+      "label": "Executive Order 13467",
+      "title": "Executive Order 13467",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:13467",
+      "count": 2,
+      "lines_sample": [
+        42,
+        123
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodd-5145-01",
+      "label": "DoDD 5145.01",
+      "title": "DoDD 5145.01: General Counsel of The Department of Defense",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodd-5145-04",
+      "label": "DoDD 5145.04",
+      "title": "DoDD 5145.04: Defense Legal Services Agency (DLSA)",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "gap:dodi:5025.01",
+      "label": "DoDI 5025.01",
+      "title": "DoDI 5025.01",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodi",
+      "source_reference_id": "dodi:5025.01",
+      "count": 1,
+      "lines_sample": [
+        18
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
     {
       "id": "dodi-5145-03",
       "label": "DoDI 5145.03",
@@ -83,27 +148,183 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-5200-02",
+      "label": "DoDI 5200.02",
+      "title": "DoDI 5200.02: DoD Personnel Security Program (PSP)",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5210-45",
+      "label": "DoDI 5210.45",
+      "title": "DoDI 5210.45: Personnel Security Policies and Procedures for Sensitive Cryptologic Information in the National Security Agency/Central Security Service",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "upstream_edges": [
+    {
+      "id": "dodd-5145-04->dodi-5145-03:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-5145-04",
+      "source_label": "DoDD 5145.04",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5145-03",
+      "target_label": "DoDI 5145.03",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5145.04",
+        "label": "DoDD 5145.04",
+        "first_line": 22,
+        "lines_sample": [
+          22
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5200-02->dodi-5145-03:references:resolved_reference",
+      "source_artifact_id": "dodi-5200-02",
+      "source_label": "DoDI 5200.02",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5145-03",
+      "target_label": "DoDI 5145.03",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5200.02",
+        "label": "DoDI 5200.02",
+        "first_line": 66,
+        "lines_sample": [
+          66
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5210-45->dodi-5145-03:references:resolved_reference",
+      "source_artifact_id": "dodi-5210-45",
+      "source_label": "DoDI 5210.45",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5145-03",
+      "target_label": "DoDI 5145.03",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5210.45",
+        "label": "DoDI 5210.45",
+        "first_line": 68,
+        "lines_sample": [
+          68
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-5145-03->dodd-5145-01:references_upstream:resolved_reference",
+      "source_artifact_id": "dodi-5145-03",
+      "source_label": "DoDI 5145.03",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-5145-01",
+      "target_label": "DoDD 5145.01",
+      "target_lane": "dod",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5145.03",
+        "label": "DoDI 5145.03",
+        "first_line": 184,
+        "lines_sample": [
+          184
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:executive-order:13467",
+      "label": "Executive Order 13467",
+      "title": "Executive Order 13467",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:13467",
+      "count": 2,
+      "lines_sample": [
+        42,
+        123
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:dodi:5025.01",
+      "label": "DoDI 5025.01",
+      "title": "DoDI 5025.01",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodi",
+      "source_reference_id": "dodi:5025.01",
+      "count": 1,
+      "lines_sample": [
+        18
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-5145-03",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 3
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-5145-03",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 1
     }
   ]
 }

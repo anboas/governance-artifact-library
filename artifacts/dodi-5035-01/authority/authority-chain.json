@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,53 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "downstream_edge_count": 1,
+    "catalogued_node_count": 2,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 1,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:116-283",
+      "label": "Public Law 116-283",
+      "title": "Public Law 116-283",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:116-283",
+      "count": 3,
+      "lines_sample": [
+        84,
+        86,
+        354
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:12353",
+      "label": "Executive Order 12353",
+      "title": "Executive Order 12353",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:12353",
+      "count": 3,
+      "lines_sample": [
+        160,
+        252,
+        353
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
     {
       "id": "dodi-5035-01",
       "label": "DoDI 5035.01",
@@ -83,13 +121,90 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dowi-5120-04",
+      "label": "DoWI 5120.04",
+      "title": "DoWI 5120.04: DoW Newspapers, Magazines, Guides, and Installation Maps",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "downstream_edges": [
+    {
+      "id": "dodi-5035-01->dowi-5120-04:references:resolved_reference",
+      "source_artifact_id": "dodi-5035-01",
+      "source_label": "DoDI 5035.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dowi-5120-04",
+      "target_label": "DoWI 5120.04",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5035.01",
+        "label": "DoDI 5035.01",
+        "first_line": 487,
+        "lines_sample": [
+          487
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:executive-order:12353",
+      "label": "Executive Order 12353",
+      "title": "Executive Order 12353",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:12353",
+      "count": 3,
+      "lines_sample": [
+        160,
+        252,
+        353
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:116-283",
+      "label": "Public Law 116-283",
+      "title": "Public Law 116-283",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:116-283",
+      "count": 3,
+      "lines_sample": [
+        84,
+        86,
+        354
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
@@ -103,7 +218,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-5035-01",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 1
     }
   ]
 }

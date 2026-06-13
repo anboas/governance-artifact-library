@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,30 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "downstream_edge_count": 1,
+    "catalogued_node_count": 2,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 1,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "dodi-5000-91",
+      "label": "DoDI 5000.91",
+      "title": "DoDI 5000.91: Product Support Management for the Adaptive Acquisition Framework",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-5000-92",
       "label": "DoDI 5000.92",
@@ -83,12 +98,35 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     }
   ],
   "upstream_edges": [],
-  "downstream_edges": [],
+  "downstream_edges": [
+    {
+      "id": "dodi-5000-92->dodi-5000-91:references:resolved_reference",
+      "source_artifact_id": "dodi-5000-92",
+      "source_label": "DoDI 5000.92",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5000-91",
+      "target_label": "DoDI 5000.91",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5000.92",
+        "label": "DoDI 5000.92",
+        "first_line": 263,
+        "lines_sample": [
+          263
+        ],
+        "count": 1
+      }
+    }
+  ],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
@@ -103,7 +141,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-5000-92",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 1
     }
   ]
 }

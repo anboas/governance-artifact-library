@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,141 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 9,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "catalogued_node_count": 10,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 9,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
+    {
+      "id": "eo-14028-cybersecurity",
+      "label": "EO 14028",
+      "title": "Executive Order 14028: Improving the Nation's Cybersecurity",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "family": "cybersecurity",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "gap:nist-sp:800-86",
+      "label": "NIST SP 800-86",
+      "title": "NIST SP 800-86",
+      "artifact_type": "NIST Special Publication",
+      "lane": "govwide",
+      "lane_label": "Gov-wide",
+      "hierarchy_rank": 50,
+      "reference_family": "nist-sp",
+      "source_reference_id": "nist-sp:800-86",
+      "count": 2,
+      "lines_sample": [
+        623,
+        1574
+      ],
+      "status": "uncatalogued",
+      "priority": "low"
+    },
+    {
+      "id": "nist-sp-800-53-r5-security-privacy-controls",
+      "label": "NIST SP 800-53 Rev. 5",
+      "title": "NIST SP 800-53 Rev. 5: Security and Privacy Controls for Information Systems and Organizations",
+      "artifact_type": "Standard",
+      "lane": "govwide",
+      "lane_label": "Gov-wide",
+      "hierarchy_rank": 60,
+      "family": "security_controls",
+      "issuing_authority": "NIST",
+      "source_system": "NIST CSRC",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodd-8140-01",
+      "label": "DoDD 8140.01",
+      "title": "DoDD 8140.01: Cyberspace Workforce Management",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "gap:dodd:5205.16",
+      "label": "DoDD 5205.16",
+      "title": "DoDD 5205.16",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodd",
+      "source_reference_id": "dodd:5205.16",
+      "count": 1,
+      "lines_sample": [
+        943
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodi-5205-13",
+      "label": "DoDI 5205.13",
+      "title": "DoDI 5205.13: Defense Industrial Base (DIB) Cybersecurity (CS) Activities",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-8500-01",
+      "label": "DoDI 8500.01",
+      "title": "DoDI 8500.01: Cybersecurity",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-8530-01",
+      "label": "DoDI 8530.01",
+      "title": "DoDI 8530.01: Cybersecurity Activities Support to DoD Information Network Operations",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-8530-03",
       "label": "DoDI 8530.03",
@@ -83,20 +208,310 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-8531-01",
+      "label": "DoDI 8531.01",
+      "title": "DoDI 8531.01: DoD Vulnerability Management",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-8580-02",
+      "label": "DoDI 8580.02",
+      "title": "DoDI 8580.02: Security of Individually Identifiable Health Information in DoD Health Care Programs",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-8582-01",
+      "label": "DoDI 8582.01",
+      "title": "DoDI 8582.01: Security of Non-DoD Information Systems Processing Unclassified Nonpublic DoD Information",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodd-8140-01->dodi-8530-03:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-8140-01",
+      "source_label": "DoDD 8140.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-8530-03",
+      "target_label": "DoDI 8530.03",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:8140.01",
+        "label": "DoDD 8140.01",
+        "first_line": 198,
+        "lines_sample": [
+          198
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5205-13->dodi-8530-03:references:resolved_reference",
+      "source_artifact_id": "dodi-5205-13",
+      "source_label": "DoDI 5205.13",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-8530-03",
+      "target_label": "DoDI 8530.03",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5205.13",
+        "label": "DoDI 5205.13",
+        "first_line": 163,
+        "lines_sample": [
+          163,
+          939
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "dodi-8500-01->dodi-8530-03:references:resolved_reference",
+      "source_artifact_id": "dodi-8500-01",
+      "source_label": "DoDI 8500.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-8530-03",
+      "target_label": "DoDI 8530.03",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:8500.01",
+        "label": "DoDI 8500.01",
+        "first_line": 1029,
+        "lines_sample": [
+          1029
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-8530-01->dodi-8530-03:references:resolved_reference",
+      "source_artifact_id": "dodi-8530-01",
+      "source_label": "DoDI 8530.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-8530-03",
+      "target_label": "DoDI 8530.03",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:8530.01",
+        "label": "DoDI 8530.01",
+        "first_line": 483,
+        "lines_sample": [
+          483,
+          906,
+          1729,
+          1752
+        ],
+        "count": 4
+      }
+    },
+    {
+      "id": "dodi-8531-01->dodi-8530-03:references:resolved_reference",
+      "source_artifact_id": "dodi-8531-01",
+      "source_label": "DoDI 8531.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-8530-03",
+      "target_label": "DoDI 8530.03",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:8531.01",
+        "label": "DoDI 8531.01",
+        "first_line": 699,
+        "lines_sample": [
+          699,
+          1031,
+          1491,
+          1500
+        ],
+        "count": 4
+      }
+    },
+    {
+      "id": "dodi-8580-02->dodi-8530-03:references:resolved_reference",
+      "source_artifact_id": "dodi-8580-02",
+      "source_label": "DoDI 8580.02",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-8530-03",
+      "target_label": "DoDI 8530.03",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:8580.02",
+        "label": "DoDI 8580.02",
+        "first_line": 182,
+        "lines_sample": [
+          182,
+          567,
+          1769
+        ],
+        "count": 3
+      }
+    },
+    {
+      "id": "dodi-8582-01->dodi-8530-03:references:resolved_reference",
+      "source_artifact_id": "dodi-8582-01",
+      "source_label": "DoDI 8582.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-8530-03",
+      "target_label": "DoDI 8530.03",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:8582.01",
+        "label": "DoDI 8582.01",
+        "first_line": 535,
+        "lines_sample": [
+          535
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "eo-14028-cybersecurity->dodi-8530-03:directs:resolved_reference",
+      "source_artifact_id": "eo-14028-cybersecurity",
+      "source_label": "EO 14028",
+      "source_lane": "executive",
+      "target_artifact_id": "dodi-8530-03",
+      "target_label": "DoDI 8530.03",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:14028",
+        "label": "Executive Order 14028",
+        "first_line": 311,
+        "lines_sample": [
+          311,
+          1921
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "nist-sp-800-53-r5-security-privacy-controls->dodi-8530-03:implements:resolved_reference",
+      "source_artifact_id": "nist-sp-800-53-r5-security-privacy-controls",
+      "source_label": "NIST SP 800-53 Rev. 5",
+      "source_lane": "govwide",
+      "target_artifact_id": "dodi-8530-03",
+      "target_label": "DoDI 8530.03",
+      "target_lane": "dod",
+      "relationship": "implements",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "nist-sp:800-53",
+        "label": "NIST SP 800-53",
+        "first_line": 485,
+        "lines_sample": [
+          485
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:nist-sp:800-86",
+      "label": "NIST SP 800-86",
+      "title": "NIST SP 800-86",
+      "artifact_type": "NIST Special Publication",
+      "lane": "govwide",
+      "lane_label": "Gov-wide",
+      "hierarchy_rank": 50,
+      "reference_family": "nist-sp",
+      "source_reference_id": "nist-sp:800-86",
+      "count": 2,
+      "lines_sample": [
+        623,
+        1574
+      ],
+      "status": "uncatalogued",
+      "priority": "low"
+    },
+    {
+      "id": "gap:dodd:5205.16",
+      "label": "DoDD 5205.16",
+      "title": "DoDD 5205.16",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodd",
+      "source_reference_id": "dodd:5205.16",
+      "count": 1,
+      "lines_sample": [
+        943
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-8530-03",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 9
     },
     {
       "id": "trace-downstream",

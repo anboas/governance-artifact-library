@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,112 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "upstream_edge_count": 1,
+    "downstream_edge_count": 3,
+    "catalogued_node_count": 5,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:117-297",
+      "label": "Public Law 117-297",
+      "title": "Public Law 117-297",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:117-297",
+      "count": 2,
+      "lines_sample": [
+        166,
+        932
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:117-328",
+      "label": "Public Law 117-328",
+      "title": "Public Law 117-328",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:117-328",
+      "count": 2,
+      "lines_sample": [
+        171,
+        934
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodi-1304-34",
+      "label": "DoDI 1304.34",
+      "title": "DoDI 1304.34: General Bonus Authority for Officers",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1322-17",
+      "label": "DoDI 1322.17",
+      "title": "DoDI 1322.17: Montgomery GI Bill-Selected Reserve (MGIB-SR)",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1332-18",
+      "label": "DoDI 1332.18",
+      "title": "DoDI 1332.18: Disability Evaluation System",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1341-02",
+      "label": "DoDI 1341.02",
+      "title": "DoDI 1341.02: Defense Enrollment Eligibility Reporting System (DEERS) Program and Procedures",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-1341-13",
       "label": "DoDI 1341.13",
@@ -83,27 +179,154 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-1332-18->dodi-1341-13:references:resolved_reference",
+      "source_artifact_id": "dodi-1332-18",
+      "source_label": "DoDI 1332.18",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1341-13",
+      "target_label": "DoDI 1341.13",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1332.18",
+        "label": "DoDI 1332.18",
+        "first_line": 686,
+        "lines_sample": [
+          686
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-1341-13->dodi-1304-34:references:resolved_reference",
+      "source_artifact_id": "dodi-1341-13",
+      "source_label": "DoDI 1341.13",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1304-34",
+      "target_label": "DoDI 1304.34",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1341.13",
+        "label": "DoDI 1341.13",
+        "first_line": 731,
+        "lines_sample": [
+          731
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1341-13->dodi-1322-17:references:resolved_reference",
+      "source_artifact_id": "dodi-1341-13",
+      "source_label": "DoDI 1341.13",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1322-17",
+      "target_label": "DoDI 1322.17",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1341.13",
+        "label": "DoDI 1341.13",
+        "first_line": 464,
+        "lines_sample": [
+          464
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1341-13->dodi-1341-02:references:resolved_reference",
+      "source_artifact_id": "dodi-1341-13",
+      "source_label": "DoDI 1341.13",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1341-02",
+      "target_label": "DoDI 1341.02",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1341.13",
+        "label": "DoDI 1341.13",
+        "first_line": 475,
+        "lines_sample": [
+          475
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:public-law:117-297",
+      "label": "Public Law 117-297",
+      "title": "Public Law 117-297",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:117-297",
+      "count": 2,
+      "lines_sample": [
+        166,
+        932
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:117-328",
+      "label": "Public Law 117-328",
+      "title": "Public Law 117-328",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:117-328",
+      "count": 2,
+      "lines_sample": [
+        171,
+        934
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-1341-13",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-1341-13",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 3
     }
   ]
 }

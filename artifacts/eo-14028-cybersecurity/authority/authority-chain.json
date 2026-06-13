@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 2,
-    "downstream_edge_count": 4,
-    "catalogued_node_count": 6,
+    "downstream_edge_count": 8,
+    "catalogued_node_count": 10,
     "uncatalogued_gap_count": 3,
-    "evidence_backed_edge_count": 3,
+    "evidence_backed_edge_count": 7,
     "inferred_edge_count": 3,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -185,6 +185,66 @@
       "status": "catalogued"
     },
     {
+      "id": "dodd-5030-19",
+      "label": "DoDD 5030.19",
+      "title": "DoDD 5030.19: DoD Responsibilities on Federal Aviation",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-8310-01",
+      "label": "DoDI 8310.01",
+      "title": "DoDI 8310.01: Information Technology Standards in the DoD",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-8420-02",
+      "label": "DoDI 8420.02",
+      "title": "DoDI 8420.02: DoD Satellite Communications",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-8530-03",
+      "label": "DoDI 8530.03",
+      "title": "DoDI 8530.03: Cyber Incident Response",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "secnav-m-5239-3-don-cybersecurity",
       "label": "SECNAV M-5239.3",
       "title": "SECNAV M-5239.3: Department of the Navy Cybersecurity Program",
@@ -262,6 +322,102 @@
     }
   ],
   "downstream_edges": [
+    {
+      "id": "eo-14028-cybersecurity->dodd-5030-19:directs:resolved_reference",
+      "source_artifact_id": "eo-14028-cybersecurity",
+      "source_label": "EO 14028",
+      "source_lane": "executive",
+      "target_artifact_id": "dodd-5030-19",
+      "target_label": "DoDD 5030.19",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:14028",
+        "label": "Executive Order 14028",
+        "first_line": 124,
+        "lines_sample": [
+          124,
+          723
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "eo-14028-cybersecurity->dodi-8310-01:directs:resolved_reference",
+      "source_artifact_id": "eo-14028-cybersecurity",
+      "source_label": "EO 14028",
+      "source_lane": "executive",
+      "target_artifact_id": "dodi-8310-01",
+      "target_label": "DoDI 8310.01",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:14028",
+        "label": "Executive Order 14028",
+        "first_line": 604,
+        "lines_sample": [
+          604,
+          607,
+          1516,
+          1743
+        ],
+        "count": 4
+      }
+    },
+    {
+      "id": "eo-14028-cybersecurity->dodi-8420-02:directs:resolved_reference",
+      "source_artifact_id": "eo-14028-cybersecurity",
+      "source_label": "EO 14028",
+      "source_lane": "executive",
+      "target_artifact_id": "dodi-8420-02",
+      "target_label": "DoDI 8420.02",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:14028",
+        "label": "Executive Order 14028",
+        "first_line": 185,
+        "lines_sample": [
+          185,
+          1537,
+          2158,
+          2478
+        ],
+        "count": 4
+      }
+    },
+    {
+      "id": "eo-14028-cybersecurity->dodi-8530-03:directs:resolved_reference",
+      "source_artifact_id": "eo-14028-cybersecurity",
+      "source_label": "EO 14028",
+      "source_lane": "executive",
+      "target_artifact_id": "dodi-8530-03",
+      "target_label": "DoDI 8530.03",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:14028",
+        "label": "Executive Order 14028",
+        "first_line": 311,
+        "lines_sample": [
+          311,
+          1921
+        ],
+        "count": 2
+      }
+    },
     {
       "id": "eo-14028-cybersecurity->omb-m-21-31-cyber-logging:directs:resolved_reference",
       "source_artifact_id": "eo-14028-cybersecurity",
@@ -418,7 +574,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "eo-14028-cybersecurity",
       "direction": "downstream",
-      "edge_count": 4
+      "edge_count": 8
     }
   ]
 }

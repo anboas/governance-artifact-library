@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,46 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 4,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "catalogued_node_count": 5,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
+    {
+      "id": "dodi-1000-17",
+      "label": "DoDI 1000.17",
+      "title": "DoDI 1000.17: Detail of DoD Personnel to Duty Outside the Department of Defense",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1100-22",
+      "label": "DoDI 1100.22",
+      "title": "DoDI 1100.22: Policy and Procedures for Determining Workforce Mix",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-1100-23",
       "label": "DoDI 1100.23",
@@ -83,11 +113,130 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-5100-73",
+      "label": "DoDI 5100.73",
+      "title": "DoDI 5100.73: Major DoD Headquarters Activities",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5105-04",
+      "label": "DoDI 5105.04",
+      "title": "DoDI 5105.04: Department of Defense Federal Advisory Committee Management Program",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-1000-17->dodi-1100-23:references:resolved_reference",
+      "source_artifact_id": "dodi-1000-17",
+      "source_label": "DoDI 1000.17",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1100-23",
+      "target_label": "DoDI 1100.23",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1000.17",
+        "label": "DoDI 1000.17",
+        "first_line": 54,
+        "lines_sample": [
+          54
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1100-22->dodi-1100-23:references:resolved_reference",
+      "source_artifact_id": "dodi-1100-22",
+      "source_label": "DoDI 1100.22",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1100-23",
+      "target_label": "DoDI 1100.23",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1100.22",
+        "label": "DoDI 1100.22",
+        "first_line": 153,
+        "lines_sample": [
+          153
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5100-73->dodi-1100-23:references:resolved_reference",
+      "source_artifact_id": "dodi-5100-73",
+      "source_label": "DoDI 5100.73",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1100-23",
+      "target_label": "DoDI 1100.23",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5100.73",
+        "label": "DoDI 5100.73",
+        "first_line": 130,
+        "lines_sample": [
+          130
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5105-04->dodi-1100-23:references:resolved_reference",
+      "source_artifact_id": "dodi-5105-04",
+      "source_label": "DoDI 5105.04",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1100-23",
+      "target_label": "DoDI 1100.23",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5105.04",
+        "label": "DoDI 5105.04",
+        "first_line": 65,
+        "lines_sample": [
+          65
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
@@ -96,7 +245,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-1100-23",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 4
     },
     {
       "id": "trace-downstream",

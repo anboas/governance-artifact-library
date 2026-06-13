@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,81 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "upstream_edge_count": 1,
+    "downstream_edge_count": 1,
+    "catalogued_node_count": 3,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 2,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:109-364",
+      "label": "Public Law 109-364",
+      "title": "Public Law 109-364",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:109-364",
+      "count": 2,
+      "lines_sample": [
+        15,
+        95
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:dodd:5400.11",
+      "label": "DoDD 5400.11",
+      "title": "DoDD 5400.11",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodd",
+      "source_reference_id": "dodd:5400.11",
+      "count": 1,
+      "lines_sample": [
+        140
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodi-1000-31",
+      "label": "DoDI 1000.31",
+      "title": "DoDI 1000.31: Computer / Electronics Accommodations Program (CAP)",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1300-25",
+      "label": "DoDI 1300.25",
+      "title": "DoDI 1300.25: Guidance for the Education and Employment Initiative (E21) and Operation WARFIGHTER (OWF)",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-6025-22",
       "label": "DoDI 6025.22",
@@ -83,27 +148,110 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-1300-25->dodi-6025-22:references:resolved_reference",
+      "source_artifact_id": "dodi-1300-25",
+      "source_label": "DoDI 1300.25",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6025-22",
+      "target_label": "DoDI 6025.22",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1300.25",
+        "label": "DoDI 1300.25",
+        "first_line": 57,
+        "lines_sample": [
+          57
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-6025-22->dodi-1000-31:references:resolved_reference",
+      "source_artifact_id": "dodi-6025-22",
+      "source_label": "DoDI 6025.22",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1000-31",
+      "target_label": "DoDI 1000.31",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6025.22",
+        "label": "DoDI 6025.22",
+        "first_line": 264,
+        "lines_sample": [
+          264,
+          303
+        ],
+        "count": 2
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:public-law:109-364",
+      "label": "Public Law 109-364",
+      "title": "Public Law 109-364",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:109-364",
+      "count": 2,
+      "lines_sample": [
+        15,
+        95
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:dodd:5400.11",
+      "label": "DoDD 5400.11",
+      "title": "DoDD 5400.11",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodd",
+      "source_reference_id": "dodd:5400.11",
+      "count": 1,
+      "lines_sample": [
+        140
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-6025-22",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-6025-22",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 1
     }
   ]
 }

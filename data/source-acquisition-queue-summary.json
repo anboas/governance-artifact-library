@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T21:42:04.598Z",
+  "generated_at": "2026-06-13T22:00:35.045Z",
   "queue_version": "source-acquisition-queue-v1",
   "summary": {
     "queue_item_count": 36,
@@ -61,19 +61,64 @@
       "queue_rank": 1
     },
     {
+      "id": "source-recovery-dod-cio",
+      "item_type": "source_recovery",
+      "label": "DoD CIO mirror recovery",
+      "queue_priority": "P0",
+      "score": 105,
+      "reason": "1 registered artifact blocked or browser-needed.",
+      "recommended_action": "Capture official source files through browser/manual import fallback.",
+      "source_id": "dod-cio",
+      "source_name": "DoD CIO",
+      "source_owner": "DoD Chief Information Officer",
+      "source_priority": "critical",
+      "automation_status": "blocked_by_host",
+      "coverage_status": "source_known_blocked",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "source_location_types": [
+        "dod_cio_pdf",
+        "dod_cio_html"
+      ],
+      "source_url": "https://dodcio.defense.gov/",
+      "search_url": "https://dodcio.defense.gov/Search/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 1,
+        "mirrored": 0,
+        "blocked": 1,
+        "text_extracted": 0,
+        "analytics": 1,
+        "analysis": 1,
+        "structured": 0,
+        "versioned": 1
+      },
+      "artifact_ids": [
+        "dod-zero-trust-strategy"
+      ],
+      "source_candidates": [],
+      "queue_rank": 2
+    },
+    {
       "id": "source-recovery-dod-issuances",
       "item_type": "source_recovery",
       "label": "DoW/DoD Issuances mirror recovery",
       "queue_priority": "P0",
-      "score": 107,
-      "reason": "3 registered artifacts blocked or browser-needed.",
+      "score": 104,
+      "reason": "0 registered artifacts blocked or browser-needed.",
       "recommended_action": "Capture official source files through browser/manual import fallback.",
       "source_id": "dod-issuances",
       "source_name": "DoW/DoD Issuances",
       "source_owner": "Washington Headquarters Services / Executive Services Directorate",
       "source_priority": "critical",
       "automation_status": "blocked_by_host",
-      "coverage_status": "mixed",
+      "coverage_status": "mirrored",
       "capture_strategies": [
         "browser_fetch",
         "manual_import",
@@ -90,12 +135,12 @@
       "hierarchy_rank": null,
       "counts": {
         "artifacts": 1137,
-        "mirrored": 1,
-        "blocked": 3,
-        "text_extracted": 1,
+        "mirrored": 2,
+        "blocked": 0,
+        "text_extracted": 1103,
         "analytics": 1137,
         "analysis": 1137,
-        "structured": 1,
+        "structured": 1103,
         "versioned": 1137
       },
       "artifact_ids": [
@@ -1238,51 +1283,6 @@
         "dowi-6440-03"
       ],
       "source_candidates": [],
-      "queue_rank": 2
-    },
-    {
-      "id": "source-recovery-dod-cio",
-      "item_type": "source_recovery",
-      "label": "DoD CIO mirror recovery",
-      "queue_priority": "P0",
-      "score": 105,
-      "reason": "1 registered artifact blocked or browser-needed.",
-      "recommended_action": "Capture official source files through browser/manual import fallback.",
-      "source_id": "dod-cio",
-      "source_name": "DoD CIO",
-      "source_owner": "DoD Chief Information Officer",
-      "source_priority": "critical",
-      "automation_status": "blocked_by_host",
-      "coverage_status": "source_known_blocked",
-      "capture_strategies": [
-        "browser_fetch",
-        "manual_import",
-        "source_known_registration"
-      ],
-      "source_location_types": [
-        "dod_cio_pdf",
-        "dod_cio_html"
-      ],
-      "source_url": "https://dodcio.defense.gov/",
-      "search_url": "https://dodcio.defense.gov/Search/",
-      "api_url": null,
-      "governance_item_id": null,
-      "governance_item_label": null,
-      "hierarchy_rank": null,
-      "counts": {
-        "artifacts": 1,
-        "mirrored": 0,
-        "blocked": 1,
-        "text_extracted": 0,
-        "analytics": 1,
-        "analysis": 1,
-        "structured": 0,
-        "versioned": 1
-      },
-      "artifact_ids": [
-        "dod-zero-trust-strategy"
-      ],
-      "source_candidates": [],
       "queue_rank": 3
     },
     {
@@ -1667,7 +1667,7 @@
       "source_owner": "Washington Headquarters Services / Executive Services Directorate",
       "source_priority": "critical",
       "automation_status": "blocked_by_host",
-      "coverage_status": "mixed",
+      "coverage_status": "mirrored",
       "capture_strategies": [
         "browser_fetch",
         "manual_import",
@@ -1719,7 +1719,7 @@
       "source_owner": "Washington Headquarters Services / Executive Services Directorate",
       "source_priority": "critical",
       "automation_status": "blocked_by_host",
-      "coverage_status": "mixed",
+      "coverage_status": "mirrored",
       "capture_strategies": [
         "browser_fetch",
         "manual_import",
@@ -1771,7 +1771,7 @@
       "source_owner": "Washington Headquarters Services / Executive Services Directorate",
       "source_priority": "critical",
       "automation_status": "blocked_by_host",
-      "coverage_status": "mixed",
+      "coverage_status": "mirrored",
       "capture_strategies": [
         "browser_fetch",
         "manual_import",
@@ -1823,7 +1823,7 @@
       "source_owner": "Washington Headquarters Services / Executive Services Directorate",
       "source_priority": "critical",
       "automation_status": "blocked_by_host",
-      "coverage_status": "mixed",
+      "coverage_status": "mirrored",
       "capture_strategies": [
         "browser_fetch",
         "manual_import",

@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,83 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 4,
-    "catalogued_node_count": 5,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "downstream_edge_count": 6,
+    "catalogued_node_count": 7,
+    "uncatalogued_gap_count": 4,
+    "evidence_backed_edge_count": 2,
     "inferred_edge_count": 4,
     "authority_path_status": "authority_gap",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:usc:10:172",
+      "label": "10 U.S.C. 172",
+      "title": "10 U.S.C. 172",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:10:172",
+      "count": 1,
+      "lines_sample": [
+        292
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:10:2701",
+      "label": "10 U.S.C. 2701",
+      "title": "10 U.S.C. 2701",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:10:2701",
+      "count": 1,
+      "lines_sample": [
+        293
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:42:9604",
+      "label": "42 U.S.C. 9604",
+      "title": "42 U.S.C. 9604",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:42:9604",
+      "count": 1,
+      "lines_sample": [
+        293
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:12580",
+      "label": "Executive Order 12580",
+      "title": "Executive Order 12580",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:12580",
+      "count": 1,
+      "lines_sample": [
+        342
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
     {
       "id": "dodd-4715-11",
       "label": "DoDD 4715.11",
@@ -83,7 +151,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     },
     {
@@ -98,7 +166,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -113,7 +181,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -128,7 +196,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -143,7 +211,37 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-4715-16",
+      "label": "DoDI 4715.16",
+      "title": "DoDI 4715.16: Cultural Resources Management",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-8130-01",
+      "label": "DoDI 8130.01",
+      "title": "DoDI 8130.01: Installation Geospatial Information and Services (IGI&S)",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
       "status": "catalogued"
     }
   ],
@@ -236,9 +334,122 @@
         ],
         "shared_family": ""
       }
+    },
+    {
+      "id": "dodd-4715-11->dodi-4715-16:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-4715-11",
+      "source_label": "DoDD 4715.11",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4715-16",
+      "target_label": "DoDI 4715.16",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:4715.11",
+        "label": "DoDD 4715.11",
+        "first_line": 1222,
+        "lines_sample": [
+          1222
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodd-4715-11->dodi-8130-01:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-4715-11",
+      "source_label": "DoDD 4715.11",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-8130-01",
+      "target_label": "DoDI 8130.01",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:4715.11",
+        "label": "DoDD 4715.11",
+        "first_line": 389,
+        "lines_sample": [
+          389
+        ],
+        "count": 1
+      }
     }
   ],
-  "uncatalogued_authority_gaps": [],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:usc:10:172",
+      "label": "10 U.S.C. 172",
+      "title": "10 U.S.C. 172",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:10:172",
+      "count": 1,
+      "lines_sample": [
+        292
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:10:2701",
+      "label": "10 U.S.C. 2701",
+      "title": "10 U.S.C. 2701",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:10:2701",
+      "count": 1,
+      "lines_sample": [
+        293
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:42:9604",
+      "label": "42 U.S.C. 9604",
+      "title": "42 U.S.C. 9604",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:42:9604",
+      "count": 1,
+      "lines_sample": [
+        293
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:12580",
+      "label": "Executive Order 12580",
+      "title": "Executive Order 12580",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:12580",
+      "count": 1,
+      "lines_sample": [
+        342
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
@@ -252,7 +463,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodd-4715-11",
       "direction": "downstream",
-      "edge_count": 4
+      "edge_count": 6
     }
   ]
 }

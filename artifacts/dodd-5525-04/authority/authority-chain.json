@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,67 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 4,
-    "catalogued_node_count": 5,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "downstream_edge_count": 5,
+    "catalogued_node_count": 6,
+    "uncatalogued_gap_count": 4,
+    "evidence_backed_edge_count": 1,
     "inferred_edge_count": 4,
     "authority_path_status": "authority_gap",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:116-92",
+      "label": "Public Law 116-92",
+      "title": "Public Law 116-92",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:116-92",
+      "count": 2,
+      "lines_sample": [
+        21,
+        100
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:18:13",
+      "label": "18 U.S.C. 13",
+      "title": "18 U.S.C. 13",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:18:13",
+      "count": 1,
+      "lines_sample": [
+        75
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:40:318c",
+      "label": "40 U.S.C. 318c",
+      "title": "40 U.S.C. 318c",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:40:318c",
+      "count": 1,
+      "lines_sample": [
+        71
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
     {
       "id": "dodd-5525-04",
       "label": "DoDD 5525.04",
@@ -83,8 +135,27 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "gap:dodd:5255.04",
+      "label": "DoDD 5255.04",
+      "title": "DoDD 5255.04",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodd",
+      "source_reference_id": "dodd:5255.04",
+      "count": 3,
+      "lines_sample": [
+        42,
+        93,
+        125
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     },
     {
       "id": "dodi-1000-01",
@@ -98,7 +169,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -113,7 +184,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -128,7 +199,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -143,7 +214,22 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-6055-04",
+      "label": "DoDI 6055.04",
+      "title": "DoDI 6055.04: DoD Motor Vehicle and Traffic Safety",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
       "status": "catalogued"
     }
   ],
@@ -236,9 +322,104 @@
         ],
         "shared_family": ""
       }
+    },
+    {
+      "id": "dodd-5525-04->dodi-6055-04:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-5525-04",
+      "source_label": "DoDD 5525.04",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6055-04",
+      "target_label": "DoDI 6055.04",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5525.04",
+        "label": "DoDD 5525.04",
+        "first_line": 264,
+        "lines_sample": [
+          264,
+          1000
+        ],
+        "count": 2
+      }
     }
   ],
-  "uncatalogued_authority_gaps": [],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:dodd:5255.04",
+      "label": "DoDD 5255.04",
+      "title": "DoDD 5255.04",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodd",
+      "source_reference_id": "dodd:5255.04",
+      "count": 3,
+      "lines_sample": [
+        42,
+        93,
+        125
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:116-92",
+      "label": "Public Law 116-92",
+      "title": "Public Law 116-92",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:116-92",
+      "count": 2,
+      "lines_sample": [
+        21,
+        100
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:18:13",
+      "label": "18 U.S.C. 13",
+      "title": "18 U.S.C. 13",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:18:13",
+      "count": 1,
+      "lines_sample": [
+        75
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:40:318c",
+      "label": "40 U.S.C. 318c",
+      "title": "40 U.S.C. 318c",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:40:318c",
+      "count": 1,
+      "lines_sample": [
+        71
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
@@ -252,7 +433,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodd-5525-04",
       "direction": "downstream",
-      "edge_count": 4
+      "edge_count": 5
     }
   ]
 }

@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,14 +61,14 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "upstream_edge_count": 2,
+    "downstream_edge_count": 2,
+    "catalogued_node_count": 4,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
     {
@@ -83,12 +83,147 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-1310-02",
+      "label": "DoDI 1310.02",
+      "title": "DoDI 1310.02: Original Appointment of Officers",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1312-03",
+      "label": "DoDI 1312.03",
+      "title": "DoDI 1312.03: Entry Grade Credit for Commissioned Officers and Warrant Officers",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1327-07",
+      "label": "DoDI 1327.07",
+      "title": "DoDI 1327.07: Career Intermission Program for Service Members",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-1310-02->dodi-1310-01:references:resolved_reference",
+      "source_artifact_id": "dodi-1310-02",
+      "source_label": "DoDI 1310.02",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1310-01",
+      "target_label": "DoDI 1310.01",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1310.02",
+        "label": "DoDI 1310.02",
+        "first_line": 110,
+        "lines_sample": [
+          110
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1312-03->dodi-1310-01:references:resolved_reference",
+      "source_artifact_id": "dodi-1312-03",
+      "source_label": "DoDI 1312.03",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1310-01",
+      "target_label": "DoDI 1310.01",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1312.03",
+        "label": "DoDI 1312.03",
+        "first_line": 184,
+        "lines_sample": [
+          184
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-1310-01->dodi-1312-03:references:resolved_reference",
+      "source_artifact_id": "dodi-1310-01",
+      "source_label": "DoDI 1310.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1312-03",
+      "target_label": "DoDI 1312.03",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1310.01",
+        "label": "DoDI 1310.01",
+        "first_line": 348,
+        "lines_sample": [
+          348
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1310-01->dodi-1327-07:references:resolved_reference",
+      "source_artifact_id": "dodi-1310-01",
+      "source_label": "DoDI 1310.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1327-07",
+      "target_label": "DoDI 1327.07",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1310.01",
+        "label": "DoDI 1310.01",
+        "first_line": 323,
+        "lines_sample": [
+          323
+        ],
+        "count": 1
+      }
+    }
+  ],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
@@ -96,14 +231,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-1310-01",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-1310-01",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 2
     }
   ]
 }

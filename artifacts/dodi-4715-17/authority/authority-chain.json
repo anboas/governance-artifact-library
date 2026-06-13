@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,48 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "downstream_edge_count": 1,
+    "catalogued_node_count": 2,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 1,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:executive-order:13423",
+      "label": "Executive Order 13423",
+      "title": "Executive Order 13423",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:13423",
+      "count": 2,
+      "lines_sample": [
+        153,
+        155
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodi-4715-06",
+      "label": "DoDI 4715.06",
+      "title": "DoDI 4715.06: Environmental Compliance in the United States",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-4715-17",
       "label": "DoDI 4715.17",
@@ -83,13 +116,89 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "gap:dodi:5000.02",
+      "label": "DoDI 5000.02",
+      "title": "DoDI 5000.02",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodi",
+      "source_reference_id": "dodi:5000.02",
+      "count": 1,
+      "lines_sample": [
+        324
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "downstream_edges": [
+    {
+      "id": "dodi-4715-17->dodi-4715-06:references:resolved_reference",
+      "source_artifact_id": "dodi-4715-17",
+      "source_label": "DoDI 4715.17",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4715-06",
+      "target_label": "DoDI 4715.06",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:4715.17",
+        "label": "DoDI 4715.17",
+        "first_line": 103,
+        "lines_sample": [
+          103
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:executive-order:13423",
+      "label": "Executive Order 13423",
+      "title": "Executive Order 13423",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:13423",
+      "count": 2,
+      "lines_sample": [
+        153,
+        155
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:dodi:5000.02",
+      "label": "DoDI 5000.02",
+      "title": "DoDI 5000.02",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodi",
+      "source_reference_id": "dodi:5000.02",
+      "count": 1,
+      "lines_sample": [
+        324
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
@@ -103,7 +212,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-4715-17",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 1
     }
   ]
 }

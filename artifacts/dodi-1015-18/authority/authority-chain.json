@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,49 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 2,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "catalogued_node_count": 3,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 2,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:117-81",
+      "label": "Public Law 117-81",
+      "title": "Public Law 117-81",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:117-81",
+      "count": 2,
+      "lines_sample": [
+        18,
+        318
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodi-1015-10",
+      "label": "DoDI 1015.10",
+      "title": "DoDI 1015.10: Military Morale, Welfare, and Recreation (MWR) Programs",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-1015-18",
       "label": "DoDI 1015.18",
@@ -83,20 +116,101 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-4165-14",
+      "label": "DoDI 4165.14",
+      "title": "DoDI 4165.14: Real Property Inventory and Reporting",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-1015-10->dodi-1015-18:references:resolved_reference",
+      "source_artifact_id": "dodi-1015-10",
+      "source_label": "DoDI 1015.10",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1015-18",
+      "target_label": "DoDI 1015.18",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1015.10",
+        "label": "DoDI 1015.10",
+        "first_line": 76,
+        "lines_sample": [
+          76,
+          78,
+          150
+        ],
+        "count": 3
+      }
+    },
+    {
+      "id": "dodi-4165-14->dodi-1015-18:references:resolved_reference",
+      "source_artifact_id": "dodi-4165-14",
+      "source_label": "DoDI 4165.14",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1015-18",
+      "target_label": "DoDI 1015.18",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:4165.14",
+        "label": "DoDI 4165.14",
+        "first_line": 301,
+        "lines_sample": [
+          301
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:public-law:117-81",
+      "label": "Public Law 117-81",
+      "title": "Public Law 117-81",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:117-81",
+      "count": 2,
+      "lines_sample": [
+        18,
+        318
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-1015-18",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",

@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,30 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "downstream_edge_count": 4,
+    "catalogued_node_count": 5,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "dodi-1235-11",
+      "label": "DoDI 1235.11",
+      "title": "DoDI 1235.11: Management of Individual Mobilization Augmentees (IMAs)",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-1300-19",
       "label": "DoDI 1300.19",
@@ -83,12 +98,152 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-1320-04",
+      "label": "DoDI 1320.04",
+      "title": "DoDI 1320.04: Military Officer Actions Requiring Presidential, Secretary of Defense, or Under Secretary of Defense for Personnel and Readiness Approval or Senate Confirmation",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1320-14",
+      "label": "DoDI 1320.14",
+      "title": "DoDI 1320.14: DoD Commissioned Officer Promotion Program Procedures",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-3025-23",
+      "label": "DoDI 3025.23",
+      "title": "DoDI 3025.23: Domestic Defense Liaison with Civil Authorities",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [],
-  "downstream_edges": [],
+  "downstream_edges": [
+    {
+      "id": "dodi-1300-19->dodi-1235-11:references:resolved_reference",
+      "source_artifact_id": "dodi-1300-19",
+      "source_label": "DoDI 1300.19",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1235-11",
+      "target_label": "DoDI 1235.11",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1300.19",
+        "label": "DoDI 1300.19",
+        "first_line": 237,
+        "lines_sample": [
+          237
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1300-19->dodi-1320-04:references:resolved_reference",
+      "source_artifact_id": "dodi-1300-19",
+      "source_label": "DoDI 1300.19",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1320-04",
+      "target_label": "DoDI 1320.04",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1300.19",
+        "label": "DoDI 1300.19",
+        "first_line": 28,
+        "lines_sample": [
+          28
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1300-19->dodi-1320-14:references:resolved_reference",
+      "source_artifact_id": "dodi-1300-19",
+      "source_label": "DoDI 1300.19",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1320-14",
+      "target_label": "DoDI 1320.14",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1300.19",
+        "label": "DoDI 1300.19",
+        "first_line": 161,
+        "lines_sample": [
+          161,
+          168,
+          273,
+          280,
+          477,
+          1036,
+          1424
+        ],
+        "count": 7
+      }
+    },
+    {
+      "id": "dodi-1300-19->dodi-3025-23:references:resolved_reference",
+      "source_artifact_id": "dodi-1300-19",
+      "source_label": "DoDI 1300.19",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-3025-23",
+      "target_label": "DoDI 3025.23",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1300.19",
+        "label": "DoDI 1300.19",
+        "first_line": 241,
+        "lines_sample": [
+          241
+        ],
+        "count": 1
+      }
+    }
+  ],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
@@ -103,7 +258,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-1300-19",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 4
     }
   ]
 }

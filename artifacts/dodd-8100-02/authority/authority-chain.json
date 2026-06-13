@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,32 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 4,
-    "catalogued_node_count": 5,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "downstream_edge_count": 7,
+    "catalogued_node_count": 8,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 3,
     "inferred_edge_count": 4,
     "authority_path_status": "authority_gap",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:usc:40:11103",
+      "label": "40 U.S.C. 11103",
+      "title": "40 U.S.C. 11103",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:40:11103",
+      "count": 1,
+      "lines_sample": [
+        472
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
     {
       "id": "dodd-8100-02",
       "label": "DoDD 8100.02",
@@ -83,7 +100,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     },
     {
@@ -98,7 +115,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -113,7 +130,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -128,7 +145,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -143,7 +160,52 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-4630-09",
+      "label": "DoDI 4630.09",
+      "title": "DoDI 4630.09: Communications Waveform Management and Standardization",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-8010-01",
+      "label": "DoDI 8010.01",
+      "title": "DoDI 8010.01: Department of Defense Information Network (DODIN) Transport",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-8420-01",
+      "label": "DoDI 8420.01",
+      "title": "DoDI 8420.01: Commercial Wireless Local-Area Network Devices, Systems, and Technologies",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
       "status": "catalogued"
     }
   ],
@@ -236,9 +298,101 @@
         ],
         "shared_family": ""
       }
+    },
+    {
+      "id": "dodd-8100-02->dodi-4630-09:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-8100-02",
+      "source_label": "DoDD 8100.02",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4630-09",
+      "target_label": "DoDI 4630.09",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:8100.02",
+        "label": "DoDD 8100.02",
+        "first_line": 1035,
+        "lines_sample": [
+          1035
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodd-8100-02->dodi-8010-01:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-8100-02",
+      "source_label": "DoDD 8100.02",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-8010-01",
+      "target_label": "DoDI 8010.01",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:8100.02",
+        "label": "DoDD 8100.02",
+        "first_line": 508,
+        "lines_sample": [
+          508
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodd-8100-02->dodi-8420-01:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-8100-02",
+      "source_label": "DoDD 8100.02",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-8420-01",
+      "target_label": "DoDI 8420.01",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:8100.02",
+        "label": "DoDD 8100.02",
+        "first_line": 371,
+        "lines_sample": [
+          371,
+          511,
+          521,
+          692,
+          732,
+          740,
+          894,
+          1252,
+          1574
+        ],
+        "count": 9
+      }
     }
   ],
-  "uncatalogued_authority_gaps": [],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:usc:40:11103",
+      "label": "40 U.S.C. 11103",
+      "title": "40 U.S.C. 11103",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:40:11103",
+      "count": 1,
+      "lines_sample": [
+        472
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
@@ -252,7 +406,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodd-8100-02",
       "direction": "downstream",
-      "edge_count": 4
+      "edge_count": 7
     }
   ]
 }

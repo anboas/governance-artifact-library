@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,61 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "upstream_edge_count": 1,
+    "downstream_edge_count": 2,
+    "catalogued_node_count": 4,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 3,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "dodi-1015-10",
+      "label": "DoDI 1015.10",
+      "title": "DoDI 1015.10: Military Morale, Welfare, and Recreation (MWR) Programs",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1015-16",
+      "label": "DoDI 1015.16",
+      "title": "DoDI 1015.16: Nonappropriated Fund Instrumentalities Information Technology Policies and Procedures",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-8170-01",
+      "label": "DoDI 8170.01",
+      "title": "DoDI 8170.01: Online Information Management and Electronic Messaging",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-8410-01",
       "label": "DoDI 8410.01",
@@ -83,12 +128,80 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-1015-10->dodi-8410-01:references:resolved_reference",
+      "source_artifact_id": "dodi-1015-10",
+      "source_label": "DoDI 1015.10",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-8410-01",
+      "target_label": "DoDI 8410.01",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1015.10",
+        "label": "DoDI 1015.10",
+        "first_line": 305,
+        "lines_sample": [
+          305
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-8410-01->dodi-1015-16:references:resolved_reference",
+      "source_artifact_id": "dodi-8410-01",
+      "source_label": "DoDI 8410.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1015-16",
+      "target_label": "DoDI 1015.16",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:8410.01",
+        "label": "DoDI 8410.01",
+        "first_line": 295,
+        "lines_sample": [
+          295
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-8410-01->dodi-8170-01:references:resolved_reference",
+      "source_artifact_id": "dodi-8410-01",
+      "source_label": "DoDI 8410.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-8170-01",
+      "target_label": "DoDI 8170.01",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:8410.01",
+        "label": "DoDI 8410.01",
+        "first_line": 657,
+        "lines_sample": [
+          657
+        ],
+        "count": 1
+      }
+    }
+  ],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
@@ -96,14 +209,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-8410-01",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-8410-01",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 2
     }
   ]
 }

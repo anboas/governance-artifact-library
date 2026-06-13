@@ -2,21 +2,77 @@
   "id": "dodi-s-3100-13",
   "generated_at": "2026-06-12T23:10:00.000Z",
   "extractor_version": "governance-claims-rules-v1",
-  "claims_status": "source_text_unavailable",
-  "source_text_path": null,
+  "claims_status": "parsed",
+  "source_text_path": "artifacts/dodi-s-3100-13/text/extracted.txt",
   "extraction_path": "artifacts/dodi-s-3100-13/extractions/extractions.json",
   "claims_path": "artifacts/dodi-s-3100-13/claims/claims.json",
   "summary": {
-    "claim_count": 0,
-    "total_line_count": 0,
+    "claim_count": 2,
+    "total_line_count": 11,
     "requirement_count": 0,
     "reporting_requirement_count": 0,
-    "decision_authority_count": 0,
+    "decision_authority_count": 1,
     "prohibition_count": 0,
-    "permission_count": 0,
+    "permission_count": 1,
     "policy_statement_count": 0,
-    "by_type": {}
+    "by_type": {
+      "decision_authority": 1,
+      "permission": 1
+    }
   },
-  "claims": [],
-  "blocked_reason": "No extracted_text_path is currently mirrored for this source-known artifact."
+  "claims": [
+    {
+      "id": "dodi-s-3100-13-claim-00001",
+      "type": "decision_authority",
+      "text": "• This Website is not authorized to post controlled documents.",
+      "normalized_claim": "• This Website is not authorized to post controlled documents",
+      "actor": "",
+      "actor_id": "",
+      "action": "to post controlled documents.",
+      "object": "",
+      "modality": "authorized",
+      "conditions": "",
+      "exceptions": "",
+      "deadline": "",
+      "decision_authority": "Decision authority candidate",
+      "evidence_required": false,
+      "source_lines": {
+        "start": 7,
+        "end": 7
+      },
+      "source_section": "TITLE: DoD Instruction S-3100.13, \"(U) Space Force Application,\" 9/14/2000.",
+      "linked_entities": [],
+      "linked_references": [],
+      "linked_concepts": [],
+      "confidence": 0.55,
+      "review_status": "machine_reviewed"
+    },
+    {
+      "id": "dodi-s-3100-13-claim-00002",
+      "type": "permission",
+      "text": "• Users may contact the OPR listed below to obtain a copy of the Instruction.",
+      "normalized_claim": "• Users may contact the OPR listed below to obtain a copy of the Instruction",
+      "actor": "",
+      "actor_id": "",
+      "action": "contact the OPR listed below to",
+      "object": "obtain a copy of the Instruction.",
+      "modality": "may",
+      "conditions": "",
+      "exceptions": "",
+      "deadline": "",
+      "decision_authority": "",
+      "evidence_required": false,
+      "source_lines": {
+        "start": 8,
+        "end": 8
+      },
+      "source_section": "TITLE: DoD Instruction S-3100.13, \"(U) Space Force Application,\" 9/14/2000.",
+      "linked_entities": [],
+      "linked_references": [],
+      "linked_concepts": [],
+      "confidence": 0.55,
+      "review_status": "machine_reviewed"
+    }
+  ],
+  "blocked_reason": null
 }

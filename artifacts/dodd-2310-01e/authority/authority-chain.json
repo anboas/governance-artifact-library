@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,34 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 4,
     "downstream_edge_count": 4,
-    "catalogued_node_count": 5,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "catalogued_node_count": 9,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 4,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:109-163",
+      "label": "Public Law 109-163",
+      "title": "Public Law 109-163",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:109-163",
+      "count": 2,
+      "lines_sample": [
+        574,
+        759
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
     {
       "id": "dodd-2310-01e",
       "label": "DoDD 2310.01E",
@@ -83,8 +101,68 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodd-2311-01",
+      "label": "DoDD 2311.01",
+      "title": "DoDD 2311.01: DoD Law of War Program",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodd-3115-09",
+      "label": "DoDD 3115.09",
+      "title": "DoDD 3115.09: DoD Intelligence Interrogations, Detainee Debriefings, and Tactical Questioning",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodd-5101-01",
+      "label": "DoDD 5101.01",
+      "title": "DoDD 5101.01: DoD Executive Agent",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodd-5136-01",
+      "label": "DoDD 5136.01",
+      "title": "DoDD 5136.01: Assistant Secretary of Defense for Health Affairs (ASD(HA))",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodi-1000-04",
@@ -98,7 +176,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -113,7 +191,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -128,7 +206,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -143,11 +221,106 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodd-2311-01->dodd-2310-01e:references:resolved_reference",
+      "source_artifact_id": "dodd-2311-01",
+      "source_label": "DoDD 2311.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-2310-01e",
+      "target_label": "DoDD 2310.01E",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:2311.01",
+        "label": "DoDD 2311.01",
+        "first_line": 102,
+        "lines_sample": [
+          102,
+          357,
+          574,
+          707
+        ],
+        "count": 4
+      }
+    },
+    {
+      "id": "dodd-3115-09->dodd-2310-01e:references:resolved_reference",
+      "source_artifact_id": "dodd-3115-09",
+      "source_label": "DoDD 3115.09",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-2310-01e",
+      "target_label": "DoDD 2310.01E",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:3115.09",
+        "label": "DoDD 3115.09",
+        "first_line": 204,
+        "lines_sample": [
+          204,
+          346,
+          574
+        ],
+        "count": 3
+      }
+    },
+    {
+      "id": "dodd-5101-01->dodd-2310-01e:references:resolved_reference",
+      "source_artifact_id": "dodd-5101-01",
+      "source_label": "DoDD 5101.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-2310-01e",
+      "target_label": "DoDD 2310.01E",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5101.01",
+        "label": "DoDD 5101.01",
+        "first_line": 148,
+        "lines_sample": [
+          148,
+          250
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "dodd-5136-01->dodd-2310-01e:references:resolved_reference",
+      "source_artifact_id": "dodd-5136-01",
+      "source_label": "DoDD 5136.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-2310-01e",
+      "target_label": "DoDD 2310.01E",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5136.01",
+        "label": "DoDD 5136.01",
+        "first_line": 155,
+        "lines_sample": [
+          155
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "dodd-2310-01e->dodi-1000-04:flows_down:inferred_flowdown",
@@ -238,14 +411,33 @@
       }
     }
   ],
-  "uncatalogued_authority_gaps": [],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:public-law:109-163",
+      "label": "Public Law 109-163",
+      "title": "Public Law 109-163",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:109-163",
+      "count": 2,
+      "lines_sample": [
+        574,
+        759
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodd-2310-01e",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 4
     },
     {
       "id": "trace-downstream",

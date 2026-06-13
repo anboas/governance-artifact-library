@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,98 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "downstream_edge_count": 4,
+    "catalogued_node_count": 5,
+    "uncatalogued_gap_count": 4,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:102-143",
+      "label": "Public Law 102-143",
+      "title": "Public Law 102-143",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:102-143",
+      "count": 1,
+      "lines_sample": [
+        184
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:95-454",
+      "label": "Public Law 95-454",
+      "title": "Public Law 95-454",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:95-454",
+      "count": 1,
+      "lines_sample": [
+        202
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:12564",
+      "label": "Executive Order 12564",
+      "title": "Executive Order 12564",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:12564",
+      "count": 1,
+      "lines_sample": [
+        180
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:13526",
+      "label": "Executive Order 13526",
+      "title": "Executive Order 13526",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:13526",
+      "count": 1,
+      "lines_sample": [
+        206
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodi-1010-04",
+      "label": "DoDI 1010.04",
+      "title": "DoDI 1010.04: Problematic Substance Use and Gambling Disorder",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-1010-09",
       "label": "DoDI 1010.09",
@@ -83,13 +166,217 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-5210-65",
+      "label": "DoDI 5210.65",
+      "title": "DoDI 5210.65: Security Standards for Safeguarding DoD Chemical Agents",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5210-88",
+      "label": "DoDI 5210.88",
+      "title": "DoDI 5210.88: Security Standards for Safeguarding Biological Select Agents and Toxins",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-8580-02",
+      "label": "DoDI 8580.02",
+      "title": "DoDI 8580.02: Security of Individually Identifiable Health Information in DoD Health Care Programs",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "downstream_edges": [
+    {
+      "id": "dodi-1010-09->dodi-1010-04:references:resolved_reference",
+      "source_artifact_id": "dodi-1010-09",
+      "source_label": "DoDI 1010.09",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1010-04",
+      "target_label": "DoDI 1010.04",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1010.09",
+        "label": "DoDI 1010.09",
+        "first_line": 125,
+        "lines_sample": [
+          125,
+          709
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "dodi-1010-09->dodi-5210-65:references:resolved_reference",
+      "source_artifact_id": "dodi-1010-09",
+      "source_label": "DoDI 1010.09",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5210-65",
+      "target_label": "DoDI 5210.65",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1010.09",
+        "label": "DoDI 1010.09",
+        "first_line": 998,
+        "lines_sample": [
+          998
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1010-09->dodi-5210-88:references:resolved_reference",
+      "source_artifact_id": "dodi-1010-09",
+      "source_label": "DoDI 1010.09",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5210-88",
+      "target_label": "DoDI 5210.88",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1010.09",
+        "label": "DoDI 1010.09",
+        "first_line": 1024,
+        "lines_sample": [
+          1024
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1010-09->dodi-8580-02:references:resolved_reference",
+      "source_artifact_id": "dodi-1010-09",
+      "source_label": "DoDI 1010.09",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-8580-02",
+      "target_label": "DoDI 8580.02",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1010.09",
+        "label": "DoDI 1010.09",
+        "first_line": 49,
+        "lines_sample": [
+          49
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:executive-order:12564",
+      "label": "Executive Order 12564",
+      "title": "Executive Order 12564",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:12564",
+      "count": 1,
+      "lines_sample": [
+        180
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:13526",
+      "label": "Executive Order 13526",
+      "title": "Executive Order 13526",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:13526",
+      "count": 1,
+      "lines_sample": [
+        206
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:102-143",
+      "label": "Public Law 102-143",
+      "title": "Public Law 102-143",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:102-143",
+      "count": 1,
+      "lines_sample": [
+        184
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:95-454",
+      "label": "Public Law 95-454",
+      "title": "Public Law 95-454",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:95-454",
+      "count": 1,
+      "lines_sample": [
+        202
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
@@ -103,7 +390,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-1010-09",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 4
     }
   ]
 }

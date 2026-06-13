@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,61 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "upstream_edge_count": 1,
+    "downstream_edge_count": 4,
+    "catalogued_node_count": 6,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 5,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "dodi-3020-41",
+      "label": "DoDI 3020.41",
+      "title": "DoDI 3020.41: Operational Contract Support Outside the United States",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-4140-01",
+      "label": "DoDI 4140.01",
+      "title": "DoDI 4140.01: DoD Supply Chain Materiel Management Policy",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-4140-73",
+      "label": "DoDI 4140.73",
+      "title": "DoDI 4140.73: Asset Physical Accountability Policy",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-4161-02",
       "label": "DoDI 4161.02",
@@ -83,12 +128,159 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-5000-64",
+      "label": "DoDI 5000.64",
+      "title": "DoDI 5000.64: Accountability and Management of DoD Equipment and Other Accountable Property",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-8320-02",
+      "label": "DoDI 8320.02",
+      "title": "DoDI 8320.02: Sharing Data, Information, and Information Technology (IT) Services in the Department of Defense",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-8320-02->dodi-4161-02:references:resolved_reference",
+      "source_artifact_id": "dodi-8320-02",
+      "source_label": "DoDI 8320.02",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4161-02",
+      "target_label": "DoDI 4161.02",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:8320.02",
+        "label": "DoDI 8320.02",
+        "first_line": 471,
+        "lines_sample": [
+          471
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-4161-02->dodi-3020-41:references:resolved_reference",
+      "source_artifact_id": "dodi-4161-02",
+      "source_label": "DoDI 4161.02",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-3020-41",
+      "target_label": "DoDI 3020.41",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:4161.02",
+        "label": "DoDI 4161.02",
+        "first_line": 1818,
+        "lines_sample": [
+          1818
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-4161-02->dodi-4140-01:references:resolved_reference",
+      "source_artifact_id": "dodi-4161-02",
+      "source_label": "DoDI 4161.02",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4140-01",
+      "target_label": "DoDI 4140.01",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:4161.02",
+        "label": "DoDI 4161.02",
+        "first_line": 258,
+        "lines_sample": [
+          258
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-4161-02->dodi-4140-73:references:resolved_reference",
+      "source_artifact_id": "dodi-4161-02",
+      "source_label": "DoDI 4161.02",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4140-73",
+      "target_label": "DoDI 4140.73",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:4161.02",
+        "label": "DoDI 4161.02",
+        "first_line": 238,
+        "lines_sample": [
+          238,
+          291,
+          299,
+          333,
+          394
+        ],
+        "count": 5
+      }
+    },
+    {
+      "id": "dodi-4161-02->dodi-5000-64:references:resolved_reference",
+      "source_artifact_id": "dodi-4161-02",
+      "source_label": "DoDI 4161.02",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5000-64",
+      "target_label": "DoDI 5000.64",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:4161.02",
+        "label": "DoDI 4161.02",
+        "first_line": 358,
+        "lines_sample": [
+          358,
+          553
+        ],
+        "count": 2
+      }
+    }
+  ],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
@@ -96,14 +288,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-4161-02",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-4161-02",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 4
     }
   ]
 }

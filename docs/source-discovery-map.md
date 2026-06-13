@@ -23,7 +23,7 @@ Generated from `sources/source-discovery-registry.json`, `manifest.json`, and `t
 | critical | Congress.gov | Library of Congress | not_started | api_key_required | api<br>direct_fetch | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | critical | Department of the Navy Issuances | Department of the Navy | source_known_blocked | blocked_by_host | browser_fetch<br>manual_import<br>source_known_registration | 3 | 0 | 3 | 0 | 3 | 3 | 0 | 3 |
 | critical | DoD CIO | DoD Chief Information Officer | source_known_blocked | blocked_by_host | browser_fetch<br>manual_import<br>source_known_registration | 1 | 0 | 1 | 0 | 1 | 1 | 0 | 1 |
-| critical | DoW/DoD Issuances | Washington Headquarters Services / Executive Services Directorate | mixed | blocked_by_host | browser_fetch<br>manual_import<br>source_known_registration | 1137 | 1 | 3 | 1 | 1137 | 1137 | 1 | 1137 |
+| critical | DoW/DoD Issuances | Washington Headquarters Services / Executive Services Directorate | mirrored | blocked_by_host | browser_fetch<br>manual_import<br>source_known_registration | 1137 | 2 | 0 | 1103 | 1137 | 1137 | 1103 | 1137 |
 | critical | Federal Register | Office of the Federal Register / National Archives and Records Administration | mirrored | direct_fetch_ready | api<br>direct_fetch<br>rss | 2 | 2 | 0 | 2 | 2 | 2 | 2 | 2 |
 | critical | GovInfo | U.S. Government Publishing Office | mirrored | direct_fetch_ready | api<br>direct_fetch<br>content_package_fetch | 2 | 2 | 0 | 2 | 2 | 2 | 2 | 2 |
 | critical | NIST CSRC | National Institute of Standards and Technology | mirrored | direct_fetch_ready | direct_fetch<br>html_parse<br>pdf_fetch | 2 | 2 | 0 | 2 | 2 | 2 | 2 | 2 |

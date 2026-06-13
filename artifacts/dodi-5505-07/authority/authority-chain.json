@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,70 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "downstream_edge_count": 2,
+    "catalogued_node_count": 3,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 2,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:106-398",
+      "label": "Public Law 106-398",
+      "title": "Public Law 106-398",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:106-398",
+      "count": 3,
+      "lines_sample": [
+        22,
+        214,
+        365
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:116-283",
+      "label": "Public Law 116-283",
+      "title": "Public Law 116-283",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:116-283",
+      "count": 5,
+      "lines_sample": [
+        22,
+        167,
+        189,
+        214,
+        367
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodi-5505-03",
+      "label": "DoDI 5505.03",
+      "title": "DoDI 5505.03: Initiation of Investigations by Defense Criminal Investigative Organizations",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-5505-07",
       "label": "DoDI 5505.07",
@@ -83,13 +138,114 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-5505-18",
+      "label": "DoDI 5505.18",
+      "title": "DoDI 5505.18: Investigation of Adult Sexual Assault in the Department of Defense",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "downstream_edges": [
+    {
+      "id": "dodi-5505-07->dodi-5505-03:references:resolved_reference",
+      "source_artifact_id": "dodi-5505-07",
+      "source_label": "DoDI 5505.07",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5505-03",
+      "target_label": "DoDI 5505.03",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5505.07",
+        "label": "DoDI 5505.07",
+        "first_line": 383,
+        "lines_sample": [
+          383
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5505-07->dodi-5505-18:references:resolved_reference",
+      "source_artifact_id": "dodi-5505-07",
+      "source_label": "DoDI 5505.07",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5505-18",
+      "target_label": "DoDI 5505.18",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5505.07",
+        "label": "DoDI 5505.07",
+        "first_line": 98,
+        "lines_sample": [
+          98
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:public-law:116-283",
+      "label": "Public Law 116-283",
+      "title": "Public Law 116-283",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:116-283",
+      "count": 5,
+      "lines_sample": [
+        22,
+        167,
+        189,
+        214,
+        367
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:106-398",
+      "label": "Public Law 106-398",
+      "title": "Public Law 106-398",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:106-398",
+      "count": 3,
+      "lines_sample": [
+        22,
+        214,
+        365
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
@@ -103,7 +259,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-5505-07",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 2
     }
   ]
 }

@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,31 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 2,
     "downstream_edge_count": 4,
-    "catalogued_node_count": 5,
+    "catalogued_node_count": 7,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 2,
     "inferred_edge_count": 4,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "dodd-5101-01",
+      "label": "DoDD 5101.01",
+      "title": "DoDD 5101.01: DoD Executive Agent",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodd-5101-23e",
       "label": "DoDD 5101.23E",
@@ -83,8 +98,23 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodd-8140-01",
+      "label": "DoDD 8140.01",
+      "title": "DoDD 8140.01: Cyberspace Workforce Management",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodi-1000-04",
@@ -98,7 +128,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -113,7 +143,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -128,7 +158,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -143,11 +173,58 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodd-5101-01->dodd-5101-23e:references:resolved_reference",
+      "source_artifact_id": "dodd-5101-01",
+      "source_label": "DoDD 5101.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-5101-23e",
+      "target_label": "DoDD 5101.23E",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5101.01",
+        "label": "DoDD 5101.01",
+        "first_line": 91,
+        "lines_sample": [
+          91,
+          97,
+          119
+        ],
+        "count": 3
+      }
+    },
+    {
+      "id": "dodd-8140-01->dodd-5101-23e:references:resolved_reference",
+      "source_artifact_id": "dodd-8140-01",
+      "source_label": "DoDD 8140.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-5101-23e",
+      "target_label": "DoDD 5101.23E",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:8140.01",
+        "label": "DoDD 8140.01",
+        "first_line": 152,
+        "lines_sample": [
+          152
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "dodd-5101-23e->dodi-1000-04:flows_down:inferred_flowdown",
@@ -245,7 +322,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodd-5101-23e",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",

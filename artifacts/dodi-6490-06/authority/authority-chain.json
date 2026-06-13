@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,98 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "upstream_edge_count": 2,
+    "downstream_edge_count": 1,
+    "catalogued_node_count": 4,
+    "uncatalogued_gap_count": 3,
+    "evidence_backed_edge_count": 3,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:110-289",
+      "label": "Public Law 110-289",
+      "title": "Public Law 110-289",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:110-289",
+      "count": 2,
+      "lines_sample": [
+        113,
+        332
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodd-6495-01",
+      "label": "DoDD 6495.01",
+      "title": "DoDD 6495.01: Sexual Assault Prevention and Response (SAPR) Program",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "gap:dodd:1404.10",
+      "label": "DoDD 1404.10",
+      "title": "DoDD 1404.10",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodd",
+      "source_reference_id": "dodd:1404.10",
+      "count": 1,
+      "lines_sample": [
+        35
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:dodi:1342.22",
+      "label": "DoDI 1342.22",
+      "title": "DoDI 1342.22",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodi",
+      "source_reference_id": "dodi:1342.22",
+      "count": 1,
+      "lines_sample": [
+        315
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodi-6025-18",
+      "label": "DoDI 6025.18",
+      "title": "DoDI 6025.18: Health Insurance Portability and Accountability Act (HIPAA) Privacy Rule Compliance in DoD Health Care Programs",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-6490-06",
       "label": "DoDI 6490.06",
@@ -83,27 +165,165 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dowi-1342-22",
+      "label": "DoWI 1342.22",
+      "title": "DoWI 1342.22: Military Family Readiness",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "upstream_edges": [
+    {
+      "id": "dodd-6495-01->dodi-6490-06:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-6495-01",
+      "source_label": "DoDD 6495.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6490-06",
+      "target_label": "DoDI 6490.06",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:6495.01",
+        "label": "DoDD 6495.01",
+        "first_line": 231,
+        "lines_sample": [
+          231
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-6025-18->dodi-6490-06:references:resolved_reference",
+      "source_artifact_id": "dodi-6025-18",
+      "source_label": "DoDI 6025.18",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6490-06",
+      "target_label": "DoDI 6490.06",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6025.18",
+        "label": "DoDI 6025.18",
+        "first_line": 237,
+        "lines_sample": [
+          237
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-6490-06->dowi-1342-22:references:resolved_reference",
+      "source_artifact_id": "dodi-6490-06",
+      "source_label": "DoDI 6490.06",
+      "source_lane": "dod",
+      "target_artifact_id": "dowi-1342-22",
+      "target_label": "DoWI 1342.22",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6490.06",
+        "label": "DoDI 6490.06",
+        "first_line": 674,
+        "lines_sample": [
+          674,
+          1249,
+          2657
+        ],
+        "count": 3
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:public-law:110-289",
+      "label": "Public Law 110-289",
+      "title": "Public Law 110-289",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:110-289",
+      "count": 2,
+      "lines_sample": [
+        113,
+        332
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:dodd:1404.10",
+      "label": "DoDD 1404.10",
+      "title": "DoDD 1404.10",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodd",
+      "source_reference_id": "dodd:1404.10",
+      "count": 1,
+      "lines_sample": [
+        35
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:dodi:1342.22",
+      "label": "DoDI 1342.22",
+      "title": "DoDI 1342.22",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodi",
+      "source_reference_id": "dodi:1342.22",
+      "count": 1,
+      "lines_sample": [
+        315
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-6490-06",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-6490-06",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 1
     }
   ]
 }

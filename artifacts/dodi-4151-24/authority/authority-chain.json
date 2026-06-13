@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,46 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "upstream_edge_count": 2,
+    "downstream_edge_count": 2,
+    "catalogued_node_count": 4,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "dodi-4151-18",
+      "label": "DoDI 4151.18",
+      "title": "DoDI 4151.18: DoD Maintenance of Military Materiel",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-4151-20",
+      "label": "DoDI 4151.20",
+      "title": "DoDI 4151.20: Depot Maintenance Core Capabilities Determination Process",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-4151-24",
       "label": "DoDI 4151.24",
@@ -83,12 +113,118 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-5000-91",
+      "label": "DoDI 5000.91",
+      "title": "DoDI 5000.91: Product Support Management for the Adaptive Acquisition Framework",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-4151-20->dodi-4151-24:references:resolved_reference",
+      "source_artifact_id": "dodi-4151-20",
+      "source_label": "DoDI 4151.20",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4151-24",
+      "target_label": "DoDI 4151.24",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:4151.20",
+        "label": "DoDI 4151.20",
+        "first_line": 312,
+        "lines_sample": [
+          312
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5000-91->dodi-4151-24:references:resolved_reference",
+      "source_artifact_id": "dodi-5000-91",
+      "source_label": "DoDI 5000.91",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4151-24",
+      "target_label": "DoDI 4151.24",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5000.91",
+        "label": "DoDI 5000.91",
+        "first_line": 258,
+        "lines_sample": [
+          258
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-4151-24->dodi-4151-18:references:resolved_reference",
+      "source_artifact_id": "dodi-4151-24",
+      "source_label": "DoDI 4151.24",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4151-18",
+      "target_label": "DoDI 4151.18",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:4151.24",
+        "label": "DoDI 4151.24",
+        "first_line": 191,
+        "lines_sample": [
+          191,
+          321
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "dodi-4151-24->dodi-5000-91:references:resolved_reference",
+      "source_artifact_id": "dodi-4151-24",
+      "source_label": "DoDI 4151.24",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5000-91",
+      "target_label": "DoDI 5000.91",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:4151.24",
+        "label": "DoDI 4151.24",
+        "first_line": 880,
+        "lines_sample": [
+          880
+        ],
+        "count": 1
+      }
+    }
+  ],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
@@ -96,14 +232,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-4151-24",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-4151-24",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 2
     }
   ]
 }

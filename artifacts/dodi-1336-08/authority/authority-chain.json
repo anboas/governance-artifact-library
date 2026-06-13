@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,109 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "downstream_edge_count": 4,
+    "catalogued_node_count": 5,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:104-191",
+      "label": "Public Law 104-191",
+      "title": "Public Law 104-191",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:104-191",
+      "count": 1,
+      "lines_sample": [
+        131
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:105-262",
+      "label": "Public Law 105-262",
+      "title": "Public Law 105-262",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:105-262",
+      "count": 1,
+      "lines_sample": [
+        133
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodi-1304-02",
+      "label": "DoDI 1304.02",
+      "title": "DoDI 1304.02: Accession Processing Data Collection Forms",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1322-17",
+      "label": "DoDI 1322.17",
+      "title": "DoDI 1322.17: Montgomery GI Bill-Selected Reserve (MGIB-SR)",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1322-30",
+      "label": "DoDI 1322.30",
+      "title": "DoDI 1322.30: Reserve Educational Assistance Program (REAP)",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1336-01",
+      "label": "DoDI 1336.01",
+      "title": "DoDI 1336.01: Certificate of Uniformed Service (DD Form 214/5 Series)",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-1336-08",
       "label": "DoDI 1336.08",
@@ -83,13 +177,137 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     }
   ],
   "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "downstream_edges": [
+    {
+      "id": "dodi-1336-08->dodi-1304-02:references:resolved_reference",
+      "source_artifact_id": "dodi-1336-08",
+      "source_label": "DoDI 1336.08",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1304-02",
+      "target_label": "DoDI 1304.02",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1336.08",
+        "label": "DoDI 1336.08",
+        "first_line": 392,
+        "lines_sample": [
+          392
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1336-08->dodi-1322-17:references:resolved_reference",
+      "source_artifact_id": "dodi-1336-08",
+      "source_label": "DoDI 1336.08",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1322-17",
+      "target_label": "DoDI 1322.17",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1336.08",
+        "label": "DoDI 1336.08",
+        "first_line": 393,
+        "lines_sample": [
+          393
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1336-08->dodi-1322-30:references:resolved_reference",
+      "source_artifact_id": "dodi-1336-08",
+      "source_label": "DoDI 1336.08",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1322-30",
+      "target_label": "DoDI 1322.30",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1336.08",
+        "label": "DoDI 1336.08",
+        "first_line": 501,
+        "lines_sample": [
+          501
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1336-08->dodi-1336-01:references:resolved_reference",
+      "source_artifact_id": "dodi-1336-08",
+      "source_label": "DoDI 1336.08",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1336-01",
+      "target_label": "DoDI 1336.01",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1336.08",
+        "label": "DoDI 1336.08",
+        "first_line": 280,
+        "lines_sample": [
+          280
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:public-law:104-191",
+      "label": "Public Law 104-191",
+      "title": "Public Law 104-191",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:104-191",
+      "count": 1,
+      "lines_sample": [
+        131
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:105-262",
+      "label": "Public Law 105-262",
+      "title": "Public Law 105-262",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:105-262",
+      "count": 1,
+      "lines_sample": [
+        133
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
@@ -103,7 +321,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-1336-08",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 4
     }
   ]
 }

@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,78 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "upstream_edge_count": 2,
+    "downstream_edge_count": 3,
+    "catalogued_node_count": 5,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 5,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:dodd:5400.11",
+      "label": "DoDD 5400.11",
+      "title": "DoDD 5400.11",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodd",
+      "source_reference_id": "dodd:5400.11",
+      "count": 1,
+      "lines_sample": [
+        715
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodi-1332-18",
+      "label": "DoDI 1332.18",
+      "title": "DoDI 1332.18: Disability Evaluation System",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-2310-08",
+      "label": "DoDI 2310.08",
+      "title": "DoDI 2310.08: Medical Program Support for Detainee Operations",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-6040-40",
+      "label": "DoDI 6040.40",
+      "title": "DoDI 6040.40: Military Health System (MHS) Data Quality Management Control (DQMC) Program",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-6040-42",
       "label": "DoDI 6040.42",
@@ -83,27 +145,180 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-6040-45",
+      "label": "DoDI 6040.45",
+      "title": "DoDI 6040.45: DoD Health Record Life Cycle Management",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-6040-40->dodi-6040-42:references:resolved_reference",
+      "source_artifact_id": "dodi-6040-40",
+      "source_label": "DoDI 6040.40",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6040-42",
+      "target_label": "DoDI 6040.42",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6040.40",
+        "label": "DoDI 6040.40",
+        "first_line": 268,
+        "lines_sample": [
+          268,
+          287,
+          333,
+          432,
+          539,
+          573
+        ],
+        "count": 6
+      }
+    },
+    {
+      "id": "dodi-6040-45->dodi-6040-42:references:resolved_reference",
+      "source_artifact_id": "dodi-6040-45",
+      "source_label": "DoDI 6040.45",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6040-42",
+      "target_label": "DoDI 6040.42",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6040.45",
+        "label": "DoDI 6040.45",
+        "first_line": 251,
+        "lines_sample": [
+          251,
+          286,
+          673
+        ],
+        "count": 3
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-6040-42->dodi-1332-18:references:resolved_reference",
+      "source_artifact_id": "dodi-6040-42",
+      "source_label": "DoDI 6040.42",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1332-18",
+      "target_label": "DoDI 1332.18",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6040.42",
+        "label": "DoDI 6040.42",
+        "first_line": 341,
+        "lines_sample": [
+          341
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-6040-42->dodi-2310-08:references:resolved_reference",
+      "source_artifact_id": "dodi-6040-42",
+      "source_label": "DoDI 6040.42",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-2310-08",
+      "target_label": "DoDI 2310.08",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6040.42",
+        "label": "DoDI 6040.42",
+        "first_line": 143,
+        "lines_sample": [
+          143,
+          423
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "dodi-6040-42->dodi-6040-45:references:resolved_reference",
+      "source_artifact_id": "dodi-6040-42",
+      "source_label": "DoDI 6040.42",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6040-45",
+      "target_label": "DoDI 6040.45",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6040.42",
+        "label": "DoDI 6040.42",
+        "first_line": 327,
+        "lines_sample": [
+          327
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:dodd:5400.11",
+      "label": "DoDD 5400.11",
+      "title": "DoDD 5400.11",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodd",
+      "source_reference_id": "dodd:5400.11",
+      "count": 1,
+      "lines_sample": [
+        715
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-6040-42",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-6040-42",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 3
     }
   ]
 }

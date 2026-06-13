@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,61 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "upstream_edge_count": 7,
+    "downstream_edge_count": 2,
+    "catalogued_node_count": 8,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 9,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "dodi-1200-07",
+      "label": "DoDI 1200.07",
+      "title": "DoDI 1200.07: Screening the Ready Reserve",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1200-15",
+      "label": "DoDI 1200.15",
+      "title": "DoDI 1200.15: Assignment to and Transfer Between Reserve Categories and Discharge from Reserve Status",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1215-06",
+      "label": "DoDI 1215.06",
+      "title": "DoDI 1215.06: Uniform Reserve, Training, and Retirement Categories for the Reserve Components",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-1235-09",
       "label": "DoDI 1235.09",
@@ -83,12 +128,274 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-1304-25",
+      "label": "DoDI 1304.25",
+      "title": "DoDI 1304.25: Fulfilling the Military Service Obligation",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1332-29",
+      "label": "DoDI 1332.29",
+      "title": "DoDI 1332.29: Involuntary Separation Pay (Non-Disability)",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1332-43",
+      "label": "DoDI 1332.43",
+      "title": "DoDI 1332.43: Voluntary Separation Pay (VSP) Program for Service Members",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-6025-13",
+      "label": "DoDI 6025.13",
+      "title": "DoDI 6025.13: Medical Quality Assurance and Clinical Quality Management in the Military Health System",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-1200-07->dodi-1235-09:references:resolved_reference",
+      "source_artifact_id": "dodi-1200-07",
+      "source_label": "DoDI 1200.07",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1235-09",
+      "target_label": "DoDI 1235.09",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1200.07",
+        "label": "DoDI 1200.07",
+        "first_line": 159,
+        "lines_sample": [
+          159,
+          345,
+          347
+        ],
+        "count": 3
+      }
+    },
+    {
+      "id": "dodi-1200-15->dodi-1235-09:references:resolved_reference",
+      "source_artifact_id": "dodi-1200-15",
+      "source_label": "DoDI 1200.15",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1235-09",
+      "target_label": "DoDI 1235.09",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1200.15",
+        "label": "DoDI 1200.15",
+        "first_line": 289,
+        "lines_sample": [
+          289
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1215-06->dodi-1235-09:references:resolved_reference",
+      "source_artifact_id": "dodi-1215-06",
+      "source_label": "DoDI 1215.06",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1235-09",
+      "target_label": "DoDI 1235.09",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1215.06",
+        "label": "DoDI 1215.06",
+        "first_line": 182,
+        "lines_sample": [
+          182
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1304-25->dodi-1235-09:references:resolved_reference",
+      "source_artifact_id": "dodi-1304-25",
+      "source_label": "DoDI 1304.25",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1235-09",
+      "target_label": "DoDI 1235.09",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1304.25",
+        "label": "DoDI 1304.25",
+        "first_line": 349,
+        "lines_sample": [
+          349
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1332-29->dodi-1235-09:references:resolved_reference",
+      "source_artifact_id": "dodi-1332-29",
+      "source_label": "DoDI 1332.29",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1235-09",
+      "target_label": "DoDI 1235.09",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1332.29",
+        "label": "DoDI 1332.29",
+        "first_line": 202,
+        "lines_sample": [
+          202
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1332-43->dodi-1235-09:references:resolved_reference",
+      "source_artifact_id": "dodi-1332-43",
+      "source_label": "DoDI 1332.43",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1235-09",
+      "target_label": "DoDI 1235.09",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1332.43",
+        "label": "DoDI 1332.43",
+        "first_line": 205,
+        "lines_sample": [
+          205
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-6025-13->dodi-1235-09:references:resolved_reference",
+      "source_artifact_id": "dodi-6025-13",
+      "source_label": "DoDI 6025.13",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1235-09",
+      "target_label": "DoDI 1235.09",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6025.13",
+        "label": "DoDI 6025.13",
+        "first_line": 111,
+        "lines_sample": [
+          111
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-1235-09->dodi-1200-07:references:resolved_reference",
+      "source_artifact_id": "dodi-1235-09",
+      "source_label": "DoDI 1235.09",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1200-07",
+      "target_label": "DoDI 1200.07",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1235.09",
+        "label": "DoDI 1235.09",
+        "first_line": 246,
+        "lines_sample": [
+          246
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1235-09->dodi-1200-15:references:resolved_reference",
+      "source_artifact_id": "dodi-1235-09",
+      "source_label": "DoDI 1235.09",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1200-15",
+      "target_label": "DoDI 1200.15",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1235.09",
+        "label": "DoDI 1235.09",
+        "first_line": 174,
+        "lines_sample": [
+          174
+        ],
+        "count": 1
+      }
+    }
+  ],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
@@ -96,14 +403,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-1235-09",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 7
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-1235-09",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 2
     }
   ]
 }

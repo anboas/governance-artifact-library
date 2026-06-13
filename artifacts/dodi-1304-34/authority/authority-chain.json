@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,79 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 4,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "catalogued_node_count": 5,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
+    {
+      "id": "gap:dodi:1205.05",
+      "label": "DoDI 1205.05",
+      "title": "DoDI 1205.05",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodi",
+      "source_reference_id": "dodi:1205.05",
+      "count": 2,
+      "lines_sample": [
+        778,
+        865
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodi-1215-07",
+      "label": "DoDI 1215.07",
+      "title": "DoDI 1215.07: Service Credit for Non-Regular Retirement",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1300-04",
+      "label": "DoDI 1300.04",
+      "title": "DoDI 1300.04: Inter-Service and Inter-Component Transfers of Service Members",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1304-26",
+      "label": "DoDI 1304.26",
+      "title": "DoDI 1304.26: Qualification Standards for Enlistment, Appointment, and Induction",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-1304-34",
       "label": "DoDI 1304.34",
@@ -83,20 +146,146 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-1341-13",
+      "label": "DoDI 1341.13",
+      "title": "DoDI 1341.13: Post-9/11 GI Bill",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-1215-07->dodi-1304-34:references:resolved_reference",
+      "source_artifact_id": "dodi-1215-07",
+      "source_label": "DoDI 1215.07",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1304-34",
+      "target_label": "DoDI 1304.34",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1215.07",
+        "label": "DoDI 1215.07",
+        "first_line": 644,
+        "lines_sample": [
+          644,
+          711,
+          721,
+          724
+        ],
+        "count": 4
+      }
+    },
+    {
+      "id": "dodi-1300-04->dodi-1304-34:references:resolved_reference",
+      "source_artifact_id": "dodi-1300-04",
+      "source_label": "DoDI 1300.04",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1304-34",
+      "target_label": "DoDI 1304.34",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1300.04",
+        "label": "DoDI 1300.04",
+        "first_line": 865,
+        "lines_sample": [
+          865
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1304-26->dodi-1304-34:references:resolved_reference",
+      "source_artifact_id": "dodi-1304-26",
+      "source_label": "DoDI 1304.26",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1304-34",
+      "target_label": "DoDI 1304.34",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1304.26",
+        "label": "DoDI 1304.26",
+        "first_line": 552,
+        "lines_sample": [
+          552
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1341-13->dodi-1304-34:references:resolved_reference",
+      "source_artifact_id": "dodi-1341-13",
+      "source_label": "DoDI 1341.13",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1304-34",
+      "target_label": "DoDI 1304.34",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1341.13",
+        "label": "DoDI 1341.13",
+        "first_line": 731,
+        "lines_sample": [
+          731
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:dodi:1205.05",
+      "label": "DoDI 1205.05",
+      "title": "DoDI 1205.05",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodi",
+      "source_reference_id": "dodi:1205.05",
+      "count": 2,
+      "lines_sample": [
+        778,
+        865
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-1304-34",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 4
     },
     {
       "id": "trace-downstream",

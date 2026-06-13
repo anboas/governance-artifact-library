@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,31 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 3,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "catalogued_node_count": 4,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 3,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
+    {
+      "id": "dodi-1348-33",
+      "label": "DoDI 1348.33",
+      "title": "DoDI 1348.33: DoD Military Decorations and Awards Program",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-1348-35",
       "label": "DoDI 1348.35",
@@ -83,11 +98,108 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-5105-04",
+      "label": "DoDI 5105.04",
+      "title": "DoDI 5105.04: Department of Defense Federal Advisory Committee Management Program",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5535-12",
+      "label": "DoDI 5535.12",
+      "title": "DoDI 5535.12: DoD Branding and Trademark Licensing Program Implementation",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-1348-33->dodi-1348-35:references:resolved_reference",
+      "source_artifact_id": "dodi-1348-33",
+      "source_label": "DoDI 1348.33",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1348-35",
+      "target_label": "DoDI 1348.35",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1348.33",
+        "label": "DoDI 1348.33",
+        "first_line": 67,
+        "lines_sample": [
+          67
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5105-04->dodi-1348-35:references:resolved_reference",
+      "source_artifact_id": "dodi-5105-04",
+      "source_label": "DoDI 5105.04",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1348-35",
+      "target_label": "DoDI 1348.35",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5105.04",
+        "label": "DoDI 5105.04",
+        "first_line": 62,
+        "lines_sample": [
+          62
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5535-12->dodi-1348-35:references:resolved_reference",
+      "source_artifact_id": "dodi-5535-12",
+      "source_label": "DoDI 5535.12",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1348-35",
+      "target_label": "DoDI 1348.35",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5535.12",
+        "label": "DoDI 5535.12",
+        "first_line": 104,
+        "lines_sample": [
+          104
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
@@ -96,7 +208,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-1348-35",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 3
     },
     {
       "id": "trace-downstream",

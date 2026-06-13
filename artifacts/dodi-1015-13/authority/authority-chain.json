@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,47 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "downstream_edge_count": 3,
+    "catalogued_node_count": 4,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 3,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:usc:10:2667",
+      "label": "10 U.S.C. 2667",
+      "title": "10 U.S.C. 2667",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:10:2667",
+      "count": 1,
+      "lines_sample": [
+        164
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodi-1015-11",
+      "label": "DoDI 1015.11",
+      "title": "DoDI 1015.11: DoD Lodging Policy",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-1015-13",
       "label": "DoDI 1015.13",
@@ -83,13 +115,128 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-1015-16",
+      "label": "DoDI 1015.16",
+      "title": "DoDI 1015.16: Nonappropriated Fund Instrumentalities Information Technology Policies and Procedures",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-4105-67",
+      "label": "DoDI 4105.67",
+      "title": "DoDI 4105.67: Nonappropriated Fund (NAF) Procurement Policy and Procedure",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "downstream_edges": [
+    {
+      "id": "dodi-1015-13->dodi-1015-11:references:resolved_reference",
+      "source_artifact_id": "dodi-1015-13",
+      "source_label": "DoDI 1015.13",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1015-11",
+      "target_label": "DoDI 1015.11",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1015.13",
+        "label": "DoDI 1015.13",
+        "first_line": 399,
+        "lines_sample": [
+          399
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1015-13->dodi-1015-16:references:resolved_reference",
+      "source_artifact_id": "dodi-1015-13",
+      "source_label": "DoDI 1015.13",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1015-16",
+      "target_label": "DoDI 1015.16",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1015.13",
+        "label": "DoDI 1015.13",
+        "first_line": 937,
+        "lines_sample": [
+          937
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1015-13->dodi-4105-67:references:resolved_reference",
+      "source_artifact_id": "dodi-1015-13",
+      "source_label": "DoDI 1015.13",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4105-67",
+      "target_label": "DoDI 4105.67",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1015.13",
+        "label": "DoDI 1015.13",
+        "first_line": 417,
+        "lines_sample": [
+          417
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:usc:10:2667",
+      "label": "10 U.S.C. 2667",
+      "title": "10 U.S.C. 2667",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:10:2667",
+      "count": 1,
+      "lines_sample": [
+        164
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
@@ -103,7 +250,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-1015-13",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 3
     }
   ]
 }

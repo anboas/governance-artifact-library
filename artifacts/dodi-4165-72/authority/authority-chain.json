@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,109 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "downstream_edge_count": 1,
+    "catalogued_node_count": 2,
+    "uncatalogued_gap_count": 4,
+    "evidence_backed_edge_count": 1,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:102-484",
+      "label": "Public Law 102-484",
+      "title": "Public Law 102-484",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:102-484",
+      "count": 1,
+      "lines_sample": [
+        620
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:42:9620",
+      "label": "42 U.S.C. § 9620",
+      "title": "42 U.S.C. § 9620",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:42:9620",
+      "count": 23,
+      "lines_sample": [
+        322,
+        332,
+        376,
+        387,
+        409,
+        425,
+        429,
+        645,
+        649,
+        671,
+        687,
+        697
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:11988",
+      "label": "Executive Order 11988",
+      "title": "Executive Order 11988",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:11988",
+      "count": 1,
+      "lines_sample": [
+        614
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:11990",
+      "label": "Executive Order 11990",
+      "title": "Executive Order 11990",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:11990",
+      "count": 1,
+      "lines_sample": [
+        615
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodd-4165-06",
+      "label": "DoDD 4165.06",
+      "title": "DoDD 4165.06: Real Property",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-4165-72",
       "label": "DoDI 4165.72",
@@ -83,13 +177,116 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     }
   ],
   "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "downstream_edges": [
+    {
+      "id": "dodi-4165-72->dodd-4165-06:references_upstream:resolved_reference",
+      "source_artifact_id": "dodi-4165-72",
+      "source_label": "DoDI 4165.72",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-4165-06",
+      "target_label": "DoDD 4165.06",
+      "target_lane": "dod",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:4165.72",
+        "label": "DoDI 4165.72",
+        "first_line": 80,
+        "lines_sample": [
+          80
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:usc:42:9620",
+      "label": "42 U.S.C. § 9620",
+      "title": "42 U.S.C. § 9620",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:42:9620",
+      "count": 23,
+      "lines_sample": [
+        322,
+        332,
+        376,
+        387,
+        409,
+        425,
+        429,
+        645,
+        649,
+        671,
+        687,
+        697
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:11988",
+      "label": "Executive Order 11988",
+      "title": "Executive Order 11988",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:11988",
+      "count": 1,
+      "lines_sample": [
+        614
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:11990",
+      "label": "Executive Order 11990",
+      "title": "Executive Order 11990",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:11990",
+      "count": 1,
+      "lines_sample": [
+        615
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:102-484",
+      "label": "Public Law 102-484",
+      "title": "Public Law 102-484",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:102-484",
+      "count": 1,
+      "lines_sample": [
+        620
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
@@ -103,7 +300,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-4165-72",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 1
     }
   ]
 }

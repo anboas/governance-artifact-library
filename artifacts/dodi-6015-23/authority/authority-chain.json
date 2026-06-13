@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,31 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 2,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "catalogued_node_count": 3,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 2,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
+    {
+      "id": "dodi-1000-13",
+      "label": "DoDI 1000.13",
+      "title": "DoDI 1000.13: Identification (ID) Cards for Members of the Uniformed Services, Their Dependents, and Other Eligible Individuals",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-6015-23",
       "label": "DoDI 6015.23",
@@ -83,11 +98,71 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-6025-18",
+      "label": "DoDI 6025.18",
+      "title": "DoDI 6025.18: Health Insurance Portability and Accountability Act (HIPAA) Privacy Rule Compliance in DoD Health Care Programs",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-1000-13->dodi-6015-23:references:resolved_reference",
+      "source_artifact_id": "dodi-1000-13",
+      "source_label": "DoDI 1000.13",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6015-23",
+      "target_label": "DoDI 6015.23",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1000.13",
+        "label": "DoDI 1000.13",
+        "first_line": 243,
+        "lines_sample": [
+          243
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-6025-18->dodi-6015-23:references:resolved_reference",
+      "source_artifact_id": "dodi-6025-18",
+      "source_label": "DoDI 6025.18",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6015-23",
+      "target_label": "DoDI 6015.23",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6025.18",
+        "label": "DoDI 6025.18",
+        "first_line": 523,
+        "lines_sample": [
+          523
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
@@ -96,7 +171,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-6015-23",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",

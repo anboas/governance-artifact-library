@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,61 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "upstream_edge_count": 3,
+    "downstream_edge_count": 2,
+    "catalogued_node_count": 6,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 5,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "dodd-5143-01",
+      "label": "DoDD 5143.01",
+      "title": "DoDD 5143.01: Under Secretary of Defense for Intelligence and Security (USD(I&S))",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodd-7050-06",
+      "label": "DoDD 7050.06",
+      "title": "DoDD 7050.06: Military Whistleblower Protection",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-3200-12",
+      "label": "DoDI 3200.12",
+      "title": "DoDI 3200.12: DoD Scientific and Technical Information Program (STIP)",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-3200-20",
       "label": "DoDI 3200.20",
@@ -83,12 +128,154 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-5105-04",
+      "label": "DoDI 5105.04",
+      "title": "DoDI 5105.04: Department of Defense Federal Advisory Committee Management Program",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5230-27",
+      "label": "DoDI 5230.27",
+      "title": "DoDI 5230.27: Presentation of DoD-Related Scientific and Technical Papers At Meetings",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodd-5143-01->dodi-3200-20:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-5143-01",
+      "source_label": "DoDD 5143.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-3200-20",
+      "target_label": "DoDI 3200.20",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5143.01",
+        "label": "DoDD 5143.01",
+        "first_line": 232,
+        "lines_sample": [
+          232
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodd-7050-06->dodi-3200-20:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-7050-06",
+      "source_label": "DoDD 7050.06",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-3200-20",
+      "target_label": "DoDI 3200.20",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:7050.06",
+        "label": "DoDD 7050.06",
+        "first_line": 109,
+        "lines_sample": [
+          109
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5105-04->dodi-3200-20:references:resolved_reference",
+      "source_artifact_id": "dodi-5105-04",
+      "source_label": "DoDI 5105.04",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-3200-20",
+      "target_label": "DoDI 3200.20",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5105.04",
+        "label": "DoDI 5105.04",
+        "first_line": 239,
+        "lines_sample": [
+          239
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-3200-20->dodi-3200-12:references:resolved_reference",
+      "source_artifact_id": "dodi-3200-20",
+      "source_label": "DoDI 3200.20",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-3200-12",
+      "target_label": "DoDI 3200.12",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:3200.20",
+        "label": "DoDI 3200.20",
+        "first_line": 369,
+        "lines_sample": [
+          369
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-3200-20->dodi-5230-27:references:resolved_reference",
+      "source_artifact_id": "dodi-3200-20",
+      "source_label": "DoDI 3200.20",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5230-27",
+      "target_label": "DoDI 5230.27",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:3200.20",
+        "label": "DoDI 3200.20",
+        "first_line": 637,
+        "lines_sample": [
+          637
+        ],
+        "count": 1
+      }
+    }
+  ],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
@@ -96,14 +283,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-3200-20",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 3
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-3200-20",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 2
     }
   ]
 }

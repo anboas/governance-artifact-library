@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,46 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "upstream_edge_count": 1,
+    "downstream_edge_count": 2,
+    "catalogued_node_count": 4,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 3,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "dodi-1310-01",
+      "label": "DoDI 1310.01",
+      "title": "DoDI 1310.01: Rank and Seniority of Commissioned Officers",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1320-14",
+      "label": "DoDI 1320.14",
+      "title": "DoDI 1320.14: DoD Commissioned Officer Promotion Program Procedures",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-1327-07",
       "label": "DoDI 1327.07",
@@ -83,12 +113,97 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dowi-1235-13",
+      "label": "DoWI 1235.13",
+      "title": "DoWI 1235.13: Administration and Management of the Individual Ready Reserve and the Inactive National Guard",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-1310-01->dodi-1327-07:references:resolved_reference",
+      "source_artifact_id": "dodi-1310-01",
+      "source_label": "DoDI 1310.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1327-07",
+      "target_label": "DoDI 1327.07",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1310.01",
+        "label": "DoDI 1310.01",
+        "first_line": 323,
+        "lines_sample": [
+          323
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-1327-07->dodi-1320-14:references:resolved_reference",
+      "source_artifact_id": "dodi-1327-07",
+      "source_label": "DoDI 1327.07",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1320-14",
+      "target_label": "DoDI 1320.14",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1327.07",
+        "label": "DoDI 1327.07",
+        "first_line": 458,
+        "lines_sample": [
+          458,
+          1396
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "dodi-1327-07->dowi-1235-13:references:resolved_reference",
+      "source_artifact_id": "dodi-1327-07",
+      "source_label": "DoDI 1327.07",
+      "source_lane": "dod",
+      "target_artifact_id": "dowi-1235-13",
+      "target_label": "DoWI 1235.13",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1327.07",
+        "label": "DoDI 1327.07",
+        "first_line": 230,
+        "lines_sample": [
+          230,
+          338
+        ],
+        "count": 2
+      }
+    }
+  ],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
@@ -96,14 +211,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-1327-07",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-1327-07",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 2
     }
   ]
 }

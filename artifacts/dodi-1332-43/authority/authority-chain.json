@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,30 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "downstream_edge_count": 2,
+    "catalogued_node_count": 3,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 2,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "dodi-1235-09",
+      "label": "DoDI 1235.09",
+      "title": "DoDI 1235.09: Management of the Standby Reserve",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-1332-43",
       "label": "DoDI 1332.43",
@@ -83,12 +98,72 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dowi-1235-13",
+      "label": "DoWI 1235.13",
+      "title": "DoWI 1235.13: Administration and Management of the Individual Ready Reserve and the Inactive National Guard",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [],
-  "downstream_edges": [],
+  "downstream_edges": [
+    {
+      "id": "dodi-1332-43->dodi-1235-09:references:resolved_reference",
+      "source_artifact_id": "dodi-1332-43",
+      "source_label": "DoDI 1332.43",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1235-09",
+      "target_label": "DoDI 1235.09",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1332.43",
+        "label": "DoDI 1332.43",
+        "first_line": 205,
+        "lines_sample": [
+          205
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1332-43->dowi-1235-13:references:resolved_reference",
+      "source_artifact_id": "dodi-1332-43",
+      "source_label": "DoDI 1332.43",
+      "source_lane": "dod",
+      "target_artifact_id": "dowi-1235-13",
+      "target_label": "DoWI 1235.13",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1332.43",
+        "label": "DoDI 1332.43",
+        "first_line": 446,
+        "lines_sample": [
+          446
+        ],
+        "count": 1
+      }
+    }
+  ],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
@@ -103,7 +178,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-1332-43",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 2
     }
   ]
 }

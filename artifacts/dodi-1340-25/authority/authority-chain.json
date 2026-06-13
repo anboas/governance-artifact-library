@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,79 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "downstream_edge_count": 3,
+    "catalogued_node_count": 4,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 3,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:104-117",
+      "label": "Public Law 104-117",
+      "title": "Public Law 104-117",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:104-117",
+      "count": 1,
+      "lines_sample": [
+        144
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:106-21",
+      "label": "Public Law 106-21",
+      "title": "Public Law 106-21",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:106-21",
+      "count": 1,
+      "lines_sample": [
+        146
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodi-1327-06",
+      "label": "DoDI 1327.06",
+      "title": "DoDI 1327.06: Military Leave, Liberty, and Administrative Absence",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1332-18",
+      "label": "DoDI 1332.18",
+      "title": "DoDI 1332.18: Disability Evaluation System",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-1340-25",
       "label": "DoDI 1340.25",
@@ -83,13 +147,131 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-4105-67",
+      "label": "DoDI 4105.67",
+      "title": "DoDI 4105.67: Nonappropriated Fund (NAF) Procurement Policy and Procedure",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "downstream_edges": [
+    {
+      "id": "dodi-1340-25->dodi-1327-06:references:resolved_reference",
+      "source_artifact_id": "dodi-1340-25",
+      "source_label": "DoDI 1340.25",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1327-06",
+      "target_label": "DoDI 1327.06",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1340.25",
+        "label": "DoDI 1340.25",
+        "first_line": 530,
+        "lines_sample": [
+          530,
+          621
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "dodi-1340-25->dodi-1332-18:references:resolved_reference",
+      "source_artifact_id": "dodi-1340-25",
+      "source_label": "DoDI 1340.25",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1332-18",
+      "target_label": "DoDI 1332.18",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1340.25",
+        "label": "DoDI 1340.25",
+        "first_line": 2909,
+        "lines_sample": [
+          2909
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1340-25->dodi-4105-67:references:resolved_reference",
+      "source_artifact_id": "dodi-1340-25",
+      "source_label": "DoDI 1340.25",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4105-67",
+      "target_label": "DoDI 4105.67",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1340.25",
+        "label": "DoDI 1340.25",
+        "first_line": 870,
+        "lines_sample": [
+          870
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:public-law:104-117",
+      "label": "Public Law 104-117",
+      "title": "Public Law 104-117",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:104-117",
+      "count": 1,
+      "lines_sample": [
+        144
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:106-21",
+      "label": "Public Law 106-21",
+      "title": "Public Law 106-21",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:106-21",
+      "count": 1,
+      "lines_sample": [
+        146
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
@@ -103,7 +285,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-1340-25",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 3
     }
   ]
 }

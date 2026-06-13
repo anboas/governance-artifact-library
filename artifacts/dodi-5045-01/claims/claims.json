@@ -2,21 +2,445 @@
   "id": "dodi-5045-01",
   "generated_at": "2026-06-12T23:10:00.000Z",
   "extractor_version": "governance-claims-rules-v1",
-  "claims_status": "source_text_unavailable",
-  "source_text_path": null,
+  "claims_status": "parsed",
+  "source_text_path": "artifacts/dodi-5045-01/text/extracted.txt",
   "extraction_path": "artifacts/dodi-5045-01/extractions/extractions.json",
   "claims_path": "artifacts/dodi-5045-01/claims/claims.json",
   "summary": {
-    "claim_count": 0,
-    "total_line_count": 0,
-    "requirement_count": 0,
-    "reporting_requirement_count": 0,
-    "decision_authority_count": 0,
-    "prohibition_count": 0,
-    "permission_count": 0,
-    "policy_statement_count": 0,
-    "by_type": {}
+    "claim_count": 15,
+    "total_line_count": 285,
+    "requirement_count": 1,
+    "reporting_requirement_count": 1,
+    "decision_authority_count": 3,
+    "prohibition_count": 1,
+    "permission_count": 5,
+    "policy_statement_count": 4,
+    "by_type": {
+      "decision_authority": 3,
+      "policy_statement": 4,
+      "prohibition": 1,
+      "permission": 5,
+      "reporting_requirement": 1,
+      "requirement": 1
+    }
   },
-  "claims": [],
-  "blocked_reason": "No extracted_text_path is currently mirrored for this source-known artifact."
+  "claims": [
+    {
+      "id": "dodi-5045-01-claim-00001",
+      "type": "decision_authority",
+      "text": "Purpose: In accordance with the authority in DoD Directives 5105.53, the January 11, 2021 Deputy",
+      "normalized_claim": "Purpose: In accordance with the authority in DoD Directives 5105.53, the January 11, 2021 Deputy",
+      "actor": "Department of Defense",
+      "actor_id": "department-of-defense",
+      "action": "Purpose: In accordance with the authority",
+      "object": "in DoD Directives 5105.53, the January 11, 2021 Deputy",
+      "modality": "",
+      "conditions": "In accordance with the authority in DoD Directives 5105",
+      "exceptions": "",
+      "deadline": "",
+      "decision_authority": "Department of Defense",
+      "evidence_required": false,
+      "source_lines": {
+        "start": 23,
+        "end": 23
+      },
+      "source_section": "",
+      "linked_entities": [
+        "department-of-defense"
+      ],
+      "linked_references": [],
+      "linked_concepts": [],
+      "confidence": 0.73,
+      "review_status": "machine_reviewed"
+    },
+    {
+      "id": "dodi-5045-01-claim-00002",
+      "type": "policy_statement",
+      "text": "Secretary of Defense Memorandum, establishes policy, assigns responsibilities, and provides guidance",
+      "normalized_claim": "Secretary of Defense Memorandum, establishes policy, assigns responsibilities, and provides guidance",
+      "actor": "Secretary of Defense",
+      "actor_id": "secretary-of-defense",
+      "action": "Secretary of Defense Memorandum, establishes policy,",
+      "object": "assigns responsibilities, and provides guidance",
+      "modality": "",
+      "conditions": "",
+      "exceptions": "",
+      "deadline": "",
+      "decision_authority": "",
+      "evidence_required": false,
+      "source_lines": {
+        "start": 24,
+        "end": 24
+      },
+      "source_section": "",
+      "linked_entities": [
+        "secretary-of-defense"
+      ],
+      "linked_references": [],
+      "linked_concepts": [
+        "governance"
+      ],
+      "confidence": 0.73,
+      "review_status": "machine_reviewed"
+    },
+    {
+      "id": "dodi-5045-01-claim-00003",
+      "type": "prohibition",
+      "text": "Processing an investigation in CATMS is prohibited, but DoD Components may receive",
+      "normalized_claim": "Processing an investigation in CATMS is prohibited, but DoD Components may receive",
+      "actor": "Department of Defense",
+      "actor_id": "department-of-defense",
+      "action": ", but DoD Components may receive",
+      "object": "",
+      "modality": "prohibited",
+      "conditions": "",
+      "exceptions": "",
+      "deadline": "",
+      "decision_authority": "",
+      "evidence_required": false,
+      "source_lines": {
+        "start": 74,
+        "end": 74
+      },
+      "source_section": "SECTION 1: GENERAL ISSUANCE INFORMATION",
+      "linked_entities": [
+        "department-of-defense"
+      ],
+      "linked_references": [],
+      "linked_concepts": [],
+      "confidence": 0.73,
+      "review_status": "machine_reviewed"
+    },
+    {
+      "id": "dodi-5045-01-claim-00004",
+      "type": "permission",
+      "text": "inquiries for information through CATMS for actions that may result in an investigation",
+      "normalized_claim": "inquiries for information through CATMS for actions that may result in an investigation",
+      "actor": "",
+      "actor_id": "",
+      "action": "result in an investigation",
+      "object": "",
+      "modality": "may",
+      "conditions": "",
+      "exceptions": "",
+      "deadline": "",
+      "decision_authority": "",
+      "evidence_required": false,
+      "source_lines": {
+        "start": 75,
+        "end": 75
+      },
+      "source_section": "SECTION 1: GENERAL ISSUANCE INFORMATION",
+      "linked_entities": [],
+      "linked_references": [],
+      "linked_concepts": [],
+      "confidence": 0.55,
+      "review_status": "machine_reviewed"
+    },
+    {
+      "id": "dodi-5045-01-claim-00005",
+      "type": "permission",
+      "text": "non-JSP IT may be made where technically and financially feasible.",
+      "normalized_claim": "non-JSP IT may be made where technically and financially feasible",
+      "actor": "",
+      "actor_id": "",
+      "action": "be made where technically and financially",
+      "object": "feasible.",
+      "modality": "may",
+      "conditions": "where technically and financially feasible",
+      "exceptions": "",
+      "deadline": "",
+      "decision_authority": "",
+      "evidence_required": false,
+      "source_lines": {
+        "start": 80,
+        "end": 80
+      },
+      "source_section": "SECTION 1: GENERAL ISSUANCE INFORMATION",
+      "linked_entities": [],
+      "linked_references": [],
+      "linked_concepts": [],
+      "confidence": 0.55,
+      "review_status": "machine_reviewed"
+    },
+    {
+      "id": "dodi-5045-01-claim-00006",
+      "type": "reporting_requirement",
+      "text": "1.3. INFORMATION COLLECTIONS. CATMS does not require licensing with a report",
+      "normalized_claim": "1.3. INFORMATION COLLECTIONS. CATMS does not require licensing with a report",
+      "actor": "",
+      "actor_id": "",
+      "action": "1.3. INFORMATION COLLECTIONS. CATMS does not",
+      "object": "require licensing with a report",
+      "modality": "",
+      "conditions": "",
+      "exceptions": "",
+      "deadline": "",
+      "decision_authority": "",
+      "evidence_required": true,
+      "source_lines": {
+        "start": 86,
+        "end": 86
+      },
+      "source_section": "SECTION 1: GENERAL ISSUANCE INFORMATION",
+      "linked_entities": [],
+      "linked_references": [],
+      "linked_concepts": [
+        "reporting"
+      ],
+      "confidence": 0.71,
+      "review_status": "machine_reviewed"
+    },
+    {
+      "id": "dodi-5045-01-claim-00007",
+      "type": "decision_authority",
+      "text": "authority, direction, and control of the DA&M, and in addition to the responsibilities in",
+      "normalized_claim": "authority, direction, and control of the DA&M, and in addition to the responsibilities in",
+      "actor": "",
+      "actor_id": "",
+      "action": "authority, direction, and control of the",
+      "object": "DA&M, and in addition to the responsibilities in",
+      "modality": "",
+      "conditions": "",
+      "exceptions": "",
+      "deadline": "",
+      "decision_authority": "Decision authority candidate",
+      "evidence_required": false,
+      "source_lines": {
+        "start": 129,
+        "end": 129
+      },
+      "source_section": "SECTION 2: RESPONSIBILITIES",
+      "linked_entities": [],
+      "linked_references": [],
+      "linked_concepts": [],
+      "confidence": 0.55,
+      "review_status": "machine_reviewed"
+    },
+    {
+      "id": "dodi-5045-01-claim-00008",
+      "type": "policy_statement",
+      "text": "a. Oversee compliance with, and prescribe internal procedures necessary to implement, this",
+      "normalized_claim": "a. Oversee compliance with, and prescribe internal procedures necessary to implement, this",
+      "actor": "",
+      "actor_id": "",
+      "action": "a. Oversee compliance with, and prescribe",
+      "object": "internal procedures necessary to implement, this",
+      "modality": "",
+      "conditions": "",
+      "exceptions": "",
+      "deadline": "",
+      "decision_authority": "",
+      "evidence_required": false,
+      "source_lines": {
+        "start": 142,
+        "end": 142
+      },
+      "source_section": "SECTION 2: RESPONSIBILITIES",
+      "linked_entities": [],
+      "linked_references": [],
+      "linked_concepts": [
+        "compliance"
+      ],
+      "confidence": 0.63,
+      "review_status": "machine_reviewed"
+    },
+    {
+      "id": "dodi-5045-01-claim-00009",
+      "type": "permission",
+      "text": "b. May send a representative to participate in CATMS working group. The representative",
+      "normalized_claim": "b. May send a representative to participate in CATMS working group. The representative",
+      "actor": "",
+      "actor_id": "",
+      "action": "send a representative to participate in",
+      "object": "CATMS working group. The representative",
+      "modality": "May",
+      "conditions": "",
+      "exceptions": "",
+      "deadline": "",
+      "decision_authority": "",
+      "evidence_required": false,
+      "source_lines": {
+        "start": 145,
+        "end": 145
+      },
+      "source_section": "SECTION 2: RESPONSIBILITIES",
+      "linked_entities": [],
+      "linked_references": [],
+      "linked_concepts": [],
+      "confidence": 0.55,
+      "review_status": "machine_reviewed"
+    },
+    {
+      "id": "dodi-5045-01-claim-00010",
+      "type": "decision_authority",
+      "text": "should be authorized by the Component head to make decision on behalf of the Component on",
+      "normalized_claim": "should be authorized by the Component head to make decision on behalf of the Component on",
+      "actor": "",
+      "actor_id": "",
+      "action": "be authorized by the Component head",
+      "object": "to make decision on behalf of the Component on",
+      "modality": "should",
+      "conditions": "",
+      "exceptions": "",
+      "deadline": "",
+      "decision_authority": "Decision authority candidate",
+      "evidence_required": false,
+      "source_lines": {
+        "start": 146,
+        "end": 146
+      },
+      "source_section": "SECTION 2: RESPONSIBILITIES",
+      "linked_entities": [],
+      "linked_references": [],
+      "linked_concepts": [],
+      "confidence": 0.55,
+      "review_status": "machine_reviewed"
+    },
+    {
+      "id": "dodi-5045-01-claim-00011",
+      "type": "permission",
+      "text": "Router Network. Components may process the unclassified metadata on the CATMS Nonsecure",
+      "normalized_claim": "Router Network. Components may process the unclassified metadata on the CATMS Nonsecure",
+      "actor": "",
+      "actor_id": "",
+      "action": "process the unclassified metadata on the",
+      "object": "CATMS Nonsecure",
+      "modality": "may",
+      "conditions": "",
+      "exceptions": "",
+      "deadline": "",
+      "decision_authority": "",
+      "evidence_required": false,
+      "source_lines": {
+        "start": 181,
+        "end": 181
+      },
+      "source_section": "SECTION 3: PROCEDURES",
+      "linked_entities": [],
+      "linked_references": [],
+      "linked_concepts": [],
+      "confidence": 0.55,
+      "review_status": "machine_reviewed"
+    },
+    {
+      "id": "dodi-5045-01-claim-00012",
+      "type": "policy_statement",
+      "text": "(2) All DoD Components will ensure they are retaining and maintaining complete record",
+      "normalized_claim": "(2) All DoD Components will ensure they are retaining and maintaining complete record",
+      "actor": "Department of Defense",
+      "actor_id": "department-of-defense",
+      "action": "ensure they are retaining and maintaining",
+      "object": "complete record",
+      "modality": "will",
+      "conditions": "",
+      "exceptions": "",
+      "deadline": "",
+      "decision_authority": "",
+      "evidence_required": true,
+      "source_lines": {
+        "start": 192,
+        "end": 192
+      },
+      "source_section": "SECTION 3: PROCEDURES",
+      "linked_entities": [
+        "department-of-defense"
+      ],
+      "linked_references": [],
+      "linked_concepts": [],
+      "confidence": 0.73,
+      "review_status": "machine_reviewed"
+    },
+    {
+      "id": "dodi-5045-01-claim-00013",
+      "type": "requirement",
+      "text": "3.2. PERSONALLY IDENTIFIABLE INFORMATION (PII). The DoD Components must:",
+      "normalized_claim": "3.2. PERSONALLY IDENTIFIABLE INFORMATION (PII). The DoD Components must",
+      "actor": "Department of Defense",
+      "actor_id": "department-of-defense",
+      "action": ":",
+      "object": "",
+      "modality": "must",
+      "conditions": "",
+      "exceptions": "",
+      "deadline": "",
+      "decision_authority": "",
+      "evidence_required": false,
+      "source_lines": {
+        "start": 201,
+        "end": 201
+      },
+      "source_section": "SECTION 3: PROCEDURES",
+      "linked_entities": [
+        "department-of-defense"
+      ],
+      "linked_references": [],
+      "linked_concepts": [
+        "privacy"
+      ],
+      "confidence": 0.85,
+      "review_status": "machine_reviewed"
+    },
+    {
+      "id": "dodi-5045-01-claim-00014",
+      "type": "policy_statement",
+      "text": "d. Ensure PII is collected, maintained, disseminated, and used in accordance with DoD",
+      "normalized_claim": "d. Ensure PII is collected, maintained, disseminated, and used in accordance with DoD",
+      "actor": "Department of Defense",
+      "actor_id": "department-of-defense",
+      "action": "d. Ensure PII is collected, maintained,",
+      "object": "disseminated, and used in accordance with DoD",
+      "modality": "",
+      "conditions": "in accordance with DoD",
+      "exceptions": "",
+      "deadline": "",
+      "decision_authority": "",
+      "evidence_required": false,
+      "source_lines": {
+        "start": 216,
+        "end": 216
+      },
+      "source_section": "SECTION 3: PROCEDURES 6",
+      "linked_entities": [
+        "department-of-defense"
+      ],
+      "linked_references": [],
+      "linked_concepts": [
+        "privacy"
+      ],
+      "confidence": 0.73,
+      "review_status": "machine_reviewed"
+    },
+    {
+      "id": "dodi-5045-01-claim-00015",
+      "type": "permission",
+      "text": "DoD 5400.11-R, “Department of Defense Privacy Program,” May 14, 2007",
+      "normalized_claim": "DoD 5400.11-R, “Department of Defense Privacy Program,” May 14, 2007",
+      "actor": "Department of Defense",
+      "actor_id": "department-of-defense",
+      "action": "14, 2007",
+      "object": "",
+      "modality": "May",
+      "conditions": "",
+      "exceptions": "",
+      "deadline": "",
+      "decision_authority": "",
+      "evidence_required": false,
+      "source_lines": {
+        "start": 268,
+        "end": 268
+      },
+      "source_section": "SECTION 3: PROCEDURES 7",
+      "linked_entities": [
+        "department-of-defense"
+      ],
+      "linked_references": [],
+      "linked_concepts": [
+        "privacy"
+      ],
+      "confidence": 0.73,
+      "review_status": "machine_reviewed"
+    }
+  ],
+  "blocked_reason": null
 }

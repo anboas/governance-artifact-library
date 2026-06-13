@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -64,13 +64,30 @@
     "upstream_edge_count": 0,
     "downstream_edge_count": 0,
     "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
+    "uncatalogued_gap_count": 1,
     "evidence_backed_edge_count": 0,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
+    {
+      "id": "gap:usc:10:2685",
+      "label": "10 U.S.C. 2685",
+      "title": "10 U.S.C. 2685",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:10:2685",
+      "count": 1,
+      "lines_sample": [
+        149
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
     {
       "id": "dodi-7700-20",
       "label": "DoDI 7700.20",
@@ -83,13 +100,31 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     }
   ],
   "upstream_edges": [],
   "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:usc:10:2685",
+      "label": "10 U.S.C. 2685",
+      "title": "10 U.S.C. 2685",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:10:2685",
+      "count": 1,
+      "lines_sample": [
+        149
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",

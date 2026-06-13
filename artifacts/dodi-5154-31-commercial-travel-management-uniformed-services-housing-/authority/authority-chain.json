@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,30 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "downstream_edge_count": 6,
+    "catalogued_node_count": 7,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 6,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "dodi-1330-17",
+      "label": "DoDI 1330.17",
+      "title": "DoDI 1330.17: DoD Commissary Program",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-5154-31-commercial-travel-management-uniformed-services-housing-",
       "label": "DoDI 5154.31",
@@ -83,12 +98,256 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-5154-31-commercial-travel-management-defense-travel-management-o",
+      "label": "DoDI 5154.31",
+      "title": "DoDI 5154.31: Commercial Travel Management: Defense Travel Management Office",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5154-31-commercial-travel-management-defense-travel-system-dts",
+      "label": "DoDI 5154.31",
+      "title": "DoDI 5154.31: Commercial Travel Management: Defense Travel System (DTS)",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5154-31-commercial-travel-management-dod-government-travel-charg",
+      "label": "DoDI 5154.31",
+      "title": "DoDI 5154.31: Commercial Travel Management: DoD Government Travel Charge Card (GTCC) Program",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5154-31-commercial-travel-management-general-travel-provisions",
+      "label": "DoDI 5154.31",
+      "title": "DoDI 5154.31: Commercial Travel Management: General Travel Provisions",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5154-31-commercial-travel-management-the-per-diem-travel-and-tra",
+      "label": "DoDI 5154.31",
+      "title": "DoDI 5154.31: Commercial Travel Management: The Per Diem, Travel and Transportation Allowance Committee (PDTATAC)",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [],
-  "downstream_edges": [],
+  "downstream_edges": [
+    {
+      "id": "dodi-5154-31-commercial-travel-management-uniformed-services-housing-->dodi-1330-17:references:resolved_reference",
+      "source_artifact_id": "dodi-5154-31-commercial-travel-management-uniformed-services-housing-",
+      "source_label": "DoDI 5154.31",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1330-17",
+      "target_label": "DoDI 1330.17",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5154.31",
+        "label": "DoDI 5154.31",
+        "first_line": 842,
+        "lines_sample": [
+          842
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5154-31-commercial-travel-management-uniformed-services-housing-->dodi-5154-31-commercial-travel-management-defense-travel-management-o:references:resolved_reference",
+      "source_artifact_id": "dodi-5154-31-commercial-travel-management-uniformed-services-housing-",
+      "source_label": "DoDI 5154.31",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5154-31-commercial-travel-management-defense-travel-management-o",
+      "target_label": "DoDI 5154.31",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5154.31",
+        "label": "DoDI 5154.31",
+        "first_line": 44,
+        "lines_sample": [
+          44,
+          81,
+          114,
+          149,
+          200,
+          249,
+          302,
+          332
+        ],
+        "count": 8
+      }
+    },
+    {
+      "id": "dodi-5154-31-commercial-travel-management-uniformed-services-housing-->dodi-5154-31-commercial-travel-management-defense-travel-system-dts:references:resolved_reference",
+      "source_artifact_id": "dodi-5154-31-commercial-travel-management-uniformed-services-housing-",
+      "source_label": "DoDI 5154.31",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5154-31-commercial-travel-management-defense-travel-system-dts",
+      "target_label": "DoDI 5154.31",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5154.31",
+        "label": "DoDI 5154.31",
+        "first_line": 40,
+        "lines_sample": [
+          40,
+          77,
+          104,
+          135,
+          188,
+          203,
+          224
+        ],
+        "count": 7
+      }
+    },
+    {
+      "id": "dodi-5154-31-commercial-travel-management-uniformed-services-housing-->dodi-5154-31-commercial-travel-management-dod-government-travel-charg:references:resolved_reference",
+      "source_artifact_id": "dodi-5154-31-commercial-travel-management-uniformed-services-housing-",
+      "source_label": "DoDI 5154.31",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5154-31-commercial-travel-management-dod-government-travel-charg",
+      "target_label": "DoDI 5154.31",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5154.31",
+        "label": "DoDI 5154.31",
+        "first_line": 42,
+        "lines_sample": [
+          42,
+          90,
+          112,
+          140,
+          179,
+          231,
+          271,
+          297,
+          350
+        ],
+        "count": 9
+      }
+    },
+    {
+      "id": "dodi-5154-31-commercial-travel-management-uniformed-services-housing-->dodi-5154-31-commercial-travel-management-general-travel-provisions:references:resolved_reference",
+      "source_artifact_id": "dodi-5154-31-commercial-travel-management-uniformed-services-housing-",
+      "source_label": "DoDI 5154.31",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5154-31-commercial-travel-management-general-travel-provisions",
+      "target_label": "DoDI 5154.31",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5154.31",
+        "label": "DoDI 5154.31",
+        "first_line": 45,
+        "lines_sample": [
+          45,
+          92,
+          109,
+          137,
+          169,
+          222,
+          275,
+          328,
+          344,
+          398
+        ],
+        "count": 10
+      }
+    },
+    {
+      "id": "dodi-5154-31-commercial-travel-management-uniformed-services-housing-->dodi-5154-31-commercial-travel-management-the-per-diem-travel-and-tra:references:resolved_reference",
+      "source_artifact_id": "dodi-5154-31-commercial-travel-management-uniformed-services-housing-",
+      "source_label": "DoDI 5154.31",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5154-31-commercial-travel-management-the-per-diem-travel-and-tra",
+      "target_label": "DoDI 5154.31",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5154.31",
+        "label": "DoDI 5154.31",
+        "first_line": 44,
+        "lines_sample": [
+          44,
+          91,
+          112,
+          141,
+          183,
+          236,
+          289
+        ],
+        "count": 7
+      }
+    }
+  ],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
@@ -103,7 +362,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-5154-31-commercial-travel-management-uniformed-services-housing-",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 6
     }
   ]
 }

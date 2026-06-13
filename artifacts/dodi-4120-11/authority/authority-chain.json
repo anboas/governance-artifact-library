@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,46 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 5,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "catalogued_node_count": 6,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 5,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
+    {
+      "id": "dodd-3000-10",
+      "label": "DoDD 3000.10",
+      "title": "DoDD 3000.10: Contingency Basing Outside the United States",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodd-4180-01",
+      "label": "DoDD 4180.01",
+      "title": "DoDD 4180.01: DoD Energy Policy",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-4120-11",
       "label": "DoDI 4120.11",
@@ -83,20 +113,217 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-4120-24",
+      "label": "DoDI 4120.24",
+      "title": "DoDI 4120.24: Defense Standardization Program",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-4140-25",
+      "label": "DoDI 4140.25",
+      "title": "DoDI 4140.25: DoD Operational Energy and Bulk Fuel Policy",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-4165-14",
+      "label": "DoDI 4165.14",
+      "title": "DoDI 4165.14: Real Property Inventory and Reporting",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "gap:dodi:5000.02",
+      "label": "DoDI 5000.02",
+      "title": "DoDI 5000.02",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodi",
+      "source_reference_id": "dodi:5000.02",
+      "count": 3,
+      "lines_sample": [
+        215,
+        379,
+        888
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodd-3000-10->dodi-4120-11:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-3000-10",
+      "source_label": "DoDD 3000.10",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4120-11",
+      "target_label": "DoDI 4120.11",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:3000.10",
+        "label": "DoDD 3000.10",
+        "first_line": 227,
+        "lines_sample": [
+          227
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodd-4180-01->dodi-4120-11:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-4180-01",
+      "source_label": "DoDD 4180.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4120-11",
+      "target_label": "DoDI 4120.11",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:4180.01",
+        "label": "DoDD 4180.01",
+        "first_line": 150,
+        "lines_sample": [
+          150,
+          1013
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "dodi-4120-24->dodi-4120-11:references:resolved_reference",
+      "source_artifact_id": "dodi-4120-24",
+      "source_label": "DoDI 4120.24",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4120-11",
+      "target_label": "DoDI 4120.11",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:4120.24",
+        "label": "DoDI 4120.24",
+        "first_line": 251,
+        "lines_sample": [
+          251
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-4140-25->dodi-4120-11:references:resolved_reference",
+      "source_artifact_id": "dodi-4140-25",
+      "source_label": "DoDI 4140.25",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4120-11",
+      "target_label": "DoDI 4120.11",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:4140.25",
+        "label": "DoDI 4140.25",
+        "first_line": 175,
+        "lines_sample": [
+          175
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-4165-14->dodi-4120-11:references:resolved_reference",
+      "source_artifact_id": "dodi-4165-14",
+      "source_label": "DoDI 4165.14",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4120-11",
+      "target_label": "DoDI 4120.11",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:4165.14",
+        "label": "DoDI 4165.14",
+        "first_line": 1050,
+        "lines_sample": [
+          1050,
+          1052
+        ],
+        "count": 2
+      }
+    }
+  ],
   "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:dodi:5000.02",
+      "label": "DoDI 5000.02",
+      "title": "DoDI 5000.02",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodi",
+      "source_reference_id": "dodi:5000.02",
+      "count": 3,
+      "lines_sample": [
+        215,
+        379,
+        888
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-4120-11",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 5
     },
     {
       "id": "trace-downstream",

@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,30 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "downstream_edge_count": 4,
+    "catalogued_node_count": 5,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "dodd-4500-09",
+      "label": "DoDD 4500.09",
+      "title": "DoDD 4500.09: Transportation and Traffic Management",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-4500-53",
       "label": "DoDI 4500.53",
@@ -83,12 +98,152 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-4500-57",
+      "label": "DoDI 4500.57",
+      "title": "DoDI 4500.57: Transportation and Traffic Management",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-4515-13",
+      "label": "DoDI 4515.13",
+      "title": "DoDI 4515.13: Air Transportation Eligibility",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5030-61",
+      "label": "DoDI 5030.61",
+      "title": "DoDI 5030.61: DoD Airworthiness Policy",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [],
-  "downstream_edges": [],
+  "downstream_edges": [
+    {
+      "id": "dodi-4500-53->dodd-4500-09:references_upstream:resolved_reference",
+      "source_artifact_id": "dodi-4500-53",
+      "source_label": "DoDI 4500.53",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-4500-09",
+      "target_label": "DoDD 4500.09",
+      "target_lane": "dod",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:4500.53",
+        "label": "DoDI 4500.53",
+        "first_line": 97,
+        "lines_sample": [
+          97
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-4500-53->dodi-4500-57:references:resolved_reference",
+      "source_artifact_id": "dodi-4500-53",
+      "source_label": "DoDI 4500.53",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4500-57",
+      "target_label": "DoDI 4500.57",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:4500.53",
+        "label": "DoDI 4500.53",
+        "first_line": 207,
+        "lines_sample": [
+          207,
+          599,
+          709,
+          757,
+          761,
+          796
+        ],
+        "count": 7
+      }
+    },
+    {
+      "id": "dodi-4500-53->dodi-4515-13:references:resolved_reference",
+      "source_artifact_id": "dodi-4500-53",
+      "source_label": "DoDI 4500.53",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4515-13",
+      "target_label": "DoDI 4515.13",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:4500.53",
+        "label": "DoDI 4500.53",
+        "first_line": 175,
+        "lines_sample": [
+          175
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-4500-53->dodi-5030-61:references:resolved_reference",
+      "source_artifact_id": "dodi-4500-53",
+      "source_label": "DoDI 4500.53",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5030-61",
+      "target_label": "DoDI 5030.61",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:4500.53",
+        "label": "DoDI 4500.53",
+        "first_line": 154,
+        "lines_sample": [
+          154,
+          370
+        ],
+        "count": 2
+      }
+    }
+  ],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
@@ -103,7 +258,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-4500-53",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 4
     }
   ]
 }

@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,97 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 3,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "catalogued_node_count": 4,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 3,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:104-191",
+      "label": "Public Law 104-191",
+      "title": "Public Law 104-191",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:104-191",
+      "count": 2,
+      "lines_sample": [
+        148,
+        291
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:111-383",
+      "label": "Public Law 111-383",
+      "title": "Public Law 111-383",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:111-383",
+      "count": 2,
+      "lines_sample": [
+        20,
+        139
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodi-6200-05",
+      "label": "DoDI 6200.05",
+      "title": "DoDI 6200.05: Force Health Protection Quality Assurance (FHPQA) Program",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-6490-03",
+      "label": "DoDI 6490.03",
+      "title": "DoDI 6490.03: Deployment Health",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-6490-11",
+      "label": "DoDI 6490.11",
+      "title": "DoDI 6490.11: DoD Policy Guidance for Management of Mild Traumatic Brain Injury/Concussion in the Deployed Setting",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-6490-13",
       "label": "DoDI 6490.13",
@@ -83,20 +164,124 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-6200-05->dodi-6490-13:references:resolved_reference",
+      "source_artifact_id": "dodi-6200-05",
+      "source_label": "DoDI 6200.05",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6490-13",
+      "target_label": "DoDI 6490.13",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6200.05",
+        "label": "DoDI 6200.05",
+        "first_line": 200,
+        "lines_sample": [
+          200
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-6490-03->dodi-6490-13:references:resolved_reference",
+      "source_artifact_id": "dodi-6490-03",
+      "source_label": "DoDI 6490.03",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6490-13",
+      "target_label": "DoDI 6490.13",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6490.03",
+        "label": "DoDI 6490.03",
+        "first_line": 421,
+        "lines_sample": [
+          421
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-6490-11->dodi-6490-13:references:resolved_reference",
+      "source_artifact_id": "dodi-6490-11",
+      "source_label": "DoDI 6490.11",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6490-13",
+      "target_label": "DoDI 6490.13",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6490.11",
+        "label": "DoDI 6490.11",
+        "first_line": 480,
+        "lines_sample": [
+          480
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:public-law:104-191",
+      "label": "Public Law 104-191",
+      "title": "Public Law 104-191",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:104-191",
+      "count": 2,
+      "lines_sample": [
+        148,
+        291
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:111-383",
+      "label": "Public Law 111-383",
+      "title": "Public Law 111-383",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:111-383",
+      "count": 2,
+      "lines_sample": [
+        20,
+        139
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-6490-13",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 3
     },
     {
       "id": "trace-downstream",

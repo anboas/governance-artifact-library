@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 4,
-    "catalogued_node_count": 5,
+    "downstream_edge_count": 7,
+    "catalogued_node_count": 8,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 3,
     "inferred_edge_count": 4,
     "authority_path_status": "authority_gap",
     "implementation_path_status": "has_downstream_trace"
@@ -83,7 +83,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     },
     {
@@ -98,7 +98,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -113,7 +113,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -128,7 +128,7 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "catalogued"
     },
     {
@@ -143,7 +143,52 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5400-17",
+      "label": "DoDI 5400.17",
+      "title": "DoDI 5400.17: Official Use of Social Media for Public Affairs Purposes",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5410-19-community-outreach-activities-policy-overview-and-evalua",
+      "label": "DoDI 5410.19",
+      "title": "DoDI 5410.19: Community Outreach Activities: Policy Overview and Evaluation Procedures",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-8170-01",
+      "label": "DoDI 8170.01",
+      "title": "DoDI 8170.01: Online Information Management and Electronic Messaging",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
       "status": "catalogued"
     }
   ],
@@ -236,6 +281,75 @@
         ],
         "shared_family": ""
       }
+    },
+    {
+      "id": "dodd-5535-09->dodi-5400-17:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-5535-09",
+      "source_label": "DoDD 5535.09",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5400-17",
+      "target_label": "DoDI 5400.17",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5535.09",
+        "label": "DoDD 5535.09",
+        "first_line": 486,
+        "lines_sample": [
+          486
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodd-5535-09->dodi-5410-19-community-outreach-activities-policy-overview-and-evalua:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-5535-09",
+      "source_label": "DoDD 5535.09",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5410-19-community-outreach-activities-policy-overview-and-evalua",
+      "target_label": "DoDI 5410.19",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5535.09",
+        "label": "DoDD 5535.09",
+        "first_line": 206,
+        "lines_sample": [
+          206,
+          1958,
+          1968,
+          2157
+        ],
+        "count": 4
+      }
+    },
+    {
+      "id": "dodd-5535-09->dodi-8170-01:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-5535-09",
+      "source_label": "DoDD 5535.09",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-8170-01",
+      "target_label": "DoDI 8170.01",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5535.09",
+        "label": "DoDD 5535.09",
+        "first_line": 541,
+        "lines_sample": [
+          541
+        ],
+        "count": 1
+      }
     }
   ],
   "uncatalogued_authority_gaps": [],
@@ -252,7 +366,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodd-5535-09",
       "direction": "downstream",
-      "edge_count": 4
+      "edge_count": 7
     }
   ]
 }

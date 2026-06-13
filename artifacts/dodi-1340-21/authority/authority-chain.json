@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,109 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "downstream_edge_count": 1,
+    "catalogued_node_count": 2,
+    "uncatalogued_gap_count": 4,
+    "evidence_backed_edge_count": 1,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:usc:10:2575",
+      "label": "10 U.S.C. 2575",
+      "title": "10 U.S.C. 2575",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:10:2575",
+      "count": 1,
+      "lines_sample": [
+        445
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:24:420",
+      "label": "24 U.S.C. 420",
+      "title": "24 U.S.C. 420",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:24:420",
+      "count": 1,
+      "lines_sample": [
+        448
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:31:3702",
+      "label": "31 U.S.C. 3702",
+      "title": "31 U.S.C. 3702",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:31:3702",
+      "count": 12,
+      "lines_sample": [
+        87,
+        423,
+        438,
+        471,
+        542,
+        545,
+        554,
+        577,
+        579,
+        615,
+        617,
+        642
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:37:554",
+      "label": "37 U.S.C. 554",
+      "title": "37 U.S.C. 554",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:37:554",
+      "count": 1,
+      "lines_sample": [
+        451
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodi-1332-42",
+      "label": "DoDI 1332.42",
+      "title": "DoDI 1332.42: Survivor Benefit Plan",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-1340-21",
       "label": "DoDI 1340.21",
@@ -83,13 +177,116 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     }
   ],
   "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "downstream_edges": [
+    {
+      "id": "dodi-1340-21->dodi-1332-42:references:resolved_reference",
+      "source_artifact_id": "dodi-1340-21",
+      "source_label": "DoDI 1340.21",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1332-42",
+      "target_label": "DoDI 1332.42",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1340.21",
+        "label": "DoDI 1340.21",
+        "first_line": 1785,
+        "lines_sample": [
+          1785
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:usc:31:3702",
+      "label": "31 U.S.C. 3702",
+      "title": "31 U.S.C. 3702",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:31:3702",
+      "count": 12,
+      "lines_sample": [
+        87,
+        423,
+        438,
+        471,
+        542,
+        545,
+        554,
+        577,
+        579,
+        615,
+        617,
+        642
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:10:2575",
+      "label": "10 U.S.C. 2575",
+      "title": "10 U.S.C. 2575",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:10:2575",
+      "count": 1,
+      "lines_sample": [
+        445
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:24:420",
+      "label": "24 U.S.C. 420",
+      "title": "24 U.S.C. 420",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:24:420",
+      "count": 1,
+      "lines_sample": [
+        448
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:37:554",
+      "label": "37 U.S.C. 554",
+      "title": "37 U.S.C. 554",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:37:554",
+      "count": 1,
+      "lines_sample": [
+        451
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
@@ -103,7 +300,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-1340-21",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 1
     }
   ]
 }

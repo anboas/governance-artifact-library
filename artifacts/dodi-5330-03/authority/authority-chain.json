@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,60 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "downstream_edge_count": 4,
+    "catalogued_node_count": 5,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "dodd-5105-22",
+      "label": "DoDD 5105.22",
+      "title": "DoDD 5105.22: Defense Logistics Agency (DLA)",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-1015-16",
+      "label": "DoDI 1015.16",
+      "title": "DoDI 1015.16: Nonappropriated Fund Instrumentalities Information Technology Policies and Procedures",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5105-18",
+      "label": "DoDI 5105.18",
+      "title": "DoDI 5105.18: DoD Intergovernmental and Intragovernmental Committee Management Program",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-5330-03",
       "label": "DoDI 5330.03",
@@ -83,12 +128,116 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dowi-5120-04",
+      "label": "DoWI 5120.04",
+      "title": "DoWI 5120.04: DoW Newspapers, Magazines, Guides, and Installation Maps",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [],
-  "downstream_edges": [],
+  "downstream_edges": [
+    {
+      "id": "dodi-5330-03->dodd-5105-22:references_upstream:resolved_reference",
+      "source_artifact_id": "dodi-5330-03",
+      "source_label": "DoDI 5330.03",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-5105-22",
+      "target_label": "DoDD 5105.22",
+      "target_lane": "dod",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5330.03",
+        "label": "DoDI 5330.03",
+        "first_line": 262,
+        "lines_sample": [
+          262
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5330-03->dodi-1015-16:references:resolved_reference",
+      "source_artifact_id": "dodi-5330-03",
+      "source_label": "DoDI 5330.03",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1015-16",
+      "target_label": "DoDI 1015.16",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5330.03",
+        "label": "DoDI 5330.03",
+        "first_line": 130,
+        "lines_sample": [
+          130
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5330-03->dodi-5105-18:references:resolved_reference",
+      "source_artifact_id": "dodi-5330-03",
+      "source_label": "DoDI 5330.03",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5105-18",
+      "target_label": "DoDI 5105.18",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5330.03",
+        "label": "DoDI 5330.03",
+        "first_line": 132,
+        "lines_sample": [
+          132
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5330-03->dowi-5120-04:references:resolved_reference",
+      "source_artifact_id": "dodi-5330-03",
+      "source_label": "DoDI 5330.03",
+      "source_lane": "dod",
+      "target_artifact_id": "dowi-5120-04",
+      "target_label": "DoWI 5120.04",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5330.03",
+        "label": "DoDI 5330.03",
+        "first_line": 39,
+        "lines_sample": [
+          39
+        ],
+        "count": 1
+      }
+    }
+  ],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
@@ -103,7 +252,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-5330-03",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 4
     }
   ]
 }

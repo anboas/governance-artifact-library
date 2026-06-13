@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,76 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "upstream_edge_count": 1,
+    "downstream_edge_count": 3,
+    "catalogued_node_count": 5,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "dodd-7045-14",
+      "label": "DoDD 7045.14",
+      "title": "DoDD 7045.14: The Planning, Programming, Budgeting, and Execution (PPBE) Process",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-4165-56",
+      "label": "DoDI 4165.56",
+      "title": "DoDI 4165.56: Relocatable Facilities",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5000-75",
+      "label": "DoDI 5000.75",
+      "title": "DoDI 5000.75: Business Systems Requirements and Acquisition",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-6015-17",
+      "label": "DoDI 6015.17",
+      "title": "DoDI 6015.17: Military Health System (MHS) Facility Portfolio Management",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-7041-03",
       "label": "DoDI 7041.03",
@@ -83,12 +143,103 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodd-7045-14->dodi-7041-03:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-7045-14",
+      "source_label": "DoDD 7045.14",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-7041-03",
+      "target_label": "DoDI 7041.03",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:7045.14",
+        "label": "DoDD 7045.14",
+        "first_line": 81,
+        "lines_sample": [
+          81
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-7041-03->dodi-4165-56:references:resolved_reference",
+      "source_artifact_id": "dodi-7041-03",
+      "source_label": "DoDI 7041.03",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4165-56",
+      "target_label": "DoDI 4165.56",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:7041.03",
+        "label": "DoDI 7041.03",
+        "first_line": 250,
+        "lines_sample": [
+          250,
+          510
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "dodi-7041-03->dodi-5000-75:references:resolved_reference",
+      "source_artifact_id": "dodi-7041-03",
+      "source_label": "DoDI 7041.03",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5000-75",
+      "target_label": "DoDI 5000.75",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:7041.03",
+        "label": "DoDI 7041.03",
+        "first_line": 805,
+        "lines_sample": [
+          805
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-7041-03->dodi-6015-17:references:resolved_reference",
+      "source_artifact_id": "dodi-7041-03",
+      "source_label": "DoDI 7041.03",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6015-17",
+      "target_label": "DoDI 6015.17",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:7041.03",
+        "label": "DoDI 7041.03",
+        "first_line": 47,
+        "lines_sample": [
+          47
+        ],
+        "count": 1
+      }
+    }
+  ],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
@@ -96,14 +247,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-7041-03",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-7041-03",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 3
     }
   ]
 }

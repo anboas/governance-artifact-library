@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,61 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "upstream_edge_count": 1,
+    "downstream_edge_count": 2,
+    "catalogued_node_count": 4,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 3,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "dodi-3020-41",
+      "label": "DoDI 3020.41",
+      "title": "DoDI 3020.41: Operational Contract Support Outside the United States",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-3020-50",
+      "label": "DoDI 3020.50",
+      "title": "DoDI 3020.50: Private Security Contractors Operating in Contingency Operations, Humanitarian or Peace Operations, or Other Military Operations or Exercises",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5000-57",
+      "label": "DoDI 5000.57",
+      "title": "DoDI 5000.57: Defense Acquisition University",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-5000-72",
       "label": "DoDI 5000.72",
@@ -83,12 +128,82 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-5000-57->dodi-5000-72:references:resolved_reference",
+      "source_artifact_id": "dodi-5000-57",
+      "source_label": "DoDI 5000.57",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5000-72",
+      "target_label": "DoDI 5000.72",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5000.57",
+        "label": "DoDI 5000.57",
+        "first_line": 292,
+        "lines_sample": [
+          292
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-5000-72->dodi-3020-41:references:resolved_reference",
+      "source_artifact_id": "dodi-5000-72",
+      "source_label": "DoDI 5000.72",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-3020-41",
+      "target_label": "DoDI 3020.41",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5000.72",
+        "label": "DoDI 5000.72",
+        "first_line": 600,
+        "lines_sample": [
+          600,
+          691,
+          723
+        ],
+        "count": 3
+      }
+    },
+    {
+      "id": "dodi-5000-72->dodi-3020-50:references:resolved_reference",
+      "source_artifact_id": "dodi-5000-72",
+      "source_label": "DoDI 5000.72",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-3020-50",
+      "target_label": "DoDI 3020.50",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5000.72",
+        "label": "DoDI 5000.72",
+        "first_line": 178,
+        "lines_sample": [
+          178
+        ],
+        "count": 1
+      }
+    }
+  ],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
@@ -96,14 +211,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-5000-72",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-5000-72",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 2
     }
   ]
 }

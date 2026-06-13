@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,106 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "upstream_edge_count": 2,
+    "downstream_edge_count": 4,
+    "catalogued_node_count": 7,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 6,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "dodi-1348-36",
+      "label": "DoDI 1348.36",
+      "title": "DoDI 1348.36: Gold Star Lapel Button, Service Flag, and Service Lapel Button",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-4500-43",
+      "label": "DoDI 4500.43",
+      "title": "DoDI 4500.43: Operational Support Airlift",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-4500-56",
+      "label": "DoDI 4500.56",
+      "title": "DoDI 4500.56: Use of Government Aircraft and Air Travel",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-4515-13",
+      "label": "DoDI 4515.13",
+      "title": "DoDI 4515.13: Air Transportation Eligibility",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5010-40",
+      "label": "DoDI 5010.40",
+      "title": "DoDI 5010.40: DOD Enterprise Risk Management and Risk Management and Internal Control Program",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5410-19-community-outreach-activities-osd-outreach-programs-spea",
+      "label": "DoDI 5410.19",
+      "title": "DoDI 5410.19: Community Outreach Activities: OSD Outreach Programs, Speaking Engagements, and Support to Non-DoD Organizations",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-7250-13",
       "label": "DoDI 7250.13",
@@ -83,12 +173,152 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-1348-36->dodi-7250-13:references:resolved_reference",
+      "source_artifact_id": "dodi-1348-36",
+      "source_label": "DoDI 1348.36",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-7250-13",
+      "target_label": "DoDI 7250.13",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1348.36",
+        "label": "DoDI 1348.36",
+        "first_line": 585,
+        "lines_sample": [
+          585
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5010-40->dodi-7250-13:references:resolved_reference",
+      "source_artifact_id": "dodi-5010-40",
+      "source_label": "DoDI 5010.40",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-7250-13",
+      "target_label": "DoDI 7250.13",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5010.40",
+        "label": "DoDI 5010.40",
+        "first_line": 223,
+        "lines_sample": [
+          223
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-7250-13->dodi-4500-43:references:resolved_reference",
+      "source_artifact_id": "dodi-7250-13",
+      "source_label": "DoDI 7250.13",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4500-43",
+      "target_label": "DoDI 4500.43",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:7250.13",
+        "label": "DoDI 7250.13",
+        "first_line": 271,
+        "lines_sample": [
+          271,
+          342,
+          376,
+          1145
+        ],
+        "count": 4
+      }
+    },
+    {
+      "id": "dodi-7250-13->dodi-4500-56:references:resolved_reference",
+      "source_artifact_id": "dodi-7250-13",
+      "source_label": "DoDI 7250.13",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4500-56",
+      "target_label": "DoDI 4500.56",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:7250.13",
+        "label": "DoDI 7250.13",
+        "first_line": 660,
+        "lines_sample": [
+          660,
+          783
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "dodi-7250-13->dodi-4515-13:references:resolved_reference",
+      "source_artifact_id": "dodi-7250-13",
+      "source_label": "DoDI 7250.13",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-4515-13",
+      "target_label": "DoDI 4515.13",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:7250.13",
+        "label": "DoDI 7250.13",
+        "first_line": 3091,
+        "lines_sample": [
+          3091,
+          3146,
+          3203
+        ],
+        "count": 3
+      }
+    },
+    {
+      "id": "dodi-7250-13->dodi-5410-19-community-outreach-activities-osd-outreach-programs-spea:references:resolved_reference",
+      "source_artifact_id": "dodi-7250-13",
+      "source_label": "DoDI 7250.13",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5410-19-community-outreach-activities-osd-outreach-programs-spea",
+      "target_label": "DoDI 5410.19",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:7250.13",
+        "label": "DoDI 7250.13",
+        "first_line": 1562,
+        "lines_sample": [
+          1562
+        ],
+        "count": 1
+      }
+    }
+  ],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
@@ -96,14 +326,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-7250-13",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-7250-13",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 4
     }
   ]
 }

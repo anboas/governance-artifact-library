@@ -18,8 +18,8 @@ Generated from `data/coverage-map.json`, `data/source-discovery-map.json`, and `
 | Rank | Priority | Type | Item | Source | Automation | Score | Recommended Action |
 | ---: | --- | --- | --- | --- | --- | ---: | --- |
 | 1 | P0 | source_recovery | Department of the Navy Issuances mirror recovery | Department of the Navy Issuances | blocked_by_host | 107 | Capture official source files through browser/manual import fallback. |
-| 2 | P0 | source_recovery | DoW/DoD Issuances mirror recovery | DoW/DoD Issuances | blocked_by_host | 107 | Capture official source files through browser/manual import fallback. |
-| 3 | P0 | source_recovery | DoD CIO mirror recovery | DoD CIO | blocked_by_host | 105 | Capture official source files through browser/manual import fallback. |
+| 2 | P0 | source_recovery | DoD CIO mirror recovery | DoD CIO | blocked_by_host | 105 | Capture official source files through browser/manual import fallback. |
+| 3 | P0 | source_recovery | DoW/DoD Issuances mirror recovery | DoW/DoD Issuances | blocked_by_host | 104 | Capture official source files through browser/manual import fallback. |
 | 4 | P0 | governance_gap | Appropriations Law coverage gap | GovInfo | direct_fetch_ready | 102 | Use GovInfo to discover and register the first Appropriations Law artifact. |
 | 5 | P0 | source_recovery | DoD Cyber Exchange mirror recovery | DoD Cyber Exchange | browser_shell_detected | 101 | Run browser-assisted source capture and store raw mirrors. |
 | 6 | P0 | source_recovery | MyNavyHR mirror recovery | MyNavyHR | blocked_by_host | 101 | Capture official source files through browser/manual import fallback. |

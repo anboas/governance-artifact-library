@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,33 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "upstream_edge_count": 1,
+    "downstream_edge_count": 5,
+    "catalogued_node_count": 6,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 6,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:dodd:5400.11",
+      "label": "DoDD 5400.11",
+      "title": "DoDD 5400.11",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodd",
+      "source_reference_id": "dodd:5400.11",
+      "count": 1,
+      "lines_sample": [
+        299
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
     {
       "id": "dodi-1100-13",
       "label": "DoDI 1100.13",
@@ -83,27 +100,257 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-3216-02",
+      "label": "DoDI 3216.02",
+      "title": "DoDI 3216.02: Protection of Human Subjects and Adherence to Ethical Standards in DoD-Conducted and-Supported Research",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5000-77",
+      "label": "DoDI 5000.77",
+      "title": "DoDI 5000.77: DoD Federally Funded Research and Development Center (FFRDC) Program",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-6400-11",
+      "label": "DoDI 6400.11",
+      "title": "DoDI 6400.11: DoD Integrated Primary Prevention Policy for Prevention Workforce and Leaders",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-8910-01",
+      "label": "DoDI 8910.01",
+      "title": "DoDI 8910.01: DoD Implementation of the Paperwork Reduction Act",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dowi-5120-04",
+      "label": "DoWI 5120.04",
+      "title": "DoWI 5120.04: DoW Newspapers, Magazines, Guides, and Installation Maps",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-3216-02->dodi-1100-13:references:resolved_reference",
+      "source_artifact_id": "dodi-3216-02",
+      "source_label": "DoDI 3216.02",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1100-13",
+      "target_label": "DoDI 1100.13",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:3216.02",
+        "label": "DoDI 3216.02",
+        "first_line": 22,
+        "lines_sample": [
+          22
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-1100-13->dodi-3216-02:references:resolved_reference",
+      "source_artifact_id": "dodi-1100-13",
+      "source_label": "DoDI 1100.13",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-3216-02",
+      "target_label": "DoDI 3216.02",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1100.13",
+        "label": "DoDI 1100.13",
+        "first_line": 203,
+        "lines_sample": [
+          203
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1100-13->dodi-5000-77:references:resolved_reference",
+      "source_artifact_id": "dodi-1100-13",
+      "source_label": "DoDI 1100.13",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5000-77",
+      "target_label": "DoDI 5000.77",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1100.13",
+        "label": "DoDI 1100.13",
+        "first_line": 394,
+        "lines_sample": [
+          394,
+          966
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "dodi-1100-13->dodi-6400-11:references:resolved_reference",
+      "source_artifact_id": "dodi-1100-13",
+      "source_label": "DoDI 1100.13",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6400-11",
+      "target_label": "DoDI 6400.11",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1100.13",
+        "label": "DoDI 1100.13",
+        "first_line": 675,
+        "lines_sample": [
+          675,
+          1578
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "dodi-1100-13->dodi-8910-01:references:resolved_reference",
+      "source_artifact_id": "dodi-1100-13",
+      "source_label": "DoDI 1100.13",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-8910-01",
+      "target_label": "DoDI 8910.01",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1100.13",
+        "label": "DoDI 1100.13",
+        "first_line": 168,
+        "lines_sample": [
+          168,
+          242
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "dodi-1100-13->dowi-5120-04:references:resolved_reference",
+      "source_artifact_id": "dodi-1100-13",
+      "source_label": "DoDI 1100.13",
+      "source_lane": "dod",
+      "target_artifact_id": "dowi-5120-04",
+      "target_label": "DoWI 5120.04",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1100.13",
+        "label": "DoDI 1100.13",
+        "first_line": 467,
+        "lines_sample": [
+          467
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:dodd:5400.11",
+      "label": "DoDD 5400.11",
+      "title": "DoDD 5400.11",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodd",
+      "source_reference_id": "dodd:5400.11",
+      "count": 1,
+      "lines_sample": [
+        299
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-1100-13",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-1100-13",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 5
     }
   ]
 }

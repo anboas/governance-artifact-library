@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,64 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 3,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "catalogued_node_count": 4,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 3,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
+    {
+      "id": "gap:executive-order:13676",
+      "label": "Executive Order 13676",
+      "title": "Executive Order 13676",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:13676",
+      "count": 2,
+      "lines_sample": [
+        19,
+        250
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodd-5136-01",
+      "label": "DoDD 5136.01",
+      "title": "DoDD 5136.01: Assistant Secretary of Defense for Health Affairs (ASD(HA))",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodd-5136-13",
+      "label": "DoDD 5136.13",
+      "title": "DoDD 5136.13: Defense Health Agency",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-6025-26",
       "label": "DoDI 6025.26",
@@ -83,20 +131,121 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-6440-02",
+      "label": "DoDI 6440.02",
+      "title": "DoDI 6440.02: Clinical Laboratory Improvement Program (CLIP)",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodd-5136-01->dodi-6025-26:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-5136-01",
+      "source_label": "DoDD 5136.01",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6025-26",
+      "target_label": "DoDI 6025.26",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5136.01",
+        "label": "DoDD 5136.01",
+        "first_line": 107,
+        "lines_sample": [
+          107
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodd-5136-13->dodi-6025-26:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-5136-13",
+      "source_label": "DoDD 5136.13",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6025-26",
+      "target_label": "DoDI 6025.26",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5136.13",
+        "label": "DoDD 5136.13",
+        "first_line": 138,
+        "lines_sample": [
+          138
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-6440-02->dodi-6025-26:references:resolved_reference",
+      "source_artifact_id": "dodi-6440-02",
+      "source_label": "DoDI 6440.02",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-6025-26",
+      "target_label": "DoDI 6025.26",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6440.02",
+        "label": "DoDI 6440.02",
+        "first_line": 179,
+        "lines_sample": [
+          179
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:executive-order:13676",
+      "label": "Executive Order 13676",
+      "title": "Executive Order 13676",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:13676",
+      "count": 2,
+      "lines_sample": [
+        19,
+        250
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-6025-26",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 3
     },
     {
       "id": "trace-downstream",

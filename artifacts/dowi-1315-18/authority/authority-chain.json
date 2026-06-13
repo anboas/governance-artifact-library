@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,76 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 4,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "catalogued_node_count": 5,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
+    {
+      "id": "dodi-1300-17",
+      "label": "DoDI 1300.17",
+      "title": "DoDI 1300.17: Religious Liberty in the Military Services",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5015-02",
+      "label": "DoDI 5015.02",
+      "title": "DoDI 5015.02: DoD Records Management Program",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-6400-06",
+      "label": "DoDI 6400.06",
+      "title": "DoDI 6400.06: DoD Coordinated Community Response to Domestic Abuse Involving DoD Military and Certain Affiliated Personnel",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-6495-02-sexual-assault-prevention-and-response-retaliation-respo",
+      "label": "DoDI 6495.02",
+      "title": "DoDI 6495.02: Sexual Assault Prevention and Response: Retaliation Response for Adult Sexual Assault Cases",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dowi-1315-18",
       "label": "DoWI 1315.18",
@@ -83,11 +143,102 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodi-1300-17->dowi-1315-18:references:resolved_reference",
+      "source_artifact_id": "dodi-1300-17",
+      "source_label": "DoDI 1300.17",
+      "source_lane": "dod",
+      "target_artifact_id": "dowi-1315-18",
+      "target_label": "DoWI 1315.18",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1300.17",
+        "label": "DoDI 1300.17",
+        "first_line": 195,
+        "lines_sample": [
+          195
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5015-02->dowi-1315-18:references:resolved_reference",
+      "source_artifact_id": "dodi-5015-02",
+      "source_label": "DoDI 5015.02",
+      "source_lane": "dod",
+      "target_artifact_id": "dowi-1315-18",
+      "target_label": "DoWI 1315.18",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5015.02",
+        "label": "DoDI 5015.02",
+        "first_line": 127,
+        "lines_sample": [
+          127
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-6400-06->dowi-1315-18:references:resolved_reference",
+      "source_artifact_id": "dodi-6400-06",
+      "source_label": "DoDI 6400.06",
+      "source_lane": "dod",
+      "target_artifact_id": "dowi-1315-18",
+      "target_label": "DoWI 1315.18",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6400.06",
+        "label": "DoDI 6400.06",
+        "first_line": 100,
+        "lines_sample": [
+          100,
+          165
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "dodi-6495-02-sexual-assault-prevention-and-response-retaliation-respo->dowi-1315-18:references:resolved_reference",
+      "source_artifact_id": "dodi-6495-02-sexual-assault-prevention-and-response-retaliation-respo",
+      "source_label": "DoDI 6495.02",
+      "source_lane": "dod",
+      "target_artifact_id": "dowi-1315-18",
+      "target_label": "DoWI 1315.18",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:6495.02",
+        "label": "DoDI 6495.02",
+        "first_line": 97,
+        "lines_sample": [
+          97,
+          200
+        ],
+        "count": 3
+      }
+    }
+  ],
   "downstream_edges": [],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
@@ -96,7 +247,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dowi-1315-18",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 4
     },
     {
       "id": "trace-downstream",

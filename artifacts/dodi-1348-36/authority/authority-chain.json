@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -62,15 +62,64 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "downstream_edge_count": 2,
+    "catalogued_node_count": 3,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 2,
     "inferred_edge_count": 0,
     "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:116-92",
+      "label": "Public Law 116-92",
+      "title": "Public Law 116-92",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:116-92",
+      "count": 1,
+      "lines_sample": [
+        95
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:11016",
+      "label": "Executive Order 11016",
+      "title": "Executive Order 11016",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:11016",
+      "count": 1,
+      "lines_sample": [
+        471
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodi-1300-29",
+      "label": "DoDI 1300.29",
+      "title": "DoDI 1300.29: Mortuary Affairs Program",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-1348-36",
       "label": "DoDI 1348.36",
@@ -83,13 +132,108 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "dodi-7250-13",
+      "label": "DoDI 7250.13",
+      "title": "DoDI 7250.13: Use of Appropriated Funds for Official Representation Purposes",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "downstream_edges": [
+    {
+      "id": "dodi-1348-36->dodi-1300-29:references:resolved_reference",
+      "source_artifact_id": "dodi-1348-36",
+      "source_label": "DoDI 1348.36",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-1300-29",
+      "target_label": "DoDI 1300.29",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1348.36",
+        "label": "DoDI 1348.36",
+        "first_line": 1597,
+        "lines_sample": [
+          1597
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-1348-36->dodi-7250-13:references:resolved_reference",
+      "source_artifact_id": "dodi-1348-36",
+      "source_label": "DoDI 1348.36",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-7250-13",
+      "target_label": "DoDI 7250.13",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:1348.36",
+        "label": "DoDI 1348.36",
+        "first_line": 585,
+        "lines_sample": [
+          585
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:executive-order:11016",
+      "label": "Executive Order 11016",
+      "title": "Executive Order 11016",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:11016",
+      "count": 1,
+      "lines_sample": [
+        471
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:116-92",
+      "label": "Public Law 116-92",
+      "title": "Public Law 116-92",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:116-92",
+      "count": 1,
+      "lines_sample": [
+        95
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
@@ -103,7 +247,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-1348-36",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 2
     }
   ]
 }

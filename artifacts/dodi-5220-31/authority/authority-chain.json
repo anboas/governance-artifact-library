@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,133 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "upstream_edge_count": 1,
+    "downstream_edge_count": 2,
+    "catalogued_node_count": 4,
+    "uncatalogued_gap_count": 4,
+    "evidence_backed_edge_count": 3,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:executive-order:10865",
+      "label": "Executive Order 10865",
+      "title": "Executive Order 10865",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:10865",
+      "count": 1,
+      "lines_sample": [
+        348
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:10909",
+      "label": "Executive Order 10909",
+      "title": "Executive Order 10909",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:10909",
+      "count": 1,
+      "lines_sample": [
+        349
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:12829",
+      "label": "Executive Order 12829",
+      "title": "Executive Order 12829",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:12829",
+      "count": 5,
+      "lines_sample": [
+        104,
+        117,
+        314,
+        329,
+        350
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:12866",
+      "label": "Executive Order 12866",
+      "title": "Executive Order 12866",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:12866",
+      "count": 1,
+      "lines_sample": [
+        351
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "dodd-5205-07",
+      "label": "DoDD 5205.07",
+      "title": "DoDD 5205.07: Special Access Program Policy",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-3020-41",
+      "label": "DoDI 3020.41",
+      "title": "DoDI 3020.41: Operational Contract Support Outside the United States",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5205-11",
+      "label": "DoDI 5205.11",
+      "title": "DoDI 5205.11: Management, Administration, and Oversight of DoD Special Access Programs",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-5220-31",
       "label": "DoDI 5220.31",
@@ -83,27 +200,169 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "upstream_edges": [
+    {
+      "id": "dodd-5205-07->dodi-5220-31:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-5205-07",
+      "source_label": "DoDD 5205.07",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5220-31",
+      "target_label": "DoDI 5220.31",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5205.07",
+        "label": "DoDD 5205.07",
+        "first_line": 140,
+        "lines_sample": [
+          140,
+          301
+        ],
+        "count": 2
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-5220-31->dodi-3020-41:references:resolved_reference",
+      "source_artifact_id": "dodi-5220-31",
+      "source_label": "DoDI 5220.31",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-3020-41",
+      "target_label": "DoDI 3020.41",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5220.31",
+        "label": "DoDI 5220.31",
+        "first_line": 461,
+        "lines_sample": [
+          461
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5220-31->dodi-5205-11:references:resolved_reference",
+      "source_artifact_id": "dodi-5220-31",
+      "source_label": "DoDI 5220.31",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5205-11",
+      "target_label": "DoDI 5205.11",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5220.31",
+        "label": "DoDI 5220.31",
+        "first_line": 1114,
+        "lines_sample": [
+          1114
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:executive-order:12829",
+      "label": "Executive Order 12829",
+      "title": "Executive Order 12829",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:12829",
+      "count": 5,
+      "lines_sample": [
+        104,
+        117,
+        314,
+        329,
+        350
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:10865",
+      "label": "Executive Order 10865",
+      "title": "Executive Order 10865",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:10865",
+      "count": 1,
+      "lines_sample": [
+        348
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:10909",
+      "label": "Executive Order 10909",
+      "title": "Executive Order 10909",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:10909",
+      "count": 1,
+      "lines_sample": [
+        349
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:12866",
+      "label": "Executive Order 12866",
+      "title": "Executive Order 12866",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:12866",
+      "count": 1,
+      "lines_sample": [
+        351
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-5220-31",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-5220-31",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 2
     }
   ]
 }

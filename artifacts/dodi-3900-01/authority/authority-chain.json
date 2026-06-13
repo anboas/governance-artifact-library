@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,76 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 4,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
+    "catalogued_node_count": 5,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
+    {
+      "id": "dodd-5105-84",
+      "label": "DoDD 5105.84",
+      "title": "DoDD 5105.84: Director of Cost Assessment and Program Evaluation",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodd-5111-10",
+      "label": "DoDD 5111.10",
+      "title": "DoDD 5111.10: Assistant Secretary of Defense for Special Operations and Low-Intensity Conflict",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodd-5118-03",
+      "label": "DoDD 5118.03",
+      "title": "DoDD 5118.03: Under Secretary of Defense (Comptroller)/Chief Financial Officer, Department of Defense",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodd-7045-14",
+      "label": "DoDD 7045.14",
+      "title": "DoDD 7045.14: The Planning, Programming, Budgeting, and Execution (PPBE) Process",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-3900-01",
       "label": "DoDI 3900.01",
@@ -83,11 +143,101 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "dodd-5105-84->dodi-3900-01:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-5105-84",
+      "source_label": "DoDD 5105.84",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-3900-01",
+      "target_label": "DoDI 3900.01",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5105.84",
+        "label": "DoDD 5105.84",
+        "first_line": 114,
+        "lines_sample": [
+          114
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodd-5111-10->dodi-3900-01:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-5111-10",
+      "source_label": "DoDD 5111.10",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-3900-01",
+      "target_label": "DoDI 3900.01",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5111.10",
+        "label": "DoDD 5111.10",
+        "first_line": 95,
+        "lines_sample": [
+          95
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodd-5118-03->dodi-3900-01:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-5118-03",
+      "source_label": "DoDD 5118.03",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-3900-01",
+      "target_label": "DoDI 3900.01",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5118.03",
+        "label": "DoDD 5118.03",
+        "first_line": 105,
+        "lines_sample": [
+          105
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodd-7045-14->dodi-3900-01:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-7045-14",
+      "source_label": "DoDD 7045.14",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-3900-01",
+      "target_label": "DoDI 3900.01",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:7045.14",
+        "label": "DoDD 7045.14",
+        "first_line": 239,
+        "lines_sample": [
+          239,
+          327
+        ],
+        "count": 2
+      }
+    }
+  ],
   "downstream_edges": [],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
@@ -96,7 +246,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-3900-01",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 4
     },
     {
       "id": "trace-downstream",

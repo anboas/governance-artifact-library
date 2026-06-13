@@ -15,7 +15,7 @@
     "issuing_authority": "Secretary of Defense",
     "source_system": "DoW/DoD Issuances",
     "mirror_status": "queued",
-    "parser_status": "not_started",
+    "parser_status": "parsed",
     "status": "current"
   },
   "lanes": [
@@ -61,16 +61,91 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 0,
+    "upstream_edge_count": 4,
+    "downstream_edge_count": 1,
+    "catalogued_node_count": 6,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 5,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
-    "implementation_path_status": "no_downstream_trace_yet"
+    "authority_path_status": "evidence_backed",
+    "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "dodd-3115-18",
+      "label": "DoDD 3115.18",
+      "title": "DoDD 3115.18: DoD Access to and Use of Publicly Available Information (PAI)",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodd-5105-74",
+      "label": "DoDD 5105.74",
+      "title": "DoDD 5105.74: Defense Media Activity (DMA)",
+      "artifact_type": "DoD Directive",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 70,
+      "family": "dod_directive",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5040-02",
+      "label": "DoDI 5040.02",
+      "title": "DoDI 5040.02: Visual Information (VI)",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5120-20",
+      "label": "DoDI 5120.20",
+      "title": "DoDI 5120.20: American Forces Network Program",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "dodi-5400-13",
+      "label": "DoDI 5400.13",
+      "title": "DoDI 5400.13: Public Affairs (PA) Operations",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "family": "dod_instruction",
+      "issuing_authority": "Secretary of Defense",
+      "source_system": "DoW/DoD Issuances",
+      "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "dodi-5400-14",
       "label": "DoDI 5400.14",
@@ -83,27 +158,174 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
-      "parser_status": "not_started",
+      "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "gap:dodi:5410.18",
+      "label": "DoDI 5410.18",
+      "title": "DoDI 5410.18",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodi",
+      "source_reference_id": "dodi:5410.18",
+      "count": 1,
+      "lines_sample": [
+        217
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [],
+  "upstream_edges": [
+    {
+      "id": "dodd-5105-74->dodi-5400-14:flows_down:resolved_reference",
+      "source_artifact_id": "dodd-5105-74",
+      "source_label": "DoDD 5105.74",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5400-14",
+      "target_label": "DoDI 5400.14",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:5105.74",
+        "label": "DoDD 5105.74",
+        "first_line": 180,
+        "lines_sample": [
+          180
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5040-02->dodi-5400-14:references:resolved_reference",
+      "source_artifact_id": "dodi-5040-02",
+      "source_label": "DoDI 5040.02",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5400-14",
+      "target_label": "DoDI 5400.14",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5040.02",
+        "label": "DoDI 5040.02",
+        "first_line": 168,
+        "lines_sample": [
+          168
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5120-20->dodi-5400-14:references:resolved_reference",
+      "source_artifact_id": "dodi-5120-20",
+      "source_label": "DoDI 5120.20",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5400-14",
+      "target_label": "DoDI 5400.14",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5120.20",
+        "label": "DoDI 5120.20",
+        "first_line": 183,
+        "lines_sample": [
+          183
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "dodi-5400-13->dodi-5400-14:references:resolved_reference",
+      "source_artifact_id": "dodi-5400-13",
+      "source_label": "DoDI 5400.13",
+      "source_lane": "dod",
+      "target_artifact_id": "dodi-5400-14",
+      "target_label": "DoDI 5400.14",
+      "target_lane": "dod",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5400.13",
+        "label": "DoDI 5400.13",
+        "first_line": 30,
+        "lines_sample": [
+          30
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "downstream_edges": [
+    {
+      "id": "dodi-5400-14->dodd-3115-18:references_upstream:resolved_reference",
+      "source_artifact_id": "dodi-5400-14",
+      "source_label": "DoDI 5400.14",
+      "source_lane": "dod",
+      "target_artifact_id": "dodd-3115-18",
+      "target_label": "DoDD 3115.18",
+      "target_lane": "dod",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5400.14",
+        "label": "DoDI 5400.14",
+        "first_line": 74,
+        "lines_sample": [
+          74
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "uncatalogued_authority_gaps": [
+    {
+      "id": "gap:dodi:5410.18",
+      "label": "DoDI 5410.18",
+      "title": "DoDI 5410.18",
+      "artifact_type": "DoD Instruction",
+      "lane": "dod",
+      "lane_label": "DoD",
+      "hierarchy_rank": 72,
+      "reference_family": "dodi",
+      "source_reference_id": "dodi:5410.18",
+      "count": 1,
+      "lines_sample": [
+        217
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    }
+  ],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-5400-14",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 4
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-5400-14",
       "direction": "downstream",
-      "edge_count": 0
+      "edge_count": 1
     }
   ]
 }
