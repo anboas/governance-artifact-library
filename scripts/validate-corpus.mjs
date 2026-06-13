@@ -116,13 +116,17 @@ assert.equal(existsSync(join(ROOT, "taxonomies", "governance-item-universe.json"
 assert.equal(existsSync(join(ROOT, "data", "reference-coverage-map.json")), true, "reference coverage map missing");
 assert.equal(existsSync(join(ROOT, "docs", "reference-coverage-map.md")), true, "reference coverage docs missing");
 assert.equal(existsSync(join(ROOT, "data", "reference-ingestion-queue.json")), true, "reference ingestion queue missing");
+assert.equal(existsSync(join(ROOT, "data", "reference-ingestion-queue-summary.json")), true, "reference ingestion queue summary missing");
 assert.equal(existsSync(join(ROOT, "docs", "reference-ingestion-queue.md")), true, "reference ingestion queue docs missing");
 
 const referenceCoverage = readJson("data/reference-coverage-map.json");
 const ingestionQueue = readJson("data/reference-ingestion-queue.json");
+const ingestionQueueSummary = readJson("data/reference-ingestion-queue-summary.json");
 assert.equal(Array.isArray(ingestionQueue.queue_items), true, "reference ingestion queue items must be an array");
 assert.equal(ingestionQueue.summary?.queue_item_count, referenceCoverage.uncatalogued_references.length, "reference ingestion queue should cover every uncatalogued reference");
 assert.equal(ingestionQueue.queue_items.length, referenceCoverage.uncatalogued_references.length, "reference ingestion queue item count mismatch");
+assert.deepEqual(ingestionQueueSummary.summary, ingestionQueue.summary, "reference ingestion queue summary should mirror queue counts");
+assert.ok(ingestionQueueSummary.top_queue_items?.length <= 50, "reference ingestion queue summary should stay compact");
 assert.ok(ingestionQueue.queue_items[0]?.queue_rank === 1, "reference ingestion queue should be ranked");
 assert.ok(ingestionQueue.queue_items.some(item => item.queue_priority === "P0"), "reference ingestion queue should identify P0 items");
 assert.ok(ingestionQueue.queue_items.every(item => item.official_source_candidates?.length), "reference ingestion queue items need official source candidates");

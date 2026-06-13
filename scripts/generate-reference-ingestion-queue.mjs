@@ -33,9 +33,17 @@ const queue = {
   family_summary: summarizeByFamily(items),
   queue_items: items,
 };
+const queueSummary = {
+  generated_at: queue.generated_at,
+  queue_version: QUEUE_VERSION,
+  summary: queue.summary,
+  family_summary: queue.family_summary,
+  top_queue_items: items.slice(0, 50),
+};
 
 let changed = 0;
 changed += writeIfChanged("data/reference-ingestion-queue.json", `${JSON.stringify(queue, null, 2)}\n`);
+changed += writeIfChanged("data/reference-ingestion-queue-summary.json", `${JSON.stringify(queueSummary, null, 2)}\n`);
 changed += writeIfChanged("docs/reference-ingestion-queue.md", renderMarkdown(queue));
 
 if (CHECK && changed) {
