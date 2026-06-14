@@ -6,11 +6,11 @@ Generated from `data/reference-ingestion-queue.json`, `manifest.json`, and `sour
 
 - Known candidates: 1683
 - Catalog matches: 16
-- Source discovered: 1662
-- Source candidates: 5
+- Source discovered: 1667
+- Source candidates: 0
 - Needs source discovery: 0
 - P0 candidates: 125
-- Exact or strong source paths: 1678
+- Exact or strong source paths: 1683
 - Official source systems represented: 13
 
 ## Candidate Families
@@ -22,7 +22,7 @@ Generated from `data/reference-ingestion-queue.json`, `manifest.json`, and `sour
 | usc | 1047 | 25 | 0 | 1047 | 0 | 0 | 1828 |
 | dodd | 76 | 12 | 4 | 72 | 0 | 0 | 356 |
 | dodi | 76 | 10 | 12 | 64 | 0 | 0 | 417 |
-| cfr | 34 | 0 | 0 | 29 | 5 | 0 | 50 |
+| cfr | 34 | 0 | 0 | 34 | 0 | 0 | 50 |
 | nist-sp | 26 | 0 | 0 | 26 | 0 | 0 | 78 |
 | dfars | 8 | 0 | 0 | 8 | 0 | 0 | 15 |
 | far | 8 | 0 | 0 | 8 | 0 | 0 | 11 |
@@ -40,7 +40,7 @@ Generated from `data/reference-ingestion-queue.json`, `manifest.json`, and `sour
 | National Archives | 197 | 27 | 0 | 197 | 0 | 0 | 837 |
 | U.S. Code | 1047 | 25 | 0 | 1047 | 0 | 0 | 1828 |
 | DoW/DoD Issuances | 152 | 22 | 16 | 136 | 0 | 0 | 773 |
-| eCFR | 34 | 0 | 0 | 29 | 5 | 0 | 50 |
+| eCFR | 34 | 0 | 0 | 34 | 0 | 0 | 50 |
 | NIST CSRC | 26 | 0 | 0 | 26 | 0 | 0 | 78 |
 | NIST NVL Publications | 26 | 0 | 0 | 26 | 0 | 0 | 78 |
 | Acquisition.gov | 16 | 0 | 0 | 16 | 0 | 0 | 26 |

@@ -197,7 +197,7 @@ function parseReference(item) {
   if (match) return { title: match[1], section: match[2] };
   match = key.match(/^nist-sp:([0-9a-z.-]+)$/i) || label.match(/NIST\s+SP\s+([0-9a-z.-]+)/i);
   if (match) return { series: match[1] };
-  match = key.match(/^cfr:(\d+)\s+cfr/i) || label.match(/^(\d+)\s+CFR/i);
+  match = key.match(/^cfr:(\d+)\s+c\.?f\.?r\.?/i) || label.match(/^(\d+)\s+C\.?F\.?R\.?/i);
   if (match) return { title: match[1] };
   return {};
 }
