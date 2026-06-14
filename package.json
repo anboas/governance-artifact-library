@@ -14,6 +14,7 @@
     "authority": "node scripts/generate-authority-chain.mjs",
     "index": "node scripts/generate-artifact-index.mjs",
     "acquisition": "node scripts/generate-source-acquisition-queue.mjs",
+    "analytics": "node scripts/generate-document-analytics-map.mjs",
     "packet:plan": "node scripts/plan-source-acquisition-packet.mjs",
     "queue:process": "node scripts/process-reference-ingestion-queue.mjs",
     "queue": "node scripts/generate-reference-ingestion-queue.mjs",
@@ -21,7 +22,7 @@
     "refresh:federal-register": "node scripts/refresh-federal-register-text.mjs",
     "seed": "node scripts/seed-corpus.mjs",
     "sources": "node scripts/generate-source-discovery-map.mjs",
-    "validate": "node scripts/validate-corpus.mjs && node scripts/generate-artifact-index.mjs --check && node scripts/generate-extractions.mjs --check && node scripts/generate-claims.mjs --check && node scripts/generate-reference-map.mjs --check && node scripts/generate-authority-chain.mjs --check && node scripts/generate-reference-ingestion-queue.mjs --check && node scripts/discover-governance-artifact-sources.mjs --check && node scripts/generate-coverage-map.mjs --check && node scripts/generate-source-discovery-map.mjs --check && node scripts/generate-source-acquisition-queue.mjs --check && node scripts/plan-source-acquisition-packet.mjs --packet data/source-acquisition-packet-example.json --out data/source-acquisition-capture-plan.example.json --check"
+    "validate": "node scripts/validate-corpus.mjs && node scripts/generate-artifact-index.mjs --check && node scripts/generate-extractions.mjs --check && node scripts/generate-claims.mjs --check && node scripts/generate-reference-map.mjs --check && node scripts/generate-authority-chain.mjs --check && node scripts/generate-reference-ingestion-queue.mjs --check && node scripts/discover-governance-artifact-sources.mjs --check && node scripts/generate-coverage-map.mjs --check && node scripts/generate-source-discovery-map.mjs --check && node scripts/generate-source-acquisition-queue.mjs --check && node scripts/generate-document-analytics-map.mjs --check && node scripts/plan-source-acquisition-packet.mjs --packet data/source-acquisition-packet-example.json --out data/source-acquisition-capture-plan.example.json --check"
   },
   "license": "CC0-1.0"
 }
