@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 6,
+    "upstream_edge_count": 7,
     "downstream_edge_count": 3,
-    "catalogued_node_count": 9,
-    "uncatalogued_gap_count": 9,
-    "evidence_backed_edge_count": 9,
+    "catalogued_node_count": 10,
+    "uncatalogued_gap_count": 8,
+    "evidence_backed_edge_count": 10,
     "inferred_edge_count": 0,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -90,22 +90,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:public-law:110-233",
+      "id": "public-law-110-233",
       "label": "Public Law 110-233",
-      "title": "Public Law 110-233",
+      "title": "Public Law 110-233: To prohibit discrimination on the basis of genetic information with respect to health May 21, 2008",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
       "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:110-233",
-      "count": 2,
-      "lines_sample": [
-        1060,
-        1120
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "appropriations",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:public-law:88-352",
@@ -502,6 +499,29 @@
         ],
         "count": 4
       }
+    },
+    {
+      "id": "public-law-110-233->dodi-1020-04:authorizes:resolved_reference",
+      "source_artifact_id": "public-law-110-233",
+      "source_label": "Public Law 110-233",
+      "source_lane": "law",
+      "target_artifact_id": "dodi-1020-04",
+      "target_label": "DoDI 1020.04",
+      "target_lane": "dod",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "public-law:110-233",
+        "label": "Public Law 110-233",
+        "first_line": 1060,
+        "lines_sample": [
+          1060,
+          1120
+        ],
+        "count": 2
+      }
     }
   ],
   "downstream_edges": [
@@ -587,24 +607,6 @@
       "lines_sample": [
         650,
         1118
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:public-law:110-233",
-      "label": "Public Law 110-233",
-      "title": "Public Law 110-233",
-      "artifact_type": "Public Law",
-      "lane": "law",
-      "lane_label": "Law",
-      "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:110-233",
-      "count": 2,
-      "lines_sample": [
-        1060,
-        1120
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -738,7 +740,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-1020-04",
       "direction": "upstream",
-      "edge_count": 6
+      "edge_count": 7
     },
     {
       "id": "trace-downstream",

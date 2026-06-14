@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 1,
-    "downstream_edge_count": 7,
-    "catalogued_node_count": 9,
+    "upstream_edge_count": 2,
+    "downstream_edge_count": 9,
+    "catalogued_node_count": 12,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 8,
+    "evidence_backed_edge_count": 11,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -132,6 +132,21 @@
       "status": "catalogued"
     },
     {
+      "id": "public-law-113-76",
+      "label": "Public Law 113-76",
+      "title": "Public Law 113-76: National Defense Authorization Act for Fiscal Year 1991 (Public",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "public-law-114-92",
       "label": "Public Law 114-92",
       "title": "Public Law 114-92: National Defense Authorization Act for Fiscal Year 2007 (Public",
@@ -150,6 +165,21 @@
       "id": "public-law-116-92",
       "label": "Public Law 116-92",
       "title": "Public Law 116-92: National Defense Authorization Act for",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-117-263",
+      "label": "Public Law 117-263",
+      "title": "Public Law 117-263: National Defense Authorization Act for Fiscal Year 2023’’",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
@@ -328,21 +358,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:50:3161",
+      "id": "usc-title-50-section-3161",
       "label": "50 U.S.C. 3161",
-      "title": "50 U.S.C. 3161",
+      "title": "50 U.S.C. 3161: Procedures",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:50:3161",
-      "count": 1,
-      "lines_sample": [
-        1673
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "national_security",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:50:3301",
@@ -507,6 +535,23 @@
       "priority": "high"
     },
     {
+      "id": "gap:executive-order:13467",
+      "label": "Executive Order 13467",
+      "title": "Executive Order 13467",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:13467",
+      "count": 1,
+      "lines_sample": [
+        1673
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
       "id": "gap:executive-order:13913",
       "label": "Executive Order 13913",
       "title": "Executive Order 13913",
@@ -545,6 +590,28 @@
         "first_line": 2510,
         "lines_sample": [
           2510
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-50-section-3161->usc-title-50-section-3024:references:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-3161",
+      "source_label": "50 U.S.C. 3161",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-50-section-3024",
+      "target_label": "50 U.S.C. 3024",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:3161",
+        "label": "50 U.S.C. 3161",
+        "first_line": 1673,
+        "lines_sample": [
+          1673
         ],
         "count": 1
       }
@@ -649,6 +716,29 @@
       }
     },
     {
+      "id": "usc-title-50-section-3024->public-law-113-76:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-3024",
+      "source_label": "50 U.S.C. 3024",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-113-76",
+      "target_label": "Public Law 113-76",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:3024",
+        "label": "50 U.S.C. 3024",
+        "first_line": 7600,
+        "lines_sample": [
+          7600,
+          7614
+        ],
+        "count": 2
+      }
+    },
+    {
       "id": "usc-title-50-section-3024->public-law-114-92:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-50-section-3024",
       "source_label": "50 U.S.C. 3024",
@@ -696,6 +786,39 @@
           71771
         ],
         "count": 7
+      }
+    },
+    {
+      "id": "usc-title-50-section-3024->public-law-117-263:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-3024",
+      "source_label": "50 U.S.C. 3024",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-117-263",
+      "target_label": "Public Law 117-263",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:3024",
+        "label": "50 U.S.C. 3024",
+        "first_line": 77089,
+        "lines_sample": [
+          77089,
+          77112,
+          78242,
+          80131,
+          80378,
+          80571,
+          80594,
+          80743,
+          80898,
+          81060,
+          81390,
+          81474
+        ],
+        "count": 16
       }
     },
     {
@@ -940,23 +1063,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:50:3161",
-      "label": "50 U.S.C. 3161",
-      "title": "50 U.S.C. 3161",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:50:3161",
-      "count": 1,
-      "lines_sample": [
-        1673
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:50:3334m",
       "label": "50 U.S.C. 3334m",
       "title": "50 U.S.C. 3334m",
@@ -1040,6 +1146,23 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:13467",
+      "label": "Executive Order 13467",
+      "title": "Executive Order 13467",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:13467",
+      "count": 1,
+      "lines_sample": [
+        1673
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -1048,14 +1171,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-50-section-3024",
       "direction": "upstream",
-      "edge_count": 1
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-50-section-3024",
       "direction": "downstream",
-      "edge_count": 7
+      "edge_count": 9
     }
   ]
 }

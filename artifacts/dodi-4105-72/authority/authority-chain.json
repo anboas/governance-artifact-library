@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 3,
+    "upstream_edge_count": 4,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 4,
-    "uncatalogued_gap_count": 7,
-    "evidence_backed_edge_count": 3,
+    "catalogued_node_count": 5,
+    "uncatalogued_gap_count": 6,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 0,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
@@ -140,21 +140,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:public-law:110-140",
+      "id": "public-law-110-140",
       "label": "Public Law 110-140",
-      "title": "Public Law 110-140",
+      "title": "Public Law 110-140: To move the United States toward greater energy independence and security, to",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
       "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:110-140",
-      "count": 1,
-      "lines_sample": [
-        941
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "appropriations",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:executive-order:13693",
@@ -320,6 +318,28 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "public-law-110-140->dodi-4105-72:authorizes:resolved_reference",
+      "source_artifact_id": "public-law-110-140",
+      "source_label": "Public Law 110-140",
+      "source_lane": "law",
+      "target_artifact_id": "dodi-4105-72",
+      "target_label": "DoDI 4105.72",
+      "target_lane": "dod",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "public-law:110-140",
+        "label": "Public Law 110-140",
+        "first_line": 941,
+        "lines_sample": [
+          941
+        ],
+        "count": 1
+      }
     }
   ],
   "downstream_edges": [],
@@ -427,23 +447,6 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
-    },
-    {
-      "id": "gap:public-law:110-140",
-      "label": "Public Law 110-140",
-      "title": "Public Law 110-140",
-      "artifact_type": "Public Law",
-      "lane": "law",
-      "lane_label": "Law",
-      "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:110-140",
-      "count": 1,
-      "lines_sample": [
-        941
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -452,7 +455,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-4105-72",
       "direction": "upstream",
-      "edge_count": 3
+      "edge_count": 4
     },
     {
       "id": "trace-downstream",

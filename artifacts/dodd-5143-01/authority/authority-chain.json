@@ -61,33 +61,30 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 22,
+    "upstream_edge_count": 23,
     "downstream_edge_count": 49,
-    "catalogued_node_count": 68,
-    "uncatalogued_gap_count": 15,
-    "evidence_backed_edge_count": 67,
+    "catalogued_node_count": 69,
+    "uncatalogued_gap_count": 14,
+    "evidence_backed_edge_count": 68,
     "inferred_edge_count": 4,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
     {
-      "id": "gap:public-law:108-458",
+      "id": "public-law-108-458",
       "label": "Public Law 108-458",
-      "title": "Public Law 108-458",
+      "title": "Public Law 108-458: Dec. 17, 2004 To reform the intelligence community and the intelligence and intelligence-related",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
       "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:108-458",
-      "count": 2,
-      "lines_sample": [
-        20,
-        853
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "appropriations",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "public-law-110-181",
@@ -1747,6 +1744,29 @@
       }
     },
     {
+      "id": "public-law-108-458->dodd-5143-01:authorizes:resolved_reference",
+      "source_artifact_id": "public-law-108-458",
+      "source_label": "Public Law 108-458",
+      "source_lane": "law",
+      "target_artifact_id": "dodd-5143-01",
+      "target_label": "DoDD 5143.01",
+      "target_lane": "dod",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "public-law:108-458",
+        "label": "Public Law 108-458",
+        "first_line": 20,
+        "lines_sample": [
+          20,
+          853
+        ],
+        "count": 2
+      }
+    },
+    {
       "id": "public-law-110-181->dodd-5143-01:authorizes:resolved_reference",
       "source_artifact_id": "public-law-110-181",
       "source_label": "Public Law 110-181",
@@ -2961,24 +2981,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:public-law:108-458",
-      "label": "Public Law 108-458",
-      "title": "Public Law 108-458",
-      "artifact_type": "Public Law",
-      "lane": "law",
-      "lane_label": "Law",
-      "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:108-458",
-      "count": 2,
-      "lines_sample": [
-        20,
-        853
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:dodd:5205.16",
       "label": "DoDD 5205.16",
       "title": "DoDD 5205.16",
@@ -3206,7 +3208,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodd-5143-01",
       "direction": "upstream",
-      "edge_count": 22
+      "edge_count": 23
     },
     {
       "id": "trace-downstream",

@@ -463,7 +463,10 @@ function htmlToText(html) {
 
 function hasMeaningfulSourceText(text) {
   const normalized = normalizeWhitespace(text);
-  return normalized.length > 100 && !/Request Access Due to aggressive automated scraping|complete the CAPTCHA|Access Denied|Cloudflare Ray ID/i.test(normalized);
+  return normalized.length > 100
+    && !/Request Access Due to aggressive automated scraping|complete the CAPTCHA|Access Denied|Cloudflare Ray ID/i.test(normalized)
+    && !/^Document not Found\b/i.test(normalized)
+    && !/\bDocument not found\b/i.test(normalized);
 }
 
 function countTerm(text, term) {

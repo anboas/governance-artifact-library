@@ -2,61 +2,121 @@
 
 Generated: 2026-06-12T23:25:00.000Z
 
-- Artifacts: 1194
-- Resolved reference edges: 5842
-- Uncatalogued references: 4486
-- Artifacts with uncatalogued references: 646
+- Artifacts: 1254
+- Resolved reference edges: 6818
+- Uncatalogued references: 6802
+- Artifacts with uncatalogued references: 677
 
 ## Artifact Summary
 
 | Artifact | Resolved | Uncatalogued | Targets |
 | --- | ---: | ---: | ---: |
-| pl-118-159-fy2025-ndaa | 23 | 413 | 23 |
-| pl-118-31-fy2024-ndaa | 22 | 561 | 22 |
+| pl-118-159-fy2025-ndaa | 49 | 387 | 49 |
+| pl-118-31-fy2024-ndaa | 51 | 532 | 51 |
 | public-law-104-191 | 0 | 62 | 0 |
-| public-law-107-347 | 0 | 23 | 0 |
-| public-law-109-163 | 13 | 159 | 13 |
-| public-law-110-181 | 14 | 216 | 14 |
-| public-law-110-417 | 13 | 108 | 13 |
-| public-law-111-84 | 13 | 204 | 13 |
-| public-law-112-239 | 17 | 356 | 17 |
-| public-law-112-81 | 18 | 196 | 18 |
-| public-law-113-291 | 20 | 363 | 20 |
-| public-law-113-66 | 17 | 225 | 17 |
-| public-law-114-328 | 22 | 480 | 22 |
-| public-law-114-92 | 21 | 201 | 21 |
-| public-law-115-232 | 24 | 471 | 24 |
-| public-law-115-91 | 20 | 343 | 20 |
-| public-law-116-283 | 24 | 927 | 24 |
-| public-law-116-92 | 25 | 635 | 25 |
+| public-law-104-201 | 24 | 271 | 24 |
+| public-law-105-261 | 23 | 198 | 23 |
+| public-law-106-398 | 20 | 123 | 20 |
+| public-law-106-65 | 27 | 277 | 27 |
+| public-law-107-314 | 20 | 147 | 20 |
+| public-law-107-347 | 2 | 21 | 2 |
+| public-law-108-136 | 25 | 327 | 25 |
+| public-law-108-375 | 21 | 148 | 21 |
+| public-law-108-458 | 8 | 178 | 8 |
+| public-law-109-163 | 32 | 140 | 32 |
+| public-law-109-364 | 25 | 134 | 25 |
+| public-law-110-140 | 2 | 290 | 2 |
+| public-law-110-181 | 36 | 194 | 36 |
+| public-law-110-233 | 0 | 25 | 0 |
+| public-law-110-417 | 25 | 96 | 25 |
+| public-law-111-383 | 39 | 167 | 39 |
+| public-law-111-84 | 35 | 182 | 35 |
+| public-law-112-239 | 41 | 332 | 41 |
+| public-law-112-81 | 41 | 173 | 41 |
+| public-law-113-291 | 45 | 338 | 45 |
+| public-law-113-66 | 37 | 205 | 37 |
+| public-law-113-76 | 20 | 584 | 20 |
+| public-law-114-328 | 53 | 449 | 53 |
+| public-law-114-92 | 41 | 181 | 41 |
+| public-law-115-232 | 53 | 442 | 53 |
+| public-law-115-91 | 48 | 315 | 48 |
+| public-law-116-283 | 58 | 893 | 58 |
+| public-law-116-92 | 60 | 600 | 60 |
+| public-law-117-263 | 49 | 988 | 49 |
+| public-law-117-81 | 42 | 549 | 42 |
 | usc-title-10-section-101 | 2 | 3 | 2 |
-| usc-title-10-section-1071 | 1 | 6 | 1 |
-| usc-title-10-section-111 | 9 | 58 | 9 |
-| usc-title-10-section-113 | 3 | 32 | 3 |
+| usc-title-10-section-10101 | 1 | 0 | 1 |
+| usc-title-10-section-1071 | 3 | 4 | 3 |
+| usc-title-10-section-1073 | 1 | 7 | 1 |
+| usc-title-10-section-1074 | 5 | 6 | 5 |
+| usc-title-10-section-1074g | 1 | 4 | 1 |
+| usc-title-10-section-111 | 18 | 49 | 18 |
+| usc-title-10-section-113 | 7 | 28 | 7 |
+| usc-title-10-section-121 | 1 | 0 | 1 |
+| usc-title-10-section-131 | 1 | 1 | 1 |
 | usc-title-10-section-1561 | 2 | 0 | 2 |
 | usc-title-10-section-1580 | 1 | 0 | 1 |
+| usc-title-10-section-1701 | 2 | 0 | 2 |
+| usc-title-10-section-1781 | 1 | 1 | 1 |
 | usc-title-10-section-221 | 4 | 3 | 4 |
 | usc-title-10-section-2222 | 1 | 1 | 1 |
-| usc-title-10-section-2224 | 3 | 18 | 3 |
+| usc-title-10-section-2223 | 3 | 9 | 3 |
+| usc-title-10-section-2224 | 5 | 16 | 5 |
 | usc-title-10-section-2271 | 2 | 0 | 2 |
+| usc-title-10-section-2281 | 1 | 1 | 1 |
 | usc-title-10-section-2430 | 1 | 0 | 1 |
-| usc-title-10-section-2687 | 6 | 9 | 6 |
-| usc-title-10-section-4001 | 6 | 21 | 6 |
-| usc-title-15-section-632 | 2 | 13 | 2 |
-| usc-title-15-section-637 | 2 | 24 | 2 |
-| usc-title-15-section-638 | 3 | 6 | 3 |
-| usc-title-15-section-644 | 3 | 12 | 3 |
-| usc-title-22-section-2151 | 2 | 42 | 2 |
+| usc-title-10-section-2461 | 1 | 3 | 1 |
+| usc-title-10-section-2687 | 7 | 8 | 7 |
+| usc-title-10-section-2701 | 5 | 25 | 5 |
+| usc-title-10-section-2802 | 3 | 2 | 3 |
+| usc-title-10-section-2821 | 1 | 0 | 1 |
+| usc-title-10-section-2871 | 4 | 2 | 4 |
+| usc-title-10-section-2911 | 2 | 8 | 2 |
+| usc-title-10-section-333 | 1 | 0 | 1 |
+| usc-title-10-section-4001 | 8 | 19 | 8 |
+| usc-title-10-section-801 | 5 | 6 | 5 |
+| usc-title-10-section-8013 | 1 | 1 | 1 |
+| usc-title-15-section-631 | 5 | 19 | 5 |
+| usc-title-15-section-632 | 4 | 11 | 4 |
+| usc-title-15-section-636 | 4 | 47 | 4 |
+| usc-title-15-section-637 | 3 | 23 | 3 |
+| usc-title-15-section-638 | 4 | 5 | 4 |
+| usc-title-15-section-644 | 4 | 11 | 4 |
+| usc-title-20-section-1001 | 1 | 42 | 1 |
+| usc-title-20-section-7703a | 1 | 1 | 1 |
+| usc-title-20-section-7703b | 2 | 0 | 2 |
+| usc-title-20-section-7713 | 1 | 3 | 1 |
+| usc-title-22-section-2151 | 8 | 36 | 8 |
 | usc-title-22-section-2651a | 3 | 10 | 3 |
+| usc-title-22-section-2656 | 2 | 14 | 2 |
+| usc-title-22-section-2751 | 4 | 29 | 4 |
+| usc-title-22-section-2778 | 7 | 24 | 7 |
+| usc-title-22-section-5952 | 1 | 0 | 1 |
+| usc-title-38-section-527 | 2 | 3 | 2 |
+| usc-title-42-section-2286 | 1 | 1 | 1 |
 | usc-title-42-section-4321 | 2 | 66 | 2 |
+| usc-title-42-section-9601 | 1 | 30 | 1 |
 | usc-title-42-section-9620 | 2 | 5 | 2 |
 | usc-title-44-section-3502 | 1 | 3 | 1 |
-| usc-title-50-section-1701 | 5 | 83 | 5 |
+| usc-title-49-section-40101 | 4 | 26 | 4 |
+| usc-title-5-section-3104 | 1 | 7 | 1 |
+| usc-title-50-section-1521 | 1 | 2 | 1 |
+| usc-title-50-section-1541 | 1 | 3 | 1 |
+| usc-title-50-section-1701 | 11 | 77 | 11 |
+| usc-title-50-section-1705 | 1 | 0 | 1 |
+| usc-title-50-section-2521 | 1 | 0 | 1 |
 | usc-title-50-section-3003 | 1 | 1 | 1 |
-| usc-title-50-section-3024 | 2 | 20 | 2 |
-| usc-title-8-section-1101 | 1 | 42 | 1 |
+| usc-title-50-section-3024 | 3 | 19 | 3 |
+| usc-title-50-section-3043 | 1 | 1 | 1 |
+| usc-title-50-section-3161 | 1 | 47 | 1 |
+| usc-title-50-section-4565 | 3 | 7 | 3 |
+| usc-title-50-section-98d | 2 | 2 | 2 |
+| usc-title-50-section-98h | 1 | 0 | 1 |
+| usc-title-8-section-1101 | 2 | 41 | 2 |
+| usc-title-8-section-1182 | 3 | 21 | 3 |
+| usc-title-8-section-1189 | 1 | 0 | 1 |
 | eo-14028-cybersecurity | 4 | 2 | 4 |
-| eo-14110-ai | 4 | 28 | 4 |
+| eo-14110-ai | 5 | 27 | 5 |
 | omb-m-21-31-cyber-logging | 2 | 2 | 2 |
 | omb-m-24-10-ai-governance | 3 | 7 | 3 |
 | far-part-39-acquisition-of-it | 0 | 6 | 0 |
@@ -68,7 +128,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodd-1000-33e | 2 | 0 | 2 |
 | dodd-1015-17e | 4 | 0 | 4 |
 | dodd-1015-5 | 0 | 7 | 0 |
-| dodd-1020-02e | 5 | 6 | 5 |
+| dodd-1020-02e | 6 | 5 | 6 |
 | dodd-1020-1 | 0 | 11 | 0 |
 | dodd-1100-4 | 0 | 0 | 0 |
 | dodd-1145-02e | 0 | 0 | 0 |
@@ -87,17 +147,17 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodd-1340-22 | 1 | 0 | 1 |
 | dodd-1342-20 | 12 | 6 | 12 |
 | dodd-1344-10 | 1 | 0 | 1 |
-| dodd-1400-35 | 2 | 2 | 2 |
+| dodd-1400-35 | 3 | 1 | 3 |
 | dodd-1400-5 | 0 | 0 | 0 |
 | dodd-1401-03 | 1 | 0 | 1 |
-| dodd-1403-1 | 0 | 4 | 0 |
+| dodd-1403-1 | 1 | 3 | 1 |
 | dodd-1418-05 | 1 | 6 | 1 |
 | dodd-1440-1 | 0 | 9 | 0 |
 | dodd-1442-11 | 1 | 0 | 1 |
 | dodd-2000-13 | 9 | 1 | 9 |
 | dodd-2005-02e | 0 | 1 | 0 |
 | dodd-2010-05 | 3 | 0 | 3 |
-| dodd-2010-09 | 2 | 5 | 2 |
+| dodd-2010-09 | 3 | 4 | 3 |
 | dodd-2060-01 | 1 | 0 | 1 |
 | dodd-2060-02 | 1 | 0 | 1 |
 | dodd-2065-01e | 0 | 0 | 0 |
@@ -115,7 +175,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodd-3020-04 | 1 | 6 | 1 |
 | dodd-3020-40 | 15 | 4 | 15 |
 | dodd-3020-44 | 1 | 0 | 1 |
-| dodd-3020-49 | 2 | 1 | 2 |
+| dodd-3020-49 | 3 | 0 | 3 |
 | dodd-3020-53 | 0 | 0 | 0 |
 | dodd-3025-13 | 1 | 2 | 1 |
 | dodd-3025-14 | 4 | 3 | 4 |
@@ -157,13 +217,13 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodd-4515-12 | 1 | 0 | 1 |
 | dodd-4650-05 | 1 | 0 | 1 |
 | dodd-4705-01e | 0 | 0 | 0 |
-| dodd-4715-11 | 1 | 4 | 1 |
+| dodd-4715-11 | 2 | 3 | 2 |
 | dodd-4715-12 | 2 | 0 | 2 |
 | dodd-4715-1e | 0 | 2 | 0 |
 | dodd-4715-21 | 6 | 3 | 6 |
 | dodd-5000-01-defense-acquisition-system | 10 | 0 | 10 |
 | dodd-5000-62 | 1 | 0 | 1 |
-| dodd-5000-71 | 1 | 1 | 1 |
+| dodd-5000-71 | 2 | 0 | 2 |
 | dodd-5010-42 | 1 | 0 | 1 |
 | dodd-5030-19 | 3 | 2 | 3 |
 | dodd-5100-01 | 43 | 3 | 43 |
@@ -198,16 +258,16 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodd-5105-36 | 8 | 5 | 8 |
 | dodd-5105-53 | 1 | 2 | 1 |
 | dodd-5105-55 | 1 | 7 | 1 |
-| dodd-5105-60 | 14 | 13 | 14 |
+| dodd-5105-60 | 15 | 12 | 15 |
 | dodd-5105-62 | 19 | 8 | 19 |
 | dodd-5105-64 | 7 | 2 | 7 |
 | dodd-5105-65 | 3 | 7 | 3 |
 | dodd-5105-68 | 17 | 6 | 17 |
-| dodd-5105-71 | 1 | 7 | 1 |
-| dodd-5105-72 | 7 | 3 | 7 |
+| dodd-5105-71 | 2 | 6 | 2 |
+| dodd-5105-72 | 9 | 1 | 9 |
 | dodd-5105-73 | 8 | 2 | 8 |
 | dodd-5105-74 | 12 | 7 | 12 |
-| dodd-5105-76 | 5 | 5 | 5 |
+| dodd-5105-76 | 6 | 4 | 6 |
 | dodd-5105-77 | 7 | 6 | 7 |
 | dodd-5105-79 | 1 | 0 | 1 |
 | dodd-5105-83 | 1 | 0 | 1 |
@@ -219,13 +279,13 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodd-5106-01 | 18 | 4 | 18 |
 | dodd-5106-04 | 12 | 0 | 12 |
 | dodd-5110-04 | 10 | 12 | 10 |
-| dodd-5111-01 | 21 | 9 | 21 |
+| dodd-5111-01 | 22 | 8 | 22 |
 | dodd-5111-03 | 3 | 1 | 3 |
 | dodd-5111-07 | 5 | 1 | 5 |
 | dodd-5111-10 | 19 | 8 | 19 |
 | dodd-5111-11 | 4 | 2 | 4 |
 | dodd-5111-12e | 2 | 0 | 2 |
-| dodd-5111-13 | 20 | 5 | 20 |
+| dodd-5111-13 | 21 | 4 | 21 |
 | dodd-5111-17 | 6 | 1 | 6 |
 | dodd-5111-21 | 1 | 0 | 1 |
 | dodd-5118-03 | 9 | 3 | 9 |
@@ -245,7 +305,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodd-5134-13 | 1 | 0 | 1 |
 | dodd-5134-15 | 1 | 0 | 1 |
 | dodd-5134-20e | 11 | 1 | 11 |
-| dodd-5135-02 | 11 | 21 | 11 |
+| dodd-5135-02 | 12 | 20 | 12 |
 | dodd-5135-03 | 1 | 1 | 1 |
 | dodd-5136-01 | 7 | 1 | 7 |
 | dodd-5136-13 | 20 | 4 | 20 |
@@ -253,7 +313,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodd-5137-03 | 3 | 1 | 3 |
 | dodd-5141-02 | 6 | 3 | 6 |
 | dodd-5142-01 | 1 | 0 | 1 |
-| dodd-5143-01 | 23 | 15 | 23 |
+| dodd-5143-01 | 24 | 14 | 24 |
 | dodd-5143-02 | 4 | 0 | 4 |
 | dodd-5144-02 | 6 | 5 | 6 |
 | dodd-5145-01 | 18 | 5 | 18 |
@@ -269,7 +329,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodd-5200-27 | 1 | 0 | 1 |
 | dodd-5200-31e | 7 | 0 | 7 |
 | dodd-5200-37 | 7 | 1 | 7 |
-| dodd-5200-41e | 1 | 5 | 1 |
+| dodd-5200-41e | 3 | 3 | 3 |
 | dodd-5200-43 | 9 | 4 | 9 |
 | dodd-5200-47e | 6 | 0 | 6 |
 | dodd-5205-02e | 1 | 0 | 1 |
@@ -287,7 +347,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodd-5220-6 | 0 | 3 | 0 |
 | dodd-5230-11 | 0 | 0 | 0 |
 | dodd-5230-20 | 1 | 2 | 1 |
-| dodd-5230-25 | 1 | 10 | 1 |
+| dodd-5230-25 | 3 | 8 | 3 |
 | dodd-5240-01 | 16 | 6 | 16 |
 | dodd-5240-02 | 9 | 3 | 9 |
 | dodd-5240-06 | 9 | 0 | 9 |
@@ -311,7 +371,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodd-5535-09 | 1 | 0 | 1 |
 | dodd-5535-4 | 0 | 0 | 0 |
 | dodd-6000-6 | 0 | 4 | 0 |
-| dodd-6010-04 | 3 | 1 | 3 |
+| dodd-6010-04 | 4 | 0 | 4 |
 | dodd-6025-21e | 1 | 0 | 1 |
 | dodd-6055-09e | 0 | 0 | 0 |
 | dodd-6070-01 | 1 | 0 | 1 |
@@ -320,7 +380,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodd-6420-02 | 3 | 1 | 3 |
 | dodd-6485-02e | 1 | 1 | 1 |
 | dodd-6490-02e | 3 | 1 | 3 |
-| dodd-6495-01 | 11 | 3 | 11 |
+| dodd-6495-01 | 12 | 2 | 12 |
 | dodd-7045-14 | 3 | 0 | 3 |
 | dodd-7045-20 | 8 | 0 | 8 |
 | dodd-7050-06 | 3 | 1 | 3 |
@@ -361,7 +421,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-1000-13 | 4 | 1 | 4 |
 | dodi-1000-15 | 2 | 3 | 2 |
 | dodi-1000-17 | 6 | 2 | 6 |
-| dodi-1000-25 | 8 | 4 | 8 |
+| dodi-1000-25 | 9 | 3 | 9 |
 | dodi-1000-27 | 1 | 1 | 1 |
 | dodi-1000-28 | 1 | 0 | 1 |
 | dodi-1000-30 | 1 | 2 | 1 |
@@ -382,12 +442,12 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-1015-10 | 17 | 5 | 17 |
 | dodi-1015-11 | 13 | 2 | 13 |
 | dodi-1015-13 | 1 | 1 | 1 |
-| dodi-1015-15 | 1 | 2 | 1 |
+| dodi-1015-15 | 2 | 1 | 2 |
 | dodi-1015-16 | 22 | 3 | 22 |
-| dodi-1015-18 | 3 | 1 | 3 |
-| dodi-1020-03 | 10 | 6 | 10 |
-| dodi-1020-04 | 7 | 9 | 7 |
-| dodi-1020-06 | 7 | 4 | 7 |
+| dodi-1015-18 | 4 | 0 | 4 |
+| dodi-1020-03 | 12 | 4 | 12 |
+| dodi-1020-04 | 8 | 8 | 8 |
+| dodi-1020-06 | 8 | 3 | 8 |
 | dodi-1025-02 | 1 | 0 | 1 |
 | dodi-1025-07 | 2 | 0 | 2 |
 | dodi-1025-08 | 1 | 2 | 1 |
@@ -397,7 +457,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-1030-02 | 9 | 1 | 9 |
 | dodi-1030-03 | 1 | 0 | 1 |
 | dodi-1030-04 | 6 | 0 | 6 |
-| dodi-1035-01 | 4 | 2 | 4 |
+| dodi-1035-01 | 5 | 1 | 5 |
 | dodi-1100-06 | 1 | 1 | 1 |
 | dodi-1100-13 | 2 | 1 | 2 |
 | dodi-1100-16 | 1 | 3 | 1 |
@@ -416,8 +476,8 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-1205-13 | 1 | 0 | 1 |
 | dodi-1205-18 | 1 | 0 | 1 |
 | dodi-1205-22 | 4 | 0 | 4 |
-| dodi-1215-06 | 10 | 23 | 10 |
-| dodi-1215-07 | 7 | 1 | 7 |
+| dodi-1215-06 | 11 | 22 | 11 |
+| dodi-1215-07 | 8 | 0 | 8 |
 | dodi-1215-08 | 1 | 4 | 1 |
 | dodi-1215-13 | 7 | 5 | 7 |
 | dodi-1215-15 | 2 | 0 | 2 |
@@ -438,13 +498,13 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-1300-06 | 1 | 0 | 1 |
 | dodi-1300-15 | 3 | 1 | 3 |
 | dodi-1300-17 | 2 | 0 | 2 |
-| dodi-1300-18 | 4 | 5 | 4 |
+| dodi-1300-18 | 7 | 2 | 7 |
 | dodi-1300-19 | 1 | 0 | 1 |
 | dodi-1300-24 | 3 | 4 | 3 |
 | dodi-1300-25 | 2 | 2 | 2 |
 | dodi-1300-26 | 3 | 1 | 3 |
 | dodi-1300-27 | 3 | 0 | 3 |
-| dodi-1300-29 | 14 | 4 | 14 |
+| dodi-1300-29 | 16 | 2 | 16 |
 | dodi-1300-31 | 3 | 3 | 3 |
 | dodi-1304-02 | 3 | 6 | 3 |
 | dodi-1304-12e | 0 | 0 | 0 |
@@ -467,7 +527,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-1312-03 | 4 | 0 | 4 |
 | dodi-1315-09 | 1 | 0 | 1 |
 | dodi-1315-15 | 1 | 1 | 1 |
-| dodi-1315-19 | 6 | 3 | 6 |
+| dodi-1315-19 | 7 | 2 | 7 |
 | dodi-1315-20 | 3 | 0 | 3 |
 | dodi-1320-04 | 4 | 1 | 4 |
 | dodi-1320-08 | 2 | 0 | 2 |
@@ -475,13 +535,13 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-1320-13 | 2 | 1 | 2 |
 | dodi-1320-14 | 7 | 0 | 7 |
 | dodi-1320-15 | 1 | 0 | 1 |
-| dodi-1322-06 | 8 | 1 | 8 |
+| dodi-1322-06 | 9 | 0 | 9 |
 | dodi-1322-10 | 1 | 0 | 1 |
 | dodi-1322-12 | 1 | 0 | 1 |
 | dodi-1322-16 | 1 | 2 | 1 |
 | dodi-1322-17 | 5 | 1 | 5 |
 | dodi-1322-19 | 4 | 0 | 4 |
-| dodi-1322-22 | 12 | 4 | 12 |
+| dodi-1322-22 | 13 | 3 | 13 |
 | dodi-1322-23 | 0 | 0 | 0 |
 | dodi-1322-24 | 12 | 0 | 12 |
 | dodi-1322-25 | 4 | 6 | 4 |
@@ -498,14 +558,14 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-1325-02 | 1 | 0 | 1 |
 | dodi-1325-06 | 3 | 1 | 3 |
 | dodi-1325-07 | 9 | 1 | 9 |
-| dodi-1327-06 | 13 | 3 | 13 |
+| dodi-1327-06 | 14 | 2 | 14 |
 | dodi-1327-07 | 2 | 0 | 2 |
 | dodi-1330-04 | 1 | 0 | 1 |
 | dodi-1330-09 | 0 | 3 | 0 |
 | dodi-1330-17 | 13 | 2 | 13 |
 | dodi-1330-21 | 1 | 9 | 1 |
 | dodi-1332-14 | 18 | 0 | 18 |
-| dodi-1332-18 | 8 | 2 | 8 |
+| dodi-1332-18 | 9 | 1 | 9 |
 | dodi-1332-20 | 1 | 0 | 1 |
 | dodi-1332-28 | 1 | 2 | 1 |
 | dodi-1332-29 | 4 | 0 | 4 |
@@ -583,7 +643,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-2000-12 | 22 | 0 | 22 |
 | dodi-2000-20 | 1 | 0 | 1 |
 | dodi-2000-21 | 8 | 1 | 8 |
-| dodi-2000-25 | 4 | 3 | 4 |
+| dodi-2000-25 | 5 | 2 | 5 |
 | dodi-2000-26 | 12 | 4 | 12 |
 | dodi-2000-28 | 1 | 0 | 1 |
 | dodi-2000-30 | 16 | 2 | 16 |
@@ -604,7 +664,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-3000-07 | 15 | 1 | 15 |
 | dodi-3000-11 | 3 | 2 | 3 |
 | dodi-3000-12 | 7 | 0 | 7 |
-| dodi-3000-14 | 11 | 9 | 11 |
+| dodi-3000-14 | 15 | 5 | 15 |
 | dodi-3000-15 | 1 | 0 | 1 |
 | dodi-3000-17 | 12 | 1 | 12 |
 | dodi-3000-18 | 0 | 0 | 0 |
@@ -620,7 +680,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-3020-45 | 19 | 3 | 19 |
 | dodi-3020-47 | 1 | 0 | 1 |
 | dodi-3020-48 | 1 | 0 | 1 |
-| dodi-3020-50 | 6 | 2 | 6 |
+| dodi-3020-50 | 7 | 1 | 7 |
 | dodi-3020-51 | 6 | 0 | 6 |
 | dodi-3020-52 | 5 | 2 | 5 |
 | dodi-3025-16 | 4 | 0 | 4 |
@@ -640,13 +700,13 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-3115-08 | 2 | 1 | 2 |
 | dodi-3115-10e | 1 | 0 | 1 |
 | dodi-3115-11 | 8 | 0 | 8 |
-| dodi-3115-12 | 3 | 3 | 3 |
+| dodi-3115-12 | 4 | 2 | 4 |
 | dodi-3115-14 | 2 | 0 | 2 |
 | dodi-3115-15 | 9 | 2 | 9 |
 | dodi-3115-17 | 2 | 0 | 2 |
 | dodi-3115-19 | 1 | 0 | 1 |
 | dodi-3150-02 | 13 | 0 | 13 |
-| dodi-3150-09 | 7 | 2 | 7 |
+| dodi-3150-09 | 8 | 1 | 8 |
 | dodi-3150-10 | 7 | 1 | 7 |
 | dodi-3200-12 | 10 | 4 | 10 |
 | dodi-3200-16 | 3 | 1 | 3 |
@@ -673,7 +733,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-3305-09 | 2 | 0 | 2 |
 | dodi-3305-10 | 2 | 0 | 2 |
 | dodi-3305-11 | 6 | 0 | 6 |
-| dodi-3305-12 | 10 | 2 | 10 |
+| dodi-3305-12 | 11 | 1 | 11 |
 | dodi-3305-13 | 7 | 1 | 7 |
 | dodi-3305-14 | 7 | 0 | 7 |
 | dodi-3305-15 | 4 | 0 | 4 |
@@ -685,12 +745,12 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-3741-01 | 4 | 0 | 4 |
 | dodi-3900-01 | 5 | 0 | 5 |
 | dodi-3901-01 | 5 | 0 | 5 |
-| dodi-3902-01 | 2 | 1 | 2 |
+| dodi-3902-01 | 3 | 0 | 3 |
 | dodi-3902-02 | 2 | 1 | 2 |
 | dodi-4000-19 | 11 | 0 | 11 |
 | dodi-4105-67 | 14 | 2 | 14 |
 | dodi-4105-70 | 1 | 0 | 1 |
-| dodi-4105-72 | 4 | 7 | 4 |
+| dodi-4105-72 | 5 | 6 | 5 |
 | dodi-4120-11 | 6 | 1 | 6 |
 | dodi-4120-15 | 1 | 0 | 1 |
 | dodi-4120-24 | 3 | 1 | 3 |
@@ -713,7 +773,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-4151-22 | 5 | 2 | 5 |
 | dodi-4151-24 | 3 | 0 | 3 |
 | dodi-4151-26 | 1 | 0 | 1 |
-| dodi-4160-28 | 4 | 2 | 4 |
+| dodi-4160-28 | 5 | 1 | 5 |
 | dodi-4161-02 | 2 | 0 | 2 |
 | dodi-4165-03 | 1 | 1 | 1 |
 | dodi-4165-14 | 10 | 1 | 10 |
@@ -722,18 +782,18 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-4165-63 | 1 | 0 | 1 |
 | dodi-4165-65 | 1 | 0 | 1 |
 | dodi-4165-68 | 1 | 3 | 1 |
-| dodi-4165-69 | 5 | 2 | 5 |
+| dodi-4165-69 | 6 | 1 | 6 |
 | dodi-4165-70 | 2 | 4 | 2 |
 | dodi-4165-71 | 1 | 2 | 1 |
 | dodi-4165-72 | 2 | 3 | 2 |
 | dodi-4165-73 | 36 | 4 | 36 |
-| dodi-4170-11 | 1 | 4 | 1 |
+| dodi-4170-11 | 2 | 3 | 2 |
 | dodi-4180-02 | 4 | 0 | 4 |
 | dodi-4205-01 | 4 | 1 | 4 |
 | dodi-4245-14 | 2 | 1 | 2 |
 | dodi-4245-15 | 1 | 1 | 1 |
-| dodi-4245-16 | 1 | 1 | 1 |
-| dodi-4500-36 | 5 | 5 | 5 |
+| dodi-4245-16 | 2 | 0 | 2 |
+| dodi-4500-36 | 6 | 4 | 6 |
 | dodi-4500-43 | 10 | 1 | 10 |
 | dodi-4500-53 | 1 | 0 | 1 |
 | dodi-4500-56 | 8 | 0 | 8 |
@@ -760,7 +820,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-4715-05 | 3 | 3 | 3 |
 | dodi-4715-06 | 6 | 3 | 6 |
 | dodi-4715-07 | 4 | 5 | 4 |
-| dodi-4715-08 | 2 | 4 | 2 |
+| dodi-4715-08 | 3 | 3 | 3 |
 | dodi-4715-13 | 6 | 3 | 6 |
 | dodi-4715-14 | 3 | 0 | 3 |
 | dodi-4715-15 | 1 | 0 | 1 |
@@ -769,7 +829,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-4715-18 | 2 | 0 | 2 |
 | dodi-4715-19 | 7 | 0 | 7 |
 | dodi-4715-22 | 5 | 2 | 5 |
-| dodi-4715-23 | 5 | 5 | 5 |
+| dodi-4715-23 | 7 | 3 | 7 |
 | dodi-4715-24 | 6 | 0 | 6 |
 | dodi-4715-27 | 1 | 1 | 1 |
 | dodi-4715-28 | 7 | 1 | 7 |
@@ -788,13 +848,13 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-5000-72 | 2 | 0 | 2 |
 | dodi-5000-73 | 1 | 0 | 1 |
 | dodi-5000-74 | 6 | 3 | 6 |
-| dodi-5000-75 | 4 | 1 | 4 |
+| dodi-5000-75 | 5 | 0 | 5 |
 | dodi-5000-76 | 8 | 3 | 8 |
 | dodi-5000-77 | 11 | 5 | 11 |
 | dodi-5000-79 | 7 | 0 | 7 |
 | dodi-5000-80 | 11 | 1 | 11 |
-| dodi-5000-81 | 4 | 4 | 4 |
-| dodi-5000-82 | 33 | 3 | 33 |
+| dodi-5000-81 | 5 | 3 | 5 |
+| dodi-5000-82 | 34 | 2 | 34 |
 | dodi-5000-83 | 19 | 3 | 19 |
 | dodi-5000-84 | 2 | 0 | 2 |
 | dodi-5000-85 | 17 | 5 | 17 |
@@ -809,7 +869,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-5000-94 | 3 | 0 | 3 |
 | dodi-5000-95 | 13 | 1 | 13 |
 | dodi-5000-97 | 15 | 1 | 15 |
-| dodi-5000-98 | 14 | 3 | 14 |
+| dodi-5000-98 | 15 | 2 | 15 |
 | dodi-5010-40 | 3 | 3 | 3 |
 | dodi-5010-41 | 1 | 0 | 1 |
 | dodi-5010-43 | 2 | 1 | 2 |
@@ -840,7 +900,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-5105-58 | 6 | 2 | 6 |
 | dodi-5111-16 | 1 | 0 | 1 |
 | dodi-5111-19 | 2 | 3 | 2 |
-| dodi-5111-20 | 4 | 1 | 4 |
+| dodi-5111-20 | 5 | 0 | 5 |
 | dodi-5120-08 | 1 | 0 | 1 |
 | dodi-5120-20 | 1 | 0 | 1 |
 | dodi-5120-39 | 2 | 3 | 2 |
@@ -862,7 +922,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-5158-06 | 2 | 0 | 2 |
 | dodi-5160-24 | 1 | 0 | 1 |
 | dodi-5160-48 | 4 | 0 | 4 |
-| dodi-5160-68 | 3 | 1 | 3 |
+| dodi-5160-68 | 4 | 0 | 4 |
 | dodi-5160-70 | 11 | 4 | 11 |
 | dodi-5200-01 | 18 | 6 | 18 |
 | dodi-5200-02 | 9 | 8 | 9 |
@@ -905,7 +965,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-5240-22 | 9 | 1 | 9 |
 | dodi-5240-26 | 12 | 2 | 12 |
 | dodi-5240-27 | 4 | 0 | 4 |
-| dodi-5305-05 | 4 | 2 | 4 |
+| dodi-5305-05 | 5 | 1 | 5 |
 | dodi-5330-03 | 1 | 0 | 1 |
 | dodi-5335-04 | 0 | 0 | 0 |
 | dodi-5400-04 | 4 | 0 | 4 |
@@ -920,9 +980,9 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-5405-02 | 1 | 0 | 1 |
 | dodi-5405-03 | 2 | 1 | 2 |
 | dodi-5410-01 | 9 | 0 | 9 |
-| dodi-5410-16 | 1 | 1 | 1 |
+| dodi-5410-16 | 2 | 0 | 2 |
 | dodi-5410-17 | 1 | 1 | 1 |
-| dodi-5410-19-community-outreach-activities-ceremonial-musical-and-aer | 9 | 3 | 9 |
+| dodi-5410-19-community-outreach-activities-ceremonial-musical-and-aer | 10 | 2 | 10 |
 | dodi-5410-19-community-outreach-activities-honors-to-national-symbols | 2 | 0 | 2 |
 | dodi-5410-19-community-outreach-activities-osd-outreach-programs-spea | 19 | 2 | 19 |
 | dodi-5410-19-community-outreach-activities-policy-overview-and-evalua | 12 | 2 | 12 |
@@ -931,16 +991,16 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-5500-17 | 1 | 1 | 1 |
 | dodi-5505-02 | 9 | 0 | 9 |
 | dodi-5505-03 | 6 | 1 | 6 |
-| dodi-5505-07 | 2 | 1 | 2 |
+| dodi-5505-07 | 3 | 0 | 3 |
 | dodi-5505-09 | 5 | 1 | 5 |
-| dodi-5505-10 | 4 | 3 | 4 |
+| dodi-5505-10 | 5 | 2 | 5 |
 | dodi-5505-11 | 2 | 0 | 2 |
 | dodi-5505-12 | 1 | 1 | 1 |
-| dodi-5505-14 | 6 | 1 | 6 |
+| dodi-5505-14 | 7 | 0 | 7 |
 | dodi-5505-15 | 5 | 1 | 5 |
 | dodi-5505-16 | 3 | 0 | 3 |
 | dodi-5505-17 | 6 | 2 | 6 |
-| dodi-5505-18 | 22 | 2 | 22 |
+| dodi-5505-18 | 23 | 1 | 23 |
 | dodi-5505-19 | 8 | 0 | 8 |
 | dodi-5505-20 | 1 | 1 | 1 |
 | dodi-5505-21 | 6 | 0 | 6 |
@@ -960,14 +1020,14 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-5525-18 | 3 | 3 | 3 |
 | dodi-5525-19 | 9 | 3 | 9 |
 | dodi-5525-20 | 5 | 2 | 5 |
-| dodi-5530-03 | 8 | 2 | 8 |
+| dodi-5530-03 | 9 | 1 | 9 |
 | dodi-5535-08 | 12 | 3 | 12 |
-| dodi-5535-10 | 1 | 2 | 1 |
+| dodi-5535-10 | 3 | 0 | 3 |
 | dodi-5535-11 | 4 | 2 | 4 |
 | dodi-5535-12 | 7 | 2 | 7 |
 | dodi-5545-02 | 1 | 0 | 1 |
 | dodi-5545-04 | 1 | 0 | 1 |
-| dodi-6000-08 | 8 | 2 | 8 |
+| dodi-6000-08 | 9 | 1 | 9 |
 | dodi-6000-11 | 9 | 1 | 9 |
 | dodi-6000-13 | 5 | 4 | 5 |
 | dodi-6000-14 | 2 | 1 | 2 |
@@ -984,7 +1044,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-6025-13 | 2 | 3 | 2 |
 | dodi-6025-18 | 2 | 0 | 2 |
 | dodi-6025-20 | 5 | 2 | 5 |
-| dodi-6025-22 | 2 | 2 | 2 |
+| dodi-6025-22 | 3 | 1 | 3 |
 | dodi-6025-23 | 4 | 2 | 4 |
 | dodi-6025-24 | 1 | 0 | 1 |
 | dodi-6025-25 | 1 | 0 | 1 |
@@ -1018,7 +1078,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-6130-06 | 3 | 2 | 3 |
 | dodi-6200-02 | 1 | 2 | 1 |
 | dodi-6200-03 | 16 | 7 | 16 |
-| dodi-6200-05 | 9 | 5 | 9 |
+| dodi-6200-05 | 10 | 4 | 10 |
 | dodi-6200-06 | 7 | 4 | 7 |
 | dodi-6200-07 | 2 | 0 | 2 |
 | dodi-6205-02 | 10 | 2 | 10 |
@@ -1026,11 +1086,11 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-6400-01 | 10 | 1 | 10 |
 | dodi-6400-03 | 3 | 1 | 3 |
 | dodi-6400-05 | 3 | 0 | 3 |
-| dodi-6400-06 | 25 | 4 | 25 |
+| dodi-6400-06 | 26 | 3 | 26 |
 | dodi-6400-07 | 1 | 1 | 1 |
 | dodi-6400-09 | 16 | 2 | 16 |
 | dodi-6400-10 | 15 | 2 | 15 |
-| dodi-6400-11 | 17 | 4 | 17 |
+| dodi-6400-11 | 18 | 3 | 18 |
 | dodi-6420-01 | 2 | 1 | 2 |
 | dodi-6430-02 | 10 | 1 | 10 |
 | dodi-6440-02 | 1 | 1 | 1 |
@@ -1038,20 +1098,20 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-6465-03 | 4 | 1 | 4 |
 | dodi-6480-04 | 14 | 0 | 14 |
 | dodi-6485-01 | 5 | 3 | 5 |
-| dodi-6490-03 | 19 | 2 | 19 |
+| dodi-6490-03 | 20 | 1 | 20 |
 | dodi-6490-04 | 2 | 0 | 2 |
 | dodi-6490-05 | 1 | 0 | 1 |
 | dodi-6490-06 | 3 | 3 | 3 |
 | dodi-6490-07 | 4 | 1 | 4 |
-| dodi-6490-08 | 4 | 1 | 4 |
+| dodi-6490-08 | 5 | 0 | 5 |
 | dodi-6490-09 | 1 | 0 | 1 |
 | dodi-6490-10 | 1 | 2 | 1 |
 | dodi-6490-11 | 1 | 0 | 1 |
-| dodi-6490-13 | 5 | 1 | 5 |
+| dodi-6490-13 | 6 | 0 | 6 |
 | dodi-6490-15 | 1 | 0 | 1 |
-| dodi-6490-16 | 12 | 3 | 12 |
+| dodi-6490-16 | 13 | 2 | 13 |
 | dodi-6495-02-sexual-assault-prevention-and-response-education-and-tra | 12 | 1 | 12 |
-| dodi-6495-02-sexual-assault-prevention-and-response-program-procedure | 35 | 11 | 35 |
+| dodi-6495-02-sexual-assault-prevention-and-response-program-procedure | 41 | 5 | 41 |
 | dodi-6495-02-sexual-assault-prevention-and-response-retaliation-respo | 9 | 1 | 9 |
 | dodi-6495-03 | 10 | 1 | 10 |
 | dodi-7000-14 | 1 | 0 | 1 |
@@ -1062,7 +1122,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-7050-05 | 7 | 0 | 7 |
 | dodi-7050-09 | 3 | 1 | 3 |
 | dodi-7060-06 | 2 | 0 | 2 |
-| dodi-7230-08 | 2 | 3 | 2 |
+| dodi-7230-08 | 3 | 2 | 3 |
 | dodi-7250-13 | 3 | 0 | 3 |
 | dodi-7600-02 | 11 | 0 | 11 |
 | dodi-7600-06 | 8 | 0 | 8 |
@@ -1096,7 +1156,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-8310-01 | 19 | 4 | 19 |
 | dodi-8320-02 | 10 | 4 | 10 |
 | dodi-8320-03 | 16 | 1 | 16 |
-| dodi-8320-04 | 7 | 2 | 7 |
+| dodi-8320-04 | 9 | 0 | 9 |
 | dodi-8320-05 | 6 | 3 | 6 |
 | dodi-8320-06 | 4 | 1 | 4 |
 | dodi-8320-07 | 12 | 5 | 12 |
@@ -1108,7 +1168,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-8420-02 | 22 | 2 | 22 |
 | dodi-8440-01 | 3 | 1 | 3 |
 | dodi-8440-02 | 1 | 0 | 1 |
-| dodi-8500-01 | 35 | 22 | 35 |
+| dodi-8500-01 | 37 | 20 | 37 |
 | dodi-8510-01-risk-management-framework | 12 | 8 | 12 |
 | dodi-8520-02 | 9 | 3 | 9 |
 | dodi-8520-03 | 6 | 5 | 6 |
@@ -1210,84 +1270,84 @@ Generated: 2026-06-12T23:25:00.000Z
 
 | Reference | Family | Occurrences | Sources | Priority |
 | --- | --- | ---: | ---: | --- |
-| 10 U.S.C. 2302 | usc | 247 | 16 | high |
-| Executive Order 12333 | executive-order | 133 | 83 | high |
-| 10 U.S.C. 2358 | usc | 126 | 16 | high |
+| 10 U.S.C. 2302 | usc | 317 | 27 | high |
+| 10 USC 2358 | usc | 171 | 25 | high |
+| Executive Order 12333 | executive-order | 143 | 86 | high |
 | DoDI 5000.02 | dodi | 92 | 61 | high |
+| 10 U.S.C. 2431 | usc | 90 | 23 | high |
+| Executive Order 13526 | executive-order | 87 | 44 | high |
 | DoDI 5025.01 | dodi | 79 | 47 | high |
-| Executive Order 13526 | executive-order | 68 | 43 | high |
-| 10 USC 2431 | usc | 62 | 14 | high |
+| 10 USC 2304 | usc | 63 | 21 | high |
+| 50 U.S.C. 403 | usc | 62 | 9 | high |
 | DoDD 5400.11 | dodd | 57 | 48 | high |
+| 41 U.S.C. 403 | usc | 52 | 19 | high |
+| 5 U.S.C. 3109 | usc | 51 | 1 | high |
 | Executive Order 14168 | executive-order | 50 | 36 | high |
-| 10 USC 2304 | usc | 49 | 15 | high |
 | DoDD 4500.56 | dodd | 47 | 2 | high |
-| 10 U.S.C. 801 | usc | 42 | 13 | high |
+| 10 U.S.C. 2501 | usc | 45 | 21 | high |
+| Executive Order 12968 | executive-order | 44 | 29 | high |
+| 20 U.S.C. 7703 | usc | 43 | 13 | high |
+| 42 U.S.C. 1973ff | usc | 40 | 5 | high |
 | DoDI 6940.16 | dodi | 39 | 1 | high |
-| 10 U.S.C. 2911 | usc | 37 | 13 | high |
-| 22 U.S.C. 2778 | usc | 37 | 13 | high |
-| Executive Order 12968 | executive-order | 37 | 28 | high |
-| 10 U.S.C. 1073 | usc | 36 | 13 | high |
-| 10 U.S.C. 2223a | usc | 34 | 9 | high |
-| 50 U.S.C. 1521 | usc | 33 | 17 | high |
-| 22 U.S.C. 2751 | usc | 32 | 17 | high |
-| 44 USC 3501 | usc | 32 | 2 | high |
-| 20 U.S.C. 7703b | usc | 31 | 16 | high |
-| 42 U.S.C. 1973ff | usc | 31 | 1 | high |
-| 50 U.S.C. 1541 | usc | 31 | 12 | high |
-| 50 U.S.C. 3161 | usc | 31 | 8 | high |
-| Executive Order 13467 | executive-order | 31 | 15 | high |
-| 10 USC 10101 | usc | 30 | 10 | high |
-| 10 USC 131 | usc | 30 | 7 | high |
-| 15 U.S.C. 631 | usc | 30 | 8 | high |
+| 10 U.S.C. 2223a | usc | 36 | 11 | high |
+| 42 U.S.C. 2011 | usc | 36 | 18 | high |
+| 42 U.S.C. 2121 | usc | 36 | 9 | high |
+| 22 U.S.C. 2321j | usc | 35 | 14 | high |
+| Executive Order 13467 | executive-order | 35 | 17 | high |
+| 44 USC 3501 | usc | 34 | 4 | high |
+| 50 U.S.C. 401a | usc | 33 | 15 | high |
+| 10 USC 2306a | usc | 31 | 15 | high |
 | DoDD 5134.01 | dodd | 30 | 27 | high |
-| 41 U.S.C. 403 | usc | 29 | 10 | high |
-| 20 U.S.C. 1001 | usc | 28 | 11 | high |
+| 2 U.S.C. 661a | usc | 29 | 21 | high |
+| 42 USC 300gg | usc | 29 | 2 | high |
+| 31 U.S.C. 5311 | usc | 28 | 3 | high |
+| 42 U.S.C. 6901 | usc | 28 | 19 | high |
+| Executive Order 10450 | executive-order | 28 | 20 | high |
 | Executive Order 14173 | executive-order | 28 | 21 | high |
-| 10 U.S.C. 2501 | usc | 26 | 13 | high |
+| 10 U.S.C. 2301 | usc | 27 | 11 | high |
+| 10 U.S.C. 2330 | usc | 27 | 12 | high |
+| 10 U.S.C. 4811 | usc | 27 | 6 | high |
+| 10 USC 1564 | usc | 27 | 11 | high |
+| 46 USC 53101 | usc | 27 | 10 | high |
+| 10 U.S.C. 2371 | usc | 26 | 17 | high |
 | 16 U.S.C. 1274 | usc | 26 | 1 | high |
-| 8 U.S.C. 1182 | usc | 26 | 10 | high |
+| 50 U.S.C. 2501 | usc | 26 | 13 | high |
+| 50 U.S.C. 401 | usc | 26 | 10 | high |
 | DoDD 5205.16 | dodd | 26 | 23 | high |
-| Executive Order 10450 | executive-order | 25 | 19 | high |
-| 10 U.S.C. 1701 | usc | 24 | 11 | high |
-| 10 U.S.C. 2301 | usc | 24 | 8 | high |
-| 10 U.S.C. 2701 | usc | 24 | 10 | high |
-| 42 U.S.C. 2286 | usc | 23 | 16 | high |
-| 50 U.S.C. 401a | usc | 23 | 8 | high |
-| 50 U.S.C. 4565 | usc | 23 | 6 | high |
-| 42 U.S.C. 9601 | usc | 22 | 12 | high |
-| 10 U.S.C. 2306a | usc | 21 | 8 | high |
-| 10 U.S.C. 7291 | usc | 21 | 9 | high |
-| 10 USC 1074 | usc | 21 | 14 | high |
-| 22 USC 2656 | usc | 21 | 9 | high |
-| 42 USC 300gg | usc | 21 | 1 | high |
-| 50 U.S.C. 98d | usc | 21 | 9 | high |
-| 10 USC 2223 | usc | 20 | 11 | high |
-| 10 USC 8013 | usc | 20 | 6 | high |
-| 42 U.S.C. 1320a | usc | 20 | 1 | high |
-| 50 U.S.C. 1705 | usc | 20 | 5 | high |
-| 50 U.S.C. 2501 | usc | 20 | 11 | high |
+| 22 U.S.C. 3301 | usc | 25 | 9 | high |
+| 10 U.S.C. 7291 | usc | 24 | 12 | high |
+| 50 USC 1801 | usc | 24 | 10 | high |
+| Executive Order 12829 | executive-order | 24 | 9 | high |
+| 10 USC 2241 | usc | 23 | 8 | high |
+| 42 U.S.C. 1320a | usc | 23 | 2 | high |
+| 50 U.S.C. 435 | usc | 23 | 8 | high |
+| 10 U.S.C. 2001 | usc | 22 | 9 | high |
+| 10 U.S.C. 4571 | usc | 22 | 7 | high |
+| 10 USC 115 | usc | 22 | 11 | high |
+| 10 USC 503 | usc | 22 | 15 | high |
+| 50 U.S.C. 3091 | usc | 22 | 11 | high |
+| 50 USC 2362 | usc | 22 | 17 | high |
+| 8 U.S.C. 1151 | usc | 22 | 5 | high |
+| EXECUTIVE ORDER 13556 | executive-order | 22 | 14 | high |
+| 10 U.S.C. 1448 | usc | 21 | 11 | high |
+| 10 USC 168 | usc | 21 | 9 | high |
+| 16 U.S.C. 1131 | usc | 21 | 4 | high |
+| 22 USC 2761 | usc | 21 | 14 | high |
+| 50 U.S.C. 404a | usc | 21 | 11 | high |
+| 6 U.S.C. 101 | usc | 21 | 8 | high |
+| 10 U.S.C. 3201 | usc | 20 | 6 | high |
+| 10 U.S.C. 391 | usc | 20 | 8 | high |
+| 15 U.S.C. 648 | usc | 20 | 10 | high |
+| 22 USC 1928 | usc | 20 | 10 | high |
+| 42 U.S.C. 1962d | usc | 20 | 3 | high |
+| 42 U.S.C. 5121 | usc | 20 | 9 | high |
+| 43 U.S.C. 1701 | usc | 20 | 7 | high |
+| 5 USC 2302 | usc | 20 | 4 | high |
+| 50 USC 2301 | usc | 20 | 12 | high |
 | DoDI 1342.22 | dodi | 20 | 14 | high |
-| 10 U.S.C. 2281 | usc | 19 | 9 | high |
-| 10 USC 168 | usc | 19 | 7 | high |
-| 20 U.S.C. 7713 | usc | 19 | 17 | high |
-| 38 U.S.C. 527 | usc | 19 | 5 | high |
-| 5 USC 2302 | usc | 19 | 3 | high |
-| 50 U.S.C. 98h | usc | 19 | 13 | high |
-| 8 U.S.C. 1189 | usc | 19 | 8 | high |
-| DoDD 3020.26 | dodd | 19 | 15 | high |
-| Public Law 102-484 | public-law | 19 | 13 | high |
-| Public Law 109-364 | public-law | 19 | 10 | high |
-| 10 U.S.C. 1781 | usc | 18 | 8 | high |
-| 10 U.S.C. 333 | usc | 18 | 7 | high |
-| 10 USC 2282 | usc | 18 | 8 | high |
-| 10 USC 2802 | usc | 18 | 6 | high |
-| 31 U.S.C. 5311 | usc | 18 | 1 | high |
-| 49 U.S.C. 40101 | usc | 18 | 8 | high |
-| 5 U.S.C. 3104 | usc | 18 | 8 | high |
-| Public Law 117-263 | public-law | 18 | 10 | high |
-| 10 U.S.C. 2461 | usc | 17 | 6 | high |
-| 10 U.S.C. 2821 | usc | 17 | 5 | high |
-| 10 U.S.C. 2871 | usc | 17 | 6 | high |
-| 10 USC 121 | usc | 17 | 6 | high |
-| 10 USC 2330 | usc | 17 | 10 | high |
+| 10 USC 2661 | usc | 19 | 8 | high |
+| 10 USC 394 | usc | 19 | 8 | high |
+| 14 USC 504 | usc | 19 | 3 | high |
+| 37 U.S.C. 1009 | usc | 19 | 16 | high |
+| 42 U.S.C. 1320d | usc | 19 | 8 | high |
 

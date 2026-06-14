@@ -4,24 +4,24 @@ Generated from artifact records and per-artifact `analytics/document-metrics.jso
 
 ## Summary
 
-- Artifacts: 1194
-- Metrics sidecars: 1194
-- Extracted words: 11,506,454
-- Approximate pages: 23,068
-- Reading workload: 51,736 minutes at 225 wpm
-- Median read time: 16 minutes
-- Median complexity: 78
+- Artifacts: 1254
+- Metrics sidecars: 1254
+- Extracted words: 15,650,437
+- Approximate pages: 31,356
+- Reading workload: 70,184 minutes at 225 wpm
+- Median read time: 17 minutes
+- Median complexity: 79
 
 ## Reading Time Buckets
 
 | Bucket | Artifacts | Words | Reading Minutes | Avg Complexity |
 | --- | ---: | ---: | ---: | ---: |
 | No Text | 40 | 0 | 0 | 0 |
-| Under 5 min | 97 | 29,470 | 191 | 42 |
-| 5-15 min | 459 | 987,349 | 4,614 | 77 |
-| 15-45 min | 453 | 2,532,070 | 11,494 | 79 |
-| 45-120 min | 110 | 1,692,456 | 7,577 | 82 |
-| 2+ hours | 35 | 6,265,109 | 27,860 | 88 |
+| Under 5 min | 98 | 29,805 | 193 | 42 |
+| 5-15 min | 470 | 1,009,357 | 4,718 | 77 |
+| 15-45 min | 468 | 2,635,301 | 11,962 | 79 |
+| 45-120 min | 125 | 1,968,807 | 8,812 | 82 |
+| 2+ hours | 53 | 10,007,167 | 44,499 | 89 |
 
 ## Complexity Buckets
 
@@ -29,18 +29,18 @@ Generated from artifact records and per-artifact `analytics/document-metrics.jso
 | --- | ---: | ---: | ---: | ---: |
 | No Text | 40 | 0 | 0 | 0 |
 | Quick Scan | 54 | 3,051 | 54 | 25 |
-| Moderate | 6 | 2,734 | 15 | 47 |
-| Dense | 139 | 401,318 | 1,851 | 60 |
-| Complex | 406 | 2,159,984 | 9,801 | 72 |
-| Extreme | 549 | 8,939,367 | 40,015 | 88 |
+| Moderate | 7 | 3,069 | 17 | 46 |
+| Dense | 142 | 405,982 | 1,873 | 60 |
+| Complex | 411 | 2,181,685 | 9,900 | 72 |
+| Extreme | 600 | 13,056,650 | 58,340 | 88 |
 
 ## Top Source Systems
 
 | Source | Artifacts | Words | Reading Minutes | Avg Complexity |
 | --- | ---: | ---: | ---: | ---: |
 | DoW/DoD Issuances | 1137 | 5,176,757 | 23,580 | 75 |
-| U.S. Code | 26 | 722,976 | 3,225 | 83 |
-| GovInfo | 18 | 5,528,994 | 24,581 | 90 |
+| U.S. Code | 71 | 1,349,945 | 6,035 | 84 |
+| GovInfo | 33 | 9,046,008 | 40,219 | 90 |
 | Department of the Navy Issuances | 3 | 0 | 0 | 0 |
 | Federal Register | 2 | 28,060 | 126 | 91 |
 | White House | 2 | 23,100 | 104 | 90 |
@@ -55,7 +55,7 @@ Generated from artifact records and per-artifact `analytics/document-metrics.jso
 
 | Age | Artifacts | Words | Reading Minutes | Avg Complexity |
 | --- | ---: | ---: | ---: | ---: |
-| No Date | 44 | 5,460,951 | 24,291 | 86 |
+| No Date | 104 | 9,604,934 | 42,739 | 86 |
 | Under 1 year | 19 | 155,724 | 701 | 73 |
 | 1-3 years | 116 | 1,393,556 | 6,251 | 74 |
 | 3-5 years | 124 | 686,158 | 3,113 | 74 |

@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 3,
+    "upstream_edge_count": 4,
     "downstream_edge_count": 1,
-    "catalogued_node_count": 5,
-    "uncatalogued_gap_count": 3,
-    "evidence_backed_edge_count": 4,
+    "catalogued_node_count": 6,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 5,
     "inferred_edge_count": 0,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -87,21 +87,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:50:4565",
-      "label": "50 U.S.C. § 4565",
-      "title": "50 U.S.C. § 4565",
+      "id": "usc-title-50-section-4565",
+      "label": "50 U.S.C. 4565",
+      "title": "50 U.S.C. 4565: Authority to review certain mergers, acquisitions, and takeovers",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:50:4565",
-      "count": 1,
-      "lines_sample": [
-        935
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "national_security",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:executive-order:11858",
@@ -268,6 +266,28 @@
         ],
         "count": 2
       }
+    },
+    {
+      "id": "usc-title-50-section-4565->dodi-2000-25:flows_down:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-4565",
+      "source_label": "50 U.S.C. 4565",
+      "source_lane": "statute",
+      "target_artifact_id": "dodi-2000-25",
+      "target_label": "DoDI 2000.25",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:4565",
+        "label": "50 U.S.C. § 4565",
+        "first_line": 935,
+        "lines_sample": [
+          935
+        ],
+        "count": 1
+      }
     }
   ],
   "downstream_edges": [
@@ -330,23 +350,6 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
-    },
-    {
-      "id": "gap:usc:50:4565",
-      "label": "50 U.S.C. § 4565",
-      "title": "50 U.S.C. § 4565",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:50:4565",
-      "count": 1,
-      "lines_sample": [
-        935
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -355,7 +358,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-2000-25",
       "direction": "upstream",
-      "edge_count": 3
+      "edge_count": 4
     },
     {
       "id": "trace-downstream",

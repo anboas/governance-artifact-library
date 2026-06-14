@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 1,
+    "upstream_edge_count": 2,
     "downstream_edge_count": 9,
-    "catalogued_node_count": 11,
-    "uncatalogued_gap_count": 5,
-    "evidence_backed_edge_count": 6,
+    "catalogued_node_count": 12,
+    "uncatalogued_gap_count": 4,
+    "evidence_backed_edge_count": 7,
     "inferred_edge_count": 4,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -138,22 +138,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:22:2778",
+      "id": "usc-title-22-section-2778",
       "label": "22 U.S.C. 2778",
-      "title": "22 U.S.C. 2778",
+      "title": "22 U.S.C. 2778: Control of arms exports and imports",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:22:2778",
-      "count": 2,
-      "lines_sample": [
-        183,
-        560
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "foreign_affairs",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:42:2011",
@@ -344,6 +341,29 @@
           521
         ],
         "count": 1
+      }
+    },
+    {
+      "id": "usc-title-22-section-2778->dodd-2010-09:flows_down:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-2778",
+      "source_label": "22 U.S.C. 2778",
+      "source_lane": "statute",
+      "target_artifact_id": "dodd-2010-09",
+      "target_label": "DoDD 2010.09",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:2778",
+        "label": "22 U.S.C. 2778",
+        "first_line": 183,
+        "lines_sample": [
+          183,
+          560
+        ],
+        "count": 2
       }
     }
   ],
@@ -553,24 +573,6 @@
   ],
   "uncatalogued_authority_gaps": [
     {
-      "id": "gap:usc:22:2778",
-      "label": "22 U.S.C. 2778",
-      "title": "22 U.S.C. 2778",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:22:2778",
-      "count": 2,
-      "lines_sample": [
-        183,
-        560
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:10:2306c",
       "label": "10 U.S.C. 2306c",
       "title": "10 U.S.C. 2306c",
@@ -645,7 +647,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodd-2010-09",
       "direction": "upstream",
-      "edge_count": 1
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",

@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 10,
-    "catalogued_node_count": 11,
+    "downstream_edge_count": 12,
+    "catalogued_node_count": 13,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 10,
+    "evidence_backed_edge_count": 12,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -105,6 +105,21 @@
       "id": "public-law-110-417",
       "label": "Public Law 110-417",
       "title": "Public Law 110-417: National Defense Authorization Act for Fiscal Year 2009’’",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-111-383",
+      "label": "Public Law 111-383",
+      "title": "Public Law 111-383: National Defense Authorization Act for Fiscal Year 2011’’",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
@@ -222,6 +237,21 @@
       "status": "catalogued"
     },
     {
+      "id": "public-law-117-81",
+      "label": "Public Law 117-81",
+      "title": "Public Law 117-81: National Defense Authorization Act for Fiscal Year",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "usc-title-10-section-1580",
       "label": "10 U.S.C. 1580",
       "title": "10 U.S.C. 1580: Emergency essential employees: designation",
@@ -307,6 +337,31 @@
           19093
         ],
         "count": 2
+      }
+    },
+    {
+      "id": "usc-title-10-section-1580->public-law-111-383:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-1580",
+      "source_label": "10 U.S.C. 1580",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-111-383",
+      "target_label": "Public Law 111-383",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:1580",
+        "label": "10 U.S.C. 1580",
+        "first_line": 10909,
+        "lines_sample": [
+          10909,
+          15836,
+          16388,
+          16391
+        ],
+        "count": 4
       }
     },
     {
@@ -485,6 +540,32 @@
         ],
         "count": 3
       }
+    },
+    {
+      "id": "usc-title-10-section-1580->public-law-117-81:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-1580",
+      "source_label": "10 U.S.C. 1580",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-117-81",
+      "target_label": "Public Law 117-81",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:1580",
+        "label": "10 U.S.C. 1580",
+        "first_line": 3380,
+        "lines_sample": [
+          3380,
+          27780,
+          27817,
+          28016,
+          41591
+        ],
+        "count": 5
+      }
     }
   ],
   "uncatalogued_authority_gaps": [],
@@ -501,7 +582,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-10-section-1580",
       "direction": "downstream",
-      "edge_count": 10
+      "edge_count": 12
     }
   ]
 }

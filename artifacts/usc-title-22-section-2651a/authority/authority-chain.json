@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 2,
-    "downstream_edge_count": 4,
-    "catalogued_node_count": 7,
+    "downstream_edge_count": 7,
+    "catalogued_node_count": 10,
     "uncatalogued_gap_count": 10,
-    "evidence_backed_edge_count": 6,
+    "evidence_backed_edge_count": 9,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -102,9 +102,54 @@
       "status": "catalogued"
     },
     {
+      "id": "public-law-108-458",
+      "label": "Public Law 108-458",
+      "title": "Public Law 108-458: Dec. 17, 2004 To reform the intelligence community and the intelligence and intelligence-related",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "appropriations",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "public-law-110-417",
       "label": "Public Law 110-417",
       "title": "Public Law 110-417: National Defense Authorization Act for Fiscal Year 2009’’",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-117-263",
+      "label": "Public Law 117-263",
+      "title": "Public Law 117-263: National Defense Authorization Act for Fiscal Year 2023’’",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-117-81",
+      "label": "Public Law 117-81",
+      "title": "Public Law 117-81: National Defense Authorization Act for Fiscal Year",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
@@ -454,6 +499,29 @@
       }
     },
     {
+      "id": "usc-title-22-section-2651a->public-law-108-458:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-2651a",
+      "source_label": "22 U.S.C. 2651a",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-108-458",
+      "target_label": "Public Law 108-458",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:2651a",
+        "label": "22 U.S.C. 2651a",
+        "first_line": 9638,
+        "lines_sample": [
+          9638,
+          9708
+        ],
+        "count": 2
+      }
+    },
+    {
       "id": "usc-title-22-section-2651a->public-law-110-417:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-22-section-2651a",
       "source_label": "22 U.S.C. 2651a",
@@ -473,6 +541,57 @@
           19990
         ],
         "count": 1
+      }
+    },
+    {
+      "id": "usc-title-22-section-2651a->public-law-117-263:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-2651a",
+      "source_label": "22 U.S.C. 2651a",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-117-263",
+      "target_label": "Public Law 117-263",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:2651a",
+        "label": "22 U.S.C. 2651a",
+        "first_line": 100501,
+        "lines_sample": [
+          100501,
+          100591,
+          101614,
+          103134,
+          104614
+        ],
+        "count": 5
+      }
+    },
+    {
+      "id": "usc-title-22-section-2651a->public-law-117-81:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-2651a",
+      "source_label": "22 U.S.C. 2651a",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-117-81",
+      "target_label": "Public Law 117-81",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:2651a",
+        "label": "22 U.S.C. 2651a",
+        "first_line": 55591,
+        "lines_sample": [
+          55591,
+          55723,
+          55792,
+          57290
+        ],
+        "count": 4
       }
     },
     {
@@ -685,7 +804,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-22-section-2651a",
       "direction": "downstream",
-      "edge_count": 4
+      "edge_count": 7
     }
   ]
 }
