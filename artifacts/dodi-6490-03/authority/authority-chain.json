@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 17,
+    "upstream_edge_count": 18,
     "downstream_edge_count": 17,
-    "catalogued_node_count": 29,
-    "uncatalogued_gap_count": 3,
-    "evidence_backed_edge_count": 34,
+    "catalogued_node_count": 30,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 35,
     "inferred_edge_count": 0,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -90,22 +90,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:public-law:114-92",
+      "id": "public-law-114-92",
       "label": "Public Law 114-92",
-      "title": "Public Law 114-92",
+      "title": "Public Law 114-92: National Defense Authorization Act for Fiscal Year 2007 (Public",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
       "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:114-92",
-      "count": 2,
-      "lines_sample": [
-        667,
-        1168
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodd-3000-10",
@@ -950,6 +947,29 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "public-law-114-92->dodi-6490-03:authorizes:resolved_reference",
+      "source_artifact_id": "public-law-114-92",
+      "source_label": "Public Law 114-92",
+      "source_lane": "law",
+      "target_artifact_id": "dodi-6490-03",
+      "target_label": "DoDI 6490.03",
+      "target_lane": "dod",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "public-law:114-92",
+        "label": "Public Law 114-92",
+        "first_line": 667,
+        "lines_sample": [
+          667,
+          1168
+        ],
+        "count": 2
+      }
     }
   ],
   "downstream_edges": [
@@ -1373,24 +1393,6 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
-    },
-    {
-      "id": "gap:public-law:114-92",
-      "label": "Public Law 114-92",
-      "title": "Public Law 114-92",
-      "artifact_type": "Public Law",
-      "lane": "law",
-      "lane_label": "Law",
-      "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:114-92",
-      "count": 2,
-      "lines_sample": [
-        667,
-        1168
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -1399,7 +1401,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-6490-03",
       "direction": "upstream",
-      "edge_count": 17
+      "edge_count": 18
     },
     {
       "id": "trace-downstream",

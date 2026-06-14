@@ -61,33 +61,30 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 9,
+    "upstream_edge_count": 10,
     "downstream_edge_count": 56,
-    "catalogued_node_count": 65,
-    "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 60,
+    "catalogued_node_count": 66,
+    "uncatalogued_gap_count": 0,
+    "evidence_backed_edge_count": 61,
     "inferred_edge_count": 5,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
     {
-      "id": "gap:public-law:116-283",
+      "id": "public-law-116-283",
       "label": "Public Law 116-283",
-      "title": "Public Law 116-283",
+      "title": "Public Law 116-283: National Defense Authorization Act for Fiscal Year 2021’’",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
       "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:116-283",
-      "count": 2,
-      "lines_sample": [
-        404,
-        737
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "far-part-39-acquisition-of-it",
@@ -1261,6 +1258,29 @@
           "acquisition"
         ],
         "shared_family": ""
+      }
+    },
+    {
+      "id": "public-law-116-283->dodd-5000-01-defense-acquisition-system:authorizes:resolved_reference",
+      "source_artifact_id": "public-law-116-283",
+      "source_label": "Public Law 116-283",
+      "source_lane": "law",
+      "target_artifact_id": "dodd-5000-01-defense-acquisition-system",
+      "target_label": "DoDD 5000.01",
+      "target_lane": "dod",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "public-law:116-283",
+        "label": "Public Law 116-283",
+        "first_line": 404,
+        "lines_sample": [
+          404,
+          737
+        ],
+        "count": 2
       }
     }
   ],
@@ -2520,33 +2540,14 @@
       }
     }
   ],
-  "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:public-law:116-283",
-      "label": "Public Law 116-283",
-      "title": "Public Law 116-283",
-      "artifact_type": "Public Law",
-      "lane": "law",
-      "lane_label": "Law",
-      "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:116-283",
-      "count": 2,
-      "lines_sample": [
-        404,
-        737
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    }
-  ],
+  "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodd-5000-01-defense-acquisition-system",
       "direction": "upstream",
-      "edge_count": 9
+      "edge_count": 10
     },
     {
       "id": "trace-downstream",

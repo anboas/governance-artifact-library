@@ -62,15 +62,30 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 4,
-    "catalogued_node_count": 5,
+    "downstream_edge_count": 6,
+    "catalogued_node_count": 7,
     "uncatalogued_gap_count": 3,
-    "evidence_backed_edge_count": 4,
+    "evidence_backed_edge_count": 6,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "usc-title-22-section-2151",
+      "label": "22 U.S.C. 2151",
+      "title": "22 U.S.C. 2151: Congressional findings and declaration of policy",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "foreign_affairs",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "gap:usc:40:1401",
       "label": "40 U.S.C. 1401",
@@ -123,6 +138,21 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "usc-title-42-section-4321",
+      "label": "42 U.S.C. 4321",
+      "title": "42 U.S.C. 4321: Congressional declaration of purpose",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-44-section-3502",
@@ -296,6 +326,50 @@
         ],
         "count": 7
       }
+    },
+    {
+      "id": "usc-title-44-section-3502->usc-title-22-section-2151:references:resolved_reference",
+      "source_artifact_id": "usc-title-44-section-3502",
+      "source_label": "44 U.S.C. 3502",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-22-section-2151",
+      "target_label": "22 U.S.C. 2151",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:44:3502",
+        "label": "44 U.S.C. 3502",
+        "first_line": 4403,
+        "lines_sample": [
+          4403
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "usc-title-44-section-3502->usc-title-42-section-4321:references:resolved_reference",
+      "source_artifact_id": "usc-title-44-section-3502",
+      "source_label": "44 U.S.C. 3502",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-42-section-4321",
+      "target_label": "42 U.S.C. 4321",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:44:3502",
+        "label": "44 U.S.C. 3502",
+        "first_line": 1333,
+        "lines_sample": [
+          1333
+        ],
+        "count": 2
+      }
     }
   ],
   "uncatalogued_authority_gaps": [
@@ -366,7 +440,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-44-section-3502",
       "direction": "downstream",
-      "edge_count": 4
+      "edge_count": 6
     }
   ]
 }

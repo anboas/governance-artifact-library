@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 5,
+    "upstream_edge_count": 8,
     "downstream_edge_count": 26,
-    "catalogued_node_count": 30,
-    "uncatalogued_gap_count": 4,
-    "evidence_backed_edge_count": 31,
+    "catalogued_node_count": 33,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 34,
     "inferred_edge_count": 0,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -87,61 +87,49 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:public-law:113-291",
+      "id": "public-law-113-291",
       "label": "Public Law 113-291",
-      "title": "Public Law 113-291",
+      "title": "Public Law 113-291: National Defense Authorization Act for Fiscal Year 2015’’ shall",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
       "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:113-291",
-      "count": 3,
-      "lines_sample": [
-        540,
-        1921,
-        1923
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
-      "id": "gap:public-law:113-66",
+      "id": "public-law-113-66",
       "label": "Public Law 113-66",
-      "title": "Public Law 113-66",
+      "title": "Public Law 113-66: National Defense Authorization Act for Fiscal",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
       "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:113-66",
-      "count": 2,
-      "lines_sample": [
-        615,
-        1919
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
-      "id": "gap:public-law:114-328",
+      "id": "public-law-114-328",
       "label": "Public Law 114-328",
-      "title": "Public Law 114-328",
+      "title": "Public Law 114-328: National Defense Authorization Act for Fiscal Year",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
       "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:114-328",
-      "count": 4,
-      "lines_sample": [
-        225,
-        570,
-        1587,
-        1925
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodd-7050-06",
@@ -709,6 +697,78 @@
           1927
         ],
         "count": 1
+      }
+    },
+    {
+      "id": "public-law-113-291->dodi-6495-02-sexual-assault-prevention-and-response-retaliation-respo:authorizes:resolved_reference",
+      "source_artifact_id": "public-law-113-291",
+      "source_label": "Public Law 113-291",
+      "source_lane": "law",
+      "target_artifact_id": "dodi-6495-02-sexual-assault-prevention-and-response-retaliation-respo",
+      "target_label": "DoDI 6495.02",
+      "target_lane": "dod",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "public-law:113-291",
+        "label": "Public Law 113-291",
+        "first_line": 540,
+        "lines_sample": [
+          540,
+          1921,
+          1923
+        ],
+        "count": 3
+      }
+    },
+    {
+      "id": "public-law-113-66->dodi-6495-02-sexual-assault-prevention-and-response-retaliation-respo:authorizes:resolved_reference",
+      "source_artifact_id": "public-law-113-66",
+      "source_label": "Public Law 113-66",
+      "source_lane": "law",
+      "target_artifact_id": "dodi-6495-02-sexual-assault-prevention-and-response-retaliation-respo",
+      "target_label": "DoDI 6495.02",
+      "target_lane": "dod",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "public-law:113-66",
+        "label": "Public Law 113-66",
+        "first_line": 615,
+        "lines_sample": [
+          615,
+          1919
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "public-law-114-328->dodi-6495-02-sexual-assault-prevention-and-response-retaliation-respo:authorizes:resolved_reference",
+      "source_artifact_id": "public-law-114-328",
+      "source_label": "Public Law 114-328",
+      "source_lane": "law",
+      "target_artifact_id": "dodi-6495-02-sexual-assault-prevention-and-response-retaliation-respo",
+      "target_label": "DoDI 6495.02",
+      "target_lane": "dod",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "public-law:114-328",
+        "label": "Public Law 114-328",
+        "first_line": 225,
+        "lines_sample": [
+          225,
+          570,
+          1587,
+          1925
+        ],
+        "count": 4
       }
     }
   ],
@@ -1343,63 +1403,6 @@
   ],
   "uncatalogued_authority_gaps": [
     {
-      "id": "gap:public-law:114-328",
-      "label": "Public Law 114-328",
-      "title": "Public Law 114-328",
-      "artifact_type": "Public Law",
-      "lane": "law",
-      "lane_label": "Law",
-      "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:114-328",
-      "count": 4,
-      "lines_sample": [
-        225,
-        570,
-        1587,
-        1925
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:public-law:113-291",
-      "label": "Public Law 113-291",
-      "title": "Public Law 113-291",
-      "artifact_type": "Public Law",
-      "lane": "law",
-      "lane_label": "Law",
-      "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:113-291",
-      "count": 3,
-      "lines_sample": [
-        540,
-        1921,
-        1923
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:public-law:113-66",
-      "label": "Public Law 113-66",
-      "title": "Public Law 113-66",
-      "artifact_type": "Public Law",
-      "lane": "law",
-      "lane_label": "Law",
-      "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:113-66",
-      "count": 2,
-      "lines_sample": [
-        615,
-        1919
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:dodd:1400.25",
       "label": "DoDD 1400.25",
       "title": "DoDD 1400.25",
@@ -1423,7 +1426,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-6495-02-sexual-assault-prevention-and-response-retaliation-respo",
       "direction": "upstream",
-      "edge_count": 5
+      "edge_count": 8
     },
     {
       "id": "trace-downstream",

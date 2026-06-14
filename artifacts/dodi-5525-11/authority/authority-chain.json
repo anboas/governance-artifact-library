@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 1,
+    "upstream_edge_count": 2,
     "downstream_edge_count": 2,
-    "catalogued_node_count": 4,
-    "uncatalogued_gap_count": 12,
-    "evidence_backed_edge_count": 3,
+    "catalogued_node_count": 5,
+    "uncatalogued_gap_count": 11,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 0,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -277,21 +277,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:8:1101",
+      "id": "usc-title-8-section-1101",
       "label": "8 U.S.C. 1101",
-      "title": "8 U.S.C. 1101",
+      "title": "8 U.S.C. 1101: Definitions",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:8:1101",
-      "count": 1,
-      "lines_sample": [
-        1551
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_8",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodd-2311-01",
@@ -362,6 +360,28 @@
           1549
         ],
         "count": 3
+      }
+    },
+    {
+      "id": "usc-title-8-section-1101->dodi-5525-11:flows_down:resolved_reference",
+      "source_artifact_id": "usc-title-8-section-1101",
+      "source_label": "8 U.S.C. 1101",
+      "source_lane": "statute",
+      "target_artifact_id": "dodi-5525-11",
+      "target_label": "DoDI 5525.11",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:8:1101",
+        "label": "8 U.S.C. 1101",
+        "first_line": 1551,
+        "lines_sample": [
+          1551
+        ],
+        "count": 1
       }
     }
   ],
@@ -601,23 +621,6 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
-    },
-    {
-      "id": "gap:usc:8:1101",
-      "label": "8 U.S.C. 1101",
-      "title": "8 U.S.C. 1101",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:8:1101",
-      "count": 1,
-      "lines_sample": [
-        1551
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -626,7 +629,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-5525-11",
       "direction": "upstream",
-      "edge_count": 1
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",

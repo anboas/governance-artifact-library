@@ -1,25 +1,29 @@
 import { createHash } from "node:crypto";
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
+import { spawnSync } from "node:child_process";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const CAPTURED_AT = new Date().toISOString();
 const DEFAULT_LIMIT = 5;
 const limit = numberArg("--limit", DEFAULT_LIMIT);
 const priority = stringArg("--priority", "P0");
+const families = new Set(stringArg("--families", stringArg("--family", "usc")).split(",").map(value => value.trim()).filter(Boolean));
 const dryRun = process.argv.includes("--dry-run");
+const SUPPORTED_FAMILIES = new Set(["usc", "public-law"]);
 
 const queue = readJson("data/reference-ingestion-queue.json");
 const manifest = readJson("manifest.json");
 const existingIds = new Set(manifest.artifacts.map(entry => entry.id));
 const candidates = queue.queue_items
   .filter(item => item.queue_priority === priority)
-  .filter(item => item.reference_family === "usc")
+  .filter(item => families.has("all") || families.has(item.reference_family))
+  .filter(item => SUPPORTED_FAMILIES.has(item.reference_family))
   .filter(item => !existingIds.has(item.recommended_artifact_id))
   .slice(0, limit);
 
 if (!candidates.length) {
-  console.log(`No ${priority} U.S. Code queue items are ready for ingestion.`);
+  console.log(`No ${priority} ${[...families].join(", ")} queue items are ready for ingestion.`);
   process.exit(0);
 }
 
@@ -35,9 +39,9 @@ if (dryRun) {
 
 const newEntries = [];
 for (const item of candidates) {
-  const parsed = parseUsc(item);
-  const sourceUrl = `https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title${parsed.title}-section${parsed.section}&num=0&edition=prelim`;
-  const response = await fetch(sourceUrl, {
+  try {
+  const plan = buildIngestionPlan(item);
+  const response = await fetch(plan.fetchUrl, {
     headers: { "user-agent": "governance-artifact-library-reference-ingestion/0.1" },
     redirect: "follow",
   });
@@ -45,12 +49,18 @@ for (const item of candidates) {
 
   const sourceMimeType = response.headers.get("content-type") || "text/html";
   const sourceBytes = Buffer.from(await response.arrayBuffer());
+  if (plan.rawExt === "pdf" && !sourceBytes.subarray(0, 5).equals(Buffer.from("%PDF-"))) {
+    throw new Error(`official PDF URL returned ${sourceMimeType} instead of a PDF`);
+  }
   const checksum = createHash("sha256").update(sourceBytes).digest("hex");
-  const extractedText = htmlToText(sourceBytes.toString("utf8"));
+  const extractedText = extractText(plan, sourceBytes);
   if (!hasMeaningfulSourceText(extractedText)) throw new Error(`${item.recommended_artifact_id} did not produce meaningful source text`);
+  if (item.reference_family === "usc" && isNonSubstantiveUscText(extractedText)) {
+    throw new Error("U.S. Code page is a renumbered, repealed, omitted, or transferred stub");
+  }
 
   const artifactDir = join(ROOT, "artifacts", item.recommended_artifact_id);
-  const rawPath = `artifacts/${item.recommended_artifact_id}/raw/source.html`;
+  const rawPath = `artifacts/${item.recommended_artifact_id}/raw/source.${plan.rawExt}`;
   const textPath = `artifacts/${item.recommended_artifact_id}/text/extracted.txt`;
   const metadataPath = `artifacts/${item.recommended_artifact_id}/metadata/metadata.json`;
   const analyticsPath = `artifacts/${item.recommended_artifact_id}/analytics/document-metrics.json`;
@@ -63,19 +73,19 @@ for (const item of candidates) {
 
   const artifact = {
     id: item.recommended_artifact_id,
-    title: `${item.recommended_title}: ${titleFromText(extractedText)}`,
+    title: plan.title(extractedText),
     short_title: item.recommended_title,
-    artifact_type: "U.S. Code",
+    artifact_type: plan.artifactType,
     domain: "policy",
-    authority_level: "us_code",
-    hierarchy_rank: 20,
-    family: familyForUsc(parsed),
+    authority_level: plan.authorityLevel,
+    hierarchy_rank: plan.hierarchyRank,
+    family: plan.family(extractedText),
     jurisdiction: "United States",
-    issuing_authority: "Congress",
-    issuing_organization: "Office of the Law Revision Counsel",
-    source_system: "U.S. Code",
-    source_location_type: "us_code_html",
-    source_url: sourceUrl,
+    issuing_authority: plan.issuingAuthority,
+    issuing_organization: plan.issuingOrganization,
+    source_system: plan.sourceSystem,
+    source_location_type: plan.sourceLocationType,
+    source_url: plan.sourceUrl,
     source_mime_type: sourceMimeType,
     source_date: null,
     publication_date: null,
@@ -93,7 +103,7 @@ for (const item of candidates) {
     mirror_status: "mirrored",
     parser_status: "parsed",
     review_status: "machine_reviewed",
-    tags: ["statute", "us-code", `title-${parsed.title}`, `section-${parsed.section.toLowerCase()}`, "reference-ingestion"],
+    tags: plan.tags,
     analytic_lanes: [
       "authority_lineage",
       "obligation_extraction",
@@ -111,6 +121,7 @@ for (const item of candidates) {
       capture_notes: `Processed queue item ${item.id} rank ${item.queue_rank}; referenced by ${item.source_artifact_ids.join(", ")}.`,
     },
   };
+  artifact.provenance.source_system = artifact.source_system;
 
   const metrics = buildMetrics(artifact, extractedText, sourceBytes);
   writeJson(`artifacts/${artifact.id}/artifact.json`, artifact);
@@ -123,6 +134,9 @@ for (const item of candidates) {
 
   newEntries.push(manifestEntry(artifact));
   console.log(`Ingested ${item.label} -> ${artifact.id}`);
+  } catch (error) {
+    console.warn(`Skipped ${item.label} -> ${item.recommended_artifact_id}: ${error.message}`);
+  }
 }
 
 const artifacts = [
@@ -141,11 +155,60 @@ writeJson("sources/source-registry.json", buildSourceRegistry(artifacts));
 
 console.log(`Processed ${newEntries.length} ${priority} reference ingestion queue item(s).`);
 
+function buildIngestionPlan(item) {
+  if (item.reference_family === "usc") {
+    const parsed = parseUsc(item);
+    const sourceUrl = `https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title${parsed.title}-section${parsed.section}&num=0&edition=prelim`;
+    return {
+      rawExt: "html",
+      fetchUrl: sourceUrl,
+      sourceUrl,
+      artifactType: "U.S. Code",
+      authorityLevel: "us_code",
+      hierarchyRank: 20,
+      issuingAuthority: "Congress",
+      issuingOrganization: "Office of the Law Revision Counsel",
+      sourceSystem: "U.S. Code",
+      sourceLocationType: "us_code_html",
+      tags: ["statute", "us-code", `title-${parsed.title}`, `section-${parsed.section.toLowerCase()}`, "reference-ingestion"],
+      title: text => `${item.recommended_title}: ${titleFromText(text)}`,
+      family: () => familyForUsc(parsed),
+    };
+  }
+  if (item.reference_family === "public-law") {
+    const parsed = parsePublicLaw(item);
+    const sourceUrl = `https://www.govinfo.gov/content/pkg/PLAW-${parsed.congress}publ${parsed.law}/pdf/PLAW-${parsed.congress}publ${parsed.law}.pdf`;
+    return {
+      rawExt: "pdf",
+      fetchUrl: sourceUrl,
+      sourceUrl,
+      artifactType: "Public Law",
+      authorityLevel: "law",
+      hierarchyRank: 10,
+      issuingAuthority: "Congress",
+      issuingOrganization: "U.S. Government Publishing Office",
+      sourceSystem: "GovInfo",
+      sourceLocationType: "govinfo_public_law_pdf",
+      tags: ["public-law", "law", "congress", `congress-${parsed.congress}`, `law-${parsed.law}`, "reference-ingestion"],
+      title: text => `${item.recommended_title}: ${titleFromPublicLawText(text)}`,
+      family: text => familyForPublicLaw(text),
+    };
+  }
+  throw new Error(`Unsupported reference family ${item.reference_family}`);
+}
+
 function parseUsc(item) {
   const match = item.reference_key?.match(/^usc:(\d+):([a-z0-9.-]+)$/i)
     || item.label.match(/^(\d+)\s+U\.?S\.?C\.?\s+([a-z0-9.-]+)$/i);
   if (!match) throw new Error(`Unable to parse U.S. Code reference ${item.label}`);
   return { title: match[1], section: match[2] };
+}
+
+function parsePublicLaw(item) {
+  const match = item.reference_key?.match(/^public-law:(\d+)-(\d+)$/i)
+    || item.label.match(/^Public Law\s+(\d+)-(\d+)$/i);
+  if (!match) throw new Error(`Unable to parse public law reference ${item.label}`);
+  return { congress: match[1], law: match[2] };
 }
 
 function titleFromText(text) {
@@ -159,6 +222,18 @@ function titleFromText(text) {
   return normalizeWhitespace(sectionTitle).replace(/\.$/, "");
 }
 
+function isNonSubstantiveUscText(text) {
+  const title = titleFromText(text);
+  return /^(Renumbered|Repealed|Omitted|Transferred)\b/i.test(title);
+}
+
+function titleFromPublicLawText(text) {
+  const title = text.match(/\b(?:National Defense Authorization Act|Servicemember Quality of Life Improvement and National Defense Authorization Act)[^\n]+/i)?.[0]
+    || text.match(/^\s*An Act\s+(.+)$/mi)?.[1]
+    || "Public law";
+  return normalizeWhitespace(title).replace(/\.$/, "");
+}
+
 function familyForUsc({ title, section }) {
   const sectionNumber = Number.parseInt(section, 10);
   if (title === "10" && sectionNumber >= 4000 && sectionNumber < 5000) return "defense_acquisition";
@@ -168,6 +243,33 @@ function familyForUsc({ title, section }) {
   if (title === "44") return "information_policy";
   if (title === "50") return "national_security";
   return `usc_title_${title}`;
+}
+
+function familyForPublicLaw(text) {
+  if (/National Defense Authorization Act|Servicemember Quality of Life Improvement/i.test(text)) return "defense_authorization";
+  if (/appropriation|appropriations/i.test(text)) return "appropriations";
+  if (/homeland security|cybersecurity|information security/i.test(text)) return "security_policy";
+  return "public_law";
+}
+
+function extractText(plan, bytes) {
+  if (plan.rawExt === "pdf") {
+    const tempId = `.${Date.now()}-${Math.random().toString(16).slice(2)}`;
+    const pdfPath = join(ROOT, "tmp", `${tempId}.pdf`);
+    const textPath = join(ROOT, "tmp", `${tempId}.txt`);
+    mkdirSync(dirname(pdfPath), { recursive: true });
+    writeFileSync(pdfPath, bytes);
+    const result = spawnSync("pdftotext", ["-layout", pdfPath, textPath], { encoding: "utf8" });
+    if (result.status !== 0) {
+      throw new Error(`pdftotext failed for ${plan.sourceUrl}: ${result.stderr || result.stdout || result.status}`);
+    }
+    const text = readFileSync(textPath, "utf8");
+    rmSync(pdfPath, { force: true });
+    rmSync(textPath, { force: true });
+    return text.trim() + "\n";
+  }
+  if (plan.rawExt === "txt") return bytes.toString("utf8").trim() + "\n";
+  return htmlToText(bytes.toString("utf8"));
 }
 
 function buildMetrics(artifact, text, bytes) {

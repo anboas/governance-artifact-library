@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 3,
+    "upstream_edge_count": 5,
     "downstream_edge_count": 12,
-    "catalogued_node_count": 16,
-    "uncatalogued_gap_count": 3,
-    "evidence_backed_edge_count": 13,
+    "catalogued_node_count": 18,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 15,
     "inferred_edge_count": 2,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -90,41 +90,34 @@
       "priority": "high"
     },
     {
-      "id": "gap:public-law:115-91",
+      "id": "public-law-115-91",
       "label": "Public Law 115-91",
-      "title": "Public Law 115-91",
+      "title": "Public Law 115-91: National Defense Authorization Act for Fiscal Year 2007",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
       "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:115-91",
-      "count": 2,
-      "lines_sample": [
-        430,
-        1131
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
-      "id": "gap:public-law:116-92",
+      "id": "public-law-116-92",
       "label": "Public Law 116-92",
-      "title": "Public Law 116-92",
+      "title": "Public Law 116-92: National Defense Authorization Act for",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
       "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:116-92",
-      "count": 3,
-      "lines_sample": [
-        22,
-        105,
-        1133
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodi-1015-16",
@@ -435,6 +428,53 @@
         ],
         "count": 2
       }
+    },
+    {
+      "id": "public-law-115-91->dodi-5000-87-software-acquisition-pathway:authorizes:resolved_reference",
+      "source_artifact_id": "public-law-115-91",
+      "source_label": "Public Law 115-91",
+      "source_lane": "law",
+      "target_artifact_id": "dodi-5000-87-software-acquisition-pathway",
+      "target_label": "DoDI 5000.87",
+      "target_lane": "dod",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "public-law:115-91",
+        "label": "Public Law 115-91",
+        "first_line": 430,
+        "lines_sample": [
+          430,
+          1131
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "public-law-116-92->dodi-5000-87-software-acquisition-pathway:authorizes:resolved_reference",
+      "source_artifact_id": "public-law-116-92",
+      "source_label": "Public Law 116-92",
+      "source_lane": "law",
+      "target_artifact_id": "dodi-5000-87-software-acquisition-pathway",
+      "target_label": "DoDI 5000.87",
+      "target_lane": "dod",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "public-law:116-92",
+        "label": "Public Law 116-92",
+        "first_line": 22,
+        "lines_sample": [
+          22,
+          105,
+          1133
+        ],
+        "count": 3
+      }
     }
   ],
   "downstream_edges": [
@@ -708,25 +748,6 @@
   ],
   "uncatalogued_authority_gaps": [
     {
-      "id": "gap:public-law:116-92",
-      "label": "Public Law 116-92",
-      "title": "Public Law 116-92",
-      "artifact_type": "Public Law",
-      "lane": "law",
-      "lane_label": "Law",
-      "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:116-92",
-      "count": 3,
-      "lines_sample": [
-        22,
-        105,
-        1133
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:public-law:104-106",
       "label": "Public Law 104-106",
       "title": "Public Law 104-106",
@@ -743,24 +764,6 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
-    },
-    {
-      "id": "gap:public-law:115-91",
-      "label": "Public Law 115-91",
-      "title": "Public Law 115-91",
-      "artifact_type": "Public Law",
-      "lane": "law",
-      "lane_label": "Law",
-      "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:115-91",
-      "count": 2,
-      "lines_sample": [
-        430,
-        1131
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -769,7 +772,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-5000-87-software-acquisition-pathway",
       "direction": "upstream",
-      "edge_count": 3
+      "edge_count": 5
     },
     {
       "id": "trace-downstream",

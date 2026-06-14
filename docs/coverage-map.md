@@ -7,21 +7,21 @@ Generated from `manifest.json` and `taxonomies/governance-item-universe.json`.
 - Universe item types: 25
 - Covered item types: 12
 - Empty item types: 13
-- Artifacts in repo: 1163
-- Mirrored artifacts: 22
+- Artifacts in repo: 1194
+- Mirrored artifacts: 53
 - Source-known blocked artifacts: 6
-- Text extracted: 1123
-- Analytics sidecars: 1163
-- Analysis sidecars: 1163
-- Structured summaries: 1123
-- Version ledgers: 1163
+- Text extracted: 1154
+- Analytics sidecars: 1194
+- Analysis sidecars: 1194
+- Structured summaries: 1154
+- Version ledgers: 1194
 
 ## Authority Coverage
 
 | Rank | Authority Level | Covered Types | Artifacts | Mirrored | Blocked |
 | ---: | --- | ---: | ---: | ---: | ---: |
 | 10 | law | 1/2 | 2 | 2 | 0 |
-| 20 | us_code | 1/1 | 11 | 11 | 0 |
+| 20 | us_code | 1/1 | 21 | 21 | 0 |
 | 30 | presidential_directive | 1/2 | 2 | 2 | 0 |
 | 40 | executive_branch_guidance | 1/2 | 2 | 2 | 0 |
 | 50 | federal_regulation | 1/2 | 1 | 1 | 0 |
@@ -40,7 +40,7 @@ Generated from `manifest.json` and `taxonomies/governance-item-universe.json`.
 | ---: | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | 10 | Appropriations Law | not_started | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | none |
 | 10 | Public Law / NDAA | analysis_ready | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | pl-118-159-fy2025-ndaa<br>pl-118-31-fy2024-ndaa |
-| 20 | U.S. Code | analysis_ready | 11 | 11 | 11 | 11 | 11 | 11 | 11 | 11 | usc-title-10-section-101<br>usc-title-10-section-111<br>usc-title-10-section-113<br>usc-title-10-section-2222<br>usc-title-10-section-2224<br>usc-title-10-section-4001<br>usc-title-22-section-2651a<br>usc-title-42-section-9620<br>usc-title-44-section-3502<br>usc-title-50-section-3003<br>usc-title-50-section-3024 |
+| 20 | U.S. Code | analysis_ready | 21 | 21 | 21 | 21 | 21 | 21 | 21 | 21 | usc-title-10-section-101<br>usc-title-10-section-1071<br>usc-title-10-section-111<br>usc-title-10-section-113<br>usc-title-10-section-1561<br>usc-title-10-section-1580<br>usc-title-10-section-221<br>usc-title-10-section-2222<br>usc-title-10-section-2224<br>usc-title-10-section-2271<br>usc-title-10-section-2430<br>usc-title-10-section-2687<br>usc-title-10-section-4001<br>usc-title-22-section-2151<br>usc-title-22-section-2651a<br>usc-title-42-section-4321<br>usc-title-42-section-9620<br>usc-title-44-section-3502<br>usc-title-50-section-1701<br>usc-title-50-section-3003<br>usc-title-50-section-3024 |
 | 30 | Executive Order | analysis_ready | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | eo-14028-cybersecurity<br>eo-14110-ai |
 | 30 | Presidential Memorandum | not_started | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | none |
 | 40 | OMB Memorandum | analysis_ready | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | omb-m-21-31-cyber-logging<br>omb-m-24-10-ai-governance |
@@ -87,7 +87,7 @@ Generated from `manifest.json` and `taxonomies/governance-item-universe.json`.
 | nist_nvlpubs_pdf | 1 | 1 | 1 | 0 |
 | program_office_html | 1 | 0 | 0 | 0 |
 | program_office_pdf | 1 | 0 | 0 | 0 |
-| us_code_html | 1 | 11 | 11 | 0 |
+| us_code_html | 1 | 21 | 21 | 0 |
 | white_house_pdf | 3 | 2 | 2 | 0 |
 
 ## Status Key

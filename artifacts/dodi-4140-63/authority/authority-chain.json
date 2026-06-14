@@ -61,54 +61,45 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 4,
+    "upstream_edge_count": 6,
     "downstream_edge_count": 2,
-    "catalogued_node_count": 6,
-    "uncatalogued_gap_count": 3,
-    "evidence_backed_edge_count": 6,
+    "catalogued_node_count": 8,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 8,
     "inferred_edge_count": 0,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
     {
-      "id": "gap:public-law:111-84",
+      "id": "public-law-111-84",
       "label": "Public Law 111-84",
-      "title": "Public Law 111-84",
+      "title": "Public Law 111-84: National Defense Authorization Act for Fiscal",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
       "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:111-84",
-      "count": 3,
-      "lines_sample": [
-        25,
-        441,
-        846
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
-      "id": "gap:public-law:113-66",
+      "id": "public-law-113-66",
       "label": "Public Law 113-66",
-      "title": "Public Law 113-66",
+      "title": "Public Law 113-66: National Defense Authorization Act for Fiscal",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
       "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:113-66",
-      "count": 4,
-      "lines_sample": [
-        25,
-        577,
-        590,
-        848
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodd-5000-01-defense-acquisition-system",
@@ -310,6 +301,55 @@
         ],
         "count": 3
       }
+    },
+    {
+      "id": "public-law-111-84->dodi-4140-63:authorizes:resolved_reference",
+      "source_artifact_id": "public-law-111-84",
+      "source_label": "Public Law 111-84",
+      "source_lane": "law",
+      "target_artifact_id": "dodi-4140-63",
+      "target_label": "DoDI 4140.63",
+      "target_lane": "dod",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "public-law:111-84",
+        "label": "Public Law 111-84",
+        "first_line": 25,
+        "lines_sample": [
+          25,
+          441,
+          846
+        ],
+        "count": 3
+      }
+    },
+    {
+      "id": "public-law-113-66->dodi-4140-63:authorizes:resolved_reference",
+      "source_artifact_id": "public-law-113-66",
+      "source_label": "Public Law 113-66",
+      "source_lane": "law",
+      "target_artifact_id": "dodi-4140-63",
+      "target_label": "DoDI 4140.63",
+      "target_lane": "dod",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "public-law:113-66",
+        "label": "Public Law 113-66",
+        "first_line": 25,
+        "lines_sample": [
+          25,
+          577,
+          590,
+          848
+        ],
+        "count": 4
+      }
     }
   ],
   "downstream_edges": [
@@ -360,45 +400,6 @@
   ],
   "uncatalogued_authority_gaps": [
     {
-      "id": "gap:public-law:113-66",
-      "label": "Public Law 113-66",
-      "title": "Public Law 113-66",
-      "artifact_type": "Public Law",
-      "lane": "law",
-      "lane_label": "Law",
-      "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:113-66",
-      "count": 4,
-      "lines_sample": [
-        25,
-        577,
-        590,
-        848
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:public-law:111-84",
-      "label": "Public Law 111-84",
-      "title": "Public Law 111-84",
-      "artifact_type": "Public Law",
-      "lane": "law",
-      "lane_label": "Law",
-      "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:111-84",
-      "count": 3,
-      "lines_sample": [
-        25,
-        441,
-        846
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:dodd:5158.04",
       "label": "DoDD 5158.04",
       "title": "DoDD 5158.04",
@@ -423,7 +424,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-4140-63",
       "direction": "upstream",
-      "edge_count": 4
+      "edge_count": 6
     },
     {
       "id": "trace-downstream",

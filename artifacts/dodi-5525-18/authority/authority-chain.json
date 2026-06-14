@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 1,
+    "upstream_edge_count": 2,
     "downstream_edge_count": 2,
-    "catalogued_node_count": 4,
-    "uncatalogued_gap_count": 4,
-    "evidence_backed_edge_count": 3,
+    "catalogued_node_count": 5,
+    "uncatalogued_gap_count": 3,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 0,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -89,22 +89,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:public-law:116-92",
+      "id": "public-law-116-92",
       "label": "Public Law 116-92",
-      "title": "Public Law 116-92",
+      "title": "Public Law 116-92: National Defense Authorization Act for",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
       "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:116-92",
-      "count": 2,
-      "lines_sample": [
-        140,
-        246
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:executive-order:12333",
@@ -223,6 +220,29 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "public-law-116-92->dodi-5525-18:authorizes:resolved_reference",
+      "source_artifact_id": "public-law-116-92",
+      "source_label": "Public Law 116-92",
+      "source_lane": "law",
+      "target_artifact_id": "dodi-5525-18",
+      "target_label": "DoDI 5525.18",
+      "target_lane": "dod",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "public-law:116-92",
+        "label": "Public Law 116-92",
+        "first_line": 140,
+        "lines_sample": [
+          140,
+          246
+        ],
+        "count": 2
+      }
     }
   ],
   "downstream_edges": [
@@ -274,24 +294,6 @@
     }
   ],
   "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:public-law:116-92",
-      "label": "Public Law 116-92",
-      "title": "Public Law 116-92",
-      "artifact_type": "Public Law",
-      "lane": "law",
-      "lane_label": "Law",
-      "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:116-92",
-      "count": 2,
-      "lines_sample": [
-        140,
-        246
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
     {
       "id": "gap:executive-order:12333",
       "label": "Executive Order 12333",
@@ -350,7 +352,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-5525-18",
       "direction": "upstream",
-      "edge_count": 1
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",

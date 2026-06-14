@@ -61,32 +61,30 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 5,
+    "upstream_edge_count": 6,
     "downstream_edge_count": 2,
-    "catalogued_node_count": 8,
-    "uncatalogued_gap_count": 5,
-    "evidence_backed_edge_count": 7,
+    "catalogued_node_count": 9,
+    "uncatalogued_gap_count": 4,
+    "evidence_backed_edge_count": 8,
     "inferred_edge_count": 0,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
     {
-      "id": "gap:public-law:104-191",
+      "id": "public-law-104-191",
       "label": "Public Law 104-191",
-      "title": "Public Law 104-191",
+      "title": "Public Law 104-191: To amend the Internal Revenue Code of 1986 to improve portability and continuity",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
       "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:104-191",
-      "count": 1,
-      "lines_sample": [
-        447
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "appropriations",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:executive-order:14168",
@@ -392,6 +390,28 @@
         ],
         "count": 3
       }
+    },
+    {
+      "id": "public-law-104-191->dodi-6200-06:authorizes:resolved_reference",
+      "source_artifact_id": "public-law-104-191",
+      "source_label": "Public Law 104-191",
+      "source_lane": "law",
+      "target_artifact_id": "dodi-6200-06",
+      "target_label": "DoDI 6200.06",
+      "target_lane": "dod",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "public-law:104-191",
+        "label": "Public Law 104-191",
+        "first_line": 447,
+        "lines_sample": [
+          447
+        ],
+        "count": 1
+      }
     }
   ],
   "downstream_edges": [
@@ -511,23 +531,6 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
-    },
-    {
-      "id": "gap:public-law:104-191",
-      "label": "Public Law 104-191",
-      "title": "Public Law 104-191",
-      "artifact_type": "Public Law",
-      "lane": "law",
-      "lane_label": "Law",
-      "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:104-191",
-      "count": 1,
-      "lines_sample": [
-        447
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -536,7 +539,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-6200-06",
       "direction": "upstream",
-      "edge_count": 5
+      "edge_count": 6
     },
     {
       "id": "trace-downstream",

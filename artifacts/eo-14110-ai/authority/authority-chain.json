@@ -61,16 +61,48 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 1,
+    "upstream_edge_count": 3,
     "downstream_edge_count": 3,
-    "catalogued_node_count": 4,
+    "catalogued_node_count": 6,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 3,
+    "evidence_backed_edge_count": 5,
     "inferred_edge_count": 1,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "gap:public-law:107-296",
+      "label": "Public Law 107-296",
+      "title": "Public Law 107-296",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:107-296",
+      "count": 1,
+      "lines_sample": [
+        795
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "public-law-107-347",
+      "label": "Public Law 107-347",
+      "title": "Public Law 107-347: To enhance the management and promotion of electronic Government services and",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "gap:usc:10:504",
       "label": "10 U.S.C. 504",
@@ -208,21 +240,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:50:1701",
+      "id": "usc-title-50-section-1701",
       "label": "50 U.S.C. 1701",
-      "title": "50 U.S.C. 1701",
+      "title": "50 U.S.C. 1701: Unusual and extraordinary threat; declaration of national emergency; exercise of Presidential authorities",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:50:1701",
-      "count": 1,
-      "lines_sample": [
-        741
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "national_security",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:50:4501",
@@ -448,6 +478,28 @@
   ],
   "upstream_edges": [
     {
+      "id": "public-law-107-347->eo-14110-ai:authorizes:resolved_reference",
+      "source_artifact_id": "public-law-107-347",
+      "source_label": "Public Law 107-347",
+      "source_lane": "law",
+      "target_artifact_id": "eo-14110-ai",
+      "target_label": "EO 14110",
+      "target_lane": "executive",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "public-law:107-347",
+        "label": "Public Law 107-347",
+        "first_line": 2158,
+        "lines_sample": [
+          2158
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-44-section-3502->eo-14110-ai:authorizes:resolved_reference",
       "source_artifact_id": "usc-title-44-section-3502",
       "source_label": "44 U.S.C. 3502",
@@ -468,6 +520,28 @@
           280
         ],
         "count": 2
+      }
+    },
+    {
+      "id": "usc-title-50-section-1701->eo-14110-ai:authorizes:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-1701",
+      "source_label": "50 U.S.C. 1701",
+      "source_lane": "statute",
+      "target_artifact_id": "eo-14110-ai",
+      "target_label": "EO 14110",
+      "target_lane": "executive",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:1701",
+        "label": "50 U.S.C. 1701",
+        "first_line": 741,
+        "lines_sample": [
+          741
+        ],
+        "count": 1
       }
     }
   ],
@@ -746,23 +820,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:50:1701",
-      "label": "50 U.S.C. 1701",
-      "title": "50 U.S.C. 1701",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:50:1701",
-      "count": 1,
-      "lines_sample": [
-        741
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:50:4501",
       "label": "50 U.S.C. 4501",
       "title": "50 U.S.C. 4501",
@@ -863,6 +920,23 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "gap:public-law:107-296",
+      "label": "Public Law 107-296",
+      "title": "Public Law 107-296",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:107-296",
+      "count": 1,
+      "lines_sample": [
+        795
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -871,7 +945,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "eo-14110-ai",
       "direction": "upstream",
-      "edge_count": 1
+      "edge_count": 3
     },
     {
       "id": "trace-downstream",

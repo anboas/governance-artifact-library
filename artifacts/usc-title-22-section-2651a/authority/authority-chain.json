@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 2,
-    "downstream_edge_count": 2,
-    "catalogued_node_count": 5,
+    "downstream_edge_count": 4,
+    "catalogued_node_count": 7,
     "uncatalogued_gap_count": 10,
-    "evidence_backed_edge_count": 4,
+    "evidence_backed_edge_count": 6,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -90,6 +90,21 @@
       "id": "pl-118-159-fy2025-ndaa",
       "label": "FY2025 NDAA",
       "title": "Public Law 118-159: Servicemember Quality of Life Improvement and National Defense Authorization Act for Fiscal Year 2025",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-110-417",
+      "label": "Public Law 110-417",
+      "title": "Public Law 110-417: National Defense Authorization Act for Fiscal Year 2009’’",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
@@ -286,6 +301,21 @@
       "priority": "high"
     },
     {
+      "id": "usc-title-50-section-1701",
+      "label": "50 U.S.C. 1701",
+      "title": "50 U.S.C. 1701: Unusual and extraordinary threat; declaration of national emergency; exercise of Presidential authorities",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "national_security",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "usc-title-50-section-3003",
       "label": "50 U.S.C. 3003",
       "title": "50 U.S.C. 3003: Definitions",
@@ -421,6 +451,50 @@
           53357
         ],
         "count": 3
+      }
+    },
+    {
+      "id": "usc-title-22-section-2651a->public-law-110-417:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-2651a",
+      "source_label": "22 U.S.C. 2651a",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-110-417",
+      "target_label": "Public Law 110-417",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:2651a",
+        "label": "22 U.S.C. 2651a",
+        "first_line": 19990,
+        "lines_sample": [
+          19990
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-22-section-2651a->usc-title-50-section-1701:references:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-2651a",
+      "source_label": "22 U.S.C. 2651a",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-50-section-1701",
+      "target_label": "50 U.S.C. 1701",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:2651a",
+        "label": "22 U.S.C. 2651a",
+        "first_line": 1165,
+        "lines_sample": [
+          1165
+        ],
+        "count": 2
       }
     }
   ],
@@ -611,7 +685,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-22-section-2651a",
       "direction": "downstream",
-      "edge_count": 2
+      "edge_count": 4
     }
   ]
 }
