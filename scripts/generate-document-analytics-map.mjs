@@ -6,9 +6,33 @@ import { dirname, join } from "node:path";
 const ROOT = new URL("..", import.meta.url).pathname;
 const CHECK_ONLY = process.argv.includes("--check");
 const READING_WPM = 225;
+const REFERENCE_COVERAGE_PATH = "data/reference-coverage-map.json";
+const GENERATED_DATE = new Date(generatedDateString());
+const AUTHORITY_RANKS = {
+  law: 10,
+  us_code: 15,
+  federal_regulation: 20,
+  presidential_directive: 25,
+  executive_branch_guidance: 30,
+  federal_standard: 35,
+  defense_department_directive: 45,
+  defense_department_instruction: 50,
+  defense_department_manual: 55,
+  defense_department_strategy: 58,
+  implementation_guidance: 60,
+  service_secretariat_instruction: 65,
+  service_secretariat_manual: 68,
+  service_headquarters_instruction: 72,
+  service_operational_guidance: 78,
+  echelon_2_instruction: 84,
+  echelon_3_4_instruction: 90,
+};
 
 const manifest = readJson("manifest.json");
 const generatedAt = manifest.generated_at;
+const referenceCoverage = existsSync(join(ROOT, REFERENCE_COVERAGE_PATH))
+  ? readJson(REFERENCE_COVERAGE_PATH)
+  : { cataloged_reference_edges: [] };
 
 const rows = manifest.artifacts.map((entry) => {
   const artifact = readJson(entry.path);
@@ -23,6 +47,8 @@ const rows = manifest.artifacts.map((entry) => {
   const termSignalCount = Object.values(termCounts).reduce((sum, value) => sum + (Number(value) || 0), 0);
   const readingMinutes = words ? Math.ceil(words / READING_WPM) : 0;
   const complexityScore = complexityFor({ words, pages, obligationSignals, implementationSignals, termSignalCount });
+  const publicationDate = artifact.publication_date || artifact.effective_date || artifact.source_date || "";
+  const ageYears = ageYearsFor(publicationDate);
   return {
     id: artifact.id,
     title: artifact.title,
@@ -33,6 +59,12 @@ const rows = manifest.artifacts.map((entry) => {
     issuing_authority: artifact.issuing_authority,
     issuing_organization: artifact.issuing_organization,
     source_system: artifact.source_system || artifact.issuing_organization || "Unknown",
+    source_date: artifact.source_date || "",
+    publication_date: artifact.publication_date || "",
+    effective_date: artifact.effective_date || "",
+    analytic_date: publicationDate,
+    age_years: ageYears,
+    age_bucket: ageBucket(ageYears),
     source_location_type: artifact.source_location_type || "unknown",
     mirror_status: artifact.mirror_status || "unknown",
     pipeline_state: artifact.pipeline_state || "unknown",
@@ -50,8 +82,13 @@ const rows = manifest.artifacts.map((entry) => {
     implementation_signal_count: implementationSignals,
     term_signal_count: termSignalCount,
     term_counts: termCounts,
+    authority_rank: authorityRank(artifact.authority_level),
   };
 });
+
+const rowById = new Map(rows.map((row) => [row.id, row]));
+const referenceEdges = (referenceCoverage.cataloged_reference_edges || []).map(edge => compactReferenceEdge(edge, rowById)).filter(Boolean);
+const referencePressure = referencePressureRows(referenceEdges, rowById);
 
 const model = {
   generated_at: generatedAt,
@@ -75,6 +112,16 @@ const model = {
   by_artifact_type: groupRows(rows, "artifact_type"),
   by_authority_level: groupRows(rows, "authority_level"),
   by_family: groupRows(rows, "family"),
+  by_age_bucket: bucketRows(rows, "age_bucket", [
+    "No Date",
+    "Under 1 year",
+    "1-3 years",
+    "3-5 years",
+    "5-10 years",
+    "10-20 years",
+    "20+ years",
+  ]),
+  complexity_by_authority_level: complexityByAuthority(rows),
   reading_time_buckets: bucketRows(rows, "reading_time_bucket", [
     "No Text",
     "Under 5 min",
@@ -92,6 +139,11 @@ const model = {
     "Extreme",
   ]),
   term_heatmap: termHeatmap(rows),
+  reference_edges: referenceEdges,
+  top_referenced_artifacts: referencePressure.slice(0, 40),
+  dodd_reference_pressure: referencePressure
+    .filter(row => row.target_family === "dodd" || row.target_artifact_id.startsWith("dodd-"))
+    .slice(0, 40),
   longest_artifacts: [...rows]
     .filter((row) => row.reading_time_minutes > 0)
     .sort((a, b) => b.reading_time_minutes - a.reading_time_minutes || a.short_title.localeCompare(b.short_title))
@@ -147,6 +199,12 @@ function compactRow(row) {
     family: row.family,
     authority_level: row.authority_level,
     source_system: row.source_system,
+    source_date: row.source_date,
+    publication_date: row.publication_date,
+    effective_date: row.effective_date,
+    analytic_date: row.analytic_date,
+    age_years: row.age_years,
+    age_bucket: row.age_bucket,
     mirror_status: row.mirror_status,
     pipeline_state: row.pipeline_state,
     extracted_word_count: row.extracted_word_count,
@@ -157,6 +215,10 @@ function compactRow(row) {
     complexity_bucket: row.complexity_bucket,
     obligation_signal_count: row.obligation_signal_count,
     implementation_signal_count: row.implementation_signal_count,
+    term_counts: row.term_counts,
+    incoming_reference_count: row.incoming_reference_count || 0,
+    incoming_occurrence_count: row.incoming_occurrence_count || 0,
+    lower_level_source_count: row.lower_level_source_count || 0,
   };
 }
 
@@ -232,6 +294,123 @@ function termHeatmap(sourceRows) {
     .slice(0, 24);
 }
 
+function ageYearsFor(dateString) {
+  if (!dateString) return null;
+  const parsed = new Date(dateString);
+  if (Number.isNaN(parsed.getTime())) return null;
+  const years = (GENERATED_DATE.getTime() - parsed.getTime()) / (365.25 * 24 * 60 * 60 * 1000);
+  if (years < 0) return 0;
+  return Number(years.toFixed(1));
+}
+
+function ageBucket(ageYears) {
+  if (ageYears === null || ageYears === undefined) return "No Date";
+  if (ageYears < 1) return "Under 1 year";
+  if (ageYears < 3) return "1-3 years";
+  if (ageYears < 5) return "3-5 years";
+  if (ageYears < 10) return "5-10 years";
+  if (ageYears < 20) return "10-20 years";
+  return "20+ years";
+}
+
+function authorityRank(value = "") {
+  return AUTHORITY_RANKS[value] || 999;
+}
+
+function compactReferenceEdge(edge, artifactRows) {
+  const source = artifactRows.get(edge.source_artifact_id);
+  const target = artifactRows.get(edge.target_artifact_id);
+  if (!source || !target) return null;
+  return {
+    source_artifact_id: source.id,
+    source_title: source.short_title,
+    source_authority_level: source.authority_level,
+    source_family: source.family,
+    source_rank: source.authority_rank,
+    target_artifact_id: target.id,
+    target_title: target.short_title,
+    target_authority_level: target.authority_level,
+    target_family: edge.reference_family || target.family,
+    target_rank: target.authority_rank,
+    relationship: edge.relationship,
+    reference_family: edge.reference_family,
+    count: Number(edge.count || 0) || 0,
+    lower_level_reference: source.authority_rank > target.authority_rank,
+  };
+}
+
+function referencePressureRows(edges, artifactRows) {
+  const groups = new Map();
+  edges.forEach(edge => {
+    if (edge.relationship === "references_self") return;
+    const target = artifactRows.get(edge.target_artifact_id);
+    if (!target) return;
+    const group = groups.get(edge.target_artifact_id) || {
+      target_artifact_id: edge.target_artifact_id,
+      target_title: edge.target_title,
+      target_authority_level: edge.target_authority_level,
+      target_family: edge.target_family,
+      incoming_reference_count: 0,
+      incoming_occurrence_count: 0,
+      lower_level_source_count: 0,
+      source_artifact_ids: new Set(),
+      lower_level_source_ids: new Set(),
+    };
+    group.incoming_reference_count += 1;
+    group.incoming_occurrence_count += edge.count;
+    group.source_artifact_ids.add(edge.source_artifact_id);
+    if (edge.lower_level_reference) group.lower_level_source_ids.add(edge.source_artifact_id);
+    groups.set(edge.target_artifact_id, group);
+  });
+  return [...groups.values()].map(group => {
+    const row = artifactRows.get(group.target_artifact_id);
+    const lowerLevelSourceCount = group.lower_level_source_ids.size;
+    if (row) {
+      row.incoming_reference_count = group.incoming_reference_count;
+      row.incoming_occurrence_count = group.incoming_occurrence_count;
+      row.lower_level_source_count = lowerLevelSourceCount;
+    }
+    return {
+      target_artifact_id: group.target_artifact_id,
+      target_title: group.target_title,
+      target_authority_level: group.target_authority_level,
+      target_family: group.target_family,
+      incoming_reference_count: group.incoming_reference_count,
+      incoming_occurrence_count: group.incoming_occurrence_count,
+      source_artifact_count: group.source_artifact_ids.size,
+      lower_level_source_count: lowerLevelSourceCount,
+    };
+  }).sort((a, b) =>
+    b.lower_level_source_count - a.lower_level_source_count ||
+    b.incoming_occurrence_count - a.incoming_occurrence_count ||
+    a.target_title.localeCompare(b.target_title)
+  );
+}
+
+function complexityByAuthority(sourceRows) {
+  return groupRows(sourceRows, "authority_level")
+    .map(row => ({
+      ...row,
+      label: labelize(row.label),
+    }))
+    .sort((a, b) => (AUTHORITY_RANKS[a.key] || 999) - (AUTHORITY_RANKS[b.key] || 999));
+}
+
+function labelize(value = "") {
+  return String(value || "Unknown")
+    .replace(/[_-]+/g, " ")
+    .replace(/\b\w/g, char => char.toUpperCase());
+}
+
+function generatedDateString() {
+  try {
+    const manifest = JSON.parse(readFileSync(join(ROOT, "manifest.json"), "utf8"));
+    return manifest.generated_at || new Date().toISOString();
+  } catch {
+    return new Date().toISOString();
+  }
+}
+
 function renderMarkdown(map) {
   return [
     "# Governance Document Analytics Map",
@@ -265,6 +444,18 @@ function renderMarkdown(map) {
     "| Source | Artifacts | Words | Reading Minutes | Avg Complexity |",
     "| --- | ---: | ---: | ---: | ---: |",
     ...map.by_source_system.slice(0, 20).map((row) => `| ${row.label} | ${row.count} | ${row.word_count.toLocaleString()} | ${row.reading_minutes.toLocaleString()} | ${row.average_complexity_score} |`),
+    "",
+    "## Age Buckets",
+    "",
+    "| Age | Artifacts | Words | Reading Minutes | Avg Complexity |",
+    "| --- | ---: | ---: | ---: | ---: |",
+    ...map.by_age_bucket.map((row) => `| ${row.label} | ${row.count} | ${row.word_count.toLocaleString()} | ${row.reading_minutes.toLocaleString()} | ${row.average_complexity_score} |`),
+    "",
+    "## Top DoDD Reference Pressure",
+    "",
+    "| Target | Lower-Level Sources | Source Artifacts | Occurrences |",
+    "| --- | ---: | ---: | ---: |",
+    ...map.dodd_reference_pressure.slice(0, 30).map((row) => `| ${row.target_title} | ${row.lower_level_source_count} | ${row.source_artifact_count} | ${row.incoming_occurrence_count} |`),
     "",
   ].join("\n");
 }
