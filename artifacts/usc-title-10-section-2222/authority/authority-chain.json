@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 2,
-    "downstream_edge_count": 2,
-    "catalogued_node_count": 3,
+    "downstream_edge_count": 3,
+    "catalogued_node_count": 4,
     "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 2,
+    "evidence_backed_edge_count": 3,
     "inferred_edge_count": 2,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -97,6 +97,21 @@
       "family": "defense_authorization",
       "issuing_authority": "Congress",
       "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-10-section-111",
+      "label": "10 U.S.C. 111",
+      "title": "10 U.S.C. 111: Executive department",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "catalogued"
@@ -218,6 +233,28 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "usc-title-10-section-2222->usc-title-10-section-111:references:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-2222",
+      "source_label": "10 U.S.C. 2222",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-111",
+      "target_label": "10 U.S.C. 111",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:2222",
+        "label": "10 U.S.C. 2222",
+        "first_line": 1106,
+        "lines_sample": [
+          1106
+        ],
+        "count": 1
+      }
     }
   ],
   "uncatalogued_authority_gaps": [
@@ -253,7 +290,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-10-section-2222",
       "direction": "downstream",
-      "edge_count": 2
+      "edge_count": 3
     }
   ]
 }

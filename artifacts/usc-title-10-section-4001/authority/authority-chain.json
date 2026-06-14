@@ -62,11 +62,11 @@
   ],
   "summary": {
     "upstream_edge_count": 5,
-    "downstream_edge_count": 2,
-    "catalogued_node_count": 6,
+    "downstream_edge_count": 3,
+    "catalogued_node_count": 9,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 5,
-    "inferred_edge_count": 2,
+    "evidence_backed_edge_count": 8,
+    "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
   },
@@ -102,21 +102,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:10:111",
+      "id": "usc-title-10-section-111",
       "label": "10 U.S.C. 111",
-      "title": "10 U.S.C. 111",
+      "title": "10 U.S.C. 111: Executive department",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:10:111",
-      "count": 1,
-      "lines_sample": [
-        642
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-10-section-113",
@@ -446,6 +444,38 @@
       "priority": "high"
     },
     {
+      "id": "gap:usc:20:1067q",
+      "label": "20 U.S.C. 1067q",
+      "title": "20 U.S.C. 1067q",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:20:1067q",
+      "count": 1,
+      "lines_sample": [
+        2821
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "usc-title-22-section-2651a",
+      "label": "22 U.S.C. 2651a",
+      "title": "22 U.S.C. 2651a: Organization of Department of State",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "foreign_affairs",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "gap:usc:5:171c",
       "label": "5 U.S.C. 171c",
       "title": "5 U.S.C. 171c",
@@ -476,43 +506,44 @@
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "catalogued"
+    },
+    {
+      "id": "usc-title-50-section-3024",
+      "label": "50 U.S.C. 3024",
+      "title": "50 U.S.C. 3024: Responsibilities and authorities of the Director of National Intelligence",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "national_security",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [
     {
-      "id": "pl-118-31-fy2024-ndaa->usc-title-10-section-4001:codifies_or_creates_note:inferred_flowdown",
-      "source_artifact_id": "pl-118-31-fy2024-ndaa",
-      "source_label": "FY2024 NDAA",
-      "source_lane": "law",
+      "id": "usc-title-10-section-111->usc-title-10-section-4001:references:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-111",
+      "source_label": "10 U.S.C. 111",
+      "source_lane": "statute",
       "target_artifact_id": "usc-title-10-section-4001",
       "target_label": "10 U.S.C. 4001",
       "target_lane": "statute",
-      "relationship": "codifies_or_creates_note",
-      "evidence_type": "inferred_flowdown",
-      "confidence": 0.66,
-      "direction": "upstream",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
       "evidence": {
-        "basis": "shared_family_tags_and_authority_rank",
-        "shared_tags": [],
-        "shared_family": ""
-      }
-    },
-    {
-      "id": "pl-118-159-fy2025-ndaa->usc-title-10-section-4001:codifies_or_creates_note:inferred_flowdown",
-      "source_artifact_id": "pl-118-159-fy2025-ndaa",
-      "source_label": "FY2025 NDAA",
-      "source_lane": "law",
-      "target_artifact_id": "usc-title-10-section-4001",
-      "target_label": "10 U.S.C. 4001",
-      "target_lane": "statute",
-      "relationship": "codifies_or_creates_note",
-      "evidence_type": "inferred_flowdown",
-      "confidence": 0.66,
-      "direction": "upstream",
-      "evidence": {
-        "basis": "shared_family_tags_and_authority_rank",
-        "shared_tags": [],
-        "shared_family": ""
+        "source_reference_id": "usc:10:111",
+        "label": "10 U.S.C. 111",
+        "first_line": 642,
+        "lines_sample": [
+          642
+        ],
+        "count": 1
       }
     },
     {
@@ -577,6 +608,28 @@
         "first_line": 2473,
         "lines_sample": [
           2473
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-50-section-3024->usc-title-10-section-4001:references:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-3024",
+      "source_label": "50 U.S.C. 3024",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-4001",
+      "target_label": "10 U.S.C. 4001",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:3024",
+        "label": "50 U.S.C. 3024",
+        "first_line": 2463,
+        "lines_sample": [
+          2463
         ],
         "count": 1
       }
@@ -646,6 +699,28 @@
           34253
         ],
         "count": 11
+      }
+    },
+    {
+      "id": "usc-title-10-section-4001->usc-title-22-section-2651a:references:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-4001",
+      "source_label": "10 U.S.C. 4001",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-22-section-2651a",
+      "target_label": "22 U.S.C. 2651a",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:4001",
+        "label": "10 U.S.C. 4001",
+        "first_line": 1673,
+        "lines_sample": [
+          1673
+        ],
+        "count": 1
       }
     }
   ],
@@ -775,23 +850,6 @@
       "count": 2,
       "lines_sample": [
         243
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:usc:10:111",
-      "label": "10 U.S.C. 111",
-      "title": "10 U.S.C. 111",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:10:111",
-      "count": 1,
-      "lines_sample": [
-        642
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -965,6 +1023,23 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "gap:usc:20:1067q",
+      "label": "20 U.S.C. 1067q",
+      "title": "20 U.S.C. 1067q",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:20:1067q",
+      "count": 1,
+      "lines_sample": [
+        2821
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -980,7 +1055,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-10-section-4001",
       "direction": "downstream",
-      "edge_count": 2
+      "edge_count": 3
     }
   ]
 }

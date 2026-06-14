@@ -2,22 +2,22 @@
   "generated_at": "2026-06-12T23:25:00.000Z",
   "queue_version": "governance-reference-ingestion-queue-v1",
   "summary": {
-    "queue_item_count": 1683,
-    "p0_count": 125,
-    "p1_count": 244,
-    "p2_count": 1231,
+    "queue_item_count": 1730,
+    "p0_count": 132,
+    "p1_count": 254,
+    "p2_count": 1261,
     "p3_count": 83,
-    "high_authority_count": 1445,
-    "source_artifact_count": 700
+    "high_authority_count": 1492,
+    "source_artifact_count": 704
   },
   "family_summary": [
     {
       "reference_family": "usc",
-      "item_count": 1047,
-      "occurrence_count": 1828,
-      "p0_count": 25,
-      "p1_count": 165,
-      "p2_count": 857,
+      "item_count": 1093,
+      "occurrence_count": 1876,
+      "p0_count": 31,
+      "p1_count": 176,
+      "p2_count": 886,
       "p3_count": 0
     },
     {
@@ -31,11 +31,11 @@
     },
     {
       "reference_family": "executive-order",
-      "item_count": 197,
-      "occurrence_count": 837,
-      "p0_count": 27,
-      "p1_count": 39,
-      "p2_count": 131,
+      "item_count": 198,
+      "occurrence_count": 845,
+      "p0_count": 28,
+      "p1_count": 38,
+      "p2_count": 132,
       "p3_count": 0
     },
     {
@@ -1319,10 +1319,12 @@
       "authority_tier": "high",
       "queue_priority": "P0",
       "score": 194,
-      "occurrence_count": 128,
-      "source_artifact_count": 80,
+      "occurrence_count": 131,
+      "source_artifact_count": 82,
       "source_artifact_ids": [
         "pl-118-31-fy2024-ndaa",
+        "usc-title-22-section-2651a",
+        "usc-title-50-section-3024",
         "eo-14110-ai",
         "dodd-1342-20",
         "dodd-1400-35",
@@ -1405,6 +1407,8 @@
       ],
       "source_artifact_titles": [
         "FY2024 NDAA",
+        "22 U.S.C. 2651a",
+        "50 U.S.C. 3024",
         "EO 14110",
         "DoDD 1342.20",
         "DoDD 1400.35",
@@ -1519,7 +1523,7 @@
         "Regenerate reference coverage and ingestion queue"
       ],
       "analyst_notes": [
-        "P0 because Executive Order 12333 appears 128 time(s) across 80 catalogued artifact(s).",
+        "P0 because Executive Order 12333 appears 131 time(s) across 82 catalogued artifact(s).",
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
@@ -3445,47 +3449,67 @@
       "queue_rank": 32
     },
     {
-      "id": "ingest-usc-42-9620",
-      "reference_key": "usc:42:9620",
-      "label": "42 U.S.C. 9620",
-      "reference_family": "usc",
-      "reference_type": "U.S. Code",
+      "id": "ingest-executive-order-13467",
+      "reference_key": "executive-order:13467",
+      "label": "Executive Order 13467",
+      "reference_family": "executive-order",
+      "reference_type": "Executive Order",
       "authority_tier": "high",
       "queue_priority": "P0",
       "score": 180,
-      "occurrence_count": 24,
-      "source_artifact_count": 2,
+      "occurrence_count": 17,
+      "source_artifact_count": 12,
       "source_artifact_ids": [
-        "pl-118-31-fy2024-ndaa",
-        "dodi-4165-72"
+        "usc-title-50-section-3024",
+        "dodd-5105-21",
+        "dodd-5105-22",
+        "dodd-5105-74",
+        "dodd-5110-04",
+        "dodd-5143-01",
+        "dowd-5105-42",
+        "dodi-5145-03",
+        "dodi-5200-02",
+        "dodi-5200-46",
+        "dodi-5210-45",
+        "dodi-5210-91"
       ],
       "source_artifact_titles": [
-        "FY2024 NDAA",
-        "DoDI 4165.72"
+        "50 U.S.C. 3024",
+        "DoDD 5105.21",
+        "DoDD 5105.22",
+        "DoDD 5105.74",
+        "DoDD 5110.04",
+        "DoDD 5143.01",
+        "DoWD 5105.42",
+        "DoDI 5145.03",
+        "DoDI 5200.02",
+        "DoDI 5200.46",
+        "DoDI 5210.45",
+        "DoDI 5210.91"
       ],
-      "first_line": 5797,
+      "first_line": 1673,
       "lines_sample": [
-        5797
+        1673
       ],
-      "recommended_artifact_id": "usc-title-42-section-9620",
-      "recommended_title": "42 U.S.C. 9620",
-      "recommended_artifact_type": "U.S. Code",
-      "recommended_authority_level": "law",
-      "recommended_source_system": "U.S. Code",
-      "recommended_source_location_type": "uscode_house_gov_section_html",
-      "capture_strategy": "official_html_snapshot",
+      "recommended_artifact_id": "eo-13467",
+      "recommended_title": "Executive Order 13467",
+      "recommended_artifact_type": "Executive Order",
+      "recommended_authority_level": "executive_order",
+      "recommended_source_system": "Federal Register",
+      "recommended_source_location_type": "federal_register_document",
+      "capture_strategy": "federal_register_api_or_html",
       "official_source_candidates": [
         {
-          "label": "U.S. Code section view",
-          "url": "https://uscode.house.gov/view.xhtml?req=(title:42%20section:9620%20edition:prelim)",
-          "source_system": "U.S. Code",
-          "expected_capture_method": "official_html_snapshot"
+          "label": "Federal Register search",
+          "url": "https://www.federalregister.gov/documents/search?conditions%5Bterm%5D=Executive%20Order%2013467",
+          "source_system": "Federal Register",
+          "expected_capture_method": "api_or_html_search"
         },
         {
-          "label": "GovInfo U.S. Code collection",
-          "url": "https://www.govinfo.gov/app/collection/uscode",
-          "source_system": "GovInfo",
-          "expected_capture_method": "collection_search"
+          "label": "National Archives executive orders",
+          "url": "https://www.archives.gov/federal-register/executive-orders",
+          "source_system": "National Archives",
+          "expected_capture_method": "official_index_search"
         }
       ],
       "ingestion_status": "queued",
@@ -3497,9 +3521,8 @@
         "Regenerate reference coverage and ingestion queue"
       ],
       "analyst_notes": [
-        "P0 because 42 U.S.C. 9620 appears 24 time(s) across 2 catalogued artifact(s).",
-        "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
-        "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
+        "P0 because Executive Order 13467 appears 17 time(s) across 12 catalogued artifact(s).",
+        "High-authority family should be catalogued before lower-echelon guidance that depends on it."
       ],
       "queue_rank": 33
     },
@@ -3644,82 +3667,6 @@
       "queue_rank": 35
     },
     {
-      "id": "ingest-executive-order-13467",
-      "reference_key": "executive-order:13467",
-      "label": "Executive Order 13467",
-      "reference_family": "executive-order",
-      "reference_type": "Executive Order",
-      "authority_tier": "high",
-      "queue_priority": "P0",
-      "score": 178,
-      "occurrence_count": 16,
-      "source_artifact_count": 11,
-      "source_artifact_ids": [
-        "dodd-5105-21",
-        "dodd-5105-22",
-        "dodd-5105-74",
-        "dodd-5110-04",
-        "dodd-5143-01",
-        "dowd-5105-42",
-        "dodi-5145-03",
-        "dodi-5200-02",
-        "dodi-5200-46",
-        "dodi-5210-45",
-        "dodi-5210-91"
-      ],
-      "source_artifact_titles": [
-        "DoDD 5105.21",
-        "DoDD 5105.22",
-        "DoDD 5105.74",
-        "DoDD 5110.04",
-        "DoDD 5143.01",
-        "DoWD 5105.42",
-        "DoDI 5145.03",
-        "DoDI 5200.02",
-        "DoDI 5200.46",
-        "DoDI 5210.45",
-        "DoDI 5210.91"
-      ],
-      "first_line": 1293,
-      "lines_sample": [
-        1293
-      ],
-      "recommended_artifact_id": "eo-13467",
-      "recommended_title": "Executive Order 13467",
-      "recommended_artifact_type": "Executive Order",
-      "recommended_authority_level": "executive_order",
-      "recommended_source_system": "Federal Register",
-      "recommended_source_location_type": "federal_register_document",
-      "capture_strategy": "federal_register_api_or_html",
-      "official_source_candidates": [
-        {
-          "label": "Federal Register search",
-          "url": "https://www.federalregister.gov/documents/search?conditions%5Bterm%5D=Executive%20Order%2013467",
-          "source_system": "Federal Register",
-          "expected_capture_method": "api_or_html_search"
-        },
-        {
-          "label": "National Archives executive orders",
-          "url": "https://www.archives.gov/federal-register/executive-orders",
-          "source_system": "National Archives",
-          "expected_capture_method": "official_index_search"
-        }
-      ],
-      "ingestion_status": "queued",
-      "mirror_requirements": [
-        "Identify authoritative landing/source URL",
-        "Mirror source document or authoritative HTML snapshot",
-        "Extract full text",
-        "Generate metadata, analytics, analysis, structured summary, claims, extractions, and reference map",
-        "Regenerate reference coverage and ingestion queue"
-      ],
-      "analyst_notes": [
-        "P0 because Executive Order 13467 appears 16 time(s) across 11 catalogued artifact(s).",
-        "High-authority family should be catalogued before lower-echelon guidance that depends on it."
-      ],
-      "queue_rank": 36
-    },
-    {
       "id": "ingest-executive-order-13556",
       "reference_key": "executive-order:13556",
       "label": "EXECUTIVE ORDER 13556",
@@ -3796,7 +3743,7 @@
         "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
         "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
       ],
-      "queue_rank": 37
+      "queue_rank": 36
     },
     {
       "id": "ingest-public-law-101-510",
@@ -3857,7 +3804,7 @@
         "P0 because Public Law 101-510 appears 12 time(s) across 6 catalogued artifact(s).",
         "High-authority family should be catalogued before lower-echelon guidance that depends on it."
       ],
-      "queue_rank": 38
+      "queue_rank": 37
     },
     {
       "id": "ingest-dodd-3020-26",
@@ -3936,7 +3883,7 @@
         "P0 because DoDD 3020.26 appears 19 time(s) across 15 catalogued artifact(s).",
         "High-authority family should be catalogued before lower-echelon guidance that depends on it."
       ],
-      "queue_rank": 39
+      "queue_rank": 38
     },
     {
       "id": "ingest-public-law-95-452",
@@ -3995,7 +3942,7 @@
         "P0 because Public Law 95-452 appears 11 time(s) across 5 catalogued artifact(s).",
         "High-authority family should be catalogued before lower-echelon guidance that depends on it."
       ],
-      "queue_rank": 40
+      "queue_rank": 39
     },
     {
       "id": "ingest-public-law-108-458",
@@ -4056,7 +4003,7 @@
         "P0 because Public Law 108-458 appears 10 time(s) across 6 catalogued artifact(s).",
         "High-authority family should be catalogued before lower-echelon guidance that depends on it."
       ],
-      "queue_rank": 41
+      "queue_rank": 40
     },
     {
       "id": "ingest-public-law-111-383",
@@ -4119,7 +4066,7 @@
         "P0 because Public Law 111-383 appears 10 time(s) across 7 catalogued artifact(s).",
         "High-authority family should be catalogued before lower-echelon guidance that depends on it."
       ],
-      "queue_rank": 42
+      "queue_rank": 41
     },
     {
       "id": "ingest-executive-order-12196",
@@ -4187,74 +4134,7 @@
         "P0 because Executive Order 12196 appears 13 time(s) across 7 catalogued artifact(s).",
         "High-authority family should be catalogued before lower-echelon guidance that depends on it."
       ],
-      "queue_rank": 43
-    },
-    {
-      "id": "ingest-usc-10-101",
-      "reference_key": "usc:10:101",
-      "label": "10 USC 101",
-      "reference_family": "usc",
-      "reference_type": "U.S. Code",
-      "authority_tier": "high",
-      "queue_priority": "P0",
-      "score": 172,
-      "occurrence_count": 11,
-      "source_artifact_count": 6,
-      "source_artifact_ids": [
-        "pl-118-159-fy2025-ndaa",
-        "pl-118-31-fy2024-ndaa",
-        "usc-title-10-section-113",
-        "dodd-2010-09",
-        "dodd-4715-12",
-        "dodi-5525-11"
-      ],
-      "source_artifact_titles": [
-        "FY2025 NDAA",
-        "FY2024 NDAA",
-        "10 U.S.C. 113",
-        "DoDD 2010.09",
-        "DoDD 4715.12",
-        "DoDI 5525.11"
-      ],
-      "first_line": 23,
-      "lines_sample": [
-        23
-      ],
-      "recommended_artifact_id": "usc-title-10-section-101",
-      "recommended_title": "10 U.S.C. 101",
-      "recommended_artifact_type": "U.S. Code",
-      "recommended_authority_level": "law",
-      "recommended_source_system": "U.S. Code",
-      "recommended_source_location_type": "uscode_house_gov_section_html",
-      "capture_strategy": "official_html_snapshot",
-      "official_source_candidates": [
-        {
-          "label": "U.S. Code section view",
-          "url": "https://uscode.house.gov/view.xhtml?req=(title:10%20section:101%20edition:prelim)",
-          "source_system": "U.S. Code",
-          "expected_capture_method": "official_html_snapshot"
-        },
-        {
-          "label": "GovInfo U.S. Code collection",
-          "url": "https://www.govinfo.gov/app/collection/uscode",
-          "source_system": "GovInfo",
-          "expected_capture_method": "collection_search"
-        }
-      ],
-      "ingestion_status": "queued",
-      "mirror_requirements": [
-        "Identify authoritative landing/source URL",
-        "Mirror source document or authoritative HTML snapshot",
-        "Extract full text",
-        "Generate metadata, analytics, analysis, structured summary, claims, extractions, and reference map",
-        "Regenerate reference coverage and ingestion queue"
-      ],
-      "analyst_notes": [
-        "P0 because 10 USC 101 appears 11 time(s) across 6 catalogued artifact(s).",
-        "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
-        "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
-      ],
-      "queue_rank": 44
+      "queue_rank": 42
     },
     {
       "id": "ingest-public-law-108-136",
@@ -4316,7 +4196,7 @@
         "P0 because Public Law 108-136 appears 9 time(s) across 7 catalogued artifact(s).",
         "High-authority family should be catalogued before lower-echelon guidance that depends on it."
       ],
-      "queue_rank": 45
+      "queue_rank": 43
     },
     {
       "id": "ingest-dodi-1315-18",
@@ -4382,7 +4262,75 @@
         "P0 because DoDI 1315.18 appears 16 time(s) across 9 catalogued artifact(s).",
         "High-authority family should be catalogued before lower-echelon guidance that depends on it."
       ],
-      "queue_rank": 46
+      "queue_rank": 44
+    },
+    {
+      "id": "ingest-usc-10-2687",
+      "reference_key": "usc:10:2687",
+      "label": "10 U.S.C. 2687",
+      "reference_family": "usc",
+      "reference_type": "U.S. Code",
+      "authority_tier": "high",
+      "queue_priority": "P0",
+      "score": 170,
+      "occurrence_count": 10,
+      "source_artifact_count": 6,
+      "source_artifact_ids": [
+        "pl-118-159-fy2025-ndaa",
+        "pl-118-31-fy2024-ndaa",
+        "usc-title-10-section-101",
+        "usc-title-10-section-111",
+        "usc-title-42-section-9620",
+        "dodi-4165-70"
+      ],
+      "source_artifact_titles": [
+        "FY2025 NDAA",
+        "FY2024 NDAA",
+        "10 U.S.C. 101",
+        "10 U.S.C. 111",
+        "42 U.S.C. 9620",
+        "DoDI 4165.70"
+      ],
+      "first_line": 31807,
+      "lines_sample": [
+        31807,
+        32214
+      ],
+      "recommended_artifact_id": "usc-title-10-section-2687",
+      "recommended_title": "10 U.S.C. 2687",
+      "recommended_artifact_type": "U.S. Code",
+      "recommended_authority_level": "law",
+      "recommended_source_system": "U.S. Code",
+      "recommended_source_location_type": "uscode_house_gov_section_html",
+      "capture_strategy": "official_html_snapshot",
+      "official_source_candidates": [
+        {
+          "label": "U.S. Code section view",
+          "url": "https://uscode.house.gov/view.xhtml?req=(title:10%20section:2687%20edition:prelim)",
+          "source_system": "U.S. Code",
+          "expected_capture_method": "official_html_snapshot"
+        },
+        {
+          "label": "GovInfo U.S. Code collection",
+          "url": "https://www.govinfo.gov/app/collection/uscode",
+          "source_system": "GovInfo",
+          "expected_capture_method": "collection_search"
+        }
+      ],
+      "ingestion_status": "queued",
+      "mirror_requirements": [
+        "Identify authoritative landing/source URL",
+        "Mirror source document or authoritative HTML snapshot",
+        "Extract full text",
+        "Generate metadata, analytics, analysis, structured summary, claims, extractions, and reference map",
+        "Regenerate reference coverage and ingestion queue"
+      ],
+      "analyst_notes": [
+        "P0 because 10 U.S.C. 2687 appears 10 time(s) across 6 catalogued artifact(s).",
+        "High-authority family should be catalogued before lower-echelon guidance that depends on it.",
+        "Appears in NDAA/public law text, so it is a strong candidate for law-layer expansion."
+      ],
+      "queue_rank": 45
     },
     {
       "id": "ingest-public-law-104-201",
@@ -4441,7 +4389,7 @@
         "P0 because Public Law 104-201 appears 8 time(s) across 5 catalogued artifact(s).",
         "High-authority family should be catalogued before lower-echelon guidance that depends on it."
       ],
-      "queue_rank": 47
+      "queue_rank": 46
     },
     {
       "id": "ingest-public-law-110-140",
@@ -4497,7 +4445,7 @@
         "P0 because Public Law 110-140 appears 8 time(s) across 4 catalogued artifact(s).",
         "High-authority family should be catalogued before lower-echelon guidance that depends on it."
       ],
-      "queue_rank": 48
+      "queue_rank": 47
     },
     {
       "id": "ingest-public-law-110-233",
@@ -4554,7 +4502,7 @@
         "P0 because Public Law 110-233 appears 8 time(s) across 4 catalogued artifact(s).",
         "High-authority family should be catalogued before lower-echelon guidance that depends on it."
       ],
-      "queue_rank": 49
+      "queue_rank": 48
     },
     {
       "id": "ingest-public-law-94-524",
@@ -4611,6 +4559,69 @@
       ],
       "analyst_notes": [
         "P0 because Public Law 94-524 appears 8 time(s) across 5 catalogued artifact(s).",
+        "High-authority family should be catalogued before lower-echelon guidance that depends on it."
+      ],
+      "queue_rank": 49
+    },
+    {
+      "id": "ingest-dodd-4500-56",
+      "reference_key": "dodd:4500.56",
+      "label": "DoDD 4500.56",
+      "reference_family": "dodd",
+      "reference_type": "DoD Directive",
+      "authority_tier": "medium",
+      "queue_priority": "P0",
+      "score": 168,
+      "occurrence_count": 47,
+      "source_artifact_count": 2,
+      "source_artifact_ids": [
+        "dodi-4500-43",
+        "dodi-4515-13"
+      ],
+      "source_artifact_titles": [
+        "DoDI 4500.43",
+        "DoDI 4515.13"
+      ],
+      "first_line": 105,
+      "lines_sample": [
+        105,
+        125,
+        131,
+        133,
+        143,
+        145,
+        166,
+        196,
+        201,
+        216,
+        232,
+        238
+      ],
+      "recommended_artifact_id": "dodd-4500-56",
+      "recommended_title": "DoDD 4500.56",
+      "recommended_artifact_type": "DoD Directive",
+      "recommended_authority_level": "guidance",
+      "recommended_source_system": "Official Source",
+      "recommended_source_location_type": "dodd_official_source",
+      "capture_strategy": "source_discovery_then_mirror",
+      "official_source_candidates": [
+        {
+          "label": "DoD issuances",
+          "url": "https://www.esd.whs.mil/Directives/issuances/",
+          "source_system": "DoD Issuances",
+          "expected_capture_method": "official_index_search"
+        }
+      ],
+      "ingestion_status": "queued",
+      "mirror_requirements": [
+        "Identify authoritative landing/source URL",
+        "Mirror source document or authoritative HTML snapshot",
+        "Extract full text",
+        "Generate metadata, analytics, analysis, structured summary, claims, extractions, and reference map",
+        "Regenerate reference coverage and ingestion queue"
+      ],
+      "analyst_notes": [
+        "P0 because DoDD 4500.56 appears 47 time(s) across 2 catalogued artifact(s).",
         "High-authority family should be catalogued before lower-echelon guidance that depends on it."
       ],
       "queue_rank": 50

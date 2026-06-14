@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 5,
-    "catalogued_node_count": 6,
+    "downstream_edge_count": 7,
+    "catalogued_node_count": 8,
     "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 5,
+    "evidence_backed_edge_count": 7,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -117,6 +117,21 @@
       "status": "catalogued"
     },
     {
+      "id": "usc-title-22-section-2651a",
+      "label": "22 U.S.C. 2651a",
+      "title": "22 U.S.C. 2651a: Organization of Department of State",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "foreign_affairs",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "usc-title-50-section-3003",
       "label": "50 U.S.C. 3003",
       "title": "50 U.S.C. 3003: Definitions",
@@ -130,6 +145,21 @@
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "usc-title-50-section-3024",
+      "label": "50 U.S.C. 3024",
+      "title": "50 U.S.C. 3024: Responsibilities and authorities of the Director of National Intelligence",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "national_security",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:50:401a",
@@ -311,6 +341,50 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "usc-title-50-section-3003->usc-title-22-section-2651a:references:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-3003",
+      "source_label": "50 U.S.C. 3003",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-22-section-2651a",
+      "target_label": "22 U.S.C. 2651a",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:3003",
+        "label": "50 U.S.C. 3003",
+        "first_line": 2839,
+        "lines_sample": [
+          2839
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-50-section-3003->usc-title-50-section-3024:references:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-3003",
+      "source_label": "50 U.S.C. 3003",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-50-section-3024",
+      "target_label": "50 U.S.C. 3024",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:3003",
+        "label": "50 U.S.C. 3003",
+        "first_line": 2510,
+        "lines_sample": [
+          2510
+        ],
+        "count": 1
+      }
     }
   ],
   "uncatalogued_authority_gaps": [
@@ -347,7 +421,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-50-section-3003",
       "direction": "downstream",
-      "edge_count": 5
+      "edge_count": 7
     }
   ]
 }

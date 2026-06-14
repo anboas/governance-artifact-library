@@ -61,13 +61,13 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 1,
     "downstream_edge_count": 9,
-    "catalogued_node_count": 10,
-    "uncatalogued_gap_count": 6,
-    "evidence_backed_edge_count": 5,
+    "catalogued_node_count": 11,
+    "uncatalogued_gap_count": 5,
+    "evidence_backed_edge_count": 6,
     "inferred_edge_count": 4,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
@@ -106,21 +106,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:10:101",
+      "id": "usc-title-10-section-101",
       "label": "10 U.S.C. 101",
-      "title": "10 U.S.C. 101",
+      "title": "10 U.S.C. 101: Definitions",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:10:101",
-      "count": 1,
-      "lines_sample": [
-        521
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:10:2306c",
@@ -325,7 +323,30 @@
       "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "usc-title-10-section-101->dodd-2010-09:flows_down:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-101",
+      "source_label": "10 U.S.C. 101",
+      "source_lane": "statute",
+      "target_artifact_id": "dodd-2010-09",
+      "target_label": "DoDD 2010.09",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:101",
+        "label": "10 U.S.C. 101",
+        "first_line": 521,
+        "lines_sample": [
+          521
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "dodd-2010-09->dodi-1000-01:flows_down:inferred_flowdown",
@@ -550,23 +571,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:10:101",
-      "label": "10 U.S.C. 101",
-      "title": "10 U.S.C. 101",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:10:101",
-      "count": 1,
-      "lines_sample": [
-        521
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:10:2306c",
       "label": "10 U.S.C. 2306c",
       "title": "10 U.S.C. 2306c",
@@ -641,7 +645,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodd-2010-09",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",

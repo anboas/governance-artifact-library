@@ -2,23 +2,28 @@
 
 Generated: 2026-06-12T23:25:00.000Z
 
-- Artifacts: 1158
-- Resolved reference edges: 5096
-- Uncatalogued references: 1683
-- Artifacts with uncatalogued references: 700
+- Artifacts: 1163
+- Resolved reference edges: 5122
+- Uncatalogued references: 1730
+- Artifacts with uncatalogued references: 704
 
 ## Artifact Summary
 
 | Artifact | Resolved | Uncatalogued | Targets |
 | --- | ---: | ---: | ---: |
-| pl-118-159-fy2025-ndaa | 5 | 431 | 5 |
-| pl-118-31-fy2024-ndaa | 5 | 578 | 5 |
-| usc-title-10-section-113 | 1 | 34 | 1 |
+| pl-118-159-fy2025-ndaa | 9 | 427 | 9 |
+| pl-118-31-fy2024-ndaa | 10 | 573 | 10 |
+| usc-title-10-section-101 | 1 | 4 | 1 |
+| usc-title-10-section-111 | 3 | 64 | 3 |
+| usc-title-10-section-113 | 2 | 33 | 2 |
 | usc-title-10-section-2222 | 1 | 1 | 1 |
 | usc-title-10-section-2224 | 2 | 19 | 2 |
-| usc-title-10-section-4001 | 4 | 23 | 4 |
+| usc-title-10-section-4001 | 6 | 21 | 6 |
+| usc-title-22-section-2651a | 3 | 10 | 3 |
+| usc-title-42-section-9620 | 1 | 6 | 1 |
 | usc-title-44-section-3502 | 1 | 3 | 1 |
 | usc-title-50-section-3003 | 1 | 1 | 1 |
+| usc-title-50-section-3024 | 2 | 20 | 2 |
 | eo-14028-cybersecurity | 3 | 3 | 3 |
 | eo-14110-ai | 2 | 30 | 2 |
 | omb-m-21-31-cyber-logging | 2 | 2 | 2 |
@@ -61,7 +66,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodd-2000-13 | 9 | 1 | 9 |
 | dodd-2005-02e | 0 | 1 | 0 |
 | dodd-2010-05 | 3 | 0 | 3 |
-| dodd-2010-09 | 1 | 6 | 1 |
+| dodd-2010-09 | 2 | 5 | 2 |
 | dodd-2060-01 | 1 | 0 | 1 |
 | dodd-2060-02 | 1 | 0 | 1 |
 | dodd-2065-01e | 0 | 0 | 0 |
@@ -122,7 +127,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodd-4650-05 | 1 | 0 | 1 |
 | dodd-4705-01e | 0 | 0 | 0 |
 | dodd-4715-11 | 1 | 4 | 1 |
-| dodd-4715-12 | 1 | 1 | 1 |
+| dodd-4715-12 | 2 | 0 | 2 |
 | dodd-4715-1e | 0 | 2 | 0 |
 | dodd-4715-21 | 6 | 3 | 6 |
 | dodd-5000-01-defense-acquisition-system | 9 | 1 | 9 |
@@ -689,7 +694,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-4165-69 | 5 | 2 | 5 |
 | dodi-4165-70 | 1 | 5 | 1 |
 | dodi-4165-71 | 1 | 2 | 1 |
-| dodi-4165-72 | 1 | 4 | 1 |
+| dodi-4165-72 | 2 | 3 | 2 |
 | dodi-4165-73 | 36 | 4 | 36 |
 | dodi-4170-11 | 1 | 4 | 1 |
 | dodi-4180-02 | 4 | 0 | 4 |
@@ -914,7 +919,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-5525-07 | 1 | 0 | 1 |
 | dodi-5525-08 | 1 | 0 | 1 |
 | dodi-5525-09 | 1 | 0 | 1 |
-| dodi-5525-11 | 1 | 13 | 1 |
+| dodi-5525-11 | 2 | 12 | 2 |
 | dodi-5525-12 | 1 | 1 | 1 |
 | dodi-5525-13 | 1 | 0 | 1 |
 | dodi-5525-14 | 1 | 1 | 1 |
@@ -1175,7 +1180,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | Reference | Family | Occurrences | Sources | Priority |
 | --- | --- | ---: | ---: | --- |
 | Public Law 116-92 | public-law | 189 | 94 | high |
-| Executive Order 12333 | executive-order | 128 | 80 | high |
+| Executive Order 12333 | executive-order | 131 | 82 | high |
 | DoDI 5000.02 | dodi | 92 | 61 | high |
 | Public Law 113-291 | public-law | 86 | 14 | high |
 | DoDI 5025.01 | dodi | 79 | 47 | high |
@@ -1197,7 +1202,6 @@ Generated: 2026-06-12T23:25:00.000Z
 | Executive Order 14173 | executive-order | 28 | 21 | high |
 | DoDD 5205.16 | dodd | 26 | 23 | high |
 | Executive Order 10450 | executive-order | 25 | 19 | high |
-| 42 U.S.C. 9620 | usc | 24 | 2 | high |
 | Public Law 111-84 | public-law | 23 | 15 | high |
 | DoDI 1342.22 | dodi | 20 | 14 | high |
 | Public Law 104-191 | public-law | 20 | 13 | high |
@@ -1209,15 +1213,13 @@ Generated: 2026-06-12T23:25:00.000Z
 | Public Law 107-347 | public-law | 18 | 10 | high |
 | Public Law 109-364 | public-law | 18 | 9 | high |
 | Public Law 117-263 | public-law | 18 | 10 | high |
-| 22 U.S.C. 2651a | usc | 17 | 2 | high |
 | 5 U.S.C. 2302 | usc | 17 | 1 | high |
+| Executive Order 13467 | executive-order | 17 | 12 | high |
 | Public Law 105-261 | public-law | 17 | 5 | high |
 | Public Law 117-81 | public-law | 17 | 10 | high |
 | DoDI 1315.18 | dodi | 16 | 9 | high |
-| Executive Order 13467 | executive-order | 16 | 11 | high |
 | EXECUTIVE ORDER 13556 | executive-order | 16 | 12 | high |
 | NIST SP 800-37 | nist-sp | 16 | 5 | low |
-| 10 U.S.C. 111 | usc | 14 | 3 | high |
 | 10 U.S.C. 4205 | usc | 14 | 1 | high |
 | 31 U.S.C. 3702 | usc | 13 | 2 | high |
 | DoDD 5110.10 | dodd | 13 | 5 | high |
@@ -1228,13 +1230,13 @@ Generated: 2026-06-12T23:25:00.000Z
 | DoDI 6130.03 | dodi | 13 | 9 | high |
 | Executive Order 12196 | executive-order | 13 | 7 | high |
 | Public Law 108-375 | public-law | 13 | 8 | high |
-| 50 U.S.C. 3024 | usc | 12 | 3 | high |
 | DoDD 5230.09 | dodd | 12 | 10 | high |
 | NIST SP 800-171 | nist-sp | 12 | 4 | low |
 | Public Law 101-510 | public-law | 12 | 6 | high |
-| 10 USC 101 | usc | 11 | 6 | high |
 | Executive Order 13327 | executive-order | 11 | 6 | high |
 | Public Law 95-452 | public-law | 11 | 5 | high |
+| 10 U.S.C. 1071 | usc | 10 | 2 | high |
+| 10 U.S.C. 2687 | usc | 10 | 6 | high |
 | 22 U.S.C. 2778 | usc | 10 | 3 | high |
 | DoDI 5220.22 | dodi | 10 | 8 | high |
 | Executive Order 12114 | executive-order | 10 | 6 | high |
@@ -1246,6 +1248,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | 15 U.S.C. 632 | usc | 9 | 3 | high |
 | 42 U.S.C. 300mm | usc | 9 | 1 | high |
 | 42 U.S.C. 4321 | usc | 9 | 2 | high |
+| 50 U.S.C. 3161 | usc | 9 | 3 | high |
 | 8 U.S.C. 1101 | usc | 9 | 3 | high |
 | DoDI 1350.02 | dodi | 9 | 8 | high |
 | Executive Order 13388 | executive-order | 9 | 7 | high |
@@ -1254,4 +1257,6 @@ Generated: 2026-06-12T23:25:00.000Z
 | Executive Order 14091 | executive-order | 9 | 2 | high |
 | Public Law 104-113 | public-law | 9 | 3 | high |
 | Public Law 108-136 | public-law | 9 | 7 | high |
+| 10 U.S.C. 3201 | usc | 8 | 2 | high |
+| 10 U.S.C. 4811 | usc | 8 | 3 | high |
 

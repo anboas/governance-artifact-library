@@ -2,10 +2,10 @@
 
 Generated: 2026-06-13T13:55:00.000Z
 
-- Artifacts: 1158
-- Nodes: 1158
-- Edges: 5289
-- Evidence-backed reference edges: 4079
+- Artifacts: 1163
+- Nodes: 1163
+- Edges: 5310
+- Evidence-backed reference edges: 4100
 - Inferred flowdown edges: 1210
 
 ## Lanes
@@ -25,14 +25,19 @@ Generated: 2026-06-13T13:55:00.000Z
 
 | Artifact | Upstream | Downstream | Gaps | Status |
 | --- | ---: | ---: | ---: | --- |
-| pl-118-159-fy2025-ndaa | 5 | 5 | 18 | root_authority |
-| pl-118-31-fy2024-ndaa | 5 | 10 | 18 | root_authority |
-| usc-title-10-section-113 | 2 | 4 | 18 | root_authority |
-| usc-title-10-section-2222 | 2 | 2 | 1 | root_authority |
-| usc-title-10-section-2224 | 3 | 3 | 18 | root_authority |
-| usc-title-10-section-4001 | 5 | 2 | 18 | root_authority |
+| pl-118-159-fy2025-ndaa | 9 | 5 | 18 | root_authority |
+| pl-118-31-fy2024-ndaa | 10 | 10 | 18 | root_authority |
+| usc-title-10-section-101 | 2 | 6 | 4 | root_authority |
+| usc-title-10-section-111 | 4 | 3 | 18 | root_authority |
+| usc-title-10-section-113 | 3 | 5 | 18 | root_authority |
+| usc-title-10-section-2222 | 2 | 3 | 1 | root_authority |
+| usc-title-10-section-2224 | 1 | 3 | 18 | root_authority |
+| usc-title-10-section-4001 | 5 | 3 | 18 | root_authority |
+| usc-title-22-section-2651a | 2 | 2 | 10 | root_authority |
+| usc-title-42-section-9620 | 0 | 2 | 6 | root_authority |
 | usc-title-44-section-3502 | 0 | 4 | 3 | root_authority |
-| usc-title-50-section-3003 | 0 | 5 | 1 | root_authority |
+| usc-title-50-section-3003 | 0 | 7 | 1 | root_authority |
+| usc-title-50-section-3024 | 1 | 3 | 18 | root_authority |
 | eo-14028-cybersecurity | 2 | 8 | 3 | evidence_backed |
 | eo-14110-ai | 1 | 3 | 18 | evidence_backed |
 | omb-m-21-31-cyber-logging | 3 | 3 | 1 | evidence_backed |
@@ -75,7 +80,7 @@ Generated: 2026-06-13T13:55:00.000Z
 | dodd-2000-13 | 8 | 5 | 1 | evidence_backed |
 | dodd-2005-02e | 0 | 4 | 1 | authority_gap |
 | dodd-2010-05 | 2 | 4 | 0 | evidence_backed |
-| dodd-2010-09 | 0 | 9 | 6 | authority_gap |
+| dodd-2010-09 | 1 | 9 | 5 | evidence_backed |
 | dodd-2060-01 | 0 | 9 | 0 | authority_gap |
 | dodd-2060-02 | 0 | 14 | 0 | authority_gap |
 | dodd-2065-01e | 0 | 4 | 0 | authority_gap |
@@ -136,7 +141,7 @@ Generated: 2026-06-13T13:55:00.000Z
 | dodd-4650-05 | 0 | 9 | 0 | authority_gap |
 | dodd-4705-01e | 0 | 4 | 0 | authority_gap |
 | dodd-4715-11 | 0 | 6 | 4 | authority_gap |
-| dodd-4715-12 | 0 | 5 | 1 | authority_gap |
+| dodd-4715-12 | 1 | 5 | 0 | evidence_backed |
 | dodd-4715-1e | 0 | 4 | 2 | authority_gap |
 | dodd-4715-21 | 5 | 7 | 3 | evidence_backed |
 | dodd-5000-01-defense-acquisition-system | 9 | 56 | 1 | evidence_backed |
@@ -703,7 +708,7 @@ Generated: 2026-06-13T13:55:00.000Z
 | dodi-4165-69 | 4 | 1 | 2 | evidence_backed |
 | dodi-4165-70 | 0 | 11 | 5 | authority_gap |
 | dodi-4165-71 | 0 | 3 | 2 | authority_gap |
-| dodi-4165-72 | 0 | 1 | 4 | authority_gap |
+| dodi-4165-72 | 1 | 1 | 3 | evidence_backed |
 | dodi-4165-73 | 35 | 0 | 4 | evidence_backed |
 | dodi-4170-11 | 0 | 4 | 4 | authority_gap |
 | dodi-4180-02 | 3 | 2 | 0 | evidence_backed |
@@ -928,7 +933,7 @@ Generated: 2026-06-13T13:55:00.000Z
 | dodi-5525-07 | 0 | 6 | 0 | authority_gap |
 | dodi-5525-08 | 0 | 0 | 0 | authority_gap |
 | dodi-5525-09 | 0 | 0 | 0 | authority_gap |
-| dodi-5525-11 | 0 | 2 | 13 | authority_gap |
+| dodi-5525-11 | 1 | 2 | 12 | evidence_backed |
 | dodi-5525-12 | 0 | 1 | 1 | authority_gap |
 | dodi-5525-13 | 0 | 1 | 0 | authority_gap |
 | dodi-5525-14 | 0 | 1 | 1 | authority_gap |

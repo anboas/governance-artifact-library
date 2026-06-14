@@ -61,13 +61,13 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 1,
     "downstream_edge_count": 1,
-    "catalogued_node_count": 2,
-    "uncatalogued_gap_count": 4,
-    "evidence_backed_edge_count": 1,
+    "catalogued_node_count": 3,
+    "uncatalogued_gap_count": 3,
+    "evidence_backed_edge_count": 2,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
@@ -89,32 +89,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:42:9620",
-      "label": "42 U.S.C. § 9620",
-      "title": "42 U.S.C. § 9620",
+      "id": "usc-title-42-section-9620",
+      "label": "42 U.S.C. 9620",
+      "title": "42 U.S.C. 9620: Federal facilities",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:9620",
-      "count": 23,
-      "lines_sample": [
-        322,
-        332,
-        376,
-        387,
-        409,
-        425,
-        429,
-        645,
-        649,
-        671,
-        687,
-        697
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:executive-order:11988",
@@ -181,7 +168,41 @@
       "status": "current"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "usc-title-42-section-9620->dodi-4165-72:flows_down:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-9620",
+      "source_label": "42 U.S.C. 9620",
+      "source_lane": "statute",
+      "target_artifact_id": "dodi-4165-72",
+      "target_label": "DoDI 4165.72",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:9620",
+        "label": "42 U.S.C. § 9620",
+        "first_line": 322,
+        "lines_sample": [
+          322,
+          332,
+          376,
+          387,
+          409,
+          425,
+          429,
+          645,
+          649,
+          671,
+          687,
+          697
+        ],
+        "count": 23
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "dodi-4165-72->dodd-4165-06:references_upstream:resolved_reference",
@@ -207,34 +228,6 @@
     }
   ],
   "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:usc:42:9620",
-      "label": "42 U.S.C. § 9620",
-      "title": "42 U.S.C. § 9620",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:9620",
-      "count": 23,
-      "lines_sample": [
-        322,
-        332,
-        376,
-        387,
-        409,
-        425,
-        429,
-        645,
-        649,
-        671,
-        687,
-        697
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
     {
       "id": "gap:executive-order:11988",
       "label": "Executive Order 11988",
@@ -293,7 +286,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-4165-72",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",
