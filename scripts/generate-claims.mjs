@@ -29,6 +29,8 @@ const ACTOR_RULES = [
 
 const manifest = readJson("manifest.json");
 let changed = 0;
+const artifactSummaries = [];
+const aggregateByType = {};
 
 for (const entry of manifest.artifacts) {
   const artifactPath = entry.path;
@@ -36,6 +38,15 @@ for (const entry of manifest.artifacts) {
   const claimsPath = `artifacts/${artifact.id}/claims/claims.json`;
   const claims = buildClaims(artifact, claimsPath);
   changed += writeIfChanged(claimsPath, `${JSON.stringify(claims, null, 2)}\n`);
+  artifactSummaries.push({
+    artifact_id: artifact.id,
+    title: artifact.title,
+    claims_status: claims.claims_status,
+    ...claims.summary,
+  });
+  Object.entries(claims.summary.by_type || {}).forEach(([type, count]) => {
+    aggregateByType[type] = (aggregateByType[type] || 0) + count;
+  });
 
   if (artifact.claims_path !== claimsPath || !artifact.analytic_lanes?.includes("claims_extraction")) {
     const next = {
@@ -47,11 +58,32 @@ for (const entry of manifest.artifacts) {
   }
 }
 
+const claimCoverageMap = {
+  generated_at: GENERATED_AT,
+  extractor_version: EXTRACTOR_VERSION,
+  artifact_count: manifest.artifacts.length,
+  summary: {
+    claim_count: sumField(artifactSummaries, "claim_count"),
+    artifacts_with_claims: artifactSummaries.filter(item => item.claim_count > 0).length,
+    artifacts_without_source_text: artifactSummaries.filter(item => item.claims_status === "source_text_unavailable").length,
+    requirement_count: sumField(artifactSummaries, "requirement_count"),
+    reporting_requirement_count: sumField(artifactSummaries, "reporting_requirement_count"),
+    decision_authority_count: sumField(artifactSummaries, "decision_authority_count"),
+    prohibition_count: sumField(artifactSummaries, "prohibition_count"),
+    permission_count: sumField(artifactSummaries, "permission_count"),
+    policy_statement_count: sumField(artifactSummaries, "policy_statement_count"),
+    by_type: Object.fromEntries(Object.entries(aggregateByType).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))),
+  },
+  artifact_summaries: artifactSummaries.sort((a, b) => b.claim_count - a.claim_count || a.artifact_id.localeCompare(b.artifact_id)),
+};
+changed += writeIfChanged("data/claim-coverage-map.json", `${JSON.stringify(claimCoverageMap, null, 2)}\n`);
+changed += writeIfChanged("docs/claim-coverage-map.md", renderClaimCoverageMarkdown(claimCoverageMap));
+
 if (CHECK && changed) {
   throw new Error(`Claim artifacts are stale; ${changed} file(s) need regeneration.`);
 }
 
-console.log(`${CHECK ? "Checked" : "Generated"} claim sidecars for ${manifest.artifacts.length} artifacts${CHECK ? "" : ` (${changed} file changes)`}.`);
+console.log(`${CHECK ? "Checked" : "Generated"} claim sidecars for ${manifest.artifacts.length} artifacts; ${claimCoverageMap.summary.claim_count} claims${CHECK ? "" : ` (${changed} file changes)`}.`);
 
 function buildClaims(artifact, claimsPath) {
   const textPath = artifact.extracted_text_path;
@@ -206,6 +238,41 @@ function summarizeClaims(claims, totalLineCount) {
     policy_statement_count: byType.policy_statement || 0,
     by_type: byType,
   };
+}
+
+function sumField(rows, field) {
+  return rows.reduce((sum, row) => sum + Number(row[field] || 0), 0);
+}
+
+function renderClaimCoverageMarkdown(map) {
+  return [
+    "# Claim Coverage Map",
+    "",
+    `Generated: ${map.generated_at}`,
+    "",
+    "## Summary",
+    "",
+    `- Artifacts: ${map.artifact_count}`,
+    `- Claims: ${map.summary.claim_count}`,
+    `- Artifacts with claims: ${map.summary.artifacts_with_claims}`,
+    `- Source-text unavailable: ${map.summary.artifacts_without_source_text}`,
+    `- Requirements: ${map.summary.requirement_count}`,
+    `- Reporting requirements: ${map.summary.reporting_requirement_count}`,
+    `- Decision authorities: ${map.summary.decision_authority_count}`,
+    "",
+    "## Claim Types",
+    "",
+    "| Type | Count |",
+    "| --- | ---: |",
+    ...Object.entries(map.summary.by_type).map(([type, count]) => `| ${type} | ${count} |`),
+    "",
+    "## Top Artifacts",
+    "",
+    "| Artifact | Claims | Requirements | Reporting | Decision Authority |",
+    "| --- | ---: | ---: | ---: | ---: |",
+    ...map.artifact_summaries.slice(0, 80).map(item => `| ${item.artifact_id} | ${item.claim_count} | ${item.requirement_count} | ${item.reporting_requirement_count} | ${item.decision_authority_count} |`),
+    "",
+  ].join("\n");
 }
 
 function unique(values) {

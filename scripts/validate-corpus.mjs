@@ -125,6 +125,8 @@ assert.equal(existsSync(join(ROOT, "taxonomies", "governance-item-universe.json"
 assert.equal(existsSync(join(ROOT, "data", "artifact-index.json")), true, "artifact index missing");
 assert.equal(existsSync(join(ROOT, "data", "reference-coverage-map.json")), true, "reference coverage map missing");
 assert.equal(existsSync(join(ROOT, "docs", "reference-coverage-map.md")), true, "reference coverage docs missing");
+assert.equal(existsSync(join(ROOT, "data", "claim-coverage-map.json")), true, "claim coverage map missing");
+assert.equal(existsSync(join(ROOT, "docs", "claim-coverage-map.md")), true, "claim coverage docs missing");
 assert.equal(existsSync(join(ROOT, "data", "authority-chain-map.json")), true, "authority chain map missing");
 assert.equal(existsSync(join(ROOT, "docs", "authority-chain-map.md")), true, "authority chain docs missing");
 assert.equal(existsSync(join(ROOT, "data", "reference-ingestion-queue.json")), true, "reference ingestion queue missing");
@@ -141,6 +143,7 @@ assert.equal(existsSync(join(ROOT, "data", "source-acquisition-packet-example.js
 assert.equal(existsSync(join(ROOT, "data", "source-acquisition-capture-plan.example.json")), true, "source acquisition capture plan example missing");
 
 const referenceCoverage = readJson("data/reference-coverage-map.json");
+const claimCoverage = readJson("data/claim-coverage-map.json");
 const authorityChainMap = readJson("data/authority-chain-map.json");
 const artifactIndex = readJson("data/artifact-index.json");
 const ingestionQueue = readJson("data/reference-ingestion-queue.json");
@@ -153,6 +156,11 @@ const sourceAcquisitionCapturePlanExample = readJson("data/source-acquisition-ca
 assert.equal(artifactIndex.artifact_count, manifest.artifact_count, "artifact index count should match manifest");
 assert.equal(artifactIndex.artifacts?.length, manifest.artifact_count, "artifact index artifacts should match manifest");
 assert.ok(artifactIndex.artifacts.every(artifact => artifact.id && artifact.manifest_path), "artifact index rows need ids and manifest paths");
+assert.equal(claimCoverage.artifact_count, manifest.artifact_count, "claim coverage map count should match manifest");
+assert.equal(Array.isArray(claimCoverage.artifact_summaries), true, "claim coverage artifact summaries must be an array");
+assert.equal(claimCoverage.artifact_summaries.length, manifest.artifact_count, "claim coverage should summarize every artifact");
+assert.ok(claimCoverage.summary?.claim_count >= mirrored, "claim coverage should expose corpus claim totals");
+assert.ok(claimCoverage.summary?.artifacts_with_claims >= mirrored, "claim coverage should count artifacts with claims");
 assert.equal(authorityChainMap.artifact_count, manifest.artifact_count, "authority chain map count should match manifest");
 assert.equal(Array.isArray(authorityChainMap.nodes), true, "authority chain map nodes must be an array");
 assert.equal(Array.isArray(authorityChainMap.edges), true, "authority chain map edges must be an array");
