@@ -2,440 +2,2297 @@
   "description": "Official source discovery registry for Policy Intelligence. Tracks source owners, endpoints, feeds, search surfaces, capture strategy, and known automation status.",
   "sources": [
     {
-      "id": "govinfo",
-      "name": "GovInfo",
-      "source_owner": "U.S. Government Publishing Office",
-      "issuing_authority_scope": ["Congress", "Federal Register", "Federal agencies"],
-      "source_location_types": ["govinfo_public_law_pdf"],
-      "artifact_types": ["Public Law", "Appropriations Law", "Congressional Bill", "CFR Annual Edition", "Federal Register"],
-      "families": ["defense_authorization", "appropriations", "federal_register", "regulation"],
-      "landing_pages": ["https://www.govinfo.gov/"],
-      "api_endpoints": ["https://api.govinfo.gov/docs/", "https://api.govinfo.gov/"],
-      "feed_endpoints": [],
-      "search_endpoints": ["https://www.govinfo.gov/app/search/"],
-      "sitemap_urls": ["https://www.govinfo.gov/sitemap.xml"],
-      "robots_url": "https://www.govinfo.gov/robots.txt",
-      "capture_strategies": ["api", "direct_fetch", "content_package_fetch"],
-      "automation_status": "direct_fetch_ready",
-      "api_key_required": true,
-      "priority": "critical",
-      "notes": "Canonical public source for public laws, congressional documents, and GPO packages."
-    },
-    {
-      "id": "congress-gov",
-      "name": "Congress.gov",
-      "source_owner": "Library of Congress",
-      "issuing_authority_scope": ["Congress"],
-      "source_location_types": ["congress_gov_api", "congress_gov_html"],
-      "artifact_types": ["Congressional Bill", "Bill Status", "Committee Report"],
-      "families": ["legislation", "appropriations", "defense_authorization"],
-      "landing_pages": ["https://www.congress.gov/"],
-      "api_endpoints": ["https://api.congress.gov/"],
-      "feed_endpoints": [],
-      "search_endpoints": ["https://www.congress.gov/search"],
-      "sitemap_urls": ["https://www.congress.gov/sitemap.xml"],
-      "robots_url": "https://www.congress.gov/robots.txt",
-      "capture_strategies": ["api", "direct_fetch"],
-      "automation_status": "api_key_required",
-      "api_key_required": true,
-      "priority": "critical",
-      "notes": "Best source for pre-enactment bill and legislative-status metadata before GovInfo public law capture."
-    },
-    {
-      "id": "us-code-olrc",
-      "name": "U.S. Code",
-      "source_owner": "Office of the Law Revision Counsel",
-      "issuing_authority_scope": ["Congress"],
-      "source_location_types": ["us_code_html", "us_code_xml"],
-      "artifact_types": ["U.S. Code"],
-      "families": ["statute", "defense_business_systems", "acquisition", "cybersecurity"],
-      "landing_pages": ["https://uscode.house.gov/"],
-      "api_endpoints": [],
-      "feed_endpoints": [],
-      "search_endpoints": ["https://uscode.house.gov/search/criteria.shtml"],
-      "sitemap_urls": [],
-      "robots_url": "https://uscode.house.gov/robots.txt",
-      "capture_strategies": ["direct_fetch", "html_parse"],
-      "automation_status": "direct_fetch_ready",
-      "api_key_required": false,
-      "priority": "critical",
-      "notes": "Canonical U.S. Code HTML/XML source for codified authority."
-    },
-    {
-      "id": "federal-register",
-      "name": "Federal Register",
-      "source_owner": "Office of the Federal Register / National Archives and Records Administration",
-      "issuing_authority_scope": ["President", "Federal agencies"],
-      "source_location_types": ["federal_register_html", "federal_register_api"],
-      "artifact_types": ["Executive Order", "Presidential Memorandum", "Rule", "Notice"],
-      "families": ["presidential_directive", "regulation", "cybersecurity", "ai_governance"],
-      "landing_pages": ["https://www.federalregister.gov/"],
-      "api_endpoints": ["https://www.federalregister.gov/developers/documentation/api/v1"],
-      "feed_endpoints": ["https://www.federalregister.gov/documents/search.rss"],
-      "search_endpoints": ["https://www.federalregister.gov/documents/search"],
-      "sitemap_urls": ["https://www.federalregister.gov/sitemap.xml"],
-      "robots_url": "https://www.federalregister.gov/robots.txt",
-      "capture_strategies": ["api", "direct_fetch", "rss"],
-      "automation_status": "direct_fetch_ready",
-      "api_key_required": false,
-      "priority": "critical",
-      "notes": "API is keyless and suitable for presidential documents and agency notices."
-    },
-    {
-      "id": "ecfr",
-      "name": "eCFR",
-      "source_owner": "Office of the Federal Register / National Archives and Records Administration",
-      "issuing_authority_scope": ["Federal agencies"],
-      "source_location_types": ["ecfr_api", "ecfr_html"],
-      "artifact_types": ["CFR", "Regulation"],
-      "families": ["regulation", "acquisition", "cybersecurity"],
-      "landing_pages": ["https://www.ecfr.gov/"],
-      "api_endpoints": ["https://www.ecfr.gov/developers/documentation/api/v1"],
-      "feed_endpoints": [],
-      "search_endpoints": ["https://www.ecfr.gov/search"],
-      "sitemap_urls": ["https://www.ecfr.gov/sitemap.xml"],
-      "robots_url": "https://www.ecfr.gov/robots.txt",
-      "capture_strategies": ["api", "direct_fetch"],
-      "automation_status": "direct_fetch_ready",
-      "api_key_required": false,
-      "priority": "high",
-      "notes": "Point-in-time regulatory source; important for FAR/CFR alignment."
-    },
-    {
       "id": "acquisition-gov",
       "name": "Acquisition.gov",
       "source_owner": "General Services Administration",
-      "issuing_authority_scope": ["FAR Council", "Defense Acquisition Regulations System"],
-      "source_location_types": ["acquisition_gov_html"],
-      "artifact_types": ["Regulation", "FAR", "DFARS"],
-      "families": ["acquisition", "defense_contracting"],
-      "landing_pages": ["https://www.acquisition.gov/"],
+      "issuing_authority_scope": [
+        "FAR Council",
+        "Defense Acquisition Regulations System"
+      ],
+      "source_location_types": [
+        "acquisition_gov_html"
+      ],
+      "artifact_types": [
+        "Regulation",
+        "FAR",
+        "DFARS"
+      ],
+      "families": [
+        "acquisition",
+        "defense_contracting"
+      ],
+      "landing_pages": [
+        "https://www.acquisition.gov/"
+      ],
       "api_endpoints": [],
       "feed_endpoints": [],
-      "search_endpoints": ["https://www.acquisition.gov/search"],
-      "sitemap_urls": ["https://www.acquisition.gov/sitemap.xml"],
+      "search_endpoints": [
+        "https://www.acquisition.gov/search"
+      ],
+      "sitemap_urls": [
+        "https://www.acquisition.gov/sitemap.xml"
+      ],
       "robots_url": "https://www.acquisition.gov/robots.txt",
-      "capture_strategies": ["direct_fetch", "html_parse"],
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse"
+      ],
       "automation_status": "direct_fetch_ready",
       "api_key_required": false,
       "priority": "critical",
       "notes": "Current source for FAR/DFARS pages and acquisition regulatory material."
     },
     {
-      "id": "white-house",
-      "name": "White House",
-      "source_owner": "Executive Office of the President",
-      "issuing_authority_scope": ["President", "OMB", "OSTP", "Executive Office of the President"],
-      "source_location_types": ["white_house_pdf", "white_house_html"],
-      "artifact_types": ["OMB Memorandum", "Presidential Memorandum", "Executive Office Guidance", "OSTP Guidance"],
-      "families": ["ai_governance", "cybersecurity", "budget", "technology_policy"],
-      "landing_pages": ["https://www.whitehouse.gov/"],
-      "api_endpoints": [],
-      "feed_endpoints": ["https://www.whitehouse.gov/feed/"],
-      "search_endpoints": ["https://www.whitehouse.gov/?s="],
-      "sitemap_urls": ["https://www.whitehouse.gov/sitemap.xml"],
-      "robots_url": "https://www.whitehouse.gov/robots.txt",
-      "capture_strategies": ["direct_fetch", "rss", "sitemap_crawl"],
-      "automation_status": "direct_fetch_ready",
-      "api_key_required": false,
-      "priority": "critical",
-      "notes": "Useful host for OMB/OSTP memoranda and PDFs; issuing authority must be tracked separately."
-    },
-    {
-      "id": "omb",
-      "name": "OMB",
-      "source_owner": "Office of Management and Budget",
-      "issuing_authority_scope": ["OMB"],
-      "source_location_types": ["white_house_pdf", "white_house_html"],
-      "artifact_types": ["OMB Memorandum", "Circular", "Bulletin"],
-      "families": ["ai_governance", "cybersecurity", "budget", "risk_management"],
-      "landing_pages": ["https://www.whitehouse.gov/omb/"],
+      "id": "acquisition-gov-dfars",
+      "name": "Acquisition.gov DFARS",
+      "source_owner": "Defense Acquisition Regulations System",
+      "issuing_authority_scope": [
+        "Defense Acquisition Regulations System",
+        "USD(A&S)"
+      ],
+      "source_location_types": [
+        "dfars_html",
+        "dfars_pgi_html",
+        "acquisition_gov_html"
+      ],
+      "artifact_types": [
+        "DFARS part",
+        "DFARS clause",
+        "DFARS PGI"
+      ],
+      "families": [
+        "acquisition",
+        "defense_contracting",
+        "cybersecurity"
+      ],
+      "landing_pages": [
+        "https://www.acquisition.gov/dfars"
+      ],
       "api_endpoints": [],
       "feed_endpoints": [],
-      "search_endpoints": ["https://www.whitehouse.gov/omb/information-for-agencies/memoranda/"],
-      "sitemap_urls": ["https://www.whitehouse.gov/sitemap.xml"],
-      "robots_url": "https://www.whitehouse.gov/robots.txt",
-      "capture_strategies": ["direct_fetch", "sitemap_crawl"],
+      "search_endpoints": [
+        "https://www.acquisition.gov/search?search_api_fulltext=DFARS"
+      ],
+      "sitemap_urls": [
+        "https://www.acquisition.gov/sitemap.xml"
+      ],
+      "robots_url": "https://www.acquisition.gov/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse"
+      ],
       "automation_status": "direct_fetch_ready",
       "api_key_required": false,
       "priority": "critical",
-      "notes": "OMB has its own issuing authority even when files are hosted under WhiteHouse.gov."
+      "notes": "Dedicated DFARS/PGI lane for defense acquisition clauses and cybersecurity acquisition references.",
+      "coverage_targets": [
+        "acquisition",
+        "defense_contracting",
+        "cybersecurity",
+        "DFARS part",
+        "DFARS clause",
+        "DFARS PGI"
+      ]
     },
     {
-      "id": "nist-csrc",
-      "name": "NIST CSRC",
-      "source_owner": "National Institute of Standards and Technology",
-      "issuing_authority_scope": ["NIST"],
-      "source_location_types": ["nist_csrc_html", "nist_nvlpubs_pdf"],
-      "artifact_types": ["Standard", "Special Publication", "FIPS"],
-      "families": ["security_controls", "zero_trust", "risk_management", "privacy"],
-      "landing_pages": ["https://csrc.nist.gov/"],
-      "api_endpoints": [],
-      "feed_endpoints": ["https://csrc.nist.gov/news/rss"],
-      "search_endpoints": ["https://csrc.nist.gov/search"],
-      "sitemap_urls": ["https://csrc.nist.gov/sitemap.xml"],
-      "robots_url": "https://csrc.nist.gov/robots.txt",
-      "capture_strategies": ["direct_fetch", "html_parse", "pdf_fetch"],
-      "automation_status": "direct_fetch_ready",
-      "api_key_required": false,
-      "priority": "critical",
-      "notes": "Landing-page source for NIST publications; NVL pubs often hosts the canonical PDF bytes."
-    },
-    {
-      "id": "cisa",
-      "name": "CISA",
-      "source_owner": "Cybersecurity and Infrastructure Security Agency",
-      "issuing_authority_scope": ["CISA", "Department of Homeland Security"],
-      "source_location_types": ["cisa_html", "cisa_pdf"],
-      "artifact_types": ["Implementation Guidance", "Standard", "Model", "Alert"],
-      "families": ["cybersecurity", "zero_trust", "secure_by_design"],
-      "landing_pages": ["https://www.cisa.gov/"],
-      "api_endpoints": [],
-      "feed_endpoints": ["https://www.cisa.gov/news.xml"],
-      "search_endpoints": ["https://www.cisa.gov/search"],
-      "sitemap_urls": ["https://www.cisa.gov/sitemap.xml"],
-      "robots_url": "https://www.cisa.gov/robots.txt",
-      "capture_strategies": ["direct_fetch", "sitemap_crawl", "rss"],
-      "automation_status": "direct_fetch_ready",
-      "api_key_required": false,
-      "priority": "high",
-      "notes": "Target source for CISA maturity models, alerts, and implementation guidance."
-    },
-    {
-      "id": "dod-issuances",
-      "name": "DoW/DoD Issuances",
-      "source_owner": "Washington Headquarters Services / Executive Services Directorate",
-      "issuing_authority_scope": ["DoW/DoD"],
-      "source_location_types": ["dod_issuances_pdf"],
-      "artifact_types": ["DoD Directive", "DoD Instruction", "DoD Manual", "Directive-Type Memorandum"],
-      "families": ["acquisition", "software_acquisition", "risk_management", "cybersecurity", "records_management"],
-      "landing_pages": ["https://www.esd.whs.mil/DD/"],
+      "id": "acquisition-gov-far",
+      "name": "Acquisition.gov FAR",
+      "source_owner": "General Services Administration",
+      "issuing_authority_scope": [
+        "FAR Council"
+      ],
+      "source_location_types": [
+        "far_html",
+        "acquisition_gov_html"
+      ],
+      "artifact_types": [
+        "FAR part",
+        "FAR subpart",
+        "FAR clause"
+      ],
+      "families": [
+        "acquisition",
+        "defense_contracting",
+        "regulation"
+      ],
+      "landing_pages": [
+        "https://www.acquisition.gov/browse/index/far"
+      ],
       "api_endpoints": [],
       "feed_endpoints": [],
-      "search_endpoints": ["https://www.esd.whs.mil/DD/DoD-Issuances/"],
+      "search_endpoints": [
+        "https://www.acquisition.gov/search?search_api_fulltext=FAR"
+      ],
+      "sitemap_urls": [
+        "https://www.acquisition.gov/sitemap.xml"
+      ],
+      "robots_url": "https://www.acquisition.gov/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "critical",
+      "notes": "Dedicated FAR lane for clause/part-level discovery and direct inventory prefilters.",
+      "coverage_targets": [
+        "acquisition",
+        "defense_contracting",
+        "regulation",
+        "FAR part",
+        "FAR subpart",
+        "FAR clause"
+      ]
+    },
+    {
+      "id": "congress-gov",
+      "name": "Congress.gov",
+      "source_owner": "Library of Congress",
+      "issuing_authority_scope": [
+        "Congress"
+      ],
+      "source_location_types": [
+        "congress_gov_api",
+        "congress_gov_html"
+      ],
+      "artifact_types": [
+        "Congressional Bill",
+        "Bill Status",
+        "Committee Report"
+      ],
+      "families": [
+        "legislation",
+        "appropriations",
+        "defense_authorization"
+      ],
+      "landing_pages": [
+        "https://www.congress.gov/"
+      ],
+      "api_endpoints": [
+        "https://api.congress.gov/"
+      ],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.congress.gov/search"
+      ],
+      "sitemap_urls": [
+        "https://www.congress.gov/sitemap.xml"
+      ],
+      "robots_url": "https://www.congress.gov/robots.txt",
+      "capture_strategies": [
+        "api",
+        "direct_fetch"
+      ],
+      "automation_status": "api_key_required",
+      "api_key_required": true,
+      "priority": "critical",
+      "notes": "Best source for pre-enactment bill and legislative-status metadata before GovInfo public law capture."
+    },
+    {
+      "id": "defense-pricing-contracting",
+      "name": "Defense Pricing, Contracting, and Acquisition Policy",
+      "source_owner": "Defense Pricing and Contracting",
+      "issuing_authority_scope": [
+        "USD(A&S)",
+        "Defense Pricing and Contracting"
+      ],
+      "source_location_types": [
+        "dpc_html",
+        "dpc_pdf"
+      ],
+      "artifact_types": [
+        "Class deviation",
+        "DARS memo",
+        "PGI guidance",
+        "Acquisition policy"
+      ],
+      "families": [
+        "acquisition",
+        "defense_contracting",
+        "software_acquisition"
+      ],
+      "landing_pages": [
+        "https://www.acq.osd.mil/asda/dpc/index.html"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.acq.osd.mil/dpap/dars/"
+      ],
       "sitemap_urls": [],
-      "robots_url": "https://www.esd.whs.mil/robots.txt",
-      "capture_strategies": ["browser_fetch", "manual_import", "source_known_registration"],
-      "automation_status": "blocked_by_host",
+      "robots_url": "https://www.acq.osd.mil/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
       "api_key_required": false,
       "priority": "critical",
-      "notes": "Official source often blocks automated PDF fetches. Keep source-known records and route to browser/manual capture."
-    },
-    {
-      "id": "dod-cio",
-      "name": "DoD CIO",
-      "source_owner": "DoD Chief Information Officer",
-      "issuing_authority_scope": ["DoD CIO", "DoW/DoD"],
-      "source_location_types": ["dod_cio_pdf", "dod_cio_html"],
-      "artifact_types": ["Strategy", "Implementation Guidance", "Memorandum"],
-      "families": ["zero_trust", "cybersecurity", "cloud", "data", "ai_governance"],
-      "landing_pages": ["https://dodcio.defense.gov/"],
-      "api_endpoints": [],
-      "feed_endpoints": [],
-      "search_endpoints": ["https://dodcio.defense.gov/Search/"],
-      "sitemap_urls": [],
-      "robots_url": "https://dodcio.defense.gov/robots.txt",
-      "capture_strategies": ["browser_fetch", "manual_import", "source_known_registration"],
-      "automation_status": "blocked_by_host",
-      "api_key_required": false,
-      "priority": "critical",
-      "notes": "Official strategy/guidance source; bot protection currently requires browser/manual lane."
-    },
-    {
-      "id": "dod-cyber-exchange",
-      "name": "DoD Cyber Exchange",
-      "source_owner": "DoD Cyber Exchange",
-      "issuing_authority_scope": ["DoW/DoD"],
-      "source_location_types": ["cyber_mil_html"],
-      "artifact_types": ["Implementation Guidance", "Training"],
-      "families": ["cyber_training", "cybersecurity"],
-      "landing_pages": ["https://www.cyber.mil/"],
-      "api_endpoints": [],
-      "feed_endpoints": [],
-      "search_endpoints": ["https://www.cyber.mil/search"],
-      "sitemap_urls": ["https://www.cyber.mil/sitemap.xml"],
-      "robots_url": "https://www.cyber.mil/robots.txt",
-      "capture_strategies": ["browser_fetch", "manual_import", "source_known_registration"],
-      "automation_status": "browser_shell_detected",
-      "api_key_required": false,
-      "priority": "high",
-      "notes": "Automated HTML capture can return a shell page; extraction quality checks must catch this."
+      "notes": "Official DPCAP/DARS source for acquisition policy, class deviations, DFARS, and PGI material adjacent to FAR/DFARS text.",
+      "coverage_targets": [
+        "acquisition",
+        "defense_contracting",
+        "software_acquisition",
+        "Class deviation",
+        "DARS memo",
+        "PGI guidance",
+        "Acquisition policy"
+      ]
     },
     {
       "id": "doni",
       "name": "Department of the Navy Issuances",
       "source_owner": "Department of the Navy",
-      "issuing_authority_scope": ["SECNAV", "OPNAV", "Department of the Navy"],
-      "source_location_types": ["don_issuances_pdf"],
-      "artifact_types": ["SECNAV Instruction", "SECNAV Manual", "OPNAV Instruction"],
-      "families": ["cybersecurity", "records_management", "operations"],
-      "landing_pages": ["https://www.secnav.navy.mil/doni/"],
+      "issuing_authority_scope": [
+        "SECNAV",
+        "OPNAV",
+        "Department of the Navy"
+      ],
+      "source_location_types": [
+        "don_issuances_pdf"
+      ],
+      "artifact_types": [
+        "SECNAV Instruction",
+        "SECNAV Manual",
+        "OPNAV Instruction"
+      ],
+      "families": [
+        "cybersecurity",
+        "records_management",
+        "operations"
+      ],
+      "landing_pages": [
+        "https://www.secnav.navy.mil/doni/"
+      ],
       "api_endpoints": [],
       "feed_endpoints": [],
-      "search_endpoints": ["https://www.secnav.navy.mil/doni/default.aspx"],
+      "search_endpoints": [
+        "https://www.secnav.navy.mil/doni/default.aspx"
+      ],
       "sitemap_urls": [],
       "robots_url": "https://www.secnav.navy.mil/robots.txt",
-      "capture_strategies": ["browser_fetch", "manual_import", "source_known_registration"],
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
       "automation_status": "blocked_by_host",
       "api_key_required": false,
       "priority": "critical",
       "notes": "Canonical DON source for SECNAV and OPNAV PDFs; blocks simple automated fetch."
     },
     {
+      "id": "disa-stigs",
+      "name": "DISA STIG Library",
+      "source_owner": "Defense Information Systems Agency",
+      "issuing_authority_scope": [
+        "DISA",
+        "DoW/DoD"
+      ],
+      "source_location_types": [
+        "disa_stig_html",
+        "disa_stig_zip",
+        "disa_srg_pdf"
+      ],
+      "artifact_types": [
+        "STIG",
+        "SRG",
+        "SCAP benchmark",
+        "Checklist"
+      ],
+      "families": [
+        "cybersecurity",
+        "security_controls",
+        "implementation",
+        "reference_design"
+      ],
+      "landing_pages": [
+        "https://public.cyber.mil/stigs/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://public.cyber.mil/stigs/downloads/"
+      ],
+      "sitemap_urls": [
+        "https://public.cyber.mil/sitemap.xml"
+      ],
+      "robots_url": "https://public.cyber.mil/robots.txt",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "automation_status": "browser_shell_detected",
+      "api_key_required": false,
+      "priority": "critical",
+      "notes": "Implementation-control source for STIG/SRG baselines and technical security requirements.",
+      "coverage_targets": [
+        "cybersecurity",
+        "security_controls",
+        "implementation",
+        "reference_design",
+        "STIG",
+        "SRG",
+        "SCAP benchmark",
+        "Checklist"
+      ]
+    },
+    {
+      "id": "dod-cio",
+      "name": "DoD CIO",
+      "source_owner": "DoD Chief Information Officer",
+      "issuing_authority_scope": [
+        "DoD CIO",
+        "DoW/DoD"
+      ],
+      "source_location_types": [
+        "dod_cio_pdf",
+        "dod_cio_html"
+      ],
+      "artifact_types": [
+        "Strategy",
+        "Implementation Guidance",
+        "Memorandum"
+      ],
+      "families": [
+        "zero_trust",
+        "cybersecurity",
+        "cloud",
+        "data",
+        "ai_governance"
+      ],
+      "landing_pages": [
+        "https://dodcio.defense.gov/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://dodcio.defense.gov/Search/"
+      ],
+      "sitemap_urls": [],
+      "robots_url": "https://dodcio.defense.gov/robots.txt",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "automation_status": "blocked_by_host",
+      "api_key_required": false,
+      "priority": "critical",
+      "notes": "Official strategy/guidance source; bot protection currently requires browser/manual lane."
+    },
+    {
+      "id": "dod-issuances",
+      "name": "DoW/DoD Issuances",
+      "source_owner": "Washington Headquarters Services / Executive Services Directorate",
+      "issuing_authority_scope": [
+        "DoW/DoD"
+      ],
+      "source_location_types": [
+        "dod_issuances_pdf"
+      ],
+      "artifact_types": [
+        "DoD Directive",
+        "DoD Instruction",
+        "DoD Manual",
+        "Directive-Type Memorandum"
+      ],
+      "families": [
+        "acquisition",
+        "software_acquisition",
+        "risk_management",
+        "cybersecurity",
+        "records_management"
+      ],
+      "landing_pages": [
+        "https://www.esd.whs.mil/DD/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.esd.whs.mil/DD/DoD-Issuances/"
+      ],
+      "sitemap_urls": [],
+      "robots_url": "https://www.esd.whs.mil/robots.txt",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "automation_status": "blocked_by_host",
+      "api_key_required": false,
+      "priority": "critical",
+      "notes": "Official source often blocks automated PDF fetches. Keep source-known records and route to browser/manual capture."
+    },
+    {
+      "id": "federal-register",
+      "name": "Federal Register",
+      "source_owner": "Office of the Federal Register / National Archives and Records Administration",
+      "issuing_authority_scope": [
+        "President",
+        "Federal agencies"
+      ],
+      "source_location_types": [
+        "federal_register_html",
+        "federal_register_api"
+      ],
+      "artifact_types": [
+        "Executive Order",
+        "Presidential Memorandum",
+        "Rule",
+        "Notice"
+      ],
+      "families": [
+        "presidential_directive",
+        "regulation",
+        "cybersecurity",
+        "ai_governance"
+      ],
+      "landing_pages": [
+        "https://www.federalregister.gov/"
+      ],
+      "api_endpoints": [
+        "https://www.federalregister.gov/developers/documentation/api/v1"
+      ],
+      "feed_endpoints": [
+        "https://www.federalregister.gov/documents/search.rss"
+      ],
+      "search_endpoints": [
+        "https://www.federalregister.gov/documents/search"
+      ],
+      "sitemap_urls": [
+        "https://www.federalregister.gov/sitemap.xml"
+      ],
+      "robots_url": "https://www.federalregister.gov/robots.txt",
+      "capture_strategies": [
+        "api",
+        "direct_fetch",
+        "rss"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "critical",
+      "notes": "API is keyless and suitable for presidential documents and agency notices."
+    },
+    {
+      "id": "govinfo",
+      "name": "GovInfo",
+      "source_owner": "U.S. Government Publishing Office",
+      "issuing_authority_scope": [
+        "Congress",
+        "Federal Register",
+        "Federal agencies"
+      ],
+      "source_location_types": [
+        "govinfo_public_law_pdf"
+      ],
+      "artifact_types": [
+        "Public Law",
+        "Appropriations Law",
+        "Congressional Bill",
+        "CFR Annual Edition",
+        "Federal Register"
+      ],
+      "families": [
+        "defense_authorization",
+        "appropriations",
+        "federal_register",
+        "regulation"
+      ],
+      "landing_pages": [
+        "https://www.govinfo.gov/"
+      ],
+      "api_endpoints": [
+        "https://api.govinfo.gov/docs/",
+        "https://api.govinfo.gov/"
+      ],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.govinfo.gov/app/search/"
+      ],
+      "sitemap_urls": [
+        "https://www.govinfo.gov/sitemap.xml"
+      ],
+      "robots_url": "https://www.govinfo.gov/robots.txt",
+      "capture_strategies": [
+        "api",
+        "direct_fetch",
+        "content_package_fetch"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": true,
+      "priority": "critical",
+      "notes": "Canonical public source for public laws, congressional documents, and GPO packages."
+    },
+    {
+      "id": "national-archives-executive-orders",
+      "name": "National Archives Executive Orders",
+      "source_owner": "National Archives and Records Administration",
+      "issuing_authority_scope": [
+        "President",
+        "National Archives"
+      ],
+      "source_location_types": [
+        "national_archives_eo_html"
+      ],
+      "artifact_types": [
+        "Executive Order",
+        "Presidential document index"
+      ],
+      "families": [
+        "presidential_directive",
+        "executive_order"
+      ],
+      "landing_pages": [
+        "https://www.archives.gov/federal-register/executive-orders"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.archives.gov/research/catalog"
+      ],
+      "sitemap_urls": [
+        "https://www.archives.gov/sitemap.xml"
+      ],
+      "robots_url": "https://www.archives.gov/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "critical",
+      "notes": "Backstop index for historical Executive Orders not easily resolved through current Federal Register API search.",
+      "coverage_targets": [
+        "presidential_directive",
+        "executive_order",
+        "Executive Order",
+        "Presidential document index"
+      ]
+    },
+    {
+      "id": "nist-csrc",
+      "name": "NIST CSRC",
+      "source_owner": "National Institute of Standards and Technology",
+      "issuing_authority_scope": [
+        "NIST"
+      ],
+      "source_location_types": [
+        "nist_csrc_html",
+        "nist_nvlpubs_pdf"
+      ],
+      "artifact_types": [
+        "Standard",
+        "Special Publication",
+        "FIPS"
+      ],
+      "families": [
+        "security_controls",
+        "zero_trust",
+        "risk_management",
+        "privacy"
+      ],
+      "landing_pages": [
+        "https://csrc.nist.gov/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [
+        "https://csrc.nist.gov/news/rss"
+      ],
+      "search_endpoints": [
+        "https://csrc.nist.gov/search"
+      ],
+      "sitemap_urls": [
+        "https://csrc.nist.gov/sitemap.xml"
+      ],
+      "robots_url": "https://csrc.nist.gov/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse",
+        "pdf_fetch"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "critical",
+      "notes": "Landing-page source for NIST publications; NVL pubs often hosts the canonical PDF bytes."
+    },
+    {
+      "id": "nist-publications",
+      "name": "NIST Publications",
+      "source_owner": "National Institute of Standards and Technology",
+      "issuing_authority_scope": [
+        "NIST"
+      ],
+      "source_location_types": [
+        "nist_pub_html",
+        "nist_pub_pdf",
+        "nist_nvlpubs_pdf"
+      ],
+      "artifact_types": [
+        "SP",
+        "FIPS",
+        "IR",
+        "White paper"
+      ],
+      "families": [
+        "security_controls",
+        "risk_management",
+        "privacy",
+        "ai_governance"
+      ],
+      "landing_pages": [
+        "https://www.nist.gov/publications"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.nist.gov/publications/search"
+      ],
+      "sitemap_urls": [
+        "https://www.nist.gov/sitemap.xml"
+      ],
+      "robots_url": "https://www.nist.gov/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse",
+        "pdf_fetch"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "critical",
+      "notes": "Broad NIST publication lane beyond CSRC landing pages, including FIPS and IR documents.",
+      "coverage_targets": [
+        "security_controls",
+        "risk_management",
+        "privacy",
+        "ai_governance",
+        "SP",
+        "FIPS",
+        "IR",
+        "White paper"
+      ]
+    },
+    {
+      "id": "omb",
+      "name": "OMB",
+      "source_owner": "Office of Management and Budget",
+      "issuing_authority_scope": [
+        "OMB"
+      ],
+      "source_location_types": [
+        "white_house_pdf",
+        "white_house_html"
+      ],
+      "artifact_types": [
+        "OMB Memorandum",
+        "Circular",
+        "Bulletin"
+      ],
+      "families": [
+        "ai_governance",
+        "cybersecurity",
+        "budget",
+        "risk_management"
+      ],
+      "landing_pages": [
+        "https://www.whitehouse.gov/omb/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.whitehouse.gov/omb/information-for-agencies/memoranda/"
+      ],
+      "sitemap_urls": [
+        "https://www.whitehouse.gov/sitemap.xml"
+      ],
+      "robots_url": "https://www.whitehouse.gov/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "sitemap_crawl"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "critical",
+      "notes": "OMB has its own issuing authority even when files are hosted under WhiteHouse.gov."
+    },
+    {
+      "id": "omb-circulars",
+      "name": "OMB Circulars",
+      "source_owner": "Office of Management and Budget",
+      "issuing_authority_scope": [
+        "OMB"
+      ],
+      "source_location_types": [
+        "omb_circular_html",
+        "omb_circular_pdf",
+        "white_house_html",
+        "white_house_pdf"
+      ],
+      "artifact_types": [
+        "OMB Circular",
+        "OMB Memorandum",
+        "Policy guidance"
+      ],
+      "families": [
+        "budget",
+        "risk_management",
+        "ai_governance",
+        "cybersecurity"
+      ],
+      "landing_pages": [
+        "https://www.whitehouse.gov/omb/information-for-agencies/circulars/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.whitehouse.gov/omb/information-for-agencies/memoranda/"
+      ],
+      "sitemap_urls": [
+        "https://www.whitehouse.gov/sitemap.xml"
+      ],
+      "robots_url": "https://www.whitehouse.gov/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "sitemap_crawl"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "critical",
+      "notes": "Separates durable OMB circular authority from the more volatile WhiteHouse.gov host bucket.",
+      "coverage_targets": [
+        "budget",
+        "risk_management",
+        "ai_governance",
+        "cybersecurity",
+        "OMB Circular",
+        "OMB Memorandum",
+        "Policy guidance"
+      ]
+    },
+    {
+      "id": "us-code-olrc",
+      "name": "U.S. Code",
+      "source_owner": "Office of the Law Revision Counsel",
+      "issuing_authority_scope": [
+        "Congress"
+      ],
+      "source_location_types": [
+        "us_code_html",
+        "us_code_xml"
+      ],
+      "artifact_types": [
+        "U.S. Code"
+      ],
+      "families": [
+        "statute",
+        "defense_business_systems",
+        "acquisition",
+        "cybersecurity"
+      ],
+      "landing_pages": [
+        "https://uscode.house.gov/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://uscode.house.gov/search/criteria.shtml"
+      ],
+      "sitemap_urls": [],
+      "robots_url": "https://uscode.house.gov/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "critical",
+      "notes": "Canonical U.S. Code HTML/XML source for codified authority."
+    },
+    {
+      "id": "white-house",
+      "name": "White House",
+      "source_owner": "Executive Office of the President",
+      "issuing_authority_scope": [
+        "President",
+        "OMB",
+        "OSTP",
+        "Executive Office of the President"
+      ],
+      "source_location_types": [
+        "white_house_pdf",
+        "white_house_html"
+      ],
+      "artifact_types": [
+        "OMB Memorandum",
+        "Presidential Memorandum",
+        "Executive Office Guidance",
+        "OSTP Guidance"
+      ],
+      "families": [
+        "ai_governance",
+        "cybersecurity",
+        "budget",
+        "technology_policy"
+      ],
+      "landing_pages": [
+        "https://www.whitehouse.gov/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [
+        "https://www.whitehouse.gov/feed/"
+      ],
+      "search_endpoints": [
+        "https://www.whitehouse.gov/?s="
+      ],
+      "sitemap_urls": [
+        "https://www.whitehouse.gov/sitemap.xml"
+      ],
+      "robots_url": "https://www.whitehouse.gov/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "rss",
+        "sitemap_crawl"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "critical",
+      "notes": "Useful host for OMB/OSTP memoranda and PDFs; issuing authority must be tracked separately."
+    },
+    {
+      "id": "white-house-presidential-actions",
+      "name": "White House Presidential Actions",
+      "source_owner": "Executive Office of the President",
+      "issuing_authority_scope": [
+        "President",
+        "Executive Office of the President"
+      ],
+      "source_location_types": [
+        "presidential_actions_html",
+        "white_house_html",
+        "white_house_pdf"
+      ],
+      "artifact_types": [
+        "Executive Order",
+        "Memorandum",
+        "Proclamation",
+        "Fact sheet"
+      ],
+      "families": [
+        "presidential_directive",
+        "executive_order",
+        "guidance"
+      ],
+      "landing_pages": [
+        "https://www.whitehouse.gov/presidential-actions/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [
+        "https://www.whitehouse.gov/feed/"
+      ],
+      "search_endpoints": [
+        "https://www.whitehouse.gov/?s="
+      ],
+      "sitemap_urls": [
+        "https://www.whitehouse.gov/sitemap.xml"
+      ],
+      "robots_url": "https://www.whitehouse.gov/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "rss",
+        "sitemap_crawl"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "critical",
+      "notes": "Current White House issue lane for new executive orders and presidential memoranda before codified downstream artifacts appear.",
+      "coverage_targets": [
+        "presidential_directive",
+        "executive_order",
+        "guidance",
+        "Executive Order",
+        "Memorandum",
+        "Proclamation",
+        "Fact sheet"
+      ]
+    },
+    {
+      "id": "cdao",
+      "name": "Chief Digital and Artificial Intelligence Office",
+      "source_owner": "Chief Digital and Artificial Intelligence Office",
+      "issuing_authority_scope": [
+        "CDAO",
+        "DoW/DoD"
+      ],
+      "source_location_types": [
+        "cdao_html",
+        "cdao_pdf",
+        "program_office_html",
+        "program_office_pdf"
+      ],
+      "artifact_types": [
+        "AI guidance",
+        "Data strategy",
+        "Reference design",
+        "Responsible AI guidance"
+      ],
+      "families": [
+        "ai_governance",
+        "data",
+        "software_acquisition",
+        "reference_design"
+      ],
+      "landing_pages": [
+        "https://www.ai.mil/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.ai.mil/Search/"
+      ],
+      "sitemap_urls": [],
+      "robots_url": "https://www.ai.mil/robots.txt",
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "high",
+      "notes": "DoD AI/data governance and reference-design source beyond formal DoD issuances.",
+      "coverage_targets": [
+        "ai_governance",
+        "data",
+        "software_acquisition",
+        "reference_design",
+        "AI guidance",
+        "Data strategy",
+        "Reference design",
+        "Responsible AI guidance"
+      ]
+    },
+    {
+      "id": "cisa",
+      "name": "CISA",
+      "source_owner": "Cybersecurity and Infrastructure Security Agency",
+      "issuing_authority_scope": [
+        "CISA",
+        "Department of Homeland Security"
+      ],
+      "source_location_types": [
+        "cisa_html",
+        "cisa_pdf"
+      ],
+      "artifact_types": [
+        "Implementation Guidance",
+        "Standard",
+        "Model",
+        "Alert"
+      ],
+      "families": [
+        "cybersecurity",
+        "zero_trust",
+        "secure_by_design"
+      ],
+      "landing_pages": [
+        "https://www.cisa.gov/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [
+        "https://www.cisa.gov/news.xml"
+      ],
+      "search_endpoints": [
+        "https://www.cisa.gov/search"
+      ],
+      "sitemap_urls": [
+        "https://www.cisa.gov/sitemap.xml"
+      ],
+      "robots_url": "https://www.cisa.gov/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "sitemap_crawl",
+        "rss"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "high",
+      "notes": "Target source for CISA maturity models, alerts, and implementation guidance."
+    },
+    {
+      "id": "cisa-guidance",
+      "name": "CISA Guidance Library",
+      "source_owner": "Cybersecurity and Infrastructure Security Agency",
+      "issuing_authority_scope": [
+        "CISA",
+        "Department of Homeland Security"
+      ],
+      "source_location_types": [
+        "cisa_guidance_html",
+        "cisa_guidance_pdf",
+        "cisa_html",
+        "cisa_pdf"
+      ],
+      "artifact_types": [
+        "Directive",
+        "Binding Operational Directive",
+        "Emergency Directive",
+        "Guide",
+        "Maturity model"
+      ],
+      "families": [
+        "cybersecurity",
+        "zero_trust",
+        "secure_by_design",
+        "guidance"
+      ],
+      "landing_pages": [
+        "https://www.cisa.gov/resources-tools/resources"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [
+        "https://www.cisa.gov/news.xml"
+      ],
+      "search_endpoints": [
+        "https://www.cisa.gov/resources-tools/resources?search_api_fulltext="
+      ],
+      "sitemap_urls": [
+        "https://www.cisa.gov/sitemap.xml"
+      ],
+      "robots_url": "https://www.cisa.gov/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "sitemap_crawl",
+        "rss"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "high",
+      "notes": "Broader CISA resource lane, including BODs, implementation guidance, and maturity models.",
+      "coverage_targets": [
+        "cybersecurity",
+        "zero_trust",
+        "secure_by_design",
+        "guidance",
+        "Directive",
+        "Binding Operational Directive",
+        "Emergency Directive",
+        "Guide",
+        "Maturity model"
+      ]
+    },
+    {
+      "id": "cjcs-directives",
+      "name": "CJCS Directives Library",
+      "source_owner": "Joint Staff",
+      "issuing_authority_scope": [
+        "Chairman of the Joint Chiefs of Staff",
+        "Joint Staff"
+      ],
+      "source_location_types": [
+        "cjcs_directive_pdf",
+        "joint_staff_pdf"
+      ],
+      "artifact_types": [
+        "CJCSI",
+        "CJCSM",
+        "CJCSN",
+        "Guide"
+      ],
+      "families": [
+        "joint_policy",
+        "operations",
+        "cybersecurity"
+      ],
+      "landing_pages": [
+        "https://www.jcs.mil/Library/CJCS-Instructions/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.jcs.mil/Search/"
+      ],
+      "sitemap_urls": [],
+      "robots_url": "https://www.jcs.mil/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "high",
+      "notes": "Dedicated CJCS issuance lane for instructions, manuals, notices, and guides.",
+      "coverage_targets": [
+        "joint_policy",
+        "operations",
+        "cybersecurity",
+        "CJCSI",
+        "CJCSM",
+        "CJCSN",
+        "Guide"
+      ]
+    },
+    {
+      "id": "cnss",
+      "name": "Committee on National Security Systems",
+      "source_owner": "Committee on National Security Systems",
+      "issuing_authority_scope": [
+        "CNSS",
+        "National Security Systems community"
+      ],
+      "source_location_types": [
+        "cnss_policy_html",
+        "cnss_policy_pdf"
+      ],
+      "artifact_types": [
+        "CNSS Policy",
+        "CNSS Instruction",
+        "CNSS Directive"
+      ],
+      "families": [
+        "cybersecurity",
+        "national_security_systems",
+        "security_controls"
+      ],
+      "landing_pages": [
+        "https://www.cnss.gov/CNSS/issuances/Policies.cfm"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.cnss.gov/CNSS/issuances/issuances.cfm"
+      ],
+      "sitemap_urls": [],
+      "robots_url": "https://www.cnss.gov/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "pdf_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "high",
+      "notes": "National security systems policy lane that frequently binds DoD cyber/security artifacts.",
+      "coverage_targets": [
+        "cybersecurity",
+        "national_security_systems",
+        "security_controls",
+        "CNSS Policy",
+        "CNSS Instruction",
+        "CNSS Directive"
+      ]
+    },
+    {
+      "id": "dau-aaf",
+      "name": "DAU Adaptive Acquisition Framework",
+      "source_owner": "Defense Acquisition University",
+      "issuing_authority_scope": [
+        "DAU",
+        "USD(A&S)"
+      ],
+      "source_location_types": [
+        "dau_html",
+        "dau_pdf"
+      ],
+      "artifact_types": [
+        "Pathway guidance",
+        "Reference guide",
+        "Learning asset"
+      ],
+      "families": [
+        "acquisition",
+        "software_acquisition",
+        "guidance"
+      ],
+      "landing_pages": [
+        "https://aaf.dau.edu/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://aaf.dau.edu/search/"
+      ],
+      "sitemap_urls": [
+        "https://aaf.dau.edu/sitemap.xml"
+      ],
+      "robots_url": "https://aaf.dau.edu/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse",
+        "sitemap_crawl"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "high",
+      "notes": "Reference-design and acquisition pathway guidance source for interpreting formal acquisition policy.",
+      "coverage_targets": [
+        "acquisition",
+        "software_acquisition",
+        "guidance",
+        "Pathway guidance",
+        "Reference guide",
+        "Learning asset"
+      ]
+    },
+    {
+      "id": "dod-cyber-exchange",
+      "name": "DoD Cyber Exchange",
+      "source_owner": "DoD Cyber Exchange",
+      "issuing_authority_scope": [
+        "DoW/DoD"
+      ],
+      "source_location_types": [
+        "cyber_mil_html"
+      ],
+      "artifact_types": [
+        "Implementation Guidance",
+        "Training"
+      ],
+      "families": [
+        "cyber_training",
+        "cybersecurity"
+      ],
+      "landing_pages": [
+        "https://www.cyber.mil/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.cyber.mil/search"
+      ],
+      "sitemap_urls": [
+        "https://www.cyber.mil/sitemap.xml"
+      ],
+      "robots_url": "https://www.cyber.mil/robots.txt",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "automation_status": "browser_shell_detected",
+      "api_key_required": false,
+      "priority": "high",
+      "notes": "Automated HTML capture can return a shell page; extraction quality checks must catch this."
+    },
+    {
+      "id": "ecfr",
+      "name": "eCFR",
+      "source_owner": "Office of the Federal Register / National Archives and Records Administration",
+      "issuing_authority_scope": [
+        "Federal agencies"
+      ],
+      "source_location_types": [
+        "ecfr_api",
+        "ecfr_html"
+      ],
+      "artifact_types": [
+        "CFR",
+        "Regulation"
+      ],
+      "families": [
+        "regulation",
+        "acquisition",
+        "cybersecurity"
+      ],
+      "landing_pages": [
+        "https://www.ecfr.gov/"
+      ],
+      "api_endpoints": [
+        "https://www.ecfr.gov/developers/documentation/api/v1"
+      ],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.ecfr.gov/search"
+      ],
+      "sitemap_urls": [
+        "https://www.ecfr.gov/sitemap.xml"
+      ],
+      "robots_url": "https://www.ecfr.gov/robots.txt",
+      "capture_strategies": [
+        "api",
+        "direct_fetch"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "high",
+      "notes": "Point-in-time regulatory source; important for FAR/CFR alignment."
+    },
+    {
+      "id": "fedramp",
+      "name": "FedRAMP",
+      "source_owner": "General Services Administration",
+      "issuing_authority_scope": [
+        "FedRAMP PMO",
+        "GSA"
+      ],
+      "source_location_types": [
+        "fedramp_html",
+        "fedramp_pdf"
+      ],
+      "artifact_types": [
+        "Baseline",
+        "Template",
+        "Playbook",
+        "Guidance"
+      ],
+      "families": [
+        "cloud",
+        "security_controls",
+        "authorization",
+        "reference_design"
+      ],
+      "landing_pages": [
+        "https://www.fedramp.gov/rev5/documents-templates/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.fedramp.gov/rev5/documents-templates/"
+      ],
+      "sitemap_urls": [
+        "https://www.fedramp.gov/sitemap.xml"
+      ],
+      "robots_url": "https://www.fedramp.gov/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "pdf_fetch",
+        "sitemap_crawl"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "high",
+      "notes": "Cloud authorization source for baselines, templates, digital documentation, and implementation guidance referenced by DoD cloud policy.",
+      "coverage_targets": [
+        "cloud",
+        "security_controls",
+        "authorization",
+        "reference_design",
+        "Baseline",
+        "Template",
+        "Playbook",
+        "Guidance"
+      ]
+    },
+    {
+      "id": "govinfo-cfr",
+      "name": "GovInfo CFR Packages",
+      "source_owner": "U.S. Government Publishing Office",
+      "issuing_authority_scope": [
+        "Federal agencies",
+        "Office of the Federal Register"
+      ],
+      "source_location_types": [
+        "govinfo_cfr_pdf",
+        "govinfo_cfr_xml"
+      ],
+      "artifact_types": [
+        "CFR annual edition",
+        "CFR title",
+        "CFR part"
+      ],
+      "families": [
+        "regulation",
+        "acquisition",
+        "cybersecurity"
+      ],
+      "landing_pages": [
+        "https://www.govinfo.gov/app/collection/cfr"
+      ],
+      "api_endpoints": [
+        "https://api.govinfo.gov/docs/"
+      ],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.govinfo.gov/app/search/"
+      ],
+      "sitemap_urls": [
+        "https://www.govinfo.gov/sitemap.xml"
+      ],
+      "robots_url": "https://www.govinfo.gov/robots.txt",
+      "capture_strategies": [
+        "api",
+        "content_package_fetch",
+        "direct_fetch"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": true,
+      "priority": "high",
+      "notes": "Annual-edition CFR package coverage complements current eCFR API snapshots.",
+      "coverage_targets": [
+        "regulation",
+        "acquisition",
+        "cybersecurity",
+        "CFR annual edition",
+        "CFR title",
+        "CFR part"
+      ]
+    },
+    {
+      "id": "joint-electronic-library",
+      "name": "Joint Electronic Library",
+      "source_owner": "Joint Chiefs of Staff",
+      "issuing_authority_scope": [
+        "Chairman of the Joint Chiefs of Staff",
+        "Joint Staff"
+      ],
+      "source_location_types": [
+        "joint_pub_pdf",
+        "joint_pub_html"
+      ],
+      "artifact_types": [
+        "Joint publication",
+        "Joint doctrine note"
+      ],
+      "families": [
+        "joint_policy",
+        "operations",
+        "guidance"
+      ],
+      "landing_pages": [
+        "https://www.jcs.mil/Doctrine/Joint-Doctrine-Pubs/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.jcs.mil/Search/"
+      ],
+      "sitemap_urls": [],
+      "robots_url": "https://www.jcs.mil/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "high",
+      "notes": "Joint doctrine source distinct from CJCS directive/control issuance source.",
+      "coverage_targets": [
+        "joint_policy",
+        "operations",
+        "guidance",
+        "Joint publication",
+        "Joint doctrine note"
+      ]
+    },
+    {
       "id": "mynavyhr",
       "name": "MyNavyHR",
       "source_owner": "Navy Personnel Command",
-      "issuing_authority_scope": ["CNO", "Department of the Navy"],
-      "source_location_types": ["mynavyhr_navadmin_txt", "mynavyhr_alnav_txt"],
-      "artifact_types": ["NAVADMIN", "ALNAV"],
-      "families": ["cyber_training", "personnel", "operations"],
-      "landing_pages": ["https://www.mynavyhr.navy.mil/References/Messages/"],
+      "issuing_authority_scope": [
+        "CNO",
+        "Department of the Navy"
+      ],
+      "source_location_types": [
+        "mynavyhr_navadmin_txt",
+        "mynavyhr_alnav_txt"
+      ],
+      "artifact_types": [
+        "NAVADMIN",
+        "ALNAV"
+      ],
+      "families": [
+        "cyber_training",
+        "personnel",
+        "operations"
+      ],
+      "landing_pages": [
+        "https://www.mynavyhr.navy.mil/References/Messages/"
+      ],
       "api_endpoints": [],
       "feed_endpoints": [],
-      "search_endpoints": ["https://www.mynavyhr.navy.mil/References/Messages/NAVADMIN-2024/"],
+      "search_endpoints": [
+        "https://www.mynavyhr.navy.mil/References/Messages/NAVADMIN-2024/"
+      ],
       "sitemap_urls": [],
       "robots_url": "https://www.mynavyhr.navy.mil/robots.txt",
-      "capture_strategies": ["browser_fetch", "manual_import", "source_known_registration"],
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
       "automation_status": "blocked_by_host",
       "api_key_required": false,
       "priority": "high",
       "notes": "Official message archive for NAVADMIN/ALNAV text; bot protection blocks simple fetch."
     },
     {
-      "id": "joint-staff",
-      "name": "Joint Staff Directives",
-      "source_owner": "Joint Staff",
-      "issuing_authority_scope": ["Chairman of the Joint Chiefs of Staff", "Joint Staff"],
-      "source_location_types": ["joint_staff_pdf"],
-      "artifact_types": ["CJCSI", "CJCSM", "Joint Publication"],
-      "families": ["joint_policy", "operations", "cybersecurity"],
-      "landing_pages": ["https://www.jcs.mil/Library/CJCS-Instructions/"],
+      "id": "nist-ai-rmf",
+      "name": "NIST AI Risk Management Framework",
+      "source_owner": "National Institute of Standards and Technology",
+      "issuing_authority_scope": [
+        "NIST"
+      ],
+      "source_location_types": [
+        "nist_pub_html",
+        "nist_pub_pdf"
+      ],
+      "artifact_types": [
+        "AI RMF",
+        "Playbook",
+        "Profile",
+        "Crosswalk"
+      ],
+      "families": [
+        "ai_governance",
+        "risk_management",
+        "reference_design"
+      ],
+      "landing_pages": [
+        "https://www.nist.gov/itl/ai-risk-management-framework"
+      ],
       "api_endpoints": [],
       "feed_endpoints": [],
-      "search_endpoints": ["https://www.jcs.mil/Search/"],
-      "sitemap_urls": [],
-      "robots_url": "https://www.jcs.mil/robots.txt",
-      "capture_strategies": ["direct_fetch", "browser_fetch", "manual_import"],
-      "automation_status": "needs_probe",
+      "search_endpoints": [
+        "https://www.nist.gov/artificial-intelligence"
+      ],
+      "sitemap_urls": [
+        "https://www.nist.gov/sitemap.xml"
+      ],
+      "robots_url": "https://www.nist.gov/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse",
+        "pdf_fetch"
+      ],
+      "automation_status": "direct_fetch_ready",
       "api_key_required": false,
-      "priority": "medium",
-      "notes": "Needed for joint instruction/manual coverage."
+      "priority": "high",
+      "notes": "AI governance source for RMF core, playbooks, profiles, and crosswalk artifacts.",
+      "coverage_targets": [
+        "ai_governance",
+        "risk_management",
+        "reference_design",
+        "AI RMF",
+        "Playbook",
+        "Profile",
+        "Crosswalk"
+      ]
     },
     {
-      "id": "army-pubs",
-      "name": "Army Publishing Directorate",
-      "source_owner": "Department of the Army",
-      "issuing_authority_scope": ["Department of the Army"],
-      "source_location_types": ["army_pubs_pdf", "army_pubs_html"],
-      "artifact_types": ["Army Regulation", "Army Directive", "Army Pamphlet"],
-      "families": ["service_policy", "cybersecurity", "operations"],
-      "landing_pages": ["https://armypubs.army.mil/"],
+      "id": "nist-nccoe",
+      "name": "NIST NCCoE",
+      "source_owner": "National Cybersecurity Center of Excellence",
+      "issuing_authority_scope": [
+        "NIST",
+        "NCCoE"
+      ],
+      "source_location_types": [
+        "nist_nccoe_html",
+        "nist_nccoe_pdf"
+      ],
+      "artifact_types": [
+        "Practice guide",
+        "Reference design",
+        "Implementation example"
+      ],
+      "families": [
+        "reference_design",
+        "cybersecurity",
+        "zero_trust",
+        "cloud"
+      ],
+      "landing_pages": [
+        "https://www.nccoe.nist.gov/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [
+        "https://www.nccoe.nist.gov/rss.xml"
+      ],
+      "search_endpoints": [
+        "https://www.nccoe.nist.gov/search"
+      ],
+      "sitemap_urls": [
+        "https://www.nccoe.nist.gov/sitemap.xml"
+      ],
+      "robots_url": "https://www.nccoe.nist.gov/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse",
+        "pdf_fetch"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "high",
+      "notes": "Reference-design lane for implementable cybersecurity architecture and practice guides.",
+      "coverage_targets": [
+        "reference_design",
+        "cybersecurity",
+        "zero_trust",
+        "cloud",
+        "Practice guide",
+        "Reference design",
+        "Implementation example"
+      ]
+    },
+    {
+      "id": "ostp",
+      "name": "Office of Science and Technology Policy",
+      "source_owner": "Office of Science and Technology Policy",
+      "issuing_authority_scope": [
+        "OSTP",
+        "Executive Office of the President"
+      ],
+      "source_location_types": [
+        "ostp_html",
+        "ostp_pdf",
+        "white_house_html",
+        "white_house_pdf"
+      ],
+      "artifact_types": [
+        "Policy memorandum",
+        "Blueprint",
+        "Strategy",
+        "Guidance"
+      ],
+      "families": [
+        "ai_governance",
+        "technology_policy",
+        "research_security"
+      ],
+      "landing_pages": [
+        "https://www.whitehouse.gov/ostp/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [
+        "https://www.whitehouse.gov/ostp/feed/"
+      ],
+      "search_endpoints": [
+        "https://www.whitehouse.gov/ostp/?s="
+      ],
+      "sitemap_urls": [
+        "https://www.whitehouse.gov/sitemap.xml"
+      ],
+      "robots_url": "https://www.whitehouse.gov/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "rss",
+        "sitemap_crawl"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "high",
+      "notes": "Source for AI, R&D, research-security, and emerging technology governance artifacts.",
+      "coverage_targets": [
+        "ai_governance",
+        "technology_policy",
+        "research_security",
+        "Policy memorandum",
+        "Blueprint",
+        "Strategy",
+        "Guidance"
+      ]
+    },
+    {
+      "id": "usd-as",
+      "name": "USD(A&S)",
+      "source_owner": "Office of the Under Secretary of Defense for Acquisition and Sustainment",
+      "issuing_authority_scope": [
+        "USD(A&S)",
+        "DoW/DoD"
+      ],
+      "source_location_types": [
+        "osd_atl_html",
+        "osd_atl_pdf",
+        "program_office_html",
+        "program_office_pdf"
+      ],
+      "artifact_types": [
+        "Policy memo",
+        "Strategy",
+        "Guidebook",
+        "Implementation guidance"
+      ],
+      "families": [
+        "acquisition",
+        "sustainment",
+        "software_acquisition",
+        "guidance"
+      ],
+      "landing_pages": [
+        "https://www.acq.osd.mil/"
+      ],
       "api_endpoints": [],
       "feed_endpoints": [],
-      "search_endpoints": ["https://armypubs.army.mil/ProductMaps/PubForm/"],
+      "search_endpoints": [
+        "https://www.acq.osd.mil/search.html"
+      ],
       "sitemap_urls": [],
-      "robots_url": "https://armypubs.army.mil/robots.txt",
-      "capture_strategies": ["direct_fetch", "manual_import"],
+      "robots_url": "https://www.acq.osd.mil/robots.txt",
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
       "automation_status": "needs_probe",
       "api_key_required": false,
-      "priority": "medium",
-      "notes": "Army service-policy source for later cross-service coverage."
+      "priority": "high",
+      "notes": "Acquisition and sustainment policy/guidance source upstream of DPC and DAU reference material.",
+      "coverage_targets": [
+        "acquisition",
+        "sustainment",
+        "software_acquisition",
+        "guidance",
+        "Policy memo",
+        "Strategy",
+        "Guidebook",
+        "Implementation guidance"
+      ]
     },
     {
       "id": "air-force-epubs",
       "name": "Air Force e-Publishing",
       "source_owner": "Department of the Air Force",
-      "issuing_authority_scope": ["Department of the Air Force"],
-      "source_location_types": ["air_force_epubs_pdf", "air_force_epubs_html"],
-      "artifact_types": ["DAFI", "AFI", "DAFMAN", "AFMAN"],
-      "families": ["service_policy", "cybersecurity", "operations"],
-      "landing_pages": ["https://www.e-publishing.af.mil/"],
+      "issuing_authority_scope": [
+        "Department of the Air Force"
+      ],
+      "source_location_types": [
+        "air_force_epubs_pdf",
+        "air_force_epubs_html"
+      ],
+      "artifact_types": [
+        "DAFI",
+        "AFI",
+        "DAFMAN",
+        "AFMAN"
+      ],
+      "families": [
+        "service_policy",
+        "cybersecurity",
+        "operations"
+      ],
+      "landing_pages": [
+        "https://www.e-publishing.af.mil/"
+      ],
       "api_endpoints": [],
       "feed_endpoints": [],
-      "search_endpoints": ["https://www.e-publishing.af.mil/Product-Index/"],
+      "search_endpoints": [
+        "https://www.e-publishing.af.mil/Product-Index/"
+      ],
       "sitemap_urls": [],
       "robots_url": "https://www.e-publishing.af.mil/robots.txt",
-      "capture_strategies": ["direct_fetch", "browser_fetch", "manual_import"],
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
       "automation_status": "needs_probe",
       "api_key_required": false,
       "priority": "medium",
       "notes": "Air Force service-policy source for later cross-service coverage."
     },
     {
-      "id": "marine-corps-pubs",
-      "name": "Marine Corps Publications Electronic Library",
-      "source_owner": "United States Marine Corps",
-      "issuing_authority_scope": ["Commandant of the Marine Corps", "United States Marine Corps"],
-      "source_location_types": ["marine_corps_pubs_pdf", "marine_corps_pubs_html"],
-      "artifact_types": ["MCO", "MARADMIN", "MCRP", "MCWP"],
-      "families": ["service_policy", "operations", "cybersecurity"],
-      "landing_pages": ["https://www.marines.mil/News/Publications/"],
+      "id": "army-doctrine",
+      "name": "Army Doctrine Publications",
+      "source_owner": "Department of the Army",
+      "issuing_authority_scope": [
+        "Department of the Army",
+        "Combined Arms Center"
+      ],
+      "source_location_types": [
+        "army_doctrine_pdf",
+        "army_doctrine_html",
+        "army_pubs_pdf",
+        "army_pubs_html"
+      ],
+      "artifact_types": [
+        "ADP",
+        "FM",
+        "ATP",
+        "TC"
+      ],
+      "families": [
+        "service_policy",
+        "operations",
+        "doctrine"
+      ],
+      "landing_pages": [
+        "https://armypubs.army.mil/ProductMaps/PubForm/ArmyDoctrine.aspx"
+      ],
       "api_endpoints": [],
       "feed_endpoints": [],
-      "search_endpoints": ["https://www.marines.mil/Search/"],
+      "search_endpoints": [
+        "https://armypubs.army.mil/ProductMaps/PubForm/"
+      ],
       "sitemap_urls": [],
-      "robots_url": "https://www.marines.mil/robots.txt",
-      "capture_strategies": ["direct_fetch", "browser_fetch", "manual_import"],
+      "robots_url": "https://armypubs.army.mil/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
       "automation_status": "needs_probe",
       "api_key_required": false,
       "priority": "medium",
-      "notes": "Marine Corps policy/message source for later cross-service coverage."
+      "notes": "Army doctrine lane complements Army regulations and DA pamphlets.",
+      "coverage_targets": [
+        "service_policy",
+        "operations",
+        "doctrine",
+        "ADP",
+        "FM",
+        "ATP",
+        "TC"
+      ]
+    },
+    {
+      "id": "army-pubs",
+      "name": "Army Publishing Directorate",
+      "source_owner": "Department of the Army",
+      "issuing_authority_scope": [
+        "Department of the Army"
+      ],
+      "source_location_types": [
+        "army_pubs_pdf",
+        "army_pubs_html"
+      ],
+      "artifact_types": [
+        "Army Regulation",
+        "Army Directive",
+        "Army Pamphlet"
+      ],
+      "families": [
+        "service_policy",
+        "cybersecurity",
+        "operations"
+      ],
+      "landing_pages": [
+        "https://armypubs.army.mil/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://armypubs.army.mil/ProductMaps/PubForm/"
+      ],
+      "sitemap_urls": [],
+      "robots_url": "https://armypubs.army.mil/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "medium",
+      "notes": "Army service-policy source for later cross-service coverage."
+    },
+    {
+      "id": "dau-acquipedia",
+      "name": "DAU ACQuipedia",
+      "source_owner": "Defense Acquisition University",
+      "issuing_authority_scope": [
+        "DAU",
+        "USD(A&S)"
+      ],
+      "source_location_types": [
+        "dau_html"
+      ],
+      "artifact_types": [
+        "Acquisition reference",
+        "Term definition",
+        "Practice guide"
+      ],
+      "families": [
+        "acquisition",
+        "guidance",
+        "reference_design"
+      ],
+      "landing_pages": [
+        "https://www.dau.edu/acquipedia"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.dau.edu/search"
+      ],
+      "sitemap_urls": [
+        "https://www.dau.edu/sitemap.xml"
+      ],
+      "robots_url": "https://www.dau.edu/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse",
+        "sitemap_crawl"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "medium",
+      "notes": "Policy-adjacent reference lane for acquisition concepts that show up in requirements and instructions.",
+      "coverage_targets": [
+        "acquisition",
+        "guidance",
+        "reference_design",
+        "Acquisition reference",
+        "Term definition",
+        "Practice guide"
+      ]
     },
     {
       "id": "disa",
       "name": "DISA",
       "source_owner": "Defense Information Systems Agency",
-      "issuing_authority_scope": ["DISA", "DoW/DoD"],
-      "source_location_types": ["disa_html", "disa_pdf"],
-      "artifact_types": ["Implementation Guidance", "Technical Guidance", "Security Requirement"],
-      "families": ["cybersecurity", "cloud", "network", "zero_trust"],
-      "landing_pages": ["https://www.disa.mil/"],
+      "issuing_authority_scope": [
+        "DISA",
+        "DoW/DoD"
+      ],
+      "source_location_types": [
+        "disa_html",
+        "disa_pdf"
+      ],
+      "artifact_types": [
+        "Implementation Guidance",
+        "Technical Guidance",
+        "Security Requirement"
+      ],
+      "families": [
+        "cybersecurity",
+        "cloud",
+        "network",
+        "zero_trust"
+      ],
+      "landing_pages": [
+        "https://www.disa.mil/"
+      ],
       "api_endpoints": [],
       "feed_endpoints": [],
-      "search_endpoints": ["https://www.disa.mil/Search"],
+      "search_endpoints": [
+        "https://www.disa.mil/Search"
+      ],
       "sitemap_urls": [],
       "robots_url": "https://www.disa.mil/robots.txt",
-      "capture_strategies": ["direct_fetch", "browser_fetch", "manual_import"],
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
       "automation_status": "needs_probe",
       "api_key_required": false,
       "priority": "medium",
       "notes": "Likely source for implementation and technical policy-adjacent artifacts."
     },
     {
-      "id": "navsea",
-      "name": "NAVSEA",
-      "source_owner": "Naval Sea Systems Command",
-      "issuing_authority_scope": ["NAVSEA", "Department of the Navy"],
-      "source_location_types": ["fleet_command_pdf", "fleet_command_html", "program_office_pdf", "program_office_html"],
-      "artifact_types": ["Fleet Guidance", "Command Policy", "Program Guidance"],
-      "families": ["implementation", "acquisition", "cybersecurity"],
-      "landing_pages": ["https://www.navsea.navy.mil/"],
+      "id": "gsa-policy",
+      "name": "GSA Policy and Regulations",
+      "source_owner": "General Services Administration",
+      "issuing_authority_scope": [
+        "GSA"
+      ],
+      "source_location_types": [
+        "gsa_policy_html",
+        "gsa_policy_pdf"
+      ],
+      "artifact_types": [
+        "FMR",
+        "IT policy",
+        "Acquisition guidance",
+        "Template"
+      ],
+      "families": [
+        "acquisition",
+        "property",
+        "technology_policy",
+        "guidance"
+      ],
+      "landing_pages": [
+        "https://www.gsa.gov/policy-regulations"
+      ],
       "api_endpoints": [],
       "feed_endpoints": [],
-      "search_endpoints": ["https://www.navsea.navy.mil/Search/"],
+      "search_endpoints": [
+        "https://www.gsa.gov/search"
+      ],
+      "sitemap_urls": [
+        "https://www.gsa.gov/sitemap.xml"
+      ],
+      "robots_url": "https://www.gsa.gov/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse",
+        "sitemap_crawl"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "medium",
+      "notes": "Civil-agency policy source for property, technology, and acquisition references that feed DoD governance.",
+      "coverage_targets": [
+        "acquisition",
+        "property",
+        "technology_policy",
+        "guidance",
+        "FMR",
+        "IT policy",
+        "Acquisition guidance",
+        "Template"
+      ]
+    },
+    {
+      "id": "joint-staff",
+      "name": "Joint Staff Directives",
+      "source_owner": "Joint Staff",
+      "issuing_authority_scope": [
+        "Chairman of the Joint Chiefs of Staff",
+        "Joint Staff"
+      ],
+      "source_location_types": [
+        "joint_staff_pdf"
+      ],
+      "artifact_types": [
+        "CJCSI",
+        "CJCSM",
+        "Joint Publication"
+      ],
+      "families": [
+        "joint_policy",
+        "operations",
+        "cybersecurity"
+      ],
+      "landing_pages": [
+        "https://www.jcs.mil/Library/CJCS-Instructions/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.jcs.mil/Search/"
+      ],
       "sitemap_urls": [],
-      "robots_url": "https://www.navsea.navy.mil/robots.txt",
-      "capture_strategies": ["source_discovery", "browser_fetch", "manual_import"],
+      "robots_url": "https://www.jcs.mil/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "medium",
+      "notes": "Needed for joint instruction/manual coverage."
+    },
+    {
+      "id": "law-library-congress",
+      "name": "Law Library of Congress",
+      "source_owner": "Library of Congress",
+      "issuing_authority_scope": [
+        "Congress",
+        "Library of Congress"
+      ],
+      "source_location_types": [
+        "loc_law_html"
+      ],
+      "artifact_types": [
+        "Legal reference",
+        "Research guide"
+      ],
+      "families": [
+        "statute",
+        "public_law",
+        "legal_reference"
+      ],
+      "landing_pages": [
+        "https://www.loc.gov/research-centers/law-library-of-congress/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.loc.gov/law/"
+      ],
+      "sitemap_urls": [
+        "https://www.loc.gov/sitemap.xml"
+      ],
+      "robots_url": "https://www.loc.gov/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse",
+        "sitemap_crawl"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "medium",
+      "notes": "Reference lane for legal-history and codification context when GovInfo/OLRC are not enough.",
+      "coverage_targets": [
+        "statute",
+        "public_law",
+        "legal_reference",
+        "Legal reference",
+        "Research guide"
+      ]
+    },
+    {
+      "id": "maradmin",
+      "name": "MARADMIN Messages",
+      "source_owner": "United States Marine Corps",
+      "issuing_authority_scope": [
+        "Commandant of the Marine Corps",
+        "United States Marine Corps"
+      ],
+      "source_location_types": [
+        "maradmin_html",
+        "marine_corps_pubs_html"
+      ],
+      "artifact_types": [
+        "MARADMIN",
+        "ALMAR"
+      ],
+      "families": [
+        "service_policy",
+        "operations",
+        "personnel"
+      ],
+      "landing_pages": [
+        "https://www.marines.mil/News/Messages/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.marines.mil/News/Messages/"
+      ],
+      "sitemap_urls": [
+        "https://www.marines.mil/sitemap.xml"
+      ],
+      "robots_url": "https://www.marines.mil/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "medium",
+      "notes": "Marine message lane separate from publications library for transient implementation guidance.",
+      "coverage_targets": [
+        "service_policy",
+        "operations",
+        "personnel",
+        "MARADMIN",
+        "ALMAR"
+      ]
+    },
+    {
+      "id": "marine-corps-pubs",
+      "name": "Marine Corps Publications Electronic Library",
+      "source_owner": "United States Marine Corps",
+      "issuing_authority_scope": [
+        "Commandant of the Marine Corps",
+        "United States Marine Corps"
+      ],
+      "source_location_types": [
+        "marine_corps_pubs_pdf",
+        "marine_corps_pubs_html"
+      ],
+      "artifact_types": [
+        "MCO",
+        "MARADMIN",
+        "MCRP",
+        "MCWP"
+      ],
+      "families": [
+        "service_policy",
+        "operations",
+        "cybersecurity"
+      ],
+      "landing_pages": [
+        "https://www.marines.mil/News/Publications/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.marines.mil/Search/"
+      ],
+      "sitemap_urls": [],
+      "robots_url": "https://www.marines.mil/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "medium",
+      "notes": "Marine Corps policy/message source for later cross-service coverage."
+    },
+    {
+      "id": "navair",
+      "name": "NAVAIR",
+      "source_owner": "Naval Air Systems Command",
+      "issuing_authority_scope": [
+        "NAVAIR",
+        "Department of the Navy"
+      ],
+      "source_location_types": [
+        "fleet_command_pdf",
+        "fleet_command_html",
+        "program_office_pdf",
+        "program_office_html"
+      ],
+      "artifact_types": [
+        "Fleet Guidance",
+        "Command Policy",
+        "Program Guidance"
+      ],
+      "families": [
+        "implementation",
+        "acquisition",
+        "cybersecurity"
+      ],
+      "landing_pages": [
+        "https://www.navair.navy.mil/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.navair.navy.mil/search"
+      ],
+      "sitemap_urls": [],
+      "robots_url": "https://www.navair.navy.mil/robots.txt",
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
       "automation_status": "needs_probe",
       "api_key_required": false,
       "priority": "medium",
       "notes": "Candidate lower-echelon source. Requires discovery before artifact rules are trusted."
     },
     {
-      "id": "navair",
-      "name": "NAVAIR",
-      "source_owner": "Naval Air Systems Command",
-      "issuing_authority_scope": ["NAVAIR", "Department of the Navy"],
-      "source_location_types": ["fleet_command_pdf", "fleet_command_html", "program_office_pdf", "program_office_html"],
-      "artifact_types": ["Fleet Guidance", "Command Policy", "Program Guidance"],
-      "families": ["implementation", "acquisition", "cybersecurity"],
-      "landing_pages": ["https://www.navair.navy.mil/"],
+      "id": "navsea",
+      "name": "NAVSEA",
+      "source_owner": "Naval Sea Systems Command",
+      "issuing_authority_scope": [
+        "NAVSEA",
+        "Department of the Navy"
+      ],
+      "source_location_types": [
+        "fleet_command_pdf",
+        "fleet_command_html",
+        "program_office_pdf",
+        "program_office_html"
+      ],
+      "artifact_types": [
+        "Fleet Guidance",
+        "Command Policy",
+        "Program Guidance"
+      ],
+      "families": [
+        "implementation",
+        "acquisition",
+        "cybersecurity"
+      ],
+      "landing_pages": [
+        "https://www.navsea.navy.mil/"
+      ],
       "api_endpoints": [],
       "feed_endpoints": [],
-      "search_endpoints": ["https://www.navair.navy.mil/search"],
+      "search_endpoints": [
+        "https://www.navsea.navy.mil/Search/"
+      ],
       "sitemap_urls": [],
-      "robots_url": "https://www.navair.navy.mil/robots.txt",
-      "capture_strategies": ["source_discovery", "browser_fetch", "manual_import"],
+      "robots_url": "https://www.navsea.navy.mil/robots.txt",
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
       "automation_status": "needs_probe",
       "api_key_required": false,
       "priority": "medium",
@@ -445,21 +2302,665 @@
       "id": "navwar",
       "name": "NAVWAR",
       "source_owner": "Naval Information Warfare Systems Command",
-      "issuing_authority_scope": ["NAVWAR", "Department of the Navy"],
-      "source_location_types": ["fleet_command_pdf", "fleet_command_html", "program_office_pdf", "program_office_html"],
-      "artifact_types": ["Fleet Guidance", "Command Policy", "Program Guidance"],
-      "families": ["implementation", "cybersecurity", "software_acquisition"],
-      "landing_pages": ["https://www.navwar.navy.mil/"],
+      "issuing_authority_scope": [
+        "NAVWAR",
+        "Department of the Navy"
+      ],
+      "source_location_types": [
+        "fleet_command_pdf",
+        "fleet_command_html",
+        "program_office_pdf",
+        "program_office_html"
+      ],
+      "artifact_types": [
+        "Fleet Guidance",
+        "Command Policy",
+        "Program Guidance"
+      ],
+      "families": [
+        "implementation",
+        "cybersecurity",
+        "software_acquisition"
+      ],
+      "landing_pages": [
+        "https://www.navwar.navy.mil/"
+      ],
       "api_endpoints": [],
       "feed_endpoints": [],
-      "search_endpoints": ["https://www.navwar.navy.mil/search"],
+      "search_endpoints": [
+        "https://www.navwar.navy.mil/search"
+      ],
       "sitemap_urls": [],
       "robots_url": "https://www.navwar.navy.mil/robots.txt",
-      "capture_strategies": ["source_discovery", "browser_fetch", "manual_import"],
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
       "automation_status": "needs_probe",
       "api_key_required": false,
       "priority": "medium",
       "notes": "Candidate lower-echelon source for Navy cyber/software implementation guidance."
+    },
+    {
+      "id": "navy-doctrine-library",
+      "name": "Navy Warfare Library",
+      "source_owner": "Department of the Navy",
+      "issuing_authority_scope": [
+        "Department of the Navy",
+        "Chief of Naval Operations"
+      ],
+      "source_location_types": [
+        "navy_doctrine_pdf",
+        "navy_doctrine_html"
+      ],
+      "artifact_types": [
+        "Navy warfare publication",
+        "Tactics techniques procedures",
+        "Doctrine"
+      ],
+      "families": [
+        "service_policy",
+        "operations",
+        "doctrine"
+      ],
+      "landing_pages": [
+        "https://doctrine.navy.mil/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://doctrine.navy.mil/"
+      ],
+      "sitemap_urls": [],
+      "robots_url": "https://doctrine.navy.mil/robots.txt",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "medium",
+      "notes": "Navy doctrine lane for lower-level operating concepts and reference designs.",
+      "coverage_targets": [
+        "service_policy",
+        "operations",
+        "doctrine",
+        "Navy warfare publication",
+        "Tactics techniques procedures",
+        "Doctrine"
+      ]
+    },
+    {
+      "id": "nsa-cyber-guidance",
+      "name": "NSA Cybersecurity Guidance",
+      "source_owner": "National Security Agency",
+      "issuing_authority_scope": [
+        "NSA",
+        "Cybersecurity Directorate"
+      ],
+      "source_location_types": [
+        "nsa_cyber_guidance_html",
+        "nsa_cyber_guidance_pdf"
+      ],
+      "artifact_types": [
+        "Cybersecurity advisory",
+        "Hardening guide",
+        "Best practice",
+        "Reference architecture"
+      ],
+      "families": [
+        "cybersecurity",
+        "zero_trust",
+        "reference_design"
+      ],
+      "landing_pages": [
+        "https://www.nsa.gov/Press-Room/Cybersecurity-Advisories-Guidance/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.nsa.gov/Search/"
+      ],
+      "sitemap_urls": [
+        "https://www.nsa.gov/sitemap.xml"
+      ],
+      "robots_url": "https://www.nsa.gov/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "pdf_fetch"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "medium",
+      "notes": "Cyber hardening and reference-design source for national security systems and DoD implementation work.",
+      "coverage_targets": [
+        "cybersecurity",
+        "zero_trust",
+        "reference_design",
+        "Cybersecurity advisory",
+        "Hardening guide",
+        "Best practice",
+        "Reference architecture"
+      ]
+    },
+    {
+      "id": "opm-policy",
+      "name": "OPM Policy",
+      "source_owner": "Office of Personnel Management",
+      "issuing_authority_scope": [
+        "OPM"
+      ],
+      "source_location_types": [
+        "opm_policy_html",
+        "opm_policy_pdf"
+      ],
+      "artifact_types": [
+        "Personnel policy",
+        "Guide",
+        "Fact sheet"
+      ],
+      "families": [
+        "personnel",
+        "workforce",
+        "human_resources"
+      ],
+      "landing_pages": [
+        "https://www.opm.gov/policy-data-oversight/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.opm.gov/search/"
+      ],
+      "sitemap_urls": [
+        "https://www.opm.gov/sitemap.xml"
+      ],
+      "robots_url": "https://www.opm.gov/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse",
+        "sitemap_crawl"
+      ],
+      "automation_status": "direct_fetch_ready",
+      "api_key_required": false,
+      "priority": "medium",
+      "notes": "Federal personnel policy source for human-resources references in DoD personnel issuances.",
+      "coverage_targets": [
+        "personnel",
+        "workforce",
+        "human_resources",
+        "Personnel policy",
+        "Guide",
+        "Fact sheet"
+      ]
+    },
+    {
+      "id": "space-force-doctrine",
+      "name": "Space Force Doctrine",
+      "source_owner": "United States Space Force",
+      "issuing_authority_scope": [
+        "United States Space Force"
+      ],
+      "source_location_types": [
+        "space_force_doctrine_pdf",
+        "space_force_doctrine_html"
+      ],
+      "artifact_types": [
+        "Space Doctrine Publication",
+        "Doctrine note",
+        "Guidance"
+      ],
+      "families": [
+        "service_policy",
+        "operations",
+        "space"
+      ],
+      "landing_pages": [
+        "https://www.starcom.spaceforce.mil/About-Us/Doctrine/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.spaceforce.mil/Search/"
+      ],
+      "sitemap_urls": [],
+      "robots_url": "https://www.spaceforce.mil/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "medium",
+      "notes": "Space Force doctrine and service-guidance lane for space-specific downstream references.",
+      "coverage_targets": [
+        "service_policy",
+        "operations",
+        "space",
+        "Space Doctrine Publication",
+        "Doctrine note",
+        "Guidance"
+      ]
+    },
+    {
+      "id": "tradoc-publications",
+      "name": "TRADOC Publications",
+      "source_owner": "U.S. Army Training and Doctrine Command",
+      "issuing_authority_scope": [
+        "TRADOC",
+        "Department of the Army"
+      ],
+      "source_location_types": [
+        "tradoc_pubs_pdf",
+        "tradoc_pubs_html"
+      ],
+      "artifact_types": [
+        "TRADOC Regulation",
+        "TRADOC Pamphlet",
+        "TRADOC Supplement"
+      ],
+      "families": [
+        "service_policy",
+        "training",
+        "doctrine"
+      ],
+      "landing_pages": [
+        "https://adminpubs.tradoc.army.mil/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://adminpubs.tradoc.army.mil/"
+      ],
+      "sitemap_urls": [],
+      "robots_url": "https://adminpubs.tradoc.army.mil/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "medium",
+      "notes": "Lower-echelon Army policy and doctrine source that is not fully represented in APD search alone.",
+      "coverage_targets": [
+        "service_policy",
+        "training",
+        "doctrine",
+        "TRADOC Regulation",
+        "TRADOC Pamphlet",
+        "TRADOC Supplement"
+      ]
+    },
+    {
+      "id": "uscybercom",
+      "name": "U.S. Cyber Command",
+      "source_owner": "United States Cyber Command",
+      "issuing_authority_scope": [
+        "USCYBERCOM",
+        "DoW/DoD"
+      ],
+      "source_location_types": [
+        "uscybercom_html",
+        "uscybercom_pdf",
+        "program_office_html",
+        "program_office_pdf"
+      ],
+      "artifact_types": [
+        "Command vision",
+        "Guidance",
+        "Strategy",
+        "Fact sheet"
+      ],
+      "families": [
+        "cybersecurity",
+        "operations",
+        "implementation"
+      ],
+      "landing_pages": [
+        "https://www.cybercom.mil/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.cybercom.mil/Search/"
+      ],
+      "sitemap_urls": [],
+      "robots_url": "https://www.cybercom.mil/robots.txt",
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "medium",
+      "notes": "Combatant-command source for cyber strategy and downstream operational guidance.",
+      "coverage_targets": [
+        "cybersecurity",
+        "operations",
+        "implementation",
+        "Command vision",
+        "Guidance",
+        "Strategy",
+        "Fact sheet"
+      ]
+    },
+    {
+      "id": "usd-re",
+      "name": "USD(R&E)",
+      "source_owner": "Office of the Under Secretary of Defense for Research and Engineering",
+      "issuing_authority_scope": [
+        "USD(R&E)",
+        "DoW/DoD"
+      ],
+      "source_location_types": [
+        "osd_re_html",
+        "osd_re_pdf",
+        "program_office_html",
+        "program_office_pdf"
+      ],
+      "artifact_types": [
+        "Technology strategy",
+        "Research guidance",
+        "Reference architecture"
+      ],
+      "families": [
+        "research_security",
+        "technology_policy",
+        "ai_governance",
+        "software_acquisition"
+      ],
+      "landing_pages": [
+        "https://www.cto.mil/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.cto.mil/search/"
+      ],
+      "sitemap_urls": [],
+      "robots_url": "https://www.cto.mil/robots.txt",
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "medium",
+      "notes": "Research and engineering policy/guidance source for technology strategy and reference-design artifacts.",
+      "coverage_targets": [
+        "research_security",
+        "technology_policy",
+        "ai_governance",
+        "software_acquisition",
+        "Technology strategy",
+        "Research guidance",
+        "Reference architecture"
+      ]
+    },
+    {
+      "id": "air-force-materiel-command",
+      "name": "Air Force Materiel Command",
+      "source_owner": "Air Force Materiel Command",
+      "issuing_authority_scope": [
+        "AFMC",
+        "Department of the Air Force"
+      ],
+      "source_location_types": [
+        "afmc_html",
+        "afmc_pdf",
+        "program_office_html",
+        "program_office_pdf"
+      ],
+      "artifact_types": [
+        "Command policy",
+        "Technical guidance",
+        "Acquisition guidance"
+      ],
+      "families": [
+        "implementation",
+        "acquisition",
+        "operations"
+      ],
+      "landing_pages": [
+        "https://www.afmc.af.mil/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.afmc.af.mil/Search/"
+      ],
+      "sitemap_urls": [],
+      "robots_url": "https://www.afmc.af.mil/robots.txt",
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "low",
+      "notes": "Lower-echelon Air Force source for materiel, acquisition, and technical implementation guidance.",
+      "coverage_targets": [
+        "implementation",
+        "acquisition",
+        "operations",
+        "Command policy",
+        "Technical guidance",
+        "Acquisition guidance"
+      ]
+    },
+    {
+      "id": "coast-guard-directives",
+      "name": "Coast Guard Directives System",
+      "source_owner": "United States Coast Guard",
+      "issuing_authority_scope": [
+        "United States Coast Guard",
+        "Department of Homeland Security"
+      ],
+      "source_location_types": [
+        "coast_guard_directive_pdf",
+        "coast_guard_directive_html"
+      ],
+      "artifact_types": [
+        "Commandant Instruction",
+        "Manual",
+        "Navigation and Vessel Inspection Circular"
+      ],
+      "families": [
+        "service_policy",
+        "operations",
+        "homeland_security"
+      ],
+      "landing_pages": [
+        "https://www.dcms.uscg.mil/directives/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.dcms.uscg.mil/directives/"
+      ],
+      "sitemap_urls": [],
+      "robots_url": "https://www.dcms.uscg.mil/robots.txt",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "low",
+      "notes": "Uniformed-service policy lane outside DoD, useful when statutes or joint references cite Coast Guard policy.",
+      "coverage_targets": [
+        "service_policy",
+        "operations",
+        "homeland_security",
+        "Commandant Instruction",
+        "Manual",
+        "Navigation and Vessel Inspection Circular"
+      ]
+    },
+    {
+      "id": "navfac",
+      "name": "NAVFAC",
+      "source_owner": "Naval Facilities Engineering Systems Command",
+      "issuing_authority_scope": [
+        "NAVFAC",
+        "Department of the Navy"
+      ],
+      "source_location_types": [
+        "navfac_pdf",
+        "navfac_html",
+        "program_office_pdf",
+        "program_office_html"
+      ],
+      "artifact_types": [
+        "Unified Facilities Criteria",
+        "Engineering guidance",
+        "Command policy"
+      ],
+      "families": [
+        "implementation",
+        "facilities",
+        "cybersecurity"
+      ],
+      "landing_pages": [
+        "https://www.navfac.navy.mil/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.navfac.navy.mil/Search/"
+      ],
+      "sitemap_urls": [],
+      "robots_url": "https://www.navfac.navy.mil/robots.txt",
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "low",
+      "notes": "Lower-echelon engineering and facilities policy source.",
+      "coverage_targets": [
+        "implementation",
+        "facilities",
+        "cybersecurity",
+        "Unified Facilities Criteria",
+        "Engineering guidance",
+        "Command policy"
+      ]
+    },
+    {
+      "id": "peo-digital",
+      "name": "PEO Digital",
+      "source_owner": "Program Executive Office Digital and Enterprise Services",
+      "issuing_authority_scope": [
+        "PEO Digital",
+        "Department of the Navy"
+      ],
+      "source_location_types": [
+        "peo_digital_html",
+        "peo_digital_pdf",
+        "program_office_html",
+        "program_office_pdf"
+      ],
+      "artifact_types": [
+        "Program guidance",
+        "Technical reference",
+        "Enterprise service guidance"
+      ],
+      "families": [
+        "implementation",
+        "software_acquisition",
+        "cloud"
+      ],
+      "landing_pages": [
+        "https://www.peodigital.navy.mil/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.peodigital.navy.mil/Search/"
+      ],
+      "sitemap_urls": [],
+      "robots_url": "https://www.peodigital.navy.mil/robots.txt",
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "low",
+      "notes": "Program-office guidance lane for Navy enterprise IT and digital-service implementation artifacts.",
+      "coverage_targets": [
+        "implementation",
+        "software_acquisition",
+        "cloud",
+        "Program guidance",
+        "Technical reference",
+        "Enterprise service guidance"
+      ]
+    },
+    {
+      "id": "ussocom",
+      "name": "U.S. Special Operations Command",
+      "source_owner": "United States Special Operations Command",
+      "issuing_authority_scope": [
+        "USSOCOM",
+        "DoW/DoD"
+      ],
+      "source_location_types": [
+        "socom_html",
+        "socom_pdf",
+        "program_office_html",
+        "program_office_pdf"
+      ],
+      "artifact_types": [
+        "Command guidance",
+        "Strategy",
+        "Doctrine-adjacent publication"
+      ],
+      "families": [
+        "operations",
+        "implementation",
+        "acquisition"
+      ],
+      "landing_pages": [
+        "https://www.socom.mil/"
+      ],
+      "api_endpoints": [],
+      "feed_endpoints": [],
+      "search_endpoints": [
+        "https://www.socom.mil/search"
+      ],
+      "sitemap_urls": [],
+      "robots_url": "https://www.socom.mil/robots.txt",
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "low",
+      "notes": "Combatant-command policy-adjacent source for special operations guidance and acquisition references.",
+      "coverage_targets": [
+        "operations",
+        "implementation",
+        "acquisition",
+        "Command guidance",
+        "Strategy",
+        "Doctrine-adjacent publication"
+      ]
     }
   ]
 }

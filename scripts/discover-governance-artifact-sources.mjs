@@ -115,6 +115,8 @@ function sourceCandidatesFor(item) {
     const term = encodeURIComponent(`Executive Order ${parsed.number}`);
     add(sourceRow("Federal Register API search", "Federal Register", "federal_register_api", `https://www.federalregister.gov/api/v1/documents?conditions%5Bterm%5D=${term}&conditions%5Btype%5D=PRESDOCU&per_page=20`, "strong", "Federal Register keyless API search for presidential documents."));
     add(sourceRow("Federal Register web search", "Federal Register", "federal_register_html", `https://www.federalregister.gov/documents/search?conditions%5Bterm%5D=${term}&conditions%5Btype%5D=PRESDOCU`, "strong", "Federal Register presidential-document search."));
+    add(sourceRow("National Archives EO index", "National Archives Executive Orders", "national_archives_eo_html", "https://www.archives.gov/federal-register/executive-orders", "strong", "National Archives historical Executive Order index."));
+    add(sourceRow("White House presidential actions", "White House Presidential Actions", "presidential_actions_html", `https://www.whitehouse.gov/?s=${term}`, "candidate", "White House search for recent presidential action text."));
   }
 
   if (item.reference_family === "usc" && parsed.title && parsed.section) {
@@ -129,28 +131,36 @@ function sourceCandidatesFor(item) {
   if (item.reference_family === "nist-sp" && parsed.series) {
     const term = encodeURIComponent(`NIST SP ${parsed.series}`);
     add(sourceRow("NIST CSRC search", "NIST CSRC", "nist_csrc_html", `https://csrc.nist.gov/search?searchtext=${term}`, "strong", "NIST CSRC publication search."));
+    add(sourceRow("NIST publications search", "NIST Publications", "nist_pub_html", `https://www.nist.gov/publications/search?k=${term}`, "strong", "NIST publications catalog search."));
     add(sourceRow("NIST publications search", "NIST NVL Publications", "nist_nvlpubs_pdf", `https://www.nist.gov/publications/search?k=${term}`, "candidate", "NIST publications search fallback."));
   }
 
   if (item.reference_family === "omb-memo") {
     const term = encodeURIComponent(item.label);
     add(sourceRow("OMB memoranda", "OMB", "white_house_html", "https://www.whitehouse.gov/omb/information-for-agencies/memoranda/", "strong", "OMB memoranda index."));
+    add(sourceRow("OMB circulars", "OMB Circulars", "omb_circular_html", "https://www.whitehouse.gov/omb/information-for-agencies/circulars/", "candidate", "OMB circulars and durable agency guidance index."));
     add(sourceRow("White House search", "White House", "white_house_html", `https://www.whitehouse.gov/?s=${term}`, "candidate", "White House search for hosted OMB memoranda."));
   }
 
   if (item.reference_family === "cfr" && parsed.title) {
     add(sourceRow("eCFR title", "eCFR", "ecfr_html", `https://www.ecfr.gov/current/title-${parsed.title}`, "strong", "Current eCFR title landing page."));
     add(sourceRow("eCFR API", "eCFR", "ecfr_api", `https://www.ecfr.gov/api/versioner/v1/full/current/title-${parsed.title}.xml`, "strong", "Current eCFR XML API for the title."));
+    add(sourceRow("GovInfo CFR annual edition", "GovInfo CFR Packages", "govinfo_cfr_pdf", "https://www.govinfo.gov/app/collection/cfr", "candidate", "Annual-edition CFR package source for point-in-time comparisons.", { apiKeyRequired: true }));
   }
 
   if (item.reference_family === "far") {
+    const farPath = acquisitionPath(item.label, "far");
     const term = encodeURIComponent(item.label);
-    add(sourceRow("Acquisition.gov FAR search", "Acquisition.gov", "acquisition_gov_html", `https://www.acquisition.gov/search?search_api_fulltext=${term}`, "strong", "Acquisition.gov FAR search."));
+    if (farPath) add(sourceRow("Acquisition.gov FAR page", "Acquisition.gov FAR", "far_html", `https://www.acquisition.gov/far/${farPath}`, "strong", "Acquisition.gov FAR part/clause page."));
+    add(sourceRow("Acquisition.gov FAR search", "Acquisition.gov FAR", "far_html", `https://www.acquisition.gov/search?search_api_fulltext=${term}`, "strong", "Acquisition.gov FAR search."));
   }
 
   if (item.reference_family === "dfars") {
+    const dfarsPath = acquisitionPath(item.label, "dfars");
     const term = encodeURIComponent(item.label);
-    add(sourceRow("Acquisition.gov DFARS search", "Acquisition.gov", "acquisition_gov_html", `https://www.acquisition.gov/search?search_api_fulltext=${term}`, "strong", "Acquisition.gov DFARS search."));
+    if (dfarsPath) add(sourceRow("Acquisition.gov DFARS page", "Acquisition.gov DFARS", "dfars_html", `https://www.acquisition.gov/dfars/${dfarsPath}`, "strong", "Acquisition.gov DFARS part/clause page."));
+    add(sourceRow("Acquisition.gov DFARS search", "Acquisition.gov DFARS", "dfars_html", `https://www.acquisition.gov/search?search_api_fulltext=${term}`, "strong", "Acquisition.gov DFARS search."));
+    add(sourceRow("Defense Pricing, Contracting, and Acquisition Policy", "Defense Pricing, Contracting, and Acquisition Policy", "dpc_html", "https://www.acq.osd.mil/dpap/dars/dfars/index.html", "candidate", "Defense Pricing, Contracting, and Acquisition Policy DFARS/DARS source surface."));
   }
 
   if (item.reference_family === "secnav") {
@@ -184,6 +194,17 @@ function sourceCandidatesFor(item) {
   }
 
   return out;
+}
+
+function acquisitionPath(label = "", family) {
+  const normalized = String(label).toLowerCase().replace(/dfars|far/g, "").trim();
+  const partMatch = normalized.match(/part\s+([0-9]+)(?:[.-]([0-9]+))?/i);
+  if (partMatch) return `part-${partMatch[1]}${partMatch[2] ? `-${partMatch[2]}` : ""}`;
+  const sectionMatch = normalized.match(/([0-9]+)[ .-]+([0-9]+)(?:[ .-]+([0-9]+))?/);
+  if (!sectionMatch) return "";
+  const number = [sectionMatch[1], sectionMatch[2], sectionMatch[3]].filter(Boolean).join(".");
+  if (family === "far" && sectionMatch[1] === "0") return "";
+  return number;
 }
 
 function parseReference(item) {

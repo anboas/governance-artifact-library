@@ -51,6 +51,9 @@ const rows = registry.sources
       source_owner: source.source_owner,
       issuing_authority_scope: source.issuing_authority_scope,
       source_location_types: source.source_location_types,
+      artifact_types: source.artifact_types || [],
+      families: source.families || [],
+      coverage_targets: source.coverage_targets || [],
       capture_strategies: source.capture_strategies,
       automation_status: source.automation_status,
       api_key_required: source.api_key_required,
@@ -77,6 +80,33 @@ const rows = registry.sources
     };
   })
   .sort((a, b) => priorityRank(a.priority) - priorityRank(b.priority) || a.name.localeCompare(b.name));
+
+const requiredSourceIds = [
+  "govinfo",
+  "us-code-olrc",
+  "federal-register",
+  "national-archives-executive-orders",
+  "white-house-presidential-actions",
+  "omb-circulars",
+  "nist-publications",
+  "nist-nccoe",
+  "acquisition-gov-far",
+  "acquisition-gov-dfars",
+  "defense-pricing-contracting",
+  "dod-issuances",
+  "doni",
+  "army-pubs",
+  "air-force-epubs",
+  "marine-corps-pubs",
+  "disa-stigs",
+  "cnss",
+  "joint-electronic-library",
+  "cdao",
+];
+assert.ok(rows.length >= 55, `source discovery registry should track exhaustive official sources, found ${rows.length}`);
+for (const sourceId of requiredSourceIds) {
+  assert.equal(sourceIds.has(sourceId), true, `source discovery registry missing ${sourceId}`);
+}
 
 const totals = {
   sources: rows.length,
@@ -181,6 +211,20 @@ function renderMarkdown(model) {
         row.discovery_surface_counts.has_robots ? "yes" : "no",
         row.source_location_types.join("<br>"),
         row.artifacts.map((artifact) => artifact.id).join("<br>") || "none",
+      ].join(" | ") + " |"
+    ),
+    "",
+    "## Coverage Targets",
+    "",
+    "| Source | Authority Scope | Artifact Types | Families | Coverage Targets |",
+    "| --- | --- | --- | --- | --- |",
+    ...model.rows.map((row) =>
+      [
+        `| ${row.name}`,
+        row.issuing_authority_scope.join("<br>"),
+        row.artifact_types.join("<br>") || "unspecified",
+        row.families.join("<br>") || "unspecified",
+        row.coverage_targets.join("<br>") || "unspecified",
       ].join(" | ") + " |"
     ),
     "",

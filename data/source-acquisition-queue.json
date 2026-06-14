@@ -2,16 +2,16 @@
   "generated_at": "2026-06-14T05:16:50.860Z",
   "queue_version": "source-acquisition-queue-v1",
   "summary": {
-    "queue_item_count": 35,
-    "p0_count": 13,
-    "p1_count": 7,
-    "p2_count": 15,
+    "queue_item_count": 67,
+    "p0_count": 15,
+    "p1_count": 19,
+    "p2_count": 33,
     "governance_gap_count": 13,
-    "source_start_count": 11,
-    "source_recovery_count": 5,
+    "source_start_count": 42,
+    "source_recovery_count": 6,
     "coverage_completion_count": 6,
-    "critical_source_count": 17,
-    "blocked_or_browser_needed_count": 16
+    "critical_source_count": 21,
+    "blocked_or_browser_needed_count": 18
   },
   "queue_items": [
     {
@@ -104,6 +104,50 @@
       ],
       "source_candidates": [],
       "queue_rank": 2
+    },
+    {
+      "id": "source-recovery-disa-stigs",
+      "item_type": "source_recovery",
+      "label": "DISA STIG Library mirror recovery",
+      "queue_priority": "P0",
+      "score": 104,
+      "reason": "0 registered artifacts blocked or browser-needed.",
+      "recommended_action": "Run browser-assisted source capture and store raw mirrors.",
+      "source_id": "disa-stigs",
+      "source_name": "DISA STIG Library",
+      "source_owner": "Defense Information Systems Agency",
+      "source_priority": "critical",
+      "automation_status": "browser_shell_detected",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "source_location_types": [
+        "disa_stig_html",
+        "disa_stig_zip",
+        "disa_srg_pdf"
+      ],
+      "source_url": "https://public.cyber.mil/stigs/",
+      "search_url": "https://public.cyber.mil/stigs/downloads/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 3
     },
     {
       "id": "source-recovery-dod-issuances",
@@ -1283,7 +1327,7 @@
         "dowi-6440-03"
       ],
       "source_candidates": [],
-      "queue_rank": 3
+      "queue_rank": 4
     },
     {
       "id": "governance-gap-appropriations-law",
@@ -1335,7 +1379,7 @@
           "url": "https://www.govinfo.gov/"
         }
       ],
-      "queue_rank": 4
+      "queue_rank": 5
     },
     {
       "id": "source-recovery-dod-cyber-exchange",
@@ -1379,7 +1423,7 @@
         "cyber-mil-cyber-awareness-challenge"
       ],
       "source_candidates": [],
-      "queue_rank": 5
+      "queue_rank": 6
     },
     {
       "id": "source-recovery-mynavyhr",
@@ -1424,7 +1468,7 @@
         "navadmin-214-24-fy2025-cybersecurity-awareness"
       ],
       "source_candidates": [],
-      "queue_rank": 6
+      "queue_rank": 7
     },
     {
       "id": "governance-gap-dfars",
@@ -1473,9 +1517,23 @@
           "priority": "critical",
           "automation_status": "direct_fetch_ready",
           "url": "https://www.acquisition.gov/"
+        },
+        {
+          "id": "acquisition-gov-dfars",
+          "name": "Acquisition.gov DFARS",
+          "priority": "critical",
+          "automation_status": "direct_fetch_ready",
+          "url": "https://www.acquisition.gov/dfars"
+        },
+        {
+          "id": "acquisition-gov-far",
+          "name": "Acquisition.gov FAR",
+          "priority": "critical",
+          "automation_status": "direct_fetch_ready",
+          "url": "https://www.acquisition.gov/browse/index/far"
         }
       ],
-      "queue_rank": 7
+      "queue_rank": 8
     },
     {
       "id": "governance-gap-ostp-guidance",
@@ -1526,6 +1584,13 @@
           "url": "https://www.whitehouse.gov/omb/"
         },
         {
+          "id": "omb-circulars",
+          "name": "OMB Circulars",
+          "priority": "critical",
+          "automation_status": "direct_fetch_ready",
+          "url": "https://www.whitehouse.gov/omb/information-for-agencies/circulars/"
+        },
+        {
           "id": "white-house",
           "name": "White House",
           "priority": "critical",
@@ -1533,7 +1598,7 @@
           "url": "https://www.whitehouse.gov/"
         }
       ],
-      "queue_rank": 8
+      "queue_rank": 9
     },
     {
       "id": "governance-gap-presidential-memorandum",
@@ -1593,14 +1658,14 @@
           "url": "https://www.whitehouse.gov/omb/"
         },
         {
-          "id": "white-house",
-          "name": "White House",
+          "id": "omb-circulars",
+          "name": "OMB Circulars",
           "priority": "critical",
           "automation_status": "direct_fetch_ready",
-          "url": "https://www.whitehouse.gov/"
+          "url": "https://www.whitehouse.gov/omb/information-for-agencies/circulars/"
         }
       ],
-      "queue_rank": 9
+      "queue_rank": 10
     },
     {
       "id": "governance-gap-dod-dtm",
@@ -1652,7 +1717,7 @@
           "url": "https://www.esd.whs.mil/DD/"
         }
       ],
-      "queue_rank": 10
+      "queue_rank": 11
     },
     {
       "id": "governance-gap-dod-manual",
@@ -1704,7 +1769,7 @@
           "url": "https://www.esd.whs.mil/DD/"
         }
       ],
-      "queue_rank": 11
+      "queue_rank": 12
     },
     {
       "id": "governance-gap-dod-cio-guidance",
@@ -1757,7 +1822,48 @@
           "url": "https://dodcio.defense.gov/"
         }
       ],
-      "queue_rank": 12
+      "queue_rank": 13
+    },
+    {
+      "id": "source-start-national-archives-executive-orders",
+      "item_type": "source_start",
+      "label": "National Archives Executive Orders initial ingest",
+      "queue_priority": "P0",
+      "score": 96,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "national-archives-executive-orders",
+      "source_name": "National Archives Executive Orders",
+      "source_owner": "National Archives and Records Administration",
+      "source_priority": "critical",
+      "automation_status": "direct_fetch_ready",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse"
+      ],
+      "source_location_types": [
+        "national_archives_eo_html"
+      ],
+      "source_url": "https://www.archives.gov/federal-register/executive-orders",
+      "search_url": "https://www.archives.gov/research/catalog",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 14
     },
     {
       "id": "governance-gap-secnav-instruction",
@@ -1809,7 +1915,50 @@
           "url": "https://www.secnav.navy.mil/doni/"
         }
       ],
-      "queue_rank": 13
+      "queue_rank": 15
+    },
+    {
+      "id": "source-start-govinfo-cfr",
+      "item_type": "source_start",
+      "label": "GovInfo CFR Packages initial ingest",
+      "queue_priority": "P1",
+      "score": 95,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Configure API access or fallback search capture, then seed first source-known artifacts.",
+      "source_id": "govinfo-cfr",
+      "source_name": "GovInfo CFR Packages",
+      "source_owner": "U.S. Government Publishing Office",
+      "source_priority": "high",
+      "automation_status": "direct_fetch_ready",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "api",
+        "content_package_fetch",
+        "direct_fetch"
+      ],
+      "source_location_types": [
+        "govinfo_cfr_pdf",
+        "govinfo_cfr_xml"
+      ],
+      "source_url": "https://www.govinfo.gov/app/collection/cfr",
+      "search_url": "https://www.govinfo.gov/app/search/",
+      "api_url": "https://api.govinfo.gov/docs/",
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 16
     },
     {
       "id": "governance-gap-cisa-guidance",
@@ -1860,9 +2009,16 @@
           "priority": "high",
           "automation_status": "direct_fetch_ready",
           "url": "https://www.cisa.gov/"
+        },
+        {
+          "id": "cisa-guidance",
+          "name": "CISA Guidance Library",
+          "priority": "high",
+          "automation_status": "direct_fetch_ready",
+          "url": "https://www.cisa.gov/resources-tools/resources"
         }
       ],
-      "queue_rank": 14
+      "queue_rank": 17
     },
     {
       "id": "source-start-congress-gov",
@@ -1904,7 +2060,52 @@
       },
       "artifact_ids": [],
       "source_candidates": [],
-      "queue_rank": 15
+      "queue_rank": 18
+    },
+    {
+      "id": "source-start-cisa-guidance",
+      "item_type": "source_start",
+      "label": "CISA Guidance Library initial ingest",
+      "queue_priority": "P1",
+      "score": 92,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "cisa-guidance",
+      "source_name": "CISA Guidance Library",
+      "source_owner": "Cybersecurity and Infrastructure Security Agency",
+      "source_priority": "high",
+      "automation_status": "direct_fetch_ready",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "sitemap_crawl",
+        "rss"
+      ],
+      "source_location_types": [
+        "cisa_guidance_html",
+        "cisa_guidance_pdf",
+        "cisa_html",
+        "cisa_pdf"
+      ],
+      "source_url": "https://www.cisa.gov/resources-tools/resources",
+      "search_url": "https://www.cisa.gov/resources-tools/resources?search_api_fulltext=",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 19
     },
     {
       "id": "source-start-cisa",
@@ -1947,7 +2148,50 @@
       },
       "artifact_ids": [],
       "source_candidates": [],
-      "queue_rank": 16
+      "queue_rank": 20
+    },
+    {
+      "id": "source-start-dau-aaf",
+      "item_type": "source_start",
+      "label": "DAU Adaptive Acquisition Framework initial ingest",
+      "queue_priority": "P1",
+      "score": 92,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "dau-aaf",
+      "source_name": "DAU Adaptive Acquisition Framework",
+      "source_owner": "Defense Acquisition University",
+      "source_priority": "high",
+      "automation_status": "direct_fetch_ready",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse",
+        "sitemap_crawl"
+      ],
+      "source_location_types": [
+        "dau_html",
+        "dau_pdf"
+      ],
+      "source_url": "https://aaf.dau.edu/",
+      "search_url": "https://aaf.dau.edu/search/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 21
     },
     {
       "id": "source-start-ecfr",
@@ -1989,7 +2233,195 @@
       },
       "artifact_ids": [],
       "source_candidates": [],
-      "queue_rank": 17
+      "queue_rank": 22
+    },
+    {
+      "id": "source-start-fedramp",
+      "item_type": "source_start",
+      "label": "FedRAMP initial ingest",
+      "queue_priority": "P1",
+      "score": 92,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "fedramp",
+      "source_name": "FedRAMP",
+      "source_owner": "General Services Administration",
+      "source_priority": "high",
+      "automation_status": "direct_fetch_ready",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "pdf_fetch",
+        "sitemap_crawl"
+      ],
+      "source_location_types": [
+        "fedramp_html",
+        "fedramp_pdf"
+      ],
+      "source_url": "https://www.fedramp.gov/rev5/documents-templates/",
+      "search_url": "https://www.fedramp.gov/rev5/documents-templates/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 23
+    },
+    {
+      "id": "governance-gap-joint-staff-instruction",
+      "item_type": "governance_gap",
+      "label": "Joint Staff Instruction / Manual coverage gap",
+      "queue_priority": "P1",
+      "score": 92,
+      "reason": "Joint Staff Instruction / Manual has no artifact in the corpus universe.",
+      "recommended_action": "Use CJCS Directives Library to discover and register the first Joint Staff Instruction / Manual artifact.",
+      "source_id": "cjcs-directives",
+      "source_name": "CJCS Directives Library",
+      "source_owner": "Joint Staff",
+      "source_priority": "high",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "joint_staff_pdf"
+      ],
+      "source_url": "https://www.jcs.mil/Library/CJCS-Instructions/",
+      "search_url": "https://www.jcs.mil/Search/",
+      "api_url": null,
+      "governance_item_id": "joint-staff-instruction",
+      "governance_item_label": "Joint Staff Instruction / Manual",
+      "hierarchy_rank": 85,
+      "counts": {
+        "in_repo": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "raw": 0,
+        "text": 0,
+        "metadata": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versions": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [
+        {
+          "id": "cjcs-directives",
+          "name": "CJCS Directives Library",
+          "priority": "high",
+          "automation_status": "needs_probe",
+          "url": "https://www.jcs.mil/Library/CJCS-Instructions/"
+        },
+        {
+          "id": "joint-staff",
+          "name": "Joint Staff Directives",
+          "priority": "medium",
+          "automation_status": "needs_probe",
+          "url": "https://www.jcs.mil/Library/CJCS-Instructions/"
+        }
+      ],
+      "queue_rank": 24
+    },
+    {
+      "id": "source-start-nist-ai-rmf",
+      "item_type": "source_start",
+      "label": "NIST AI Risk Management Framework initial ingest",
+      "queue_priority": "P1",
+      "score": 92,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "nist-ai-rmf",
+      "source_name": "NIST AI Risk Management Framework",
+      "source_owner": "National Institute of Standards and Technology",
+      "source_priority": "high",
+      "automation_status": "direct_fetch_ready",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse",
+        "pdf_fetch"
+      ],
+      "source_location_types": [
+        "nist_pub_html",
+        "nist_pub_pdf"
+      ],
+      "source_url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "search_url": "https://www.nist.gov/artificial-intelligence",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 25
+    },
+    {
+      "id": "source-start-nist-nccoe",
+      "item_type": "source_start",
+      "label": "NIST NCCoE initial ingest",
+      "queue_priority": "P1",
+      "score": 92,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "nist-nccoe",
+      "source_name": "NIST NCCoE",
+      "source_owner": "National Cybersecurity Center of Excellence",
+      "source_priority": "high",
+      "automation_status": "direct_fetch_ready",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse",
+        "pdf_fetch"
+      ],
+      "source_location_types": [
+        "nist_nccoe_html",
+        "nist_nccoe_pdf"
+      ],
+      "source_url": "https://www.nccoe.nist.gov/",
+      "search_url": "https://www.nccoe.nist.gov/search",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 26
     },
     {
       "id": "governance-gap-alnav",
@@ -2041,7 +2473,161 @@
           "url": "https://www.mynavyhr.navy.mil/References/Messages/"
         }
       ],
-      "queue_rank": 18
+      "queue_rank": 27
+    },
+    {
+      "id": "source-start-defense-pricing-contracting",
+      "item_type": "source_start",
+      "label": "Defense Pricing, Contracting, and Acquisition Policy initial ingest",
+      "queue_priority": "P1",
+      "score": 90,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "defense-pricing-contracting",
+      "source_name": "Defense Pricing, Contracting, and Acquisition Policy",
+      "source_owner": "Defense Pricing and Contracting",
+      "source_priority": "critical",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "dpc_html",
+        "dpc_pdf"
+      ],
+      "source_url": "https://www.acq.osd.mil/asda/dpc/index.html",
+      "search_url": "https://www.acq.osd.mil/dpap/dars/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 28
+    },
+    {
+      "id": "source-start-disa-stigs",
+      "item_type": "source_start",
+      "label": "DISA STIG Library initial ingest",
+      "queue_priority": "P1",
+      "score": 90,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "disa-stigs",
+      "source_name": "DISA STIG Library",
+      "source_owner": "Defense Information Systems Agency",
+      "source_priority": "critical",
+      "automation_status": "browser_shell_detected",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "source_location_types": [
+        "disa_stig_html",
+        "disa_stig_zip",
+        "disa_srg_pdf"
+      ],
+      "source_url": "https://public.cyber.mil/stigs/",
+      "search_url": "https://public.cyber.mil/stigs/downloads/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 29
+    },
+    {
+      "id": "governance-gap-program-office-guidance",
+      "item_type": "governance_gap",
+      "label": "Program Office / Echelon 4 Guidance coverage gap",
+      "queue_priority": "P1",
+      "score": 90,
+      "reason": "Program Office / Echelon 4 Guidance has no artifact in the corpus universe.",
+      "recommended_action": "Use Chief Digital and Artificial Intelligence Office to discover and register the first Program Office / Echelon 4 Guidance artifact.",
+      "source_id": "cdao",
+      "source_name": "Chief Digital and Artificial Intelligence Office",
+      "source_owner": "Chief Digital and Artificial Intelligence Office",
+      "source_priority": "high",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "program_office_pdf",
+        "program_office_html"
+      ],
+      "source_url": "https://www.ai.mil/",
+      "search_url": "https://www.ai.mil/Search/",
+      "api_url": null,
+      "governance_item_id": "program-office-guidance",
+      "governance_item_label": "Program Office / Echelon 4 Guidance",
+      "hierarchy_rank": 90,
+      "counts": {
+        "in_repo": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "raw": 0,
+        "text": 0,
+        "metadata": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versions": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [
+        {
+          "id": "cdao",
+          "name": "Chief Digital and Artificial Intelligence Office",
+          "priority": "high",
+          "automation_status": "needs_probe",
+          "url": "https://www.ai.mil/"
+        },
+        {
+          "id": "usd-as",
+          "name": "USD(A&S)",
+          "priority": "high",
+          "automation_status": "needs_probe",
+          "url": "https://www.acq.osd.mil/"
+        },
+        {
+          "id": "navair",
+          "name": "NAVAIR",
+          "priority": "medium",
+          "automation_status": "needs_probe",
+          "url": "https://www.navair.navy.mil/"
+        }
+      ],
+      "queue_rank": 30
     },
     {
       "id": "coverage-complete-dod-strategy",
@@ -2095,20 +2681,193 @@
           "url": "https://dodcio.defense.gov/"
         }
       ],
-      "queue_rank": 19
+      "queue_rank": 31
     },
     {
-      "id": "governance-gap-joint-staff-instruction",
-      "item_type": "governance_gap",
-      "label": "Joint Staff Instruction / Manual coverage gap",
+      "id": "source-start-gsa-policy",
+      "item_type": "source_start",
+      "label": "GSA Policy and Regulations initial ingest",
       "queue_priority": "P1",
       "score": 88,
-      "reason": "Joint Staff Instruction / Manual has no artifact in the corpus universe.",
-      "recommended_action": "Use Joint Staff Directives to discover and register the first Joint Staff Instruction / Manual artifact.",
-      "source_id": "joint-staff",
-      "source_name": "Joint Staff Directives",
-      "source_owner": "Joint Staff",
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "gsa-policy",
+      "source_name": "GSA Policy and Regulations",
+      "source_owner": "General Services Administration",
       "source_priority": "medium",
+      "automation_status": "direct_fetch_ready",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse",
+        "sitemap_crawl"
+      ],
+      "source_location_types": [
+        "gsa_policy_html",
+        "gsa_policy_pdf"
+      ],
+      "source_url": "https://www.gsa.gov/policy-regulations",
+      "search_url": "https://www.gsa.gov/search",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 32
+    },
+    {
+      "id": "source-start-law-library-congress",
+      "item_type": "source_start",
+      "label": "Law Library of Congress initial ingest",
+      "queue_priority": "P1",
+      "score": 88,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "law-library-congress",
+      "source_name": "Law Library of Congress",
+      "source_owner": "Library of Congress",
+      "source_priority": "medium",
+      "automation_status": "direct_fetch_ready",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse",
+        "sitemap_crawl"
+      ],
+      "source_location_types": [
+        "loc_law_html"
+      ],
+      "source_url": "https://www.loc.gov/research-centers/law-library-of-congress/",
+      "search_url": "https://www.loc.gov/law/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 33
+    },
+    {
+      "id": "source-start-opm-policy",
+      "item_type": "source_start",
+      "label": "OPM Policy initial ingest",
+      "queue_priority": "P1",
+      "score": 88,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "opm-policy",
+      "source_name": "OPM Policy",
+      "source_owner": "Office of Personnel Management",
+      "source_priority": "medium",
+      "automation_status": "direct_fetch_ready",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse",
+        "sitemap_crawl"
+      ],
+      "source_location_types": [
+        "opm_policy_html",
+        "opm_policy_pdf"
+      ],
+      "source_url": "https://www.opm.gov/policy-data-oversight/",
+      "search_url": "https://www.opm.gov/search/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 34
+    },
+    {
+      "id": "source-start-cdao",
+      "item_type": "source_start",
+      "label": "Chief Digital and Artificial Intelligence Office initial ingest",
+      "queue_priority": "P2",
+      "score": 86,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "cdao",
+      "source_name": "Chief Digital and Artificial Intelligence Office",
+      "source_owner": "Chief Digital and Artificial Intelligence Office",
+      "source_priority": "high",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "cdao_html",
+        "cdao_pdf",
+        "program_office_html",
+        "program_office_pdf"
+      ],
+      "source_url": "https://www.ai.mil/",
+      "search_url": "https://www.ai.mil/Search/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 35
+    },
+    {
+      "id": "source-start-cjcs-directives",
+      "item_type": "source_start",
+      "label": "CJCS Directives Library initial ingest",
+      "queue_priority": "P2",
+      "score": 86,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "cjcs-directives",
+      "source_name": "CJCS Directives Library",
+      "source_owner": "Joint Staff",
+      "source_priority": "high",
       "automation_status": "needs_probe",
       "coverage_status": "not_started",
       "capture_strategies": [
@@ -2117,37 +2876,72 @@
         "manual_import"
       ],
       "source_location_types": [
+        "cjcs_directive_pdf",
         "joint_staff_pdf"
       ],
       "source_url": "https://www.jcs.mil/Library/CJCS-Instructions/",
       "search_url": "https://www.jcs.mil/Search/",
       "api_url": null,
-      "governance_item_id": "joint-staff-instruction",
-      "governance_item_label": "Joint Staff Instruction / Manual",
-      "hierarchy_rank": 85,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
       "counts": {
-        "in_repo": 0,
+        "artifacts": 0,
         "mirrored": 0,
         "blocked": 0,
-        "raw": 0,
-        "text": 0,
-        "metadata": 0,
+        "text_extracted": 0,
         "analytics": 0,
         "analysis": 0,
         "structured": 0,
-        "versions": 0
+        "versioned": 0
       },
       "artifact_ids": [],
-      "source_candidates": [
-        {
-          "id": "joint-staff",
-          "name": "Joint Staff Directives",
-          "priority": "medium",
-          "automation_status": "needs_probe",
-          "url": "https://www.jcs.mil/Library/CJCS-Instructions/"
-        }
+      "source_candidates": [],
+      "queue_rank": 36
+    },
+    {
+      "id": "source-start-cnss",
+      "item_type": "source_start",
+      "label": "Committee on National Security Systems initial ingest",
+      "queue_priority": "P2",
+      "score": 86,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "cnss",
+      "source_name": "Committee on National Security Systems",
+      "source_owner": "Committee on National Security Systems",
+      "source_priority": "high",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "pdf_fetch",
+        "manual_import"
       ],
-      "queue_rank": 20
+      "source_location_types": [
+        "cnss_policy_html",
+        "cnss_policy_pdf"
+      ],
+      "source_url": "https://www.cnss.gov/CNSS/issuances/Policies.cfm",
+      "search_url": "https://www.cnss.gov/CNSS/issuances/issuances.cfm",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 37
     },
     {
       "id": "governance-gap-fleet-guidance",
@@ -2214,7 +3008,50 @@
           "url": "https://www.navwar.navy.mil/"
         }
       ],
-      "queue_rank": 21
+      "queue_rank": 38
+    },
+    {
+      "id": "source-start-joint-electronic-library",
+      "item_type": "source_start",
+      "label": "Joint Electronic Library initial ingest",
+      "queue_priority": "P2",
+      "score": 86,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "joint-electronic-library",
+      "source_name": "Joint Electronic Library",
+      "source_owner": "Joint Chiefs of Staff",
+      "source_priority": "high",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "joint_pub_pdf",
+        "joint_pub_html"
+      ],
+      "source_url": "https://www.jcs.mil/Doctrine/Joint-Doctrine-Pubs/",
+      "search_url": "https://www.jcs.mil/Search/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 39
     },
     {
       "id": "coverage-complete-opnav-instruction",
@@ -2268,74 +3105,7 @@
           "url": "https://www.secnav.navy.mil/doni/"
         }
       ],
-      "queue_rank": 22
-    },
-    {
-      "id": "governance-gap-program-office-guidance",
-      "item_type": "governance_gap",
-      "label": "Program Office / Echelon 4 Guidance coverage gap",
-      "queue_priority": "P2",
-      "score": 86,
-      "reason": "Program Office / Echelon 4 Guidance has no artifact in the corpus universe.",
-      "recommended_action": "Use NAVAIR to discover and register the first Program Office / Echelon 4 Guidance artifact.",
-      "source_id": "navair",
-      "source_name": "NAVAIR",
-      "source_owner": "Naval Air Systems Command",
-      "source_priority": "medium",
-      "automation_status": "needs_probe",
-      "coverage_status": "not_started",
-      "capture_strategies": [
-        "source_discovery",
-        "browser_fetch",
-        "manual_import"
-      ],
-      "source_location_types": [
-        "program_office_pdf",
-        "program_office_html"
-      ],
-      "source_url": "https://www.navair.navy.mil/",
-      "search_url": "https://www.navair.navy.mil/search",
-      "api_url": null,
-      "governance_item_id": "program-office-guidance",
-      "governance_item_label": "Program Office / Echelon 4 Guidance",
-      "hierarchy_rank": 90,
-      "counts": {
-        "in_repo": 0,
-        "mirrored": 0,
-        "blocked": 0,
-        "raw": 0,
-        "text": 0,
-        "metadata": 0,
-        "analytics": 0,
-        "analysis": 0,
-        "structured": 0,
-        "versions": 0
-      },
-      "artifact_ids": [],
-      "source_candidates": [
-        {
-          "id": "navair",
-          "name": "NAVAIR",
-          "priority": "medium",
-          "automation_status": "needs_probe",
-          "url": "https://www.navair.navy.mil/"
-        },
-        {
-          "id": "navsea",
-          "name": "NAVSEA",
-          "priority": "medium",
-          "automation_status": "needs_probe",
-          "url": "https://www.navsea.navy.mil/"
-        },
-        {
-          "id": "navwar",
-          "name": "NAVWAR",
-          "priority": "medium",
-          "automation_status": "needs_probe",
-          "url": "https://www.navwar.navy.mil/"
-        }
-      ],
-      "queue_rank": 23
+      "queue_rank": 40
     },
     {
       "id": "coverage-complete-secnav-manual",
@@ -2390,7 +3160,52 @@
           "url": "https://www.secnav.navy.mil/doni/"
         }
       ],
-      "queue_rank": 24
+      "queue_rank": 41
+    },
+    {
+      "id": "source-start-usd-as",
+      "item_type": "source_start",
+      "label": "USD(A&S) initial ingest",
+      "queue_priority": "P2",
+      "score": 86,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "usd-as",
+      "source_name": "USD(A&S)",
+      "source_owner": "Office of the Under Secretary of Defense for Acquisition and Sustainment",
+      "source_priority": "high",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "osd_atl_html",
+        "osd_atl_pdf",
+        "program_office_html",
+        "program_office_pdf"
+      ],
+      "source_url": "https://www.acq.osd.mil/",
+      "search_url": "https://www.acq.osd.mil/search.html",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 42
     },
     {
       "id": "coverage-complete-navadmin",
@@ -2444,7 +3259,7 @@
           "url": "https://www.mynavyhr.navy.mil/References/Messages/"
         }
       ],
-      "queue_rank": 25
+      "queue_rank": 43
     },
     {
       "id": "source-start-air-force-epubs",
@@ -2487,7 +3302,52 @@
       },
       "artifact_ids": [],
       "source_candidates": [],
-      "queue_rank": 26
+      "queue_rank": 44
+    },
+    {
+      "id": "source-start-army-doctrine",
+      "item_type": "source_start",
+      "label": "Army Doctrine Publications initial ingest",
+      "queue_priority": "P2",
+      "score": 82,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "army-doctrine",
+      "source_name": "Army Doctrine Publications",
+      "source_owner": "Department of the Army",
+      "source_priority": "medium",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "army_doctrine_pdf",
+        "army_doctrine_html",
+        "army_pubs_pdf",
+        "army_pubs_html"
+      ],
+      "source_url": "https://armypubs.army.mil/ProductMaps/PubForm/ArmyDoctrine.aspx",
+      "search_url": "https://armypubs.army.mil/ProductMaps/PubForm/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 45
     },
     {
       "id": "source-start-army-pubs",
@@ -2529,7 +3389,49 @@
       },
       "artifact_ids": [],
       "source_candidates": [],
-      "queue_rank": 27
+      "queue_rank": 46
+    },
+    {
+      "id": "source-start-dau-acquipedia",
+      "item_type": "source_start",
+      "label": "DAU ACQuipedia initial ingest",
+      "queue_priority": "P2",
+      "score": 82,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "dau-acquipedia",
+      "source_name": "DAU ACQuipedia",
+      "source_owner": "Defense Acquisition University",
+      "source_priority": "medium",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "html_parse",
+        "sitemap_crawl"
+      ],
+      "source_location_types": [
+        "dau_html"
+      ],
+      "source_url": "https://www.dau.edu/acquipedia",
+      "search_url": "https://www.dau.edu/search",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 47
     },
     {
       "id": "source-start-disa",
@@ -2572,7 +3474,7 @@
       },
       "artifact_ids": [],
       "source_candidates": [],
-      "queue_rank": 28
+      "queue_rank": 48
     },
     {
       "id": "source-start-joint-staff",
@@ -2614,7 +3516,50 @@
       },
       "artifact_ids": [],
       "source_candidates": [],
-      "queue_rank": 29
+      "queue_rank": 49
+    },
+    {
+      "id": "source-start-maradmin",
+      "item_type": "source_start",
+      "label": "MARADMIN Messages initial ingest",
+      "queue_priority": "P2",
+      "score": 82,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "maradmin",
+      "source_name": "MARADMIN Messages",
+      "source_owner": "United States Marine Corps",
+      "source_priority": "medium",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "maradmin_html",
+        "marine_corps_pubs_html"
+      ],
+      "source_url": "https://www.marines.mil/News/Messages/",
+      "search_url": "https://www.marines.mil/News/Messages/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 50
     },
     {
       "id": "source-start-marine-corps-pubs",
@@ -2657,7 +3602,7 @@
       },
       "artifact_ids": [],
       "source_candidates": [],
-      "queue_rank": 30
+      "queue_rank": 51
     },
     {
       "id": "source-start-navair",
@@ -2702,7 +3647,7 @@
       },
       "artifact_ids": [],
       "source_candidates": [],
-      "queue_rank": 31
+      "queue_rank": 52
     },
     {
       "id": "source-start-navsea",
@@ -2747,7 +3692,7 @@
       },
       "artifact_ids": [],
       "source_candidates": [],
-      "queue_rank": 32
+      "queue_rank": 53
     },
     {
       "id": "source-start-navwar",
@@ -2792,7 +3737,269 @@
       },
       "artifact_ids": [],
       "source_candidates": [],
-      "queue_rank": 33
+      "queue_rank": 54
+    },
+    {
+      "id": "source-start-navy-doctrine-library",
+      "item_type": "source_start",
+      "label": "Navy Warfare Library initial ingest",
+      "queue_priority": "P2",
+      "score": 82,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "navy-doctrine-library",
+      "source_name": "Navy Warfare Library",
+      "source_owner": "Department of the Navy",
+      "source_priority": "medium",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "source_location_types": [
+        "navy_doctrine_pdf",
+        "navy_doctrine_html"
+      ],
+      "source_url": "https://doctrine.navy.mil/",
+      "search_url": "https://doctrine.navy.mil/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 55
+    },
+    {
+      "id": "source-start-nsa-cyber-guidance",
+      "item_type": "source_start",
+      "label": "NSA Cybersecurity Guidance initial ingest",
+      "queue_priority": "P2",
+      "score": 82,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "nsa-cyber-guidance",
+      "source_name": "NSA Cybersecurity Guidance",
+      "source_owner": "National Security Agency",
+      "source_priority": "medium",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "pdf_fetch"
+      ],
+      "source_location_types": [
+        "nsa_cyber_guidance_html",
+        "nsa_cyber_guidance_pdf"
+      ],
+      "source_url": "https://www.nsa.gov/Press-Room/Cybersecurity-Advisories-Guidance/",
+      "search_url": "https://www.nsa.gov/Search/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 56
+    },
+    {
+      "id": "source-start-space-force-doctrine",
+      "item_type": "source_start",
+      "label": "Space Force Doctrine initial ingest",
+      "queue_priority": "P2",
+      "score": 82,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "space-force-doctrine",
+      "source_name": "Space Force Doctrine",
+      "source_owner": "United States Space Force",
+      "source_priority": "medium",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "space_force_doctrine_pdf",
+        "space_force_doctrine_html"
+      ],
+      "source_url": "https://www.starcom.spaceforce.mil/About-Us/Doctrine/",
+      "search_url": "https://www.spaceforce.mil/Search/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 57
+    },
+    {
+      "id": "source-start-tradoc-publications",
+      "item_type": "source_start",
+      "label": "TRADOC Publications initial ingest",
+      "queue_priority": "P2",
+      "score": 82,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "tradoc-publications",
+      "source_name": "TRADOC Publications",
+      "source_owner": "U.S. Army Training and Doctrine Command",
+      "source_priority": "medium",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "tradoc_pubs_pdf",
+        "tradoc_pubs_html"
+      ],
+      "source_url": "https://adminpubs.tradoc.army.mil/",
+      "search_url": "https://adminpubs.tradoc.army.mil/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 58
+    },
+    {
+      "id": "source-start-uscybercom",
+      "item_type": "source_start",
+      "label": "U.S. Cyber Command initial ingest",
+      "queue_priority": "P2",
+      "score": 82,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "uscybercom",
+      "source_name": "U.S. Cyber Command",
+      "source_owner": "United States Cyber Command",
+      "source_priority": "medium",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "uscybercom_html",
+        "uscybercom_pdf",
+        "program_office_html",
+        "program_office_pdf"
+      ],
+      "source_url": "https://www.cybercom.mil/",
+      "search_url": "https://www.cybercom.mil/Search/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 59
+    },
+    {
+      "id": "source-start-usd-re",
+      "item_type": "source_start",
+      "label": "USD(R&E) initial ingest",
+      "queue_priority": "P2",
+      "score": 82,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "usd-re",
+      "source_name": "USD(R&E)",
+      "source_owner": "Office of the Under Secretary of Defense for Research and Engineering",
+      "source_priority": "medium",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "osd_re_html",
+        "osd_re_pdf",
+        "program_office_html",
+        "program_office_pdf"
+      ],
+      "source_url": "https://www.cto.mil/",
+      "search_url": "https://www.cto.mil/search/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 60
     },
     {
       "id": "coverage-complete-dod-directive",
@@ -3138,7 +4345,7 @@
           "url": "https://www.esd.whs.mil/DD/"
         }
       ],
-      "queue_rank": 34
+      "queue_rank": 61
     },
     {
       "id": "coverage-complete-dod-instruction",
@@ -4035,7 +5242,230 @@
           "url": "https://www.esd.whs.mil/DD/"
         }
       ],
-      "queue_rank": 35
+      "queue_rank": 62
+    },
+    {
+      "id": "source-start-air-force-materiel-command",
+      "item_type": "source_start",
+      "label": "Air Force Materiel Command initial ingest",
+      "queue_priority": "P2",
+      "score": 78,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "air-force-materiel-command",
+      "source_name": "Air Force Materiel Command",
+      "source_owner": "Air Force Materiel Command",
+      "source_priority": "low",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "afmc_html",
+        "afmc_pdf",
+        "program_office_html",
+        "program_office_pdf"
+      ],
+      "source_url": "https://www.afmc.af.mil/",
+      "search_url": "https://www.afmc.af.mil/Search/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 63
+    },
+    {
+      "id": "source-start-coast-guard-directives",
+      "item_type": "source_start",
+      "label": "Coast Guard Directives System initial ingest",
+      "queue_priority": "P2",
+      "score": 78,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "coast-guard-directives",
+      "source_name": "Coast Guard Directives System",
+      "source_owner": "United States Coast Guard",
+      "source_priority": "low",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "coast_guard_directive_pdf",
+        "coast_guard_directive_html"
+      ],
+      "source_url": "https://www.dcms.uscg.mil/directives/",
+      "search_url": "https://www.dcms.uscg.mil/directives/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 64
+    },
+    {
+      "id": "source-start-navfac",
+      "item_type": "source_start",
+      "label": "NAVFAC initial ingest",
+      "queue_priority": "P2",
+      "score": 78,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "navfac",
+      "source_name": "NAVFAC",
+      "source_owner": "Naval Facilities Engineering Systems Command",
+      "source_priority": "low",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "navfac_pdf",
+        "navfac_html",
+        "program_office_pdf",
+        "program_office_html"
+      ],
+      "source_url": "https://www.navfac.navy.mil/",
+      "search_url": "https://www.navfac.navy.mil/Search/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 65
+    },
+    {
+      "id": "source-start-peo-digital",
+      "item_type": "source_start",
+      "label": "PEO Digital initial ingest",
+      "queue_priority": "P2",
+      "score": 78,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "peo-digital",
+      "source_name": "PEO Digital",
+      "source_owner": "Program Executive Office Digital and Enterprise Services",
+      "source_priority": "low",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "peo_digital_html",
+        "peo_digital_pdf",
+        "program_office_html",
+        "program_office_pdf"
+      ],
+      "source_url": "https://www.peodigital.navy.mil/",
+      "search_url": "https://www.peodigital.navy.mil/Search/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 66
+    },
+    {
+      "id": "source-start-ussocom",
+      "item_type": "source_start",
+      "label": "U.S. Special Operations Command initial ingest",
+      "queue_priority": "P2",
+      "score": 78,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "ussocom",
+      "source_name": "U.S. Special Operations Command",
+      "source_owner": "United States Special Operations Command",
+      "source_priority": "low",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "socom_html",
+        "socom_pdf",
+        "program_office_html",
+        "program_office_pdf"
+      ],
+      "source_url": "https://www.socom.mil/",
+      "search_url": "https://www.socom.mil/search",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 67
     }
   ]
 }

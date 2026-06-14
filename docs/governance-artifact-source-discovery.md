@@ -11,7 +11,7 @@ Generated from `data/reference-ingestion-queue.json`, `manifest.json`, and `sour
 - Needs source discovery: 0
 - P0 candidates: 132
 - Exact or strong source paths: 1730
-- Official source systems represented: 13
+- Official source systems represented: 20
 
 ## Candidate Families
 
@@ -39,13 +39,20 @@ Generated from `data/reference-ingestion-queue.json`, `manifest.json`, and `sour
 | U.S. Code | 1093 | 31 | 0 | 1093 | 0 | 0 | 1876 |
 | Federal Register | 198 | 28 | 0 | 198 | 0 | 0 | 845 |
 | National Archives | 198 | 28 | 0 | 198 | 0 | 0 | 845 |
+| National Archives Executive Orders | 198 | 28 | 0 | 198 | 0 | 0 | 845 |
+| White House Presidential Actions | 198 | 28 | 0 | 198 | 0 | 0 | 845 |
 | DoW/DoD Issuances | 152 | 22 | 16 | 136 | 0 | 0 | 773 |
 | eCFR | 34 | 0 | 0 | 34 | 0 | 0 | 50 |
+| GovInfo CFR Packages | 34 | 0 | 0 | 34 | 0 | 0 | 50 |
 | NIST CSRC | 26 | 0 | 0 | 26 | 0 | 0 | 78 |
-| NIST NVL Publications | 26 | 0 | 0 | 26 | 0 | 0 | 78 |
+| NIST Publications | 26 | 0 | 0 | 26 | 0 | 0 | 78 |
 | Acquisition.gov | 16 | 0 | 0 | 16 | 0 | 0 | 26 |
 | Department of the Navy Issuances | 10 | 0 | 0 | 10 | 0 | 0 | 18 |
+| Acquisition.gov DFARS | 8 | 0 | 0 | 8 | 0 | 0 | 15 |
+| Acquisition.gov FAR | 8 | 0 | 0 | 8 | 0 | 0 | 11 |
+| Defense Pricing, Contracting, and Acquisition Policy | 8 | 0 | 0 | 8 | 0 | 0 | 15 |
 | OMB | 4 | 0 | 0 | 4 | 0 | 0 | 5 |
+| OMB Circulars | 4 | 0 | 0 | 4 | 0 | 0 | 5 |
 | White House | 4 | 0 | 0 | 4 | 0 | 0 | 5 |
 
 ## Top Priority Candidates
