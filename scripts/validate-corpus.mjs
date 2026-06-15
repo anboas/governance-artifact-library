@@ -135,6 +135,9 @@ assert.equal(existsSync(join(ROOT, "docs", "reference-ingestion-queue.md")), tru
 assert.equal(existsSync(join(ROOT, "data", "source-acquisition-queue.json")), true, "source acquisition queue missing");
 assert.equal(existsSync(join(ROOT, "data", "source-acquisition-queue-summary.json")), true, "source acquisition queue summary missing");
 assert.equal(existsSync(join(ROOT, "docs", "source-acquisition-queue.md")), true, "source acquisition queue docs missing");
+assert.equal(existsSync(join(ROOT, "data", "governance-artifact-source-discovery-summary.json")), true, "governance artifact source discovery summary missing");
+assert.equal(existsSync(join(ROOT, "data", "governance-artifact-source-discovery-index.json")), true, "governance artifact source discovery compact index missing");
+assert.equal(existsSync(join(ROOT, "data", "policy-corpus-runtime-summary.json")), true, "policy corpus runtime summary missing");
 assert.equal(existsSync(join(ROOT, "data", "dod-issuances-catalog.json")), true, "DoD issuances catalog missing");
 assert.equal(existsSync(join(ROOT, "docs", "dod-issuances-catalog.md")), true, "DoD issuances catalog docs missing");
 assert.equal(existsSync(join(ROOT, "schemas", "source-acquisition-packet.schema.json")), true, "source acquisition packet schema missing");
@@ -150,6 +153,9 @@ const ingestionQueue = readJson("data/reference-ingestion-queue.json");
 const ingestionQueueSummary = readJson("data/reference-ingestion-queue-summary.json");
 const sourceAcquisitionQueue = readJson("data/source-acquisition-queue.json");
 const sourceAcquisitionQueueSummary = readJson("data/source-acquisition-queue-summary.json");
+const sourceDiscoverySummary = readJson("data/governance-artifact-source-discovery-summary.json");
+const sourceDiscoveryIndex = readJson("data/governance-artifact-source-discovery-index.json");
+const runtimeSummary = readJson("data/policy-corpus-runtime-summary.json");
 const dodIssuancesCatalog = readJson("data/dod-issuances-catalog.json");
 const sourceAcquisitionPacketExample = readJson("data/source-acquisition-packet-example.json");
 const sourceAcquisitionCapturePlanExample = readJson("data/source-acquisition-capture-plan.example.json");
@@ -180,6 +186,12 @@ assert.ok(sourceAcquisitionQueueSummary.top_queue_items?.length <= 50, "source a
 assert.ok(sourceAcquisitionQueue.queue_items[0]?.queue_rank === 1, "source acquisition queue should be ranked");
 assert.ok(sourceAcquisitionQueue.queue_items.some(item => item.item_type === "source_recovery"), "source acquisition queue should include source recovery work");
 assert.ok(sourceAcquisitionQueue.queue_items.some(item => item.item_type === "governance_gap"), "source acquisition queue should include governance gap work");
+assert.deepEqual(sourceDiscoverySummary.summary, sourceDiscoveryIndex.summary, "source discovery summary and index should mirror counts");
+assert.equal(sourceDiscoveryIndex.candidates?.length, sourceDiscoverySummary.summary?.candidate_count, "source discovery compact index should cover every candidate");
+assert.ok(sourceDiscoverySummary.candidate_stats_by_source?.length >= 1, "source discovery summary should precompute per-source candidate stats");
+assert.equal(runtimeSummary.manifest?.artifact_count, manifest.artifact_count, "runtime summary artifact count should match manifest");
+assert.deepEqual(runtimeSummary.references, referenceCoverage.summary, "runtime summary should mirror reference totals");
+assert.deepEqual(runtimeSummary.authority.edge_count, authorityChainMap.summary.edge_count, "runtime summary should mirror authority edge totals");
 assert.ok(dodIssuancesCatalog.summary?.dodi_count >= 800, "DoD issuances catalog should exhaustively cover DoDI page records");
 assert.ok(dodIssuancesCatalog.summary?.dodd_count >= 250, "DoD issuances catalog should exhaustively cover DoDD page records");
 assert.equal(

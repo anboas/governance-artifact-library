@@ -64,6 +64,7 @@ const totals = {
 
 const byFamily = groupRows(candidates, (item) => item.reference_family, "reference_family");
 const bySourceSystem = groupRows(candidates.flatMap((item) => item.source_systems.map((sourceSystem) => ({ ...item, sourceSystem }))), (item) => item.sourceSystem, "source_system");
+const candidateStatsBySource = candidateStatsBySourceSystem(candidates);
 const priorityRows = candidates
   .filter((item) => item.queue_priority === "P0")
   .slice(0, 75)
@@ -86,8 +87,26 @@ const model = {
   priority_candidates: priorityRows,
   candidates,
 };
+const summaryModel = {
+  generated_at: generatedAt,
+  discovery_version: "governance-artifact-source-discovery-summary-v1",
+  full_source_path: "data/governance-artifact-source-discovery.json",
+  compact_index_path: "data/governance-artifact-source-discovery-index.json",
+  summary: totals,
+  by_family: byFamily,
+  by_source_system: bySourceSystem,
+  candidate_stats_by_source: candidateStatsBySource,
+  priority_candidates: priorityRows,
+};
+const indexModel = {
+  ...summaryModel,
+  discovery_version: "governance-artifact-source-discovery-index-v1",
+  candidates: candidates.map(compactCandidate),
+};
 
 await writeOrCheck("data/governance-artifact-source-discovery.json", `${JSON.stringify(model, null, 2)}\n`);
+await writeOrCheck("data/governance-artifact-source-discovery-summary.json", `${JSON.stringify(summaryModel, null, 2)}\n`);
+await writeOrCheck("data/governance-artifact-source-discovery-index.json", `${JSON.stringify(indexModel, null, 2)}\n`);
 await writeOrCheck("docs/governance-artifact-source-discovery.md", renderMarkdown(model));
 
 console.log(
@@ -307,6 +326,70 @@ function groupRows(items, selector, keyName) {
     groups.set(key, group);
   }
   return [...groups.values()].sort((a, b) => b.p0_count - a.p0_count || b.candidate_count - a.candidate_count || String(a[keyName]).localeCompare(String(b[keyName])));
+}
+
+function candidateStatsBySourceSystem(items) {
+  const stats = new Map();
+  for (const item of items) {
+    const systems = new Set([
+      ...(Array.isArray(item.source_systems) ? item.source_systems : []),
+      ...(Array.isArray(item.source_candidates) ? item.source_candidates.map((source) => source.source_system) : []),
+    ].filter(Boolean));
+    for (const system of systems) {
+      const key = sourceSystemKey(system);
+      const current = stats.get(key) || {
+        key,
+        name: system,
+        candidates: 0,
+        exact_or_strong: 0,
+        p0: 0,
+        cited_by: 0,
+      };
+      const matchingSources = Array.isArray(item.source_candidates)
+        ? item.source_candidates.filter((source) => sourceSystemKey(source.source_system) === key)
+        : [];
+      current.candidates += 1;
+      current.exact_or_strong += matchingSources.some((source) => source.confidence === "exact" || source.confidence === "strong") ? 1 : 0;
+      current.p0 += item.queue_priority === "P0" ? 1 : 0;
+      current.cited_by += Number(item.occurrence_count || 0) || 0;
+      stats.set(key, current);
+    }
+  }
+  return [...stats.values()].sort((a, b) => b.p0 - a.p0 || b.candidates - a.candidates || a.name.localeCompare(b.name));
+}
+
+function compactCandidate(item) {
+  return {
+    id: item.id,
+    queue_rank: item.queue_rank,
+    queue_priority: item.queue_priority,
+    label: item.label,
+    reference_key: item.reference_key,
+    reference_family: item.reference_family,
+    reference_type: item.reference_type,
+    authority_tier: item.authority_tier,
+    recommended_artifact_id: item.recommended_artifact_id,
+    recommended_source_system: item.recommended_source_system,
+    occurrence_count: item.occurrence_count,
+    source_artifact_count: item.source_artifact_count,
+    discovery_status: item.discovery_status,
+    source_systems: item.source_systems,
+    source_candidates: Array.isArray(item.source_candidates) ? item.source_candidates.slice(0, 1).map(compactSourceCandidate) : [],
+    next_action: item.next_action,
+  };
+}
+
+function compactSourceCandidate(source) {
+  return {
+    label: source.label,
+    source_system: source.source_system,
+    url: source.url,
+    confidence: source.confidence,
+  };
+}
+
+function sourceSystemKey(value = "") {
+  return String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, "");
 }
 
 function renderMarkdown(model) {
