@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
+import { normalizeDodOpr, slugFor } from "./policy-organization-taxonomy.mjs";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const CHECK_ONLY = process.argv.includes("--check");
@@ -113,23 +114,32 @@ console.log(
 function currentDensityRows(rows) {
   const groups = new Map();
   for (const row of rows) {
-    const organization = row.issuing_organization || "Unknown organization";
-    const group = groups.get(organization) || {
-      organization,
-      artifact_count: 0,
-      claim_count: 0,
-      reference_count: 0,
-      authority_edge_count: 0,
-      word_count: 0,
-      source_systems: new Set(),
-    };
-    group.artifact_count += 1;
-    group.claim_count += Number(row.claim_count || 0);
-    group.reference_count += Number(row.outgoing_reference_count || 0);
-    group.authority_edge_count += Number(row.authority_edge_count || 0);
-    group.word_count += Number(row.extracted_word_count || 0);
-    group.source_systems.add(row.source_system || "Unknown");
-    groups.set(organization, group);
+    const facets = Array.isArray(row.organization_facets) && row.organization_facets.length
+      ? row.organization_facets
+      : [{ id: row.responsible_organization || row.issuing_organization || "Unknown organization", name: row.responsible_organization || row.issuing_organization || "Unknown organization" }];
+    for (const facet of facets) {
+      const organization = facet.name || "Unknown organization";
+      const key = facet.id || organization;
+      const group = groups.get(key) || {
+        organization,
+        organization_id: key,
+        organization_code: facet.code || null,
+        organization_tier: facet.tier || "unknown",
+        artifact_count: 0,
+        claim_count: 0,
+        reference_count: 0,
+        authority_edge_count: 0,
+        word_count: 0,
+        source_systems: new Set(),
+      };
+      group.artifact_count += 1;
+      group.claim_count += Number(row.claim_count || 0);
+      group.reference_count += Number(row.outgoing_reference_count || 0);
+      group.authority_edge_count += Number(row.authority_edge_count || 0);
+      group.word_count += Number(row.extracted_word_count || 0);
+      group.source_systems.add(row.source_system || "Unknown");
+      groups.set(key, group);
+    }
   }
   return [...groups.values()]
     .map((group) => ({ ...group, source_systems: [...group.source_systems].sort() }))
@@ -181,43 +191,6 @@ function groupArtifactLinks(rows, field) {
   return [...groups.values()].sort((a, b) => b.artifact_count - a.artifact_count || a.key.localeCompare(b.key));
 }
 
-function normalizeDodOpr(opr) {
-  const raw = String(opr || "").trim();
-  const normalized = raw.toUpperCase().replace(/\s+/g, " ");
-  const entities = [];
-  const add = (id, code, name) => {
-    if (entities.some((entity) => entity.id === id)) return;
-    entities.push({ id, code, name, source: "dod_issuance_opr", raw_value: raw });
-  };
-
-  if (/USW\(P&R\)/.test(normalized)) add("under-secretary-war-personnel-readiness", "USW(P&R)", "Under Secretary of War for Personnel and Readiness");
-  if (/USW\(A&S\s*\)/.test(normalized) || /USW\(A&S\)/.test(normalized)) add("under-secretary-war-acquisition-sustainment", "USW(A&S)", "Under Secretary of War for Acquisition and Sustainment");
-  if (/USW\(I&S\)/.test(normalized)) add("under-secretary-war-intelligence-security", "USW(I&S)", "Under Secretary of War for Intelligence and Security");
-  if (/USW\(R&E\)/.test(normalized)) add("under-secretary-war-research-engineering", "USW(R&E)", "Under Secretary of War for Research and Engineering");
-  if (/USW\(P\)(?!&)/.test(normalized)) add("under-secretary-war-policy", "USW(P)", "Under Secretary of War for Policy");
-  if (/USW\(C\)/.test(normalized)) add("under-secretary-war-comptroller-cfo", "USW(C)/CFO", "Under Secretary of War Comptroller / Chief Financial Officer");
-  if (/DOW?\s*CIO|DO W CIO/.test(normalized)) add("department-war-chief-information-officer", "DoW CIO", "Department of War Chief Information Officer");
-  if (/\bGC\b/.test(normalized)) add("general-counsel-department-war", "GC DoW", "General Counsel of the Department of War");
-  if (/\bIG\b/.test(normalized)) add("inspector-general-department-war", "IG DoW", "Inspector General of the Department of War");
-  if (/DA&M/.test(normalized)) add("director-administration-management", "DA&M", "Director of Administration and Management");
-  if (/ATSW\(PA\)/.test(normalized)) add("assistant-secretary-war-public-affairs", "ATSW(PA)", "Assistant to the Secretary of War for Public Affairs");
-  if (/ASW\(SO\/LIC\)|ASW\(SOLIC\)/.test(normalized)) add("assistant-secretary-war-special-operations-low-intensity-conflict", "ASW(SO/LIC)", "Assistant Secretary of War for Special Operations and Low-Intensity Conflict");
-  if (/ASW\(LA\)/.test(normalized)) add("assistant-secretary-war-legislative-affairs", "ASW(LA)", "Assistant Secretary of War for Legislative Affairs");
-  if (/DOT&E/.test(normalized)) add("director-operational-test-evaluation", "DOT&E", "Director, Operational Test and Evaluation");
-  if (/DCAPE/.test(normalized)) add("director-cost-assessment-program-evaluation", "DCAPE", "Director, Cost Assessment and Program Evaluation");
-  if (/ES,\s*OSD/.test(normalized)) add("executive-secretary-office-secretary-war", "ES OSD", "Executive Secretary of the Office of the Secretary of War");
-  if (/\bWHS\b/.test(normalized)) add("washington-headquarters-services", "WHS", "Washington Headquarters Services");
-
-  if (entities.length) return entities;
-  return [{
-    id: slugFor(raw || "unknown-opr"),
-    code: raw || null,
-    name: raw || "Unknown OPR",
-    source: "dod_issuance_opr_unmapped",
-    raw_value: raw,
-  }];
-}
-
 function renderMarkdown(model) {
   const sourceGaps = model.source_owner_gaps.slice(0, 40);
   const oprRows = model.dod_opr_entities.slice(0, 40);
@@ -261,15 +234,6 @@ function renderMarkdown(model) {
 
 function priorityRank(priority) {
   return { critical: 0, high: 1, medium: 2, low: 3 }[priority] ?? 9;
-}
-
-function slugFor(value) {
-  return String(value || "unknown")
-    .toLowerCase()
-    .replace(/&/g, " and ")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .slice(0, 96) || "unknown";
 }
 
 function unique(values) {

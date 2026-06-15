@@ -2,12 +2,14 @@ import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
+import { organizationFacetsFor, primaryResponsibleEntitiesFor, sourceOwnerIndex } from "./policy-organization-taxonomy.mjs";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const CHECK_ONLY = process.argv.includes("--check");
 const READING_WPM = 225;
 const REFERENCE_COVERAGE_PATH = "data/reference-coverage-map.json";
 const DOD_ISSUANCES_CATALOG_PATH = "data/dod-issuances-catalog.json";
+const SOURCE_DISCOVERY_REGISTRY_PATH = "sources/source-discovery-registry.json";
 const GENERATED_DATE = new Date(generatedDateString());
 const AUTHORITY_RANKS = {
   law: 10,
@@ -38,11 +40,17 @@ const dodIssuancesCatalog = existsSync(join(ROOT, DOD_ISSUANCES_CATALOG_PATH))
   ? readJson(DOD_ISSUANCES_CATALOG_PATH)
   : { rows: [] };
 const dodIssuanceRowsByArtifactId = new Map((dodIssuancesCatalog.rows || []).map((row) => [row.artifact_id, row]));
+const sourceDiscoveryRegistry = existsSync(join(ROOT, SOURCE_DISCOVERY_REGISTRY_PATH))
+  ? readJson(SOURCE_DISCOVERY_REGISTRY_PATH)
+  : { sources: [] };
+const sourceOwnerByName = sourceOwnerIndex(sourceDiscoveryRegistry);
 
 const rows = manifest.artifacts.map((entry) => {
   const artifact = readJson(entry.path);
-  const responsibleEntities = responsibleEntitiesFor(artifact, dodIssuanceRowsByArtifactId.get(artifact.id));
+  const dodCatalogRow = dodIssuanceRowsByArtifactId.get(artifact.id);
+  const responsibleEntities = primaryResponsibleEntitiesFor(artifact, dodCatalogRow);
   const primaryResponsibleEntity = responsibleEntities[0] || null;
+  const organizationFacets = organizationFacetsFor({ artifact, dodCatalogRow, sourceOwnerByName, primaryEntities: responsibleEntities });
   const metrics = artifact.analytics_path && existsSync(join(ROOT, artifact.analytics_path))
     ? readJson(artifact.analytics_path)
     : {};
@@ -89,6 +97,7 @@ const rows = manifest.artifacts.map((entry) => {
     responsible_organization_code: primaryResponsibleEntity?.code || null,
     responsible_organization_source: primaryResponsibleEntity?.source || "artifact",
     responsible_organizations: responsibleEntities,
+    organization_facets: organizationFacets,
     source_system: artifact.source_system || artifact.issuing_organization || "Unknown",
     source_date: artifact.source_date || "",
     publication_date: artifact.publication_date || "",
@@ -145,6 +154,7 @@ const model = {
   },
   by_source_system: groupRows(rows, "source_system"),
   by_responsible_organization: groupRows(rows, "responsible_organization"),
+  by_organization_facet: groupRowsByOrganizationFacets(rows),
   by_artifact_type: groupRows(rows, "artifact_type"),
   by_authority_level: groupRows(rows, "authority_level"),
   by_family: groupRows(rows, "family"),
@@ -241,6 +251,7 @@ function compactRow(row) {
     responsible_organization_code: row.responsible_organization_code,
     responsible_organization_source: row.responsible_organization_source,
     responsible_organizations: row.responsible_organizations,
+    organization_facets: row.organization_facets,
     source_date: row.source_date,
     publication_date: row.publication_date,
     effective_date: row.effective_date,
@@ -266,66 +277,6 @@ function compactRow(row) {
     incoming_occurrence_count: row.incoming_occurrence_count || 0,
     lower_level_source_count: row.lower_level_source_count || 0,
   };
-}
-
-function responsibleEntitiesFor(artifact, dodCatalogRow) {
-  if (dodCatalogRow?.opr) {
-    return normalizeDodOpr(dodCatalogRow.opr);
-  }
-  const fallback = artifact.issuing_organization || artifact.issuing_authority || "Unknown organization";
-  return [{
-    id: slugFor(fallback),
-    code: null,
-    name: fallback,
-    source: "artifact",
-    raw_value: fallback,
-  }];
-}
-
-function normalizeDodOpr(opr) {
-  const raw = String(opr || "").trim();
-  const normalized = raw.toUpperCase().replace(/\s+/g, " ");
-  const entities = [];
-  const add = (id, code, name) => {
-    if (entities.some((entity) => entity.id === id)) return;
-    entities.push({ id, code, name, source: "dod_issuance_opr", raw_value: raw });
-  };
-
-  if (/USW\(P&R\)/.test(normalized)) add("under-secretary-war-personnel-readiness", "USW(P&R)", "Under Secretary of War for Personnel and Readiness");
-  if (/USW\(A&S\s*\)/.test(normalized) || /USW\(A&S\)/.test(normalized)) add("under-secretary-war-acquisition-sustainment", "USW(A&S)", "Under Secretary of War for Acquisition and Sustainment");
-  if (/USW\(I&S\)/.test(normalized)) add("under-secretary-war-intelligence-security", "USW(I&S)", "Under Secretary of War for Intelligence and Security");
-  if (/USW\(R&E\)/.test(normalized)) add("under-secretary-war-research-engineering", "USW(R&E)", "Under Secretary of War for Research and Engineering");
-  if (/USW\(P\)(?!&)/.test(normalized)) add("under-secretary-war-policy", "USW(P)", "Under Secretary of War for Policy");
-  if (/USW\(C\)/.test(normalized)) add("under-secretary-war-comptroller-cfo", "USW(C)/CFO", "Under Secretary of War Comptroller / Chief Financial Officer");
-  if (/DOW?\s*CIO|DO W CIO/.test(normalized)) add("department-war-chief-information-officer", "DoW CIO", "Department of War Chief Information Officer");
-  if (/\bGC\b/.test(normalized)) add("general-counsel-department-war", "GC DoW", "General Counsel of the Department of War");
-  if (/\bIG\b/.test(normalized)) add("inspector-general-department-war", "IG DoW", "Inspector General of the Department of War");
-  if (/DA&M/.test(normalized)) add("director-administration-management", "DA&M", "Director of Administration and Management");
-  if (/ATSW\(PA\)/.test(normalized)) add("assistant-secretary-war-public-affairs", "ATSW(PA)", "Assistant to the Secretary of War for Public Affairs");
-  if (/ASW\(SO\/LIC\)|ASW\(SOLIC\)/.test(normalized)) add("assistant-secretary-war-special-operations-low-intensity-conflict", "ASW(SO/LIC)", "Assistant Secretary of War for Special Operations and Low-Intensity Conflict");
-  if (/ASW\(LA\)/.test(normalized)) add("assistant-secretary-war-legislative-affairs", "ASW(LA)", "Assistant Secretary of War for Legislative Affairs");
-  if (/DOT&E/.test(normalized)) add("director-operational-test-evaluation", "DOT&E", "Director, Operational Test and Evaluation");
-  if (/DCAPE/.test(normalized)) add("director-cost-assessment-program-evaluation", "DCAPE", "Director, Cost Assessment and Program Evaluation");
-  if (/ES,\s*OSD/.test(normalized)) add("executive-secretary-office-secretary-war", "ES OSD", "Executive Secretary of the Office of the Secretary of War");
-  if (/\bWHS\b/.test(normalized)) add("washington-headquarters-services", "WHS", "Washington Headquarters Services");
-
-  if (entities.length) return entities;
-  return [{
-    id: slugFor(raw || "unknown-opr"),
-    code: raw || null,
-    name: raw || "Unknown OPR",
-    source: "dod_issuance_opr_unmapped",
-    raw_value: raw,
-  }];
-}
-
-function slugFor(value) {
-  return String(value || "unknown")
-    .toLowerCase()
-    .replace(/&/g, " and ")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .slice(0, 96) || "unknown";
 }
 
 function groupRows(sourceRows, field) {
@@ -356,6 +307,53 @@ function groupRows(sourceRows, field) {
       ...group,
       average_complexity_score: average(sourceRows.filter((row) => (row[field] || "Unknown") === group.label), "complexity_score"),
     }))
+    .sort((a, b) => b.count - a.count || b.reading_minutes - a.reading_minutes || a.label.localeCompare(b.label));
+}
+
+function groupRowsByOrganizationFacets(sourceRows) {
+  const groups = new Map();
+  sourceRows.forEach((row) => {
+    const facets = Array.isArray(row.organization_facets) && row.organization_facets.length
+      ? row.organization_facets
+      : [{ id: row.responsible_organization || "Unknown", name: row.responsible_organization || "Unknown", code: row.responsible_organization_code || null, tier: "unknown" }];
+    for (const facet of facets) {
+      const key = facet.id || facet.name || "Unknown";
+      const group = groups.get(key) || {
+        key,
+        label: facet.name || key,
+        code: facet.code || null,
+        tier: facet.tier || "unknown",
+        count: 0,
+        word_count: 0,
+        pages: 0,
+        reading_minutes: 0,
+        average_complexity_score: 0,
+        obligation_signal_count: 0,
+        implementation_signal_count: 0,
+        artifact_ids: new Set(),
+        source_systems: new Set(),
+      };
+      group.count += 1;
+      group.word_count += row.extracted_word_count;
+      group.pages += row.approximate_pages;
+      group.reading_minutes += row.reading_time_minutes;
+      group.obligation_signal_count += row.obligation_signal_count;
+      group.implementation_signal_count += row.implementation_signal_count;
+      group.artifact_ids.add(row.id);
+      group.source_systems.add(row.source_system || "Unknown");
+      groups.set(key, group);
+    }
+  });
+  return [...groups.values()]
+    .map((group) => {
+      const ids = group.artifact_ids;
+      return {
+        ...group,
+        artifact_ids: [...ids].sort(),
+        source_systems: [...group.source_systems].sort(),
+        average_complexity_score: average(sourceRows.filter((row) => ids.has(row.id)), "complexity_score"),
+      };
+    })
     .sort((a, b) => b.count - a.count || b.reading_minutes - a.reading_minutes || a.label.localeCompare(b.label));
 }
 

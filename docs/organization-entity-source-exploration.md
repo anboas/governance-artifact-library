@@ -6,44 +6,42 @@ Scope: superficial enumeration only. This map does not mirror new raw files, ext
 
 ## Summary
 
-- Current density organizations: 15
+- Current density organizations: 43
 - DoW/DoD OPR entities found: 17
 - DoW/DoD OPR-to-artifact links enumerated: 1147
-- OPR entities missing from current density labels: 17
+- OPR entities missing from current density labels: 0
 - Source-owner entities tracked: 60
-- Source-owner entities missing or empty in current density: 43
+- Source-owner entities missing or empty in current density: 40
 - Reference-discovery source candidates: 7685
 
 ## DoW/DoD OPR Entities
 
 | Entity | Code | In Current Density | Artifacts | Public | Restricted |
 | --- | --- | --- | ---: | ---: | ---: |
-| Under Secretary of War for Personnel and Readiness | USW(P&R) | no | 373 | 372 | 1 |
-| Under Secretary of War for Acquisition and Sustainment | USW(A&S) | no | 187 | 182 | 5 |
-| Under Secretary of War for Intelligence and Security | USW(I&S) | no | 121 | 113 | 8 |
-| Director of Administration and Management | DA&M | no | 119 | 113 | 6 |
-| Under Secretary of War for Policy | USW(P) | no | 104 | 97 | 7 |
-| Department of War Chief Information Officer | DoW CIO | no | 71 | 65 | 6 |
-| Under Secretary of War for Research and Engineering | USW(R&E) | no | 48 | 46 | 2 |
-| General Counsel of the Department of War | GC DoW | no | 41 | 41 | 0 |
-| Inspector General of the Department of War | IG DoW | no | 28 | 28 | 0 |
-| Assistant to the Secretary of War for Public Affairs | ATSW(PA) | no | 22 | 22 | 0 |
-| Assistant Secretary of War for Special Operations and Low-Intensity Conflict | ASW(SO/LIC) | no | 8 | 8 | 0 |
-| Under Secretary of War Comptroller / Chief Financial Officer | USW(C)/CFO | no | 8 | 8 | 0 |
-| Director, Cost Assessment and Program Evaluation | DCAPE | no | 5 | 5 | 0 |
-| Assistant Secretary of War for Legislative Affairs | ASW(LA) | no | 4 | 4 | 0 |
-| Director, Operational Test and Evaluation | DOT&E | no | 4 | 4 | 0 |
-| Executive Secretary of the Office of the Secretary of War | ES OSD | no | 2 | 2 | 0 |
-| Washington Headquarters Services | WHS | no | 2 | 2 | 0 |
+| Under Secretary of War for Personnel and Readiness | USW(P&R) | yes | 373 | 372 | 1 |
+| Under Secretary of War for Acquisition and Sustainment | USW(A&S) | yes | 187 | 182 | 5 |
+| Under Secretary of War for Intelligence and Security | USW(I&S) | yes | 121 | 113 | 8 |
+| Director of Administration and Management | DA&M | yes | 119 | 113 | 6 |
+| Under Secretary of War for Policy | USW(P) | yes | 104 | 97 | 7 |
+| Department of War Chief Information Officer | DoW CIO | yes | 71 | 65 | 6 |
+| Under Secretary of War for Research and Engineering | USW(R&E) | yes | 48 | 46 | 2 |
+| General Counsel of the Department of War | GC DoW | yes | 41 | 41 | 0 |
+| Inspector General of the Department of War | IG DoW | yes | 28 | 28 | 0 |
+| Assistant to the Secretary of War for Public Affairs | ATSW(PA) | yes | 22 | 22 | 0 |
+| Assistant Secretary of War for Special Operations and Low-Intensity Conflict | ASW(SO/LIC) | yes | 8 | 8 | 0 |
+| Under Secretary of War Comptroller / Chief Financial Officer | USW(C)/CFO | yes | 8 | 8 | 0 |
+| Director, Cost Assessment and Program Evaluation | DCAPE | yes | 5 | 5 | 0 |
+| Assistant Secretary of War for Legislative Affairs | ASW(LA) | yes | 4 | 4 | 0 |
+| Director, Operational Test and Evaluation | DOT&E | yes | 4 | 4 | 0 |
+| Executive Secretary of the Office of the Secretary of War | ES OSD | yes | 2 | 2 | 0 |
+| Washington Headquarters Services | WHS | yes | 2 | 2 | 0 |
 
 ## Source-Owner Gaps
 
 | Source | Owner | Priority | Automation | Status | Artifacts | Reference Candidates |
 | --- | --- | --- | --- | --- | ---: | ---: |
 | Federal Register | Office of the Federal Register / National Archives and Records Administration | critical | direct_fetch_ready | mirrored | 17 | 296 |
-| National Archives Executive Orders | National Archives and Records Administration | critical | direct_fetch_ready | mirrored | 8 | 296 |
 | Congress.gov | Library of Congress | critical | api_key_required | not_started | 0 | 161 |
-| Acquisition.gov FAR | General Services Administration | critical | direct_fetch_ready | mirrored | 1 | 10 |
 | Acquisition.gov DFARS | Defense Acquisition Regulations System | critical | direct_fetch_ready | mirrored | 1 | 8 |
 | Defense Pricing, Contracting, and Acquisition Policy | Defense Pricing and Contracting | critical | needs_probe | not_started | 0 | 8 |
 | eCFR | Office of the Federal Register / National Archives and Records Administration | high | direct_fetch_ready | not_started | 0 | 80 |
@@ -55,7 +53,6 @@ Scope: superficial enumeration only. This map does not mirror new raw files, ext
 | DAU Adaptive Acquisition Framework | Defense Acquisition University | high | direct_fetch_ready | not_started | 0 | 0 |
 | FedRAMP | General Services Administration | high | direct_fetch_ready | not_started | 0 | 0 |
 | Joint Electronic Library | Joint Chiefs of Staff | high | needs_probe | not_started | 0 | 0 |
-| MyNavyHR | Navy Personnel Command | high | blocked_by_host | source_known_blocked | 1 | 0 |
 | NIST AI Risk Management Framework | National Institute of Standards and Technology | high | direct_fetch_ready | not_started | 0 | 0 |
 | NIST NCCoE | National Cybersecurity Center of Excellence | high | direct_fetch_ready | not_started | 0 | 0 |
 | Office of Science and Technology Policy | Office of Science and Technology Policy | high | direct_fetch_ready | mirrored | 2 | 0 |
@@ -80,6 +77,9 @@ Scope: superficial enumeration only. This map does not mirror new raw files, ext
 | USD(R&E) | Office of the Under Secretary of Defense for Research and Engineering | medium | needs_probe | not_started | 0 | 0 |
 | Air Force Materiel Command | Air Force Materiel Command | low | needs_probe | not_started | 0 | 0 |
 | Coast Guard Directives System | United States Coast Guard | low | needs_probe | not_started | 0 | 0 |
+| NAVFAC | Naval Facilities Engineering Systems Command | low | needs_probe | not_started | 0 | 0 |
+| PEO Digital | Program Executive Office Digital and Enterprise Services | low | needs_probe | not_started | 0 | 0 |
+| U.S. Special Operations Command | United States Special Operations Command | low | needs_probe | not_started | 0 | 0 |
 
 ## Full Enumeration
 
