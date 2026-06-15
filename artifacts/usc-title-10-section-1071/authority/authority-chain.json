@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 35,
+    "upstream_edge_count": 36,
     "downstream_edge_count": 26,
-    "catalogued_node_count": 37,
-    "uncatalogued_gap_count": 4,
-    "evidence_backed_edge_count": 28,
+    "catalogued_node_count": 38,
+    "uncatalogued_gap_count": 3,
+    "evidence_backed_edge_count": 29,
     "inferred_edge_count": 33,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -678,21 +678,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:42:1320d",
+      "id": "usc-title-42-section-1320d",
       "label": "42 U.S.C. 1320d",
-      "title": "42 U.S.C. 1320d",
+      "title": "42 U.S.C. 1320d: Definitions",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:1320d",
-      "count": 1,
-      "lines_sample": [
-        2789
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [
@@ -1392,6 +1390,28 @@
         "first_line": 2540,
         "lines_sample": [
           2540
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-42-section-1320d->usc-title-10-section-1071:references:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-1320d",
+      "source_label": "42 U.S.C. 1320d",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-1071",
+      "target_label": "10 U.S.C. 1071",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:1320d",
+        "label": "42 U.S.C. 1320d",
+        "first_line": 2789,
+        "lines_sample": [
+          2789
         ],
         "count": 1
       }
@@ -2124,23 +2144,6 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
-    },
-    {
-      "id": "gap:usc:42:1320d",
-      "label": "42 U.S.C. 1320d",
-      "title": "42 U.S.C. 1320d",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:1320d",
-      "count": 1,
-      "lines_sample": [
-        2789
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -2149,7 +2152,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-10-section-1071",
       "direction": "upstream",
-      "edge_count": 35
+      "edge_count": 36
     },
     {
       "id": "trace-downstream",

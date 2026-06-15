@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 8,
-    "catalogued_node_count": 9,
+    "downstream_edge_count": 10,
+    "catalogued_node_count": 11,
     "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 8,
+    "evidence_backed_edge_count": 10,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -185,6 +185,36 @@
       "lane_label": "Statute",
       "hierarchy_rank": 20,
       "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-10-section-4811",
+      "label": "10 U.S.C. 4811",
+      "title": "10 U.S.C. 4811: National security strategy for national technology and industrial base",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_acquisition",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-22-section-2761",
+      "label": "22 U.S.C. 2761",
+      "title": "22 U.S.C. 2761: Sales from stocks",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "foreign_affairs",
       "issuing_authority": "Congress",
       "source_system": "U.S. Code",
       "mirror_status": "mirrored",
@@ -414,6 +444,54 @@
         ],
         "count": 3
       }
+    },
+    {
+      "id": "usc-title-50-section-3043->usc-title-10-section-4811:references:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-3043",
+      "source_label": "50 U.S.C. 3043",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-4811",
+      "target_label": "10 U.S.C. 4811",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:3043",
+        "label": "50 U.S.C. 3043",
+        "first_line": 143,
+        "lines_sample": [
+          143,
+          296,
+          315,
+          321,
+          702
+        ],
+        "count": 5
+      }
+    },
+    {
+      "id": "usc-title-50-section-3043->usc-title-22-section-2761:references:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-3043",
+      "source_label": "50 U.S.C. 3043",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-22-section-2761",
+      "target_label": "22 U.S.C. 2761",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:3043",
+        "label": "50 U.S.C. 3043",
+        "first_line": 824,
+        "lines_sample": [
+          824
+        ],
+        "count": 1
+      }
     }
   ],
   "uncatalogued_authority_gaps": [
@@ -448,7 +526,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-50-section-3043",
       "direction": "downstream",
-      "edge_count": 8
+      "edge_count": 10
     }
   ]
 }

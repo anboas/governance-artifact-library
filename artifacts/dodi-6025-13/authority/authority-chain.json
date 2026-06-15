@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 1,
+    "upstream_edge_count": 2,
     "downstream_edge_count": 12,
-    "catalogued_node_count": 14,
-    "uncatalogued_gap_count": 3,
-    "evidence_backed_edge_count": 13,
+    "catalogued_node_count": 15,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 14,
     "inferred_edge_count": 0,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -89,21 +89,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:10:1073c",
+      "id": "usc-title-10-section-1073c",
       "label": "10 U.S.C. 1073c",
-      "title": "10 U.S.C. 1073c",
+      "title": "10 U.S.C. 1073c: Administration of Defense Health Agency and military medical treatment facilities",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:10:1073c",
-      "count": 1,
-      "lines_sample": [
-        1627
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:executive-order:14173",
@@ -352,6 +350,28 @@
         "first_line": 337,
         "lines_sample": [
           337
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-10-section-1073c->dodi-6025-13:flows_down:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-1073c",
+      "source_label": "10 U.S.C. 1073c",
+      "source_lane": "statute",
+      "target_artifact_id": "dodi-6025-13",
+      "target_label": "DoDI 6025.13",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:1073c",
+        "label": "10 U.S.C. 1073c",
+        "first_line": 1627,
+        "lines_sample": [
+          1627
         ],
         "count": 1
       }
@@ -625,23 +645,6 @@
   ],
   "uncatalogued_authority_gaps": [
     {
-      "id": "gap:usc:10:1073c",
-      "label": "10 U.S.C. 1073c",
-      "title": "10 U.S.C. 1073c",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:10:1073c",
-      "count": 1,
-      "lines_sample": [
-        1627
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:executive-order:14173",
       "label": "Executive Order 14173",
       "title": "Executive Order 14173",
@@ -682,7 +685,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-6025-13",
       "direction": "upstream",
-      "edge_count": 1
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",

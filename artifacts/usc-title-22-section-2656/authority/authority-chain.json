@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 1,
+    "upstream_edge_count": 2,
     "downstream_edge_count": 13,
-    "catalogued_node_count": 15,
-    "uncatalogued_gap_count": 14,
-    "evidence_backed_edge_count": 14,
+    "catalogued_node_count": 16,
+    "uncatalogued_gap_count": 13,
+    "evidence_backed_edge_count": 15,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -335,22 +335,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:22:2321j",
+      "id": "usc-title-22-section-2321j",
       "label": "22 U.S.C. 2321j",
-      "title": "22 U.S.C. 2321j",
+      "title": "22 U.S.C. 2321j: Authority to transfer excess defense articles",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:22:2321j",
-      "count": 2,
-      "lines_sample": [
-        1092,
-        1105
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "foreign_affairs",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:22:2347",
@@ -538,6 +535,29 @@
     }
   ],
   "upstream_edges": [
+    {
+      "id": "usc-title-22-section-2321j->usc-title-22-section-2656:references:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-2321j",
+      "source_label": "22 U.S.C. 2321j",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-22-section-2656",
+      "target_label": "22 U.S.C. 2656",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:2321j",
+        "label": "22 U.S.C. 2321j",
+        "first_line": 1092,
+        "lines_sample": [
+          1092,
+          1105
+        ],
+        "count": 2
+      }
+    },
     {
       "id": "usc-title-8-section-1189->usc-title-22-section-2656:references:resolved_reference",
       "source_artifact_id": "usc-title-8-section-1189",
@@ -884,24 +904,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:22:2321j",
-      "label": "22 U.S.C. 2321j",
-      "title": "22 U.S.C. 2321j",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:22:2321j",
-      "count": 2,
-      "lines_sample": [
-        1092,
-        1105
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:executive-order:13584",
       "label": "Executive Order 13584",
       "title": "Executive Order 13584",
@@ -1113,7 +1115,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-22-section-2656",
       "direction": "upstream",
-      "edge_count": 1
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",

@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 13,
-    "catalogued_node_count": 14,
+    "downstream_edge_count": 14,
+    "catalogued_node_count": 15,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 13,
+    "evidence_backed_edge_count": 14,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -262,6 +262,21 @@
       "family": "defense_authorization",
       "issuing_authority": "Congress",
       "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-10-section-115",
+      "label": "10 U.S.C. 115",
+      "title": "10 U.S.C. 115: Personnel strengths: requirement for annual authorization",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "catalogued"
@@ -605,6 +620,28 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "usc-title-22-section-5952->usc-title-10-section-115:references:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-5952",
+      "source_label": "22 U.S.C. 5952",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-115",
+      "target_label": "10 U.S.C. 115",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:5952",
+        "label": "22 U.S.C. 5952",
+        "first_line": 575,
+        "lines_sample": [
+          575
+        ],
+        "count": 1
+      }
     }
   ],
   "uncatalogued_authority_gaps": [],
@@ -621,7 +658,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-22-section-5952",
       "direction": "downstream",
-      "edge_count": 13
+      "edge_count": 14
     }
   ]
 }

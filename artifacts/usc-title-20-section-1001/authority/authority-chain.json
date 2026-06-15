@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 19,
-    "catalogued_node_count": 20,
+    "upstream_edge_count": 3,
+    "downstream_edge_count": 21,
+    "catalogued_node_count": 25,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 19,
+    "evidence_backed_edge_count": 24,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -359,23 +359,19 @@
       "status": "current"
     },
     {
-      "id": "gap:usc:20:1002",
+      "id": "usc-title-20-section-1002",
       "label": "20 U.S.C. 1002",
-      "title": "20 U.S.C. 1002",
+      "title": "20 U.S.C. 1002: Definition of institution of higher education for purposes of student assistance programs",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:20:1002",
-      "count": 3,
-      "lines_sample": [
-        855,
-        857,
-        949
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_20",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:20:1003",
@@ -562,6 +558,23 @@
       "priority": "high"
     },
     {
+      "id": "gap:usc:20:1070a",
+      "label": "20 U.S.C. 1070a",
+      "title": "20 U.S.C. 1070a",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:20:1070a",
+      "count": 1,
+      "lines_sample": [
+        913
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
       "id": "gap:usc:20:1070b",
       "label": "20 U.S.C. 1070b",
       "title": "20 U.S.C. 1070b",
@@ -679,6 +692,51 @@
       "priority": "high"
     },
     {
+      "id": "usc-title-20-section-7801",
+      "label": "20 U.S.C. 7801",
+      "title": "20 U.S.C. 7801: Definitions",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_20",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-42-section-2011",
+      "label": "42 U.S.C. 2011",
+      "title": "42 U.S.C. 2011: Congressional declaration of policy",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-42-section-5170",
+      "label": "42 U.S.C. 5170",
+      "title": "42 U.S.C. 5170: Procedure for declaration",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "usc-title-49-section-40101",
       "label": "49 U.S.C. 40101",
       "title": "49 U.S.C. 40101: Policy",
@@ -687,6 +745,21 @@
       "lane_label": "Statute",
       "hierarchy_rank": 20,
       "family": "usc_title_49",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-50-section-1601",
+      "label": "50 U.S.C. 1601",
+      "title": "50 U.S.C. 1601: Termination of existing declared emergencies",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "national_security",
       "issuing_authority": "Congress",
       "source_system": "U.S. Code",
       "mirror_status": "mirrored",
@@ -709,7 +782,76 @@
       "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "usc-title-20-section-1002->usc-title-20-section-1001:references:resolved_reference",
+      "source_artifact_id": "usc-title-20-section-1002",
+      "source_label": "20 U.S.C. 1002",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-20-section-1001",
+      "target_label": "20 U.S.C. 1001",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:20:1002",
+        "label": "20 U.S.C. 1002",
+        "first_line": 855,
+        "lines_sample": [
+          855,
+          857,
+          949
+        ],
+        "count": 3
+      }
+    },
+    {
+      "id": "usc-title-42-section-5170->usc-title-20-section-1001:references:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-5170",
+      "source_label": "42 U.S.C. 5170",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-20-section-1001",
+      "target_label": "20 U.S.C. 1001",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:5170",
+        "label": "42 U.S.C. 5170",
+        "first_line": 863,
+        "lines_sample": [
+          863
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-50-section-1601->usc-title-20-section-1001:references:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-1601",
+      "source_label": "50 U.S.C. 1601",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-20-section-1001",
+      "target_label": "20 U.S.C. 1001",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:1601",
+        "label": "50 U.S.C. 1601",
+        "first_line": 865,
+        "lines_sample": [
+          865
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "usc-title-20-section-1001->pl-118-31-fy2024-ndaa:references_upstream:resolved_reference",
@@ -1119,6 +1261,50 @@
       }
     },
     {
+      "id": "usc-title-20-section-1001->usc-title-20-section-7801:references:resolved_reference",
+      "source_artifact_id": "usc-title-20-section-1001",
+      "source_label": "20 U.S.C. 1001",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-20-section-7801",
+      "target_label": "20 U.S.C. 7801",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:20:1001",
+        "label": "20 U.S.C. 1001",
+        "first_line": 335,
+        "lines_sample": [
+          335
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-20-section-1001->usc-title-42-section-2011:references:resolved_reference",
+      "source_artifact_id": "usc-title-20-section-1001",
+      "source_label": "20 U.S.C. 1001",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-42-section-2011",
+      "target_label": "42 U.S.C. 2011",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:20:1001",
+        "label": "20 U.S.C. 1001",
+        "first_line": 333,
+        "lines_sample": [
+          333
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-20-section-1001->usc-title-49-section-40101:references:resolved_reference",
       "source_artifact_id": "usc-title-20-section-1001",
       "source_label": "20 U.S.C. 1001",
@@ -1287,25 +1473,6 @@
         1067,
         1085,
         1087
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:usc:20:1002",
-      "label": "20 U.S.C. 1002",
-      "title": "20 U.S.C. 1002",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:20:1002",
-      "count": 3,
-      "lines_sample": [
-        855,
-        857,
-        949
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -1503,6 +1670,23 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "gap:usc:20:1070a",
+      "label": "20 U.S.C. 1070a",
+      "title": "20 U.S.C. 1070a",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:20:1070a",
+      "count": 1,
+      "lines_sample": [
+        913
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -1511,14 +1695,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-20-section-1001",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 3
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-20-section-1001",
       "direction": "downstream",
-      "edge_count": 19
+      "edge_count": 21
     }
   ]
 }

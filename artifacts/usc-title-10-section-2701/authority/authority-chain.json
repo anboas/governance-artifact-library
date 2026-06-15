@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 4,
+    "upstream_edge_count": 5,
     "downstream_edge_count": 16,
-    "catalogued_node_count": 21,
+    "catalogued_node_count": 22,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 20,
+    "evidence_backed_edge_count": 21,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -515,21 +515,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:42:2011",
+      "id": "usc-title-42-section-2011",
       "label": "42 U.S.C. 2011",
-      "title": "42 U.S.C. 2011",
+      "title": "42 U.S.C. 2011: Congressional declaration of policy",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:2011",
-      "count": 1,
-      "lines_sample": [
-        1317
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:42:2208",
@@ -596,6 +594,23 @@
       "count": 1,
       "lines_sample": [
         1032
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:42:6903",
+      "label": "42 U.S.C. 6903",
+      "title": "42 U.S.C. 6903",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:42:6903",
+      "count": 1,
+      "lines_sample": [
+        1224
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -756,6 +771,28 @@
           1767
         ],
         "count": 3
+      }
+    },
+    {
+      "id": "usc-title-42-section-2011->usc-title-10-section-2701:references:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-2011",
+      "source_label": "42 U.S.C. 2011",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-2701",
+      "target_label": "10 U.S.C. 2701",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:2011",
+        "label": "42 U.S.C. 2011",
+        "first_line": 1317,
+        "lines_sample": [
+          1317
+        ],
+        "count": 1
       }
     },
     {
@@ -1440,23 +1477,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:42:2011",
-      "label": "42 U.S.C. 2011",
-      "title": "42 U.S.C. 2011",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:2011",
-      "count": 1,
-      "lines_sample": [
-        1317
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:42:2208",
       "label": "42 U.S.C. 2208",
       "title": "42 U.S.C. 2208",
@@ -1506,6 +1526,23 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "gap:usc:42:6903",
+      "label": "42 U.S.C. 6903",
+      "title": "42 U.S.C. 6903",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:42:6903",
+      "count": 1,
+      "lines_sample": [
+        1224
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -1514,7 +1551,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-10-section-2701",
       "direction": "upstream",
-      "edge_count": 4
+      "edge_count": 5
     },
     {
       "id": "trace-downstream",

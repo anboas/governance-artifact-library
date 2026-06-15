@@ -6,7 +6,7 @@ const CHECK = process.argv.includes("--check");
 const GENERATED_AT = "2026-06-12T23:10:00.000Z";
 const EXTRACTOR_VERSION = "governance-claims-rules-v1";
 
-const CLAIM_RE = /\b(shall|must|required|requires|requirement|may|may not|shall not|must not|prohibited|authorized|authority|waiver|approve|approval|delegate|directs?|establish(?:es)?|ensure(?:s)?|submit|report|certify|implement|not later than|within \d+ (?:days|months|years?))\b/i;
+const CLAIM_RE = /\b(shall|must|required|requires|requirement|may|may not|shall not|must not|prohibited|authorized|authorize|authority|waiver|approve|approval|delegate|directs?|establish(?:es)?|ensure(?:s)?|submit|report|certify|implement|finds?|necessary to|in order to|defined|definition|means|term|not later than|within \d+ (?:days|months|years?))\b/i;
 const MODALITY_RE = /\b(shall not|must not|may not|shall|must|required|requires|may|should|will|authorized|prohibited)\b/i;
 const DEADLINE_RE = /\b(not later than [^.;]+|within \d+ (?:calendar )?(?:days|months|years?)(?: after [^.;]+)?|by [A-Z][a-z]+ \d{1,2}, \d{4})\b/i;
 const CONDITION_RE = /\b(if|when|where|unless|subject to|in accordance with|pursuant to|for purposes of)\b[^.;]*/i;

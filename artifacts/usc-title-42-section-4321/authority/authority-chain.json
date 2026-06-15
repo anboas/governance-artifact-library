@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 1,
-    "downstream_edge_count": 24,
-    "catalogued_node_count": 26,
+    "upstream_edge_count": 4,
+    "downstream_edge_count": 25,
+    "catalogued_node_count": 30,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 25,
+    "evidence_backed_edge_count": 29,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -417,6 +417,40 @@
       "status": "catalogued"
     },
     {
+      "id": "gap:usc:15:2601",
+      "label": "15 U.S.C. 2601",
+      "title": "15 U.S.C. 2601",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:15:2601",
+      "count": 1,
+      "lines_sample": [
+        1076
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:15:2621",
+      "label": "15 U.S.C. 2621",
+      "title": "15 U.S.C. 2621",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:15:2621",
+      "count": 1,
+      "lines_sample": [
+        1068
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
       "id": "gap:usc:16:1431",
       "label": "16 U.S.C. 1431",
       "title": "16 U.S.C. 1431",
@@ -436,22 +470,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:16:1531",
+      "id": "usc-title-16-section-1531",
       "label": "16 U.S.C. 1531",
-      "title": "16 U.S.C. 1531",
+      "title": "16 U.S.C. 1531: Congressional findings and declaration of purposes and policy",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:16:1531",
-      "count": 2,
-      "lines_sample": [
-        1634,
-        1865
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_16",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:16:4701",
@@ -470,6 +501,21 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "usc-title-16-section-668dd",
+      "label": "16 U.S.C. 668dd",
+      "title": "16 U.S.C. 668dd: National Wildlife Refuge System",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_16",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:18:42",
@@ -545,22 +591,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:42:2011",
+      "id": "usc-title-42-section-2011",
       "label": "42 U.S.C. 2011",
-      "title": "42 U.S.C. 2011",
+      "title": "42 U.S.C. 2011: Congressional declaration of policy",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:2011",
-      "count": 2,
-      "lines_sample": [
-        381,
-        1216
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:42:2021",
@@ -671,6 +714,21 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "usc-title-42-section-6901",
+      "label": "42 U.S.C. 6901",
+      "title": "42 U.S.C. 6901: Congressional findings",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-44-section-3502",
@@ -798,6 +856,74 @@
     }
   ],
   "upstream_edges": [
+    {
+      "id": "usc-title-16-section-1531->usc-title-42-section-4321:references:resolved_reference",
+      "source_artifact_id": "usc-title-16-section-1531",
+      "source_label": "16 U.S.C. 1531",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-42-section-4321",
+      "target_label": "42 U.S.C. 4321",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:16:1531",
+        "label": "16 U.S.C. 1531",
+        "first_line": 1634,
+        "lines_sample": [
+          1634,
+          1865
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "usc-title-42-section-2011->usc-title-42-section-4321:references:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-2011",
+      "source_label": "42 U.S.C. 2011",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-42-section-4321",
+      "target_label": "42 U.S.C. 4321",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:2011",
+        "label": "42 U.S.C. 2011",
+        "first_line": 381,
+        "lines_sample": [
+          381,
+          1216
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "usc-title-42-section-6901->usc-title-42-section-4321:references:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-6901",
+      "source_label": "42 U.S.C. 6901",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-42-section-4321",
+      "target_label": "42 U.S.C. 4321",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:6901",
+        "label": "42 U.S.C. 6901",
+        "first_line": 1086,
+        "lines_sample": [
+          1086
+        ],
+        "count": 1
+      }
+    },
     {
       "id": "usc-title-44-section-3502->usc-title-42-section-4321:references:resolved_reference",
       "source_artifact_id": "usc-title-44-section-3502",
@@ -1372,6 +1498,28 @@
       }
     },
     {
+      "id": "usc-title-42-section-4321->usc-title-16-section-668dd:references:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-4321",
+      "source_label": "42 U.S.C. 4321",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-16-section-668dd",
+      "target_label": "16 U.S.C. 668dd",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:4321",
+        "label": "42 U.S.C. 4321",
+        "first_line": 2083,
+        "lines_sample": [
+          2083
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-42-section-4321->usc-title-49-section-40101:references:resolved_reference",
       "source_artifact_id": "usc-title-42-section-4321",
       "source_label": "42 U.S.C. 4321",
@@ -1553,24 +1701,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:16:1531",
-      "label": "16 U.S.C. 1531",
-      "title": "16 U.S.C. 1531",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:16:1531",
-      "count": 2,
-      "lines_sample": [
-        1634,
-        1865
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:16:4701",
       "label": "16 U.S.C. 4701",
       "title": "16 U.S.C. 4701",
@@ -1638,24 +1768,6 @@
       "lines_sample": [
         1156,
         1198
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:usc:42:2011",
-      "label": "42 U.S.C. 2011",
-      "title": "42 U.S.C. 2011",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:2011",
-      "count": 2,
-      "lines_sample": [
-        381,
-        1216
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -1731,6 +1843,40 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "gap:usc:15:2601",
+      "label": "15 U.S.C. 2601",
+      "title": "15 U.S.C. 2601",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:15:2601",
+      "count": 1,
+      "lines_sample": [
+        1076
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:15:2621",
+      "label": "15 U.S.C. 2621",
+      "title": "15 U.S.C. 2621",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:15:2621",
+      "count": 1,
+      "lines_sample": [
+        1068
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -1739,14 +1885,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-42-section-4321",
       "direction": "upstream",
-      "edge_count": 1
+      "edge_count": 4
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-42-section-4321",
       "direction": "downstream",
-      "edge_count": 24
+      "edge_count": 25
     }
   ]
 }

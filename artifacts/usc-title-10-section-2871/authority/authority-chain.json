@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 3,
+    "upstream_edge_count": 4,
     "downstream_edge_count": 8,
-    "catalogued_node_count": 12,
-    "uncatalogued_gap_count": 2,
-    "evidence_backed_edge_count": 11,
+    "catalogued_node_count": 13,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 12,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -269,21 +269,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:37:403",
+      "id": "usc-title-37-section-403",
       "label": "37 U.S.C. 403",
-      "title": "37 U.S.C. 403",
+      "title": "37 U.S.C. 403: Basic allowance for housing",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:37:403",
-      "count": 1,
-      "lines_sample": [
-        429
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_37",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [
@@ -350,6 +348,28 @@
         "first_line": 321,
         "lines_sample": [
           321
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-37-section-403->usc-title-10-section-2871:references:resolved_reference",
+      "source_artifact_id": "usc-title-37-section-403",
+      "source_label": "37 U.S.C. 403",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-2871",
+      "target_label": "10 U.S.C. 2871",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:37:403",
+        "label": "37 U.S.C. 403",
+        "first_line": 429,
+        "lines_sample": [
+          429
         ],
         "count": 1
       }
@@ -561,23 +581,6 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
-    },
-    {
-      "id": "gap:usc:37:403",
-      "label": "37 U.S.C. 403",
-      "title": "37 U.S.C. 403",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:37:403",
-      "count": 1,
-      "lines_sample": [
-        429
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -586,7 +589,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-10-section-2871",
       "direction": "upstream",
-      "edge_count": 3
+      "edge_count": 4
     },
     {
       "id": "trace-downstream",

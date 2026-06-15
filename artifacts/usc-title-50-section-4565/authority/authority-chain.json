@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 2,
-    "downstream_edge_count": 6,
-    "catalogued_node_count": 9,
+    "downstream_edge_count": 7,
+    "catalogued_node_count": 10,
     "uncatalogued_gap_count": 6,
-    "evidence_backed_edge_count": 8,
+    "evidence_backed_edge_count": 9,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -142,6 +142,21 @@
       "family": "defense_authorization",
       "issuing_authority": "Congress",
       "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-10-section-4811",
+      "label": "10 U.S.C. 4811",
+      "title": "10 U.S.C. 4811: National security strategy for national technology and industrial base",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_acquisition",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "catalogued"
@@ -504,6 +519,28 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "usc-title-50-section-4565->usc-title-10-section-4811:references:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-4565",
+      "source_label": "50 U.S.C. 4565",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-4811",
+      "target_label": "10 U.S.C. 4811",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:4565",
+        "label": "50 U.S.C. 4565",
+        "first_line": 1988,
+        "lines_sample": [
+          1988
+        ],
+        "count": 1
+      }
     }
   ],
   "uncatalogued_authority_gaps": [
@@ -623,7 +660,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-50-section-4565",
       "direction": "downstream",
-      "edge_count": 6
+      "edge_count": 7
     }
   ]
 }

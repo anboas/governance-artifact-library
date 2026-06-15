@@ -7,21 +7,21 @@ Generated from `manifest.json` and `taxonomies/governance-item-universe.json`.
 - Universe item types: 25
 - Covered item types: 12
 - Empty item types: 13
-- Artifacts in repo: 1267
-- Mirrored artifacts: 117
+- Artifacts in repo: 1378
+- Mirrored artifacts: 228
 - Source-known blocked artifacts: 15
-- Text extracted: 1218
-- Analytics sidecars: 1267
-- Analysis sidecars: 1267
-- Structured summaries: 1218
-- Version ledgers: 1267
+- Text extracted: 1329
+- Analytics sidecars: 1378
+- Analysis sidecars: 1378
+- Structured summaries: 1329
+- Version ledgers: 1378
 
 ## Authority Coverage
 
 | Rank | Authority Level | Covered Types | Artifacts | Mirrored | Blocked |
 | ---: | --- | ---: | ---: | ---: | ---: |
 | 10 | law | 1/2 | 2 | 2 | 0 |
-| 20 | us_code | 1/1 | 55 | 55 | 0 |
+| 20 | us_code | 1/1 | 129 | 129 | 0 |
 | 30 | presidential_directive | 1/2 | 2 | 2 | 0 |
 | 40 | executive_branch_guidance | 1/2 | 2 | 2 | 0 |
 | 50 | federal_regulation | 1/2 | 1 | 1 | 0 |
@@ -40,7 +40,7 @@ Generated from `manifest.json` and `taxonomies/governance-item-universe.json`.
 | ---: | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | 10 | Appropriations Law | not_started | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | none |
 | 10 | Public Law / NDAA | analysis_ready | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | pl-118-159-fy2025-ndaa<br>pl-118-31-fy2024-ndaa |
-| 20 | U.S. Code | analysis_ready | 55 | 55 | 55 | 55 | 55 | 55 | 55 | 55 | usc-title-10-section-101<br>usc-title-10-section-10101<br>usc-title-10-section-1071<br>usc-title-10-section-1073<br>usc-title-10-section-1074<br>usc-title-10-section-1074g<br>usc-title-10-section-111<br>usc-title-10-section-113<br>usc-title-10-section-121<br>usc-title-10-section-131<br>usc-title-10-section-1561<br>usc-title-10-section-1580<br>usc-title-10-section-1701<br>usc-title-10-section-1781<br>usc-title-10-section-221<br>usc-title-10-section-2222<br>usc-title-10-section-2223<br>usc-title-10-section-2224<br>usc-title-10-section-2271<br>usc-title-10-section-2281<br>usc-title-10-section-2430<br>usc-title-10-section-2461<br>usc-title-10-section-2687<br>usc-title-10-section-2701<br>usc-title-10-section-2802<br>usc-title-10-section-2821<br>usc-title-10-section-2871<br>usc-title-10-section-2911<br>usc-title-10-section-333<br>usc-title-10-section-4001<br>usc-title-10-section-801<br>usc-title-10-section-8013<br>usc-title-22-section-2151<br>usc-title-22-section-2651a<br>usc-title-22-section-2656<br>usc-title-22-section-2751<br>usc-title-22-section-2778<br>usc-title-22-section-5952<br>usc-title-42-section-2286<br>usc-title-42-section-4321<br>usc-title-42-section-9601<br>usc-title-42-section-9620<br>usc-title-44-section-3502<br>usc-title-50-section-1521<br>usc-title-50-section-1541<br>usc-title-50-section-1701<br>usc-title-50-section-1705<br>usc-title-50-section-2521<br>usc-title-50-section-3003<br>usc-title-50-section-3024<br>usc-title-50-section-3043<br>usc-title-50-section-3161<br>usc-title-50-section-4565<br>usc-title-50-section-98d<br>usc-title-50-section-98h |
+| 20 | U.S. Code | analysis_ready | 129 | 129 | 129 | 129 | 129 | 129 | 129 | 129 | usc-title-10-section-101<br>usc-title-10-section-10101<br>usc-title-10-section-1071<br>usc-title-10-section-1073<br>usc-title-10-section-1073c<br>usc-title-10-section-1074<br>usc-title-10-section-1074g<br>usc-title-10-section-1092<br>usc-title-10-section-111<br>usc-title-10-section-113<br>usc-title-10-section-115<br>usc-title-10-section-12001<br>usc-title-10-section-121<br>usc-title-10-section-1293<br>usc-title-10-section-131<br>usc-title-10-section-1448<br>usc-title-10-section-1561<br>usc-title-10-section-1564<br>usc-title-10-section-1580<br>usc-title-10-section-1701<br>usc-title-10-section-1781<br>usc-title-10-section-1791<br>usc-title-10-section-184<br>usc-title-10-section-2001<br>usc-title-10-section-221<br>usc-title-10-section-2222<br>usc-title-10-section-2223<br>usc-title-10-section-2224<br>usc-title-10-section-2241<br>usc-title-10-section-2271<br>usc-title-10-section-2281<br>usc-title-10-section-2350a<br>usc-title-10-section-2430<br>usc-title-10-section-2461<br>usc-title-10-section-2661<br>usc-title-10-section-2684a<br>usc-title-10-section-2687<br>usc-title-10-section-2701<br>usc-title-10-section-2802<br>usc-title-10-section-2805<br>usc-title-10-section-2821<br>usc-title-10-section-2871<br>usc-title-10-section-2911<br>usc-title-10-section-301<br>usc-title-10-section-3201<br>usc-title-10-section-333<br>usc-title-10-section-391<br>usc-title-10-section-394<br>usc-title-10-section-4001<br>usc-title-10-section-4061<br>usc-title-10-section-441<br>usc-title-10-section-4811<br>usc-title-10-section-491<br>usc-title-10-section-503<br>usc-title-10-section-525<br>usc-title-10-section-701<br>usc-title-10-section-801<br>usc-title-10-section-8013<br>usc-title-10-section-8661<br>usc-title-10-section-9081<br>usc-title-22-section-1928<br>usc-title-22-section-2151<br>usc-title-22-section-2321j<br>usc-title-22-section-2371<br>usc-title-22-section-2403<br>usc-title-22-section-2593a<br>usc-title-22-section-262p<br>usc-title-22-section-2651a<br>usc-title-22-section-2656<br>usc-title-22-section-2751<br>usc-title-22-section-2761<br>usc-title-22-section-2776<br>usc-title-22-section-2778<br>usc-title-22-section-2780<br>usc-title-22-section-2794<br>usc-title-22-section-3301<br>usc-title-22-section-4865<br>usc-title-22-section-5952<br>usc-title-22-section-7513<br>usc-title-22-section-8606<br>usc-title-42-section-1320a<br>usc-title-42-section-1320d<br>usc-title-42-section-1395c<br>usc-title-42-section-15801<br>usc-title-42-section-1962d<br>usc-title-42-section-2000e<br>usc-title-42-section-2011<br>usc-title-42-section-2014<br>usc-title-42-section-2121<br>usc-title-42-section-2210<br>usc-title-42-section-2286<br>usc-title-42-section-300gg<br>usc-title-42-section-4321<br>usc-title-42-section-5121<br>usc-title-42-section-5122<br>usc-title-42-section-5170<br>usc-title-42-section-5195c<br>usc-title-42-section-6901<br>usc-title-42-section-7101<br>usc-title-42-section-7385s<br>usc-title-42-section-7545<br>usc-title-42-section-9601<br>usc-title-42-section-9620<br>usc-title-44-section-3501<br>usc-title-44-section-3502<br>usc-title-50-section-1521<br>usc-title-50-section-1541<br>usc-title-50-section-1601<br>usc-title-50-section-1701<br>usc-title-50-section-1702<br>usc-title-50-section-1705<br>usc-title-50-section-1801<br>usc-title-50-section-2301<br>usc-title-50-section-2362<br>usc-title-50-section-2401<br>usc-title-50-section-2453<br>usc-title-50-section-2471<br>usc-title-50-section-2521<br>usc-title-50-section-3001<br>usc-title-50-section-3003<br>usc-title-50-section-3024<br>usc-title-50-section-3043<br>usc-title-50-section-3091<br>usc-title-50-section-3161<br>usc-title-50-section-3373<br>usc-title-50-section-3711<br>usc-title-50-section-4565<br>usc-title-50-section-98d<br>usc-title-50-section-98h |
 | 30 | Executive Order | analysis_ready | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | eo-14028-cybersecurity<br>eo-14110-ai |
 | 30 | Presidential Memorandum | not_started | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | none |
 | 40 | OMB Memorandum | analysis_ready | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | omb-m-21-31-cyber-logging<br>omb-m-24-10-ai-governance |
@@ -87,7 +87,7 @@ Generated from `manifest.json` and `taxonomies/governance-item-universe.json`.
 | nist_nvlpubs_pdf | 1 | 1 | 1 | 0 |
 | program_office_html | 1 | 0 | 0 | 0 |
 | program_office_pdf | 1 | 0 | 0 | 0 |
-| us_code_html | 1 | 55 | 55 | 0 |
+| us_code_html | 1 | 129 | 129 | 0 |
 | white_house_pdf | 3 | 2 | 2 | 0 |
 
 ## Status Key

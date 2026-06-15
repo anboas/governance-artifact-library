@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 6,
-    "downstream_edge_count": 36,
-    "catalogued_node_count": 42,
-    "uncatalogued_gap_count": 8,
-    "evidence_backed_edge_count": 42,
+    "upstream_edge_count": 7,
+    "downstream_edge_count": 37,
+    "catalogued_node_count": 44,
+    "uncatalogued_gap_count": 7,
+    "evidence_backed_edge_count": 44,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -768,22 +768,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:42:6901",
+      "id": "usc-title-42-section-6901",
       "label": "42 U.S.C. 6901",
-      "title": "42 U.S.C. 6901",
+      "title": "42 U.S.C. 6901: Congressional findings",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:6901",
-      "count": 2,
-      "lines_sample": [
-        1858,
-        2833
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-42-section-9601",
@@ -809,6 +806,21 @@
       "lane_label": "Statute",
       "hierarchy_rank": 20,
       "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-5-section-9902",
+      "label": "5 U.S.C. 9902",
+      "title": "5 U.S.C. 9902: Department of Defense personnel authorities",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_5",
       "issuing_authority": "Congress",
       "source_system": "U.S. Code",
       "mirror_status": "mirrored",
@@ -919,6 +931,29 @@
           2803
         ],
         "count": 9
+      }
+    },
+    {
+      "id": "usc-title-42-section-6901->usc-title-10-section-2687:references:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-6901",
+      "source_label": "42 U.S.C. 6901",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-2687",
+      "target_label": "10 U.S.C. 2687",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:6901",
+        "label": "42 U.S.C. 6901",
+        "first_line": 1858,
+        "lines_sample": [
+          1858,
+          2833
+        ],
+        "count": 2
       }
     },
     {
@@ -1932,6 +1967,28 @@
         ],
         "count": 2
       }
+    },
+    {
+      "id": "usc-title-10-section-2687->usc-title-5-section-9902:references:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-2687",
+      "source_label": "10 U.S.C. 2687",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-5-section-9902",
+      "target_label": "5 U.S.C. 9902",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:2687",
+        "label": "10 U.S.C. 2687",
+        "first_line": 457,
+        "lines_sample": [
+          457
+        ],
+        "count": 1
+      }
     }
   ],
   "uncatalogued_authority_gaps": [
@@ -1972,24 +2029,6 @@
       "lines_sample": [
         1580,
         2705
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:usc:42:6901",
-      "label": "42 U.S.C. 6901",
-      "title": "42 U.S.C. 6901",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:6901",
-      "count": 2,
-      "lines_sample": [
-        1858,
-        2833
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -2086,14 +2125,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-10-section-2687",
       "direction": "upstream",
-      "edge_count": 6
+      "edge_count": 7
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-10-section-2687",
       "direction": "downstream",
-      "edge_count": 36
+      "edge_count": 37
     }
   ]
 }

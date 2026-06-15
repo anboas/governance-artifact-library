@@ -4,24 +4,24 @@ Generated from artifact records and per-artifact `analytics/document-metrics.jso
 
 ## Summary
 
-- Artifacts: 1267
-- Metrics sidecars: 1267
-- Extracted words: 15,661,804
-- Approximate pages: 31,378
-- Reading workload: 70,237 minutes at 225 wpm
-- Median read time: 16 minutes
-- Median complexity: 79
+- Artifacts: 1378
+- Metrics sidecars: 1378
+- Extracted words: 16,370,142
+- Approximate pages: 32,796
+- Reading workload: 73,437 minutes at 225 wpm
+- Median read time: 17 minutes
+- Median complexity: 80
 
 ## Reading Time Buckets
 
 | Bucket | Artifacts | Words | Reading Minutes | Avg Complexity |
 | --- | ---: | ---: | ---: | ---: |
 | No Text | 49 | 0 | 0 | 0 |
-| Under 5 min | 99 | 30,524 | 197 | 42 |
-| 5-15 min | 472 | 1,014,539 | 4,742 | 77 |
-| 15-45 min | 469 | 2,640,767 | 11,987 | 79 |
-| 45-120 min | 125 | 1,968,807 | 8,812 | 82 |
-| 2+ hours | 53 | 10,007,167 | 44,499 | 89 |
+| Under 5 min | 108 | 36,532 | 227 | 44 |
+| 5-15 min | 514 | 1,102,083 | 5,152 | 77 |
+| 15-45 min | 505 | 2,844,250 | 12,906 | 80 |
+| 45-120 min | 146 | 2,281,477 | 10,213 | 83 |
+| 2+ hours | 56 | 10,105,800 | 44,939 | 89 |
 
 ## Complexity Buckets
 
@@ -29,17 +29,17 @@ Generated from artifact records and per-artifact `analytics/document-metrics.jso
 | --- | ---: | ---: | ---: | ---: |
 | No Text | 49 | 0 | 0 | 0 |
 | Quick Scan | 54 | 3,051 | 54 | 25 |
-| Moderate | 7 | 3,069 | 17 | 46 |
-| Dense | 142 | 405,982 | 1,873 | 60 |
-| Complex | 413 | 2,187,870 | 9,929 | 72 |
-| Extreme | 602 | 13,061,832 | 58,364 | 88 |
+| Moderate | 10 | 4,673 | 25 | 45 |
+| Dense | 154 | 422,991 | 1,954 | 60 |
+| Complex | 437 | 2,281,817 | 10,357 | 72 |
+| Extreme | 674 | 13,657,610 | 61,047 | 88 |
 
 ## Top Source Systems
 
 | Source | Artifacts | Words | Reading Minutes | Avg Complexity |
 | --- | ---: | ---: | ---: | ---: |
 | DoW/DoD Issuances | 1137 | 5,176,757 | 23,580 | 75 |
-| U.S. Code | 71 | 1,349,945 | 6,035 | 84 |
+| U.S. Code | 182 | 2,058,283 | 9,235 | 82 |
 | GovInfo | 33 | 9,046,008 | 40,219 | 90 |
 | Air Force e-Publishing | 5 | 0 | 0 | 0 |
 | CISA Guidance Library | 4 | 11,367 | 53 | 83 |
@@ -60,7 +60,7 @@ Generated from artifact records and per-artifact `analytics/document-metrics.jso
 
 | Age | Artifacts | Words | Reading Minutes | Avg Complexity |
 | --- | ---: | ---: | ---: | ---: |
-| No Date | 116 | 9,616,301 | 42,792 | 86 |
+| No Date | 227 | 10,324,639 | 45,992 | 83 |
 | Under 1 year | 19 | 155,724 | 701 | 73 |
 | 1-3 years | 116 | 1,393,556 | 6,251 | 74 |
 | 3-5 years | 124 | 686,158 | 3,113 | 74 |

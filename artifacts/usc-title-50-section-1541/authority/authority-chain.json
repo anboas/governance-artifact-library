@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 17,
-    "catalogued_node_count": 18,
+    "downstream_edge_count": 18,
+    "catalogued_node_count": 19,
     "uncatalogued_gap_count": 3,
-    "evidence_backed_edge_count": 17,
+    "evidence_backed_edge_count": 18,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -285,6 +285,21 @@
       "id": "usc-title-10-section-111",
       "label": "10 U.S.C. 111",
       "title": "10 U.S.C. 111: Executive department",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-10-section-394",
+      "label": "10 U.S.C. 394",
+      "title": "10 U.S.C. 394: Authorities concerning military cyber operations",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
@@ -750,6 +765,30 @@
       }
     },
     {
+      "id": "usc-title-50-section-1541->usc-title-10-section-394:references:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-1541",
+      "source_label": "50 U.S.C. 1541",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-394",
+      "target_label": "10 U.S.C. 394",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:1541",
+        "label": "50 U.S.C. 1541",
+        "first_line": 139,
+        "lines_sample": [
+          139,
+          151,
+          955
+        ],
+        "count": 5
+      }
+    },
+    {
       "id": "usc-title-50-section-1541->usc-title-10-section-801:references:resolved_reference",
       "source_artifact_id": "usc-title-50-section-1541",
       "source_label": "50 U.S.C. 1541",
@@ -870,7 +909,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-50-section-1541",
       "direction": "downstream",
-      "edge_count": 17
+      "edge_count": 18
     }
   ]
 }

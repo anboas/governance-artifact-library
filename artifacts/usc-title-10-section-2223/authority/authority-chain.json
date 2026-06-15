@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 2,
+    "upstream_edge_count": 3,
     "downstream_edge_count": 13,
-    "catalogued_node_count": 16,
-    "uncatalogued_gap_count": 9,
-    "evidence_backed_edge_count": 15,
+    "catalogued_node_count": 17,
+    "uncatalogued_gap_count": 8,
+    "evidence_backed_edge_count": 16,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -331,21 +331,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:15:278g",
+      "id": "usc-title-15-section-278g",
       "label": "15 U.S.C. 278g",
-      "title": "15 U.S.C. 278g",
+      "title": "15 U.S.C. 278g: International activities",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:15:278g",
-      "count": 1,
-      "lines_sample": [
-        1056
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_15",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:40:1401",
@@ -484,6 +482,28 @@
         "first_line": 615,
         "lines_sample": [
           615
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-15-section-278g->usc-title-10-section-2223:references:resolved_reference",
+      "source_artifact_id": "usc-title-15-section-278g",
+      "source_label": "15 U.S.C. 278g",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-2223",
+      "target_label": "10 U.S.C. 2223",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:15:278g",
+        "label": "15 U.S.C. 278g",
+        "first_line": 1056,
+        "lines_sample": [
+          1056
         ],
         "count": 1
       }
@@ -844,23 +864,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:15:278g",
-      "label": "15 U.S.C. 278g",
-      "title": "15 U.S.C. 278g",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:15:278g",
-      "count": 1,
-      "lines_sample": [
-        1056
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:40:1401",
       "label": "40 U.S.C. 1401",
       "title": "40 U.S.C. 1401",
@@ -969,7 +972,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-10-section-2223",
       "direction": "upstream",
-      "edge_count": 2
+      "edge_count": 3
     },
     {
       "id": "trace-downstream",

@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 2,
-    "downstream_edge_count": 13,
-    "catalogued_node_count": 15,
+    "upstream_edge_count": 3,
+    "downstream_edge_count": 15,
+    "catalogued_node_count": 18,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 15,
+    "evidence_backed_edge_count": 18,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -339,21 +339,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:42:1395c",
+      "id": "usc-title-42-section-1395c",
       "label": "42 U.S.C. 1395c",
-      "title": "42 U.S.C. 1395c",
+      "title": "42 U.S.C. 1395c: Description of program",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:1395c",
-      "count": 1,
-      "lines_sample": [
-        2042
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:42:1395ww",
@@ -454,6 +452,21 @@
       "status": "catalogued"
     },
     {
+      "id": "usc-title-8-section-1151",
+      "label": "8 U.S.C. 1151",
+      "title": "8 U.S.C. 1151: Worldwide level of immigration",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_8",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "gap:usc:8:1154",
       "label": "8 U.S.C. 1154",
       "title": "8 U.S.C. 1154",
@@ -469,6 +482,21 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "usc-title-8-section-1157",
+      "label": "8 U.S.C. 1157",
+      "title": "8 U.S.C. 1157: Annual admission of refugees and admission of emergency situation refugees",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_8",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:8:1158",
@@ -587,6 +615,23 @@
       "priority": "high"
     },
     {
+      "id": "gap:usc:8:1252",
+      "label": "8 U.S.C. 1252",
+      "title": "8 U.S.C. 1252",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:8:1252",
+      "count": 1,
+      "lines_sample": [
+        4615
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
       "id": "gap:executive-order:12807",
       "label": "Executive Order 12807",
       "title": "Executive Order 12807",
@@ -606,6 +651,28 @@
     }
   ],
   "upstream_edges": [
+    {
+      "id": "usc-title-42-section-1395c->usc-title-8-section-1182:references:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-1395c",
+      "source_label": "42 U.S.C. 1395c",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-8-section-1182",
+      "target_label": "8 U.S.C. 1182",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:1395c",
+        "label": "42 U.S.C. 1395c",
+        "first_line": 2042,
+        "lines_sample": [
+          2042
+        ],
+        "count": 1
+      }
+    },
     {
       "id": "usc-title-8-section-1101->usc-title-8-section-1182:references:resolved_reference",
       "source_artifact_id": "usc-title-8-section-1101",
@@ -969,6 +1036,51 @@
         ],
         "count": 11
       }
+    },
+    {
+      "id": "usc-title-8-section-1182->usc-title-8-section-1151:references:resolved_reference",
+      "source_artifact_id": "usc-title-8-section-1182",
+      "source_label": "8 U.S.C. 1182",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-8-section-1151",
+      "target_label": "8 U.S.C. 1151",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:8:1182",
+        "label": "8 U.S.C. 1182",
+        "first_line": 608,
+        "lines_sample": [
+          608
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-8-section-1182->usc-title-8-section-1157:references:resolved_reference",
+      "source_artifact_id": "usc-title-8-section-1182",
+      "source_label": "8 U.S.C. 1182",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-8-section-1157",
+      "target_label": "8 U.S.C. 1157",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:8:1182",
+        "label": "8 U.S.C. 1182",
+        "first_line": 465,
+        "lines_sample": [
+          465,
+          1070
+        ],
+        "count": 2
+      }
     }
   ],
   "uncatalogued_authority_gaps": [
@@ -1106,23 +1218,6 @@
       "count": 1,
       "lines_sample": [
         2034
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:usc:42:1395c",
-      "label": "42 U.S.C. 1395c",
-      "title": "42 U.S.C. 1395c",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:1395c",
-      "count": 1,
-      "lines_sample": [
-        2042
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -1279,6 +1374,23 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "gap:usc:8:1252",
+      "label": "8 U.S.C. 1252",
+      "title": "8 U.S.C. 1252",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:8:1252",
+      "count": 1,
+      "lines_sample": [
+        4615
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -1287,14 +1399,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-8-section-1182",
       "direction": "upstream",
-      "edge_count": 2
+      "edge_count": 3
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-8-section-1182",
       "direction": "downstream",
-      "edge_count": 13
+      "edge_count": 15
     }
   ]
 }

@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 34,
-    "downstream_edge_count": 30,
-    "catalogued_node_count": 42,
-    "uncatalogued_gap_count": 3,
-    "evidence_backed_edge_count": 31,
+    "upstream_edge_count": 35,
+    "downstream_edge_count": 31,
+    "catalogued_node_count": 44,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 33,
     "inferred_edge_count": 33,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -612,6 +612,21 @@
       "status": "catalogued"
     },
     {
+      "id": "usc-title-10-section-1448",
+      "label": "10 U.S.C. 1448",
+      "title": "10 U.S.C. 1448: Application of Plan",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "usc-title-10-section-2687",
       "label": "10 U.S.C. 2687",
       "title": "10 U.S.C. 2687: Base closures and realignments",
@@ -674,21 +689,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:42:2011",
+      "id": "usc-title-42-section-2011",
       "label": "42 U.S.C. 2011",
-      "title": "42 U.S.C. 2011",
+      "title": "42 U.S.C. 2011: Congressional declaration of policy",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:2011",
-      "count": 1,
-      "lines_sample": [
-        658
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:50:3809",
@@ -1433,6 +1446,28 @@
         ],
         "count": 2
       }
+    },
+    {
+      "id": "usc-title-42-section-2011->usc-title-10-section-101:references:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-2011",
+      "source_label": "42 U.S.C. 2011",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-101",
+      "target_label": "10 U.S.C. 101",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:2011",
+        "label": "42 U.S.C. 2011",
+        "first_line": 658,
+        "lines_sample": [
+          658
+        ],
+        "count": 1
+      }
     }
   ],
   "downstream_edges": [
@@ -2110,6 +2145,28 @@
       }
     },
     {
+      "id": "usc-title-10-section-101->usc-title-10-section-1448:references:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-101",
+      "source_label": "10 U.S.C. 101",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-1448",
+      "target_label": "10 U.S.C. 1448",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:101",
+        "label": "10 U.S.C. 101",
+        "first_line": 1623,
+        "lines_sample": [
+          1623
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-10-section-101->usc-title-10-section-2802:references:resolved_reference",
       "source_artifact_id": "usc-title-10-section-101",
       "source_label": "10 U.S.C. 101",
@@ -2190,23 +2247,6 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
-    },
-    {
-      "id": "gap:usc:42:2011",
-      "label": "42 U.S.C. 2011",
-      "title": "42 U.S.C. 2011",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:2011",
-      "count": 1,
-      "lines_sample": [
-        658
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -2215,14 +2255,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-10-section-101",
       "direction": "upstream",
-      "edge_count": 34
+      "edge_count": 35
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-10-section-101",
       "direction": "downstream",
-      "edge_count": 30
+      "edge_count": 31
     }
   ]
 }

@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 25,
-    "catalogued_node_count": 26,
+    "downstream_edge_count": 26,
+    "catalogued_node_count": 27,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 25,
+    "evidence_backed_edge_count": 26,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -425,6 +425,21 @@
       "lane_label": "Statute",
       "hierarchy_rank": 20,
       "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-10-section-4811",
+      "label": "10 U.S.C. 4811",
+      "title": "10 U.S.C. 4811: National security strategy for national technology and industrial base",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_acquisition",
       "issuing_authority": "Congress",
       "source_system": "U.S. Code",
       "mirror_status": "mirrored",
@@ -1006,6 +1021,28 @@
       }
     },
     {
+      "id": "usc-title-50-section-98h->usc-title-10-section-4811:references:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-98h",
+      "source_label": "50 U.S.C. 98h",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-4811",
+      "target_label": "10 U.S.C. 4811",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:98h",
+        "label": "50 U.S.C. 98h",
+        "first_line": 1149,
+        "lines_sample": [
+          1149
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-50-section-98h->usc-title-50-section-98d:references:resolved_reference",
       "source_artifact_id": "usc-title-50-section-98h",
       "source_label": "50 U.S.C. 98h",
@@ -1043,7 +1080,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-50-section-98h",
       "direction": "downstream",
-      "edge_count": 25
+      "edge_count": 26
     }
   ]
 }

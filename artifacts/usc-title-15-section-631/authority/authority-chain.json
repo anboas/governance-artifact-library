@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 4,
+    "upstream_edge_count": 5,
     "downstream_edge_count": 11,
-    "catalogued_node_count": 13,
-    "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 15,
+    "catalogued_node_count": 14,
+    "uncatalogued_gap_count": 17,
+    "evidence_backed_edge_count": 16,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -267,21 +267,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:15:648",
+      "id": "usc-title-15-section-648",
       "label": "15 U.S.C. 648",
-      "title": "15 U.S.C. 648",
+      "title": "15 U.S.C. 648: Small business development center program authorization",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:15:648",
-      "count": 1,
-      "lines_sample": [
-        1208
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_15",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:15:657f",
@@ -690,6 +688,28 @@
         ],
         "count": 5
       }
+    },
+    {
+      "id": "usc-title-15-section-648->usc-title-15-section-631:references:resolved_reference",
+      "source_artifact_id": "usc-title-15-section-648",
+      "source_label": "15 U.S.C. 648",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-15-section-631",
+      "target_label": "15 U.S.C. 631",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:15:648",
+        "label": "15 U.S.C. 648",
+        "first_line": 1208,
+        "lines_sample": [
+          1208
+        ],
+        "count": 1
+      }
     }
   ],
   "downstream_edges": [
@@ -1070,23 +1090,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:15:648",
-      "label": "15 U.S.C. 648",
-      "title": "15 U.S.C. 648",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:15:648",
-      "count": 1,
-      "lines_sample": [
-        1208
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:15:657f",
       "label": "15 U.S.C. 657f",
       "title": "15 U.S.C. 657f",
@@ -1280,7 +1283,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-15-section-631",
       "direction": "upstream",
-      "edge_count": 4
+      "edge_count": 5
     },
     {
       "id": "trace-downstream",

@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 3,
-    "downstream_edge_count": 25,
-    "catalogued_node_count": 26,
-    "uncatalogued_gap_count": 11,
-    "evidence_backed_edge_count": 28,
+    "upstream_edge_count": 4,
+    "downstream_edge_count": 26,
+    "catalogued_node_count": 28,
+    "uncatalogued_gap_count": 10,
+    "evidence_backed_edge_count": 30,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -531,6 +531,21 @@
       "status": "catalogued"
     },
     {
+      "id": "usc-title-15-section-648",
+      "label": "15 U.S.C. 648",
+      "title": "15 U.S.C. 648: Small business development center program authorization",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_15",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "gap:usc:15:695",
       "label": "15 U.S.C. 695",
       "title": "15 U.S.C. 695",
@@ -616,21 +631,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:42:5170",
+      "id": "usc-title-42-section-5170",
       "label": "42 U.S.C. 5170",
-      "title": "42 U.S.C. 5170",
+      "title": "42 U.S.C. 5170: Procedure for declaration",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:5170",
-      "count": 1,
-      "lines_sample": [
-        1556
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:5:601",
@@ -717,6 +730,28 @@
         "first_line": 1600,
         "lines_sample": [
           1600
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-42-section-5170->usc-title-15-section-632:references:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-5170",
+      "source_label": "42 U.S.C. 5170",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-15-section-632",
+      "target_label": "15 U.S.C. 632",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:5170",
+        "label": "42 U.S.C. 5170",
+        "first_line": 1556,
+        "lines_sample": [
+          1556
         ],
         "count": 1
       }
@@ -1361,6 +1396,28 @@
         ],
         "count": 3
       }
+    },
+    {
+      "id": "usc-title-15-section-632->usc-title-15-section-648:references:resolved_reference",
+      "source_artifact_id": "usc-title-15-section-632",
+      "source_label": "15 U.S.C. 632",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-15-section-648",
+      "target_label": "15 U.S.C. 648",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:15:632",
+        "label": "15 U.S.C. 632",
+        "first_line": 1422,
+        "lines_sample": [
+          1422
+        ],
+        "count": 1
+      }
     }
   ],
   "uncatalogued_authority_gaps": [
@@ -1519,23 +1576,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:42:5170",
-      "label": "42 U.S.C. 5170",
-      "title": "42 U.S.C. 5170",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:5170",
-      "count": 1,
-      "lines_sample": [
-        1556
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:5:601",
       "label": "5 U.S.C. 601",
       "title": "5 U.S.C. 601",
@@ -1559,14 +1599,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-15-section-632",
       "direction": "upstream",
-      "edge_count": 3
+      "edge_count": 4
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-15-section-632",
       "direction": "downstream",
-      "edge_count": 25
+      "edge_count": 26
     }
   ]
 }

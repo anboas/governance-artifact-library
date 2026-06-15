@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 1,
     "downstream_edge_count": 28,
-    "catalogued_node_count": 29,
-    "uncatalogued_gap_count": 3,
-    "evidence_backed_edge_count": 28,
+    "catalogued_node_count": 30,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 29,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -542,24 +542,45 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:43:1601",
+      "id": "usc-title-43-section-1601",
       "label": "43 U.S.C. 1601",
-      "title": "43 U.S.C. 1601",
+      "title": "43 U.S.C. 1601: Congressional findings and declaration of policy",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:43:1601",
-      "count": 1,
-      "lines_sample": [
-        208
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_43",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "usc-title-43-section-1601->usc-title-20-section-7713:references:resolved_reference",
+      "source_artifact_id": "usc-title-43-section-1601",
+      "source_label": "43 U.S.C. 1601",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-20-section-7713",
+      "target_label": "20 U.S.C. 7713",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:43:1601",
+        "label": "43 U.S.C. 1601",
+        "first_line": 208,
+        "lines_sample": [
+          208
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "usc-title-20-section-7713->pl-118-31-fy2024-ndaa:references_upstream:resolved_reference",
@@ -1221,23 +1242,6 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
-    },
-    {
-      "id": "gap:usc:43:1601",
-      "label": "43 U.S.C. 1601",
-      "title": "43 U.S.C. 1601",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:43:1601",
-      "count": 1,
-      "lines_sample": [
-        208
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -1246,7 +1250,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-20-section-7713",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",

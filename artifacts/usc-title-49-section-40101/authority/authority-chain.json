@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 3,
+    "upstream_edge_count": 4,
     "downstream_edge_count": 11,
-    "catalogued_node_count": 15,
+    "catalogued_node_count": 16,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 14,
+    "evidence_backed_edge_count": 15,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -456,21 +456,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:42:15801",
+      "id": "usc-title-42-section-15801",
       "label": "42 U.S.C. 15801",
-      "title": "42 U.S.C. 15801",
+      "title": "42 U.S.C. 15801: Definitions",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:15801",
-      "count": 1,
-      "lines_sample": [
-        1652
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:42:247d",
@@ -539,6 +537,23 @@
       "count": 1,
       "lines_sample": [
         1648
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:49:106",
+      "label": "49 U.S.C. 106",
+      "title": "49 U.S.C. 106",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:49:106",
+      "count": 1,
+      "lines_sample": [
+        964
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -634,6 +649,28 @@
           5180
         ],
         "count": 4
+      }
+    },
+    {
+      "id": "usc-title-42-section-15801->usc-title-49-section-40101:references:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-15801",
+      "source_label": "42 U.S.C. 15801",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-49-section-40101",
+      "target_label": "49 U.S.C. 40101",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:15801",
+        "label": "42 U.S.C. 15801",
+        "first_line": 1652,
+        "lines_sample": [
+          1652
+        ],
+        "count": 1
       }
     },
     {
@@ -1204,23 +1241,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:42:15801",
-      "label": "42 U.S.C. 15801",
-      "title": "42 U.S.C. 15801",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:15801",
-      "count": 1,
-      "lines_sample": [
-        1652
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:42:247d",
       "label": "42 U.S.C. 247d",
       "title": "42 U.S.C. 247d",
@@ -1253,6 +1273,23 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "gap:usc:49:106",
+      "label": "49 U.S.C. 106",
+      "title": "49 U.S.C. 106",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:49:106",
+      "count": 1,
+      "lines_sample": [
+        964
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -1261,7 +1298,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-49-section-40101",
       "direction": "upstream",
-      "edge_count": 3
+      "edge_count": 4
     },
     {
       "id": "trace-downstream",

@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 2,
+    "upstream_edge_count": 3,
     "downstream_edge_count": 24,
-    "catalogued_node_count": 25,
+    "catalogued_node_count": 26,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 26,
+    "evidence_backed_edge_count": 27,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -755,6 +755,21 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "usc-title-43-section-1601",
+      "label": "43 U.S.C. 1601",
+      "title": "43 U.S.C. 1601: Congressional findings and declaration of policy",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_43",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [
@@ -803,6 +818,28 @@
         "first_line": 3107,
         "lines_sample": [
           3107
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-43-section-1601->usc-title-15-section-637:references:resolved_reference",
+      "source_artifact_id": "usc-title-43-section-1601",
+      "source_label": "43 U.S.C. 1601",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-15-section-637",
+      "target_label": "15 U.S.C. 637",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:43:1601",
+        "label": "43 U.S.C. 1601",
+        "first_line": 503,
+        "lines_sample": [
+          503
         ],
         "count": 1
       }
@@ -1707,7 +1744,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-15-section-637",
       "direction": "upstream",
-      "edge_count": 2
+      "edge_count": 3
     },
     {
       "id": "trace-downstream",
