@@ -61,49 +61,45 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 12,
+    "upstream_edge_count": 17,
     "downstream_edge_count": 8,
-    "catalogued_node_count": 19,
-    "uncatalogued_gap_count": 9,
-    "evidence_backed_edge_count": 16,
+    "catalogued_node_count": 24,
+    "uncatalogued_gap_count": 4,
+    "evidence_backed_edge_count": 21,
     "inferred_edge_count": 4,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
     {
-      "id": "gap:executive-order:10450",
+      "id": "eo-10450",
       "label": "Executive Order 10450",
-      "title": "Executive Order 10450",
+      "title": "Executive Order 10450: Codified executive order text",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:10450",
-      "count": 1,
-      "lines_sample": [
-        862
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "regulatory_governance",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
-      "id": "gap:executive-order:12333",
+      "id": "eo-12333",
       "label": "Executive Order 12333",
-      "title": "Executive Order 12333",
+      "title": "Executive Order 12333: Codified executive order text",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:12333",
-      "count": 1,
-      "lines_sample": [
-        864
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:executive-order:12626",
@@ -123,55 +119,49 @@
       "priority": "high"
     },
     {
-      "id": "gap:executive-order:12968",
+      "id": "eo-12968",
       "label": "Executive Order 12968",
-      "title": "Executive Order 12968",
+      "title": "Executive Order 12968: Access to Classified Information",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:12968",
-      "count": 1,
-      "lines_sample": [
-        866
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
-      "id": "gap:executive-order:13467",
+      "id": "eo-13467",
       "label": "Executive Order 13467",
-      "title": "Executive Order 13467",
+      "title": "Executive Order 13467: Reforming Processes Related to Suitability for Government Employment, Fitness for Contractor Employees, and Eligibility for Access to Classified National Security Information",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13467",
-      "count": 1,
-      "lines_sample": [
-        867
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
-      "id": "gap:executive-order:13488",
+      "id": "eo-13488",
       "label": "Executive Order 13488",
-      "title": "Executive Order 13488",
+      "title": "Executive Order 13488: Granting Reciprocity on Excepted Service and Federal Contractor Employee Fitness and Reinvestigating Individuals in Positions of Public Trust",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13488",
-      "count": 1,
-      "lines_sample": [
-        870
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodd-3000-06",
@@ -780,6 +770,116 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "eo-10450->dodd-5105-22:directs:resolved_reference",
+      "source_artifact_id": "eo-10450",
+      "source_label": "Executive Order 10450",
+      "source_lane": "executive",
+      "target_artifact_id": "dodd-5105-22",
+      "target_label": "DoDD 5105.22",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:10450",
+        "label": "Executive Order 10450",
+        "first_line": 862,
+        "lines_sample": [
+          862
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "eo-12333->dodd-5105-22:directs:resolved_reference",
+      "source_artifact_id": "eo-12333",
+      "source_label": "Executive Order 12333",
+      "source_lane": "executive",
+      "target_artifact_id": "dodd-5105-22",
+      "target_label": "DoDD 5105.22",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:12333",
+        "label": "Executive Order 12333",
+        "first_line": 864,
+        "lines_sample": [
+          864
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "eo-12968->dodd-5105-22:directs:resolved_reference",
+      "source_artifact_id": "eo-12968",
+      "source_label": "Executive Order 12968",
+      "source_lane": "executive",
+      "target_artifact_id": "dodd-5105-22",
+      "target_label": "DoDD 5105.22",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:12968",
+        "label": "Executive Order 12968",
+        "first_line": 866,
+        "lines_sample": [
+          866
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "eo-13467->dodd-5105-22:directs:resolved_reference",
+      "source_artifact_id": "eo-13467",
+      "source_label": "Executive Order 13467",
+      "source_lane": "executive",
+      "target_artifact_id": "dodd-5105-22",
+      "target_label": "DoDD 5105.22",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:13467",
+        "label": "Executive Order 13467",
+        "first_line": 867,
+        "lines_sample": [
+          867
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "eo-13488->dodd-5105-22:directs:resolved_reference",
+      "source_artifact_id": "eo-13488",
+      "source_label": "Executive Order 13488",
+      "source_lane": "executive",
+      "target_artifact_id": "dodd-5105-22",
+      "target_label": "DoDD 5105.22",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:13488",
+        "label": "Executive Order 13488",
+        "first_line": 870,
+        "lines_sample": [
+          870
+        ],
+        "count": 1
+      }
     }
   ],
   "downstream_edges": [
@@ -1015,40 +1115,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:executive-order:10450",
-      "label": "Executive Order 10450",
-      "title": "Executive Order 10450",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:10450",
-      "count": 1,
-      "lines_sample": [
-        862
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:executive-order:12333",
-      "label": "Executive Order 12333",
-      "title": "Executive Order 12333",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:12333",
-      "count": 1,
-      "lines_sample": [
-        864
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:executive-order:12626",
       "label": "Executive Order 12626",
       "title": "Executive Order 12626",
@@ -1064,57 +1130,6 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
-    },
-    {
-      "id": "gap:executive-order:12968",
-      "label": "Executive Order 12968",
-      "title": "Executive Order 12968",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:12968",
-      "count": 1,
-      "lines_sample": [
-        866
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:executive-order:13467",
-      "label": "Executive Order 13467",
-      "title": "Executive Order 13467",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13467",
-      "count": 1,
-      "lines_sample": [
-        867
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:executive-order:13488",
-      "label": "Executive Order 13488",
-      "title": "Executive Order 13488",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13488",
-      "count": 1,
-      "lines_sample": [
-        870
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -1123,7 +1138,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodd-5105-22",
       "direction": "upstream",
-      "edge_count": 12
+      "edge_count": 17
     },
     {
       "id": "trace-downstream",

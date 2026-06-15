@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 11,
+    "upstream_edge_count": 13,
     "downstream_edge_count": 22,
-    "catalogued_node_count": 33,
-    "uncatalogued_gap_count": 9,
-    "evidence_backed_edge_count": 29,
+    "catalogued_node_count": 35,
+    "uncatalogued_gap_count": 7,
+    "evidence_backed_edge_count": 31,
     "inferred_edge_count": 4,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -187,38 +187,34 @@
       "priority": "high"
     },
     {
-      "id": "gap:executive-order:13526",
+      "id": "eo-13526",
       "label": "Executive Order 13526",
-      "title": "Executive Order 13526",
+      "title": "Executive Order 13526: Classified National Security Information",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13526",
-      "count": 1,
-      "lines_sample": [
-        1124
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
-      "id": "gap:executive-order:13891",
+      "id": "eo-13891",
       "label": "Executive Order 13891",
-      "title": "Executive Order 13891",
+      "title": "Executive Order 13891: Promoting the Rule of Law Through Improved Agency Guidance Documents",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13891",
-      "count": 1,
-      "lines_sample": [
-        1125
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "regulatory_governance",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodd-3100-10",
@@ -926,6 +922,50 @@
       }
     },
     {
+      "id": "eo-13526->dodd-5137-02:directs:resolved_reference",
+      "source_artifact_id": "eo-13526",
+      "source_label": "Executive Order 13526",
+      "source_lane": "executive",
+      "target_artifact_id": "dodd-5137-02",
+      "target_label": "DoDD 5137.02",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:13526",
+        "label": "Executive Order 13526",
+        "first_line": 1124,
+        "lines_sample": [
+          1124
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "eo-13891->dodd-5137-02:directs:resolved_reference",
+      "source_artifact_id": "eo-13891",
+      "source_label": "Executive Order 13891",
+      "source_lane": "executive",
+      "target_artifact_id": "dodd-5137-02",
+      "target_label": "DoDD 5137.02",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:13891",
+        "label": "Executive Order 13891",
+        "first_line": 1125,
+        "lines_sample": [
+          1125
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "public-law-114-328->dodd-5137-02:authorizes:resolved_reference",
       "source_artifact_id": "public-law-114-328",
       "source_label": "Public Law 114-328",
@@ -1515,40 +1555,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:executive-order:13526",
-      "label": "Executive Order 13526",
-      "title": "Executive Order 13526",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13526",
-      "count": 1,
-      "lines_sample": [
-        1124
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:executive-order:13891",
-      "label": "Executive Order 13891",
-      "title": "Executive Order 13891",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13891",
-      "count": 1,
-      "lines_sample": [
-        1125
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:public-law:103-337",
       "label": "Public Law 103-337",
       "title": "Public Law 103-337",
@@ -1623,7 +1629,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodd-5137-02",
       "direction": "upstream",
-      "edge_count": 11
+      "edge_count": 13
     },
     {
       "id": "trace-downstream",

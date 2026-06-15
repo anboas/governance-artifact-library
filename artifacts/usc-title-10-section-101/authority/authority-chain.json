@@ -61,12 +61,12 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 45,
-    "downstream_edge_count": 39,
-    "catalogued_node_count": 58,
-    "uncatalogued_gap_count": 2,
-    "evidence_backed_edge_count": 41,
-    "inferred_edge_count": 43,
+    "upstream_edge_count": 46,
+    "downstream_edge_count": 43,
+    "catalogued_node_count": 63,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 42,
+    "inferred_edge_count": 47,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
   },
@@ -852,21 +852,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:2:901",
+      "id": "usc-title-2-section-901",
       "label": "2 U.S.C. 901",
-      "title": "2 U.S.C. 901",
+      "title": "2 U.S.C. 901: Enforcing discretionary spending limits",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:2:901",
-      "count": 1,
-      "lines_sample": [
-        2143
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_2",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-20-section-1070",
@@ -930,6 +928,66 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "eo-10450",
+      "label": "Executive Order 10450",
+      "title": "Executive Order 10450: Codified executive order text",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "family": "regulatory_governance",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "eo-10865",
+      "label": "Executive Order 10865",
+      "title": "Executive Order 10865: Codified executive order text",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "eo-11246",
+      "label": "Executive Order 11246",
+      "title": "Executive Order 11246: Codified executive order text",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "family": "regulatory_governance",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "eo-12114",
+      "label": "Executive Order 12114",
+      "title": "Executive Order 12114: Codified executive order text",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodd-2010-09",
@@ -1858,6 +1916,28 @@
       }
     },
     {
+      "id": "usc-title-2-section-901->usc-title-10-section-101:references:resolved_reference",
+      "source_artifact_id": "usc-title-2-section-901",
+      "source_label": "2 U.S.C. 901",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-101",
+      "target_label": "10 U.S.C. 101",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:2:901",
+        "label": "2 U.S.C. 901",
+        "first_line": 2143,
+        "lines_sample": [
+          2143
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-42-section-2011->usc-title-10-section-101:references:resolved_reference",
       "source_artifact_id": "usc-title-42-section-2011",
       "source_label": "42 U.S.C. 2011",
@@ -1947,6 +2027,86 @@
           1549
         ],
         "count": 3
+      }
+    },
+    {
+      "id": "usc-title-10-section-101->eo-10450:authorizes:inferred_flowdown",
+      "source_artifact_id": "usc-title-10-section-101",
+      "source_label": "10 U.S.C. 101",
+      "source_lane": "statute",
+      "target_artifact_id": "eo-10450",
+      "target_label": "Executive Order 10450",
+      "target_lane": "executive",
+      "relationship": "authorizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.59,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "reference-ingestion"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "usc-title-10-section-101->eo-10865:authorizes:inferred_flowdown",
+      "source_artifact_id": "usc-title-10-section-101",
+      "source_label": "10 U.S.C. 101",
+      "source_lane": "statute",
+      "target_artifact_id": "eo-10865",
+      "target_label": "Executive Order 10865",
+      "target_lane": "executive",
+      "relationship": "authorizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.59,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "reference-ingestion"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "usc-title-10-section-101->eo-11246:authorizes:inferred_flowdown",
+      "source_artifact_id": "usc-title-10-section-101",
+      "source_label": "10 U.S.C. 101",
+      "source_lane": "statute",
+      "target_artifact_id": "eo-11246",
+      "target_label": "Executive Order 11246",
+      "target_lane": "executive",
+      "relationship": "authorizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.59,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "reference-ingestion"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "usc-title-10-section-101->eo-12114:authorizes:inferred_flowdown",
+      "source_artifact_id": "usc-title-10-section-101",
+      "source_label": "10 U.S.C. 101",
+      "source_lane": "statute",
+      "target_artifact_id": "eo-12114",
+      "target_label": "Executive Order 12114",
+      "target_lane": "executive",
+      "relationship": "authorizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.59,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "reference-ingestion"
+        ],
+        "shared_family": ""
       }
     },
     {
@@ -2818,23 +2978,6 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
-    },
-    {
-      "id": "gap:usc:2:901",
-      "label": "2 U.S.C. 901",
-      "title": "2 U.S.C. 901",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:2:901",
-      "count": 1,
-      "lines_sample": [
-        2143
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -2843,14 +2986,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-10-section-101",
       "direction": "upstream",
-      "edge_count": 45
+      "edge_count": 46
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-10-section-101",
       "direction": "downstream",
-      "edge_count": 39
+      "edge_count": 43
     }
   ]
 }

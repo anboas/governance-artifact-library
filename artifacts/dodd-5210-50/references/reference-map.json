@@ -6,11 +6,11 @@
   "reference_resolution_path": "artifacts/dodd-5210-50/references/reference-map.json",
   "summary": {
     "total_catalogable_reference_count": 5,
-    "resolved_reference_count": 3,
-    "uncatalogued_reference_count": 2,
-    "resolved_occurrence_count": 9,
-    "uncatalogued_occurrence_count": 4,
-    "cataloged_target_count": 3
+    "resolved_reference_count": 5,
+    "uncatalogued_reference_count": 0,
+    "resolved_occurrence_count": 13,
+    "uncatalogued_occurrence_count": 0,
+    "cataloged_target_count": 5
   },
   "resolved_references": [
     {
@@ -32,6 +32,40 @@
       "target_title": "DoDD 5210.50: Management of Serious Security Incidents Involving Classified Information",
       "target_path": "artifacts/dodd-5210-50/artifact.json",
       "relationship": "references_self",
+      "confidence": 0.94
+    },
+    {
+      "source_reference_id": "executive-order:12333",
+      "label": "Executive Order 12333",
+      "type": "Executive Order",
+      "reference_family": "executive-order",
+      "count": 2,
+      "first_line": 68,
+      "lines_sample": [
+        68,
+        141
+      ],
+      "target_artifact_id": "eo-12333",
+      "target_title": "Executive Order 12333: Codified executive order text",
+      "target_path": "artifacts/eo-12333/artifact.json",
+      "relationship": "references",
+      "confidence": 0.94
+    },
+    {
+      "source_reference_id": "executive-order:13526",
+      "label": "Executive Order 13526",
+      "type": "Executive Order",
+      "reference_family": "executive-order",
+      "count": 2,
+      "first_line": 19,
+      "lines_sample": [
+        19,
+        125
+      ],
+      "target_artifact_id": "eo-13526",
+      "target_title": "Executive Order 13526: Classified National Security Information",
+      "target_path": "artifacts/eo-13526/artifact.json",
+      "relationship": "references",
       "confidence": 0.94
     },
     {
@@ -68,36 +102,5 @@
       "confidence": 0.94
     }
   ],
-  "uncatalogued_references": [
-    {
-      "source_reference_id": "executive-order:12333",
-      "label": "Executive Order 12333",
-      "type": "Executive Order",
-      "reference_family": "executive-order",
-      "count": 2,
-      "first_line": 68,
-      "lines_sample": [
-        68,
-        141
-      ],
-      "coverage_gap": true,
-      "suggested_catalog_key": "executive-order:12333",
-      "priority": "high"
-    },
-    {
-      "source_reference_id": "executive-order:13526",
-      "label": "Executive Order 13526",
-      "type": "Executive Order",
-      "reference_family": "executive-order",
-      "count": 2,
-      "first_line": 19,
-      "lines_sample": [
-        19,
-        125
-      ],
-      "coverage_gap": true,
-      "suggested_catalog_key": "executive-order:13526",
-      "priority": "high"
-    }
-  ]
+  "uncatalogued_references": []
 }

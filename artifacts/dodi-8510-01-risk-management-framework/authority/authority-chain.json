@@ -61,32 +61,30 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 14,
+    "upstream_edge_count": 15,
     "downstream_edge_count": 39,
-    "catalogued_node_count": 50,
-    "uncatalogued_gap_count": 5,
-    "evidence_backed_edge_count": 46,
+    "catalogued_node_count": 51,
+    "uncatalogued_gap_count": 4,
+    "evidence_backed_edge_count": 47,
     "inferred_edge_count": 7,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
     {
-      "id": "gap:executive-order:13533",
+      "id": "eo-13533",
       "label": "Executive Order 13533",
-      "title": "Executive Order 13533",
+      "title": "Executive Order 13533: Providing an Order of Succession Within the Department of Defense",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13533",
-      "count": 1,
-      "lines_sample": [
-        1691
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:executive-order:13800",
@@ -1152,6 +1150,28 @@
           1449
         ],
         "count": 7
+      }
+    },
+    {
+      "id": "eo-13533->dodi-8510-01-risk-management-framework:directs:resolved_reference",
+      "source_artifact_id": "eo-13533",
+      "source_label": "Executive Order 13533",
+      "source_lane": "executive",
+      "target_artifact_id": "dodi-8510-01-risk-management-framework",
+      "target_label": "DoDI 8510.01",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:13533",
+        "label": "Executive Order 13533",
+        "first_line": 1691,
+        "lines_sample": [
+          1691
+        ],
+        "count": 1
       }
     },
     {
@@ -2221,23 +2241,6 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
-    },
-    {
-      "id": "gap:executive-order:13533",
-      "label": "Executive Order 13533",
-      "title": "Executive Order 13533",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13533",
-      "count": 1,
-      "lines_sample": [
-        1691
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -2246,7 +2249,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-8510-01-risk-management-framework",
       "direction": "upstream",
-      "edge_count": 14
+      "edge_count": 15
     },
     {
       "id": "trace-downstream",

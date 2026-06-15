@@ -61,33 +61,30 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 1,
     "downstream_edge_count": 2,
-    "catalogued_node_count": 3,
-    "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 2,
+    "catalogued_node_count": 4,
+    "uncatalogued_gap_count": 0,
+    "evidence_backed_edge_count": 3,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
     {
-      "id": "gap:executive-order:13327",
+      "id": "eo-13327",
       "label": "Executive Order 13327",
-      "title": "Executive Order 13327",
+      "title": "Executive Order 13327: Federal Real Property Asset Management",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13327",
-      "count": 2,
-      "lines_sample": [
-        86,
-        398
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodi-3000-12",
@@ -135,7 +132,31 @@
       "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "eo-13327->dodi-4165-03:directs:resolved_reference",
+      "source_artifact_id": "eo-13327",
+      "source_label": "Executive Order 13327",
+      "source_lane": "executive",
+      "target_artifact_id": "dodi-4165-03",
+      "target_label": "DoDI 4165.03",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:13327",
+        "label": "Executive Order 13327",
+        "first_line": 86,
+        "lines_sample": [
+          86,
+          398
+        ],
+        "count": 2
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "dodi-4165-03->dodi-3000-12:references:resolved_reference",
@@ -183,33 +204,14 @@
       }
     }
   ],
-  "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:executive-order:13327",
-      "label": "Executive Order 13327",
-      "title": "Executive Order 13327",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13327",
-      "count": 2,
-      "lines_sample": [
-        86,
-        398
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    }
-  ],
+  "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-4165-03",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",

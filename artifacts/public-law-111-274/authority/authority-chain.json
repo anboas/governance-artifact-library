@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 1,
     "downstream_edge_count": 7,
-    "catalogued_node_count": 8,
-    "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 3,
+    "catalogued_node_count": 9,
+    "uncatalogued_gap_count": 0,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 4,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -147,26 +147,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:5:301",
-      "label": "5 USC 301",
-      "title": "5 USC 301",
+      "id": "usc-title-5-section-301",
+      "label": "5 U.S.C. 301",
+      "title": "5 U.S.C. 301: Departmental regulations",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:5:301",
-      "count": 6,
-      "lines_sample": [
-        17,
-        19,
-        45,
-        107,
-        117,
-        135
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_5",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodd-5110-04",
@@ -214,7 +207,35 @@
       "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "usc-title-5-section-301->public-law-111-274:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-5-section-301",
+      "source_label": "5 U.S.C. 301",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-111-274",
+      "target_label": "Public Law 111-274",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:5:301",
+        "label": "5 USC 301",
+        "first_line": 17,
+        "lines_sample": [
+          17,
+          19,
+          45,
+          107,
+          117,
+          135
+        ],
+        "count": 6
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "public-law-111-274->dodd-5110-04:authorizes:resolved_reference",
@@ -368,37 +389,14 @@
       }
     }
   ],
-  "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:usc:5:301",
-      "label": "5 USC 301",
-      "title": "5 USC 301",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:5:301",
-      "count": 6,
-      "lines_sample": [
-        17,
-        19,
-        45,
-        107,
-        117,
-        135
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    }
-  ],
+  "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "public-law-111-274",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",

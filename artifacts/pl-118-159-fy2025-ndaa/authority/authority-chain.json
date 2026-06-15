@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 114,
+    "upstream_edge_count": 118,
     "downstream_edge_count": 5,
-    "catalogued_node_count": 118,
+    "catalogued_node_count": 122,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 115,
+    "evidence_backed_edge_count": 119,
     "inferred_edge_count": 4,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -866,6 +866,24 @@
       "status": "catalogued"
     },
     {
+      "id": "gap:usc:10:3241",
+      "label": "10 U.S.C. 3241",
+      "title": "10 U.S.C. 3241",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:10:3241",
+      "count": 2,
+      "lines_sample": [
+        15028,
+        15062
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
       "id": "usc-title-10-section-333",
       "label": "10 U.S.C. 333",
       "title": "10 U.S.C. 333: Foreign security forces: authority to build capacity",
@@ -1600,6 +1618,21 @@
       "status": "catalogued"
     },
     {
+      "id": "usc-title-22-section-4831",
+      "label": "22 U.S.C. 4831",
+      "title": "22 U.S.C. 4831: Security Review Committees",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "foreign_affairs",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "usc-title-22-section-4865",
       "label": "22 U.S.C. 4865",
       "title": "22 U.S.C. 4865: Security requirements for United States diplomatic facilities",
@@ -1683,6 +1716,21 @@
       "id": "usc-title-37-section-1009",
       "label": "37 U.S.C. 1009",
       "title": "37 U.S.C. 1009: Adjustments of monthly basic pay",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_37",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-37-section-203",
+      "label": "37 U.S.C. 203",
+      "title": "37 U.S.C. 203: Rates",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
@@ -2167,25 +2215,34 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:executive-order:13526",
-      "label": "Executive Order 13526",
-      "title": "Executive Order 13526",
+      "id": "eo-12968",
+      "label": "Executive Order 12968",
+      "title": "Executive Order 12968: Access to Classified Information",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13526",
-      "count": 5,
-      "lines_sample": [
-        51150,
-        51180,
-        51197,
-        51214,
-        51246
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "eo-13526",
+      "label": "Executive Order 13526",
+      "title": "Executive Order 13526: Classified National Security Information",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodi-1341-15",
@@ -2204,6 +2261,54 @@
     }
   ],
   "upstream_edges": [
+    {
+      "id": "eo-12968->pl-118-159-fy2025-ndaa:references_upstream:resolved_reference",
+      "source_artifact_id": "eo-12968",
+      "source_label": "Executive Order 12968",
+      "source_lane": "executive",
+      "target_artifact_id": "pl-118-159-fy2025-ndaa",
+      "target_label": "FY2025 NDAA",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:12968",
+        "label": "Executive Order 12968",
+        "first_line": 50292,
+        "lines_sample": [
+          50292
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "eo-13526->pl-118-159-fy2025-ndaa:references_upstream:resolved_reference",
+      "source_artifact_id": "eo-13526",
+      "source_label": "Executive Order 13526",
+      "source_lane": "executive",
+      "target_artifact_id": "pl-118-159-fy2025-ndaa",
+      "target_label": "FY2025 NDAA",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:13526",
+        "label": "Executive Order 13526",
+        "first_line": 51150,
+        "lines_sample": [
+          51150,
+          51180,
+          51197,
+          51214,
+          51246
+        ],
+        "count": 5
+      }
+    },
     {
       "id": "public-law-115-232->pl-118-159-fy2025-ndaa:references:resolved_reference",
       "source_artifact_id": "public-law-115-232",
@@ -4165,6 +4270,29 @@
       }
     },
     {
+      "id": "usc-title-22-section-4831->pl-118-159-fy2025-ndaa:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-4831",
+      "source_label": "22 U.S.C. 4831",
+      "source_lane": "statute",
+      "target_artifact_id": "pl-118-159-fy2025-ndaa",
+      "target_label": "FY2025 NDAA",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:4831",
+        "label": "22 U.S.C. 4831",
+        "first_line": 54670,
+        "lines_sample": [
+          54670,
+          54671
+        ],
+        "count": 2
+      }
+    },
+    {
       "id": "usc-title-22-section-4865->pl-118-159-fy2025-ndaa:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-22-section-4865",
       "source_label": "22 U.S.C. 4865",
@@ -4272,6 +4400,28 @@
         "first_line": 7501,
         "lines_sample": [
           7501
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-37-section-203->pl-118-159-fy2025-ndaa:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-37-section-203",
+      "source_label": "37 U.S.C. 203",
+      "source_lane": "statute",
+      "target_artifact_id": "pl-118-159-fy2025-ndaa",
+      "target_label": "FY2025 NDAA",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:37:203",
+        "label": "37 USC 203",
+        "first_line": 10356,
+        "lines_sample": [
+          10356
         ],
         "count": 1
       }
@@ -5009,27 +5159,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:executive-order:13526",
-      "label": "Executive Order 13526",
-      "title": "Executive Order 13526",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13526",
-      "count": 5,
-      "lines_sample": [
-        51150,
-        51180,
-        51197,
-        51214,
-        51246
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:10:20001",
       "label": "10 U.S.C. 20001",
       "title": "10 U.S.C. 20001",
@@ -5318,6 +5447,24 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "gap:usc:10:3241",
+      "label": "10 U.S.C. 3241",
+      "title": "10 U.S.C. 3241",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:10:3241",
+      "count": 2,
+      "lines_sample": [
+        15028,
+        15062
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -5326,7 +5473,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "pl-118-159-fy2025-ndaa",
       "direction": "upstream",
-      "edge_count": 114
+      "edge_count": 118
     },
     {
       "id": "trace-downstream",

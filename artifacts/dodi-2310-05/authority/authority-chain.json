@@ -61,32 +61,30 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 1,
     "downstream_edge_count": 1,
-    "catalogued_node_count": 2,
-    "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 1,
+    "catalogued_node_count": 3,
+    "uncatalogued_gap_count": 0,
+    "evidence_backed_edge_count": 2,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
     {
-      "id": "gap:usc:10:1501",
+      "id": "usc-title-10-section-1501",
       "label": "10 U.S.C. 1501",
-      "title": "10 U.S.C. 1501",
+      "title": "10 U.S.C. 1501: System for accounting for missing persons",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:10:1501",
-      "count": 1,
-      "lines_sample": [
-        527
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodd-3002-01",
@@ -119,7 +117,30 @@
       "status": "current"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "usc-title-10-section-1501->dodi-2310-05:flows_down:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-1501",
+      "source_label": "10 U.S.C. 1501",
+      "source_lane": "statute",
+      "target_artifact_id": "dodi-2310-05",
+      "target_label": "DoDI 2310.05",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:1501",
+        "label": "10 U.S.C. 1501",
+        "first_line": 527,
+        "lines_sample": [
+          527
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "dodi-2310-05->dodd-3002-01:references_upstream:resolved_reference",
@@ -144,32 +165,14 @@
       }
     }
   ],
-  "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:usc:10:1501",
-      "label": "10 U.S.C. 1501",
-      "title": "10 U.S.C. 1501",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:10:1501",
-      "count": 1,
-      "lines_sample": [
-        527
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    }
-  ],
+  "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-2310-05",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",

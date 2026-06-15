@@ -61,12 +61,12 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 1,
-    "downstream_edge_count": 9,
-    "catalogued_node_count": 11,
-    "uncatalogued_gap_count": 5,
-    "evidence_backed_edge_count": 10,
-    "inferred_edge_count": 0,
+    "upstream_edge_count": 2,
+    "downstream_edge_count": 15,
+    "catalogued_node_count": 17,
+    "uncatalogued_gap_count": 4,
+    "evidence_backed_edge_count": 13,
+    "inferred_edge_count": 4,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
   },
@@ -192,6 +192,21 @@
       "status": "catalogued"
     },
     {
+      "id": "usc-title-10-section-1079",
+      "label": "10 U.S.C. 1079",
+      "title": "10 U.S.C. 1079: Contracts for medical care for spouses and children: plans",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "usc-title-42-section-1395",
       "label": "42 U.S.C. 1395",
       "title": "42 U.S.C. 1395: Prohibition against any Federal interference",
@@ -274,26 +289,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:42:1395x",
+      "id": "usc-title-42-section-1395x",
       "label": "42 U.S.C. 1395x",
-      "title": "42 U.S.C. 1395x",
+      "title": "42 U.S.C. 1395x: Definitions",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:1395x",
-      "count": 9,
-      "lines_sample": [
-        273,
-        341,
-        345,
-        359,
-        363,
-        373
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:42:426",
@@ -326,6 +334,66 @@
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "catalogued"
+    },
+    {
+      "id": "eo-10450",
+      "label": "Executive Order 10450",
+      "title": "Executive Order 10450: Codified executive order text",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "family": "regulatory_governance",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "eo-10865",
+      "label": "Executive Order 10865",
+      "title": "Executive Order 10865: Codified executive order text",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "eo-11246",
+      "label": "Executive Order 11246",
+      "title": "Executive Order 11246: Codified executive order text",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "family": "regulatory_governance",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "eo-12114",
+      "label": "Executive Order 12114",
+      "title": "Executive Order 12114: Codified executive order text",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [
@@ -350,9 +418,116 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "usc-title-42-section-1395x->usc-title-42-section-1395c:references:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-1395x",
+      "source_label": "42 U.S.C. 1395x",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-42-section-1395c",
+      "target_label": "42 U.S.C. 1395c",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:1395x",
+        "label": "42 U.S.C. 1395x",
+        "first_line": 273,
+        "lines_sample": [
+          273,
+          341,
+          345,
+          359,
+          363,
+          373
+        ],
+        "count": 9
+      }
     }
   ],
   "downstream_edges": [
+    {
+      "id": "usc-title-42-section-1395c->eo-10450:authorizes:inferred_flowdown",
+      "source_artifact_id": "usc-title-42-section-1395c",
+      "source_label": "42 U.S.C. 1395c",
+      "source_lane": "statute",
+      "target_artifact_id": "eo-10450",
+      "target_label": "Executive Order 10450",
+      "target_lane": "executive",
+      "relationship": "authorizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.59,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "reference-ingestion"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "usc-title-42-section-1395c->eo-10865:authorizes:inferred_flowdown",
+      "source_artifact_id": "usc-title-42-section-1395c",
+      "source_label": "42 U.S.C. 1395c",
+      "source_lane": "statute",
+      "target_artifact_id": "eo-10865",
+      "target_label": "Executive Order 10865",
+      "target_lane": "executive",
+      "relationship": "authorizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.59,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "reference-ingestion"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "usc-title-42-section-1395c->eo-11246:authorizes:inferred_flowdown",
+      "source_artifact_id": "usc-title-42-section-1395c",
+      "source_label": "42 U.S.C. 1395c",
+      "source_lane": "statute",
+      "target_artifact_id": "eo-11246",
+      "target_label": "Executive Order 11246",
+      "target_lane": "executive",
+      "relationship": "authorizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.59,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "reference-ingestion"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "usc-title-42-section-1395c->eo-12114:authorizes:inferred_flowdown",
+      "source_artifact_id": "usc-title-42-section-1395c",
+      "source_label": "42 U.S.C. 1395c",
+      "source_lane": "statute",
+      "target_artifact_id": "eo-12114",
+      "target_label": "Executive Order 12114",
+      "target_lane": "executive",
+      "relationship": "authorizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.59,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "reference-ingestion"
+        ],
+        "shared_family": ""
+      }
+    },
     {
       "id": "usc-title-42-section-1395c->public-law-104-106:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-42-section-1395c",
@@ -537,6 +712,51 @@
       }
     },
     {
+      "id": "usc-title-42-section-1395c->usc-title-10-section-1079:references:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-1395c",
+      "source_label": "42 U.S.C. 1395c",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-1079",
+      "target_label": "10 U.S.C. 1079",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:1395c",
+        "label": "42 U.S.C. 1395c",
+        "first_line": 699,
+        "lines_sample": [
+          699
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-42-section-1395c->usc-title-42-section-1395x:references:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-1395c",
+      "source_label": "42 U.S.C. 1395c",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-42-section-1395x",
+      "target_label": "42 U.S.C. 1395x",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:1395c",
+        "label": "42 U.S.C. 1395c",
+        "first_line": 6823,
+        "lines_sample": [
+          6823,
+          7069
+        ],
+        "count": 2
+      }
+    },
+    {
       "id": "usc-title-42-section-1395c->usc-title-8-section-1182:references:resolved_reference",
       "source_artifact_id": "usc-title-42-section-1395c",
       "source_label": "42 U.S.C. 1395c",
@@ -560,28 +780,6 @@
     }
   ],
   "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:usc:42:1395x",
-      "label": "42 U.S.C. 1395x",
-      "title": "42 U.S.C. 1395x",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:1395x",
-      "count": 9,
-      "lines_sample": [
-        273,
-        341,
-        345,
-        359,
-        363,
-        373
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
     {
       "id": "gap:usc:42:1395cc",
       "label": "42 U.S.C. 1395cc",
@@ -658,14 +856,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-42-section-1395c",
       "direction": "upstream",
-      "edge_count": 1
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-42-section-1395c",
       "direction": "downstream",
-      "edge_count": 9
+      "edge_count": 15
     }
   ]
 }

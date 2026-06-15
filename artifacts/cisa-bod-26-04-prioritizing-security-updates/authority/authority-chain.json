@@ -61,33 +61,16 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 1,
     "downstream_edge_count": 4,
-    "catalogued_node_count": 5,
-    "uncatalogued_gap_count": 3,
-    "evidence_backed_edge_count": 0,
+    "catalogued_node_count": 6,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 1,
     "inferred_edge_count": 4,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
-    {
-      "id": "gap:usc:44:3552",
-      "label": "44 U.S.C. § 3552",
-      "title": "44 U.S.C. § 3552",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:44:3552",
-      "count": 1,
-      "lines_sample": [
-        1194
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
     {
       "id": "gap:usc:44:3553",
       "label": "44 U.S.C. § 3553",
@@ -121,6 +104,21 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "usc-title-44-section-3552",
+      "label": "44 U.S.C. 3552",
+      "title": "44 U.S.C. 3552: Definitions",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "information_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "cisa-bod-26-04-prioritizing-security-updates",
@@ -198,7 +196,30 @@
       "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "usc-title-44-section-3552->cisa-bod-26-04-prioritizing-security-updates:authorizes:resolved_reference",
+      "source_artifact_id": "usc-title-44-section-3552",
+      "source_label": "44 U.S.C. 3552",
+      "source_lane": "statute",
+      "target_artifact_id": "cisa-bod-26-04-prioritizing-security-updates",
+      "target_label": "BOD 26-04",
+      "target_lane": "govwide",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:44:3552",
+        "label": "44 U.S.C. § 3552",
+        "first_line": 1194,
+        "lines_sample": [
+          1194
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "cisa-bod-26-04-prioritizing-security-updates->dodi-8510-01-risk-management-framework:implements:inferred_flowdown",
@@ -287,23 +308,6 @@
   ],
   "uncatalogued_authority_gaps": [
     {
-      "id": "gap:usc:44:3552",
-      "label": "44 U.S.C. § 3552",
-      "title": "44 U.S.C. § 3552",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:44:3552",
-      "count": 1,
-      "lines_sample": [
-        1194
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:44:3553",
       "label": "44 U.S.C. § 3553",
       "title": "44 U.S.C. § 3553",
@@ -344,7 +348,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "cisa-bod-26-04-prioritizing-security-updates",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",

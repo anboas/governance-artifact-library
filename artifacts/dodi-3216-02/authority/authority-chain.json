@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 5,
+    "upstream_edge_count": 8,
     "downstream_edge_count": 11,
-    "catalogued_node_count": 16,
-    "uncatalogued_gap_count": 6,
-    "evidence_backed_edge_count": 16,
+    "catalogued_node_count": 19,
+    "uncatalogued_gap_count": 3,
+    "evidence_backed_edge_count": 19,
     "inferred_edge_count": 0,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -122,57 +122,49 @@
       "priority": "high"
     },
     {
-      "id": "gap:executive-order:12333",
+      "id": "eo-12333",
       "label": "Executive Order 12333",
-      "title": "Executive Order 12333",
+      "title": "Executive Order 12333: Codified executive order text",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:12333",
-      "count": 2,
-      "lines_sample": [
-        1160,
-        1646
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
-      "id": "gap:executive-order:13526",
+      "id": "eo-13526",
       "label": "Executive Order 13526",
-      "title": "Executive Order 13526",
+      "title": "Executive Order 13526: Classified National Security Information",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13526",
-      "count": 2,
-      "lines_sample": [
-        1126,
-        1647
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
-      "id": "gap:executive-order:14168",
+      "id": "eo-14168",
       "label": "Executive Order 14168",
-      "title": "Executive Order 14168",
+      "title": "Executive Order 14168: Defending Women From Gender Ideology Extremism and Restoring Biological Truth to the Federal Government",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:14168",
-      "count": 1,
-      "lines_sample": [
-        1648
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:cfr:32 cfr part 219",
@@ -509,6 +501,74 @@
       }
     },
     {
+      "id": "eo-12333->dodi-3216-02:directs:resolved_reference",
+      "source_artifact_id": "eo-12333",
+      "source_label": "Executive Order 12333",
+      "source_lane": "executive",
+      "target_artifact_id": "dodi-3216-02",
+      "target_label": "DoDI 3216.02",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:12333",
+        "label": "Executive Order 12333",
+        "first_line": 1160,
+        "lines_sample": [
+          1160,
+          1646
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "eo-13526->dodi-3216-02:directs:resolved_reference",
+      "source_artifact_id": "eo-13526",
+      "source_label": "Executive Order 13526",
+      "source_lane": "executive",
+      "target_artifact_id": "dodi-3216-02",
+      "target_label": "DoDI 3216.02",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:13526",
+        "label": "Executive Order 13526",
+        "first_line": 1126,
+        "lines_sample": [
+          1126,
+          1647
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "eo-14168->dodi-3216-02:directs:resolved_reference",
+      "source_artifact_id": "eo-14168",
+      "source_label": "Executive Order 14168",
+      "source_lane": "executive",
+      "target_artifact_id": "dodi-3216-02",
+      "target_label": "DoDI 3216.02",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:14168",
+        "label": "Executive Order 14168",
+        "first_line": 1648,
+        "lines_sample": [
+          1648
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "public-law-107-347->dodi-3216-02:authorizes:resolved_reference",
       "source_artifact_id": "public-law-107-347",
       "source_label": "Public Law 107-347",
@@ -806,42 +866,6 @@
       "priority": "low"
     },
     {
-      "id": "gap:executive-order:12333",
-      "label": "Executive Order 12333",
-      "title": "Executive Order 12333",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:12333",
-      "count": 2,
-      "lines_sample": [
-        1160,
-        1646
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:executive-order:13526",
-      "label": "Executive Order 13526",
-      "title": "Executive Order 13526",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13526",
-      "count": 2,
-      "lines_sample": [
-        1126,
-        1647
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:public-law:114-255",
       "label": "Public Law 114-255",
       "title": "Public Law 114-255",
@@ -855,23 +879,6 @@
       "lines_sample": [
         1036,
         1665
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:executive-order:14168",
-      "label": "Executive Order 14168",
-      "title": "Executive Order 14168",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:14168",
-      "count": 1,
-      "lines_sample": [
-        1648
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -900,7 +907,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-3216-02",
       "direction": "upstream",
-      "edge_count": 5
+      "edge_count": 8
     },
     {
       "id": "trace-downstream",

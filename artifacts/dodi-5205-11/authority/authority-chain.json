@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 14,
+    "upstream_edge_count": 15,
     "downstream_edge_count": 6,
-    "catalogued_node_count": 19,
-    "uncatalogued_gap_count": 2,
-    "evidence_backed_edge_count": 20,
+    "catalogued_node_count": 20,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 21,
     "inferred_edge_count": 0,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -89,21 +89,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:executive-order:13526",
+      "id": "eo-13526",
       "label": "Executive Order 13526",
-      "title": "Executive Order 13526",
+      "title": "Executive Order 13526: Classified National Security Information",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13526",
-      "count": 1,
-      "lines_sample": [
-        1776
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodd-3020-40",
@@ -710,6 +708,28 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "eo-13526->dodi-5205-11:directs:resolved_reference",
+      "source_artifact_id": "eo-13526",
+      "source_label": "Executive Order 13526",
+      "source_lane": "executive",
+      "target_artifact_id": "dodi-5205-11",
+      "target_label": "DoDI 5205.11",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:13526",
+        "label": "Executive Order 13526",
+        "first_line": 1776,
+        "lines_sample": [
+          1776
+        ],
+        "count": 1
+      }
     }
   ],
   "downstream_edges": [
@@ -871,23 +891,6 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
-    },
-    {
-      "id": "gap:executive-order:13526",
-      "label": "Executive Order 13526",
-      "title": "Executive Order 13526",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13526",
-      "count": 1,
-      "lines_sample": [
-        1776
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -896,7 +899,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-5205-11",
       "direction": "upstream",
-      "edge_count": 14
+      "edge_count": 15
     },
     {
       "id": "trace-downstream",

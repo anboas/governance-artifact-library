@@ -61,33 +61,30 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 1,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 0,
+    "catalogued_node_count": 2,
+    "uncatalogued_gap_count": 0,
+    "evidence_backed_edge_count": 1,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
     {
-      "id": "gap:executive-order:12656",
+      "id": "eo-12656",
       "label": "Executive Order 12656",
-      "title": "Executive Order 12656",
+      "title": "Executive Order 12656: Codified executive order text",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:12656",
-      "count": 2,
-      "lines_sample": [
-        35,
-        190
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodi-5030-36",
@@ -105,35 +102,40 @@
       "status": "current"
     }
   ],
-  "upstream_edges": [],
-  "downstream_edges": [],
-  "uncatalogued_authority_gaps": [
+  "upstream_edges": [
     {
-      "id": "gap:executive-order:12656",
-      "label": "Executive Order 12656",
-      "title": "Executive Order 12656",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:12656",
-      "count": 2,
-      "lines_sample": [
-        35,
-        190
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "id": "eo-12656->dodi-5030-36:directs:resolved_reference",
+      "source_artifact_id": "eo-12656",
+      "source_label": "Executive Order 12656",
+      "source_lane": "executive",
+      "target_artifact_id": "dodi-5030-36",
+      "target_label": "DoDI 5030.36",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:12656",
+        "label": "Executive Order 12656",
+        "first_line": 35,
+        "lines_sample": [
+          35,
+          190
+        ],
+        "count": 2
+      }
     }
   ],
+  "downstream_edges": [],
+  "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-5030-36",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",

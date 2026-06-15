@@ -61,32 +61,30 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 2,
+    "upstream_edge_count": 3,
     "downstream_edge_count": 4,
-    "catalogued_node_count": 7,
-    "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 2,
+    "catalogued_node_count": 8,
+    "uncatalogued_gap_count": 0,
+    "evidence_backed_edge_count": 3,
     "inferred_edge_count": 4,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
     {
-      "id": "gap:executive-order:13533",
+      "id": "eo-13533",
       "label": "Executive Order 13533",
-      "title": "Executive Order 13533",
+      "title": "Executive Order 13533: Providing an Order of Succession Within the Department of Defense",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13533",
-      "count": 1,
-      "lines_sample": [
-        107
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodd-3020-04",
@@ -238,6 +236,28 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "eo-13533->dodd-5137-03:directs:resolved_reference",
+      "source_artifact_id": "eo-13533",
+      "source_label": "Executive Order 13533",
+      "source_lane": "executive",
+      "target_artifact_id": "dodd-5137-03",
+      "target_label": "DoDD 5137.03",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:13533",
+        "label": "Executive Order 13533",
+        "first_line": 107,
+        "lines_sample": [
+          107
+        ],
+        "count": 1
+      }
     }
   ],
   "downstream_edges": [
@@ -330,32 +350,14 @@
       }
     }
   ],
-  "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:executive-order:13533",
-      "label": "Executive Order 13533",
-      "title": "Executive Order 13533",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13533",
-      "count": 1,
-      "lines_sample": [
-        107
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    }
-  ],
+  "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodd-5137-03",
       "direction": "upstream",
-      "edge_count": 2
+      "edge_count": 3
     },
     {
       "id": "trace-downstream",

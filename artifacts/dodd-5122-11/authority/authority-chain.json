@@ -61,49 +61,45 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 2,
     "downstream_edge_count": 6,
-    "catalogued_node_count": 7,
-    "uncatalogued_gap_count": 2,
-    "evidence_backed_edge_count": 2,
+    "catalogued_node_count": 9,
+    "uncatalogued_gap_count": 0,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 4,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
     {
-      "id": "gap:executive-order:12958",
+      "id": "eo-12958",
       "label": "Executive Order 12958",
-      "title": "Executive Order 12958",
+      "title": "Executive Order 12958: Classified National Security Information",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:12958",
-      "count": 1,
-      "lines_sample": [
-        435
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
-      "id": "gap:executive-order:14168",
+      "id": "eo-14168",
       "label": "Executive Order 14168",
-      "title": "Executive Order 14168",
+      "title": "Executive Order 14168: Defending Women From Gender Ideology Extremism and Restoring Biological Truth to the Federal Government",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:14168",
-      "count": 1,
-      "lines_sample": [
-        466
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodd-5122-11",
@@ -211,7 +207,52 @@
       "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "eo-12958->dodd-5122-11:directs:resolved_reference",
+      "source_artifact_id": "eo-12958",
+      "source_label": "Executive Order 12958",
+      "source_lane": "executive",
+      "target_artifact_id": "dodd-5122-11",
+      "target_label": "DoDD 5122.11",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:12958",
+        "label": "Executive Order 12958",
+        "first_line": 435,
+        "lines_sample": [
+          435
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "eo-14168->dodd-5122-11:directs:resolved_reference",
+      "source_artifact_id": "eo-14168",
+      "source_label": "Executive Order 14168",
+      "source_lane": "executive",
+      "target_artifact_id": "dodd-5122-11",
+      "target_label": "DoDD 5122.11",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:14168",
+        "label": "Executive Order 14168",
+        "first_line": 466,
+        "lines_sample": [
+          466
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "dodd-5122-11->dodi-1000-01:flows_down:inferred_flowdown",
@@ -346,49 +387,14 @@
       }
     }
   ],
-  "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:executive-order:12958",
-      "label": "Executive Order 12958",
-      "title": "Executive Order 12958",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:12958",
-      "count": 1,
-      "lines_sample": [
-        435
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:executive-order:14168",
-      "label": "Executive Order 14168",
-      "title": "Executive Order 14168",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:14168",
-      "count": 1,
-      "lines_sample": [
-        466
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    }
-  ],
+  "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodd-5122-11",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",

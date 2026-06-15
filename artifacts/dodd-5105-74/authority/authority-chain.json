@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 12,
+    "upstream_edge_count": 15,
     "downstream_edge_count": 10,
-    "catalogued_node_count": 21,
-    "uncatalogued_gap_count": 6,
-    "evidence_backed_edge_count": 18,
+    "catalogued_node_count": 24,
+    "uncatalogued_gap_count": 3,
+    "evidence_backed_edge_count": 21,
     "inferred_edge_count": 4,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -87,55 +87,49 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:executive-order:12333",
+      "id": "eo-12333",
       "label": "Executive Order 12333",
-      "title": "Executive Order 12333",
+      "title": "Executive Order 12333: Codified executive order text",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:12333",
-      "count": 1,
-      "lines_sample": [
-        508
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
-      "id": "gap:executive-order:12968",
+      "id": "eo-12968",
       "label": "Executive Order 12968",
-      "title": "Executive Order 12968",
+      "title": "Executive Order 12968: Access to Classified Information",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:12968",
-      "count": 1,
-      "lines_sample": [
-        509
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
-      "id": "gap:executive-order:13467",
+      "id": "eo-13467",
       "label": "Executive Order 13467",
-      "title": "Executive Order 13467",
+      "title": "Executive Order 13467: Reforming Processes Related to Suitability for Government Employment, Fitness for Contractor Employees, and Eligibility for Access to Classified National Security Information",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13467",
-      "count": 1,
-      "lines_sample": [
-        510
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodd-5100-01",
@@ -735,6 +729,72 @@
       }
     },
     {
+      "id": "eo-12333->dodd-5105-74:directs:resolved_reference",
+      "source_artifact_id": "eo-12333",
+      "source_label": "Executive Order 12333",
+      "source_lane": "executive",
+      "target_artifact_id": "dodd-5105-74",
+      "target_label": "DoDD 5105.74",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:12333",
+        "label": "Executive Order 12333",
+        "first_line": 508,
+        "lines_sample": [
+          508
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "eo-12968->dodd-5105-74:directs:resolved_reference",
+      "source_artifact_id": "eo-12968",
+      "source_label": "Executive Order 12968",
+      "source_lane": "executive",
+      "target_artifact_id": "dodd-5105-74",
+      "target_label": "DoDD 5105.74",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:12968",
+        "label": "Executive Order 12968",
+        "first_line": 509,
+        "lines_sample": [
+          509
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "eo-13467->dodd-5105-74:directs:resolved_reference",
+      "source_artifact_id": "eo-13467",
+      "source_label": "Executive Order 13467",
+      "source_lane": "executive",
+      "target_artifact_id": "dodd-5105-74",
+      "target_label": "DoDD 5105.74",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:13467",
+        "label": "Executive Order 13467",
+        "first_line": 510,
+        "lines_sample": [
+          510
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "public-law-115-336->dodd-5105-74:authorizes:resolved_reference",
       "source_artifact_id": "public-law-115-336",
       "source_label": "Public Law 115-336",
@@ -1031,57 +1091,6 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
-    },
-    {
-      "id": "gap:executive-order:12333",
-      "label": "Executive Order 12333",
-      "title": "Executive Order 12333",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:12333",
-      "count": 1,
-      "lines_sample": [
-        508
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:executive-order:12968",
-      "label": "Executive Order 12968",
-      "title": "Executive Order 12968",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:12968",
-      "count": 1,
-      "lines_sample": [
-        509
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:executive-order:13467",
-      "label": "Executive Order 13467",
-      "title": "Executive Order 13467",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13467",
-      "count": 1,
-      "lines_sample": [
-        510
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -1090,7 +1099,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodd-5105-74",
       "direction": "upstream",
-      "edge_count": 12
+      "edge_count": 15
     },
     {
       "id": "trace-downstream",

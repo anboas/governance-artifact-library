@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 36,
+    "upstream_edge_count": 37,
     "downstream_edge_count": 55,
-    "catalogued_node_count": 79,
-    "uncatalogued_gap_count": 13,
-    "evidence_backed_edge_count": 91,
+    "catalogued_node_count": 80,
+    "uncatalogued_gap_count": 12,
+    "evidence_backed_edge_count": 92,
     "inferred_edge_count": 0,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -102,21 +102,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:executive-order:12333",
+      "id": "eo-12333",
       "label": "Executive Order 12333",
-      "title": "Executive Order 12333",
+      "title": "Executive Order 12333: Codified executive order text",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:12333",
-      "count": 1,
-      "lines_sample": [
-        355
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "nist-sp-800-53-r5-security-privacy-controls",
@@ -2209,6 +2207,28 @@
       }
     },
     {
+      "id": "eo-12333->dodi-8500-01:directs:resolved_reference",
+      "source_artifact_id": "eo-12333",
+      "source_label": "Executive Order 12333",
+      "source_lane": "executive",
+      "target_artifact_id": "dodi-8500-01",
+      "target_label": "DoDI 8500.01",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:12333",
+        "label": "Executive Order 12333",
+        "first_line": 355,
+        "lines_sample": [
+          355
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "nist-sp-800-53-r5-security-privacy-controls->dodi-8500-01:implements:resolved_reference",
       "source_artifact_id": "nist-sp-800-53-r5-security-privacy-controls",
       "source_label": "NIST SP 800-53 Rev. 5",
@@ -3735,23 +3755,6 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
-    },
-    {
-      "id": "gap:executive-order:12333",
-      "label": "Executive Order 12333",
-      "title": "Executive Order 12333",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:12333",
-      "count": 1,
-      "lines_sample": [
-        355
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -3760,7 +3763,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-8500-01",
       "direction": "upstream",
-      "edge_count": 36
+      "edge_count": 37
     },
     {
       "id": "trace-downstream",

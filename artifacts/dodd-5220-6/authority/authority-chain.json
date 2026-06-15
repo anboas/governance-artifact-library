@@ -61,35 +61,30 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 1,
     "downstream_edge_count": 4,
-    "catalogued_node_count": 5,
-    "uncatalogued_gap_count": 2,
-    "evidence_backed_edge_count": 0,
+    "catalogued_node_count": 6,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 1,
     "inferred_edge_count": 4,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
     {
-      "id": "gap:executive-order:10865",
+      "id": "eo-10865",
       "label": "Executive Order 10865",
-      "title": "Executive Order 10865",
+      "title": "Executive Order 10865: Codified executive order text",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:10865",
-      "count": 4,
-      "lines_sample": [
-        386,
-        402,
-        406,
-        432
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:executive-order:12829",
@@ -184,7 +179,33 @@
       "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "eo-10865->dodd-5220-6:directs:resolved_reference",
+      "source_artifact_id": "eo-10865",
+      "source_label": "Executive Order 10865",
+      "source_lane": "executive",
+      "target_artifact_id": "dodd-5220-6",
+      "target_label": "DoDD 5220.6",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:10865",
+        "label": "Executive Order 10865",
+        "first_line": 386,
+        "lines_sample": [
+          386,
+          402,
+          406,
+          432
+        ],
+        "count": 4
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "dodd-5220-6->dodi-1000-01:flows_down:inferred_flowdown",
@@ -277,26 +298,6 @@
   ],
   "uncatalogued_authority_gaps": [
     {
-      "id": "gap:executive-order:10865",
-      "label": "Executive Order 10865",
-      "title": "Executive Order 10865",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:10865",
-      "count": 4,
-      "lines_sample": [
-        386,
-        402,
-        406,
-        432
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:executive-order:12829",
       "label": "Executive Order 12829",
       "title": "Executive Order 12829",
@@ -320,7 +321,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodd-5220-6",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",

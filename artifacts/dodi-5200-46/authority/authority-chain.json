@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 4,
+    "upstream_edge_count": 7,
     "downstream_edge_count": 3,
-    "catalogued_node_count": 8,
-    "uncatalogued_gap_count": 3,
-    "evidence_backed_edge_count": 7,
+    "catalogued_node_count": 11,
+    "uncatalogued_gap_count": 0,
+    "evidence_backed_edge_count": 10,
     "inferred_edge_count": 0,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -87,57 +87,49 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:executive-order:12968",
+      "id": "eo-12968",
       "label": "Executive Order 12968",
-      "title": "Executive Order 12968",
+      "title": "Executive Order 12968: Access to Classified Information",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:12968",
-      "count": 1,
-      "lines_sample": [
-        275
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
-      "id": "gap:executive-order:13467",
+      "id": "eo-13467",
       "label": "Executive Order 13467",
-      "title": "Executive Order 13467",
+      "title": "Executive Order 13467: Reforming Processes Related to Suitability for Government Employment, Fitness for Contractor Employees, and Eligibility for Access to Classified National Security Information",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13467",
-      "count": 2,
-      "lines_sample": [
-        240,
-        1271
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
-      "id": "gap:executive-order:13488",
+      "id": "eo-13488",
       "label": "Executive Order 13488",
-      "title": "Executive Order 13488",
+      "title": "Executive Order 13488: Granting Reciprocity on Excepted Service and Federal Contractor Employee Fitness and Reinvestigating Individuals in Positions of Public Trust",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13488",
-      "count": 2,
-      "lines_sample": [
-        243,
-        1296
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodd-5145-01",
@@ -313,6 +305,74 @@
       }
     },
     {
+      "id": "eo-12968->dodi-5200-46:directs:resolved_reference",
+      "source_artifact_id": "eo-12968",
+      "source_label": "Executive Order 12968",
+      "source_lane": "executive",
+      "target_artifact_id": "dodi-5200-46",
+      "target_label": "DoDI 5200.46",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:12968",
+        "label": "Executive Order 12968",
+        "first_line": 275,
+        "lines_sample": [
+          275
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "eo-13467->dodi-5200-46:directs:resolved_reference",
+      "source_artifact_id": "eo-13467",
+      "source_label": "Executive Order 13467",
+      "source_lane": "executive",
+      "target_artifact_id": "dodi-5200-46",
+      "target_label": "DoDI 5200.46",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:13467",
+        "label": "Executive Order 13467",
+        "first_line": 240,
+        "lines_sample": [
+          240,
+          1271
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "eo-13488->dodi-5200-46:directs:resolved_reference",
+      "source_artifact_id": "eo-13488",
+      "source_label": "Executive Order 13488",
+      "source_lane": "executive",
+      "target_artifact_id": "dodi-5200-46",
+      "target_label": "DoDI 5200.46",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:13488",
+        "label": "Executive Order 13488",
+        "first_line": 243,
+        "lines_sample": [
+          243,
+          1296
+        ],
+        "count": 2
+      }
+    },
+    {
       "id": "public-law-116-92->dodi-5200-46:authorizes:resolved_reference",
       "source_artifact_id": "public-law-116-92",
       "source_label": "Public Law 116-92",
@@ -404,68 +464,14 @@
       }
     }
   ],
-  "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:executive-order:13467",
-      "label": "Executive Order 13467",
-      "title": "Executive Order 13467",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13467",
-      "count": 2,
-      "lines_sample": [
-        240,
-        1271
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:executive-order:13488",
-      "label": "Executive Order 13488",
-      "title": "Executive Order 13488",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13488",
-      "count": 2,
-      "lines_sample": [
-        243,
-        1296
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:executive-order:12968",
-      "label": "Executive Order 12968",
-      "title": "Executive Order 12968",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:12968",
-      "count": 1,
-      "lines_sample": [
-        275
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    }
-  ],
+  "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-5200-46",
       "direction": "upstream",
-      "edge_count": 4
+      "edge_count": 7
     },
     {
       "id": "trace-downstream",

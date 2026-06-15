@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 2,
+    "upstream_edge_count": 4,
     "downstream_edge_count": 5,
-    "catalogued_node_count": 6,
-    "uncatalogued_gap_count": 3,
-    "evidence_backed_edge_count": 7,
+    "catalogued_node_count": 8,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 9,
     "inferred_edge_count": 0,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -89,38 +89,34 @@
       "priority": "high"
     },
     {
-      "id": "gap:executive-order:12114",
+      "id": "eo-12114",
       "label": "Executive Order 12114",
-      "title": "Executive Order 12114",
+      "title": "Executive Order 12114: Codified executive order text",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:12114",
-      "count": 1,
-      "lines_sample": [
-        213
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
-      "id": "gap:executive-order:12344",
+      "id": "eo-12344",
       "label": "Executive Order 12344",
-      "title": "Executive Order 12344",
+      "title": "Executive Order 12344: Codified executive order text",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:12344",
-      "count": 1,
-      "lines_sample": [
-        209
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "regulatory_governance",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodi-4715-03",
@@ -257,6 +253,50 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "eo-12114->dodi-4715-05:directs:resolved_reference",
+      "source_artifact_id": "eo-12114",
+      "source_label": "Executive Order 12114",
+      "source_lane": "executive",
+      "target_artifact_id": "dodi-4715-05",
+      "target_label": "DoDI 4715.05",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:12114",
+        "label": "Executive Order 12114",
+        "first_line": 213,
+        "lines_sample": [
+          213
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "eo-12344->dodi-4715-05:directs:resolved_reference",
+      "source_artifact_id": "eo-12344",
+      "source_label": "Executive Order 12344",
+      "source_lane": "executive",
+      "target_artifact_id": "dodi-4715-05",
+      "target_label": "DoDI 4715.05",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:12344",
+        "label": "Executive Order 12344",
+        "first_line": 209,
+        "lines_sample": [
+          209
+        ],
+        "count": 1
+      }
     }
   ],
   "downstream_edges": [
@@ -389,40 +429,6 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
-    },
-    {
-      "id": "gap:executive-order:12114",
-      "label": "Executive Order 12114",
-      "title": "Executive Order 12114",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:12114",
-      "count": 1,
-      "lines_sample": [
-        213
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:executive-order:12344",
-      "label": "Executive Order 12344",
-      "title": "Executive Order 12344",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:12344",
-      "count": 1,
-      "lines_sample": [
-        209
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -431,7 +437,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-4715-05",
       "direction": "upstream",
-      "edge_count": 2
+      "edge_count": 4
     },
     {
       "id": "trace-downstream",

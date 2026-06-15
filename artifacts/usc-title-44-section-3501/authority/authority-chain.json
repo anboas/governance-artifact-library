@@ -61,12 +61,12 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 2,
-    "downstream_edge_count": 7,
-    "catalogued_node_count": 10,
-    "uncatalogued_gap_count": 7,
-    "evidence_backed_edge_count": 9,
-    "inferred_edge_count": 0,
+    "upstream_edge_count": 4,
+    "downstream_edge_count": 11,
+    "catalogued_node_count": 16,
+    "uncatalogued_gap_count": 5,
+    "evidence_backed_edge_count": 11,
+    "inferred_edge_count": 4,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
   },
@@ -261,21 +261,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:44:3552",
+      "id": "usc-title-44-section-3552",
       "label": "44 U.S.C. 3552",
-      "title": "44 U.S.C. 3552",
+      "title": "44 U.S.C. 3552: Definitions",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:44:3552",
-      "count": 1,
-      "lines_sample": [
-        1645
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "information_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-5-section-601",
@@ -308,6 +306,66 @@
       "status": "catalogued"
     },
     {
+      "id": "eo-10450",
+      "label": "Executive Order 10450",
+      "title": "Executive Order 10450: Codified executive order text",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "family": "regulatory_governance",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "eo-10865",
+      "label": "Executive Order 10865",
+      "title": "Executive Order 10865: Codified executive order text",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "eo-11246",
+      "label": "Executive Order 11246",
+      "title": "Executive Order 11246: Codified executive order text",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "family": "regulatory_governance",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "eo-12114",
+      "label": "Executive Order 12114",
+      "title": "Executive Order 12114: Codified executive order text",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "gap:executive-order:12291",
       "label": "Executive Order 12291",
       "title": "Executive Order 12291",
@@ -325,24 +383,44 @@
       "priority": "high"
     },
     {
-      "id": "gap:executive-order:13526",
+      "id": "eo-13526",
       "label": "Executive Order 13526",
-      "title": "Executive Order 13526",
+      "title": "Executive Order 13526: Classified National Security Information",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13526",
-      "count": 1,
-      "lines_sample": [
-        1689
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [
+    {
+      "id": "eo-13526->usc-title-44-section-3501:references_upstream:resolved_reference",
+      "source_artifact_id": "eo-13526",
+      "source_label": "Executive Order 13526",
+      "source_lane": "executive",
+      "target_artifact_id": "usc-title-44-section-3501",
+      "target_label": "44 U.S.C. 3501",
+      "target_lane": "statute",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:13526",
+        "label": "Executive Order 13526",
+        "first_line": 1689,
+        "lines_sample": [
+          1689
+        ],
+        "count": 1
+      }
+    },
     {
       "id": "usc-title-42-section-2011->usc-title-44-section-3501:references:resolved_reference",
       "source_artifact_id": "usc-title-42-section-2011",
@@ -363,6 +441,28 @@
           1654
         ],
         "count": 2
+      }
+    },
+    {
+      "id": "usc-title-44-section-3552->usc-title-44-section-3501:references:resolved_reference",
+      "source_artifact_id": "usc-title-44-section-3552",
+      "source_label": "44 U.S.C. 3552",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-44-section-3501",
+      "target_label": "44 U.S.C. 3501",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:44:3552",
+        "label": "44 U.S.C. 3552",
+        "first_line": 1645,
+        "lines_sample": [
+          1645
+        ],
+        "count": 1
       }
     },
     {
@@ -389,6 +489,86 @@
     }
   ],
   "downstream_edges": [
+    {
+      "id": "usc-title-44-section-3501->eo-10450:authorizes:inferred_flowdown",
+      "source_artifact_id": "usc-title-44-section-3501",
+      "source_label": "44 U.S.C. 3501",
+      "source_lane": "statute",
+      "target_artifact_id": "eo-10450",
+      "target_label": "Executive Order 10450",
+      "target_lane": "executive",
+      "relationship": "authorizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.59,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "reference-ingestion"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "usc-title-44-section-3501->eo-10865:authorizes:inferred_flowdown",
+      "source_artifact_id": "usc-title-44-section-3501",
+      "source_label": "44 U.S.C. 3501",
+      "source_lane": "statute",
+      "target_artifact_id": "eo-10865",
+      "target_label": "Executive Order 10865",
+      "target_lane": "executive",
+      "relationship": "authorizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.59,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "reference-ingestion"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "usc-title-44-section-3501->eo-11246:authorizes:inferred_flowdown",
+      "source_artifact_id": "usc-title-44-section-3501",
+      "source_label": "44 U.S.C. 3501",
+      "source_lane": "statute",
+      "target_artifact_id": "eo-11246",
+      "target_label": "Executive Order 11246",
+      "target_lane": "executive",
+      "relationship": "authorizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.59,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "reference-ingestion"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "usc-title-44-section-3501->eo-12114:authorizes:inferred_flowdown",
+      "source_artifact_id": "usc-title-44-section-3501",
+      "source_label": "44 U.S.C. 3501",
+      "source_lane": "statute",
+      "target_artifact_id": "eo-12114",
+      "target_label": "Executive Order 12114",
+      "target_lane": "executive",
+      "relationship": "authorizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.59,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "reference-ingestion"
+        ],
+        "shared_family": ""
+      }
+    },
     {
       "id": "usc-title-44-section-3501->pl-118-31-fy2024-ndaa:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-44-section-3501",
@@ -629,23 +809,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:44:3552",
-      "label": "44 U.S.C. 3552",
-      "title": "44 U.S.C. 3552",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:44:3552",
-      "count": 1,
-      "lines_sample": [
-        1645
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:executive-order:12291",
       "label": "Executive Order 12291",
       "title": "Executive Order 12291",
@@ -661,23 +824,6 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
-    },
-    {
-      "id": "gap:executive-order:13526",
-      "label": "Executive Order 13526",
-      "title": "Executive Order 13526",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13526",
-      "count": 1,
-      "lines_sample": [
-        1689
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -686,14 +832,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-44-section-3501",
       "direction": "upstream",
-      "edge_count": 2
+      "edge_count": 4
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-44-section-3501",
       "direction": "downstream",
-      "edge_count": 7
+      "edge_count": 11
     }
   ]
 }

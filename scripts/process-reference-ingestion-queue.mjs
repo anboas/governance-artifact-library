@@ -10,7 +10,7 @@ const limit = numberArg("--limit", DEFAULT_LIMIT);
 const priority = stringArg("--priority", "P0");
 const families = new Set(stringArg("--families", stringArg("--family", "usc")).split(",").map(value => value.trim()).filter(Boolean));
 const dryRun = process.argv.includes("--dry-run");
-const SUPPORTED_FAMILIES = new Set(["usc", "public-law"]);
+const SUPPORTED_FAMILIES = new Set(["usc", "public-law", "executive-order"]);
 
 const queue = readJson("data/reference-ingestion-queue.json");
 const manifest = readJson("manifest.json");
@@ -40,7 +40,7 @@ if (dryRun) {
 const newEntries = [];
 for (const item of candidates) {
   try {
-  const plan = buildIngestionPlan(item);
+  const plan = await buildIngestionPlan(item);
   const response = await fetch(plan.fetchUrl, {
     headers: { "user-agent": "governance-artifact-library-reference-ingestion/0.1" },
     redirect: "follow",
@@ -87,9 +87,9 @@ for (const item of candidates) {
     source_location_type: plan.sourceLocationType,
     source_url: plan.sourceUrl,
     source_mime_type: sourceMimeType,
-    source_date: null,
-    publication_date: null,
-    effective_date: null,
+    source_date: plan.sourceDate || null,
+    publication_date: plan.publicationDate || null,
+    effective_date: plan.effectiveDate || null,
     captured_at: CAPTURED_AT,
     checksum_sha256: checksum,
     raw_path: rawPath,
@@ -116,9 +116,11 @@ for (const item of candidates) {
     ],
     relationships: [],
     provenance: {
-      source_system: "U.S. Code",
+      source_system: plan.sourceSystem,
       capture_method: "reference_ingestion_queue",
       capture_notes: `Processed queue item ${item.id} rank ${item.queue_rank}; referenced by ${item.source_artifact_ids.join(", ")}.`,
+      api_record_url: plan.apiRecordUrl || null,
+      raw_text_url: plan.rawTextUrl || null,
     },
   };
   artifact.provenance.source_system = artifact.source_system;
@@ -155,7 +157,7 @@ writeJson("sources/source-registry.json", buildSourceRegistry(artifacts));
 
 console.log(`Processed ${newEntries.length} ${priority} reference ingestion queue item(s).`);
 
-function buildIngestionPlan(item) {
+async function buildIngestionPlan(item) {
   if (item.reference_family === "usc") {
     const parsed = parseUsc(item);
     const sourceUrl = `https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title${parsed.title}-section${parsed.section}&num=0&edition=prelim`;
@@ -194,6 +196,30 @@ function buildIngestionPlan(item) {
       family: text => familyForPublicLaw(text),
     };
   }
+  if (item.reference_family === "executive-order") {
+    const parsed = parseExecutiveOrder(item);
+    const eoSource = await resolveExecutiveOrderSource(parsed.number);
+    return {
+      rawExt: eoSource.rawExt,
+      fetchUrl: eoSource.fetchUrl,
+      sourceUrl: eoSource.sourceUrl,
+      artifactType: "Executive Order",
+      authorityLevel: "presidential_directive",
+      hierarchyRank: 30,
+      issuingAuthority: "President",
+      issuingOrganization: "Executive Office of the President",
+      sourceSystem: eoSource.sourceSystem,
+      sourceLocationType: eoSource.sourceLocationType,
+      sourceDate: eoSource.sourceDate,
+      publicationDate: eoSource.publicationDate,
+      effectiveDate: eoSource.effectiveDate,
+      apiRecordUrl: eoSource.apiRecordUrl,
+      rawTextUrl: eoSource.rawTextUrl,
+      tags: ["executive-order", "presidential-directive", `eo-${parsed.number}`, "reference-ingestion"],
+      title: () => `${item.recommended_title}: ${eoSource.title}`,
+      family: text => familyForExecutiveOrder(eoSource.title, text),
+    };
+  }
   throw new Error(`Unsupported reference family ${item.reference_family}`);
 }
 
@@ -209,6 +235,91 @@ function parsePublicLaw(item) {
     || item.label.match(/^Public Law\s+(\d+)-(\d+)$/i);
   if (!match) throw new Error(`Unable to parse public law reference ${item.label}`);
   return { congress: match[1], law: match[2] };
+}
+
+function parseExecutiveOrder(item) {
+  const match = item.reference_key?.match(/^executive-order:(\d+)$/i)
+    || item.label.match(/Executive Order\s+(\d+)/i);
+  if (!match) throw new Error(`Unable to parse Executive Order reference ${item.label}`);
+  return { number: match[1] };
+}
+
+async function resolveExecutiveOrderSource(number) {
+  const federalRegister = await resolveFederalRegisterExecutiveOrder(number);
+  if (federalRegister) return federalRegister;
+
+  const archiveUrl = `https://www.archives.gov/federal-register/codification/executive-order/${number}.html`;
+  const response = await fetch(archiveUrl, {
+    method: "HEAD",
+    headers: { "user-agent": "governance-artifact-library-reference-ingestion/0.1" },
+    redirect: "follow",
+  });
+  if (response.ok) {
+    return {
+      rawExt: "html",
+      fetchUrl: archiveUrl,
+      sourceUrl: archiveUrl,
+      sourceSystem: "National Archives Executive Orders",
+      sourceLocationType: "national_archives_eo_html",
+      sourceDate: null,
+      publicationDate: null,
+      effectiveDate: null,
+      title: "Codified executive order text",
+      apiRecordUrl: null,
+      rawTextUrl: null,
+    };
+  }
+
+  throw new Error(`no exact Federal Register or National Archives official source found for Executive Order ${number}`);
+}
+
+async function resolveFederalRegisterExecutiveOrder(number) {
+  const fields = [
+    "document_number",
+    "title",
+    "publication_date",
+    "signing_date",
+    "effective_on",
+    "raw_text_url",
+    "html_url",
+    "json_url",
+    "executive_order_number",
+    "presidential_document_number",
+  ];
+  const params = new URLSearchParams();
+  params.set("conditions[term]", `Executive Order ${number}`);
+  params.set("conditions[type]", "PRESDOCU");
+  params.set("per_page", "100");
+  for (const field of fields) params.append("fields[]", field);
+  const searchUrl = `https://www.federalregister.gov/api/v1/documents?${params.toString()}`;
+  const response = await fetch(searchUrl, {
+    headers: { "user-agent": "governance-artifact-library-reference-ingestion/0.1" },
+    redirect: "follow",
+  });
+  if (!response.ok) return null;
+  const data = await response.json();
+  const exactRows = (data.results || []).filter(row =>
+    String(row.executive_order_number || "") === number
+    || String(row.presidential_document_number || "") === number
+  );
+  const exact = exactRows
+    .filter(row => !/^correction$/i.test(String(row.title || "").trim()) && !/^C\d?-/i.test(String(row.document_number || "")))
+    .sort((a, b) => (Number(b.page_length || 0) - Number(a.page_length || 0)) || String(a.publication_date || "").localeCompare(String(b.publication_date || "")))[0]
+    || exactRows.sort((a, b) => Number(b.page_length || 0) - Number(a.page_length || 0))[0];
+  if (!exact?.raw_text_url || !exact?.html_url) return null;
+  return {
+    rawExt: "txt",
+    fetchUrl: exact.raw_text_url,
+    sourceUrl: exact.html_url,
+    sourceSystem: "Federal Register",
+    sourceLocationType: "federal_register_api",
+    sourceDate: exact.signing_date || exact.effective_on || exact.publication_date || null,
+    publicationDate: exact.publication_date || null,
+    effectiveDate: exact.effective_on || exact.signing_date || null,
+    title: exact.title || "Executive order",
+    apiRecordUrl: exact.json_url || null,
+    rawTextUrl: exact.raw_text_url,
+  };
 }
 
 function titleFromText(text) {
@@ -252,6 +363,16 @@ function familyForPublicLaw(text) {
   return "public_law";
 }
 
+function familyForExecutiveOrder(title, text) {
+  const normalized = `${title} ${text}`.toLowerCase();
+  if (/intelligence|classified|classification|clearance|suitability|credential/.test(normalized)) return "security_intelligence";
+  if (/cyber|information security|classified networks/.test(normalized)) return "cybersecurity";
+  if (/regulatory|deregulation|review|governance/.test(normalized)) return "regulatory_governance";
+  if (/discrimination|merit|equal opportunity|gender/.test(normalized)) return "civil_rights_workforce";
+  if (/emergency|preparedness|continuity|defense production/.test(normalized)) return "national_preparedness";
+  return "executive_order";
+}
+
 function extractText(plan, bytes) {
   if (plan.rawExt === "pdf") {
     const tempId = `.${Date.now()}-${Math.random().toString(16).slice(2)}`;
@@ -268,8 +389,11 @@ function extractText(plan, bytes) {
     rmSync(textPath, { force: true });
     return text.trim() + "\n";
   }
-  if (plan.rawExt === "txt") return bytes.toString("utf8").trim() + "\n";
-  return htmlToText(bytes.toString("utf8"));
+  if (plan.rawExt === "txt") {
+    const text = bytes.toString("utf8");
+    return sanitizeExtractedText(/<html[\s>]/i.test(text) ? htmlToText(text) : text);
+  }
+  return sanitizeExtractedText(htmlToText(bytes.toString("utf8")));
 }
 
 function buildMetrics(artifact, text, bytes) {
@@ -457,6 +581,14 @@ function htmlToText(html) {
     .replace(/&quot;/g, "\"")
     .replace(/\r/g, "\n")
     .replace(/[ \t]+/g, " ")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim() + "\n";
+}
+
+function sanitizeExtractedText(text) {
+  return String(text || "")
+    .replace(/[^\S\r\n\t]+/g, " ")
+    .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, "")
     .replace(/\n{3,}/g, "\n\n")
     .trim() + "\n";
 }

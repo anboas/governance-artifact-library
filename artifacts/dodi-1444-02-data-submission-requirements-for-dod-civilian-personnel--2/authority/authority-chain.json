@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 6,
+    "upstream_edge_count": 7,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 7,
-    "uncatalogued_gap_count": 2,
-    "evidence_backed_edge_count": 6,
+    "catalogued_node_count": 8,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 7,
     "inferred_edge_count": 0,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
@@ -105,22 +105,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:executive-order:14168",
+      "id": "eo-14168",
       "label": "Executive Order 14168",
-      "title": "Executive Order 14168",
+      "title": "Executive Order 14168: Defending Women From Gender Ideology Extremism and Restoring Biological Truth to the Federal Government",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:14168",
-      "count": 2,
-      "lines_sample": [
-        151,
-        201
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodd-5100-87",
@@ -336,6 +333,29 @@
       }
     },
     {
+      "id": "eo-14168->dodi-1444-02-data-submission-requirements-for-dod-civilian-personnel--2:directs:resolved_reference",
+      "source_artifact_id": "eo-14168",
+      "source_label": "Executive Order 14168",
+      "source_lane": "executive",
+      "target_artifact_id": "dodi-1444-02-data-submission-requirements-for-dod-civilian-personnel--2",
+      "target_label": "DoDI 1444.02",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:14168",
+        "label": "Executive Order 14168",
+        "first_line": 151,
+        "lines_sample": [
+          151,
+          201
+        ],
+        "count": 2
+      }
+    },
+    {
       "id": "public-law-104-106->dodi-1444-02-data-submission-requirements-for-dod-civilian-personnel--2:authorizes:resolved_reference",
       "source_artifact_id": "public-law-104-106",
       "source_label": "Public Law 104-106",
@@ -361,24 +381,6 @@
   "downstream_edges": [],
   "uncatalogued_authority_gaps": [
     {
-      "id": "gap:executive-order:14168",
-      "label": "Executive Order 14168",
-      "title": "Executive Order 14168",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:14168",
-      "count": 2,
-      "lines_sample": [
-        151,
-        201
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:public-law:101-508",
       "label": "Public Law 101-508",
       "title": "Public Law 101-508",
@@ -403,7 +405,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-1444-02-data-submission-requirements-for-dod-civilian-personnel--2",
       "direction": "upstream",
-      "edge_count": 6
+      "edge_count": 7
     },
     {
       "id": "trace-downstream",

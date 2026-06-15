@@ -4,24 +4,24 @@ Generated from artifact records and per-artifact `analytics/document-metrics.jso
 
 ## Summary
 
-- Artifacts: 1540
-- Metrics sidecars: 1540
-- Extracted words: 18,261,193
-- Approximate pages: 36,580
-- Reading workload: 81,922 minutes at 225 wpm
+- Artifacts: 1627
+- Metrics sidecars: 1627
+- Extracted words: 18,751,083
+- Approximate pages: 37,561
+- Reading workload: 84,141 minutes at 225 wpm
 - Median read time: 16 minutes
-- Median complexity: 81
+- Median complexity: 82
 
 ## Reading Time Buckets
 
 | Bucket | Artifacts | Words | Reading Minutes | Avg Complexity |
 | --- | ---: | ---: | ---: | ---: |
 | No Text | 49 | 0 | 0 | 0 |
-| Under 5 min | 126 | 47,889 | 284 | 46 |
-| 5-15 min | 582 | 1,249,492 | 5,842 | 78 |
-| 15-45 min | 563 | 3,175,577 | 14,408 | 80 |
-| 45-120 min | 155 | 2,440,754 | 10,926 | 83 |
-| 2+ hours | 65 | 11,347,481 | 50,462 | 89 |
+| Under 5 min | 130 | 51,036 | 300 | 46 |
+| 5-15 min | 616 | 1,327,541 | 6,205 | 78 |
+| 15-45 min | 602 | 3,389,683 | 15,378 | 81 |
+| 45-120 min | 164 | 2,562,402 | 11,471 | 84 |
+| 2+ hours | 66 | 11,420,421 | 50,787 | 89 |
 
 ## Complexity Buckets
 
@@ -30,21 +30,22 @@ Generated from artifact records and per-artifact `analytics/document-metrics.jso
 | No Text | 49 | 0 | 0 | 0 |
 | Quick Scan | 54 | 3,051 | 54 | 25 |
 | Moderate | 13 | 5,730 | 31 | 44 |
-| Dense | 174 | 464,068 | 2,145 | 60 |
-| Complex | 463 | 2,414,265 | 10,958 | 72 |
-| Extreme | 787 | 15,374,079 | 68,734 | 88 |
+| Dense | 177 | 468,075 | 2,164 | 60 |
+| Complex | 476 | 2,458,078 | 11,160 | 72 |
+| Extreme | 858 | 15,816,149 | 70,732 | 88 |
 
 ## Top Source Systems
 
 | Source | Artifacts | Words | Reading Minutes | Avg Complexity |
 | --- | ---: | ---: | ---: | ---: |
 | DoW/DoD Issuances | 1137 | 5,176,757 | 23,580 | 75 |
-| U.S. Code | 334 | 2,873,271 | 12,933 | 81 |
+| U.S. Code | 398 | 3,279,884 | 14,769 | 81 |
 | GovInfo | 43 | 10,122,071 | 45,006 | 90 |
+| Federal Register | 17 | 78,007 | 357 | 89 |
+| National Archives Executive Orders | 8 | 33,330 | 152 | 90 |
 | Air Force e-Publishing | 5 | 0 | 0 | 0 |
 | CISA Guidance Library | 4 | 11,367 | 53 | 83 |
 | Department of the Navy Issuances | 3 | 0 | 0 | 0 |
-| Federal Register | 2 | 28,060 | 126 | 91 |
 | White House | 2 | 23,100 | 104 | 90 |
 | U.S. Cyber Command | 2 | 0 | 0 | 0 |
 | NIST NVL Publications | 1 | 22,237 | 99 | 74 |
@@ -60,13 +61,13 @@ Generated from artifact records and per-artifact `analytics/document-metrics.jso
 
 | Age | Artifacts | Words | Reading Minutes | Avg Complexity |
 | --- | ---: | ---: | ---: | ---: |
-| No Date | 389 | 12,215,690 | 54,477 | 82 |
+| No Date | 461 | 12,655,633 | 56,465 | 82 |
 | Under 1 year | 19 | 155,724 | 701 | 73 |
-| 1-3 years | 116 | 1,393,556 | 6,251 | 74 |
+| 1-3 years | 118 | 1,397,246 | 6,269 | 74 |
 | 3-5 years | 124 | 686,158 | 3,113 | 74 |
-| 5-10 years | 295 | 1,509,701 | 6,857 | 74 |
-| 10-20 years | 486 | 1,970,110 | 8,996 | 76 |
-| 20+ years | 111 | 330,254 | 1,527 | 80 |
+| 5-10 years | 296 | 1,511,769 | 6,867 | 74 |
+| 10-20 years | 494 | 1,995,627 | 9,113 | 76 |
+| 20+ years | 115 | 348,926 | 1,613 | 81 |
 
 ## Top DoDD Reference Pressure
 

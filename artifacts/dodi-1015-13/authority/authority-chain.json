@@ -61,32 +61,30 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 1,
     "downstream_edge_count": 3,
-    "catalogued_node_count": 4,
-    "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 3,
+    "catalogued_node_count": 5,
+    "uncatalogued_gap_count": 0,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
     {
-      "id": "gap:usc:10:2667",
+      "id": "usc-title-10-section-2667",
       "label": "10 U.S.C. 2667",
-      "title": "10 U.S.C. 2667",
+      "title": "10 U.S.C. 2667: Leases: non-excess property of military departments and Defense Agencies",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:10:2667",
-      "count": 1,
-      "lines_sample": [
-        164
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodi-1015-11",
@@ -149,7 +147,30 @@
       "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "usc-title-10-section-2667->dodi-1015-13:flows_down:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-2667",
+      "source_label": "10 U.S.C. 2667",
+      "source_lane": "statute",
+      "target_artifact_id": "dodi-1015-13",
+      "target_label": "DoDI 1015.13",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:2667",
+        "label": "10 U.S.C. 2667",
+        "first_line": 164,
+        "lines_sample": [
+          164
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "dodi-1015-13->dodi-1015-11:references:resolved_reference",
@@ -218,32 +239,14 @@
       }
     }
   ],
-  "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:usc:10:2667",
-      "label": "10 U.S.C. 2667",
-      "title": "10 U.S.C. 2667",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:10:2667",
-      "count": 1,
-      "lines_sample": [
-        164
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    }
-  ],
+  "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-1015-13",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",

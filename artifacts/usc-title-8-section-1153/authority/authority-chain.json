@@ -61,12 +61,12 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 5,
-    "downstream_edge_count": 11,
-    "catalogued_node_count": 13,
-    "uncatalogued_gap_count": 10,
-    "evidence_backed_edge_count": 16,
-    "inferred_edge_count": 0,
+    "upstream_edge_count": 7,
+    "downstream_edge_count": 17,
+    "catalogued_node_count": 19,
+    "uncatalogued_gap_count": 8,
+    "evidence_backed_edge_count": 20,
+    "inferred_edge_count": 4,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
   },
@@ -322,21 +322,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:8:1184",
+      "id": "usc-title-8-section-1184",
       "label": "8 U.S.C. 1184",
-      "title": "8 U.S.C. 1184",
+      "title": "8 U.S.C. 1184: Admission of nonimmigrants",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:8:1184",
-      "count": 1,
-      "lines_sample": [
-        3050
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_8",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:8:1186b",
@@ -420,21 +418,79 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:8:1356",
+      "id": "usc-title-8-section-1356",
       "label": "8 U.S.C. 1356",
-      "title": "8 U.S.C. 1356",
+      "title": "8 U.S.C. 1356: Disposition of moneys collected under the provisions of this subchapter",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:8:1356",
-      "count": 1,
-      "lines_sample": [
-        2780
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_8",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "eo-10450",
+      "label": "Executive Order 10450",
+      "title": "Executive Order 10450: Codified executive order text",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "family": "regulatory_governance",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "eo-10865",
+      "label": "Executive Order 10865",
+      "title": "Executive Order 10865: Codified executive order text",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "eo-11246",
+      "label": "Executive Order 11246",
+      "title": "Executive Order 11246: Codified executive order text",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "family": "regulatory_governance",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "eo-12114",
+      "label": "Executive Order 12114",
+      "title": "Executive Order 12114: Codified executive order text",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [
@@ -540,6 +596,28 @@
       }
     },
     {
+      "id": "usc-title-8-section-1184->usc-title-8-section-1153:references:resolved_reference",
+      "source_artifact_id": "usc-title-8-section-1184",
+      "source_label": "8 U.S.C. 1184",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-8-section-1153",
+      "target_label": "8 U.S.C. 1153",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:8:1184",
+        "label": "8 U.S.C. 1184",
+        "first_line": 3050,
+        "lines_sample": [
+          3050
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-8-section-1255->usc-title-8-section-1153:references:resolved_reference",
       "source_artifact_id": "usc-title-8-section-1255",
       "source_label": "8 U.S.C. 1255",
@@ -560,9 +638,111 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "usc-title-8-section-1356->usc-title-8-section-1153:references:resolved_reference",
+      "source_artifact_id": "usc-title-8-section-1356",
+      "source_label": "8 U.S.C. 1356",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-8-section-1153",
+      "target_label": "8 U.S.C. 1153",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:8:1356",
+        "label": "8 U.S.C. 1356",
+        "first_line": 2780,
+        "lines_sample": [
+          2780
+        ],
+        "count": 1
+      }
     }
   ],
   "downstream_edges": [
+    {
+      "id": "usc-title-8-section-1153->eo-10450:authorizes:inferred_flowdown",
+      "source_artifact_id": "usc-title-8-section-1153",
+      "source_label": "8 U.S.C. 1153",
+      "source_lane": "statute",
+      "target_artifact_id": "eo-10450",
+      "target_label": "Executive Order 10450",
+      "target_lane": "executive",
+      "relationship": "authorizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.59,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "reference-ingestion"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "usc-title-8-section-1153->eo-10865:authorizes:inferred_flowdown",
+      "source_artifact_id": "usc-title-8-section-1153",
+      "source_label": "8 U.S.C. 1153",
+      "source_lane": "statute",
+      "target_artifact_id": "eo-10865",
+      "target_label": "Executive Order 10865",
+      "target_lane": "executive",
+      "relationship": "authorizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.59,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "reference-ingestion"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "usc-title-8-section-1153->eo-11246:authorizes:inferred_flowdown",
+      "source_artifact_id": "usc-title-8-section-1153",
+      "source_label": "8 U.S.C. 1153",
+      "source_lane": "statute",
+      "target_artifact_id": "eo-11246",
+      "target_label": "Executive Order 11246",
+      "target_lane": "executive",
+      "relationship": "authorizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.59,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "reference-ingestion"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "usc-title-8-section-1153->eo-12114:authorizes:inferred_flowdown",
+      "source_artifact_id": "usc-title-8-section-1153",
+      "source_label": "8 U.S.C. 1153",
+      "source_lane": "statute",
+      "target_artifact_id": "eo-12114",
+      "target_label": "Executive Order 12114",
+      "target_lane": "executive",
+      "relationship": "authorizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.59,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "reference-ingestion"
+        ],
+        "shared_family": ""
+      }
+    },
     {
       "id": "usc-title-8-section-1153->pl-118-31-fy2024-ndaa:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-8-section-1153",
@@ -772,6 +952,29 @@
       }
     },
     {
+      "id": "usc-title-8-section-1153->usc-title-8-section-1184:references:resolved_reference",
+      "source_artifact_id": "usc-title-8-section-1153",
+      "source_label": "8 U.S.C. 1153",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-8-section-1184",
+      "target_label": "8 U.S.C. 1184",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:8:1153",
+        "label": "8 U.S.C. 1153",
+        "first_line": 2138,
+        "lines_sample": [
+          2138,
+          2155
+        ],
+        "count": 2
+      }
+    },
+    {
       "id": "usc-title-8-section-1153->usc-title-8-section-1201:references:resolved_reference",
       "source_artifact_id": "usc-title-8-section-1153",
       "source_label": "8 U.S.C. 1153",
@@ -814,6 +1017,28 @@
           1396
         ],
         "count": 2
+      }
+    },
+    {
+      "id": "usc-title-8-section-1153->usc-title-8-section-1356:references:resolved_reference",
+      "source_artifact_id": "usc-title-8-section-1153",
+      "source_label": "8 U.S.C. 1153",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-8-section-1356",
+      "target_label": "8 U.S.C. 1356",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:8:1153",
+        "label": "8 U.S.C. 1153",
+        "first_line": 1243,
+        "lines_sample": [
+          1243
+        ],
+        "count": 1
       }
     }
   ],
@@ -904,23 +1129,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:8:1184",
-      "label": "8 U.S.C. 1184",
-      "title": "8 U.S.C. 1184",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:8:1184",
-      "count": 1,
-      "lines_sample": [
-        3050
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:8:1186b",
       "label": "8 U.S.C. 1186b",
       "title": "8 U.S.C. 1186b",
@@ -970,23 +1178,6 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
-    },
-    {
-      "id": "gap:usc:8:1356",
-      "label": "8 U.S.C. 1356",
-      "title": "8 U.S.C. 1356",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:8:1356",
-      "count": 1,
-      "lines_sample": [
-        2780
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -995,14 +1186,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-8-section-1153",
       "direction": "upstream",
-      "edge_count": 5
+      "edge_count": 7
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-8-section-1153",
       "direction": "downstream",
-      "edge_count": 11
+      "edge_count": 17
     }
   ]
 }

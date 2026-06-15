@@ -61,33 +61,16 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 2,
+    "upstream_edge_count": 3,
     "downstream_edge_count": 2,
-    "catalogued_node_count": 5,
-    "uncatalogued_gap_count": 5,
-    "evidence_backed_edge_count": 2,
+    "catalogued_node_count": 6,
+    "uncatalogued_gap_count": 4,
+    "evidence_backed_edge_count": 3,
     "inferred_edge_count": 2,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
-    {
-      "id": "gap:usc:44:3552",
-      "label": "44 U.S.C. § 3552",
-      "title": "44 U.S.C. § 3552",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:44:3552",
-      "count": 1,
-      "lines_sample": [
-        1194
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
     {
       "id": "gap:usc:44:3553",
       "label": "44 U.S.C. § 3553",
@@ -126,6 +109,21 @@
       "id": "usc-title-44-section-3502",
       "label": "44 U.S.C. 3502",
       "title": "44 U.S.C. 3502: Definitions",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "information_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-44-section-3552",
+      "label": "44 U.S.C. 3552",
+      "title": "44 U.S.C. 3552: Definitions",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
@@ -276,6 +274,28 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "usc-title-44-section-3552->cisa-bod-26-02-end-of-support-edge-devices:authorizes:resolved_reference",
+      "source_artifact_id": "usc-title-44-section-3552",
+      "source_label": "44 U.S.C. 3552",
+      "source_lane": "statute",
+      "target_artifact_id": "cisa-bod-26-02-end-of-support-edge-devices",
+      "target_label": "BOD 26-02",
+      "target_lane": "govwide",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:44:3552",
+        "label": "44 U.S.C. § 3552",
+        "first_line": 1194,
+        "lines_sample": [
+          1194
+        ],
+        "count": 1
+      }
     }
   ],
   "downstream_edges": [
@@ -324,23 +344,6 @@
     }
   ],
   "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:usc:44:3552",
-      "label": "44 U.S.C. § 3552",
-      "title": "44 U.S.C. § 3552",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:44:3552",
-      "count": 1,
-      "lines_sample": [
-        1194
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
     {
       "id": "gap:usc:44:3553",
       "label": "44 U.S.C. § 3553",
@@ -416,7 +419,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "cisa-bod-26-02-end-of-support-edge-devices",
       "direction": "upstream",
-      "edge_count": 2
+      "edge_count": 3
     },
     {
       "id": "trace-downstream",

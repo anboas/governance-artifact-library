@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 15,
+    "upstream_edge_count": 16,
     "downstream_edge_count": 10,
-    "catalogued_node_count": 22,
-    "uncatalogued_gap_count": 2,
-    "evidence_backed_edge_count": 25,
+    "catalogued_node_count": 23,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 26,
     "inferred_edge_count": 0,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -117,21 +117,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:executive-order:14173",
+      "id": "eo-14173",
       "label": "Executive Order 14173",
-      "title": "Executive Order 14173",
+      "title": "Executive Order 14173: Ending Illegal Discrimination and Restoring Merit-Based Opportunity",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:14173",
-      "count": 1,
-      "lines_sample": [
-        1541
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "regulatory_governance",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodd-5124-11",
@@ -717,6 +715,28 @@
       }
     },
     {
+      "id": "eo-14173->dodi-6400-09:directs:resolved_reference",
+      "source_artifact_id": "eo-14173",
+      "source_label": "Executive Order 14173",
+      "source_lane": "executive",
+      "target_artifact_id": "dodi-6400-09",
+      "target_label": "DoDI 6400.09",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:14173",
+        "label": "Executive Order 14173",
+        "first_line": 1541,
+        "lines_sample": [
+          1541
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "public-law-112-239->dodi-6400-09:authorizes:resolved_reference",
       "source_artifact_id": "public-law-112-239",
       "source_label": "Public Law 112-239",
@@ -1053,23 +1073,6 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
-    },
-    {
-      "id": "gap:executive-order:14173",
-      "label": "Executive Order 14173",
-      "title": "Executive Order 14173",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:14173",
-      "count": 1,
-      "lines_sample": [
-        1541
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -1078,7 +1081,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-6400-09",
       "direction": "upstream",
-      "edge_count": 15
+      "edge_count": 16
     },
     {
       "id": "trace-downstream",

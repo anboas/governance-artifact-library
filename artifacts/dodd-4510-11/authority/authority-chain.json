@@ -61,33 +61,30 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 1,
+    "upstream_edge_count": 2,
     "downstream_edge_count": 7,
-    "catalogued_node_count": 8,
-    "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 4,
+    "catalogued_node_count": 9,
+    "uncatalogued_gap_count": 0,
+    "evidence_backed_edge_count": 5,
     "inferred_edge_count": 4,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
     {
-      "id": "gap:executive-order:12656",
+      "id": "eo-12656",
       "label": "Executive Order 12656",
-      "title": "Executive Order 12656",
+      "title": "Executive Order 12656: Codified executive order text",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:12656",
-      "count": 2,
-      "lines_sample": [
-        221,
-        329
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "National Archives Executive Orders",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodd-4510-11",
@@ -231,6 +228,29 @@
           115
         ],
         "count": 1
+      }
+    },
+    {
+      "id": "eo-12656->dodd-4510-11:directs:resolved_reference",
+      "source_artifact_id": "eo-12656",
+      "source_label": "Executive Order 12656",
+      "source_lane": "executive",
+      "target_artifact_id": "dodd-4510-11",
+      "target_label": "DoDD 4510.11",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:12656",
+        "label": "Executive Order 12656",
+        "first_line": 221,
+        "lines_sample": [
+          221,
+          329
+        ],
+        "count": 2
       }
     }
   ],
@@ -391,33 +411,14 @@
       }
     }
   ],
-  "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:executive-order:12656",
-      "label": "Executive Order 12656",
-      "title": "Executive Order 12656",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:12656",
-      "count": 2,
-      "lines_sample": [
-        221,
-        329
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    }
-  ],
+  "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodd-4510-11",
       "direction": "upstream",
-      "edge_count": 1
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",

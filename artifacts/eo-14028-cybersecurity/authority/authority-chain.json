@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 3,
+    "upstream_edge_count": 4,
     "downstream_edge_count": 10,
-    "catalogued_node_count": 13,
-    "uncatalogued_gap_count": 2,
-    "evidence_backed_edge_count": 9,
+    "catalogued_node_count": 14,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 10,
     "inferred_edge_count": 4,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -102,22 +102,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:44:3552",
+      "id": "usc-title-44-section-3552",
       "label": "44 U.S.C. 3552",
-      "title": "44 U.S.C. 3552",
+      "title": "44 U.S.C. 3552: Definitions",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:44:3552",
-      "count": 2,
-      "lines_sample": [
-        1080,
-        1098
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "information_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-50-section-3003",
@@ -346,6 +343,29 @@
           1073
         ],
         "count": 1
+      }
+    },
+    {
+      "id": "usc-title-44-section-3552->eo-14028-cybersecurity:authorizes:resolved_reference",
+      "source_artifact_id": "usc-title-44-section-3552",
+      "source_label": "44 U.S.C. 3552",
+      "source_lane": "statute",
+      "target_artifact_id": "eo-14028-cybersecurity",
+      "target_label": "EO 14028",
+      "target_lane": "executive",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:44:3552",
+        "label": "44 U.S.C. 3552",
+        "first_line": 1080,
+        "lines_sample": [
+          1080,
+          1098
+        ],
+        "count": 2
       }
     },
     {
@@ -601,24 +621,6 @@
   ],
   "uncatalogued_authority_gaps": [
     {
-      "id": "gap:usc:44:3552",
-      "label": "44 U.S.C. 3552",
-      "title": "44 U.S.C. 3552",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:44:3552",
-      "count": 2,
-      "lines_sample": [
-        1080,
-        1098
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:6:451",
       "label": "6 U.S.C. 451",
       "title": "6 U.S.C. 451",
@@ -642,7 +644,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "eo-14028-cybersecurity",
       "direction": "upstream",
-      "edge_count": 3
+      "edge_count": 4
     },
     {
       "id": "trace-downstream",

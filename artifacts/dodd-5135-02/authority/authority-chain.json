@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 12,
+    "upstream_edge_count": 13,
     "downstream_edge_count": 23,
-    "catalogued_node_count": 35,
+    "catalogued_node_count": 36,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 31,
+    "evidence_backed_edge_count": 32,
     "inferred_edge_count": 4,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -211,6 +211,23 @@
       "count": 1,
       "lines_sample": [
         1438
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:95-619",
+      "label": "Public Law 95-619",
+      "title": "Public Law 95-619",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:95-619",
+      "count": 1,
+      "lines_sample": [
+        1440
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -386,21 +403,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:executive-order:13891",
+      "id": "eo-13891",
       "label": "Executive Order 13891",
-      "title": "Executive Order 13891",
+      "title": "Executive Order 13891: Promoting the Rule of Law Through Improved Agency Guidance Documents",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13891",
-      "count": 1,
-      "lines_sample": [
-        1429
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "regulatory_governance",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodd-3100-10",
@@ -1061,6 +1076,28 @@
         "first_line": 917,
         "lines_sample": [
           917
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "eo-13891->dodd-5135-02:directs:resolved_reference",
+      "source_artifact_id": "eo-13891",
+      "source_label": "Executive Order 13891",
+      "source_lane": "executive",
+      "target_artifact_id": "dodd-5135-02",
+      "target_label": "DoDD 5135.02",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:13891",
+        "label": "Executive Order 13891",
+        "first_line": 1429,
+        "lines_sample": [
+          1429
         ],
         "count": 1
       }
@@ -1930,23 +1967,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:executive-order:13891",
-      "label": "Executive Order 13891",
-      "title": "Executive Order 13891",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13891",
-      "count": 1,
-      "lines_sample": [
-        1429
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:public-law:102-484",
       "label": "Public Law 102-484",
       "title": "Public Law 102-484",
@@ -1996,6 +2016,23 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "gap:public-law:95-619",
+      "label": "Public Law 95-619",
+      "title": "Public Law 95-619",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:95-619",
+      "count": 1,
+      "lines_sample": [
+        1440
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -2004,7 +2041,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodd-5135-02",
       "direction": "upstream",
-      "edge_count": 12
+      "edge_count": 13
     },
     {
       "id": "trace-downstream",

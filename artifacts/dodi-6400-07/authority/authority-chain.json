@@ -61,33 +61,30 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 1,
     "downstream_edge_count": 5,
-    "catalogued_node_count": 6,
-    "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 5,
+    "catalogued_node_count": 7,
+    "uncatalogued_gap_count": 0,
+    "evidence_backed_edge_count": 6,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
     {
-      "id": "gap:executive-order:14173",
+      "id": "eo-14173",
       "label": "Executive Order 14173",
-      "title": "Executive Order 14173",
+      "title": "Executive Order 14173: Ending Illegal Discrimination and Restoring Merit-Based Opportunity",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:14173",
-      "count": 2,
-      "lines_sample": [
-        73,
-        108
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "regulatory_governance",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodi-1030-02",
@@ -180,7 +177,31 @@
       "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "eo-14173->dodi-6400-07:directs:resolved_reference",
+      "source_artifact_id": "eo-14173",
+      "source_label": "Executive Order 14173",
+      "source_lane": "executive",
+      "target_artifact_id": "dodi-6400-07",
+      "target_label": "DoDI 6400.07",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:14173",
+        "label": "Executive Order 14173",
+        "first_line": 73,
+        "lines_sample": [
+          73,
+          108
+        ],
+        "count": 2
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "dodi-6400-07->dodi-1030-02:references:resolved_reference",
@@ -298,33 +319,14 @@
       }
     }
   ],
-  "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:executive-order:14173",
-      "label": "Executive Order 14173",
-      "title": "Executive Order 14173",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:14173",
-      "count": 2,
-      "lines_sample": [
-        73,
-        108
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    }
-  ],
+  "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-6400-07",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",

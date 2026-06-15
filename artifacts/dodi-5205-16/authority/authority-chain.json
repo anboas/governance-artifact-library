@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 20,
+    "upstream_edge_count": 21,
     "downstream_edge_count": 2,
-    "catalogued_node_count": 23,
-    "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 22,
+    "catalogued_node_count": 24,
+    "uncatalogued_gap_count": 0,
+    "evidence_backed_edge_count": 23,
     "inferred_edge_count": 0,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -132,21 +132,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:executive-order:13587",
+      "id": "eo-13587",
       "label": "Executive Order 13587",
-      "title": "Executive Order 13587",
+      "title": "Executive Order 13587: Structural Reforms To Improve the Security of Classified Networks and the Responsible Sharing and Safeguarding of Classified Information",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13587",
-      "count": 1,
-      "lines_sample": [
-        979
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodd-3115-18",
@@ -791,6 +789,28 @@
       }
     },
     {
+      "id": "eo-13587->dodi-5205-16:directs:resolved_reference",
+      "source_artifact_id": "eo-13587",
+      "source_label": "Executive Order 13587",
+      "source_lane": "executive",
+      "target_artifact_id": "dodi-5205-16",
+      "target_label": "DoDI 5205.16",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:13587",
+        "label": "Executive Order 13587",
+        "first_line": 979,
+        "lines_sample": [
+          979
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "public-law-104-191->dodi-5205-16:authorizes:resolved_reference",
       "source_artifact_id": "public-law-104-191",
       "source_label": "Public Law 104-191",
@@ -926,32 +946,14 @@
       }
     }
   ],
-  "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:executive-order:13587",
-      "label": "Executive Order 13587",
-      "title": "Executive Order 13587",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:13587",
-      "count": 1,
-      "lines_sample": [
-        979
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    }
-  ],
+  "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-5205-16",
       "direction": "upstream",
-      "edge_count": 20
+      "edge_count": 21
     },
     {
       "id": "trace-downstream",

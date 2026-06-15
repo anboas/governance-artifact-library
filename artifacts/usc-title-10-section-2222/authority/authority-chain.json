@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 1,
     "downstream_edge_count": 21,
-    "catalogued_node_count": 22,
-    "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 21,
+    "catalogued_node_count": 23,
+    "uncatalogued_gap_count": 0,
+    "evidence_backed_edge_count": 22,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -402,25 +402,46 @@
       "status": "current"
     },
     {
-      "id": "gap:usc:31:3512",
+      "id": "usc-title-31-section-3512",
       "label": "31 U.S.C. 3512",
-      "title": "31 U.S.C. 3512",
+      "title": "31 U.S.C. 3512: Executive agency accounting and other financial management reports and plans",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:31:3512",
-      "count": 2,
-      "lines_sample": [
-        1766,
-        1812
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_31",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "usc-title-31-section-3512->usc-title-10-section-2222:references:resolved_reference",
+      "source_artifact_id": "usc-title-31-section-3512",
+      "source_label": "31 U.S.C. 3512",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-2222",
+      "target_label": "10 U.S.C. 2222",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:31:3512",
+        "label": "31 U.S.C. 3512",
+        "first_line": 1766,
+        "lines_sample": [
+          1766,
+          1812
+        ],
+        "count": 2
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "usc-title-10-section-2222->pl-118-31-fy2024-ndaa:references_upstream:resolved_reference",
@@ -935,33 +956,14 @@
       }
     }
   ],
-  "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:usc:31:3512",
-      "label": "31 U.S.C. 3512",
-      "title": "31 U.S.C. 3512",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:31:3512",
-      "count": 2,
-      "lines_sample": [
-        1766,
-        1812
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    }
-  ],
+  "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-10-section-2222",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",

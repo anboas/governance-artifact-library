@@ -61,32 +61,30 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 6,
+    "upstream_edge_count": 7,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 7,
-    "uncatalogued_gap_count": 3,
-    "evidence_backed_edge_count": 6,
+    "catalogued_node_count": 8,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 7,
     "inferred_edge_count": 0,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
     {
-      "id": "gap:executive-order:14168",
+      "id": "eo-14168",
       "label": "Executive Order 14168",
-      "title": "Executive Order 14168",
+      "title": "Executive Order 14168: Defending Women From Gender Ideology Extremism and Restoring Biological Truth to the Federal Government",
       "artifact_type": "Executive Order",
       "lane": "executive",
       "lane_label": "Executive",
       "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:14168",
-      "count": 1,
-      "lines_sample": [
-        2018
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:executive-order:14183",
@@ -373,6 +371,28 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "eo-14168->dowi-6130-03-medical-standards-for-military-service-retention:directs:resolved_reference",
+      "source_artifact_id": "eo-14168",
+      "source_label": "Executive Order 14168",
+      "source_lane": "executive",
+      "target_artifact_id": "dowi-6130-03-medical-standards-for-military-service-retention",
+      "target_label": "DoWI 6130.03",
+      "target_lane": "dod",
+      "relationship": "directs",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:14168",
+        "label": "Executive Order 14168",
+        "first_line": 2018,
+        "lines_sample": [
+          2018
+        ],
+        "count": 1
+      }
     }
   ],
   "downstream_edges": [],
@@ -390,23 +410,6 @@
       "count": 1,
       "lines_sample": [
         176
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:executive-order:14168",
-      "label": "Executive Order 14168",
-      "title": "Executive Order 14168",
-      "artifact_type": "Executive Order",
-      "lane": "executive",
-      "lane_label": "Executive",
-      "hierarchy_rank": 30,
-      "reference_family": "executive-order",
-      "source_reference_id": "executive-order:14168",
-      "count": 1,
-      "lines_sample": [
-        2018
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -435,7 +438,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dowi-6130-03-medical-standards-for-military-service-retention",
       "direction": "upstream",
-      "edge_count": 6
+      "edge_count": 7
     },
     {
       "id": "trace-downstream",

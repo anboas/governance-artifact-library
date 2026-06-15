@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 21,
+    "upstream_edge_count": 26,
     "downstream_edge_count": 10,
-    "catalogued_node_count": 32,
+    "catalogued_node_count": 37,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 27,
+    "evidence_backed_edge_count": 32,
     "inferred_edge_count": 4,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -241,6 +241,21 @@
       "status": "catalogued"
     },
     {
+      "id": "usc-title-22-section-2656f",
+      "label": "22 U.S.C. 2656f",
+      "title": "22 U.S.C. 2656f: Annual country reports on terrorism",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "foreign_affairs",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "usc-title-22-section-2751",
       "label": "22 U.S.C. 2751",
       "title": "22 U.S.C. 2751: Need for international defense cooperation and military export controls; Presidential waiver; report to Congress; arms sales policy",
@@ -344,6 +359,25 @@
       "priority": "high"
     },
     {
+      "id": "gap:usc:28:532",
+      "label": "28 USC 532",
+      "title": "28 USC 532",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:28:532",
+      "count": 3,
+      "lines_sample": [
+        3917,
+        4041,
+        4070
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
       "id": "usc-title-31-section-5311",
       "label": "31 U.S.C. 5311",
       "title": "31 U.S.C. 5311: Declaration of purpose",
@@ -429,6 +463,21 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "usc-title-5-section-301",
+      "label": "5 U.S.C. 301",
+      "title": "5 U.S.C. 301: Departmental regulations",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_5",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-5-section-601",
@@ -771,6 +820,21 @@
       "status": "catalogued"
     },
     {
+      "id": "usc-title-8-section-1103",
+      "label": "8 U.S.C. 1103",
+      "title": "8 U.S.C. 1103: Powers and duties of the Secretary, the Under Secretary, and the Attorney General",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_8",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "usc-title-8-section-1182",
       "label": "8 U.S.C. 1182",
       "title": "8 U.S.C. 1182: Inadmissible aliens",
@@ -816,25 +880,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:8:1202",
+      "id": "usc-title-8-section-1202",
       "label": "8 U.S.C. 1202",
-      "title": "8 U.S.C. 1202",
+      "title": "8 U.S.C. 1202: Application for visas",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:8:1202",
-      "count": 5,
-      "lines_sample": [
-        6084,
-        6165,
-        10996,
-        11000,
-        12340
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_8",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:8:1712",
@@ -856,6 +914,21 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "eo-12958",
+      "label": "Executive Order 12958",
+      "title": "Executive Order 12958: Classified National Security Information",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "family": "security_intelligence",
+      "issuing_authority": "President",
+      "source_system": "Federal Register",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodd-1400-35",
@@ -949,6 +1022,28 @@
     }
   ],
   "upstream_edges": [
+    {
+      "id": "eo-12958->public-law-108-458:references_upstream:resolved_reference",
+      "source_artifact_id": "eo-12958",
+      "source_label": "Executive Order 12958",
+      "source_lane": "executive",
+      "target_artifact_id": "public-law-108-458",
+      "target_label": "Public Law 108-458",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "executive-order:12958",
+        "label": "Executive Order 12958",
+        "first_line": 4252,
+        "lines_sample": [
+          4252
+        ],
+        "count": 1
+      }
+    },
     {
       "id": "usc-title-22-section-2371->public-law-108-458:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-22-section-2371",
@@ -1058,6 +1153,30 @@
           8586,
           10092,
           11040
+        ],
+        "count": 3
+      }
+    },
+    {
+      "id": "usc-title-22-section-2656f->public-law-108-458:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-2656f",
+      "source_label": "22 U.S.C. 2656f",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-108-458",
+      "target_label": "Public Law 108-458",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:2656f",
+        "label": "22 U.S.C. 2656f",
+        "first_line": 8616,
+        "lines_sample": [
+          8616,
+          8780,
+          8783
         ],
         "count": 3
       }
@@ -1232,6 +1351,29 @@
       }
     },
     {
+      "id": "usc-title-5-section-301->public-law-108-458:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-5-section-301",
+      "source_label": "5 U.S.C. 301",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-108-458",
+      "target_label": "Public Law 108-458",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:5:301",
+        "label": "5 U.S.C. 301",
+        "first_line": 11720,
+        "lines_sample": [
+          11720,
+          11854
+        ],
+        "count": 2
+      }
+    },
+    {
       "id": "usc-title-5-section-601->public-law-108-458:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-5-section-601",
       "source_label": "5 U.S.C. 601",
@@ -1376,6 +1518,28 @@
       }
     },
     {
+      "id": "usc-title-8-section-1103->public-law-108-458:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-8-section-1103",
+      "source_label": "8 U.S.C. 1103",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-108-458",
+      "target_label": "Public Law 108-458",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:8:1103",
+        "label": "8 U.S.C. 1103",
+        "first_line": 6476,
+        "lines_sample": [
+          6476
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-8-section-1182->public-law-108-458:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-8-section-1182",
       "source_label": "8 U.S.C. 1182",
@@ -1449,6 +1613,32 @@
           6172
         ],
         "count": 1
+      }
+    },
+    {
+      "id": "usc-title-8-section-1202->public-law-108-458:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-8-section-1202",
+      "source_label": "8 U.S.C. 1202",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-108-458",
+      "target_label": "Public Law 108-458",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:8:1202",
+        "label": "8 U.S.C. 1202",
+        "first_line": 6084,
+        "lines_sample": [
+          6084,
+          6165,
+          10996,
+          11000,
+          12340
+        ],
+        "count": 5
       }
     }
   ],
@@ -1887,27 +2077,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:8:1202",
-      "label": "8 U.S.C. 1202",
-      "title": "8 U.S.C. 1202",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:8:1202",
-      "count": 5,
-      "lines_sample": [
-        6084,
-        6165,
-        10996,
-        11000,
-        12340
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:8:1712",
       "label": "8 USC 1712",
       "title": "8 USC 1712",
@@ -2066,6 +2235,25 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "gap:usc:28:532",
+      "label": "28 USC 532",
+      "title": "28 USC 532",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:28:532",
+      "count": 3,
+      "lines_sample": [
+        3917,
+        4041,
+        4070
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -2074,7 +2262,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "public-law-108-458",
       "direction": "upstream",
-      "edge_count": 21
+      "edge_count": 26
     },
     {
       "id": "trace-downstream",
