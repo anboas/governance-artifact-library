@@ -39,12 +39,32 @@ const rows = manifest.artifacts.map((entry) => {
   const metrics = artifact.analytics_path && existsSync(join(ROOT, artifact.analytics_path))
     ? readJson(artifact.analytics_path)
     : {};
+  const claims = artifact.claims_path && existsSync(join(ROOT, artifact.claims_path))
+    ? readJson(artifact.claims_path)
+    : {};
+  const referenceMap = artifact.reference_resolution_path && existsSync(join(ROOT, artifact.reference_resolution_path))
+    ? readJson(artifact.reference_resolution_path)
+    : {};
+  const authorityChain = artifact.authority_chain_path && existsSync(join(ROOT, artifact.authority_chain_path))
+    ? readJson(artifact.authority_chain_path)
+    : {};
   const words = Number(metrics.extracted_word_count || 0) || 0;
   const pages = Number(metrics.approximate_pages || 0) || 0;
   const obligationSignals = Number(metrics.obligation_signal_count || 0) || 0;
   const implementationSignals = Number(metrics.implementation_signal_count || 0) || 0;
   const termCounts = metrics.term_counts || {};
   const termSignalCount = Object.values(termCounts).reduce((sum, value) => sum + (Number(value) || 0), 0);
+  const claimCount = Number(claims.summary?.claim_count || claims.claims?.length || 0) || 0;
+  const referenceRows = [
+    ...(Array.isArray(referenceMap.resolved_references) ? referenceMap.resolved_references : []),
+    ...(Array.isArray(referenceMap.uncatalogued_references) ? referenceMap.uncatalogued_references : []),
+  ];
+  const outgoingReferenceCount = referenceRows.length;
+  const outgoingReferenceOccurrenceCount = referenceRows.reduce((sum, edge) => sum + (Number(edge.count || edge.occurrence_count || 1) || 0), 0);
+  const authorityEdgeCount = [
+    ...(Array.isArray(authorityChain.upstream_edges) ? authorityChain.upstream_edges : []),
+    ...(Array.isArray(authorityChain.downstream_edges) ? authorityChain.downstream_edges : []),
+  ].length;
   const readingMinutes = words ? Math.ceil(words / READING_WPM) : 0;
   const complexityScore = complexityFor({ words, pages, obligationSignals, implementationSignals, termSignalCount });
   const publicationDate = artifact.publication_date || artifact.effective_date || artifact.source_date || "";
@@ -78,6 +98,10 @@ const rows = manifest.artifacts.map((entry) => {
     reading_time_bucket: readingTimeBucket(readingMinutes),
     complexity_score: complexityScore,
     complexity_bucket: complexityBucket(complexityScore),
+    claim_count: claimCount,
+    outgoing_reference_count: outgoingReferenceCount,
+    outgoing_reference_occurrence_count: outgoingReferenceOccurrenceCount,
+    authority_edge_count: authorityEdgeCount,
     obligation_signal_count: obligationSignals,
     implementation_signal_count: implementationSignals,
     term_signal_count: termSignalCount,
@@ -199,6 +223,8 @@ function compactRow(row) {
     family: row.family,
     authority_level: row.authority_level,
     source_system: row.source_system,
+    issuing_authority: row.issuing_authority,
+    issuing_organization: row.issuing_organization,
     source_date: row.source_date,
     publication_date: row.publication_date,
     effective_date: row.effective_date,
@@ -213,6 +239,10 @@ function compactRow(row) {
     reading_time_bucket: row.reading_time_bucket,
     complexity_score: row.complexity_score,
     complexity_bucket: row.complexity_bucket,
+    claim_count: row.claim_count,
+    outgoing_reference_count: row.outgoing_reference_count,
+    outgoing_reference_occurrence_count: row.outgoing_reference_occurrence_count,
+    authority_edge_count: row.authority_edge_count,
     obligation_signal_count: row.obligation_signal_count,
     implementation_signal_count: row.implementation_signal_count,
     term_counts: row.term_counts,
