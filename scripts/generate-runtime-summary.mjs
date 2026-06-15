@@ -17,6 +17,7 @@ const documentAnalytics = readOptionalJson("data/document-analytics-map.json");
 const artifactSourceDiscovery = readOptionalJson("data/governance-artifact-source-discovery-summary.json");
 const organizationExploration = readOptionalJson("data/organization-entity-source-exploration.json");
 const organizationHierarchy = readOptionalJson("data/policy-organization-hierarchy-summary.json");
+const authorityLandscape = readOptionalJson("data/policy-authority-landscape-summary.json");
 
 const model = {
   generated_at: manifest.generated_at,
@@ -29,6 +30,7 @@ const model = {
     source_discovery: "data/source-discovery-map.json",
     source_acquisition: "data/source-acquisition-queue-summary.json",
     authority: "data/authority-chain-map.json",
+    authority_landscape: "data/policy-authority-landscape-summary.json",
     document_analytics: "data/document-analytics-map.json",
     artifact_source_discovery: "data/governance-artifact-source-discovery-summary.json",
     organization_exploration: "data/organization-entity-source-exploration.json",
@@ -49,6 +51,7 @@ const model = {
     ...(authorityChain?.summary || {}),
     lane_count: Array.isArray(authorityChain?.lanes) ? authorityChain.lanes.length : 0,
   },
+  authority_landscape: authorityLandscape?.summary || {},
   document_analytics: documentAnalytics?.summary || {},
   artifact_source_discovery: artifactSourceDiscovery?.summary || {},
   organization_exploration: organizationExploration?.summary || {},
