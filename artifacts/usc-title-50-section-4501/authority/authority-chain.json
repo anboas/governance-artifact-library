@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 9,
-    "catalogued_node_count": 10,
+    "downstream_edge_count": 10,
+    "catalogued_node_count": 11,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 9,
+    "evidence_backed_edge_count": 10,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -157,6 +157,21 @@
       "family": "defense_authorization",
       "issuing_authority": "Congress",
       "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-10-section-191",
+      "label": "10 U.S.C. 191",
+      "title": "10 U.S.C. 191: Secretary of Defense: authority to provide for common performance of supply or service activities",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "catalogued"
@@ -382,6 +397,28 @@
       }
     },
     {
+      "id": "usc-title-50-section-4501->usc-title-10-section-191:references:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-4501",
+      "source_label": "50 U.S.C. 4501",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-191",
+      "target_label": "10 U.S.C. 191",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:4501",
+        "label": "50 U.S.C. 4501",
+        "first_line": 419,
+        "lines_sample": [
+          419
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-50-section-4501->usc-title-10-section-4811:references:resolved_reference",
       "source_artifact_id": "usc-title-50-section-4501",
       "source_label": "50 U.S.C. 4501",
@@ -441,7 +478,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-50-section-4501",
       "direction": "downstream",
-      "edge_count": 9
+      "edge_count": 10
     }
   ]
 }

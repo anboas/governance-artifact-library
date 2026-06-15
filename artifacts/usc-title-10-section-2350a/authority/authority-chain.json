@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 1,
     "downstream_edge_count": 9,
-    "catalogued_node_count": 10,
-    "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 9,
+    "catalogued_node_count": 11,
+    "uncatalogued_gap_count": 0,
+    "evidence_backed_edge_count": 10,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -207,22 +207,19 @@
       "status": "current"
     },
     {
-      "id": "gap:usc:22:2767",
+      "id": "usc-title-22-section-2767",
       "label": "22 U.S.C. 2767",
-      "title": "22 U.S.C. 2767",
+      "title": "22 U.S.C. 2767: Authority of President to enter into cooperative projects with friendly foreign countries",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:22:2767",
-      "count": 2,
-      "lines_sample": [
-        566,
-        638
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "foreign_affairs",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodd-5230-20",
@@ -240,7 +237,31 @@
       "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "usc-title-22-section-2767->usc-title-10-section-2350a:references:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-2767",
+      "source_label": "22 U.S.C. 2767",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-2350a",
+      "target_label": "10 U.S.C. 2350a",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:2767",
+        "label": "22 U.S.C. 2767",
+        "first_line": 566,
+        "lines_sample": [
+          566,
+          638
+        ],
+        "count": 2
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "usc-title-10-section-2350a->dodd-5230-20:flows_down:resolved_reference",
@@ -447,33 +468,14 @@
       }
     }
   ],
-  "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:usc:22:2767",
-      "label": "22 U.S.C. 2767",
-      "title": "22 U.S.C. 2767",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:22:2767",
-      "count": 2,
-      "lines_sample": [
-        566,
-        638
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    }
-  ],
+  "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-10-section-2350a",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",

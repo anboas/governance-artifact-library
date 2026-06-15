@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 4,
-    "downstream_edge_count": 17,
-    "catalogued_node_count": 21,
-    "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 21,
+    "upstream_edge_count": 6,
+    "downstream_edge_count": 20,
+    "catalogued_node_count": 25,
+    "uncatalogued_gap_count": 17,
+    "evidence_backed_edge_count": 26,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -75,6 +75,36 @@
       "id": "pl-118-159-fy2025-ndaa",
       "label": "FY2025 NDAA",
       "title": "Public Law 118-159: Servicemember Quality of Life Improvement and National Defense Authorization Act for Fiscal Year 2025",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-104-208",
+      "label": "Public Law 104-208",
+      "title": "Public Law 104-208: National Defense Authorization Act for Fiscal Year 1991 (Public",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-107-296",
+      "label": "Public Law 107-296",
+      "title": "Public Law 107-296: National Defense Authorization Act for Fiscal Year 1994 (Public",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
@@ -322,21 +352,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:42:1395",
+      "id": "usc-title-42-section-1395",
       "label": "42 U.S.C. 1395",
-      "title": "42 U.S.C. 1395",
+      "title": "42 U.S.C. 1395: Prohibition against any Federal interference",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:1395",
-      "count": 1,
-      "lines_sample": [
-        2034
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-42-section-1395c",
@@ -594,21 +622,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:8:1201",
+      "id": "usc-title-8-section-1201",
       "label": "8 U.S.C. 1201",
-      "title": "8 U.S.C. 1201",
+      "title": "8 U.S.C. 1201: Issuance of visas",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:8:1201",
-      "count": 1,
-      "lines_sample": [
-        4524
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_8",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:8:1227",
@@ -677,6 +703,23 @@
       "priority": "high"
     },
     {
+      "id": "gap:executive-order:11935",
+      "label": "Executive Order 11935",
+      "title": "Executive Order 11935",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:11935",
+      "count": 1,
+      "lines_sample": [
+        5595
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
       "id": "gap:executive-order:12807",
       "label": "Executive Order 12807",
       "title": "Executive Order 12807",
@@ -696,6 +739,28 @@
     }
   ],
   "upstream_edges": [
+    {
+      "id": "usc-title-42-section-1395->usc-title-8-section-1182:references:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-1395",
+      "source_label": "42 U.S.C. 1395",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-8-section-1182",
+      "target_label": "8 U.S.C. 1182",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:1395",
+        "label": "42 U.S.C. 1395",
+        "first_line": 2034,
+        "lines_sample": [
+          2034
+        ],
+        "count": 1
+      }
+    },
     {
       "id": "usc-title-42-section-1395c->usc-title-8-section-1182:references:resolved_reference",
       "source_artifact_id": "usc-title-42-section-1395c",
@@ -794,6 +859,28 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "usc-title-8-section-1201->usc-title-8-section-1182:references:resolved_reference",
+      "source_artifact_id": "usc-title-8-section-1201",
+      "source_label": "8 U.S.C. 1201",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-8-section-1182",
+      "target_label": "8 U.S.C. 1182",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:8:1201",
+        "label": "8 U.S.C. 1201",
+        "first_line": 4524,
+        "lines_sample": [
+          4524
+        ],
+        "count": 1
+      }
     }
   ],
   "downstream_edges": [
@@ -817,6 +904,67 @@
           54692
         ],
         "count": 1
+      }
+    },
+    {
+      "id": "usc-title-8-section-1182->public-law-104-208:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-8-section-1182",
+      "source_label": "8 U.S.C. 1182",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-104-208",
+      "target_label": "Public Law 104-208",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:8:1182",
+        "label": "8 U.S.C. 1182",
+        "first_line": 32080,
+        "lines_sample": [
+          32080,
+          32089,
+          32855,
+          32989,
+          32997,
+          33038,
+          34103,
+          34657,
+          35219,
+          35268,
+          35269,
+          35377
+        ],
+        "count": 53
+      }
+    },
+    {
+      "id": "usc-title-8-section-1182->public-law-107-296:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-8-section-1182",
+      "source_label": "8 U.S.C. 1182",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-107-296",
+      "target_label": "Public Law 107-296",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:8:1182",
+        "label": "8 U.S.C. 1182",
+        "first_line": 3351,
+        "lines_sample": [
+          3351,
+          3353,
+          3355,
+          3357,
+          3359,
+          3361,
+          3405
+        ],
+        "count": 7
       }
     },
     {
@@ -1173,6 +1321,29 @@
       }
     },
     {
+      "id": "usc-title-8-section-1182->usc-title-8-section-1201:references:resolved_reference",
+      "source_artifact_id": "usc-title-8-section-1182",
+      "source_label": "8 U.S.C. 1182",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-8-section-1201",
+      "target_label": "8 U.S.C. 1201",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:8:1182",
+        "label": "8 U.S.C. 1182",
+        "first_line": 494,
+        "lines_sample": [
+          494,
+          513
+        ],
+        "count": 2
+      }
+    },
+    {
       "id": "usc-title-8-section-1182->usc-title-8-section-1255:references:resolved_reference",
       "source_artifact_id": "usc-title-8-section-1182",
       "source_label": "8 U.S.C. 1182",
@@ -1329,23 +1500,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:42:1395",
-      "label": "42 U.S.C. 1395",
-      "title": "42 U.S.C. 1395",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:1395",
-      "count": 1,
-      "lines_sample": [
-        2034
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:42:1395ww",
       "label": "42 U.S.C. 1395ww",
       "title": "42 U.S.C. 1395ww",
@@ -1448,23 +1602,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:8:1201",
-      "label": "8 U.S.C. 1201",
-      "title": "8 U.S.C. 1201",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:8:1201",
-      "count": 1,
-      "lines_sample": [
-        4524
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:8:1227",
       "label": "8 U.S.C. 1227",
       "title": "8 U.S.C. 1227",
@@ -1514,6 +1651,23 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:11935",
+      "label": "Executive Order 11935",
+      "title": "Executive Order 11935",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:11935",
+      "count": 1,
+      "lines_sample": [
+        5595
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -1522,14 +1676,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-8-section-1182",
       "direction": "upstream",
-      "edge_count": 4
+      "edge_count": 6
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-8-section-1182",
       "direction": "downstream",
-      "edge_count": 17
+      "edge_count": 20
     }
   ]
 }

@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 3,
+    "upstream_edge_count": 4,
     "downstream_edge_count": 3,
-    "catalogued_node_count": 7,
-    "uncatalogued_gap_count": 7,
-    "evidence_backed_edge_count": 6,
+    "catalogued_node_count": 8,
+    "uncatalogued_gap_count": 6,
+    "evidence_backed_edge_count": 7,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -199,21 +199,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:21:301",
+      "id": "usc-title-21-section-301",
       "label": "21 U.S.C. 301",
-      "title": "21 U.S.C. 301",
+      "title": "21 U.S.C. 301: Short title",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:21:301",
-      "count": 1,
-      "lines_sample": [
-        840
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_21",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:40:471",
@@ -318,6 +316,28 @@
         "first_line": 1475,
         "lines_sample": [
           1475
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-21-section-301->usc-title-14-section-504:references:resolved_reference",
+      "source_artifact_id": "usc-title-21-section-301",
+      "source_label": "21 U.S.C. 301",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-14-section-504",
+      "target_label": "14 U.S.C. 504",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:21:301",
+        "label": "21 U.S.C. 301",
+        "first_line": 840,
+        "lines_sample": [
+          840
         ],
         "count": 1
       }
@@ -541,23 +561,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:21:301",
-      "label": "21 U.S.C. 301",
-      "title": "21 U.S.C. 301",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:21:301",
-      "count": 1,
-      "lines_sample": [
-        840
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:54:300101",
       "label": "54 U.S.C. 300101",
       "title": "54 U.S.C. 300101",
@@ -581,7 +584,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-14-section-504",
       "direction": "upstream",
-      "edge_count": 3
+      "edge_count": 4
     },
     {
       "id": "trace-downstream",

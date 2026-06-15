@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 11,
+    "upstream_edge_count": 12,
     "downstream_edge_count": 8,
-    "catalogued_node_count": 20,
-    "uncatalogued_gap_count": 14,
-    "evidence_backed_edge_count": 19,
+    "catalogued_node_count": 21,
+    "uncatalogued_gap_count": 13,
+    "evidence_backed_edge_count": 20,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -554,21 +554,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:5:1001",
+      "id": "usc-title-5-section-1001",
       "label": "5 U.S.C. 1001",
-      "title": "5 U.S.C. 1001",
+      "title": "5 U.S.C. 1001: Definitions",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:5:1001",
-      "count": 1,
-      "lines_sample": [
-        2112
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_5",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:5:171c",
@@ -815,6 +813,28 @@
         "first_line": 2749,
         "lines_sample": [
           2749
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-5-section-1001->usc-title-10-section-4001:references:resolved_reference",
+      "source_artifact_id": "usc-title-5-section-1001",
+      "source_label": "5 U.S.C. 1001",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-4001",
+      "target_label": "10 U.S.C. 4001",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:5:1001",
+        "label": "5 U.S.C. 1001",
+        "first_line": 2112,
+        "lines_sample": [
+          2112
         ],
         "count": 1
       }
@@ -1320,23 +1340,6 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
-    },
-    {
-      "id": "gap:usc:5:1001",
-      "label": "5 U.S.C. 1001",
-      "title": "5 U.S.C. 1001",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:5:1001",
-      "count": 1,
-      "lines_sample": [
-        2112
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -1345,7 +1348,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-10-section-4001",
       "direction": "upstream",
-      "edge_count": 11
+      "edge_count": 12
     },
     {
       "id": "trace-downstream",

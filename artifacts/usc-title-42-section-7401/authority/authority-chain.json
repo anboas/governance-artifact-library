@@ -62,15 +62,45 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 9,
-    "catalogued_node_count": 10,
+    "downstream_edge_count": 11,
+    "catalogued_node_count": 12,
     "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 9,
+    "evidence_backed_edge_count": 11,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "public-law-104-106",
+      "label": "Public Law 104-106",
+      "title": "Public Law 104-106: National Defense Authorization Act for Fiscal Year 1995 (Public",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-105-85",
+      "label": "Public Law 105-85",
+      "title": "Public Law 105-85: National Defense Authorization Act for",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "public-law-110-140",
       "label": "Public Law 110-140",
@@ -242,6 +272,51 @@
   ],
   "upstream_edges": [],
   "downstream_edges": [
+    {
+      "id": "usc-title-42-section-7401->public-law-104-106:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-7401",
+      "source_label": "42 U.S.C. 7401",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-104-106",
+      "target_label": "Public Law 104-106",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:7401",
+        "label": "42 U.S.C. 7401",
+        "first_line": 1883,
+        "lines_sample": [
+          1883,
+          25359
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "usc-title-42-section-7401->public-law-105-85:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-7401",
+      "source_label": "42 U.S.C. 7401",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-105-85",
+      "target_label": "Public Law 105-85",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:7401",
+        "label": "42 U.S.C. 7401",
+        "first_line": 3787,
+        "lines_sample": [
+          3787
+        ],
+        "count": 1
+      }
+    },
     {
       "id": "usc-title-42-section-7401->public-law-110-140:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-42-section-7401",
@@ -477,7 +552,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-42-section-7401",
       "direction": "downstream",
-      "edge_count": 9
+      "edge_count": 11
     }
   ]
 }

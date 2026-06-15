@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 16,
-    "catalogued_node_count": 17,
+    "downstream_edge_count": 17,
+    "catalogued_node_count": 18,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 16,
+    "evidence_backed_edge_count": 17,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -230,6 +230,21 @@
       "lane_label": "Statute",
       "hierarchy_rank": 20,
       "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-22-section-2753",
+      "label": "22 U.S.C. 2753",
+      "title": "22 U.S.C. 2753: Eligibility for defense services or defense articles",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "foreign_affairs",
       "issuing_authority": "Congress",
       "source_system": "U.S. Code",
       "mirror_status": "mirrored",
@@ -581,6 +596,28 @@
       }
     },
     {
+      "id": "usc-title-50-section-3091->usc-title-22-section-2753:references:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-3091",
+      "source_label": "50 U.S.C. 3091",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-22-section-2753",
+      "target_label": "22 U.S.C. 2753",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:3091",
+        "label": "50 U.S.C. 3091",
+        "first_line": 796,
+        "lines_sample": [
+          796
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-50-section-3091->usc-title-22-section-2776:references:resolved_reference",
       "source_artifact_id": "usc-title-50-section-3091",
       "source_label": "50 U.S.C. 3091",
@@ -708,7 +745,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-50-section-3091",
       "direction": "downstream",
-      "edge_count": 16
+      "edge_count": 17
     }
   ]
 }

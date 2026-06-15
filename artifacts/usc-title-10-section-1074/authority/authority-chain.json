@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 4,
-    "downstream_edge_count": 23,
-    "catalogued_node_count": 27,
-    "uncatalogued_gap_count": 6,
-    "evidence_backed_edge_count": 27,
+    "upstream_edge_count": 6,
+    "downstream_edge_count": 26,
+    "catalogued_node_count": 32,
+    "uncatalogued_gap_count": 4,
+    "evidence_backed_edge_count": 32,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -102,9 +102,39 @@
       "status": "catalogued"
     },
     {
+      "id": "public-law-104-106",
+      "label": "Public Law 104-106",
+      "title": "Public Law 104-106: National Defense Authorization Act for Fiscal Year 1995 (Public",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "public-law-104-201",
       "label": "Public Law 104-201",
       "title": "Public Law 104-201: National Defense Authorization Act for Fiscal",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-105-85",
+      "label": "Public Law 105-85",
+      "title": "Public Law 105-85: National Defense Authorization Act for",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
@@ -432,6 +462,21 @@
       "status": "current"
     },
     {
+      "id": "usc-title-10-section-1074f",
+      "label": "10 U.S.C. 1074f",
+      "title": "10 U.S.C. 1074f: Medical tracking system for members deployed overseas",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "usc-title-10-section-111",
       "label": "10 U.S.C. 111",
       "title": "10 U.S.C. 111: Executive department",
@@ -462,21 +507,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:21:355",
+      "id": "usc-title-21-section-355",
       "label": "21 U.S.C. 355",
-      "title": "21 U.S.C. 355",
+      "title": "21 U.S.C. 355: New drugs",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:21:355",
-      "count": 1,
-      "lines_sample": [
-        659
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_21",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:21:812",
@@ -528,21 +571,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:42:1395",
+      "id": "usc-title-42-section-1395",
       "label": "42 U.S.C. 1395",
-      "title": "42 U.S.C. 1395",
+      "title": "42 U.S.C. 1395: Prohibition against any Federal interference",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:1395",
-      "count": 1,
-      "lines_sample": [
-        937
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:42:1395mm",
@@ -647,6 +688,28 @@
       }
     },
     {
+      "id": "usc-title-21-section-355->usc-title-10-section-1074:references:resolved_reference",
+      "source_artifact_id": "usc-title-21-section-355",
+      "source_label": "21 U.S.C. 355",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-1074",
+      "target_label": "10 U.S.C. 1074",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:21:355",
+        "label": "21 U.S.C. 355",
+        "first_line": 659,
+        "lines_sample": [
+          659
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-38-section-527->usc-title-10-section-1074:references:resolved_reference",
       "source_artifact_id": "usc-title-38-section-527",
       "source_label": "38 U.S.C. 527",
@@ -664,6 +727,28 @@
         "first_line": 745,
         "lines_sample": [
           745
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-42-section-1395->usc-title-10-section-1074:references:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-1395",
+      "source_label": "42 U.S.C. 1395",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-1074",
+      "target_label": "10 U.S.C. 1074",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:1395",
+        "label": "42 U.S.C. 1395",
+        "first_line": 937,
+        "lines_sample": [
+          937
         ],
         "count": 1
       }
@@ -715,6 +800,30 @@
       }
     },
     {
+      "id": "usc-title-10-section-1074->public-law-104-106:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-1074",
+      "source_label": "10 U.S.C. 1074",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-104-106",
+      "target_label": "Public Law 104-106",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:1074",
+        "label": "10 U.S.C. 1074",
+        "first_line": 14121,
+        "lines_sample": [
+          14121,
+          20302,
+          20304
+        ],
+        "count": 3
+      }
+    },
+    {
       "id": "usc-title-10-section-1074->public-law-104-201:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-10-section-1074",
       "source_label": "10 U.S.C. 1074",
@@ -734,6 +843,39 @@
           10329
         ],
         "count": 1
+      }
+    },
+    {
+      "id": "usc-title-10-section-1074->public-law-105-85:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-1074",
+      "source_label": "10 U.S.C. 1074",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-105-85",
+      "target_label": "Public Law 105-85",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:1074",
+        "label": "10 U.S.C. 1074",
+        "first_line": 10480,
+        "lines_sample": [
+          10480,
+          10488,
+          10509,
+          10521,
+          10534,
+          10539,
+          11228,
+          11245,
+          11256,
+          11286,
+          11326,
+          11497
+        ],
+        "count": 14
       }
     },
     {
@@ -1147,6 +1289,28 @@
       }
     },
     {
+      "id": "usc-title-10-section-1074->usc-title-10-section-1074f:references:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-1074",
+      "source_label": "10 U.S.C. 1074",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-1074f",
+      "target_label": "10 U.S.C. 1074f",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:1074",
+        "label": "10 U.S.C. 1074",
+        "first_line": 522,
+        "lines_sample": [
+          522
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-10-section-1074->usc-title-10-section-111:references:resolved_reference",
       "source_artifact_id": "usc-title-10-section-1074",
       "source_label": "10 U.S.C. 1074",
@@ -1212,23 +1376,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:21:355",
-      "label": "21 U.S.C. 355",
-      "title": "21 U.S.C. 355",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:21:355",
-      "count": 1,
-      "lines_sample": [
-        659
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:21:812",
       "label": "21 U.S.C. 812",
       "title": "21 U.S.C. 812",
@@ -1241,23 +1388,6 @@
       "count": 1,
       "lines_sample": [
         661
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:usc:42:1395",
-      "label": "42 U.S.C. 1395",
-      "title": "42 U.S.C. 1395",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:1395",
-      "count": 1,
-      "lines_sample": [
-        937
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -1303,14 +1433,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-10-section-1074",
       "direction": "upstream",
-      "edge_count": 4
+      "edge_count": 6
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-10-section-1074",
       "direction": "downstream",
-      "edge_count": 23
+      "edge_count": 26
     }
   ]
 }

@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 1,
     "downstream_edge_count": 6,
-    "catalogued_node_count": 7,
-    "uncatalogued_gap_count": 2,
-    "evidence_backed_edge_count": 6,
+    "catalogued_node_count": 8,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 7,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -179,22 +179,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:22:3927",
+      "id": "usc-title-22-section-3927",
       "label": "22 U.S.C. 3927",
-      "title": "22 U.S.C. 3927",
+      "title": "22 U.S.C. 3927: Chief of mission",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:22:3927",
-      "count": 2,
-      "lines_sample": [
-        648,
-        749
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "foreign_affairs",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-22-section-4865",
@@ -212,7 +209,31 @@
       "status": "current"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "usc-title-22-section-3927->usc-title-22-section-4865:references:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-3927",
+      "source_label": "22 U.S.C. 3927",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-22-section-4865",
+      "target_label": "22 U.S.C. 4865",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:3927",
+        "label": "22 U.S.C. 3927",
+        "first_line": 648,
+        "lines_sample": [
+          648,
+          749
+        ],
+        "count": 2
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "usc-title-22-section-4865->pl-118-31-fy2024-ndaa:references_upstream:resolved_reference",
@@ -356,24 +377,6 @@
   ],
   "uncatalogued_authority_gaps": [
     {
-      "id": "gap:usc:22:3927",
-      "label": "22 U.S.C. 3927",
-      "title": "22 U.S.C. 3927",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:22:3927",
-      "count": 2,
-      "lines_sample": [
-        648,
-        749
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:22:2706",
       "label": "22 U.S.C. 2706",
       "title": "22 U.S.C. 2706",
@@ -397,7 +400,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-22-section-4865",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",

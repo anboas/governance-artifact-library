@@ -61,33 +61,30 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 11,
+    "upstream_edge_count": 12,
     "downstream_edge_count": 10,
-    "catalogued_node_count": 20,
-    "uncatalogued_gap_count": 7,
-    "evidence_backed_edge_count": 17,
+    "catalogued_node_count": 21,
+    "uncatalogued_gap_count": 6,
+    "evidence_backed_edge_count": 18,
     "inferred_edge_count": 4,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
     {
-      "id": "gap:public-law:115-336",
+      "id": "public-law-115-336",
       "label": "Public Law 115-336",
-      "title": "Public Law 115-336",
+      "title": "Public Law 115-336: Dec. 20, 2018",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
       "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:115-336",
-      "count": 2,
-      "lines_sample": [
-        112,
-        513
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_policy",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:executive-order:12333",
@@ -736,6 +733,29 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "public-law-115-336->dodd-5105-74:authorizes:resolved_reference",
+      "source_artifact_id": "public-law-115-336",
+      "source_label": "Public Law 115-336",
+      "source_lane": "law",
+      "target_artifact_id": "dodd-5105-74",
+      "target_label": "DoDD 5105.74",
+      "target_lane": "dod",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "public-law:115-336",
+        "label": "Public Law 115-336",
+        "first_line": 112,
+        "lines_sample": [
+          112,
+          513
+        ],
+        "count": 2
+      }
     }
   ],
   "downstream_edges": [
@@ -962,24 +982,6 @@
   ],
   "uncatalogued_authority_gaps": [
     {
-      "id": "gap:public-law:115-336",
-      "label": "Public Law 115-336",
-      "title": "Public Law 115-336",
-      "artifact_type": "Public Law",
-      "lane": "law",
-      "lane_label": "Law",
-      "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:115-336",
-      "count": 2,
-      "lines_sample": [
-        112,
-        513
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:dodd:5205.16",
       "label": "DoDD 5205.16",
       "title": "DoDD 5205.16",
@@ -1088,7 +1090,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodd-5105-74",
       "direction": "upstream",
-      "edge_count": 11
+      "edge_count": 12
     },
     {
       "id": "trace-downstream",

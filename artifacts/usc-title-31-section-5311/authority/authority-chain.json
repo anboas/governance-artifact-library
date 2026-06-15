@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 1,
+    "upstream_edge_count": 3,
     "downstream_edge_count": 3,
-    "catalogued_node_count": 5,
-    "uncatalogued_gap_count": 12,
-    "evidence_backed_edge_count": 4,
+    "catalogued_node_count": 7,
+    "uncatalogued_gap_count": 10,
+    "evidence_backed_edge_count": 6,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -274,21 +274,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:22:262r",
+      "id": "usc-title-22-section-262r",
       "label": "22 U.S.C. 262r",
-      "title": "22 U.S.C. 262r",
+      "title": "22 U.S.C. 262r: Annual report by Chairman of National Advisory Council on International Monetary and Financial Policies",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:22:262r",
-      "count": 1,
-      "lines_sample": [
-        575
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "foreign_affairs",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:26:6050i",
@@ -324,21 +322,19 @@
       "status": "current"
     },
     {
-      "id": "gap:usc:5:1001",
+      "id": "usc-title-5-section-1001",
       "label": "5 U.S.C. 1001",
-      "title": "5 U.S.C. 1001",
+      "title": "5 U.S.C. 1001: Definitions",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:5:1001",
-      "count": 1,
-      "lines_sample": [
-        416
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_5",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:5:551",
@@ -380,6 +376,50 @@
           1104
         ],
         "count": 2
+      }
+    },
+    {
+      "id": "usc-title-22-section-262r->usc-title-31-section-5311:references:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-262r",
+      "source_label": "22 U.S.C. 262r",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-31-section-5311",
+      "target_label": "31 U.S.C. 5311",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:262r",
+        "label": "22 U.S.C. 262r",
+        "first_line": 575,
+        "lines_sample": [
+          575
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-5-section-1001->usc-title-31-section-5311:references:resolved_reference",
+      "source_artifact_id": "usc-title-5-section-1001",
+      "source_label": "5 U.S.C. 1001",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-31-section-5311",
+      "target_label": "31 U.S.C. 5311",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:5:1001",
+        "label": "5 U.S.C. 1001",
+        "first_line": 416,
+        "lines_sample": [
+          416
+        ],
+        "count": 1
       }
     }
   ],
@@ -632,40 +672,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:22:262r",
-      "label": "22 U.S.C. 262r",
-      "title": "22 U.S.C. 262r",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:22:262r",
-      "count": 1,
-      "lines_sample": [
-        575
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:usc:5:1001",
-      "label": "5 U.S.C. 1001",
-      "title": "5 U.S.C. 1001",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:5:1001",
-      "count": 1,
-      "lines_sample": [
-        416
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:5:551",
       "label": "5 U.S.C. 551",
       "title": "5 U.S.C. 551",
@@ -689,7 +695,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-31-section-5311",
       "direction": "upstream",
-      "edge_count": 1
+      "edge_count": 3
     },
     {
       "id": "trace-downstream",

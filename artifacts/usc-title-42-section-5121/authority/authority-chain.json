@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 10,
-    "catalogued_node_count": 11,
+    "downstream_edge_count": 12,
+    "catalogued_node_count": 13,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 10,
+    "evidence_backed_edge_count": 12,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -75,6 +75,21 @@
       "id": "public-law-105-261",
       "label": "Public Law 105-261",
       "title": "Public Law 105-261: National Defense Authorization Act for Fiscal Year",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-107-296",
+      "label": "Public Law 107-296",
+      "title": "Public Law 107-296: National Defense Authorization Act for Fiscal Year 1994 (Public",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
@@ -192,6 +207,21 @@
       "status": "catalogued"
     },
     {
+      "id": "usc-title-42-section-247d",
+      "label": "42 U.S.C. 247d",
+      "title": "42 U.S.C. 247d: Public health emergencies",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "usc-title-42-section-5121",
       "label": "42 U.S.C. 5121",
       "title": "42 U.S.C. 5121: Congressional findings and declarations",
@@ -257,6 +287,28 @@
         "first_line": 16326,
         "lines_sample": [
           16326
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-42-section-5121->public-law-107-296:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-5121",
+      "source_label": "42 U.S.C. 5121",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-107-296",
+      "target_label": "Public Law 107-296",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:5121",
+        "label": "42 U.S.C. 5121",
+        "first_line": 7061,
+        "lines_sample": [
+          7061
         ],
         "count": 1
       }
@@ -427,6 +479,28 @@
       }
     },
     {
+      "id": "usc-title-42-section-5121->usc-title-42-section-247d:references:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-5121",
+      "source_label": "42 U.S.C. 5121",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-42-section-247d",
+      "target_label": "42 U.S.C. 247d",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:5121",
+        "label": "42 U.S.C. 5121",
+        "first_line": 618,
+        "lines_sample": [
+          618
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-42-section-5121->usc-title-42-section-5170:references:resolved_reference",
       "source_artifact_id": "usc-title-42-section-5121",
       "source_label": "42 U.S.C. 5121",
@@ -486,7 +560,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-42-section-5121",
       "direction": "downstream",
-      "edge_count": 10
+      "edge_count": 12
     }
   ]
 }

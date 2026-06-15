@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 8,
-    "catalogued_node_count": 9,
-    "uncatalogued_gap_count": 2,
-    "evidence_backed_edge_count": 8,
+    "upstream_edge_count": 1,
+    "downstream_edge_count": 9,
+    "catalogued_node_count": 11,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 10,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -75,6 +75,21 @@
       "id": "public-law-105-261",
       "label": "Public Law 105-261",
       "title": "Public Law 105-261: National Defense Authorization Act for Fiscal Year",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-105-85",
+      "label": "Public Law 105-85",
+      "title": "Public Law 105-85: National Defense Authorization Act for",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
@@ -192,21 +207,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:16:670",
+      "id": "usc-title-16-section-670",
       "label": "16 U.S.C. 670",
-      "title": "16 U.S.C. 670",
+      "title": "16 U.S.C. 670: Definitions",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:16:670",
-      "count": 1,
-      "lines_sample": [
-        572
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_16",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-16-section-670a",
@@ -241,7 +254,30 @@
       "priority": "high"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "usc-title-16-section-670->usc-title-16-section-670a:references:resolved_reference",
+      "source_artifact_id": "usc-title-16-section-670",
+      "source_label": "16 U.S.C. 670",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-16-section-670a",
+      "target_label": "16 U.S.C. 670a",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:16:670",
+        "label": "16 U.S.C. 670",
+        "first_line": 572,
+        "lines_sample": [
+          572
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "usc-title-16-section-670a->public-law-105-261:references_upstream:resolved_reference",
@@ -263,6 +299,39 @@
           17779
         ],
         "count": 1
+      }
+    },
+    {
+      "id": "usc-title-16-section-670a->public-law-105-85:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-16-section-670a",
+      "source_label": "16 U.S.C. 670a",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-105-85",
+      "target_label": "Public Law 105-85",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:16:670a",
+        "label": "16 U.S.C. 670a",
+        "first_line": 22223,
+        "lines_sample": [
+          22223,
+          22226,
+          22289,
+          22292,
+          22296,
+          22300,
+          22316,
+          22361,
+          22420,
+          22426,
+          22500,
+          22530
+        ],
+        "count": 15
       }
     },
     {
@@ -430,23 +499,6 @@
   ],
   "uncatalogued_authority_gaps": [
     {
-      "id": "gap:usc:16:670",
-      "label": "16 U.S.C. 670",
-      "title": "16 U.S.C. 670",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:16:670",
-      "count": 1,
-      "lines_sample": [
-        572
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:41:501",
       "label": "41 U.S.C. 501",
       "title": "41 U.S.C. 501",
@@ -470,14 +522,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-16-section-670a",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-16-section-670a",
       "direction": "downstream",
-      "edge_count": 8
+      "edge_count": 9
     }
   ]
 }

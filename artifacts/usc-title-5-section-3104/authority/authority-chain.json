@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 16,
-    "catalogued_node_count": 17,
+    "downstream_edge_count": 17,
+    "catalogued_node_count": 18,
     "uncatalogued_gap_count": 7,
-    "evidence_backed_edge_count": 16,
+    "evidence_backed_edge_count": 17,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -105,6 +105,21 @@
       "id": "public-law-106-65",
       "label": "Public Law 106-65",
       "title": "Public Law 106-65: National Defense Authorization Act for Fiscal Year",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-107-296",
+      "label": "Public Law 107-296",
+      "title": "Public Law 107-296: National Defense Authorization Act for Fiscal Year 1994 (Public",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
@@ -541,6 +556,28 @@
       }
     },
     {
+      "id": "usc-title-5-section-3104->public-law-107-296:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-5-section-3104",
+      "source_label": "5 U.S.C. 3104",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-107-296",
+      "target_label": "Public Law 107-296",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:5:3104",
+        "label": "5 U.S.C. 3104",
+        "first_line": 2181,
+        "lines_sample": [
+          2181
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-5-section-3104->public-law-108-136:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-5-section-3104",
       "source_label": "5 U.S.C. 3104",
@@ -950,7 +987,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-5-section-3104",
       "direction": "downstream",
-      "edge_count": 16
+      "edge_count": 17
     }
   ]
 }

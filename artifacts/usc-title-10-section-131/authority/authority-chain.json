@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 10,
-    "catalogued_node_count": 11,
-    "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 10,
+    "upstream_edge_count": 1,
+    "downstream_edge_count": 12,
+    "catalogued_node_count": 14,
+    "uncatalogued_gap_count": 0,
+    "evidence_backed_edge_count": 13,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -87,9 +87,39 @@
       "status": "catalogued"
     },
     {
+      "id": "public-law-104-106",
+      "label": "Public Law 104-106",
+      "title": "Public Law 104-106: National Defense Authorization Act for Fiscal Year 1995 (Public",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "public-law-104-201",
       "label": "Public Law 104-201",
       "title": "Public Law 104-201: National Defense Authorization Act for Fiscal",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-105-85",
+      "label": "Public Law 105-85",
+      "title": "Public Law 105-85: National Defense Authorization Act for",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
@@ -237,24 +267,45 @@
       "status": "current"
     },
     {
-      "id": "gap:usc:50:3801",
+      "id": "usc-title-50-section-3801",
       "label": "50 U.S.C. 3801",
-      "title": "50 U.S.C. 3801",
+      "title": "50 U.S.C. 3801: Short title; Congressional declaration of policy",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:50:3801",
-      "count": 1,
-      "lines_sample": [
-        581
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "national_security",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "usc-title-50-section-3801->usc-title-10-section-131:references:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-3801",
+      "source_label": "50 U.S.C. 3801",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-131",
+      "target_label": "10 U.S.C. 131",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:3801",
+        "label": "50 U.S.C. 3801",
+        "first_line": 581,
+        "lines_sample": [
+          581
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "usc-title-10-section-131->pl-118-31-fy2024-ndaa:references_upstream:resolved_reference",
@@ -279,6 +330,29 @@
       }
     },
     {
+      "id": "usc-title-10-section-131->public-law-104-106:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-131",
+      "source_label": "10 U.S.C. 131",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-104-106",
+      "target_label": "Public Law 104-106",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:131",
+        "label": "10 USC 131",
+        "first_line": 13273,
+        "lines_sample": [
+          13273,
+          13394
+        ],
+        "count": 2
+      }
+    },
+    {
       "id": "usc-title-10-section-131->public-law-104-201:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-10-section-131",
       "source_label": "10 U.S.C. 131",
@@ -299,6 +373,28 @@
           11275
         ],
         "count": 2
+      }
+    },
+    {
+      "id": "usc-title-10-section-131->public-law-105-85:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-131",
+      "source_label": "10 U.S.C. 131",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-105-85",
+      "target_label": "Public Law 105-85",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:131",
+        "label": "10 USC 131",
+        "first_line": 13259,
+        "lines_sample": [
+          13259
+        ],
+        "count": 1
       }
     },
     {
@@ -504,39 +600,21 @@
       }
     }
   ],
-  "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:usc:50:3801",
-      "label": "50 U.S.C. 3801",
-      "title": "50 U.S.C. 3801",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:50:3801",
-      "count": 1,
-      "lines_sample": [
-        581
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    }
-  ],
+  "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-10-section-131",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-10-section-131",
       "direction": "downstream",
-      "edge_count": 10
+      "edge_count": 12
     }
   ]
 }

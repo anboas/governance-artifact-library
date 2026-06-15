@@ -62,15 +62,45 @@
   ],
   "summary": {
     "upstream_edge_count": 5,
-    "downstream_edge_count": 6,
-    "catalogued_node_count": 11,
+    "downstream_edge_count": 8,
+    "catalogued_node_count": 13,
     "uncatalogued_gap_count": 8,
-    "evidence_backed_edge_count": 11,
+    "evidence_backed_edge_count": 13,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "public-law-104-208",
+      "label": "Public Law 104-208",
+      "title": "Public Law 104-208: National Defense Authorization Act for Fiscal Year 1991 (Public",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-107-296",
+      "label": "Public Law 107-296",
+      "title": "Public Law 107-296: National Defense Authorization Act for Fiscal Year 1994 (Public",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "public-law-110-181",
       "label": "Public Law 110-181",
@@ -498,6 +528,52 @@
   ],
   "downstream_edges": [
     {
+      "id": "usc-title-8-section-1157->public-law-104-208:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-8-section-1157",
+      "source_label": "8 U.S.C. 1157",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-104-208",
+      "target_label": "Public Law 104-208",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:8:1157",
+        "label": "8 U.S.C. 1157",
+        "first_line": 9623,
+        "lines_sample": [
+          9623,
+          39363
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "usc-title-8-section-1157->public-law-107-296:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-8-section-1157",
+      "source_label": "8 U.S.C. 1157",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-107-296",
+      "target_label": "Public Law 107-296",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:8:1157",
+        "label": "8 U.S.C. 1157",
+        "first_line": 9246,
+        "lines_sample": [
+          9246,
+          9298
+        ],
+        "count": 2
+      }
+    },
+    {
       "id": "usc-title-8-section-1157->public-law-110-181:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-8-section-1157",
       "source_label": "8 U.S.C. 1157",
@@ -790,7 +866,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-8-section-1157",
       "direction": "downstream",
-      "edge_count": 6
+      "edge_count": 8
     }
   ]
 }

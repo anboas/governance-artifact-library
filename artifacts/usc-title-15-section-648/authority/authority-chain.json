@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 2,
-    "downstream_edge_count": 10,
-    "catalogued_node_count": 12,
+    "downstream_edge_count": 11,
+    "catalogued_node_count": 13,
     "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 12,
+    "evidence_backed_edge_count": 13,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -75,6 +75,21 @@
       "id": "public-law-104-201",
       "label": "Public Law 104-201",
       "title": "Public Law 104-201: National Defense Authorization Act for Fiscal",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-104-208",
+      "label": "Public Law 104-208",
+      "title": "Public Law 104-208: National Defense Authorization Act for Fiscal Year 1991 (Public",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
@@ -339,6 +354,31 @@
       }
     },
     {
+      "id": "usc-title-15-section-648->public-law-104-208:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-15-section-648",
+      "source_label": "15 U.S.C. 648",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-104-208",
+      "target_label": "Public Law 104-208",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:15:648",
+        "label": "15 U.S.C. 648",
+        "first_line": 41735,
+        "lines_sample": [
+          41735,
+          41772,
+          41784,
+          41802
+        ],
+        "count": 4
+      }
+    },
+    {
       "id": "usc-title-15-section-648->public-law-110-140:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-15-section-648",
       "source_label": "15 U.S.C. 648",
@@ -579,7 +619,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-15-section-648",
       "direction": "downstream",
-      "edge_count": 10
+      "edge_count": 11
     }
   ]
 }

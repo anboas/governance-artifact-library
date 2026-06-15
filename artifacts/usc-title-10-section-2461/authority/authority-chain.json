@@ -61,16 +61,31 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 10,
-    "catalogued_node_count": 11,
-    "uncatalogued_gap_count": 3,
-    "evidence_backed_edge_count": 10,
+    "upstream_edge_count": 1,
+    "downstream_edge_count": 13,
+    "catalogued_node_count": 15,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 14,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "public-law-104-106",
+      "label": "Public Law 104-106",
+      "title": "Public Law 104-106: National Defense Authorization Act for Fiscal Year 1995 (Public",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "public-law-105-261",
       "label": "Public Law 105-261",
@@ -87,9 +102,39 @@
       "status": "catalogued"
     },
     {
+      "id": "public-law-105-85",
+      "label": "Public Law 105-85",
+      "title": "Public Law 105-85: National Defense Authorization Act for",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "public-law-106-65",
       "label": "Public Law 106-65",
       "title": "Public Law 106-65: National Defense Authorization Act for Fiscal Year",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-107-107",
+      "label": "Public Law 107-107",
+      "title": "Public Law 107-107: National Defense Authorization Act for Fiscal",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
@@ -237,22 +282,19 @@
       "status": "current"
     },
     {
-      "id": "gap:usc:10:3531",
+      "id": "usc-title-10-section-3531",
       "label": "10 U.S.C. 3531",
-      "title": "10 U.S.C. 3531",
+      "title": "10 U.S.C. 3531: Multiyear contracts: acquisition of services",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:10:3531",
-      "count": 3,
-      "lines_sample": [
-        669,
-        673
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:10:3671",
@@ -290,8 +332,58 @@
       "priority": "high"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "usc-title-10-section-3531->usc-title-10-section-2461:references:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-3531",
+      "source_label": "10 U.S.C. 3531",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-2461",
+      "target_label": "10 U.S.C. 2461",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:3531",
+        "label": "10 U.S.C. 3531",
+        "first_line": 669,
+        "lines_sample": [
+          669,
+          673
+        ],
+        "count": 3
+      }
+    }
+  ],
   "downstream_edges": [
+    {
+      "id": "usc-title-10-section-2461->public-law-104-106:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-2461",
+      "source_label": "10 U.S.C. 2461",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-104-106",
+      "target_label": "Public Law 104-106",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:2461",
+        "label": "10 USC 2461",
+        "first_line": 5106,
+        "lines_sample": [
+          5106,
+          5130,
+          5206,
+          5286,
+          5393
+        ],
+        "count": 5
+      }
+    },
     {
       "id": "usc-title-10-section-2461->public-law-105-261:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-10-section-2461",
@@ -317,6 +409,31 @@
       }
     },
     {
+      "id": "usc-title-10-section-2461->public-law-105-85:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-2461",
+      "source_label": "10 U.S.C. 2461",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-105-85",
+      "target_label": "Public Law 105-85",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:2461",
+        "label": "10 U.S.C. 2461",
+        "first_line": 4932,
+        "lines_sample": [
+          4932,
+          4972,
+          4988,
+          15816
+        ],
+        "count": 4
+      }
+    },
+    {
       "id": "usc-title-10-section-2461->public-law-106-65:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-10-section-2461",
       "source_label": "10 U.S.C. 2461",
@@ -334,6 +451,28 @@
         "first_line": 12373,
         "lines_sample": [
           12373
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-10-section-2461->public-law-107-107:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-2461",
+      "source_label": "10 U.S.C. 2461",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-107-107",
+      "target_label": "Public Law 107-107",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:2461",
+        "label": "10 USC 2461",
+        "first_line": 3178,
+        "lines_sample": [
+          3178
         ],
         "count": 1
       }
@@ -531,24 +670,6 @@
   ],
   "uncatalogued_authority_gaps": [
     {
-      "id": "gap:usc:10:3531",
-      "label": "10 U.S.C. 3531",
-      "title": "10 U.S.C. 3531",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:10:3531",
-      "count": 3,
-      "lines_sample": [
-        669,
-        673
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:41:47",
       "label": "41 U.S.C. 47",
       "title": "41 U.S.C. 47",
@@ -590,14 +711,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-10-section-2461",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-10-section-2461",
       "direction": "downstream",
-      "edge_count": 10
+      "edge_count": 13
     }
   ]
 }

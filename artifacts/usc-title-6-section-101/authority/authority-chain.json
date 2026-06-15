@@ -62,15 +62,30 @@
   ],
   "summary": {
     "upstream_edge_count": 1,
-    "downstream_edge_count": 8,
-    "catalogued_node_count": 10,
+    "downstream_edge_count": 10,
+    "catalogued_node_count": 12,
     "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 9,
+    "evidence_backed_edge_count": 11,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "public-law-107-296",
+      "label": "Public Law 107-296",
+      "title": "Public Law 107-296: National Defense Authorization Act for Fiscal Year 1994 (Public",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "public-law-108-458",
       "label": "Public Law 108-458",
@@ -224,6 +239,21 @@
       "status": "current"
     },
     {
+      "id": "usc-title-6-section-651",
+      "label": "6 U.S.C. 651",
+      "title": "6 U.S.C. 651: Definition",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_6",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "usc-title-8-section-1101",
       "label": "8 U.S.C. 1101",
       "title": "8 U.S.C. 1101: Definitions",
@@ -264,6 +294,33 @@
     }
   ],
   "downstream_edges": [
+    {
+      "id": "usc-title-6-section-101->public-law-107-296:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-6-section-101",
+      "source_label": "6 U.S.C. 101",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-107-296",
+      "target_label": "Public Law 107-296",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:6:101",
+        "label": "6 USC 101",
+        "first_line": 16,
+        "lines_sample": [
+          16,
+          366,
+          469,
+          1010,
+          6452,
+          7757
+        ],
+        "count": 6
+      }
+    },
     {
       "id": "usc-title-6-section-101->public-law-108-458:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-6-section-101",
@@ -452,6 +509,28 @@
         ],
         "count": 2
       }
+    },
+    {
+      "id": "usc-title-6-section-101->usc-title-6-section-651:references:resolved_reference",
+      "source_artifact_id": "usc-title-6-section-101",
+      "source_label": "6 U.S.C. 101",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-6-section-651",
+      "target_label": "6 U.S.C. 651",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:6:101",
+        "label": "6 U.S.C. 101",
+        "first_line": 188,
+        "lines_sample": [
+          188
+        ],
+        "count": 1
+      }
     }
   ],
   "uncatalogued_authority_gaps": [
@@ -486,7 +565,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-6-section-101",
       "direction": "downstream",
-      "edge_count": 8
+      "edge_count": 10
     }
   ]
 }

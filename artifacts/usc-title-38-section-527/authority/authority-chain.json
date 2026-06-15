@@ -61,16 +61,31 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 1,
-    "downstream_edge_count": 7,
-    "catalogued_node_count": 8,
-    "uncatalogued_gap_count": 3,
-    "evidence_backed_edge_count": 8,
+    "upstream_edge_count": 2,
+    "downstream_edge_count": 9,
+    "catalogued_node_count": 11,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 11,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "public-law-105-85",
+      "label": "Public Law 105-85",
+      "title": "Public Law 105-85: National Defense Authorization Act for",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "public-law-114-92",
       "label": "Public Law 114-92",
@@ -177,6 +192,21 @@
       "status": "catalogued"
     },
     {
+      "id": "usc-title-10-section-1074f",
+      "label": "10 U.S.C. 1074f",
+      "title": "10 U.S.C. 1074f: Medical tracking system for members deployed overseas",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "gap:usc:2:471",
       "label": "2 U.S.C. 471",
       "title": "2 U.S.C. 471",
@@ -226,22 +256,19 @@
       "status": "current"
     },
     {
-      "id": "gap:usc:42:247d",
+      "id": "usc-title-42-section-247d",
       "label": "42 U.S.C. 247d",
-      "title": "42 U.S.C. 247d",
+      "title": "42 U.S.C. 247d: Public health emergencies",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:247d",
-      "count": 2,
-      "lines_sample": [
-        309,
-        322
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [
@@ -267,9 +294,54 @@
         ],
         "count": 2
       }
+    },
+    {
+      "id": "usc-title-42-section-247d->usc-title-38-section-527:references:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-247d",
+      "source_label": "42 U.S.C. 247d",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-38-section-527",
+      "target_label": "38 U.S.C. 527",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:247d",
+        "label": "42 U.S.C. 247d",
+        "first_line": 309,
+        "lines_sample": [
+          309,
+          322
+        ],
+        "count": 2
+      }
     }
   ],
   "downstream_edges": [
+    {
+      "id": "usc-title-38-section-527->public-law-105-85:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-38-section-527",
+      "source_label": "38 U.S.C. 527",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-105-85",
+      "target_label": "Public Law 105-85",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:38:527",
+        "label": "38 U.S.C. 527",
+        "first_line": 11333,
+        "lines_sample": [
+          11333
+        ],
+        "count": 1
+      }
+    },
     {
       "id": "usc-title-38-section-527->public-law-114-92:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-38-section-527",
@@ -438,27 +510,34 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "usc-title-38-section-527->usc-title-10-section-1074f:references:resolved_reference",
+      "source_artifact_id": "usc-title-38-section-527",
+      "source_label": "38 U.S.C. 527",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-1074f",
+      "target_label": "10 U.S.C. 1074f",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:38:527",
+        "label": "38 U.S.C. 527",
+        "first_line": 189,
+        "lines_sample": [
+          189,
+          401,
+          431,
+          441
+        ],
+        "count": 4
+      }
     }
   ],
   "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:usc:42:247d",
-      "label": "42 U.S.C. 247d",
-      "title": "42 U.S.C. 247d",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:247d",
-      "count": 2,
-      "lines_sample": [
-        309,
-        322
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
     {
       "id": "gap:usc:2:471",
       "label": "2 U.S.C. 471",
@@ -500,14 +579,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-38-section-527",
       "direction": "upstream",
-      "edge_count": 1
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-38-section-527",
       "direction": "downstream",
-      "edge_count": 7
+      "edge_count": 9
     }
   ]
 }

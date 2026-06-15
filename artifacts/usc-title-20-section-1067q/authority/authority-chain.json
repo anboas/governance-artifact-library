@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 9,
-    "catalogued_node_count": 10,
+    "downstream_edge_count": 10,
+    "catalogued_node_count": 11,
     "uncatalogued_gap_count": 3,
-    "evidence_backed_edge_count": 9,
+    "evidence_backed_edge_count": 10,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -271,6 +271,21 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "usc-title-6-section-652",
+      "label": "6 U.S.C. 652",
+      "title": "6 U.S.C. 652: Cybersecurity and Infrastructure Security Agency",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_6",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [],
@@ -477,6 +492,28 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "usc-title-20-section-1067q->usc-title-6-section-652:references:resolved_reference",
+      "source_artifact_id": "usc-title-20-section-1067q",
+      "source_label": "20 U.S.C. 1067q",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-6-section-652",
+      "target_label": "6 U.S.C. 652",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:20:1067q",
+        "label": "20 U.S.C. 1067q",
+        "first_line": 755,
+        "lines_sample": [
+          755
+        ],
+        "count": 1
+      }
     }
   ],
   "uncatalogued_authority_gaps": [
@@ -545,7 +582,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-20-section-1067q",
       "direction": "downstream",
-      "edge_count": 9
+      "edge_count": 10
     }
   ]
 }

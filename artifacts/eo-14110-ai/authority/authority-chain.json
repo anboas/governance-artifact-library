@@ -61,32 +61,30 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 6,
+    "upstream_edge_count": 7,
     "downstream_edge_count": 3,
-    "catalogued_node_count": 9,
+    "catalogued_node_count": 10,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 8,
+    "evidence_backed_edge_count": 9,
     "inferred_edge_count": 1,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
     {
-      "id": "gap:public-law:107-296",
+      "id": "public-law-107-296",
       "label": "Public Law 107-296",
-      "title": "Public Law 107-296",
+      "title": "Public Law 107-296: National Defense Authorization Act for Fiscal Year 1994 (Public",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
       "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:107-296",
-      "count": 1,
-      "lines_sample": [
-        795
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "public-law-107-347",
@@ -133,6 +131,23 @@
       "count": 1,
       "lines_sample": [
         1598
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:114-137",
+      "label": "Public Law 114-137",
+      "title": "Public Law 114-137",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:114-137",
+      "count": 1,
+      "lines_sample": [
+        2582
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -522,6 +537,28 @@
     }
   ],
   "upstream_edges": [
+    {
+      "id": "public-law-107-296->eo-14110-ai:authorizes:resolved_reference",
+      "source_artifact_id": "public-law-107-296",
+      "source_label": "Public Law 107-296",
+      "source_lane": "law",
+      "target_artifact_id": "eo-14110-ai",
+      "target_label": "EO 14110",
+      "target_lane": "executive",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "public-law:107-296",
+        "label": "Public Law 107-296",
+        "first_line": 795,
+        "lines_sample": [
+          795
+        ],
+        "count": 1
+      }
+    },
     {
       "id": "public-law-107-347->eo-14110-ai:authorizes:resolved_reference",
       "source_artifact_id": "public-law-107-347",
@@ -999,23 +1036,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:public-law:107-296",
-      "label": "Public Law 107-296",
-      "title": "Public Law 107-296",
-      "artifact_type": "Public Law",
-      "lane": "law",
-      "lane_label": "Law",
-      "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:107-296",
-      "count": 1,
-      "lines_sample": [
-        795
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:public-law:111-203",
       "label": "Public Law 111-203",
       "title": "Public Law 111-203",
@@ -1048,6 +1068,23 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "gap:public-law:114-137",
+      "label": "Public Law 114-137",
+      "title": "Public Law 114-137",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:114-137",
+      "count": 1,
+      "lines_sample": [
+        2582
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -1056,7 +1093,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "eo-14110-ai",
       "direction": "upstream",
-      "edge_count": 6
+      "edge_count": 7
     },
     {
       "id": "trace-downstream",

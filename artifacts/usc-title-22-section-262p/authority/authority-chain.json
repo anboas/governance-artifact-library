@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 5,
-    "catalogued_node_count": 6,
+    "downstream_edge_count": 6,
+    "catalogued_node_count": 7,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 5,
+    "evidence_backed_edge_count": 6,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -160,6 +160,21 @@
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "usc-title-22-section-262r",
+      "label": "22 U.S.C. 262r",
+      "title": "22 U.S.C. 262r: Annual report by Chairman of National Advisory Council on International Monetary and Financial Policies",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "foreign_affairs",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [],
@@ -285,6 +300,28 @@
         ],
         "count": 6
       }
+    },
+    {
+      "id": "usc-title-22-section-262p->usc-title-22-section-262r:references:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-262p",
+      "source_label": "22 U.S.C. 262p",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-22-section-262r",
+      "target_label": "22 U.S.C. 262r",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:262p",
+        "label": "22 U.S.C. 262p",
+        "first_line": 374,
+        "lines_sample": [
+          374
+        ],
+        "count": 1
+      }
     }
   ],
   "uncatalogued_authority_gaps": [],
@@ -301,7 +338,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-22-section-262p",
       "direction": "downstream",
-      "edge_count": 5
+      "edge_count": 6
     }
   ]
 }

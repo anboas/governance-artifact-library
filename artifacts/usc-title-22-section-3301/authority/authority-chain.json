@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 9,
-    "catalogued_node_count": 10,
-    "uncatalogued_gap_count": 15,
-    "evidence_backed_edge_count": 9,
+    "upstream_edge_count": 1,
+    "downstream_edge_count": 10,
+    "catalogued_node_count": 11,
+    "uncatalogued_gap_count": 14,
+    "evidence_backed_edge_count": 11,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -273,21 +273,19 @@
       "status": "current"
     },
     {
-      "id": "gap:usc:22:3302",
+      "id": "usc-title-22-section-3302",
       "label": "22 U.S.C. 3302",
-      "title": "22 U.S.C. 3302",
+      "title": "22 U.S.C. 3302: Implementation of United States policy with regard to Taiwan",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:22:3302",
-      "count": 1,
-      "lines_sample": [
-        492
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "foreign_affairs",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:22:3306",
@@ -479,7 +477,30 @@
       "priority": "high"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "usc-title-22-section-3302->usc-title-22-section-3301:references:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-3302",
+      "source_label": "22 U.S.C. 3302",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-22-section-3301",
+      "target_label": "22 U.S.C. 3301",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:3302",
+        "label": "22 U.S.C. 3302",
+        "first_line": 492,
+        "lines_sample": [
+          492
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "usc-title-22-section-3301->pl-118-31-fy2024-ndaa:references_upstream:resolved_reference",
@@ -694,6 +715,31 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "usc-title-22-section-3301->usc-title-22-section-3302:references:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-3301",
+      "source_label": "22 U.S.C. 3301",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-22-section-3302",
+      "target_label": "22 U.S.C. 3302",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:3301",
+        "label": "22 U.S.C. 3301",
+        "first_line": 187,
+        "lines_sample": [
+          187,
+          231,
+          269,
+          427
+        ],
+        "count": 4
+      }
     }
   ],
   "uncatalogued_authority_gaps": [
@@ -746,23 +792,6 @@
       "count": 1,
       "lines_sample": [
         512
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:usc:22:3302",
-      "label": "22 U.S.C. 3302",
-      "title": "22 U.S.C. 3302",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:22:3302",
-      "count": 1,
-      "lines_sample": [
-        492
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -961,14 +990,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-22-section-3301",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-22-section-3301",
       "direction": "downstream",
-      "edge_count": 9
+      "edge_count": 10
     }
   ]
 }

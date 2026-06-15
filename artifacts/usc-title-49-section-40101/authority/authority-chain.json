@@ -61,16 +61,31 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 4,
-    "downstream_edge_count": 11,
-    "catalogued_node_count": 16,
+    "upstream_edge_count": 7,
+    "downstream_edge_count": 12,
+    "catalogued_node_count": 20,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 15,
+    "evidence_backed_edge_count": 19,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "public-law-107-296",
+      "label": "Public Law 107-296",
+      "title": "Public Law 107-296: National Defense Authorization Act for Fiscal Year 1994 (Public",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "public-law-108-458",
       "label": "Public Law 108-458",
@@ -471,43 +486,34 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:42:247d",
+      "id": "usc-title-42-section-247d",
       "label": "42 U.S.C. 247d",
-      "title": "42 U.S.C. 247d",
+      "title": "42 U.S.C. 247d: Public health emergencies",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:247d",
-      "count": 1,
-      "lines_sample": [
-        2114
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
-      "id": "gap:usc:42:300mm",
+      "id": "usc-title-42-section-300mm",
       "label": "42 U.S.C. 300mm",
-      "title": "42 U.S.C. 300mm",
+      "title": "42 U.S.C. 300mm: Establishment of World Trade Center Health Program",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:300mm",
-      "count": 8,
-      "lines_sample": [
-        4064,
-        4080,
-        4084,
-        4088,
-        4090,
-        4092
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-42-section-4321",
@@ -574,6 +580,38 @@
       "status": "current"
     },
     {
+      "id": "gap:usc:49:44802",
+      "label": "49 U.S.C. 44802",
+      "title": "49 U.S.C. 44802",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:49:44802",
+      "count": 1,
+      "lines_sample": [
+        1786
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "usc-title-5-section-1001",
+      "label": "5 U.S.C. 1001",
+      "title": "5 U.S.C. 1001: Definitions",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_5",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "usc-title-8-section-1101",
       "label": "8 U.S.C. 1101",
       "title": "8 U.S.C. 1101: Definitions",
@@ -602,6 +640,23 @@
       "lines_sample": [
         4478,
         4480
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:8:1365b",
+      "label": "8 U.S.C. 1365b",
+      "title": "8 U.S.C. 1365b",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:8:1365b",
+      "count": 1,
+      "lines_sample": [
+        4498
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -674,6 +729,55 @@
       }
     },
     {
+      "id": "usc-title-42-section-247d->usc-title-49-section-40101:references:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-247d",
+      "source_label": "42 U.S.C. 247d",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-49-section-40101",
+      "target_label": "49 U.S.C. 40101",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:247d",
+        "label": "42 U.S.C. 247d",
+        "first_line": 2114,
+        "lines_sample": [
+          2114
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-42-section-300mm->usc-title-49-section-40101:references:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-300mm",
+      "source_label": "42 U.S.C. 300mm",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-49-section-40101",
+      "target_label": "49 U.S.C. 40101",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:300mm",
+        "label": "42 U.S.C. 300mm",
+        "first_line": 4064,
+        "lines_sample": [
+          4064,
+          4080,
+          4084,
+          4088,
+          4090,
+          4092
+        ],
+        "count": 8
+      }
+    },
+    {
       "id": "usc-title-42-section-4321->usc-title-49-section-40101:references:resolved_reference",
       "source_artifact_id": "usc-title-42-section-4321",
       "source_label": "42 U.S.C. 4321",
@@ -695,6 +799,28 @@
           1393
         ],
         "count": 3
+      }
+    },
+    {
+      "id": "usc-title-5-section-1001->usc-title-49-section-40101:references:resolved_reference",
+      "source_artifact_id": "usc-title-5-section-1001",
+      "source_label": "5 U.S.C. 1001",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-49-section-40101",
+      "target_label": "49 U.S.C. 40101",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:5:1001",
+        "label": "5 U.S.C. 1001",
+        "first_line": 2765,
+        "lines_sample": [
+          2765
+        ],
+        "count": 1
       }
     },
     {
@@ -722,6 +848,30 @@
     }
   ],
   "downstream_edges": [
+    {
+      "id": "usc-title-49-section-40101->public-law-107-296:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-49-section-40101",
+      "source_label": "49 U.S.C. 40101",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-107-296",
+      "target_label": "Public Law 107-296",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:49:40101",
+        "label": "49 U.S.C. 40101",
+        "first_line": 7268,
+        "lines_sample": [
+          7268,
+          9416,
+          10300
+        ],
+        "count": 3
+      }
+    },
     {
       "id": "usc-title-49-section-40101->public-law-108-458:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-49-section-40101",
@@ -979,28 +1129,6 @@
   ],
   "uncatalogued_authority_gaps": [
     {
-      "id": "gap:usc:42:300mm",
-      "label": "42 U.S.C. 300mm",
-      "title": "42 U.S.C. 300mm",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:300mm",
-      "count": 8,
-      "lines_sample": [
-        4064,
-        4080,
-        4084,
-        4088,
-        4090,
-        4092
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:cfr:14 cfr 91 817",
       "label": "14 CFR 91.817",
       "title": "14 CFR 91.817",
@@ -1241,23 +1369,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:42:247d",
-      "label": "42 U.S.C. 247d",
-      "title": "42 U.S.C. 247d",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:247d",
-      "count": 1,
-      "lines_sample": [
-        2114
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:45:151",
       "label": "45 U.S.C. 151",
       "title": "45 U.S.C. 151",
@@ -1290,6 +1401,40 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "gap:usc:49:44802",
+      "label": "49 U.S.C. 44802",
+      "title": "49 U.S.C. 44802",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:49:44802",
+      "count": 1,
+      "lines_sample": [
+        1786
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:8:1365b",
+      "label": "8 U.S.C. 1365b",
+      "title": "8 U.S.C. 1365b",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:8:1365b",
+      "count": 1,
+      "lines_sample": [
+        4498
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -1298,14 +1443,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-49-section-40101",
       "direction": "upstream",
-      "edge_count": 4
+      "edge_count": 7
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-49-section-40101",
       "direction": "downstream",
-      "edge_count": 11
+      "edge_count": 12
     }
   ]
 }

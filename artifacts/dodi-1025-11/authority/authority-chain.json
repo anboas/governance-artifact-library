@@ -61,32 +61,30 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 1,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 1,
-    "uncatalogued_gap_count": 4,
-    "evidence_backed_edge_count": 0,
+    "catalogued_node_count": 2,
+    "uncatalogued_gap_count": 3,
+    "evidence_backed_edge_count": 1,
     "inferred_edge_count": 0,
-    "authority_path_status": "authority_gap",
+    "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
     {
-      "id": "gap:public-law:111-352",
+      "id": "public-law-111-352",
       "label": "Public Law 111-352",
-      "title": "Public Law 111-352",
+      "title": "Public Law 111-352: To require quarterly performance assessments of Government programs for purposes",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
       "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:111-352",
-      "count": 1,
-      "lines_sample": [
-        569
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "appropriations",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:public-law:111-358",
@@ -155,7 +153,30 @@
       "status": "current"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "public-law-111-352->dodi-1025-11:authorizes:resolved_reference",
+      "source_artifact_id": "public-law-111-352",
+      "source_label": "Public Law 111-352",
+      "source_lane": "law",
+      "target_artifact_id": "dodi-1025-11",
+      "target_label": "DoDI 1025.11",
+      "target_lane": "dod",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "public-law:111-352",
+        "label": "Public Law 111-352",
+        "first_line": 569,
+        "lines_sample": [
+          569
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [],
   "uncatalogued_authority_gaps": [
     {
@@ -193,23 +214,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:public-law:111-352",
-      "label": "Public Law 111-352",
-      "title": "Public Law 111-352",
-      "artifact_type": "Public Law",
-      "lane": "law",
-      "lane_label": "Law",
-      "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:111-352",
-      "count": 1,
-      "lines_sample": [
-        569
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:public-law:111-358",
       "label": "Public Law 111-358",
       "title": "Public Law 111-358",
@@ -233,7 +237,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-1025-11",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",

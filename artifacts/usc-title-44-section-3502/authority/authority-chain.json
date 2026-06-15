@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 10,
-    "catalogued_node_count": 11,
+    "downstream_edge_count": 12,
+    "catalogued_node_count": 13,
     "uncatalogued_gap_count": 3,
-    "evidence_backed_edge_count": 10,
+    "evidence_backed_edge_count": 12,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -203,6 +203,36 @@
       "id": "usc-title-6-section-121",
       "label": "6 U.S.C. 121",
       "title": "6 U.S.C. 121: Information and Analysis",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_6",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-6-section-651",
+      "label": "6 U.S.C. 651",
+      "title": "6 U.S.C. 651: Definition",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_6",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-6-section-652",
+      "label": "6 U.S.C. 652",
+      "title": "6 U.S.C. 652: Cybersecurity and Infrastructure Security Agency",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
@@ -527,6 +557,50 @@
         ],
         "count": 3
       }
+    },
+    {
+      "id": "usc-title-44-section-3502->usc-title-6-section-651:references:resolved_reference",
+      "source_artifact_id": "usc-title-44-section-3502",
+      "source_label": "44 U.S.C. 3502",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-6-section-651",
+      "target_label": "6 U.S.C. 651",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:44:3502",
+        "label": "44 U.S.C. 3502",
+        "first_line": 188,
+        "lines_sample": [
+          188
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-44-section-3502->usc-title-6-section-652:references:resolved_reference",
+      "source_artifact_id": "usc-title-44-section-3502",
+      "source_label": "44 U.S.C. 3502",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-6-section-652",
+      "target_label": "6 U.S.C. 652",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:44:3502",
+        "label": "44 U.S.C. 3502",
+        "first_line": 688,
+        "lines_sample": [
+          688
+        ],
+        "count": 1
+      }
     }
   ],
   "uncatalogued_authority_gaps": [
@@ -597,7 +671,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-44-section-3502",
       "direction": "downstream",
-      "edge_count": 10
+      "edge_count": 12
     }
   ]
 }

@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 1,
-    "downstream_edge_count": 21,
-    "catalogued_node_count": 23,
+    "downstream_edge_count": 23,
+    "catalogued_node_count": 25,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 22,
+    "evidence_backed_edge_count": 24,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -90,6 +90,21 @@
       "id": "pl-118-159-fy2025-ndaa",
       "label": "FY2025 NDAA",
       "title": "Public Law 118-159: Servicemember Quality of Life Improvement and National Defense Authorization Act for Fiscal Year 2025",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-107-107",
+      "label": "Public Law 107-107",
+      "title": "Public Law 107-107: National Defense Authorization Act for Fiscal",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
@@ -387,6 +402,21 @@
       "status": "catalogued"
     },
     {
+      "id": "usc-title-10-section-1781c",
+      "label": "10 U.S.C. 1781c",
+      "title": "10 U.S.C. 1781c: Office of Special Needs",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "usc-title-20-section-1400",
       "label": "20 U.S.C. 1400",
       "title": "20 U.S.C. 1400: Short title; findings; purposes",
@@ -482,6 +512,28 @@
         "first_line": 10187,
         "lines_sample": [
           10187
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-20-section-7703a->public-law-107-107:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-20-section-7703a",
+      "source_label": "20 U.S.C. 7703a",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-107-107",
+      "target_label": "Public Law 107-107",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:20:7703a",
+        "label": "20 U.S.C. 7703a",
+        "first_line": 3302,
+        "lines_sample": [
+          3302
         ],
         "count": 1
       }
@@ -904,6 +956,28 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "usc-title-20-section-7703a->usc-title-10-section-1781c:references:resolved_reference",
+      "source_artifact_id": "usc-title-20-section-7703a",
+      "source_label": "20 U.S.C. 7703a",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-1781c",
+      "target_label": "10 U.S.C. 1781c",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:20:7703a",
+        "label": "20 U.S.C. 7703a",
+        "first_line": 605,
+        "lines_sample": [
+          605
+        ],
+        "count": 1
+      }
     }
   ],
   "uncatalogued_authority_gaps": [],
@@ -920,7 +994,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-20-section-7703a",
       "direction": "downstream",
-      "edge_count": 21
+      "edge_count": 23
     }
   ]
 }

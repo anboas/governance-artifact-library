@@ -62,15 +62,30 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 3,
-    "catalogued_node_count": 4,
+    "downstream_edge_count": 4,
+    "catalogued_node_count": 5,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 3,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "public-law-104-208",
+      "label": "Public Law 104-208",
+      "title": "Public Law 104-208: National Defense Authorization Act for Fiscal Year 1991 (Public",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "public-law-109-163",
       "label": "Public Law 109-163",
@@ -134,6 +149,32 @@
   ],
   "upstream_edges": [],
   "downstream_edges": [
+    {
+      "id": "usc-title-16-section-1132->public-law-104-208:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-16-section-1132",
+      "source_label": "16 U.S.C. 1132",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-104-208",
+      "target_label": "Public Law 104-208",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:16:1132",
+        "label": "16 U.S.C. 1132",
+        "first_line": 12991,
+        "lines_sample": [
+          12991,
+          29932,
+          29958,
+          30190,
+          31085
+        ],
+        "count": 5
+      }
+    },
     {
       "id": "usc-title-16-section-1132->public-law-109-163:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-16-section-1132",
@@ -226,7 +267,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-16-section-1132",
       "direction": "downstream",
-      "edge_count": 3
+      "edge_count": 4
     }
   ]
 }

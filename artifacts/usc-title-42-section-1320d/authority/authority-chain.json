@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 1,
     "downstream_edge_count": 9,
-    "catalogued_node_count": 10,
-    "uncatalogued_gap_count": 3,
-    "evidence_backed_edge_count": 9,
+    "catalogued_node_count": 11,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 10,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -239,21 +239,19 @@
       "status": "current"
     },
     {
-      "id": "gap:usc:42:1395",
+      "id": "usc-title-42-section-1395",
       "label": "42 U.S.C. 1395",
-      "title": "42 U.S.C. 1395",
+      "title": "42 U.S.C. 1395: Prohibition against any Federal interference",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:1395",
-      "count": 1,
-      "lines_sample": [
-        361
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:42:1396",
@@ -273,7 +271,30 @@
       "priority": "high"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "usc-title-42-section-1395->usc-title-42-section-1320d:references:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-1395",
+      "source_label": "42 U.S.C. 1395",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-42-section-1320d",
+      "target_label": "42 U.S.C. 1320d",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:1395",
+        "label": "42 U.S.C. 1395",
+        "first_line": 361,
+        "lines_sample": [
+          361
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "usc-title-42-section-1320d->pl-118-31-fy2024-ndaa:references_upstream:resolved_reference",
@@ -504,23 +525,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:42:1395",
-      "label": "42 U.S.C. 1395",
-      "title": "42 U.S.C. 1395",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:1395",
-      "count": 1,
-      "lines_sample": [
-        361
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:42:1396",
       "label": "42 U.S.C. 1396",
       "title": "42 U.S.C. 1396",
@@ -544,7 +548,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-42-section-1320d",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",

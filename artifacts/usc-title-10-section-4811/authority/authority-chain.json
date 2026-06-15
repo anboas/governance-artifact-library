@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 7,
+    "upstream_edge_count": 10,
     "downstream_edge_count": 6,
-    "catalogued_node_count": 14,
-    "uncatalogued_gap_count": 16,
-    "evidence_backed_edge_count": 13,
+    "catalogued_node_count": 17,
+    "uncatalogued_gap_count": 13,
+    "evidence_backed_edge_count": 16,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -196,24 +196,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:10:4801",
+      "id": "usc-title-10-section-4801",
       "label": "10 U.S.C. 4801",
-      "title": "10 U.S.C. 4801",
+      "title": "10 U.S.C. 4801: Definitions",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:10:4801",
-      "count": 4,
-      "lines_sample": [
-        1547,
-        1598,
-        1718,
-        1768
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "defense_acquisition",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-10-section-4811",
@@ -462,21 +457,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:50:4531",
+      "id": "usc-title-50-section-4531",
       "label": "50 U.S.C. 4531",
-      "title": "50 U.S.C. 4531",
+      "title": "50 U.S.C. 4531: Presidential authorization for the national defense",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:50:4531",
-      "count": 1,
-      "lines_sample": [
-        1744
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "national_security",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-50-section-4565",
@@ -528,22 +521,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:50:98b",
+      "id": "usc-title-50-section-98b",
       "label": "50 U.S.C. 98b",
-      "title": "50 U.S.C. 98b",
+      "title": "50 U.S.C. 98b: National Defense Stockpile",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:50:98b",
-      "count": 2,
-      "lines_sample": [
-        1113,
-        1275
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "national_security",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-50-section-98h",
@@ -562,6 +552,31 @@
     }
   ],
   "upstream_edges": [
+    {
+      "id": "usc-title-10-section-4801->usc-title-10-section-4811:references:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-4801",
+      "source_label": "10 U.S.C. 4801",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-4811",
+      "target_label": "10 U.S.C. 4811",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:4801",
+        "label": "10 U.S.C. 4801",
+        "first_line": 1547,
+        "lines_sample": [
+          1547,
+          1598,
+          1718,
+          1768
+        ],
+        "count": 4
+      }
+    },
     {
       "id": "usc-title-15-section-3710a->usc-title-10-section-4811:references:resolved_reference",
       "source_artifact_id": "usc-title-15-section-3710a",
@@ -678,6 +693,28 @@
       }
     },
     {
+      "id": "usc-title-50-section-4531->usc-title-10-section-4811:references:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-4531",
+      "source_label": "50 U.S.C. 4531",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-4811",
+      "target_label": "10 U.S.C. 4811",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:4531",
+        "label": "50 U.S.C. 4531",
+        "first_line": 1744,
+        "lines_sample": [
+          1744
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-50-section-4565->usc-title-10-section-4811:references:resolved_reference",
       "source_artifact_id": "usc-title-50-section-4565",
       "source_label": "50 U.S.C. 4565",
@@ -697,6 +734,29 @@
           1988
         ],
         "count": 1
+      }
+    },
+    {
+      "id": "usc-title-50-section-98b->usc-title-10-section-4811:references:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-98b",
+      "source_label": "50 U.S.C. 98b",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-4811",
+      "target_label": "10 U.S.C. 4811",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:98b",
+        "label": "50 U.S.C. 98b",
+        "first_line": 1113,
+        "lines_sample": [
+          1113,
+          1275
+        ],
+        "count": 2
       }
     },
     {
@@ -879,26 +939,6 @@
   ],
   "uncatalogued_authority_gaps": [
     {
-      "id": "gap:usc:10:4801",
-      "label": "10 U.S.C. 4801",
-      "title": "10 U.S.C. 4801",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:10:4801",
-      "count": 4,
-      "lines_sample": [
-        1547,
-        1598,
-        1718,
-        1768
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:10:4814",
       "label": "10 U.S.C. 4814",
       "title": "10 U.S.C. 4814",
@@ -931,24 +971,6 @@
       "lines_sample": [
         1549,
         1566
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:usc:50:98b",
-      "label": "50 U.S.C. 98b",
-      "title": "50 U.S.C. 98b",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:50:98b",
-      "count": 2,
-      "lines_sample": [
-        1113,
-        1275
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -1107,23 +1129,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:50:4531",
-      "label": "50 U.S.C. 4531",
-      "title": "50 U.S.C. 4531",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:50:4531",
-      "count": 1,
-      "lines_sample": [
-        1744
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:50:4568",
       "label": "50 U.S.C. 4568",
       "title": "50 U.S.C. 4568",
@@ -1164,7 +1169,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-10-section-4811",
       "direction": "upstream",
-      "edge_count": 7
+      "edge_count": 10
     },
     {
       "id": "trace-downstream",

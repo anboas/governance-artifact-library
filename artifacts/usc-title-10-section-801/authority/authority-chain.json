@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 5,
-    "downstream_edge_count": 17,
-    "catalogued_node_count": 23,
+    "downstream_edge_count": 20,
+    "catalogued_node_count": 26,
     "uncatalogued_gap_count": 5,
-    "evidence_backed_edge_count": 22,
+    "evidence_backed_edge_count": 25,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -75,6 +75,21 @@
       "id": "pl-118-31-fy2024-ndaa",
       "label": "FY2024 NDAA",
       "title": "Public Law 118-31: National Defense Authorization Act for Fiscal Year 2024",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-104-106",
+      "label": "Public Law 104-106",
+      "title": "Public Law 104-106: National Defense Authorization Act for Fiscal Year 1995 (Public",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
@@ -297,6 +312,21 @@
       "status": "catalogued"
     },
     {
+      "id": "usc-title-10-section-1044e",
+      "label": "10 U.S.C. 1044e",
+      "title": "10 U.S.C. 1044e: Special Victims' Counsel for victims of sex-related offenses",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "usc-title-10-section-111",
       "label": "10 U.S.C. 111",
       "title": "10 U.S.C. 111: Executive department",
@@ -355,6 +385,21 @@
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "usc-title-10-section-843",
+      "label": "10 U.S.C. 843",
+      "title": "10 U.S.C. 843: Art. 43. Statute of limitations",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:22:8541",
@@ -652,6 +697,28 @@
           8596
         ],
         "count": 2
+      }
+    },
+    {
+      "id": "usc-title-10-section-801->public-law-104-106:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-801",
+      "source_label": "10 U.S.C. 801",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-104-106",
+      "target_label": "Public Law 104-106",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:801",
+        "label": "10 USC 801",
+        "first_line": 17094,
+        "lines_sample": [
+          17094
+        ],
+        "count": 1
       }
     },
     {
@@ -998,6 +1065,28 @@
       }
     },
     {
+      "id": "usc-title-10-section-801->usc-title-10-section-1044e:references:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-801",
+      "source_label": "10 U.S.C. 801",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-1044e",
+      "target_label": "10 U.S.C. 1044e",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:801",
+        "label": "10 U.S.C. 801",
+        "first_line": 516,
+        "lines_sample": [
+          516
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-10-section-801->usc-title-10-section-111:references:resolved_reference",
       "source_artifact_id": "usc-title-10-section-801",
       "source_label": "10 U.S.C. 801",
@@ -1039,6 +1128,29 @@
           6222
         ],
         "count": 1
+      }
+    },
+    {
+      "id": "usc-title-10-section-801->usc-title-10-section-843:references:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-801",
+      "source_label": "10 U.S.C. 801",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-843",
+      "target_label": "10 U.S.C. 843",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:801",
+        "label": "10 U.S.C. 801",
+        "first_line": 469,
+        "lines_sample": [
+          469,
+          523
+        ],
+        "count": 2
       }
     }
   ],
@@ -1149,7 +1261,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-10-section-801",
       "direction": "downstream",
-      "edge_count": 17
+      "edge_count": 20
     }
   ]
 }

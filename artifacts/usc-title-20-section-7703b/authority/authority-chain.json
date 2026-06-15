@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 1,
-    "downstream_edge_count": 20,
-    "catalogued_node_count": 22,
+    "downstream_edge_count": 21,
+    "catalogued_node_count": 23,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 21,
+    "evidence_backed_edge_count": 22,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -367,6 +367,21 @@
       "family": "defense_authorization",
       "issuing_authority": "Congress",
       "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-10-section-1781c",
+      "label": "10 U.S.C. 1781c",
+      "title": "10 U.S.C. 1781c: Office of Special Needs",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "catalogued"
@@ -882,6 +897,28 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "usc-title-20-section-7703b->usc-title-10-section-1781c:references:resolved_reference",
+      "source_artifact_id": "usc-title-20-section-7703b",
+      "source_label": "20 U.S.C. 7703b",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-1781c",
+      "target_label": "10 U.S.C. 1781c",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:20:7703b",
+        "label": "20 U.S.C. 7703b",
+        "first_line": 607,
+        "lines_sample": [
+          607
+        ],
+        "count": 1
+      }
     }
   ],
   "uncatalogued_authority_gaps": [],
@@ -898,7 +935,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-20-section-7703b",
       "direction": "downstream",
-      "edge_count": 20
+      "edge_count": 21
     }
   ]
 }

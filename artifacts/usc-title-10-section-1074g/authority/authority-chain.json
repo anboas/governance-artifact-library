@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 14,
-    "catalogued_node_count": 15,
-    "uncatalogued_gap_count": 4,
-    "evidence_backed_edge_count": 14,
+    "upstream_edge_count": 1,
+    "downstream_edge_count": 15,
+    "catalogued_node_count": 17,
+    "uncatalogued_gap_count": 3,
+    "evidence_backed_edge_count": 16,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -75,6 +75,21 @@
       "id": "public-law-106-65",
       "label": "Public Law 106-65",
       "title": "Public Law 106-65: National Defense Authorization Act for Fiscal Year",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-107-107",
+      "label": "Public Law 107-107",
+      "title": "Public Law 107-107: National Defense Authorization Act for Fiscal",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
@@ -297,21 +312,19 @@
       "status": "current"
     },
     {
-      "id": "gap:usc:21:301",
+      "id": "usc-title-21-section-301",
       "label": "21 U.S.C. 301",
-      "title": "21 U.S.C. 301",
+      "title": "21 U.S.C. 301: Short title",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:21:301",
-      "count": 1,
-      "lines_sample": [
-        534
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_21",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:21:353",
@@ -368,7 +381,30 @@
       "priority": "high"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "usc-title-21-section-301->usc-title-10-section-1074g:references:resolved_reference",
+      "source_artifact_id": "usc-title-21-section-301",
+      "source_label": "21 U.S.C. 301",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-1074g",
+      "target_label": "10 U.S.C. 1074g",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:21:301",
+        "label": "21 U.S.C. 301",
+        "first_line": 534,
+        "lines_sample": [
+          534
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "usc-title-10-section-1074g->public-law-106-65:references_upstream:resolved_reference",
@@ -392,6 +428,28 @@
           10486
         ],
         "count": 3
+      }
+    },
+    {
+      "id": "usc-title-10-section-1074g->public-law-107-107:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-1074g",
+      "source_label": "10 U.S.C. 1074g",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-107-107",
+      "target_label": "Public Law 107-107",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:1074g",
+        "label": "10 U.S.C. 1074g",
+        "first_line": 9831,
+        "lines_sample": [
+          9831
+        ],
+        "count": 1
       }
     },
     {
@@ -728,23 +786,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:21:301",
-      "label": "21 U.S.C. 301",
-      "title": "21 U.S.C. 301",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:21:301",
-      "count": 1,
-      "lines_sample": [
-        534
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:42:280g",
       "label": "42 U.S.C. 280g",
       "title": "42 U.S.C. 280g",
@@ -768,14 +809,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-10-section-1074g",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-10-section-1074g",
       "direction": "downstream",
-      "edge_count": 14
+      "edge_count": 15
     }
   ]
 }

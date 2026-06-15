@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 1,
+    "upstream_edge_count": 2,
     "downstream_edge_count": 6,
-    "catalogued_node_count": 8,
-    "uncatalogued_gap_count": 4,
-    "evidence_backed_edge_count": 3,
+    "catalogued_node_count": 9,
+    "uncatalogued_gap_count": 3,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 4,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -109,21 +109,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:5:2301",
+      "id": "usc-title-5-section-2301",
       "label": "5 U.S.C. 2301",
-      "title": "5 U.S.C. 2301",
+      "title": "5 U.S.C. 2301: Merit system principles",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:5:2301",
-      "count": 1,
-      "lines_sample": [
-        381
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_5",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-5-section-2302",
@@ -264,6 +262,28 @@
     }
   ],
   "upstream_edges": [
+    {
+      "id": "usc-title-5-section-2301->dodd-5500-19:flows_down:resolved_reference",
+      "source_artifact_id": "usc-title-5-section-2301",
+      "source_label": "5 U.S.C. 2301",
+      "source_lane": "statute",
+      "target_artifact_id": "dodd-5500-19",
+      "target_label": "DoDD 5500.19",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:5:2301",
+        "label": "5 U.S.C. 2301",
+        "first_line": 381,
+        "lines_sample": [
+          381
+        ],
+        "count": 1
+      }
+    },
     {
       "id": "usc-title-5-section-2302->dodd-5500-19:flows_down:resolved_reference",
       "source_artifact_id": "usc-title-5-section-2302",
@@ -471,23 +491,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:5:2301",
-      "label": "5 U.S.C. 2301",
-      "title": "5 U.S.C. 2301",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:5:2301",
-      "count": 1,
-      "lines_sample": [
-        381
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:5:3110",
       "label": "5 U.S.C. 3110",
       "title": "5 U.S.C. 3110",
@@ -511,7 +514,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodd-5500-19",
       "direction": "upstream",
-      "edge_count": 1
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",

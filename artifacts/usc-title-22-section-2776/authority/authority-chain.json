@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 2,
-    "downstream_edge_count": 7,
-    "catalogued_node_count": 9,
+    "downstream_edge_count": 10,
+    "catalogued_node_count": 12,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 9,
+    "evidence_backed_edge_count": 12,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -75,6 +75,21 @@
       "id": "public-law-104-201",
       "label": "Public Law 104-201",
       "title": "Public Law 104-201: National Defense Authorization Act for Fiscal",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-107-107",
+      "label": "Public Law 107-107",
+      "title": "Public Law 107-107: National Defense Authorization Act for Fiscal",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
@@ -162,6 +177,21 @@
       "status": "catalogued"
     },
     {
+      "id": "usc-title-22-section-2753",
+      "label": "22 U.S.C. 2753",
+      "title": "22 U.S.C. 2753: Eligibility for defense services or defense articles",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "foreign_affairs",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "usc-title-22-section-2761",
       "label": "22 U.S.C. 2761",
       "title": "22 U.S.C. 2761: Sales from stocks",
@@ -190,6 +220,21 @@
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "usc-title-22-section-3302",
+      "label": "22 U.S.C. 3302",
+      "title": "22 U.S.C. 3302: Implementation of United States policy with regard to Taiwan",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "foreign_affairs",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-50-section-3091",
@@ -275,6 +320,28 @@
           12844
         ],
         "count": 2
+      }
+    },
+    {
+      "id": "usc-title-22-section-2776->public-law-107-107:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-2776",
+      "source_label": "22 U.S.C. 2776",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-107-107",
+      "target_label": "Public Law 107-107",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:2776",
+        "label": "22 U.S.C. 2776",
+        "first_line": 11168,
+        "lines_sample": [
+          11168
+        ],
+        "count": 1
       }
     },
     {
@@ -392,6 +459,29 @@
       }
     },
     {
+      "id": "usc-title-22-section-2776->usc-title-22-section-2753:references:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-2776",
+      "source_label": "22 U.S.C. 2776",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-22-section-2753",
+      "target_label": "22 U.S.C. 2753",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:2776",
+        "label": "22 U.S.C. 2776",
+        "first_line": 649,
+        "lines_sample": [
+          649,
+          785
+        ],
+        "count": 2
+      }
+    },
+    {
       "id": "usc-title-22-section-2776->usc-title-22-section-2761:references:resolved_reference",
       "source_artifact_id": "usc-title-22-section-2776",
       "source_label": "22 U.S.C. 2776",
@@ -412,6 +502,28 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "usc-title-22-section-2776->usc-title-22-section-3302:references:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-2776",
+      "source_label": "22 U.S.C. 2776",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-22-section-3302",
+      "target_label": "22 U.S.C. 3302",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:2776",
+        "label": "22 U.S.C. 2776",
+        "first_line": 425,
+        "lines_sample": [
+          425
+        ],
+        "count": 1
+      }
     }
   ],
   "uncatalogued_authority_gaps": [],
@@ -428,7 +540,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-22-section-2776",
       "direction": "downstream",
-      "edge_count": 7
+      "edge_count": 10
     }
   ]
 }

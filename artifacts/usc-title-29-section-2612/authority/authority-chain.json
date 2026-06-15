@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 1,
     "downstream_edge_count": 4,
-    "catalogued_node_count": 5,
-    "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 4,
+    "catalogued_node_count": 6,
+    "uncatalogued_gap_count": 0,
+    "evidence_backed_edge_count": 5,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -132,21 +132,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:29:2611",
+      "id": "usc-title-29-section-2611",
       "label": "29 U.S.C. 2611",
-      "title": "29 U.S.C. 2611",
+      "title": "29 U.S.C. 2611: Definitions",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:29:2611",
-      "count": 2,
-      "lines_sample": [
-        497
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_29",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-29-section-2612",
@@ -164,7 +162,30 @@
       "status": "current"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "usc-title-29-section-2611->usc-title-29-section-2612:references:resolved_reference",
+      "source_artifact_id": "usc-title-29-section-2611",
+      "source_label": "29 U.S.C. 2611",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-29-section-2612",
+      "target_label": "29 U.S.C. 2612",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:29:2611",
+        "label": "29 U.S.C. 2611",
+        "first_line": 497,
+        "lines_sample": [
+          497
+        ],
+        "count": 2
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "usc-title-29-section-2612->public-law-110-181:references_upstream:resolved_reference",
@@ -263,32 +284,14 @@
       }
     }
   ],
-  "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:usc:29:2611",
-      "label": "29 U.S.C. 2611",
-      "title": "29 U.S.C. 2611",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:29:2611",
-      "count": 2,
-      "lines_sample": [
-        497
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    }
-  ],
+  "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-29-section-2612",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",

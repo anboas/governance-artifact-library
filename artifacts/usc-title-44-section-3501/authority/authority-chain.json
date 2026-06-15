@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 2,
-    "downstream_edge_count": 6,
-    "catalogued_node_count": 9,
+    "downstream_edge_count": 7,
+    "catalogued_node_count": 10,
     "uncatalogued_gap_count": 7,
-    "evidence_backed_edge_count": 8,
+    "evidence_backed_edge_count": 9,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -110,6 +110,21 @@
       "lane_label": "Law",
       "hierarchy_rank": 10,
       "family": "appropriations",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-115-336",
+      "label": "Public Law 115-336",
+      "title": "Public Law 115-336: Dec. 20, 2018",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "security_policy",
       "issuing_authority": "Congress",
       "source_system": "GovInfo",
       "mirror_status": "mirrored",
@@ -452,6 +467,28 @@
       }
     },
     {
+      "id": "usc-title-44-section-3501->public-law-115-336:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-44-section-3501",
+      "source_label": "44 U.S.C. 3501",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-115-336",
+      "target_label": "Public Law 115-336",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:44:3501",
+        "label": "44 USC 3501",
+        "first_line": 17,
+        "lines_sample": [
+          17
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-44-section-3501->public-law-117-263:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-44-section-3501",
       "source_label": "44 U.S.C. 3501",
@@ -656,7 +693,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-44-section-3501",
       "direction": "downstream",
-      "edge_count": 6
+      "edge_count": 7
     }
   ]
 }

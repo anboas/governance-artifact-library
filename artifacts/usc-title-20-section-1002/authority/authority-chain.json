@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 14,
-    "catalogued_node_count": 15,
+    "downstream_edge_count": 15,
+    "catalogued_node_count": 16,
     "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 14,
+    "evidence_backed_edge_count": 15,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -232,6 +232,21 @@
       "family": "defense_authorization",
       "issuing_authority": "Congress",
       "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-10-section-1144",
+      "label": "10 U.S.C. 1144",
+      "title": "10 U.S.C. 1144: Employment assistance, job training assistance, and other transitional services: Department of Labor",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "catalogued"
@@ -563,6 +578,28 @@
       }
     },
     {
+      "id": "usc-title-20-section-1002->usc-title-10-section-1144:references:resolved_reference",
+      "source_artifact_id": "usc-title-20-section-1002",
+      "source_label": "20 U.S.C. 1002",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-1144",
+      "target_label": "10 U.S.C. 1144",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:20:1002",
+        "label": "20 U.S.C. 1002",
+        "first_line": 608,
+        "lines_sample": [
+          608
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-20-section-1002->usc-title-10-section-2241:references:resolved_reference",
       "source_artifact_id": "usc-title-20-section-1002",
       "source_label": "20 U.S.C. 1002",
@@ -663,7 +700,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-20-section-1002",
       "direction": "downstream",
-      "edge_count": 14
+      "edge_count": 15
     }
   ]
 }

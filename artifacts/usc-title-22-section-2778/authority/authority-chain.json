@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 12,
-    "downstream_edge_count": 22,
-    "catalogued_node_count": 32,
-    "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 34,
+    "upstream_edge_count": 13,
+    "downstream_edge_count": 24,
+    "catalogued_node_count": 35,
+    "uncatalogued_gap_count": 17,
+    "evidence_backed_edge_count": 37,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -117,9 +117,39 @@
       "status": "catalogued"
     },
     {
+      "id": "public-law-105-85",
+      "label": "Public Law 105-85",
+      "title": "Public Law 105-85: National Defense Authorization Act for",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "public-law-106-65",
       "label": "Public Law 106-65",
       "title": "Public Law 106-65: National Defense Authorization Act for Fiscal Year",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-107-107",
+      "label": "Public Law 107-107",
+      "title": "Public Law 107-107: National Defense Authorization Act for Fiscal",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
@@ -327,22 +357,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:15:78dd",
+      "id": "usc-title-15-section-78dd",
       "label": "15 U.S.C. 78dd",
-      "title": "15 U.S.C. 78dd",
+      "title": "15 U.S.C. 78dd: Foreign securities exchanges",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:15:78dd",
-      "count": 3,
-      "lines_sample": [
-        359,
-        1058
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_15",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:18:175b",
@@ -869,6 +896,29 @@
   ],
   "upstream_edges": [
     {
+      "id": "usc-title-15-section-78dd->usc-title-22-section-2778:references:resolved_reference",
+      "source_artifact_id": "usc-title-15-section-78dd",
+      "source_label": "15 U.S.C. 78dd",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-22-section-2778",
+      "target_label": "22 U.S.C. 2778",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:15:78dd",
+        "label": "15 U.S.C. 78dd",
+        "first_line": 359,
+        "lines_sample": [
+          359,
+          1058
+        ],
+        "count": 3
+      }
+    },
+    {
       "id": "usc-title-22-section-2151->usc-title-22-section-2778:references:resolved_reference",
       "source_artifact_id": "usc-title-22-section-2151",
       "source_label": "22 U.S.C. 2151",
@@ -1267,6 +1317,28 @@
       }
     },
     {
+      "id": "usc-title-22-section-2778->public-law-105-85:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-2778",
+      "source_label": "22 U.S.C. 2778",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-105-85",
+      "target_label": "Public Law 105-85",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:2778",
+        "label": "22 U.S.C. 2778",
+        "first_line": 15228,
+        "lines_sample": [
+          15228
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-22-section-2778->public-law-106-65:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-22-section-2778",
       "source_label": "22 U.S.C. 2778",
@@ -1297,6 +1369,28 @@
           18107
         ],
         "count": 14
+      }
+    },
+    {
+      "id": "usc-title-22-section-2778->public-law-107-107:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-2778",
+      "source_label": "22 U.S.C. 2778",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-107-107",
+      "target_label": "Public Law 107-107",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:2778",
+        "label": "22 U.S.C. 2778",
+        "first_line": 13549,
+        "lines_sample": [
+          13549
+        ],
+        "count": 1
       }
     },
     {
@@ -1714,24 +1808,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:15:78dd",
-      "label": "15 U.S.C. 78dd",
-      "title": "15 U.S.C. 78dd",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:15:78dd",
-      "count": 3,
-      "lines_sample": [
-        359,
-        1058
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:18:175c",
       "label": "18 U.S.C. 175c",
       "title": "18 U.S.C. 175c",
@@ -1995,14 +2071,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-22-section-2778",
       "direction": "upstream",
-      "edge_count": 12
+      "edge_count": 13
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-22-section-2778",
       "direction": "downstream",
-      "edge_count": 22
+      "edge_count": 24
     }
   ]
 }

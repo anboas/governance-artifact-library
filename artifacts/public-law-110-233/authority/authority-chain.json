@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 4,
+    "upstream_edge_count": 5,
     "downstream_edge_count": 8,
-    "catalogued_node_count": 13,
+    "catalogued_node_count": 14,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 8,
+    "evidence_backed_edge_count": 9,
     "inferred_edge_count": 4,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -117,9 +117,9 @@
       "status": "catalogued"
     },
     {
-      "id": "usc-title-10-section-1071",
-      "label": "10 U.S.C. 1071",
-      "title": "10 U.S.C. 1071: Purpose of this chapter",
+      "id": "usc-title-10-section-1030",
+      "label": "10 U.S.C. 1030",
+      "title": "10 U.S.C. 1030: Bonus to encourage Department of Defense personnel to refer persons for appointment as officers to serve in health professions",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
@@ -132,9 +132,9 @@
       "status": "catalogued"
     },
     {
-      "id": "usc-title-10-section-1073",
-      "label": "10 U.S.C. 1073",
-      "title": "10 U.S.C. 1073: Administration of this chapter",
+      "id": "usc-title-10-section-1044e",
+      "label": "10 U.S.C. 1044e",
+      "title": "10 U.S.C. 1044e: Special Victims' Counsel for victims of sex-related offenses",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
@@ -383,6 +383,21 @@
       "priority": "high"
     },
     {
+      "id": "usc-title-42-section-12101",
+      "label": "42 U.S.C. 12101",
+      "title": "42 U.S.C. 12101: Findings and purpose",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "gap:usc:42:12112",
       "label": "42 U.S.C. 12112",
       "title": "42 U.S.C. 12112",
@@ -611,6 +626,28 @@
     }
   ],
   "upstream_edges": [
+    {
+      "id": "usc-title-42-section-12101->public-law-110-233:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-12101",
+      "source_label": "42 U.S.C. 12101",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-110-233",
+      "target_label": "Public Law 110-233",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:12101",
+        "label": "42 U.S.C. 12101",
+        "first_line": 2558,
+        "lines_sample": [
+          2558
+        ],
+        "count": 1
+      }
+    },
     {
       "id": "usc-title-42-section-1320d->public-law-110-233:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-42-section-1320d",
@@ -854,12 +891,12 @@
       }
     },
     {
-      "id": "public-law-110-233->usc-title-10-section-1071:codifies_or_creates_note:inferred_flowdown",
+      "id": "public-law-110-233->usc-title-10-section-1030:codifies_or_creates_note:inferred_flowdown",
       "source_artifact_id": "public-law-110-233",
       "source_label": "Public Law 110-233",
       "source_lane": "law",
-      "target_artifact_id": "usc-title-10-section-1071",
-      "target_label": "10 U.S.C. 1071",
+      "target_artifact_id": "usc-title-10-section-1030",
+      "target_label": "10 U.S.C. 1030",
       "target_lane": "statute",
       "relationship": "codifies_or_creates_note",
       "evidence_type": "inferred_flowdown",
@@ -874,12 +911,12 @@
       }
     },
     {
-      "id": "public-law-110-233->usc-title-10-section-1073:codifies_or_creates_note:inferred_flowdown",
+      "id": "public-law-110-233->usc-title-10-section-1044e:codifies_or_creates_note:inferred_flowdown",
       "source_artifact_id": "public-law-110-233",
       "source_label": "Public Law 110-233",
       "source_lane": "law",
-      "target_artifact_id": "usc-title-10-section-1073",
-      "target_label": "10 U.S.C. 1073",
+      "target_artifact_id": "usc-title-10-section-1044e",
+      "target_label": "10 U.S.C. 1044e",
       "target_lane": "statute",
       "relationship": "codifies_or_creates_note",
       "evidence_type": "inferred_flowdown",
@@ -1245,7 +1282,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "public-law-110-233",
       "direction": "upstream",
-      "edge_count": 4
+      "edge_count": 5
     },
     {
       "id": "trace-downstream",

@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 1,
-    "downstream_edge_count": 11,
-    "catalogued_node_count": 13,
+    "downstream_edge_count": 13,
+    "catalogued_node_count": 15,
     "uncatalogued_gap_count": 4,
-    "evidence_backed_edge_count": 12,
+    "evidence_backed_edge_count": 14,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -187,6 +187,21 @@
       "family": "defense_authorization",
       "issuing_authority": "Congress",
       "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-10-section-1781c",
+      "label": "10 U.S.C. 1781c",
+      "title": "10 U.S.C. 1781c: Office of Special Needs",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "catalogued"
@@ -317,6 +332,21 @@
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "usc-title-6-section-652",
+      "label": "6 U.S.C. 652",
+      "title": "6 U.S.C. 652: Cybersecurity and Infrastructure Security Agency",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_6",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:cfr:34 cfr 200 56",
@@ -544,6 +574,28 @@
       }
     },
     {
+      "id": "usc-title-20-section-7801->usc-title-10-section-1781c:references:resolved_reference",
+      "source_artifact_id": "usc-title-20-section-7801",
+      "source_label": "20 U.S.C. 7801",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-1781c",
+      "target_label": "10 U.S.C. 1781c",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:20:7801",
+        "label": "20 U.S.C. 7801",
+        "first_line": 627,
+        "lines_sample": [
+          627
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-20-section-7801->usc-title-10-section-2164:references:resolved_reference",
       "source_artifact_id": "usc-title-20-section-7801",
       "source_label": "20 U.S.C. 7801",
@@ -611,6 +663,28 @@
           1540
         ],
         "count": 2
+      }
+    },
+    {
+      "id": "usc-title-20-section-7801->usc-title-6-section-652:references:resolved_reference",
+      "source_artifact_id": "usc-title-20-section-7801",
+      "source_label": "20 U.S.C. 7801",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-6-section-652",
+      "target_label": "6 U.S.C. 652",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:20:7801",
+        "label": "20 U.S.C. 7801",
+        "first_line": 955,
+        "lines_sample": [
+          955
+        ],
+        "count": 1
       }
     }
   ],
@@ -699,7 +773,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-20-section-7801",
       "direction": "downstream",
-      "edge_count": 11
+      "edge_count": 13
     }
   ]
 }

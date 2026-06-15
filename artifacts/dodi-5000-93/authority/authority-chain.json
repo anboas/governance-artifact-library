@@ -61,37 +61,30 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 4,
+    "upstream_edge_count": 5,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 5,
-    "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 4,
+    "catalogued_node_count": 6,
+    "uncatalogued_gap_count": 0,
+    "evidence_backed_edge_count": 5,
     "inferred_edge_count": 0,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
     {
-      "id": "gap:public-law:104-113",
+      "id": "public-law-104-113",
       "label": "Public Law 104-113",
-      "title": "Public Law 104-113",
+      "title": "Public Law 104-113: To amend the Stevenson-Wydler Technology Innovation Act of 1980 with respect",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
       "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:104-113",
-      "count": 6,
-      "lines_sample": [
-        169,
-        210,
-        359,
-        450,
-        593,
-        862
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "public_law",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "dodi-4120-24",
@@ -262,40 +255,44 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "public-law-104-113->dodi-5000-93:authorizes:resolved_reference",
+      "source_artifact_id": "public-law-104-113",
+      "source_label": "Public Law 104-113",
+      "source_lane": "law",
+      "target_artifact_id": "dodi-5000-93",
+      "target_label": "DoDI 5000.93",
+      "target_lane": "dod",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "public-law:104-113",
+        "label": "Public Law 104-113",
+        "first_line": 169,
+        "lines_sample": [
+          169,
+          210,
+          359,
+          450,
+          593,
+          862
+        ],
+        "count": 6
+      }
     }
   ],
   "downstream_edges": [],
-  "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:public-law:104-113",
-      "label": "Public Law 104-113",
-      "title": "Public Law 104-113",
-      "artifact_type": "Public Law",
-      "lane": "law",
-      "lane_label": "Law",
-      "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:104-113",
-      "count": 6,
-      "lines_sample": [
-        169,
-        210,
-        359,
-        450,
-        593,
-        862
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    }
-  ],
+  "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-5000-93",
       "direction": "upstream",
-      "edge_count": 4
+      "edge_count": 5
     },
     {
       "id": "trace-downstream",

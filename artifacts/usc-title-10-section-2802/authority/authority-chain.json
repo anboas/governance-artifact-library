@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 3,
+    "upstream_edge_count": 4,
     "downstream_edge_count": 10,
-    "catalogued_node_count": 14,
-    "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 13,
+    "catalogued_node_count": 15,
+    "uncatalogued_gap_count": 0,
+    "evidence_backed_edge_count": 14,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -252,21 +252,19 @@
       "status": "current"
     },
     {
-      "id": "gap:usc:10:2864",
+      "id": "usc-title-10-section-2864",
       "label": "10 U.S.C. 2864",
-      "title": "10 U.S.C. 2864",
+      "title": "10 U.S.C. 2864: Master plans for major military installations",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:10:2864",
-      "count": 1,
-      "lines_sample": [
-        1065
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-10-section-2871",
@@ -321,6 +319,28 @@
           1097
         ],
         "count": 2
+      }
+    },
+    {
+      "id": "usc-title-10-section-2864->usc-title-10-section-2802:references:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-2864",
+      "source_label": "10 U.S.C. 2864",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-2802",
+      "target_label": "10 U.S.C. 2802",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:2864",
+        "label": "10 U.S.C. 2864",
+        "first_line": 1065,
+        "lines_sample": [
+          1065
+        ],
+        "count": 1
       }
     },
     {
@@ -616,32 +636,14 @@
       }
     }
   ],
-  "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:usc:10:2864",
-      "label": "10 U.S.C. 2864",
-      "title": "10 U.S.C. 2864",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:10:2864",
-      "count": 1,
-      "lines_sample": [
-        1065
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    }
-  ],
+  "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-10-section-2802",
       "direction": "upstream",
-      "edge_count": 3
+      "edge_count": 4
     },
     {
       "id": "trace-downstream",

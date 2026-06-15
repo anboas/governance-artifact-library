@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 4,
-    "downstream_edge_count": 15,
-    "catalogued_node_count": 20,
-    "uncatalogued_gap_count": 4,
-    "evidence_backed_edge_count": 19,
+    "upstream_edge_count": 5,
+    "downstream_edge_count": 19,
+    "catalogued_node_count": 25,
+    "uncatalogued_gap_count": 3,
+    "evidence_backed_edge_count": 24,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -102,9 +102,39 @@
       "status": "catalogued"
     },
     {
+      "id": "public-law-104-106",
+      "label": "Public Law 104-106",
+      "title": "Public Law 104-106: National Defense Authorization Act for Fiscal Year 1995 (Public",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "public-law-105-261",
       "label": "Public Law 105-261",
       "title": "Public Law 105-261: National Defense Authorization Act for Fiscal Year",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-105-85",
+      "label": "Public Law 105-85",
+      "title": "Public Law 105-85: National Defense Authorization Act for",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
@@ -135,6 +165,21 @@
       "id": "public-law-106-65",
       "label": "Public Law 106-65",
       "title": "Public Law 106-65: National Defense Authorization Act for Fiscal Year",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-107-107",
+      "label": "Public Law 107-107",
+      "title": "Public Law 107-107: National Defense Authorization Act for Fiscal",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
@@ -331,26 +376,39 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:22:2347",
+      "id": "usc-title-22-section-2347",
       "label": "22 U.S.C. 2347",
-      "title": "22 U.S.C. 2347",
+      "title": "22 U.S.C. 2347: General authority",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:22:2347",
-      "count": 1,
-      "lines_sample": [
-        151
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "foreign_affairs",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-22-section-2751",
       "label": "22 U.S.C. 2751",
       "title": "22 U.S.C. 2751: Need for international defense cooperation and military export controls; Presidential waiver; report to Congress; arms sales policy",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "foreign_affairs",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-22-section-2753",
+      "label": "22 U.S.C. 2753",
+      "title": "22 U.S.C. 2753: Eligibility for defense services or defense articles",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
@@ -459,6 +517,28 @@
         "first_line": 175,
         "lines_sample": [
           175
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-22-section-2347->usc-title-22-section-2761:references:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-2347",
+      "source_label": "22 U.S.C. 2347",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-22-section-2761",
+      "target_label": "22 U.S.C. 2761",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:2347",
+        "label": "22 U.S.C. 2347",
+        "first_line": 151,
+        "lines_sample": [
+          151
         ],
         "count": 1
       }
@@ -579,6 +659,33 @@
       }
     },
     {
+      "id": "usc-title-22-section-2761->public-law-104-106:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-2761",
+      "source_label": "22 U.S.C. 2761",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-104-106",
+      "target_label": "Public Law 104-106",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:2761",
+        "label": "22 U.S.C. 2761",
+        "first_line": 1358,
+        "lines_sample": [
+          1358,
+          14630,
+          29317,
+          29348,
+          29353,
+          29356
+        ],
+        "count": 6
+      }
+    },
+    {
       "id": "usc-title-22-section-2761->public-law-105-261:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-22-section-2761",
       "source_label": "22 U.S.C. 2761",
@@ -596,6 +703,28 @@
         "first_line": 13602,
         "lines_sample": [
           13602
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-22-section-2761->public-law-105-85:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-2761",
+      "source_label": "22 U.S.C. 2761",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-105-85",
+      "target_label": "Public Law 105-85",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:2761",
+        "label": "22 U.S.C. 2761",
+        "first_line": 14242,
+        "lines_sample": [
+          14242
         ],
         "count": 1
       }
@@ -643,6 +772,28 @@
           14518
         ],
         "count": 2
+      }
+    },
+    {
+      "id": "usc-title-22-section-2761->public-law-107-107:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-2761",
+      "source_label": "22 U.S.C. 2761",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-107-107",
+      "target_label": "Public Law 107-107",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:2761",
+        "label": "22 U.S.C. 2761",
+        "first_line": 12429,
+        "lines_sample": [
+          12429
+        ],
+        "count": 1
       }
     },
     {
@@ -866,6 +1017,29 @@
         ],
         "count": 2
       }
+    },
+    {
+      "id": "usc-title-22-section-2761->usc-title-22-section-2753:references:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-2761",
+      "source_label": "22 U.S.C. 2761",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-22-section-2753",
+      "target_label": "22 U.S.C. 2753",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:2761",
+        "label": "22 U.S.C. 2761",
+        "first_line": 647,
+        "lines_sample": [
+          647,
+          673
+        ],
+        "count": 2
+      }
     }
   ],
   "uncatalogued_authority_gaps": [
@@ -904,23 +1078,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:22:2347",
-      "label": "22 U.S.C. 2347",
-      "title": "22 U.S.C. 2347",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:22:2347",
-      "count": 1,
-      "lines_sample": [
-        151
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:26:501",
       "label": "26 U.S.C. 501",
       "title": "26 U.S.C. 501",
@@ -944,14 +1101,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-22-section-2761",
       "direction": "upstream",
-      "edge_count": 4
+      "edge_count": 5
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-22-section-2761",
       "direction": "downstream",
-      "edge_count": 15
+      "edge_count": 19
     }
   ]
 }

@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 5,
+    "upstream_edge_count": 6,
     "downstream_edge_count": 4,
-    "catalogued_node_count": 10,
-    "uncatalogued_gap_count": 4,
-    "evidence_backed_edge_count": 5,
+    "catalogued_node_count": 11,
+    "uncatalogued_gap_count": 3,
+    "evidence_backed_edge_count": 6,
     "inferred_edge_count": 4,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -87,22 +87,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:public-law:113-187",
+      "id": "public-law-113-187",
       "label": "Public Law 113-187",
-      "title": "Public Law 113-187",
+      "title": "Public Law 113-187: To amend chapter 22 of title 44, United States Code, popularly known as the",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
       "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:113-187",
-      "count": 2,
-      "lines_sample": [
-        197,
-        827
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "security_policy",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:executive-order:13533",
@@ -405,6 +402,29 @@
         ],
         "count": 2
       }
+    },
+    {
+      "id": "public-law-113-187->dodd-5105-76:authorizes:resolved_reference",
+      "source_artifact_id": "public-law-113-187",
+      "source_label": "Public Law 113-187",
+      "source_lane": "law",
+      "target_artifact_id": "dodd-5105-76",
+      "target_label": "DoDD 5105.76",
+      "target_lane": "dod",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "public-law:113-187",
+        "label": "Public Law 113-187",
+        "first_line": 197,
+        "lines_sample": [
+          197,
+          827
+        ],
+        "count": 2
+      }
     }
   ],
   "downstream_edges": [
@@ -519,24 +539,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:public-law:113-187",
-      "label": "Public Law 113-187",
-      "title": "Public Law 113-187",
-      "artifact_type": "Public Law",
-      "lane": "law",
-      "lane_label": "Law",
-      "hierarchy_rank": 10,
-      "reference_family": "public-law",
-      "source_reference_id": "public-law:113-187",
-      "count": 2,
-      "lines_sample": [
-        197,
-        827
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:dodd:5205.16",
       "label": "DoDD 5205.16",
       "title": "DoDD 5205.16",
@@ -577,7 +579,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodd-5105-76",
       "direction": "upstream",
-      "edge_count": 5
+      "edge_count": 6
     },
     {
       "id": "trace-downstream",

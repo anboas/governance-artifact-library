@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 5,
-    "downstream_edge_count": 26,
-    "catalogued_node_count": 29,
+    "downstream_edge_count": 31,
+    "catalogued_node_count": 34,
     "uncatalogued_gap_count": 9,
-    "evidence_backed_edge_count": 31,
+    "evidence_backed_edge_count": 36,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -90,6 +90,21 @@
       "id": "pl-118-159-fy2025-ndaa",
       "label": "FY2025 NDAA",
       "title": "Public Law 118-159: Servicemember Quality of Life Improvement and National Defense Authorization Act for Fiscal Year 2025",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-104-208",
+      "label": "Public Law 104-208",
+      "title": "Public Law 104-208: National Defense Authorization Act for Fiscal Year 1991 (Public",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
@@ -372,6 +387,36 @@
       "status": "catalogued"
     },
     {
+      "id": "usc-title-10-section-3301",
+      "label": "10 U.S.C. 3301",
+      "title": "10 U.S.C. 3301: Basis of award and rejection",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-10-section-4901",
+      "label": "10 U.S.C. 4901",
+      "title": "10 U.S.C. 4901: Department of Defense small business strategy",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_acquisition",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "gap:usc:12:1141j",
       "label": "12 U.S.C. 1141j",
       "title": "12 U.S.C. 1141j",
@@ -534,6 +579,36 @@
       "id": "usc-title-15-section-648",
       "label": "15 U.S.C. 648",
       "title": "15 U.S.C. 648: Small business development center program authorization",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_15",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-15-section-657a",
+      "label": "15 U.S.C. 657a",
+      "title": "15 U.S.C. 657a: HUBZone program",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_15",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-15-section-657f",
+      "label": "15 U.S.C. 657f",
+      "title": "15 U.S.C. 657f: Procurement program for small business concerns owned and controlled by service-disabled veterans",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
@@ -826,6 +901,29 @@
           17026
         ],
         "count": 5
+      }
+    },
+    {
+      "id": "usc-title-15-section-632->public-law-104-208:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-15-section-632",
+      "source_label": "15 U.S.C. 632",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-104-208",
+      "target_label": "Public Law 104-208",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:15:632",
+        "label": "15 U.S.C. 632",
+        "first_line": 41714,
+        "lines_sample": [
+          41714,
+          41721
+        ],
+        "count": 2
       }
     },
     {
@@ -1295,6 +1393,52 @@
       }
     },
     {
+      "id": "usc-title-15-section-632->usc-title-10-section-3301:references:resolved_reference",
+      "source_artifact_id": "usc-title-15-section-632",
+      "source_label": "15 U.S.C. 632",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-3301",
+      "target_label": "10 U.S.C. 3301",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:15:632",
+        "label": "15 U.S.C. 632",
+        "first_line": 238,
+        "lines_sample": [
+          238
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-15-section-632->usc-title-10-section-4901:references:resolved_reference",
+      "source_artifact_id": "usc-title-15-section-632",
+      "source_label": "15 U.S.C. 632",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-4901",
+      "target_label": "10 U.S.C. 4901",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:15:632",
+        "label": "15 U.S.C. 632",
+        "first_line": 264,
+        "lines_sample": [
+          264,
+          374,
+          632
+        ],
+        "count": 3
+      }
+    },
+    {
       "id": "usc-title-15-section-632->usc-title-15-section-631:references:resolved_reference",
       "source_artifact_id": "usc-title-15-section-632",
       "source_label": "15 U.S.C. 632",
@@ -1437,6 +1581,51 @@
           1422
         ],
         "count": 1
+      }
+    },
+    {
+      "id": "usc-title-15-section-632->usc-title-15-section-657a:references:resolved_reference",
+      "source_artifact_id": "usc-title-15-section-632",
+      "source_label": "15 U.S.C. 632",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-15-section-657a",
+      "target_label": "15 U.S.C. 657a",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:15:632",
+        "label": "15 U.S.C. 632",
+        "first_line": 1083,
+        "lines_sample": [
+          1083
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-15-section-632->usc-title-15-section-657f:references:resolved_reference",
+      "source_artifact_id": "usc-title-15-section-632",
+      "source_label": "15 U.S.C. 632",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-15-section-657f",
+      "target_label": "15 U.S.C. 657f",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:15:632",
+        "label": "15 U.S.C. 632",
+        "first_line": 443,
+        "lines_sample": [
+          443,
+          448
+        ],
+        "count": 2
       }
     }
   ],
@@ -1609,7 +1798,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-15-section-632",
       "direction": "downstream",
-      "edge_count": 26
+      "edge_count": 31
     }
   ]
 }

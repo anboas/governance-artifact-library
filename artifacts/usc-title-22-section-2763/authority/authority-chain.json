@@ -61,16 +61,46 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 3,
-    "downstream_edge_count": 7,
-    "catalogued_node_count": 9,
-    "uncatalogued_gap_count": 2,
-    "evidence_backed_edge_count": 10,
+    "upstream_edge_count": 4,
+    "downstream_edge_count": 9,
+    "catalogued_node_count": 12,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 13,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "public-law-104-106",
+      "label": "Public Law 104-106",
+      "title": "Public Law 104-106: National Defense Authorization Act for Fiscal Year 1995 (Public",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-104-208",
+      "label": "Public Law 104-208",
+      "title": "Public Law 104-208: National Defense Authorization Act for Fiscal Year 1991 (Public",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "public-law-114-328",
       "label": "Public Law 114-328",
@@ -177,21 +207,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:22:2394",
+      "id": "usc-title-22-section-2394",
       "label": "22 U.S.C. 2394",
-      "title": "22 U.S.C. 2394",
+      "title": "22 U.S.C. 2394: Reports and information; definitions",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:22:2394",
-      "count": 1,
-      "lines_sample": [
-        195
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "foreign_affairs",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-22-section-2751",
@@ -291,6 +319,28 @@
       }
     },
     {
+      "id": "usc-title-22-section-2394->usc-title-22-section-2763:references:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-2394",
+      "source_label": "22 U.S.C. 2394",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-22-section-2763",
+      "target_label": "22 U.S.C. 2763",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:2394",
+        "label": "22 U.S.C. 2394",
+        "first_line": 195,
+        "lines_sample": [
+          195
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-22-section-2751->usc-title-22-section-2763:references:resolved_reference",
       "source_artifact_id": "usc-title-22-section-2751",
       "source_label": "22 U.S.C. 2751",
@@ -314,6 +364,50 @@
     }
   ],
   "downstream_edges": [
+    {
+      "id": "usc-title-22-section-2763->public-law-104-106:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-2763",
+      "source_label": "22 U.S.C. 2763",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-104-106",
+      "target_label": "Public Law 104-106",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:2763",
+        "label": "22 U.S.C. 2763",
+        "first_line": 14649,
+        "lines_sample": [
+          14649
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-22-section-2763->public-law-104-208:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-2763",
+      "source_label": "22 U.S.C. 2763",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-104-208",
+      "target_label": "Public Law 104-208",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:2763",
+        "label": "22 USC 2763",
+        "first_line": 8531,
+        "lines_sample": [
+          8531
+        ],
+        "count": 1
+      }
+    },
     {
       "id": "usc-title-22-section-2763->public-law-114-328:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-22-section-2763",
@@ -491,23 +585,6 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
-    },
-    {
-      "id": "gap:usc:22:2394",
-      "label": "22 U.S.C. 2394",
-      "title": "22 U.S.C. 2394",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:22:2394",
-      "count": 1,
-      "lines_sample": [
-        195
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -516,14 +593,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-22-section-2763",
       "direction": "upstream",
-      "edge_count": 3
+      "edge_count": 4
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-22-section-2763",
       "direction": "downstream",
-      "edge_count": 7
+      "edge_count": 9
     }
   ]
 }

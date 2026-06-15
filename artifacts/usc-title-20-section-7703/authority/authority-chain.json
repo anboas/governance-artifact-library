@@ -61,16 +61,31 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 2,
-    "downstream_edge_count": 13,
-    "catalogued_node_count": 16,
-    "uncatalogued_gap_count": 3,
-    "evidence_backed_edge_count": 15,
+    "upstream_edge_count": 3,
+    "downstream_edge_count": 17,
+    "catalogued_node_count": 21,
+    "uncatalogued_gap_count": 2,
+    "evidence_backed_edge_count": 20,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "public-law-104-106",
+      "label": "Public Law 104-106",
+      "title": "Public Law 104-106: National Defense Authorization Act for Fiscal Year 1995 (Public",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "public-law-104-201",
       "label": "Public Law 104-201",
@@ -87,9 +102,39 @@
       "status": "catalogued"
     },
     {
+      "id": "public-law-104-208",
+      "label": "Public Law 104-208",
+      "title": "Public Law 104-208: National Defense Authorization Act for Fiscal Year 1991 (Public",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "public-law-105-261",
       "label": "Public Law 105-261",
       "title": "Public Law 105-261: National Defense Authorization Act for Fiscal Year",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-105-85",
+      "label": "Public Law 105-85",
+      "title": "Public Law 105-85: National Defense Authorization Act for",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
@@ -120,6 +165,21 @@
       "id": "public-law-106-65",
       "label": "Public Law 106-65",
       "title": "Public Law 106-65: National Defense Authorization Act for Fiscal Year",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-107-107",
+      "label": "Public Law 107-107",
+      "title": "Public Law 107-107: National Defense Authorization Act for Fiscal",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
@@ -282,24 +342,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:20:7701",
+      "id": "usc-title-20-section-7701",
       "label": "20 U.S.C. 7701",
-      "title": "20 U.S.C. 7701",
+      "title": "20 U.S.C. 7701: Purpose",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:20:7701",
-      "count": 4,
-      "lines_sample": [
-        1396,
-        1401,
-        1542,
-        1555
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_20",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-20-section-7703",
@@ -391,6 +446,31 @@
       }
     },
     {
+      "id": "usc-title-20-section-7701->usc-title-20-section-7703:references:resolved_reference",
+      "source_artifact_id": "usc-title-20-section-7701",
+      "source_label": "20 U.S.C. 7701",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-20-section-7703",
+      "target_label": "20 U.S.C. 7703",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:20:7701",
+        "label": "20 U.S.C. 7701",
+        "first_line": 1396,
+        "lines_sample": [
+          1396,
+          1401,
+          1542,
+          1555
+        ],
+        "count": 4
+      }
+    },
+    {
       "id": "usc-title-20-section-7801->usc-title-20-section-7703:references:resolved_reference",
       "source_artifact_id": "usc-title-20-section-7801",
       "source_label": "20 U.S.C. 7801",
@@ -416,6 +496,34 @@
   ],
   "downstream_edges": [
     {
+      "id": "usc-title-20-section-7703->public-law-104-106:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-20-section-7703",
+      "source_label": "20 U.S.C. 7703",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-104-106",
+      "target_label": "Public Law 104-106",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:20:7703",
+        "label": "20 U.S.C. 7703",
+        "first_line": 16261,
+        "lines_sample": [
+          16261,
+          16270,
+          16271,
+          16286,
+          16293,
+          16362,
+          16378
+        ],
+        "count": 7
+      }
+    },
+    {
       "id": "usc-title-20-section-7703->public-law-104-201:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-20-section-7703",
       "source_label": "20 U.S.C. 7703",
@@ -440,6 +548,29 @@
       }
     },
     {
+      "id": "usc-title-20-section-7703->public-law-104-208:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-20-section-7703",
+      "source_label": "20 U.S.C. 7703",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-104-208",
+      "target_label": "Public Law 104-208",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:20:7703",
+        "label": "20 U.S.C. 7703",
+        "first_line": 14978,
+        "lines_sample": [
+          14978,
+          14996
+        ],
+        "count": 2
+      }
+    },
+    {
       "id": "usc-title-20-section-7703->public-law-105-261:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-20-section-7703",
       "source_label": "20 U.S.C. 7703",
@@ -460,6 +591,31 @@
           4096
         ],
         "count": 2
+      }
+    },
+    {
+      "id": "usc-title-20-section-7703->public-law-105-85:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-20-section-7703",
+      "source_label": "20 U.S.C. 7703",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-105-85",
+      "target_label": "Public Law 105-85",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:20:7703",
+        "label": "20 U.S.C. 7703",
+        "first_line": 4698,
+        "lines_sample": [
+          4698,
+          4702,
+          4712,
+          4713
+        ],
+        "count": 4
       }
     },
     {
@@ -513,6 +669,29 @@
         "lines_sample": [
           3779,
           3792
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "usc-title-20-section-7703->public-law-107-107:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-20-section-7703",
+      "source_label": "20 U.S.C. 7703",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-107-107",
+      "target_label": "Public Law 107-107",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:20:7703",
+        "label": "20 U.S.C. 7703",
+        "first_line": 3275,
+        "lines_sample": [
+          3275,
+          3292
         ],
         "count": 2
       }
@@ -734,26 +913,6 @@
   ],
   "uncatalogued_authority_gaps": [
     {
-      "id": "gap:usc:20:7701",
-      "label": "20 U.S.C. 7701",
-      "title": "20 U.S.C. 7701",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:20:7701",
-      "count": 4,
-      "lines_sample": [
-        1396,
-        1401,
-        1542,
-        1555
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:20:7705",
       "label": "20 U.S.C. 7705",
       "title": "20 U.S.C. 7705",
@@ -794,14 +953,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-20-section-7703",
       "direction": "upstream",
-      "edge_count": 2
+      "edge_count": 3
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-20-section-7703",
       "direction": "downstream",
-      "edge_count": 13
+      "edge_count": 17
     }
   ]
 }

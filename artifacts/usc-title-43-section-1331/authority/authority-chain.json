@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 2,
-    "downstream_edge_count": 10,
-    "catalogued_node_count": 13,
+    "downstream_edge_count": 11,
+    "catalogued_node_count": 14,
     "uncatalogued_gap_count": 12,
-    "evidence_backed_edge_count": 12,
+    "evidence_backed_edge_count": 13,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -278,6 +278,21 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "usc-title-16-section-1801",
+      "label": "16 U.S.C. 1801",
+      "title": "16 U.S.C. 1801: Findings, purposes and policy",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_16",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:16:460l",
@@ -679,6 +694,28 @@
       }
     },
     {
+      "id": "usc-title-43-section-1331->usc-title-16-section-1801:references:resolved_reference",
+      "source_artifact_id": "usc-title-43-section-1331",
+      "source_label": "43 U.S.C. 1331",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-16-section-1801",
+      "target_label": "16 U.S.C. 1801",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:43:1331",
+        "label": "43 U.S.C. 1331",
+        "first_line": 619,
+        "lines_sample": [
+          619
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-43-section-1331->usc-title-33-section-1321:references:resolved_reference",
       "source_artifact_id": "usc-title-43-section-1331",
       "source_label": "43 U.S.C. 1331",
@@ -971,7 +1008,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-43-section-1331",
       "direction": "downstream",
-      "edge_count": 10
+      "edge_count": 11
     }
   ]
 }

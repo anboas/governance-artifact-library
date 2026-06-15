@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 10,
+    "upstream_edge_count": 11,
     "downstream_edge_count": 19,
-    "catalogued_node_count": 25,
+    "catalogued_node_count": 26,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 29,
+    "evidence_backed_edge_count": 30,
     "inferred_edge_count": 0,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -82,6 +82,21 @@
       "family": "defense_authorization",
       "issuing_authority": "Congress",
       "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-10-section-12301",
+      "label": "10 U.S.C. 12301",
+      "title": "10 U.S.C. 12301: Reserve components generally",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "catalogued"
@@ -116,28 +131,6 @@
       "count": 1,
       "lines_sample": [
         973
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:usc:10:12301",
-      "label": "10 USC 12301",
-      "title": "10 USC 12301",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:10:12301",
-      "count": 6,
-      "lines_sample": [
-        946,
-        947,
-        952,
-        957,
-        968,
-        974
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -376,6 +369,23 @@
       "count": 1,
       "lines_sample": [
         971
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:10:802",
+      "label": "10 USC 802",
+      "title": "10 USC 802",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:10:802",
+      "count": 1,
+      "lines_sample": [
+        972
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -983,6 +993,33 @@
         ],
         "count": 2
       }
+    },
+    {
+      "id": "usc-title-10-section-12301->dodi-1215-06:flows_down:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-12301",
+      "source_label": "10 U.S.C. 12301",
+      "source_lane": "statute",
+      "target_artifact_id": "dodi-1215-06",
+      "target_label": "DoDI 1215.06",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:12301",
+        "label": "10 USC 12301",
+        "first_line": 946,
+        "lines_sample": [
+          946,
+          947,
+          952,
+          957,
+          968,
+          974
+        ],
+        "count": 6
+      }
     }
   ],
   "downstream_edges": [
@@ -1418,28 +1455,6 @@
   ],
   "uncatalogued_authority_gaps": [
     {
-      "id": "gap:usc:10:12301",
-      "label": "10 USC 12301",
-      "title": "10 USC 12301",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:10:12301",
-      "count": 6,
-      "lines_sample": [
-        946,
-        947,
-        952,
-        957,
-        968,
-        974
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:32:502",
       "label": "32 USC 502",
       "title": "32 USC 502",
@@ -1731,6 +1746,23 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "gap:usc:10:802",
+      "label": "10 USC 802",
+      "title": "10 USC 802",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:10:802",
+      "count": 1,
+      "lines_sample": [
+        972
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -1739,7 +1771,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-1215-06",
       "direction": "upstream",
-      "edge_count": 10
+      "edge_count": 11
     },
     {
       "id": "trace-downstream",

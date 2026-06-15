@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 1,
-    "downstream_edge_count": 13,
-    "catalogued_node_count": 14,
+    "downstream_edge_count": 15,
+    "catalogued_node_count": 16,
     "uncatalogued_gap_count": 11,
-    "evidence_backed_edge_count": 14,
+    "evidence_backed_edge_count": 16,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -75,6 +75,21 @@
       "id": "pl-118-31-fy2024-ndaa",
       "label": "FY2024 NDAA",
       "title": "Public Law 118-31: National Defense Authorization Act for Fiscal Year 2024",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-104-208",
+      "label": "Public Law 104-208",
+      "title": "Public Law 104-208: National Defense Authorization Act for Fiscal Year 1991 (Public",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
@@ -210,6 +225,21 @@
       "id": "usc-title-10-section-394",
       "label": "10 U.S.C. 394",
       "title": "10 U.S.C. 394: Authorities concerning military cyber operations",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-10-section-397",
+      "label": "10 U.S.C. 397",
+      "title": "10 U.S.C. 397: Principal Information Operations Advisor",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
@@ -531,6 +561,28 @@
       }
     },
     {
+      "id": "usc-title-50-section-1801->public-law-104-208:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-1801",
+      "source_label": "50 U.S.C. 1801",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-104-208",
+      "target_label": "Public Law 104-208",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:1801",
+        "label": "50 U.S.C. 1801",
+        "first_line": 36764,
+        "lines_sample": [
+          36764
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-50-section-1801->public-law-108-458:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-50-section-1801",
       "source_label": "50 U.S.C. 1801",
@@ -740,6 +792,28 @@
           909
         ],
         "count": 4
+      }
+    },
+    {
+      "id": "usc-title-50-section-1801->usc-title-10-section-397:references:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-1801",
+      "source_label": "50 U.S.C. 1801",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-397",
+      "target_label": "10 U.S.C. 397",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:1801",
+        "label": "50 U.S.C. 1801",
+        "first_line": 340,
+        "lines_sample": [
+          340
+        ],
+        "count": 1
       }
     },
     {
@@ -1028,7 +1102,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-50-section-1801",
       "direction": "downstream",
-      "edge_count": 13
+      "edge_count": 15
     }
   ]
 }

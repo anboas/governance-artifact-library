@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 2,
+    "upstream_edge_count": 3,
     "downstream_edge_count": 6,
-    "catalogued_node_count": 9,
-    "uncatalogued_gap_count": 9,
-    "evidence_backed_edge_count": 8,
+    "catalogued_node_count": 10,
+    "uncatalogued_gap_count": 8,
+    "evidence_backed_edge_count": 9,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -293,23 +293,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:20:921",
+      "id": "usc-title-20-section-921",
       "label": "20 U.S.C. 921",
-      "title": "20 U.S.C. 921",
+      "title": "20 U.S.C. 921: Defense dependents' education system",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:20:921",
-      "count": 3,
-      "lines_sample": [
-        377,
-        491,
-        641
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_20",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:42:1490",
@@ -406,6 +402,30 @@
           1081
         ],
         "count": 1
+      }
+    },
+    {
+      "id": "usc-title-20-section-921->usc-title-10-section-2164:references:resolved_reference",
+      "source_artifact_id": "usc-title-20-section-921",
+      "source_label": "20 U.S.C. 921",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-2164",
+      "target_label": "10 U.S.C. 2164",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:20:921",
+        "label": "20 U.S.C. 921",
+        "first_line": 377,
+        "lines_sample": [
+          377,
+          491,
+          641
+        ],
+        "count": 3
       }
     }
   ],
@@ -550,25 +570,6 @@
   ],
   "uncatalogued_authority_gaps": [
     {
-      "id": "gap:usc:20:921",
-      "label": "20 U.S.C. 921",
-      "title": "20 U.S.C. 921",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:20:921",
-      "count": 3,
-      "lines_sample": [
-        377,
-        491,
-        641
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:20:241",
       "label": "20 U.S.C. 241",
       "title": "20 U.S.C. 241",
@@ -712,7 +713,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-10-section-2164",
       "direction": "upstream",
-      "edge_count": 2
+      "edge_count": 3
     },
     {
       "id": "trace-downstream",

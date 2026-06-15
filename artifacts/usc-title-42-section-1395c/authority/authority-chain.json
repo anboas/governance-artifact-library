@@ -61,16 +61,31 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
-    "downstream_edge_count": 7,
-    "catalogued_node_count": 8,
-    "uncatalogued_gap_count": 6,
-    "evidence_backed_edge_count": 7,
+    "upstream_edge_count": 1,
+    "downstream_edge_count": 9,
+    "catalogued_node_count": 11,
+    "uncatalogued_gap_count": 5,
+    "evidence_backed_edge_count": 10,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
+    {
+      "id": "public-law-104-106",
+      "label": "Public Law 104-106",
+      "title": "Public Law 104-106: National Defense Authorization Act for Fiscal Year 1995 (Public",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
     {
       "id": "public-law-104-201",
       "label": "Public Law 104-201",
@@ -90,6 +105,21 @@
       "id": "public-law-105-261",
       "label": "Public Law 105-261",
       "title": "Public Law 105-261: National Defense Authorization Act for Fiscal Year",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "family": "defense_authorization",
+      "issuing_authority": "Congress",
+      "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "public-law-107-107",
+      "label": "Public Law 107-107",
+      "title": "Public Law 107-107: National Defense Authorization Act for Fiscal",
       "artifact_type": "Public Law",
       "lane": "law",
       "lane_label": "Law",
@@ -162,21 +192,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:42:1395",
+      "id": "usc-title-42-section-1395",
       "label": "42 U.S.C. 1395",
-      "title": "42 U.S.C. 1395",
+      "title": "42 U.S.C. 1395: Prohibition against any Federal interference",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:1395",
-      "count": 1,
-      "lines_sample": [
-        341
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-42-section-1395c",
@@ -300,8 +328,53 @@
       "status": "catalogued"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "usc-title-42-section-1395->usc-title-42-section-1395c:references:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-1395",
+      "source_label": "42 U.S.C. 1395",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-42-section-1395c",
+      "target_label": "42 U.S.C. 1395c",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:1395",
+        "label": "42 U.S.C. 1395",
+        "first_line": 341,
+        "lines_sample": [
+          341
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [
+    {
+      "id": "usc-title-42-section-1395c->public-law-104-106:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-1395c",
+      "source_label": "42 U.S.C. 1395c",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-104-106",
+      "target_label": "Public Law 104-106",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:1395c",
+        "label": "42 U.S.C. 1395c",
+        "first_line": 12523,
+        "lines_sample": [
+          12523
+        ],
+        "count": 1
+      }
+    },
     {
       "id": "usc-title-42-section-1395c->public-law-104-201:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-42-section-1395c",
@@ -348,6 +421,28 @@
           8902
         ],
         "count": 5
+      }
+    },
+    {
+      "id": "usc-title-42-section-1395c->public-law-107-107:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-1395c",
+      "source_label": "42 U.S.C. 1395c",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-107-107",
+      "target_label": "Public Law 107-107",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:1395c",
+        "label": "42 U.S.C. 1395c",
+        "first_line": 9606,
+        "lines_sample": [
+          9606
+        ],
+        "count": 1
       }
     },
     {
@@ -506,23 +601,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:42:1395",
-      "label": "42 U.S.C. 1395",
-      "title": "42 U.S.C. 1395",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:1395",
-      "count": 1,
-      "lines_sample": [
-        341
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:42:1395e",
       "label": "42 U.S.C. 1395e",
       "title": "42 U.S.C. 1395e",
@@ -580,14 +658,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-42-section-1395c",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 1
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-42-section-1395c",
       "direction": "downstream",
-      "edge_count": 7
+      "edge_count": 9
     }
   ]
 }
