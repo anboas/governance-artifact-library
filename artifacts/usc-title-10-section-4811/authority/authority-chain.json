@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 5,
+    "upstream_edge_count": 7,
     "downstream_edge_count": 6,
-    "catalogued_node_count": 12,
-    "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 11,
+    "catalogued_node_count": 14,
+    "uncatalogued_gap_count": 16,
+    "evidence_backed_edge_count": 13,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -336,21 +336,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:15:3710a",
+      "id": "usc-title-15-section-3710a",
       "label": "15 U.S.C. 3710a",
-      "title": "15 U.S.C. 3710a",
+      "title": "15 U.S.C. 3710a: Cooperative research and development agreements",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:15:3710a",
-      "count": 1,
-      "lines_sample": [
-        1641
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_15",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-22-section-2778",
@@ -449,22 +447,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:50:4501",
+      "id": "usc-title-50-section-4501",
       "label": "50 U.S.C. 4501",
-      "title": "50 U.S.C. 4501",
+      "title": "50 U.S.C. 4501: Short title",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:50:4501",
-      "count": 2,
-      "lines_sample": [
-        1289,
-        1762
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "national_security",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:50:4531",
@@ -568,6 +563,28 @@
   ],
   "upstream_edges": [
     {
+      "id": "usc-title-15-section-3710a->usc-title-10-section-4811:references:resolved_reference",
+      "source_artifact_id": "usc-title-15-section-3710a",
+      "source_label": "15 U.S.C. 3710a",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-4811",
+      "target_label": "10 U.S.C. 4811",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:15:3710a",
+        "label": "15 U.S.C. 3710a",
+        "first_line": 1641,
+        "lines_sample": [
+          1641
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-22-section-2778->usc-title-10-section-4811:references:resolved_reference",
       "source_artifact_id": "usc-title-22-section-2778",
       "source_label": "22 U.S.C. 2778",
@@ -635,6 +652,29 @@
           702
         ],
         "count": 5
+      }
+    },
+    {
+      "id": "usc-title-50-section-4501->usc-title-10-section-4811:references:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-4501",
+      "source_label": "50 U.S.C. 4501",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-4811",
+      "target_label": "10 U.S.C. 4811",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:4501",
+        "label": "50 U.S.C. 4501",
+        "first_line": 1289,
+        "lines_sample": [
+          1289,
+          1762
+        ],
+        "count": 2
       }
     },
     {
@@ -896,24 +936,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:50:4501",
-      "label": "50 U.S.C. 4501",
-      "title": "50 U.S.C. 4501",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:50:4501",
-      "count": 2,
-      "lines_sample": [
-        1289,
-        1762
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:50:98b",
       "label": "50 U.S.C. 98b",
       "title": "50 U.S.C. 98b",
@@ -1034,23 +1056,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:15:3710a",
-      "label": "15 U.S.C. 3710a",
-      "title": "15 U.S.C. 3710a",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:15:3710a",
-      "count": 1,
-      "lines_sample": [
-        1641
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:30:1606",
       "label": "30 U.S.C. 1606",
       "title": "30 U.S.C. 1606",
@@ -1159,7 +1164,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-10-section-4811",
       "direction": "upstream",
-      "edge_count": 5
+      "edge_count": 7
     },
     {
       "id": "trace-downstream",

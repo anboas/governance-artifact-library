@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 2,
-    "downstream_edge_count": 7,
-    "catalogued_node_count": 10,
+    "downstream_edge_count": 8,
+    "catalogued_node_count": 11,
     "uncatalogued_gap_count": 12,
-    "evidence_backed_edge_count": 9,
+    "evidence_backed_edge_count": 10,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -409,6 +409,21 @@
       "priority": "high"
     },
     {
+      "id": "usc-title-5-section-601",
+      "label": "5 U.S.C. 601",
+      "title": "5 U.S.C. 601: Definitions",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_5",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "gap:usc:7:1010",
       "label": "7 U.S.C. 1010",
       "title": "7 U.S.C. 1010",
@@ -639,6 +654,28 @@
         ],
         "count": 3
       }
+    },
+    {
+      "id": "usc-title-43-section-1701->usc-title-5-section-601:references:resolved_reference",
+      "source_artifact_id": "usc-title-43-section-1701",
+      "source_label": "43 U.S.C. 1701",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-5-section-601",
+      "target_label": "5 U.S.C. 601",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:43:1701",
+        "label": "43 U.S.C. 1701",
+        "first_line": 3241,
+        "lines_sample": [
+          3241
+        ],
+        "count": 1
+      }
     }
   ],
   "uncatalogued_authority_gaps": [
@@ -860,7 +897,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-43-section-1701",
       "direction": "downstream",
-      "edge_count": 7
+      "edge_count": 8
     }
   ]
 }

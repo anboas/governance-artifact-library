@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 3,
-    "downstream_edge_count": 21,
-    "catalogued_node_count": 25,
+    "upstream_edge_count": 4,
+    "downstream_edge_count": 22,
+    "catalogued_node_count": 27,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 24,
+    "evidence_backed_edge_count": 26,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -292,6 +292,21 @@
       "family": "defense_authorization",
       "issuing_authority": "Congress",
       "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-10-section-2164",
+      "label": "10 U.S.C. 2164",
+      "title": "10 U.S.C. 2164: Department of Defense domestic dependent elementary and secondary schools",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "catalogued"
@@ -537,25 +552,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:20:1070",
+      "id": "usc-title-20-section-1070",
       "label": "20 U.S.C. 1070",
-      "title": "20 U.S.C. 1070",
+      "title": "20 U.S.C. 1070: Statement of purpose; program authorization",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:20:1070",
-      "count": 5,
-      "lines_sample": [
-        920,
-        928,
-        932,
-        936,
-        985
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_20",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:20:1070a",
@@ -608,6 +617,23 @@
         1101,
         1103,
         1107
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:20:1078",
+      "label": "20 U.S.C. 1078",
+      "title": "20 U.S.C. 1078",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:20:1078",
+      "count": 1,
+      "lines_sample": [
+        1113
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -805,6 +831,32 @@
           949
         ],
         "count": 3
+      }
+    },
+    {
+      "id": "usc-title-20-section-1070->usc-title-20-section-1001:references:resolved_reference",
+      "source_artifact_id": "usc-title-20-section-1070",
+      "source_label": "20 U.S.C. 1070",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-20-section-1001",
+      "target_label": "20 U.S.C. 1001",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:20:1070",
+        "label": "20 U.S.C. 1070",
+        "first_line": 920,
+        "lines_sample": [
+          920,
+          928,
+          932,
+          936,
+          985
+        ],
+        "count": 5
       }
     },
     {
@@ -1213,6 +1265,28 @@
       }
     },
     {
+      "id": "usc-title-20-section-1001->usc-title-10-section-2164:references:resolved_reference",
+      "source_artifact_id": "usc-title-20-section-1001",
+      "source_label": "20 U.S.C. 1001",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-2164",
+      "target_label": "10 U.S.C. 2164",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:20:1001",
+        "label": "20 U.S.C. 1001",
+        "first_line": 1071,
+        "lines_sample": [
+          1071
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-20-section-1001->usc-title-10-section-2701:references:resolved_reference",
       "source_artifact_id": "usc-title-20-section-1001",
       "source_label": "20 U.S.C. 1001",
@@ -1392,27 +1466,6 @@
         1013,
         1089,
         1097
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:usc:20:1070",
-      "label": "20 U.S.C. 1070",
-      "title": "20 U.S.C. 1070",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:20:1070",
-      "count": 5,
-      "lines_sample": [
-        920,
-        928,
-        932,
-        936,
-        985
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -1687,6 +1740,23 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "gap:usc:20:1078",
+      "label": "20 U.S.C. 1078",
+      "title": "20 U.S.C. 1078",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:20:1078",
+      "count": 1,
+      "lines_sample": [
+        1113
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -1695,14 +1765,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-20-section-1001",
       "direction": "upstream",
-      "edge_count": 3
+      "edge_count": 4
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-20-section-1001",
       "direction": "downstream",
-      "edge_count": 21
+      "edge_count": 22
     }
   ]
 }

@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 2,
-    "downstream_edge_count": 5,
-    "catalogued_node_count": 8,
+    "downstream_edge_count": 6,
+    "catalogued_node_count": 9,
     "uncatalogued_gap_count": 7,
-    "evidence_backed_edge_count": 7,
+    "evidence_backed_edge_count": 8,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -261,6 +261,21 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "usc-title-5-section-601",
+      "label": "5 U.S.C. 601",
+      "title": "5 U.S.C. 601: Definitions",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_5",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-50-section-3003",
@@ -482,6 +497,28 @@
         ],
         "count": 4
       }
+    },
+    {
+      "id": "usc-title-44-section-3501->usc-title-5-section-601:references:resolved_reference",
+      "source_artifact_id": "usc-title-44-section-3501",
+      "source_label": "44 U.S.C. 3501",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-5-section-601",
+      "target_label": "5 U.S.C. 601",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:44:3501",
+        "label": "44 U.S.C. 3501",
+        "first_line": 878,
+        "lines_sample": [
+          878
+        ],
+        "count": 1
+      }
     }
   ],
   "uncatalogued_authority_gaps": [
@@ -619,7 +656,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-44-section-3501",
       "direction": "downstream",
-      "edge_count": 5
+      "edge_count": 6
     }
   ]
 }

@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 2,
+    "upstream_edge_count": 3,
     "downstream_edge_count": 4,
-    "catalogued_node_count": 6,
+    "catalogued_node_count": 7,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 6,
+    "evidence_backed_edge_count": 7,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -438,6 +438,23 @@
       "priority": "high"
     },
     {
+      "id": "gap:usc:33:2752",
+      "label": "33 U.S.C. 2752",
+      "title": "33 U.S.C. 2752",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:33:2752",
+      "count": 1,
+      "lines_sample": [
+        3696
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
       "id": "usc-title-42-section-9601",
       "label": "42 U.S.C. 9601",
       "title": "42 U.S.C. 9601: Definitions",
@@ -453,24 +470,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:43:1331",
+      "id": "usc-title-43-section-1331",
       "label": "43 U.S.C. 1331",
-      "title": "43 U.S.C. 1331",
+      "title": "43 U.S.C. 1331: Definitions",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:43:1331",
-      "count": 4,
-      "lines_sample": [
-        351,
-        356,
-        364,
-        1647
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_43",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:executive-order:13554",
@@ -537,6 +549,31 @@
           670
         ],
         "count": 1
+      }
+    },
+    {
+      "id": "usc-title-43-section-1331->usc-title-33-section-1321:references:resolved_reference",
+      "source_artifact_id": "usc-title-43-section-1331",
+      "source_label": "43 U.S.C. 1331",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-33-section-1321",
+      "target_label": "33 U.S.C. 1321",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:43:1331",
+        "label": "43 U.S.C. 1331",
+        "first_line": 351,
+        "lines_sample": [
+          351,
+          356,
+          364,
+          1647
+        ],
+        "count": 4
       }
     }
   ],
@@ -726,26 +763,6 @@
         3749,
         3769,
         3771
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:usc:43:1331",
-      "label": "43 U.S.C. 1331",
-      "title": "43 U.S.C. 1331",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:43:1331",
-      "count": 4,
-      "lines_sample": [
-        351,
-        356,
-        364,
-        1647
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -974,6 +991,23 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "gap:usc:33:2752",
+      "label": "33 U.S.C. 2752",
+      "title": "33 U.S.C. 2752",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:33:2752",
+      "count": 1,
+      "lines_sample": [
+        3696
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -982,7 +1016,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-33-section-1321",
       "direction": "upstream",
-      "edge_count": 2
+      "edge_count": 3
     },
     {
       "id": "trace-downstream",

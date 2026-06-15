@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 18,
+    "upstream_edge_count": 20,
     "downstream_edge_count": 24,
-    "catalogued_node_count": 41,
+    "catalogued_node_count": 43,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 42,
+    "evidence_backed_edge_count": 44,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -365,6 +365,21 @@
       "lane_label": "Statute",
       "hierarchy_rank": 20,
       "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-12-section-1813",
+      "label": "12 U.S.C. 1813",
+      "title": "12 U.S.C. 1813: Definitions",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_12",
       "issuing_authority": "Congress",
       "source_system": "U.S. Code",
       "mirror_status": "mirrored",
@@ -807,26 +822,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:50:4605",
+      "id": "usc-title-50-section-4605",
       "label": "50 U.S.C. 4605",
-      "title": "50 U.S.C. 4605",
+      "title": "50 U.S.C. 4605: U.S. Code section",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:50:4605",
-      "count": 6,
-      "lines_sample": [
-        2383,
-        2592,
-        3760,
-        4356,
-        5098,
-        5117
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "national_security",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:50:4611",
@@ -1018,9 +1026,48 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:13818",
+      "label": "Executive Order 13818",
+      "title": "Executive Order 13818",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:13818",
+      "count": 2,
+      "lines_sample": [
+        5357
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "upstream_edges": [
+    {
+      "id": "usc-title-12-section-1813->usc-title-50-section-1701:references:resolved_reference",
+      "source_artifact_id": "usc-title-12-section-1813",
+      "source_label": "12 U.S.C. 1813",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-50-section-1701",
+      "target_label": "50 U.S.C. 1701",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:12:1813",
+        "label": "12 U.S.C. 1813",
+        "first_line": 4499,
+        "lines_sample": [
+          4499
+        ],
+        "count": 1
+      }
+    },
     {
       "id": "usc-title-20-section-1001->usc-title-50-section-1701:references:resolved_reference",
       "source_artifact_id": "usc-title-20-section-1001",
@@ -1400,6 +1447,33 @@
           4449
         ],
         "count": 4
+      }
+    },
+    {
+      "id": "usc-title-50-section-4605->usc-title-50-section-1701:references:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-4605",
+      "source_label": "50 U.S.C. 4605",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-50-section-1701",
+      "target_label": "50 U.S.C. 1701",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:4605",
+        "label": "50 U.S.C. 4605",
+        "first_line": 2383,
+        "lines_sample": [
+          2383,
+          2592,
+          3760,
+          4356,
+          5098,
+          5117
+        ],
+        "count": 6
       }
     },
     {
@@ -2053,28 +2127,6 @@
   ],
   "uncatalogued_authority_gaps": [
     {
-      "id": "gap:usc:50:4605",
-      "label": "50 U.S.C. 4605",
-      "title": "50 U.S.C. 4605",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:50:4605",
-      "count": 6,
-      "lines_sample": [
-        2383,
-        2592,
-        3760,
-        4356,
-        5098,
-        5117
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:8:1201",
       "label": "8 U.S.C. 1201",
       "title": "8 U.S.C. 1201",
@@ -2384,6 +2436,23 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:13818",
+      "label": "Executive Order 13818",
+      "title": "Executive Order 13818",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:13818",
+      "count": 2,
+      "lines_sample": [
+        5357
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -2392,7 +2461,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-50-section-1701",
       "direction": "upstream",
-      "edge_count": 18
+      "edge_count": 20
     },
     {
       "id": "trace-downstream",

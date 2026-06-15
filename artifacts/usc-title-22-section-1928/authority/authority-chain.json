@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 4,
+    "upstream_edge_count": 5,
     "downstream_edge_count": 10,
-    "catalogued_node_count": 15,
-    "uncatalogued_gap_count": 9,
-    "evidence_backed_edge_count": 14,
+    "catalogued_node_count": 16,
+    "uncatalogued_gap_count": 8,
+    "evidence_backed_edge_count": 15,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -352,24 +352,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:22:2763",
+      "id": "usc-title-22-section-2763",
       "label": "22 U.S.C. 2763",
-      "title": "22 U.S.C. 2763",
+      "title": "22 U.S.C. 2763: Credit sales",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:22:2763",
-      "count": 4,
-      "lines_sample": [
-        368,
-        507,
-        1024,
-        1146
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "foreign_affairs",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-22-section-2780",
@@ -524,6 +519,31 @@
           1032
         ],
         "count": 3
+      }
+    },
+    {
+      "id": "usc-title-22-section-2763->usc-title-22-section-1928:references:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-2763",
+      "source_label": "22 U.S.C. 2763",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-22-section-1928",
+      "target_label": "22 U.S.C. 1928",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:2763",
+        "label": "22 U.S.C. 2763",
+        "first_line": 368,
+        "lines_sample": [
+          368,
+          507,
+          1024,
+          1146
+        ],
+        "count": 4
       }
     },
     {
@@ -783,26 +803,6 @@
   ],
   "uncatalogued_authority_gaps": [
     {
-      "id": "gap:usc:22:2763",
-      "label": "22 U.S.C. 2763",
-      "title": "22 U.S.C. 2763",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:22:2763",
-      "count": 4,
-      "lines_sample": [
-        368,
-        507,
-        1024,
-        1146
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:22:2346",
       "label": "22 U.S.C. 2346",
       "title": "22 U.S.C. 2346",
@@ -949,7 +949,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-22-section-1928",
       "direction": "upstream",
-      "edge_count": 4
+      "edge_count": 5
     },
     {
       "id": "trace-downstream",

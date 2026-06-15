@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 57,
+    "upstream_edge_count": 60,
     "downstream_edge_count": 12,
-    "catalogued_node_count": 68,
+    "catalogued_node_count": 71,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 65,
+    "evidence_backed_edge_count": 68,
     "inferred_edge_count": 4,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -1096,6 +1096,21 @@
       "status": "catalogued"
     },
     {
+      "id": "usc-title-43-section-1613",
+      "label": "43 U.S.C. 1613",
+      "title": "43 U.S.C. 1613: Conveyance of lands",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_43",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "usc-title-46-section-53101",
       "label": "46 U.S.C. 53101",
       "title": "46 U.S.C. 53101: Definitions",
@@ -1223,6 +1238,25 @@
       "priority": "high"
     },
     {
+      "id": "gap:usc:50:431",
+      "label": "50 U.S.C. 431",
+      "title": "50 U.S.C. 431",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:50:431",
+      "count": 3,
+      "lines_sample": [
+        11101,
+        11288,
+        11342
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
       "id": "gap:usc:50:435",
       "label": "50 U.S.C. 435",
       "title": "50 U.S.C. 435",
@@ -1273,24 +1307,34 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:8:1154",
-      "label": "8 U.S.C. 1154",
-      "title": "8 U.S.C. 1154",
+      "id": "usc-title-8-section-1153",
+      "label": "8 U.S.C. 1153",
+      "title": "8 U.S.C. 1153: Allocation of immigrant visas",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:8:1154",
-      "count": 4,
-      "lines_sample": [
-        18764,
-        18791,
-        18837,
-        18870
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_8",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-8-section-1154",
+      "label": "8 U.S.C. 1154",
+      "title": "8 U.S.C. 1154: Procedure for granting immigrant status",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_8",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-8-section-1182",
@@ -2548,6 +2592,28 @@
       }
     },
     {
+      "id": "usc-title-43-section-1613->public-law-108-136:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-43-section-1613",
+      "source_label": "43 U.S.C. 1613",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-108-136",
+      "target_label": "Public Law 108-136",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:43:1613",
+        "label": "43 U.S.C. 1613",
+        "first_line": 21542,
+        "lines_sample": [
+          21542
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-46-section-53101->public-law-108-136:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-46-section-53101",
       "source_label": "46 U.S.C. 53101",
@@ -2764,6 +2830,53 @@
           18882
         ],
         "count": 10
+      }
+    },
+    {
+      "id": "usc-title-8-section-1153->public-law-108-136:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-8-section-1153",
+      "source_label": "8 U.S.C. 1153",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-108-136",
+      "target_label": "Public Law 108-136",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:8:1153",
+        "label": "8 U.S.C. 1153",
+        "first_line": 18823,
+        "lines_sample": [
+          18823
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-8-section-1154->public-law-108-136:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-8-section-1154",
+      "source_label": "8 U.S.C. 1154",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-108-136",
+      "target_label": "Public Law 108-136",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:8:1154",
+        "label": "8 U.S.C. 1154",
+        "first_line": 18764,
+        "lines_sample": [
+          18764,
+          18791,
+          18837,
+          18870
+        ],
+        "count": 4
       }
     },
     {
@@ -3240,26 +3353,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:8:1154",
-      "label": "8 U.S.C. 1154",
-      "title": "8 U.S.C. 1154",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:8:1154",
-      "count": 4,
-      "lines_sample": [
-        18764,
-        18791,
-        18837,
-        18870
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:8:1440",
       "label": "8 U.S.C. 1440",
       "title": "8 U.S.C. 1440",
@@ -3411,6 +3504,25 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "gap:usc:50:431",
+      "label": "50 U.S.C. 431",
+      "title": "50 U.S.C. 431",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:50:431",
+      "count": 3,
+      "lines_sample": [
+        11101,
+        11288,
+        11342
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -3419,7 +3531,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "public-law-108-136",
       "direction": "upstream",
-      "edge_count": 57
+      "edge_count": 60
     },
     {
       "id": "trace-downstream",

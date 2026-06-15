@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 1,
+    "upstream_edge_count": 2,
     "downstream_edge_count": 28,
-    "catalogued_node_count": 30,
-    "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 29,
+    "catalogued_node_count": 31,
+    "uncatalogued_gap_count": 0,
+    "evidence_backed_edge_count": 30,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -507,21 +507,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:42:7401",
+      "id": "usc-title-42-section-7401",
       "label": "42 U.S.C. 7401",
-      "title": "42 U.S.C. 7401",
+      "title": "42 U.S.C. 7401: Congressional findings and declaration of purpose",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:7401",
-      "count": 1,
-      "lines_sample": [
-        171
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-50-section-1521",
@@ -561,6 +559,28 @@
           514
         ],
         "count": 2
+      }
+    },
+    {
+      "id": "usc-title-42-section-7401->usc-title-50-section-1521:references:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-7401",
+      "source_label": "42 U.S.C. 7401",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-50-section-1521",
+      "target_label": "50 U.S.C. 1521",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:7401",
+        "label": "42 U.S.C. 7401",
+        "first_line": 171,
+        "lines_sample": [
+          171
+        ],
+        "count": 1
       }
     }
   ],
@@ -1221,32 +1241,14 @@
       }
     }
   ],
-  "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:usc:42:7401",
-      "label": "42 U.S.C. 7401",
-      "title": "42 U.S.C. 7401",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:7401",
-      "count": 1,
-      "lines_sample": [
-        171
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    }
-  ],
+  "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
     {
       "id": "trace-upstream",
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-50-section-1521",
       "direction": "upstream",
-      "edge_count": 1
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",

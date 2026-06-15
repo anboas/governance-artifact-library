@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 5,
+    "upstream_edge_count": 6,
     "downstream_edge_count": 3,
-    "catalogued_node_count": 8,
+    "catalogued_node_count": 9,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 7,
+    "evidence_backed_edge_count": 8,
     "inferred_edge_count": 1,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -116,6 +116,23 @@
       "count": 1,
       "lines_sample": [
         1889
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:public-law:113-128",
+      "label": "Public Law 113-128",
+      "title": "Public Law 113-128",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:113-128",
+      "count": 1,
+      "lines_sample": [
+        1598
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -285,21 +302,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:50:4501",
+      "id": "usc-title-50-section-4501",
       "label": "50 U.S.C. 4501",
-      "title": "50 U.S.C. 4501",
+      "title": "50 U.S.C. 4501: Short title",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:50:4501",
-      "count": 1,
-      "lines_sample": [
-        557
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "national_security",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:6:650",
@@ -617,6 +632,28 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "usc-title-50-section-4501->eo-14110-ai:authorizes:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-4501",
+      "source_label": "50 U.S.C. 4501",
+      "source_lane": "statute",
+      "target_artifact_id": "eo-14110-ai",
+      "target_label": "EO 14110",
+      "target_lane": "executive",
+      "relationship": "authorizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:4501",
+        "label": "50 U.S.C. 4501",
+        "first_line": 557,
+        "lines_sample": [
+          557
+        ],
+        "count": 1
+      }
     }
   ],
   "downstream_edges": [
@@ -877,23 +914,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:50:4501",
-      "label": "50 U.S.C. 4501",
-      "title": "50 U.S.C. 4501",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:50:4501",
-      "count": 1,
-      "lines_sample": [
-        557
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:6:650",
       "label": "6 U.S.C. 650",
       "title": "6 U.S.C. 650",
@@ -1011,6 +1031,23 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "gap:public-law:113-128",
+      "label": "Public Law 113-128",
+      "title": "Public Law 113-128",
+      "artifact_type": "Public Law",
+      "lane": "law",
+      "lane_label": "Law",
+      "hierarchy_rank": 10,
+      "reference_family": "public-law",
+      "source_reference_id": "public-law:113-128",
+      "count": 1,
+      "lines_sample": [
+        1598
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -1019,7 +1056,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "eo-14110-ai",
       "direction": "upstream",
-      "edge_count": 5
+      "edge_count": 6
     },
     {
       "id": "trace-downstream",

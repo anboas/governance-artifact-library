@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 4,
-    "catalogued_node_count": 5,
+    "downstream_edge_count": 5,
+    "catalogued_node_count": 6,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 4,
+    "evidence_backed_edge_count": 5,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -145,6 +145,21 @@
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "usc-title-43-section-1331",
+      "label": "43 U.S.C. 1331",
+      "title": "43 U.S.C. 1331: Definitions",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_43",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [],
@@ -246,6 +261,28 @@
         ],
         "count": 11
       }
+    },
+    {
+      "id": "usc-title-42-section-7101->usc-title-43-section-1331:references:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-7101",
+      "source_label": "42 U.S.C. 7101",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-43-section-1331",
+      "target_label": "43 U.S.C. 1331",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:7101",
+        "label": "42 U.S.C. 7101",
+        "first_line": 151,
+        "lines_sample": [
+          151
+        ],
+        "count": 1
+      }
     }
   ],
   "uncatalogued_authority_gaps": [],
@@ -262,7 +299,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-42-section-7101",
       "direction": "downstream",
-      "edge_count": 4
+      "edge_count": 5
     }
   ]
 }

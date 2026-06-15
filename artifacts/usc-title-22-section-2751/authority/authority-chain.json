@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 9,
-    "downstream_edge_count": 31,
-    "catalogued_node_count": 37,
+    "upstream_edge_count": 11,
+    "downstream_edge_count": 32,
+    "catalogued_node_count": 39,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 40,
+    "evidence_backed_edge_count": 43,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -643,21 +643,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:22:2763",
+      "id": "usc-title-22-section-2763",
       "label": "22 U.S.C. 2763",
-      "title": "22 U.S.C. 2763",
+      "title": "22 U.S.C. 2763: Credit sales",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:22:2763",
-      "count": 2,
-      "lines_sample": [
-        1149
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "foreign_affairs",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:22:2764",
@@ -873,6 +871,23 @@
       "status": "catalogued"
     },
     {
+      "id": "gap:usc:22:2795a",
+      "label": "22 U.S.C. 2795a",
+      "title": "22 U.S.C. 2795a",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:22:2795a",
+      "count": 1,
+      "lines_sample": [
+        1183
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
       "id": "usc-title-50-section-1701",
       "label": "50 U.S.C. 1701",
       "title": "50 U.S.C. 1701: Unusual and extraordinary threat; declaration of national emergency; exercise of Presidential authorities",
@@ -891,6 +906,21 @@
       "id": "usc-title-50-section-3003",
       "label": "50 U.S.C. 3003",
       "title": "50 U.S.C. 3003: Definitions",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "national_security",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-50-section-4605",
+      "label": "50 U.S.C. 4605",
+      "title": "50 U.S.C. 4605: U.S. Code section",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
@@ -1030,6 +1060,28 @@
       }
     },
     {
+      "id": "usc-title-22-section-2763->usc-title-22-section-2751:references:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-2763",
+      "source_label": "22 U.S.C. 2763",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-22-section-2751",
+      "target_label": "22 U.S.C. 2751",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:2763",
+        "label": "22 U.S.C. 2763",
+        "first_line": 1149,
+        "lines_sample": [
+          1149
+        ],
+        "count": 2
+      }
+    },
+    {
       "id": "usc-title-22-section-2776->usc-title-22-section-2751:references:resolved_reference",
       "source_artifact_id": "usc-title-22-section-2776",
       "source_label": "22 U.S.C. 2776",
@@ -1143,6 +1195,28 @@
         "first_line": 941,
         "lines_sample": [
           941
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-50-section-4605->usc-title-22-section-2751:references:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-4605",
+      "source_label": "50 U.S.C. 4605",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-22-section-2751",
+      "target_label": "22 U.S.C. 2751",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:4605",
+        "label": "50 U.S.C. 4605",
+        "first_line": 607,
+        "lines_sample": [
+          607
         ],
         "count": 1
       }
@@ -1787,6 +1861,28 @@
       }
     },
     {
+      "id": "usc-title-22-section-2751->usc-title-22-section-2763:references:resolved_reference",
+      "source_artifact_id": "usc-title-22-section-2751",
+      "source_label": "22 U.S.C. 2751",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-22-section-2763",
+      "target_label": "22 U.S.C. 2763",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:22:2751",
+        "label": "22 U.S.C. 2751",
+        "first_line": 617,
+        "lines_sample": [
+          617
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-22-section-2751->usc-title-22-section-2776:references:resolved_reference",
       "source_artifact_id": "usc-title-22-section-2751",
       "source_label": "22 U.S.C. 2751",
@@ -1912,23 +2008,6 @@
       "lines_sample": [
         1147,
         1175
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:usc:22:2763",
-      "label": "22 U.S.C. 2763",
-      "title": "22 U.S.C. 2763",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:22:2763",
-      "count": 2,
-      "lines_sample": [
-        1149
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -2170,6 +2249,23 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "gap:usc:22:2795a",
+      "label": "22 U.S.C. 2795a",
+      "title": "22 U.S.C. 2795a",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:22:2795a",
+      "count": 1,
+      "lines_sample": [
+        1183
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -2178,14 +2274,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-22-section-2751",
       "direction": "upstream",
-      "edge_count": 9
+      "edge_count": 11
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-22-section-2751",
       "direction": "downstream",
-      "edge_count": 31
+      "edge_count": 32
     }
   ]
 }

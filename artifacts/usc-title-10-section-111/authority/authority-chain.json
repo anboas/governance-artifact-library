@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 22,
+    "upstream_edge_count": 23,
     "downstream_edge_count": 20,
-    "catalogued_node_count": 43,
+    "catalogued_node_count": 44,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 42,
+    "evidence_backed_edge_count": 43,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -483,21 +483,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:10:167",
+      "id": "usc-title-10-section-167",
       "label": "10 U.S.C. 167",
-      "title": "10 U.S.C. 167",
+      "title": "10 U.S.C. 167: Unified combatant command for special operations forces",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:10:167",
-      "count": 1,
-      "lines_sample": [
-        1092
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:10:1781c",
@@ -808,6 +806,23 @@
       "count": 1,
       "lines_sample": [
         1036
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
+      "id": "gap:usc:10:371",
+      "label": "10 U.S.C. 371",
+      "title": "10 U.S.C. 371",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:10:371",
+      "count": 1,
+      "lines_sample": [
+        1194
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -1142,6 +1157,28 @@
           1100
         ],
         "count": 2
+      }
+    },
+    {
+      "id": "usc-title-10-section-167->usc-title-10-section-111:references:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-167",
+      "source_label": "10 U.S.C. 167",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-111",
+      "target_label": "10 U.S.C. 111",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:167",
+        "label": "10 U.S.C. 167",
+        "first_line": 1092,
+        "lines_sample": [
+          1092
+        ],
+        "count": 1
       }
     },
     {
@@ -2128,23 +2165,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:10:167",
-      "label": "10 U.S.C. 167",
-      "title": "10 U.S.C. 167",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:10:167",
-      "count": 1,
-      "lines_sample": [
-        1092
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:10:1781c",
       "label": "10 U.S.C. 1781c",
       "title": "10 U.S.C. 1781c",
@@ -2347,6 +2367,23 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "gap:usc:10:371",
+      "label": "10 U.S.C. 371",
+      "title": "10 U.S.C. 371",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "reference_family": "usc",
+      "source_reference_id": "usc:10:371",
+      "count": 1,
+      "lines_sample": [
+        1194
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -2355,7 +2392,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-10-section-111",
       "direction": "upstream",
-      "edge_count": 22
+      "edge_count": 23
     },
     {
       "id": "trace-downstream",

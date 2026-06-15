@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 0,
+    "upstream_edge_count": 2,
     "downstream_edge_count": 6,
-    "catalogued_node_count": 7,
-    "uncatalogued_gap_count": 6,
-    "evidence_backed_edge_count": 6,
+    "catalogued_node_count": 9,
+    "uncatalogued_gap_count": 4,
+    "evidence_backed_edge_count": 8,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -162,21 +162,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:10:161",
+      "id": "usc-title-10-section-161",
       "label": "10 U.S.C. 161",
-      "title": "10 U.S.C. 161",
+      "title": "10 U.S.C. 161: Combatant commands: establishment",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:10:161",
-      "count": 1,
-      "lines_sample": [
-        509
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:10:3041",
@@ -247,21 +245,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:10:9016",
+      "id": "usc-title-10-section-9016",
       "label": "10 U.S.C. 9016",
-      "title": "10 U.S.C. 9016",
+      "title": "10 U.S.C. 9016: Assistant Secretaries of the Air Force",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:10:9016",
-      "count": 1,
-      "lines_sample": [
-        374
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-10-section-9081",
@@ -279,7 +275,52 @@
       "status": "current"
     }
   ],
-  "upstream_edges": [],
+  "upstream_edges": [
+    {
+      "id": "usc-title-10-section-161->usc-title-10-section-9081:references:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-161",
+      "source_label": "10 U.S.C. 161",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-9081",
+      "target_label": "10 U.S.C. 9081",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:161",
+        "label": "10 U.S.C. 161",
+        "first_line": 509,
+        "lines_sample": [
+          509
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-10-section-9016->usc-title-10-section-9081:references:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-9016",
+      "source_label": "10 U.S.C. 9016",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-9081",
+      "target_label": "10 U.S.C. 9081",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:9016",
+        "label": "10 U.S.C. 9016",
+        "first_line": 374,
+        "lines_sample": [
+          374
+        ],
+        "count": 1
+      }
+    }
+  ],
   "downstream_edges": [
     {
       "id": "usc-title-10-section-9081->pl-118-31-fy2024-ndaa:references_upstream:resolved_reference",
@@ -427,23 +468,6 @@
   ],
   "uncatalogued_authority_gaps": [
     {
-      "id": "gap:usc:10:161",
-      "label": "10 U.S.C. 161",
-      "title": "10 U.S.C. 161",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:10:161",
-      "count": 1,
-      "lines_sample": [
-        509
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:10:3041",
       "label": "10 U.S.C. 3041",
       "title": "10 U.S.C. 3041",
@@ -510,23 +534,6 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
-    },
-    {
-      "id": "gap:usc:10:9016",
-      "label": "10 U.S.C. 9016",
-      "title": "10 U.S.C. 9016",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:10:9016",
-      "count": 1,
-      "lines_sample": [
-        374
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -535,7 +542,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-10-section-9081",
       "direction": "upstream",
-      "edge_count": 0
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",

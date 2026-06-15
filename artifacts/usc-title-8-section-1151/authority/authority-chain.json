@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 2,
-    "downstream_edge_count": 6,
-    "catalogued_node_count": 8,
-    "uncatalogued_gap_count": 4,
-    "evidence_backed_edge_count": 8,
+    "upstream_edge_count": 5,
+    "downstream_edge_count": 8,
+    "catalogued_node_count": 11,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 13,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -162,47 +162,34 @@
       "status": "current"
     },
     {
-      "id": "gap:usc:8:1153",
+      "id": "usc-title-8-section-1153",
       "label": "8 U.S.C. 1153",
-      "title": "8 U.S.C. 1153",
+      "title": "8 U.S.C. 1153: Allocation of immigrant visas",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:8:1153",
-      "count": 3,
-      "lines_sample": [
-        581,
-        632,
-        643
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_8",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
-      "id": "gap:usc:8:1154",
+      "id": "usc-title-8-section-1154",
       "label": "8 U.S.C. 1154",
-      "title": "8 U.S.C. 1154",
+      "title": "8 U.S.C. 1154: Procedure for granting immigrant status",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:8:1154",
-      "count": 8,
-      "lines_sample": [
-        463,
-        480,
-        482,
-        544,
-        551,
-        558,
-        583,
-        598
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_8",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-8-section-1157",
@@ -235,22 +222,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:8:1255",
+      "id": "usc-title-8-section-1255",
       "label": "8 U.S.C. 1255",
-      "title": "8 U.S.C. 1255",
+      "title": "8 U.S.C. 1255: Adjustment of status of nonimmigrant to that of person admitted for permanent residence",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:8:1255",
-      "count": 2,
-      "lines_sample": [
-        565,
-        629
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_8",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:8:1440",
@@ -301,6 +285,59 @@
       }
     },
     {
+      "id": "usc-title-8-section-1153->usc-title-8-section-1151:references:resolved_reference",
+      "source_artifact_id": "usc-title-8-section-1153",
+      "source_label": "8 U.S.C. 1153",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-8-section-1151",
+      "target_label": "8 U.S.C. 1151",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:8:1153",
+        "label": "8 U.S.C. 1153",
+        "first_line": 581,
+        "lines_sample": [
+          581,
+          632,
+          643
+        ],
+        "count": 3
+      }
+    },
+    {
+      "id": "usc-title-8-section-1154->usc-title-8-section-1151:references:resolved_reference",
+      "source_artifact_id": "usc-title-8-section-1154",
+      "source_label": "8 U.S.C. 1154",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-8-section-1151",
+      "target_label": "8 U.S.C. 1151",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:8:1154",
+        "label": "8 U.S.C. 1154",
+        "first_line": 463,
+        "lines_sample": [
+          463,
+          480,
+          482,
+          544,
+          551,
+          558,
+          583,
+          598
+        ],
+        "count": 8
+      }
+    },
+    {
       "id": "usc-title-8-section-1182->usc-title-8-section-1151:references:resolved_reference",
       "source_artifact_id": "usc-title-8-section-1182",
       "source_label": "8 U.S.C. 1182",
@@ -320,6 +357,29 @@
           608
         ],
         "count": 1
+      }
+    },
+    {
+      "id": "usc-title-8-section-1255->usc-title-8-section-1151:references:resolved_reference",
+      "source_artifact_id": "usc-title-8-section-1255",
+      "source_label": "8 U.S.C. 1255",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-8-section-1151",
+      "target_label": "8 U.S.C. 1151",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:8:1255",
+        "label": "8 U.S.C. 1255",
+        "first_line": 565,
+        "lines_sample": [
+          565,
+          629
+        ],
+        "count": 2
       }
     }
   ],
@@ -451,6 +511,32 @@
       }
     },
     {
+      "id": "usc-title-8-section-1151->usc-title-8-section-1153:references:resolved_reference",
+      "source_artifact_id": "usc-title-8-section-1151",
+      "source_label": "8 U.S.C. 1151",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-8-section-1153",
+      "target_label": "8 U.S.C. 1153",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:8:1151",
+        "label": "8 U.S.C. 1151",
+        "first_line": 2855,
+        "lines_sample": [
+          2855,
+          2873,
+          2905,
+          3000,
+          3078
+        ],
+        "count": 5
+      }
+    },
+    {
       "id": "usc-title-8-section-1151->usc-title-8-section-1157:references:resolved_reference",
       "source_artifact_id": "usc-title-8-section-1151",
       "source_label": "8 U.S.C. 1151",
@@ -472,52 +558,31 @@
         ],
         "count": 2
       }
+    },
+    {
+      "id": "usc-title-8-section-1151->usc-title-8-section-1255:references:resolved_reference",
+      "source_artifact_id": "usc-title-8-section-1151",
+      "source_label": "8 U.S.C. 1151",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-8-section-1255",
+      "target_label": "8 U.S.C. 1255",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:8:1151",
+        "label": "8 U.S.C. 1151",
+        "first_line": 1424,
+        "lines_sample": [
+          1424
+        ],
+        "count": 1
+      }
     }
   ],
   "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:usc:8:1154",
-      "label": "8 U.S.C. 1154",
-      "title": "8 U.S.C. 1154",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:8:1154",
-      "count": 8,
-      "lines_sample": [
-        463,
-        480,
-        482,
-        544,
-        551,
-        558,
-        583,
-        598
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:usc:8:1153",
-      "label": "8 U.S.C. 1153",
-      "title": "8 U.S.C. 1153",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:8:1153",
-      "count": 3,
-      "lines_sample": [
-        581,
-        632,
-        643
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
     {
       "id": "gap:usc:8:1440",
       "label": "8 U.S.C. 1440",
@@ -536,24 +601,6 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
-    },
-    {
-      "id": "gap:usc:8:1255",
-      "label": "8 U.S.C. 1255",
-      "title": "8 U.S.C. 1255",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:8:1255",
-      "count": 2,
-      "lines_sample": [
-        565,
-        629
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -562,14 +609,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-8-section-1151",
       "direction": "upstream",
-      "edge_count": 2
+      "edge_count": 5
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-8-section-1151",
       "direction": "downstream",
-      "edge_count": 6
+      "edge_count": 8
     }
   ]
 }

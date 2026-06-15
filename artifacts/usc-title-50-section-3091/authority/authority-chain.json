@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 14,
-    "catalogued_node_count": 15,
+    "downstream_edge_count": 16,
+    "catalogued_node_count": 17,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 14,
+    "evidence_backed_edge_count": 16,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -187,6 +187,36 @@
       "family": "defense_authorization",
       "issuing_authority": "Congress",
       "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-10-section-167",
+      "label": "10 U.S.C. 167",
+      "title": "10 U.S.C. 167: Unified combatant command for special operations forces",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-10-section-167b",
+      "label": "10 U.S.C. 167b",
+      "title": "10 U.S.C. 167b: Unified combatant command for cyber operations",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "catalogued"
@@ -484,6 +514,51 @@
       }
     },
     {
+      "id": "usc-title-50-section-3091->usc-title-10-section-167:references:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-3091",
+      "source_label": "50 U.S.C. 3091",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-167",
+      "target_label": "10 U.S.C. 167",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:3091",
+        "label": "50 U.S.C. 3091",
+        "first_line": 315,
+        "lines_sample": [
+          315,
+          481
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "usc-title-50-section-3091->usc-title-10-section-167b:references:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-3091",
+      "source_label": "50 U.S.C. 3091",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-167b",
+      "target_label": "10 U.S.C. 167b",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:3091",
+        "label": "50 U.S.C. 3091",
+        "first_line": 242,
+        "lines_sample": [
+          242
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-50-section-3091->usc-title-10-section-2224:references:resolved_reference",
       "source_artifact_id": "usc-title-50-section-3091",
       "source_label": "50 U.S.C. 3091",
@@ -633,7 +708,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-50-section-3091",
       "direction": "downstream",
-      "edge_count": 14
+      "edge_count": 16
     }
   ]
 }

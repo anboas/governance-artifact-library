@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 2,
+    "upstream_edge_count": 3,
     "downstream_edge_count": 9,
-    "catalogued_node_count": 12,
-    "uncatalogued_gap_count": 7,
-    "evidence_backed_edge_count": 7,
+    "catalogued_node_count": 13,
+    "uncatalogued_gap_count": 6,
+    "evidence_backed_edge_count": 8,
     "inferred_edge_count": 4,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -171,23 +171,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:5:552",
+      "id": "usc-title-5-section-552",
       "label": "5 U.S.C. 552",
-      "title": "5 U.S.C. 552",
+      "title": "5 U.S.C. 552: Public information; agency rules, opinions, orders, records, and proceedings",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:5:552",
-      "count": 3,
-      "lines_sample": [
-        70,
-        214,
-        510
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_5",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:executive-order:12356",
@@ -418,6 +414,30 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "usc-title-5-section-552->dodd-5230-25:flows_down:resolved_reference",
+      "source_artifact_id": "usc-title-5-section-552",
+      "source_label": "5 U.S.C. 552",
+      "source_lane": "statute",
+      "target_artifact_id": "dodd-5230-25",
+      "target_label": "DoDD 5230.25",
+      "target_lane": "dod",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:5:552",
+        "label": "5 U.S.C. 552",
+        "first_line": 70,
+        "lines_sample": [
+          70,
+          214,
+          510
+        ],
+        "count": 3
+      }
     }
   ],
   "downstream_edges": [
@@ -630,25 +650,6 @@
   ],
   "uncatalogued_authority_gaps": [
     {
-      "id": "gap:usc:5:552",
-      "label": "5 U.S.C. 552",
-      "title": "5 U.S.C. 552",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:5:552",
-      "count": 3,
-      "lines_sample": [
-        70,
-        214,
-        510
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:10:140c",
       "label": "10 U.S.C. 140c",
       "title": "10 U.S.C. 140c",
@@ -758,7 +759,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodd-5230-25",
       "direction": "upstream",
-      "edge_count": 2
+      "edge_count": 3
     },
     {
       "id": "trace-downstream",

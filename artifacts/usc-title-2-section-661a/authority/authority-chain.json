@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 22,
-    "catalogued_node_count": 23,
+    "downstream_edge_count": 23,
+    "catalogued_node_count": 24,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 22,
+    "evidence_backed_edge_count": 23,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -405,6 +405,21 @@
       "id": "usc-title-22-section-1928",
       "label": "22 U.S.C. 1928",
       "title": "22 U.S.C. 1928: North Atlantic Treaty Organization",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "foreign_affairs",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-22-section-2763",
+      "label": "22 U.S.C. 2763",
+      "title": "22 U.S.C. 2763: Credit sales",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
@@ -910,6 +925,31 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "usc-title-2-section-661a->usc-title-22-section-2763:references:resolved_reference",
+      "source_artifact_id": "usc-title-2-section-661a",
+      "source_label": "2 U.S.C. 661a",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-22-section-2763",
+      "target_label": "22 U.S.C. 2763",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:2:661a",
+        "label": "2 U.S.C. 661a",
+        "first_line": 570,
+        "lines_sample": [
+          570,
+          581,
+          613,
+          675
+        ],
+        "count": 5
+      }
     }
   ],
   "uncatalogued_authority_gaps": [],
@@ -926,7 +966,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-2-section-661a",
       "direction": "downstream",
-      "edge_count": 22
+      "edge_count": 23
     }
   ]
 }

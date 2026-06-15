@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 7,
-    "downstream_edge_count": 37,
-    "catalogued_node_count": 44,
-    "uncatalogued_gap_count": 7,
-    "evidence_backed_edge_count": 44,
+    "upstream_edge_count": 8,
+    "downstream_edge_count": 38,
+    "catalogued_node_count": 45,
+    "uncatalogued_gap_count": 6,
+    "evidence_backed_edge_count": 46,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -713,27 +713,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:42:11411",
+      "id": "usc-title-42-section-11411",
       "label": "42 U.S.C. 11411",
-      "title": "42 U.S.C. 11411",
+      "title": "42 U.S.C. 11411: Use of unutilized and underutilized public buildings and real property to assist the homeless",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:11411",
-      "count": 7,
-      "lines_sample": [
-        1584,
-        1596,
-        1632,
-        2076,
-        2709,
-        2721,
-        2757
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-42-section-4321",
@@ -901,6 +893,34 @@
           892
         ],
         "count": 1
+      }
+    },
+    {
+      "id": "usc-title-42-section-11411->usc-title-10-section-2687:references:resolved_reference",
+      "source_artifact_id": "usc-title-42-section-11411",
+      "source_label": "42 U.S.C. 11411",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-2687",
+      "target_label": "10 U.S.C. 2687",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:42:11411",
+        "label": "42 U.S.C. 11411",
+        "first_line": 1584,
+        "lines_sample": [
+          1584,
+          1596,
+          1632,
+          2076,
+          2709,
+          2721,
+          2757
+        ],
+        "count": 7
       }
     },
     {
@@ -1946,6 +1966,29 @@
       }
     },
     {
+      "id": "usc-title-10-section-2687->usc-title-42-section-11411:references:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-2687",
+      "source_label": "10 U.S.C. 2687",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-42-section-11411",
+      "target_label": "42 U.S.C. 11411",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:2687",
+        "label": "10 U.S.C. 2687",
+        "first_line": 401,
+        "lines_sample": [
+          401,
+          405
+        ],
+        "count": 2
+      }
+    },
+    {
       "id": "usc-title-10-section-2687->usc-title-42-section-9620:references:resolved_reference",
       "source_artifact_id": "usc-title-10-section-2687",
       "source_label": "10 U.S.C. 2687",
@@ -1992,29 +2035,6 @@
     }
   ],
   "uncatalogued_authority_gaps": [
-    {
-      "id": "gap:usc:42:11411",
-      "label": "42 U.S.C. 11411",
-      "title": "42 U.S.C. 11411",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:42:11411",
-      "count": 7,
-      "lines_sample": [
-        1584,
-        1596,
-        1632,
-        2076,
-        2709,
-        2721,
-        2757
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
     {
       "id": "gap:usc:42:11301",
       "label": "42 U.S.C. 11301",
@@ -2125,14 +2145,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-10-section-2687",
       "direction": "upstream",
-      "edge_count": 7
+      "edge_count": 8
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-10-section-2687",
       "direction": "downstream",
-      "edge_count": 37
+      "edge_count": 38
     }
   ]
 }

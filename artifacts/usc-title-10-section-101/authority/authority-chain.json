@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 35,
-    "downstream_edge_count": 31,
-    "catalogued_node_count": 44,
+    "downstream_edge_count": 33,
+    "catalogued_node_count": 46,
     "uncatalogued_gap_count": 2,
-    "evidence_backed_edge_count": 33,
+    "evidence_backed_edge_count": 35,
     "inferred_edge_count": 33,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -689,6 +689,21 @@
       "priority": "high"
     },
     {
+      "id": "usc-title-20-section-1070",
+      "label": "20 U.S.C. 1070",
+      "title": "20 U.S.C. 1070: Statement of purpose; program authorization",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_20",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
       "id": "usc-title-42-section-2011",
       "label": "42 U.S.C. 2011",
       "title": "42 U.S.C. 2011: Congressional declaration of policy",
@@ -697,6 +712,21 @@
       "lane_label": "Statute",
       "hierarchy_rank": 20,
       "family": "environmental_policy",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-5-section-3330d",
+      "label": "5 U.S.C. 3330d",
+      "title": "5 U.S.C. 3330d: Appointment of military and Department of Defense, Department of State, and intelligence community spouses",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_5",
       "issuing_authority": "Congress",
       "source_system": "U.S. Code",
       "mirror_status": "mirrored",
@@ -2210,6 +2240,50 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "usc-title-10-section-101->usc-title-20-section-1070:references:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-101",
+      "source_label": "10 U.S.C. 101",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-20-section-1070",
+      "target_label": "20 U.S.C. 1070",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:101",
+        "label": "10 U.S.C. 101",
+        "first_line": 360,
+        "lines_sample": [
+          360
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-10-section-101->usc-title-5-section-3330d:references:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-101",
+      "source_label": "10 U.S.C. 101",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-5-section-3330d",
+      "target_label": "5 U.S.C. 3330d",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:101",
+        "label": "10 U.S.C. 101",
+        "first_line": 688,
+        "lines_sample": [
+          688
+        ],
+        "count": 2
+      }
     }
   ],
   "uncatalogued_authority_gaps": [
@@ -2262,7 +2336,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-10-section-101",
       "direction": "downstream",
-      "edge_count": 31
+      "edge_count": 33
     }
   ]
 }

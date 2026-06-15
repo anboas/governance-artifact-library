@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 2,
+    "upstream_edge_count": 3,
     "downstream_edge_count": 7,
-    "catalogued_node_count": 10,
-    "uncatalogued_gap_count": 6,
-    "evidence_backed_edge_count": 9,
+    "catalogued_node_count": 11,
+    "uncatalogued_gap_count": 5,
+    "evidence_backed_edge_count": 10,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -194,21 +194,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:50:4501",
+      "id": "usc-title-50-section-4501",
       "label": "50 U.S.C. 4501",
-      "title": "50 U.S.C. 4501",
+      "title": "50 U.S.C. 4501: Short title",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:50:4501",
-      "count": 1,
-      "lines_sample": [
-        3058
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "national_security",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-50-section-4565",
@@ -370,6 +368,28 @@
           2971
         ],
         "count": 4
+      }
+    },
+    {
+      "id": "usc-title-50-section-4501->usc-title-50-section-4565:references:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-4501",
+      "source_label": "50 U.S.C. 4501",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-50-section-4565",
+      "target_label": "50 U.S.C. 4565",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:4501",
+        "label": "50 U.S.C. 4501",
+        "first_line": 3058,
+        "lines_sample": [
+          3058
+        ],
+        "count": 1
       }
     }
   ],
@@ -562,23 +582,6 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:50:4501",
-      "label": "50 U.S.C. 4501",
-      "title": "50 U.S.C. 4501",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:50:4501",
-      "count": 1,
-      "lines_sample": [
-        3058
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:executive-order:11858",
       "label": "Executive Order 11858",
       "title": "Executive Order 11858",
@@ -653,7 +656,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-50-section-4565",
       "direction": "upstream",
-      "edge_count": 2
+      "edge_count": 3
     },
     {
       "id": "trace-downstream",

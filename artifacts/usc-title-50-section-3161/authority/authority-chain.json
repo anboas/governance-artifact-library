@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 5,
-    "downstream_edge_count": 13,
-    "catalogued_node_count": 17,
+    "upstream_edge_count": 6,
+    "downstream_edge_count": 14,
+    "catalogued_node_count": 19,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 18,
+    "evidence_backed_edge_count": 20,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -330,25 +330,19 @@
       "priority": "high"
     },
     {
-      "id": "gap:usc:5:552",
+      "id": "usc-title-5-section-552",
       "label": "5 U.S.C. 552",
-      "title": "5 U.S.C. 552",
+      "title": "5 U.S.C. 552: Public information; agency rules, opinions, orders, records, and proceedings",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:5:552",
-      "count": 5,
-      "lines_sample": [
-        1013,
-        1266,
-        1499,
-        2141,
-        2364
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_5",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:5:552a",
@@ -407,6 +401,21 @@
       "id": "usc-title-50-section-3001",
       "label": "50 U.S.C. 3001",
       "title": "50 U.S.C. 3001: Short title",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "national_security",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-50-section-3021",
+      "label": "50 U.S.C. 3021",
+      "title": "50 U.S.C. 3021: National Security Council",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
@@ -603,6 +612,24 @@
       "priority": "high"
     },
     {
+      "id": "gap:executive-order:13381",
+      "label": "Executive Order 13381",
+      "title": "Executive Order 13381",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:13381",
+      "count": 2,
+      "lines_sample": [
+        1947,
+        1975
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
+    },
+    {
       "id": "gap:executive-order:13467",
       "label": "Executive Order 13467",
       "title": "Executive Order 13467",
@@ -747,6 +774,32 @@
           2949
         ],
         "count": 9
+      }
+    },
+    {
+      "id": "usc-title-5-section-552->usc-title-50-section-3161:references:resolved_reference",
+      "source_artifact_id": "usc-title-5-section-552",
+      "source_label": "5 U.S.C. 552",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-50-section-3161",
+      "target_label": "50 U.S.C. 3161",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:5:552",
+        "label": "5 U.S.C. 552",
+        "first_line": 1013,
+        "lines_sample": [
+          1013,
+          1266,
+          1499,
+          2141,
+          2364
+        ],
+        "count": 5
       }
     },
     {
@@ -1092,6 +1145,28 @@
       }
     },
     {
+      "id": "usc-title-50-section-3161->usc-title-50-section-3021:references:resolved_reference",
+      "source_artifact_id": "usc-title-50-section-3161",
+      "source_label": "50 U.S.C. 3161",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-50-section-3021",
+      "target_label": "50 U.S.C. 3021",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:50:3161",
+        "label": "50 U.S.C. 3161",
+        "first_line": 644,
+        "lines_sample": [
+          644
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-50-section-3161->usc-title-50-section-3024:references:resolved_reference",
       "source_artifact_id": "usc-title-50-section-3161",
       "source_label": "50 U.S.C. 3161",
@@ -1233,27 +1308,6 @@
         2837,
         2949,
         2951
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
-      "id": "gap:usc:5:552",
-      "label": "5 U.S.C. 552",
-      "title": "5 U.S.C. 552",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:5:552",
-      "count": 5,
-      "lines_sample": [
-        1013,
-        1266,
-        1499,
-        2141,
-        2364
       ],
       "status": "uncatalogued",
       "priority": "high"
@@ -1501,6 +1555,24 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "gap:executive-order:13381",
+      "label": "Executive Order 13381",
+      "title": "Executive Order 13381",
+      "artifact_type": "Executive Order",
+      "lane": "executive",
+      "lane_label": "Executive",
+      "hierarchy_rank": 30,
+      "reference_family": "executive-order",
+      "source_reference_id": "executive-order:13381",
+      "count": 2,
+      "lines_sample": [
+        1947,
+        1975
+      ],
+      "status": "uncatalogued",
+      "priority": "high"
     }
   ],
   "trace_playbooks": [
@@ -1509,14 +1581,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-50-section-3161",
       "direction": "upstream",
-      "edge_count": 5
+      "edge_count": 6
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-50-section-3161",
       "direction": "downstream",
-      "edge_count": 13
+      "edge_count": 14
     }
   ]
 }

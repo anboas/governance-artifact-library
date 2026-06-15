@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 8,
-    "catalogued_node_count": 9,
+    "downstream_edge_count": 10,
+    "catalogued_node_count": 11,
     "uncatalogued_gap_count": 3,
-    "evidence_backed_edge_count": 8,
+    "evidence_backed_edge_count": 10,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -168,6 +168,36 @@
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "usc-title-5-section-3330d",
+      "label": "5 U.S.C. 3330d",
+      "title": "5 U.S.C. 3330d: Appointment of military and Department of Defense, Department of State, and intelligence community spouses",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_5",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-5-section-601",
+      "label": "5 U.S.C. 601",
+      "title": "5 U.S.C. 601: Definitions",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_5",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-6-section-121",
@@ -424,6 +454,58 @@
       }
     },
     {
+      "id": "usc-title-44-section-3502->usc-title-5-section-3330d:references:resolved_reference",
+      "source_artifact_id": "usc-title-44-section-3502",
+      "source_label": "44 U.S.C. 3502",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-5-section-3330d",
+      "target_label": "5 U.S.C. 3330d",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:44:3502",
+        "label": "44 U.S.C. 3502",
+        "first_line": 690,
+        "lines_sample": [
+          690
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "usc-title-44-section-3502->usc-title-5-section-601:references:resolved_reference",
+      "source_artifact_id": "usc-title-44-section-3502",
+      "source_label": "44 U.S.C. 3502",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-5-section-601",
+      "target_label": "5 U.S.C. 601",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:44:3502",
+        "label": "44 U.S.C. 3502",
+        "first_line": 803,
+        "lines_sample": [
+          803,
+          832,
+          834,
+          1052,
+          1774,
+          1954,
+          2013,
+          2527,
+          3099
+        ],
+        "count": 13
+      }
+    },
+    {
       "id": "usc-title-44-section-3502->usc-title-6-section-121:references:resolved_reference",
       "source_artifact_id": "usc-title-44-section-3502",
       "source_label": "44 U.S.C. 3502",
@@ -515,7 +597,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-44-section-3502",
       "direction": "downstream",
-      "edge_count": 8
+      "edge_count": 10
     }
   ]
 }

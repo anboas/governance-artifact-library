@@ -4,25 +4,25 @@ Generated: 2026-06-12T23:10:00.000Z
 
 ## Summary
 
-- Artifacts: 1378
-- Claims: 300922
-- Artifacts with claims: 1325
+- Artifacts: 1419
+- Claims: 304694
+- Artifacts with claims: 1366
 - Source-text unavailable: 49
-- Requirements: 87869
-- Reporting requirements: 44770
-- Decision authorities: 49939
+- Requirements: 89329
+- Reporting requirements: 45094
+- Decision authorities: 50449
 
 ## Claim Types
 
 | Type | Count |
 | --- | ---: |
-| requirement | 87869 |
-| decision_authority | 49939 |
-| reporting_requirement | 44770 |
-| policy_statement | 39841 |
-| permission | 37534 |
-| definition | 30941 |
-| prohibition | 10028 |
+| requirement | 89329 |
+| decision_authority | 50449 |
+| reporting_requirement | 45094 |
+| policy_statement | 40131 |
+| permission | 37966 |
+| definition | 31439 |
+| prohibition | 10286 |
 
 ## Top Artifacts
 
@@ -66,6 +66,7 @@ Generated: 2026-06-12T23:10:00.000Z
 | usc-title-10-section-113 | 960 | 322 | 294 | 78 |
 | dodi-1015-15 | 852 | 389 | 74 | 187 |
 | public-law-107-347 | 810 | 293 | 94 | 64 |
+| usc-title-5-section-601 | 792 | 338 | 78 | 113 |
 | usc-title-50-section-3161 | 746 | 288 | 34 | 156 |
 | usc-title-8-section-1182 | 654 | 210 | 31 | 135 |
 | usc-title-10-section-1071 | 642 | 318 | 101 | 36 |
@@ -107,4 +108,3 @@ Generated: 2026-06-12T23:10:00.000Z
 | dodi-1330-17 | 349 | 36 | 24 | 138 |
 | usc-title-10-section-1561 | 346 | 165 | 100 | 12 |
 | usc-title-22-section-2651a | 346 | 153 | 37 | 49 |
-| dodi-6060-02 | 345 | 160 | 13 | 39 |

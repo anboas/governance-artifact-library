@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 56,
+    "upstream_edge_count": 58,
     "downstream_edge_count": 20,
-    "catalogued_node_count": 73,
+    "catalogued_node_count": 75,
     "uncatalogued_gap_count": 18,
-    "evidence_backed_edge_count": 72,
+    "evidence_backed_edge_count": 74,
     "inferred_edge_count": 4,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -306,6 +306,21 @@
       "id": "usc-title-10-section-1781",
       "label": "10 U.S.C. 1781",
       "title": "10 U.S.C. 1781: Office of Military Family Readiness Policy",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-10-section-1784",
+      "label": "10 U.S.C. 1784",
+      "title": "10 U.S.C. 1784: Employment opportunities for military spouses",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
@@ -929,6 +944,21 @@
       ],
       "status": "uncatalogued",
       "priority": "high"
+    },
+    {
+      "id": "usc-title-29-section-2612",
+      "label": "29 U.S.C. 2612",
+      "title": "29 U.S.C. 2612: Leave requirement",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "usc_title_29",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "usc-title-31-section-501",
@@ -1809,6 +1839,28 @@
       }
     },
     {
+      "id": "usc-title-10-section-1784->public-law-111-84:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-1784",
+      "source_label": "10 U.S.C. 1784",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-111-84",
+      "target_label": "Public Law 111-84",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:1784",
+        "label": "10 USC 1784",
+        "first_line": 7616,
+        "lines_sample": [
+          7616
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-10-section-2001->public-law-111-84:references_upstream:resolved_reference",
       "source_artifact_id": "usc-title-10-section-2001",
       "source_label": "10 U.S.C. 2001",
@@ -2338,6 +2390,29 @@
         "lines_sample": [
           23326,
           23522
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "usc-title-29-section-2612->public-law-111-84:references_upstream:resolved_reference",
+      "source_artifact_id": "usc-title-29-section-2612",
+      "source_label": "29 U.S.C. 2612",
+      "source_lane": "statute",
+      "target_artifact_id": "public-law-111-84",
+      "target_label": "Public Law 111-84",
+      "target_lane": "law",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:29:2612",
+        "label": "29 U.S.C. 2612",
+        "first_line": 7702,
+        "lines_sample": [
+          7702,
+          7784
         ],
         "count": 2
       }
@@ -3624,7 +3699,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "public-law-111-84",
       "direction": "upstream",
-      "edge_count": 56
+      "edge_count": 58
     },
     {
       "id": "trace-downstream",

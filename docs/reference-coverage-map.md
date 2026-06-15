@@ -2,48 +2,48 @@
 
 Generated: 2026-06-12T23:25:00.000Z
 
-- Artifacts: 1378
-- Resolved reference edges: 7940
-- Uncatalogued references: 6819
-- Artifacts with uncatalogued references: 750
+- Artifacts: 1419
+- Resolved reference edges: 8277
+- Uncatalogued references: 6859
+- Artifacts with uncatalogued references: 775
 
 ## Artifact Summary
 
 | Artifact | Resolved | Uncatalogued | Targets |
 | --- | ---: | ---: | ---: |
-| pl-118-159-fy2025-ndaa | 83 | 353 | 83 |
-| pl-118-31-fy2024-ndaa | 98 | 485 | 98 |
+| pl-118-159-fy2025-ndaa | 97 | 339 | 97 |
+| pl-118-31-fy2024-ndaa | 112 | 471 | 112 |
 | public-law-104-191 | 3 | 59 | 3 |
-| public-law-104-201 | 38 | 257 | 38 |
-| public-law-105-261 | 48 | 173 | 48 |
-| public-law-106-398 | 45 | 98 | 45 |
-| public-law-106-65 | 49 | 255 | 49 |
-| public-law-107-314 | 37 | 130 | 37 |
+| public-law-104-201 | 39 | 256 | 39 |
+| public-law-105-261 | 50 | 171 | 50 |
+| public-law-106-398 | 49 | 94 | 49 |
+| public-law-106-65 | 54 | 250 | 54 |
+| public-law-107-314 | 39 | 128 | 39 |
 | public-law-107-347 | 6 | 17 | 6 |
-| public-law-108-136 | 57 | 295 | 57 |
-| public-law-108-375 | 39 | 130 | 39 |
-| public-law-108-458 | 17 | 169 | 17 |
-| public-law-109-163 | 52 | 120 | 52 |
-| public-law-109-364 | 41 | 118 | 41 |
-| public-law-110-140 | 10 | 282 | 10 |
-| public-law-110-181 | 58 | 172 | 58 |
+| public-law-108-136 | 60 | 292 | 60 |
+| public-law-108-375 | 40 | 129 | 40 |
+| public-law-108-458 | 18 | 168 | 18 |
+| public-law-109-163 | 56 | 116 | 56 |
+| public-law-109-364 | 42 | 117 | 42 |
+| public-law-110-140 | 12 | 280 | 12 |
+| public-law-110-181 | 63 | 167 | 63 |
 | public-law-110-233 | 4 | 21 | 4 |
-| public-law-110-417 | 44 | 77 | 44 |
-| public-law-111-383 | 56 | 150 | 56 |
-| public-law-111-84 | 56 | 161 | 56 |
-| public-law-112-239 | 78 | 295 | 78 |
-| public-law-112-81 | 58 | 156 | 58 |
-| public-law-113-291 | 75 | 308 | 75 |
-| public-law-113-66 | 59 | 183 | 59 |
-| public-law-113-76 | 38 | 566 | 38 |
-| public-law-114-328 | 92 | 410 | 92 |
-| public-law-114-92 | 60 | 162 | 60 |
-| public-law-115-232 | 84 | 411 | 84 |
-| public-law-115-91 | 81 | 282 | 81 |
-| public-law-116-283 | 105 | 846 | 105 |
-| public-law-116-92 | 101 | 559 | 101 |
-| public-law-117-263 | 110 | 927 | 110 |
-| public-law-117-81 | 86 | 505 | 86 |
+| public-law-110-417 | 47 | 74 | 47 |
+| public-law-111-383 | 62 | 144 | 62 |
+| public-law-111-84 | 58 | 159 | 58 |
+| public-law-112-239 | 83 | 290 | 83 |
+| public-law-112-81 | 62 | 152 | 62 |
+| public-law-113-291 | 83 | 300 | 83 |
+| public-law-113-66 | 65 | 177 | 65 |
+| public-law-113-76 | 42 | 562 | 42 |
+| public-law-114-328 | 107 | 395 | 107 |
+| public-law-114-92 | 62 | 160 | 62 |
+| public-law-115-232 | 97 | 398 | 97 |
+| public-law-115-91 | 89 | 274 | 89 |
+| public-law-116-283 | 124 | 827 | 124 |
+| public-law-116-92 | 117 | 543 | 117 |
+| public-law-117-263 | 130 | 907 | 130 |
+| public-law-117-81 | 97 | 494 | 97 |
 | usc-title-10-section-101 | 3 | 2 | 3 |
 | usc-title-10-section-10101 | 1 | 0 | 1 |
 | usc-title-10-section-1071 | 4 | 3 | 4 |
@@ -52,96 +52,121 @@ Generated: 2026-06-12T23:25:00.000Z
 | usc-title-10-section-1074 | 5 | 6 | 5 |
 | usc-title-10-section-1074g | 1 | 4 | 1 |
 | usc-title-10-section-1092 | 1 | 0 | 1 |
-| usc-title-10-section-111 | 23 | 44 | 23 |
-| usc-title-10-section-113 | 10 | 25 | 10 |
+| usc-title-10-section-111 | 24 | 43 | 24 |
+| usc-title-10-section-113 | 13 | 22 | 13 |
 | usc-title-10-section-115 | 3 | 1 | 3 |
+| usc-title-10-section-117 | 2 | 1 | 2 |
 | usc-title-10-section-12001 | 1 | 1 | 1 |
 | usc-title-10-section-121 | 1 | 0 | 1 |
 | usc-title-10-section-1293 | 1 | 1 | 1 |
 | usc-title-10-section-131 | 1 | 1 | 1 |
+| usc-title-10-section-132a | 1 | 0 | 1 |
 | usc-title-10-section-1448 | 2 | 3 | 2 |
+| usc-title-10-section-1475 | 1 | 1 | 1 |
+| usc-title-10-section-1552 | 1 | 0 | 1 |
 | usc-title-10-section-1561 | 2 | 0 | 2 |
 | usc-title-10-section-1564 | 3 | 7 | 3 |
 | usc-title-10-section-1580 | 1 | 0 | 1 |
+| usc-title-10-section-161 | 1 | 1 | 1 |
+| usc-title-10-section-167 | 2 | 2 | 2 |
+| usc-title-10-section-167b | 3 | 0 | 3 |
 | usc-title-10-section-1701 | 2 | 0 | 2 |
 | usc-title-10-section-1781 | 1 | 1 | 1 |
+| usc-title-10-section-1784 | 2 | 0 | 2 |
 | usc-title-10-section-1791 | 1 | 0 | 1 |
 | usc-title-10-section-184 | 1 | 0 | 1 |
 | usc-title-10-section-2001 | 1 | 0 | 1 |
+| usc-title-10-section-2164 | 3 | 9 | 3 |
+| usc-title-10-section-2200 | 2 | 1 | 2 |
 | usc-title-10-section-221 | 4 | 3 | 4 |
 | usc-title-10-section-2222 | 1 | 1 | 1 |
 | usc-title-10-section-2223 | 4 | 8 | 4 |
 | usc-title-10-section-2224 | 11 | 10 | 11 |
+| usc-title-10-section-2228 | 1 | 1 | 1 |
 | usc-title-10-section-2241 | 4 | 1 | 4 |
 | usc-title-10-section-2271 | 2 | 0 | 2 |
+| usc-title-10-section-2273 | 1 | 1 | 1 |
 | usc-title-10-section-2281 | 1 | 1 | 1 |
 | usc-title-10-section-2350a | 1 | 1 | 1 |
 | usc-title-10-section-2430 | 1 | 0 | 1 |
 | usc-title-10-section-2461 | 1 | 3 | 1 |
+| usc-title-10-section-2576 | 1 | 2 | 1 |
 | usc-title-10-section-2661 | 2 | 4 | 2 |
 | usc-title-10-section-2684a | 1 | 2 | 1 |
-| usc-title-10-section-2687 | 8 | 7 | 8 |
-| usc-title-10-section-2701 | 6 | 24 | 6 |
+| usc-title-10-section-2687 | 9 | 6 | 9 |
+| usc-title-10-section-2701 | 8 | 22 | 8 |
 | usc-title-10-section-2802 | 4 | 1 | 4 |
 | usc-title-10-section-2805 | 1 | 1 | 1 |
 | usc-title-10-section-2821 | 1 | 0 | 1 |
 | usc-title-10-section-2871 | 5 | 1 | 5 |
 | usc-title-10-section-2911 | 5 | 5 | 5 |
+| usc-title-10-section-3001 | 1 | 0 | 1 |
 | usc-title-10-section-301 | 4 | 2 | 4 |
+| usc-title-10-section-311 | 1 | 0 | 1 |
 | usc-title-10-section-3201 | 1 | 0 | 1 |
 | usc-title-10-section-333 | 1 | 0 | 1 |
 | usc-title-10-section-391 | 2 | 0 | 2 |
 | usc-title-10-section-394 | 5 | 3 | 5 |
-| usc-title-10-section-4001 | 11 | 16 | 11 |
+| usc-title-10-section-4001 | 12 | 15 | 12 |
 | usc-title-10-section-4061 | 1 | 0 | 1 |
 | usc-title-10-section-441 | 2 | 1 | 2 |
-| usc-title-10-section-4811 | 6 | 18 | 6 |
+| usc-title-10-section-4811 | 8 | 16 | 8 |
+| usc-title-10-section-4871 | 3 | 0 | 3 |
 | usc-title-10-section-491 | 3 | 3 | 3 |
+| usc-title-10-section-501 | 1 | 0 | 1 |
 | usc-title-10-section-503 | 3 | 2 | 3 |
 | usc-title-10-section-525 | 1 | 0 | 1 |
 | usc-title-10-section-701 | 1 | 0 | 1 |
 | usc-title-10-section-801 | 6 | 5 | 6 |
 | usc-title-10-section-8013 | 1 | 1 | 1 |
 | usc-title-10-section-8661 | 1 | 2 | 1 |
-| usc-title-10-section-9081 | 1 | 6 | 1 |
+| usc-title-10-section-9016 | 1 | 0 | 1 |
+| usc-title-10-section-9081 | 3 | 4 | 3 |
+| usc-title-12-section-1813 | 1 | 4 | 1 |
 | usc-title-14-section-504 | 4 | 7 | 4 |
 | usc-title-15-section-2229a | 2 | 0 | 2 |
 | usc-title-15-section-278g | 2 | 0 | 2 |
+| usc-title-15-section-3710a | 1 | 1 | 1 |
 | usc-title-15-section-631 | 6 | 18 | 6 |
-| usc-title-15-section-632 | 5 | 10 | 5 |
+| usc-title-15-section-632 | 6 | 9 | 6 |
 | usc-title-15-section-636 | 8 | 43 | 8 |
 | usc-title-15-section-637 | 4 | 22 | 4 |
 | usc-title-15-section-638 | 4 | 5 | 4 |
 | usc-title-15-section-644 | 4 | 11 | 4 |
 | usc-title-15-section-648 | 3 | 1 | 3 |
 | usc-title-16-section-1131 | 1 | 0 | 1 |
+| usc-title-16-section-1132 | 1 | 0 | 1 |
 | usc-title-16-section-1531 | 1 | 3 | 1 |
 | usc-title-16-section-668dd | 3 | 14 | 3 |
 | usc-title-16-section-670a | 1 | 2 | 1 |
 | usc-title-2-section-661a | 1 | 0 | 1 |
-| usc-title-20-section-1001 | 4 | 39 | 4 |
+| usc-title-20-section-1001 | 5 | 38 | 5 |
 | usc-title-20-section-1002 | 1 | 1 | 1 |
 | usc-title-20-section-1061 | 1 | 0 | 1 |
 | usc-title-20-section-1067q | 1 | 3 | 1 |
-| usc-title-20-section-7703 | 2 | 4 | 2 |
-| usc-title-20-section-7703a | 1 | 1 | 1 |
+| usc-title-20-section-1070 | 2 | 5 | 2 |
+| usc-title-20-section-1400 | 1 | 4 | 1 |
+| usc-title-20-section-7702 | 1 | 3 | 1 |
+| usc-title-20-section-7703 | 3 | 3 | 3 |
+| usc-title-20-section-7703a | 2 | 0 | 2 |
 | usc-title-20-section-7703b | 2 | 0 | 2 |
 | usc-title-20-section-7713 | 2 | 2 | 2 |
 | usc-title-20-section-7801 | 2 | 4 | 2 |
 | usc-title-21-section-321 | 1 | 6 | 1 |
-| usc-title-22-section-1928 | 5 | 9 | 5 |
-| usc-title-22-section-2151 | 11 | 33 | 11 |
-| usc-title-22-section-2321j | 3 | 2 | 3 |
+| usc-title-22-section-1928 | 6 | 8 | 6 |
+| usc-title-22-section-2151 | 13 | 31 | 13 |
+| usc-title-22-section-2321j | 4 | 1 | 4 |
 | usc-title-22-section-2371 | 1 | 3 | 1 |
 | usc-title-22-section-2403 | 3 | 1 | 3 |
 | usc-title-22-section-2593a | 2 | 0 | 2 |
 | usc-title-22-section-262p | 1 | 0 | 1 |
 | usc-title-22-section-2651a | 4 | 9 | 4 |
 | usc-title-22-section-2656 | 3 | 13 | 3 |
-| usc-title-22-section-2751 | 10 | 23 | 10 |
+| usc-title-22-section-2751 | 12 | 21 | 12 |
 | usc-title-22-section-2761 | 5 | 4 | 5 |
+| usc-title-22-section-2763 | 4 | 2 | 4 |
 | usc-title-22-section-2776 | 3 | 0 | 3 |
-| usc-title-22-section-2778 | 12 | 19 | 12 |
+| usc-title-22-section-2778 | 13 | 18 | 13 |
 | usc-title-22-section-2780 | 3 | 3 | 3 |
 | usc-title-22-section-2794 | 2 | 0 | 2 |
 | usc-title-22-section-3301 | 1 | 15 | 1 |
@@ -151,53 +176,62 @@ Generated: 2026-06-12T23:25:00.000Z
 | usc-title-22-section-8606 | 3 | 2 | 3 |
 | usc-title-24-section-411 | 1 | 1 | 1 |
 | usc-title-25-section-5304 | 2 | 0 | 2 |
+| usc-title-29-section-2612 | 1 | 1 | 1 |
 | usc-title-31-section-3702 | 1 | 0 | 1 |
-| usc-title-31-section-501 | 2 | 41 | 2 |
-| usc-title-31-section-5311 | 1 | 13 | 1 |
+| usc-title-31-section-501 | 4 | 39 | 4 |
+| usc-title-31-section-5311 | 2 | 12 | 2 |
 | usc-title-32-section-107 | 1 | 0 | 1 |
-| usc-title-33-section-1321 | 3 | 22 | 3 |
+| usc-title-33-section-1321 | 4 | 21 | 4 |
 | usc-title-37-section-1009 | 1 | 0 | 1 |
 | usc-title-37-section-403 | 2 | 1 | 2 |
 | usc-title-38-section-527 | 2 | 3 | 2 |
 | usc-title-40-section-8903 | 1 | 0 | 1 |
+| usc-title-42-section-11411 | 2 | 3 | 2 |
 | usc-title-42-section-1320a | 1 | 0 | 1 |
 | usc-title-42-section-1320d | 1 | 3 | 1 |
 | usc-title-42-section-1395c | 1 | 6 | 1 |
 | usc-title-42-section-15801 | 1 | 0 | 1 |
 | usc-title-42-section-1962d | 1 | 0 | 1 |
-| usc-title-42-section-2000e | 1 | 8 | 1 |
+| usc-title-42-section-2000e | 2 | 7 | 2 |
 | usc-title-42-section-2011 | 3 | 1 | 3 |
 | usc-title-42-section-2014 | 1 | 0 | 1 |
 | usc-title-42-section-2121 | 1 | 0 | 1 |
 | usc-title-42-section-2210 | 1 | 8 | 1 |
 | usc-title-42-section-2286 | 1 | 1 | 1 |
 | usc-title-42-section-300gg | 1 | 1 | 1 |
-| usc-title-42-section-4321 | 5 | 63 | 5 |
+| usc-title-42-section-4321 | 7 | 61 | 7 |
 | usc-title-42-section-5121 | 1 | 0 | 1 |
 | usc-title-42-section-5122 | 2 | 1 | 2 |
 | usc-title-42-section-5170 | 2 | 0 | 2 |
 | usc-title-42-section-5195c | 1 | 0 | 1 |
-| usc-title-42-section-6901 | 1 | 2 | 1 |
+| usc-title-42-section-6901 | 2 | 1 | 2 |
 | usc-title-42-section-7101 | 1 | 0 | 1 |
 | usc-title-42-section-7385s | 1 | 0 | 1 |
-| usc-title-42-section-7545 | 1 | 4 | 1 |
-| usc-title-42-section-9601 | 7 | 24 | 7 |
+| usc-title-42-section-7401 | 1 | 1 | 1 |
+| usc-title-42-section-7545 | 2 | 3 | 2 |
+| usc-title-42-section-9601 | 8 | 23 | 8 |
 | usc-title-42-section-9620 | 4 | 3 | 4 |
+| usc-title-43-section-1331 | 3 | 12 | 3 |
 | usc-title-43-section-1601 | 1 | 5 | 1 |
+| usc-title-43-section-1613 | 1 | 4 | 1 |
 | usc-title-43-section-1701 | 3 | 12 | 3 |
 | usc-title-43-section-1712 | 1 | 1 | 1 |
-| usc-title-43-section-1782 | 2 | 2 | 2 |
+| usc-title-43-section-1782 | 3 | 1 | 3 |
 | usc-title-44-section-3501 | 3 | 7 | 3 |
 | usc-title-44-section-3502 | 1 | 3 | 1 |
+| usc-title-46-section-51301 | 1 | 0 | 1 |
 | usc-title-46-section-53101 | 1 | 8 | 1 |
 | usc-title-49-section-40101 | 5 | 25 | 5 |
 | usc-title-5-section-2302 | 3 | 7 | 3 |
 | usc-title-5-section-3104 | 1 | 7 | 1 |
+| usc-title-5-section-3330d | 6 | 11 | 6 |
+| usc-title-5-section-552 | 1 | 10 | 1 |
+| usc-title-5-section-601 | 8 | 72 | 8 |
 | usc-title-5-section-9902 | 2 | 0 | 2 |
-| usc-title-50-section-1521 | 2 | 1 | 2 |
+| usc-title-50-section-1521 | 3 | 0 | 3 |
 | usc-title-50-section-1541 | 1 | 3 | 1 |
 | usc-title-50-section-1601 | 1 | 0 | 1 |
-| usc-title-50-section-1701 | 19 | 69 | 19 |
+| usc-title-50-section-1701 | 21 | 67 | 21 |
 | usc-title-50-section-1702 | 3 | 2 | 3 |
 | usc-title-50-section-1705 | 1 | 0 | 1 |
 | usc-title-50-section-1801 | 2 | 11 | 2 |
@@ -209,25 +243,32 @@ Generated: 2026-06-12T23:25:00.000Z
 | usc-title-50-section-2521 | 1 | 0 | 1 |
 | usc-title-50-section-3001 | 6 | 13 | 6 |
 | usc-title-50-section-3003 | 1 | 1 | 1 |
+| usc-title-50-section-3021 | 2 | 2 | 2 |
 | usc-title-50-section-3024 | 5 | 17 | 5 |
 | usc-title-50-section-3043 | 1 | 1 | 1 |
 | usc-title-50-section-3091 | 1 | 0 | 1 |
-| usc-title-50-section-3161 | 6 | 42 | 6 |
+| usc-title-50-section-3161 | 7 | 41 | 7 |
 | usc-title-50-section-3373 | 1 | 1 | 1 |
+| usc-title-50-section-3519b | 2 | 2 | 2 |
 | usc-title-50-section-3711 | 1 | 0 | 1 |
-| usc-title-50-section-4565 | 3 | 7 | 3 |
+| usc-title-50-section-4501 | 1 | 0 | 1 |
+| usc-title-50-section-4565 | 4 | 6 | 4 |
+| usc-title-50-section-4605 | 1 | 0 | 1 |
 | usc-title-50-section-98d | 2 | 2 | 2 |
 | usc-title-50-section-98h | 1 | 0 | 1 |
 | usc-title-6-section-101 | 2 | 1 | 2 |
-| usc-title-6-section-121 | 5 | 30 | 5 |
+| usc-title-6-section-121 | 6 | 29 | 6 |
 | usc-title-6-section-1501 | 1 | 0 | 1 |
-| usc-title-8-section-1101 | 4 | 39 | 4 |
-| usc-title-8-section-1151 | 3 | 4 | 3 |
-| usc-title-8-section-1157 | 5 | 9 | 5 |
-| usc-title-8-section-1182 | 4 | 20 | 4 |
+| usc-title-8-section-1101 | 7 | 36 | 7 |
+| usc-title-8-section-1151 | 6 | 1 | 6 |
+| usc-title-8-section-1153 | 6 | 11 | 6 |
+| usc-title-8-section-1154 | 2 | 1 | 2 |
+| usc-title-8-section-1157 | 6 | 8 | 6 |
+| usc-title-8-section-1182 | 5 | 19 | 5 |
 | usc-title-8-section-1189 | 1 | 0 | 1 |
+| usc-title-8-section-1255 | 6 | 10 | 6 |
 | eo-14028-cybersecurity | 4 | 2 | 4 |
-| eo-14110-ai | 6 | 26 | 6 |
+| eo-14110-ai | 7 | 25 | 7 |
 | omb-m-21-31-cyber-logging | 2 | 2 | 2 |
 | omb-m-24-10-ai-governance | 3 | 7 | 3 |
 | far-part-39-acquisition-of-it | 0 | 6 | 0 |
@@ -397,7 +438,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodd-5111-01 | 22 | 8 | 22 |
 | dodd-5111-03 | 3 | 1 | 3 |
 | dodd-5111-07 | 5 | 1 | 5 |
-| dodd-5111-10 | 19 | 8 | 19 |
+| dodd-5111-10 | 20 | 7 | 20 |
 | dodd-5111-11 | 4 | 2 | 4 |
 | dodd-5111-12e | 2 | 0 | 2 |
 | dodd-5111-13 | 21 | 4 | 21 |
@@ -461,8 +502,8 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodd-5210-56 | 10 | 0 | 10 |
 | dodd-5220-6 | 0 | 3 | 0 |
 | dodd-5230-11 | 0 | 0 | 0 |
-| dodd-5230-20 | 2 | 1 | 2 |
-| dodd-5230-25 | 3 | 8 | 3 |
+| dodd-5230-20 | 3 | 0 | 3 |
+| dodd-5230-25 | 4 | 7 | 4 |
 | dodd-5240-01 | 16 | 6 | 16 |
 | dodd-5240-02 | 9 | 3 | 9 |
 | dodd-5240-06 | 9 | 0 | 9 |
@@ -1061,7 +1102,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dodi-5210-45 | 4 | 6 | 4 |
 | dodi-5210-60 | 1 | 1 | 1 |
 | dodi-5210-65 | 25 | 2 | 25 |
-| dodi-5210-83 | 3 | 4 | 3 |
+| dodi-5210-83 | 4 | 3 | 4 |
 | dodi-5210-84 | 1 | 3 | 1 |
 | dodi-5210-87 | 1 | 0 | 1 |
 | dodi-5210-88 | 21 | 5 | 21 |
@@ -1413,7 +1454,8 @@ Generated: 2026-06-12T23:25:00.000Z
 | Executive Order 13467 | executive-order | 41 | 18 | high |
 | 42 U.S.C. 1973ff | usc | 40 | 5 | high |
 | DoDI 6940.16 | dodi | 39 | 1 | high |
-| 50 U.S.C. 401a | usc | 37 | 19 | high |
+| Executive Order 12866 | executive-order | 39 | 8 | high |
+| 50 U.S.C. 401a | usc | 38 | 20 | high |
 | 10 U.S.C. 2223a | usc | 36 | 11 | high |
 | 10 USC 2306a | usc | 31 | 15 | high |
 | DoDD 5134.01 | dodd | 30 | 27 | high |
@@ -1429,30 +1471,26 @@ Generated: 2026-06-12T23:25:00.000Z
 | Executive Order 12829 | executive-order | 26 | 10 | high |
 | 10 U.S.C. 7291 | usc | 24 | 12 | high |
 | 50 U.S.C. 435 | usc | 24 | 9 | high |
+| 50 U.S.C. 404a | usc | 23 | 13 | high |
 | 10 U.S.C. 4571 | usc | 22 | 7 | high |
-| 50 U.S.C. 404a | usc | 22 | 12 | high |
 | EXECUTIVE ORDER 13556 | executive-order | 22 | 14 | high |
 | 10 USC 168 | usc | 21 | 9 | high |
 | DoDI 1342.22 | dodi | 20 | 14 | high |
 | DoDD 3020.26 | dodd | 19 | 15 | high |
 | Public Law 102-484 | public-law | 19 | 13 | high |
 | 10 USC 2282 | usc | 18 | 8 | high |
-| 8 U.S.C. 1154 | usc | 18 | 5 | high |
+| Executive Order 12958 | executive-order | 18 | 14 | high |
+| Executive Order 13563 | executive-order | 18 | 2 | high |
 | 41 U.S.C. 422 | usc | 17 | 5 | high |
 | 41 U.S.C. 433 | usc | 17 | 4 | high |
 | 42 U.S.C. 300mm | usc | 17 | 2 | high |
 | 42 U.S.C. 6295 | usc | 17 | 2 | high |
-| Executive Order 12958 | executive-order | 17 | 13 | high |
 | NIST SP 800-37 | nist-sp | 17 | 6 | low |
 | 10 U.S.C. 4205 | usc | 16 | 2 | high |
-| 10 USC 3001 | usc | 16 | 3 | high |
 | 10 USC 371 | usc | 16 | 12 | high |
-| 16 USC 1132 | usc | 16 | 3 | high |
 | 31 U.S.C. 3302 | usc | 16 | 1 | high |
 | 33 U.S.C. 2201 | usc | 16 | 2 | high |
 | 41 U.S.C. 421 | usc | 16 | 9 | high |
-| 43 U.S.C. 1613 | usc | 16 | 3 | high |
-| 8 U.S.C. 1153 | usc | 16 | 7 | high |
 | DoDI 1315.18 | dodi | 16 | 9 | high |
 | 10 U.S.C. 374 | usc | 15 | 10 | high |
 | 10 U.S.C. 397 | usc | 15 | 3 | high |
@@ -1464,14 +1502,17 @@ Generated: 2026-06-12T23:25:00.000Z
 | 10 USC 2521 | usc | 14 | 8 | high |
 | 40 U.S.C. 1401 | usc | 14 | 5 | high |
 | 42 USC 2000ff | usc | 14 | 1 | high |
-| 43 U.S.C. 1331 | usc | 14 | 9 | high |
 | 50 U.S.C. 402 | usc | 14 | 5 | high |
 | 50 USC 2523 | usc | 14 | 9 | high |
 | 6 U.S.C. 652 | usc | 14 | 3 | high |
 | 10 USC 2351 | usc | 13 | 6 | high |
 | 10 USC 2366b | usc | 13 | 8 | high |
 | 10 USC 2377 | usc | 13 | 7 | high |
-| 12 U.S.C. 1813 | usc | 13 | 7 | high |
 | 15 CFR part 730 | cfr | 13 | 3 | medium |
 | 33 U.S.C. 2213 | usc | 13 | 1 | high |
+| 5 USC 2301 | usc | 13 | 4 | high |
+| 54 USC 320101 | usc | 13 | 1 | high |
+| DoDD 5110.10 | dodd | 13 | 5 | high |
+| DoDD 5132.03 | dodd | 13 | 11 | high |
+| DoDI 5105.45 | dodi | 13 | 1 | high |
 

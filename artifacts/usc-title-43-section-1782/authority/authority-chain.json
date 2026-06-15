@@ -61,11 +61,11 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 1,
+    "upstream_edge_count": 2,
     "downstream_edge_count": 4,
-    "catalogued_node_count": 6,
-    "uncatalogued_gap_count": 2,
-    "evidence_backed_edge_count": 5,
+    "catalogued_node_count": 7,
+    "uncatalogued_gap_count": 1,
+    "evidence_backed_edge_count": 6,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -147,21 +147,19 @@
       "status": "catalogued"
     },
     {
-      "id": "gap:usc:16:1132",
+      "id": "usc-title-16-section-1132",
       "label": "16 U.S.C. 1132",
-      "title": "16 U.S.C. 1132",
+      "title": "16 U.S.C. 1132: Extent of System",
       "artifact_type": "U.S. Code",
       "lane": "statute",
       "lane_label": "Statute",
       "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:16:1132",
-      "count": 1,
-      "lines_sample": [
-        137
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
+      "family": "usc_title_16",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "gap:usc:16:1133",
@@ -218,6 +216,28 @@
           149
         ],
         "count": 2
+      }
+    },
+    {
+      "id": "usc-title-16-section-1132->usc-title-43-section-1782:references:resolved_reference",
+      "source_artifact_id": "usc-title-16-section-1132",
+      "source_label": "16 U.S.C. 1132",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-43-section-1782",
+      "target_label": "43 U.S.C. 1782",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:16:1132",
+        "label": "16 U.S.C. 1132",
+        "first_line": 137,
+        "lines_sample": [
+          137
+        ],
+        "count": 1
       }
     }
   ],
@@ -322,23 +342,6 @@
   ],
   "uncatalogued_authority_gaps": [
     {
-      "id": "gap:usc:16:1132",
-      "label": "16 U.S.C. 1132",
-      "title": "16 U.S.C. 1132",
-      "artifact_type": "U.S. Code",
-      "lane": "statute",
-      "lane_label": "Statute",
-      "hierarchy_rank": 20,
-      "reference_family": "usc",
-      "source_reference_id": "usc:16:1132",
-      "count": 1,
-      "lines_sample": [
-        137
-      ],
-      "status": "uncatalogued",
-      "priority": "high"
-    },
-    {
       "id": "gap:usc:16:1133",
       "label": "16 U.S.C. 1133",
       "title": "16 U.S.C. 1133",
@@ -362,7 +365,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "usc-title-43-section-1782",
       "direction": "upstream",
-      "edge_count": 1
+      "edge_count": 2
     },
     {
       "id": "trace-downstream",

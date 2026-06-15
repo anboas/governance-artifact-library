@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 1,
-    "downstream_edge_count": 10,
-    "catalogued_node_count": 12,
+    "downstream_edge_count": 11,
+    "catalogued_node_count": 13,
     "uncatalogued_gap_count": 4,
-    "evidence_backed_edge_count": 11,
+    "evidence_backed_edge_count": 12,
     "inferred_edge_count": 0,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -187,6 +187,21 @@
       "family": "defense_authorization",
       "issuing_authority": "Congress",
       "source_system": "GovInfo",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "usc-title-10-section-2164",
+      "label": "10 U.S.C. 2164",
+      "title": "10 U.S.C. 2164: Department of Defense domestic dependent elementary and secondary schools",
+      "artifact_type": "U.S. Code",
+      "lane": "statute",
+      "lane_label": "Statute",
+      "hierarchy_rank": 20,
+      "family": "defense_authority",
+      "issuing_authority": "Congress",
+      "source_system": "U.S. Code",
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "catalogued"
@@ -529,6 +544,28 @@
       }
     },
     {
+      "id": "usc-title-20-section-7801->usc-title-10-section-2164:references:resolved_reference",
+      "source_artifact_id": "usc-title-20-section-7801",
+      "source_label": "20 U.S.C. 7801",
+      "source_lane": "statute",
+      "target_artifact_id": "usc-title-10-section-2164",
+      "target_label": "10 U.S.C. 2164",
+      "target_lane": "statute",
+      "relationship": "references",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:20:7801",
+        "label": "20 U.S.C. 7801",
+        "first_line": 1081,
+        "lines_sample": [
+          1081
+        ],
+        "count": 1
+      }
+    },
+    {
       "id": "usc-title-20-section-7801->usc-title-10-section-503:references:resolved_reference",
       "source_artifact_id": "usc-title-20-section-7801",
       "source_label": "20 U.S.C. 7801",
@@ -662,7 +699,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-20-section-7801",
       "direction": "downstream",
-      "edge_count": 10
+      "edge_count": 11
     }
   ]
 }
