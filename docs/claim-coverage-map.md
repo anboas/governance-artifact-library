@@ -4,25 +4,25 @@ Generated: 2026-06-12T23:10:00.000Z
 
 ## Summary
 
-- Artifacts: 1254
-- Claims: 259360
-- Artifacts with claims: 1210
-- Source-text unavailable: 40
-- Requirements: 84853
-- Reporting requirements: 43798
-- Decision authorities: 48677
+- Artifacts: 1267
+- Claims: 259470
+- Artifacts with claims: 1214
+- Source-text unavailable: 49
+- Requirements: 84887
+- Reporting requirements: 43821
+- Decision authorities: 48688
 
 ## Claim Types
 
 | Type | Count |
 | --- | ---: |
-| requirement | 84853 |
-| decision_authority | 48677 |
-| reporting_requirement | 43798 |
-| permission | 36488 |
-| policy_statement | 34861 |
-| prohibition | 9461 |
-| definition | 1222 |
+| requirement | 84887 |
+| decision_authority | 48688 |
+| reporting_requirement | 43821 |
+| permission | 36498 |
+| policy_statement | 34880 |
+| prohibition | 9463 |
+| definition | 1233 |
 
 ## Top Artifacts
 

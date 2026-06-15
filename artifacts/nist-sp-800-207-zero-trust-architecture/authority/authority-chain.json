@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 1,
-    "downstream_edge_count": 4,
-    "catalogued_node_count": 6,
+    "downstream_edge_count": 5,
+    "catalogued_node_count": 7,
     "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 0,
+    "evidence_backed_edge_count": 1,
     "inferred_edge_count": 5,
     "authority_path_status": "inferred_review_needed",
     "implementation_path_status": "has_downstream_trace"
@@ -89,16 +89,31 @@
       "priority": "high"
     },
     {
-      "id": "omb-m-21-31-cyber-logging",
-      "label": "OMB M-21-31",
-      "title": "OMB Memorandum M-21-31: Improving the Federal Government's Investigative and Remediation Capabilities Related to Cybersecurity Incidents",
-      "artifact_type": "OMB Memorandum",
+      "id": "cisa-bod-26-02-end-of-support-edge-devices",
+      "label": "BOD 26-02",
+      "title": "BOD 26-02: Mitigating Risk From End-of-Support Edge Devices",
+      "artifact_type": "Binding Operational Directive",
       "lane": "govwide",
       "lane_label": "Gov-wide",
-      "hierarchy_rank": 40,
-      "family": "cybersecurity",
-      "issuing_authority": "OMB",
-      "source_system": "White House",
+      "hierarchy_rank": 55,
+      "family": "vulnerability_management",
+      "issuing_authority": "CISA",
+      "source_system": "CISA Guidance Library",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "cisa-bod-26-04-prioritizing-security-updates",
+      "label": "BOD 26-04",
+      "title": "BOD 26-04: Prioritizing Security Updates Based on Risk",
+      "artifact_type": "Binding Operational Directive",
+      "lane": "govwide",
+      "lane_label": "Gov-wide",
+      "hierarchy_rank": 55,
+      "family": "vulnerability_management",
+      "issuing_authority": "CISA",
+      "source_system": "CISA Guidance Library",
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "catalogued"
@@ -149,6 +164,21 @@
       "status": "catalogued"
     },
     {
+      "id": "afman-17-1301-computer-security",
+      "label": "AFMAN 17-1301",
+      "title": "AFMAN 17-1301: Computer Security",
+      "artifact_type": "Air Force Manual",
+      "lane": "service",
+      "lane_label": "Service",
+      "hierarchy_rank": 80,
+      "family": "cybersecurity",
+      "issuing_authority": "Secretary of the Air Force",
+      "source_system": "Air Force e-Publishing",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
       "id": "secnav-m-5239-3-don-cybersecurity",
       "label": "SECNAV M-5239.3",
       "title": "SECNAV M-5239.3: Department of the Navy Cybersecurity Program",
@@ -162,28 +192,13 @@
       "mirror_status": "blocked",
       "parser_status": "blocked",
       "status": "catalogued"
-    },
-    {
-      "id": "opnavinst-5239-1e-navy-cybersecurity",
-      "label": "OPNAVINST 5239.1E",
-      "title": "OPNAVINST 5239.1E: U.S. Navy Cybersecurity Program",
-      "artifact_type": "OPNAV Instruction",
-      "lane": "service",
-      "lane_label": "Service",
-      "hierarchy_rank": 82,
-      "family": "cybersecurity",
-      "issuing_authority": "OPNAV",
-      "source_system": "Department of the Navy Issuances",
-      "mirror_status": "blocked",
-      "parser_status": "blocked",
-      "status": "catalogued"
     }
   ],
   "upstream_edges": [
     {
-      "id": "omb-m-21-31-cyber-logging->nist-sp-800-207-zero-trust-architecture:flows_down:inferred_flowdown",
-      "source_artifact_id": "omb-m-21-31-cyber-logging",
-      "source_label": "OMB M-21-31",
+      "id": "cisa-bod-26-04-prioritizing-security-updates->nist-sp-800-207-zero-trust-architecture:flows_down:inferred_flowdown",
+      "source_artifact_id": "cisa-bod-26-04-prioritizing-security-updates",
+      "source_label": "BOD 26-04",
       "source_lane": "govwide",
       "target_artifact_id": "nist-sp-800-207-zero-trust-architecture",
       "target_label": "NIST SP 800-207",
@@ -245,16 +260,38 @@
       }
     },
     {
-      "id": "nist-sp-800-207-zero-trust-architecture->opnavinst-5239-1e-navy-cybersecurity:flows_down:inferred_flowdown",
+      "id": "nist-sp-800-207-zero-trust-architecture->cisa-bod-26-02-end-of-support-edge-devices:references_upstream:resolved_reference",
       "source_artifact_id": "nist-sp-800-207-zero-trust-architecture",
       "source_label": "NIST SP 800-207",
       "source_lane": "govwide",
-      "target_artifact_id": "opnavinst-5239-1e-navy-cybersecurity",
-      "target_label": "OPNAVINST 5239.1E",
+      "target_artifact_id": "cisa-bod-26-02-end-of-support-edge-devices",
+      "target_label": "BOD 26-02",
+      "target_lane": "govwide",
+      "relationship": "references_upstream",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "nist-sp:800-207",
+        "label": "NIST SP 800-207",
+        "first_line": 1266,
+        "lines_sample": [
+          1266
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "nist-sp-800-207-zero-trust-architecture->afman-17-1301-computer-security:flows_down:inferred_flowdown",
+      "source_artifact_id": "nist-sp-800-207-zero-trust-architecture",
+      "source_label": "NIST SP 800-207",
+      "source_lane": "govwide",
+      "target_artifact_id": "afman-17-1301-computer-security",
+      "target_label": "AFMAN 17-1301",
       "target_lane": "service",
       "relationship": "flows_down",
       "evidence_type": "inferred_flowdown",
-      "confidence": 0.59,
+      "confidence": 0.66,
       "direction": "downstream",
       "evidence": {
         "basis": "shared_family_tags_and_authority_rank",
@@ -319,7 +356,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "nist-sp-800-207-zero-trust-architecture",
       "direction": "downstream",
-      "edge_count": 4
+      "edge_count": 5
     }
   ]
 }

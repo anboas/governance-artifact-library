@@ -4,38 +4,38 @@ Generated from `data/reference-ingestion-queue.json`, `manifest.json`, and `sour
 
 ## Summary
 
-- Known candidates: 6802
+- Known candidates: 6805
 - Catalog matches: 16
-- Source discovered: 6786
+- Source discovered: 6789
 - Source candidates: 0
 - Needs source discovery: 0
 - P0 candidates: 799
-- Exact or strong source paths: 6802
+- Exact or strong source paths: 6805
 - Official source systems represented: 20
 
 ## Candidate Families
 
 | Family | Candidates | P0 | Catalog Matches | Source Discovered | Source Candidates | Needs Discovery | Occurrences |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| usc | 6111 | 722 | 0 | 6111 | 0 | 0 | 16268 |
+| usc | 6112 | 722 | 0 | 6112 | 0 | 0 | 16274 |
 | executive-order | 250 | 34 | 0 | 250 | 0 | 0 | 1063 |
 | public-law | 170 | 21 | 0 | 170 | 0 | 0 | 389 |
 | dodd | 76 | 12 | 4 | 72 | 0 | 0 | 356 |
 | dodi | 76 | 10 | 12 | 64 | 0 | 0 | 417 |
 | cfr | 63 | 0 | 0 | 63 | 0 | 0 | 93 |
-| nist-sp | 26 | 0 | 0 | 26 | 0 | 0 | 78 |
+| nist-sp | 26 | 0 | 0 | 26 | 0 | 0 | 80 |
 | dfars | 8 | 0 | 0 | 8 | 0 | 0 | 15 |
 | far | 8 | 0 | 0 | 8 | 0 | 0 | 12 |
+| omb-memo | 6 | 0 | 0 | 6 | 0 | 0 | 8 |
 | opnavinst | 6 | 0 | 0 | 6 | 0 | 0 | 11 |
-| omb-memo | 4 | 0 | 0 | 4 | 0 | 0 | 5 |
 | secnav | 4 | 0 | 0 | 4 | 0 | 0 | 7 |
 
 ## Source Systems
 
 | Source System | Candidates | P0 | Catalog Matches | Source Discovered | Source Candidates | Needs Discovery | Occurrences |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| GovInfo | 6281 | 743 | 0 | 6281 | 0 | 0 | 16657 |
-| U.S. Code | 6111 | 722 | 0 | 6111 | 0 | 0 | 16268 |
+| GovInfo | 6282 | 743 | 0 | 6282 | 0 | 0 | 16663 |
+| U.S. Code | 6112 | 722 | 0 | 6112 | 0 | 0 | 16274 |
 | Federal Register | 250 | 34 | 0 | 250 | 0 | 0 | 1063 |
 | National Archives | 250 | 34 | 0 | 250 | 0 | 0 | 1063 |
 | National Archives Executive Orders | 250 | 34 | 0 | 250 | 0 | 0 | 1063 |
@@ -44,16 +44,16 @@ Generated from `data/reference-ingestion-queue.json`, `manifest.json`, and `sour
 | Congress.gov | 170 | 21 | 0 | 170 | 0 | 0 | 389 |
 | eCFR | 63 | 0 | 0 | 63 | 0 | 0 | 93 |
 | GovInfo CFR Packages | 63 | 0 | 0 | 63 | 0 | 0 | 93 |
-| NIST CSRC | 26 | 0 | 0 | 26 | 0 | 0 | 78 |
-| NIST Publications | 26 | 0 | 0 | 26 | 0 | 0 | 78 |
+| NIST CSRC | 26 | 0 | 0 | 26 | 0 | 0 | 80 |
+| NIST Publications | 26 | 0 | 0 | 26 | 0 | 0 | 80 |
 | Acquisition.gov | 16 | 0 | 0 | 16 | 0 | 0 | 27 |
 | Department of the Navy Issuances | 10 | 0 | 0 | 10 | 0 | 0 | 18 |
 | Acquisition.gov DFARS | 8 | 0 | 0 | 8 | 0 | 0 | 15 |
 | Acquisition.gov FAR | 8 | 0 | 0 | 8 | 0 | 0 | 12 |
 | Defense Pricing, Contracting, and Acquisition Policy | 8 | 0 | 0 | 8 | 0 | 0 | 15 |
-| OMB | 4 | 0 | 0 | 4 | 0 | 0 | 5 |
-| OMB Circulars | 4 | 0 | 0 | 4 | 0 | 0 | 5 |
-| White House | 4 | 0 | 0 | 4 | 0 | 0 | 5 |
+| OMB | 6 | 0 | 0 | 6 | 0 | 0 | 8 |
+| OMB Circulars | 6 | 0 | 0 | 6 | 0 | 0 | 8 |
+| White House | 6 | 0 | 0 | 6 | 0 | 0 | 8 |
 
 ## Top Priority Candidates
 

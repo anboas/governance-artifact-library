@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-14T23:14:24.087Z",
+  "generated_at": "2026-06-14T23:58:14.766Z",
   "queue_version": "source-acquisition-queue-v1",
   "summary": {
-    "queue_item_count": 67,
-    "p0_count": 15,
-    "p1_count": 19,
-    "p2_count": 33,
+    "queue_item_count": 65,
+    "p0_count": 17,
+    "p1_count": 17,
+    "p2_count": 31,
     "governance_gap_count": 13,
-    "source_start_count": 42,
-    "source_recovery_count": 6,
+    "source_start_count": 38,
+    "source_recovery_count": 8,
     "coverage_completion_count": 6,
-    "critical_source_count": 21,
-    "blocked_or_browser_needed_count": 18
+    "critical_source_count": 20,
+    "blocked_or_browser_needed_count": 17
   },
   "top_queue_items": [
     {
@@ -61,6 +61,53 @@
       "queue_rank": 1
     },
     {
+      "id": "source-recovery-disa-stigs",
+      "item_type": "source_recovery",
+      "label": "DISA STIG Library mirror recovery",
+      "queue_priority": "P0",
+      "score": 106,
+      "reason": "2 registered artifacts blocked or browser-needed.",
+      "recommended_action": "Run browser-assisted source capture and store raw mirrors.",
+      "source_id": "disa-stigs",
+      "source_name": "DISA STIG Library",
+      "source_owner": "Defense Information Systems Agency",
+      "source_priority": "critical",
+      "automation_status": "browser_shell_detected",
+      "coverage_status": "source_known_blocked",
+      "capture_strategies": [
+        "browser_fetch",
+        "manual_import",
+        "source_known_registration"
+      ],
+      "source_location_types": [
+        "disa_stig_html",
+        "disa_stig_zip",
+        "disa_srg_pdf"
+      ],
+      "source_url": "https://public.cyber.mil/stigs/",
+      "search_url": "https://public.cyber.mil/stigs/downloads/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 2,
+        "mirrored": 0,
+        "blocked": 2,
+        "text_extracted": 0,
+        "analytics": 2,
+        "analysis": 2,
+        "structured": 0,
+        "versioned": 2
+      },
+      "artifact_ids": [
+        "dod-cyber-exchange-cloud-computing-srg",
+        "dod-cyber-exchange-stig-library"
+      ],
+      "source_candidates": [],
+      "queue_rank": 2
+    },
+    {
       "id": "source-recovery-dod-cio",
       "item_type": "source_recovery",
       "label": "DoD CIO mirror recovery",
@@ -102,50 +149,6 @@
       "artifact_ids": [
         "dod-zero-trust-strategy"
       ],
-      "source_candidates": [],
-      "queue_rank": 2
-    },
-    {
-      "id": "source-recovery-disa-stigs",
-      "item_type": "source_recovery",
-      "label": "DISA STIG Library mirror recovery",
-      "queue_priority": "P0",
-      "score": 104,
-      "reason": "0 registered artifacts blocked or browser-needed.",
-      "recommended_action": "Run browser-assisted source capture and store raw mirrors.",
-      "source_id": "disa-stigs",
-      "source_name": "DISA STIG Library",
-      "source_owner": "Defense Information Systems Agency",
-      "source_priority": "critical",
-      "automation_status": "browser_shell_detected",
-      "coverage_status": "not_started",
-      "capture_strategies": [
-        "browser_fetch",
-        "manual_import",
-        "source_known_registration"
-      ],
-      "source_location_types": [
-        "disa_stig_html",
-        "disa_stig_zip",
-        "disa_srg_pdf"
-      ],
-      "source_url": "https://public.cyber.mil/stigs/",
-      "search_url": "https://public.cyber.mil/stigs/downloads/",
-      "api_url": null,
-      "governance_item_id": null,
-      "governance_item_label": null,
-      "hierarchy_rank": null,
-      "counts": {
-        "artifacts": 0,
-        "mirrored": 0,
-        "blocked": 0,
-        "text_extracted": 0,
-        "analytics": 0,
-        "analysis": 0,
-        "structured": 0,
-        "versioned": 0
-      },
-      "artifact_ids": [],
       "source_candidates": [],
       "queue_rank": 3
     },
@@ -1382,6 +1385,55 @@
       "queue_rank": 5
     },
     {
+      "id": "source-recovery-air-force-epubs",
+      "item_type": "source_recovery",
+      "label": "Air Force e-Publishing mirror recovery",
+      "queue_priority": "P0",
+      "score": 101,
+      "reason": "5 registered artifacts blocked or browser-needed.",
+      "recommended_action": "Capture official source files through browser/manual import fallback.",
+      "source_id": "air-force-epubs",
+      "source_name": "Air Force e-Publishing",
+      "source_owner": "Department of the Air Force",
+      "source_priority": "medium",
+      "automation_status": "needs_probe",
+      "coverage_status": "source_known_blocked",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "air_force_epubs_pdf",
+        "air_force_epubs_html"
+      ],
+      "source_url": "https://www.e-publishing.af.mil/",
+      "search_url": "https://www.e-publishing.af.mil/Product-Index/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 5,
+        "mirrored": 0,
+        "blocked": 5,
+        "text_extracted": 0,
+        "analytics": 5,
+        "analysis": 5,
+        "structured": 0,
+        "versioned": 5
+      },
+      "artifact_ids": [
+        "afman-17-1301-computer-security",
+        "dafman-17-1203-it-asset-management",
+        "dafman-17-1304-identity-credential-access-management",
+        "afi-17-101-risk-management-framework",
+        "afi-17-130-cybersecurity-program-management"
+      ],
+      "source_candidates": [],
+      "queue_rank": 6
+    },
+    {
       "id": "source-recovery-dod-cyber-exchange",
       "item_type": "source_recovery",
       "label": "DoD Cyber Exchange mirror recovery",
@@ -1423,7 +1475,7 @@
         "cyber-mil-cyber-awareness-challenge"
       ],
       "source_candidates": [],
-      "queue_rank": 6
+      "queue_rank": 7
     },
     {
       "id": "source-recovery-mynavyhr",
@@ -1468,7 +1520,7 @@
         "navadmin-214-24-fy2025-cybersecurity-awareness"
       ],
       "source_candidates": [],
-      "queue_rank": 7
+      "queue_rank": 8
     },
     {
       "id": "governance-gap-dfars",
@@ -1533,7 +1585,7 @@
           "url": "https://www.acquisition.gov/browse/index/far"
         }
       ],
-      "queue_rank": 8
+      "queue_rank": 9
     },
     {
       "id": "governance-gap-ostp-guidance",
@@ -1598,7 +1650,7 @@
           "url": "https://www.whitehouse.gov/"
         }
       ],
-      "queue_rank": 9
+      "queue_rank": 10
     },
     {
       "id": "governance-gap-presidential-memorandum",
@@ -1665,7 +1717,7 @@
           "url": "https://www.whitehouse.gov/omb/information-for-agencies/circulars/"
         }
       ],
-      "queue_rank": 10
+      "queue_rank": 11
     },
     {
       "id": "governance-gap-dod-dtm",
@@ -1717,7 +1769,7 @@
           "url": "https://www.esd.whs.mil/DD/"
         }
       ],
-      "queue_rank": 11
+      "queue_rank": 12
     },
     {
       "id": "governance-gap-dod-manual",
@@ -1769,7 +1821,55 @@
           "url": "https://www.esd.whs.mil/DD/"
         }
       ],
-      "queue_rank": 12
+      "queue_rank": 13
+    },
+    {
+      "id": "source-recovery-uscybercom",
+      "item_type": "source_recovery",
+      "label": "U.S. Cyber Command mirror recovery",
+      "queue_priority": "P0",
+      "score": 98,
+      "reason": "2 registered artifacts blocked or browser-needed.",
+      "recommended_action": "Capture official source files through browser/manual import fallback.",
+      "source_id": "uscybercom",
+      "source_name": "U.S. Cyber Command",
+      "source_owner": "United States Cyber Command",
+      "source_priority": "medium",
+      "automation_status": "needs_probe",
+      "coverage_status": "source_known_blocked",
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "uscybercom_html",
+        "uscybercom_pdf",
+        "program_office_html",
+        "program_office_pdf"
+      ],
+      "source_url": "https://www.cybercom.mil/",
+      "search_url": "https://www.cybercom.mil/Search/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 2,
+        "mirrored": 0,
+        "blocked": 2,
+        "text_extracted": 0,
+        "analytics": 2,
+        "analysis": 2,
+        "structured": 0,
+        "versioned": 2
+      },
+      "artifact_ids": [
+        "uscybercom-2018-command-vision",
+        "uscybercom-mission-and-vision"
+      ],
+      "source_candidates": [],
+      "queue_rank": 14
     },
     {
       "id": "governance-gap-dod-cio-guidance",
@@ -1822,7 +1922,7 @@
           "url": "https://dodcio.defense.gov/"
         }
       ],
-      "queue_rank": 13
+      "queue_rank": 15
     },
     {
       "id": "source-start-national-archives-executive-orders",
@@ -1863,7 +1963,7 @@
       },
       "artifact_ids": [],
       "source_candidates": [],
-      "queue_rank": 14
+      "queue_rank": 16
     },
     {
       "id": "governance-gap-secnav-instruction",
@@ -1915,7 +2015,7 @@
           "url": "https://www.secnav.navy.mil/doni/"
         }
       ],
-      "queue_rank": 15
+      "queue_rank": 17
     },
     {
       "id": "source-start-govinfo-cfr",
@@ -1958,7 +2058,7 @@
       },
       "artifact_ids": [],
       "source_candidates": [],
-      "queue_rank": 16
+      "queue_rank": 18
     },
     {
       "id": "governance-gap-cisa-guidance",
@@ -2018,7 +2118,7 @@
           "url": "https://www.cisa.gov/resources-tools/resources"
         }
       ],
-      "queue_rank": 17
+      "queue_rank": 19
     },
     {
       "id": "source-start-congress-gov",
@@ -2060,52 +2160,7 @@
       },
       "artifact_ids": [],
       "source_candidates": [],
-      "queue_rank": 18
-    },
-    {
-      "id": "source-start-cisa-guidance",
-      "item_type": "source_start",
-      "label": "CISA Guidance Library initial ingest",
-      "queue_priority": "P1",
-      "score": 92,
-      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
-      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
-      "source_id": "cisa-guidance",
-      "source_name": "CISA Guidance Library",
-      "source_owner": "Cybersecurity and Infrastructure Security Agency",
-      "source_priority": "high",
-      "automation_status": "direct_fetch_ready",
-      "coverage_status": "not_started",
-      "capture_strategies": [
-        "direct_fetch",
-        "sitemap_crawl",
-        "rss"
-      ],
-      "source_location_types": [
-        "cisa_guidance_html",
-        "cisa_guidance_pdf",
-        "cisa_html",
-        "cisa_pdf"
-      ],
-      "source_url": "https://www.cisa.gov/resources-tools/resources",
-      "search_url": "https://www.cisa.gov/resources-tools/resources?search_api_fulltext=",
-      "api_url": null,
-      "governance_item_id": null,
-      "governance_item_label": null,
-      "hierarchy_rank": null,
-      "counts": {
-        "artifacts": 0,
-        "mirrored": 0,
-        "blocked": 0,
-        "text_extracted": 0,
-        "analytics": 0,
-        "analysis": 0,
-        "structured": 0,
-        "versioned": 0
-      },
-      "artifact_ids": [],
-      "source_candidates": [],
-      "queue_rank": 19
+      "queue_rank": 20
     },
     {
       "id": "source-start-cisa",
@@ -2148,7 +2203,7 @@
       },
       "artifact_ids": [],
       "source_candidates": [],
-      "queue_rank": 20
+      "queue_rank": 21
     },
     {
       "id": "source-start-dau-aaf",
@@ -2191,7 +2246,7 @@
       },
       "artifact_ids": [],
       "source_candidates": [],
-      "queue_rank": 21
+      "queue_rank": 22
     },
     {
       "id": "source-start-ecfr",
@@ -2233,7 +2288,7 @@
       },
       "artifact_ids": [],
       "source_candidates": [],
-      "queue_rank": 22
+      "queue_rank": 23
     },
     {
       "id": "source-start-fedramp",
@@ -2276,7 +2331,7 @@
       },
       "artifact_ids": [],
       "source_candidates": [],
-      "queue_rank": 23
+      "queue_rank": 24
     },
     {
       "id": "governance-gap-joint-staff-instruction",
@@ -2335,7 +2390,7 @@
           "url": "https://www.jcs.mil/Library/CJCS-Instructions/"
         }
       ],
-      "queue_rank": 24
+      "queue_rank": 25
     },
     {
       "id": "source-start-nist-ai-rmf",
@@ -2378,7 +2433,7 @@
       },
       "artifact_ids": [],
       "source_candidates": [],
-      "queue_rank": 25
+      "queue_rank": 26
     },
     {
       "id": "source-start-nist-nccoe",
@@ -2421,7 +2476,7 @@
       },
       "artifact_ids": [],
       "source_candidates": [],
-      "queue_rank": 26
+      "queue_rank": 27
     },
     {
       "id": "governance-gap-alnav",
@@ -2473,7 +2528,7 @@
           "url": "https://www.mynavyhr.navy.mil/References/Messages/"
         }
       ],
-      "queue_rank": 27
+      "queue_rank": 28
     },
     {
       "id": "source-start-defense-pricing-contracting",
@@ -2500,50 +2555,6 @@
       ],
       "source_url": "https://www.acq.osd.mil/asda/dpc/index.html",
       "search_url": "https://www.acq.osd.mil/dpap/dars/",
-      "api_url": null,
-      "governance_item_id": null,
-      "governance_item_label": null,
-      "hierarchy_rank": null,
-      "counts": {
-        "artifacts": 0,
-        "mirrored": 0,
-        "blocked": 0,
-        "text_extracted": 0,
-        "analytics": 0,
-        "analysis": 0,
-        "structured": 0,
-        "versioned": 0
-      },
-      "artifact_ids": [],
-      "source_candidates": [],
-      "queue_rank": 28
-    },
-    {
-      "id": "source-start-disa-stigs",
-      "item_type": "source_start",
-      "label": "DISA STIG Library initial ingest",
-      "queue_priority": "P1",
-      "score": 90,
-      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
-      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
-      "source_id": "disa-stigs",
-      "source_name": "DISA STIG Library",
-      "source_owner": "Defense Information Systems Agency",
-      "source_priority": "critical",
-      "automation_status": "browser_shell_detected",
-      "coverage_status": "not_started",
-      "capture_strategies": [
-        "browser_fetch",
-        "manual_import",
-        "source_known_registration"
-      ],
-      "source_location_types": [
-        "disa_stig_html",
-        "disa_stig_zip",
-        "disa_srg_pdf"
-      ],
-      "source_url": "https://public.cyber.mil/stigs/",
-      "search_url": "https://public.cyber.mil/stigs/downloads/",
       "api_url": null,
       "governance_item_id": null,
       "governance_item_label": null,
@@ -3262,49 +3273,6 @@
       "queue_rank": 43
     },
     {
-      "id": "source-start-air-force-epubs",
-      "item_type": "source_start",
-      "label": "Air Force e-Publishing initial ingest",
-      "queue_priority": "P2",
-      "score": 82,
-      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
-      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
-      "source_id": "air-force-epubs",
-      "source_name": "Air Force e-Publishing",
-      "source_owner": "Department of the Air Force",
-      "source_priority": "medium",
-      "automation_status": "needs_probe",
-      "coverage_status": "not_started",
-      "capture_strategies": [
-        "direct_fetch",
-        "browser_fetch",
-        "manual_import"
-      ],
-      "source_location_types": [
-        "air_force_epubs_pdf",
-        "air_force_epubs_html"
-      ],
-      "source_url": "https://www.e-publishing.af.mil/",
-      "search_url": "https://www.e-publishing.af.mil/Product-Index/",
-      "api_url": null,
-      "governance_item_id": null,
-      "governance_item_label": null,
-      "hierarchy_rank": null,
-      "counts": {
-        "artifacts": 0,
-        "mirrored": 0,
-        "blocked": 0,
-        "text_extracted": 0,
-        "analytics": 0,
-        "analysis": 0,
-        "structured": 0,
-        "versioned": 0
-      },
-      "artifact_ids": [],
-      "source_candidates": [],
-      "queue_rank": 44
-    },
-    {
       "id": "source-start-army-doctrine",
       "item_type": "source_start",
       "label": "Army Doctrine Publications initial ingest",
@@ -3347,7 +3315,7 @@
       },
       "artifact_ids": [],
       "source_candidates": [],
-      "queue_rank": 45
+      "queue_rank": 44
     },
     {
       "id": "source-start-army-pubs",
@@ -3389,7 +3357,7 @@
       },
       "artifact_ids": [],
       "source_candidates": [],
-      "queue_rank": 46
+      "queue_rank": 45
     },
     {
       "id": "source-start-dau-acquipedia",
@@ -3431,7 +3399,7 @@
       },
       "artifact_ids": [],
       "source_candidates": [],
-      "queue_rank": 47
+      "queue_rank": 46
     },
     {
       "id": "source-start-disa",
@@ -3474,7 +3442,7 @@
       },
       "artifact_ids": [],
       "source_candidates": [],
-      "queue_rank": 48
+      "queue_rank": 47
     },
     {
       "id": "source-start-joint-staff",
@@ -3516,7 +3484,7 @@
       },
       "artifact_ids": [],
       "source_candidates": [],
-      "queue_rank": 49
+      "queue_rank": 48
     },
     {
       "id": "source-start-maradmin",
@@ -3543,6 +3511,49 @@
       ],
       "source_url": "https://www.marines.mil/News/Messages/",
       "search_url": "https://www.marines.mil/News/Messages/",
+      "api_url": null,
+      "governance_item_id": null,
+      "governance_item_label": null,
+      "hierarchy_rank": null,
+      "counts": {
+        "artifacts": 0,
+        "mirrored": 0,
+        "blocked": 0,
+        "text_extracted": 0,
+        "analytics": 0,
+        "analysis": 0,
+        "structured": 0,
+        "versioned": 0
+      },
+      "artifact_ids": [],
+      "source_candidates": [],
+      "queue_rank": 49
+    },
+    {
+      "id": "source-start-marine-corps-pubs",
+      "item_type": "source_start",
+      "label": "Marine Corps Publications Electronic Library initial ingest",
+      "queue_priority": "P2",
+      "score": 82,
+      "reason": "Official source is tracked but has no catalogued artifacts in the repo.",
+      "recommended_action": "Probe source discovery surface and seed the first official artifacts.",
+      "source_id": "marine-corps-pubs",
+      "source_name": "Marine Corps Publications Electronic Library",
+      "source_owner": "United States Marine Corps",
+      "source_priority": "medium",
+      "automation_status": "needs_probe",
+      "coverage_status": "not_started",
+      "capture_strategies": [
+        "direct_fetch",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "source_location_types": [
+        "marine_corps_pubs_pdf",
+        "marine_corps_pubs_html"
+      ],
+      "source_url": "https://www.marines.mil/News/Publications/",
+      "search_url": "https://www.marines.mil/Search/",
       "api_url": null,
       "governance_item_id": null,
       "governance_item_label": null,

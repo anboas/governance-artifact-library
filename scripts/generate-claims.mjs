@@ -290,6 +290,9 @@ function hasMeaningfulSourceText(text) {
   if (/Request Access Due to aggressive automated scraping/i.test(normalized)) return false;
   if (/Your request has been flagged as potentially automated/i.test(normalized)) return false;
   if (/complete the CAPTCHA/i.test(normalized)) return false;
+  if (/^Document not Found\b/i.test(normalized)) return false;
+  if (/\bDocument not found\b/i.test(normalized)) return false;
+  if (/LWR\.define|salesforce-lightning-design-system|webruntime|Your browser isn't supported/i.test(normalized)) return false;
   if (normalized.length < 5000 && /Access Denied|Cloudflare Ray ID|temporarily blocked/i.test(normalized)) return false;
   return true;
 }

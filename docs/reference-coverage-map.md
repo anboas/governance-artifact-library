@@ -2,10 +2,10 @@
 
 Generated: 2026-06-12T23:25:00.000Z
 
-- Artifacts: 1254
-- Resolved reference edges: 6818
-- Uncatalogued references: 6802
-- Artifacts with uncatalogued references: 677
+- Artifacts: 1267
+- Resolved reference edges: 6820
+- Uncatalogued references: 6805
+- Artifacts with uncatalogued references: 680
 
 ## Artifact Summary
 
@@ -120,6 +120,10 @@ Generated: 2026-06-12T23:25:00.000Z
 | omb-m-21-31-cyber-logging | 2 | 2 | 2 |
 | omb-m-24-10-ai-governance | 3 | 7 | 3 |
 | far-part-39-acquisition-of-it | 0 | 6 | 0 |
+| cisa-bod-26-02-end-of-support-edge-devices | 2 | 6 | 2 |
+| cisa-bod-26-04-prioritizing-security-updates | 0 | 4 | 0 |
+| cisa-bod-26-04-implementation-guidance | 0 | 0 | 0 |
+| cisa-zero-trust-maturity-model | 0 | 1 | 0 |
 | nist-sp-800-207-zero-trust-architecture | 1 | 2 | 1 |
 | nist-sp-800-53-r5-security-privacy-controls | 1 | 0 | 1 |
 | dodd-1000-20 | 1 | 3 | 1 |
@@ -1260,11 +1264,20 @@ Generated: 2026-06-12T23:25:00.000Z
 | dowi-6130-03-medical-standards-for-military-service-retention | 6 | 3 | 6 |
 | dowi-6440-03 | 3 | 0 | 3 |
 | dod-zero-trust-strategy | 0 | 0 | 0 |
+| afman-17-1301-computer-security | 0 | 0 | 0 |
+| dafman-17-1203-it-asset-management | 0 | 0 | 0 |
+| dafman-17-1304-identity-credential-access-management | 0 | 0 | 0 |
 | secnav-m-5210-1-records-management | 0 | 0 | 0 |
 | secnav-m-5239-3-don-cybersecurity | 0 | 0 | 0 |
+| afi-17-101-risk-management-framework | 0 | 0 | 0 |
+| afi-17-130-cybersecurity-program-management | 0 | 0 | 0 |
 | opnavinst-5239-1e-navy-cybersecurity | 0 | 0 | 0 |
 | cyber-mil-cyber-awareness-challenge | 0 | 0 | 0 |
+| dod-cyber-exchange-cloud-computing-srg | 0 | 0 | 0 |
+| dod-cyber-exchange-stig-library | 0 | 0 | 0 |
 | navadmin-214-24-fy2025-cybersecurity-awareness | 0 | 0 | 0 |
+| uscybercom-2018-command-vision | 0 | 0 | 0 |
+| uscybercom-mission-and-vision | 0 | 0 | 0 |
 
 ## Top Uncatalogued References
 

@@ -2,11 +2,11 @@
 
 Generated: 2026-06-13T13:55:00.000Z
 
-- Artifacts: 1254
-- Nodes: 1254
-- Edges: 7069
-- Evidence-backed reference edges: 5735
-- Inferred flowdown edges: 1334
+- Artifacts: 1267
+- Nodes: 1267
+- Edges: 7098
+- Evidence-backed reference edges: 5737
+- Inferred flowdown edges: 1361
 
 ## Lanes
 
@@ -111,7 +111,7 @@ Generated: 2026-06-13T13:55:00.000Z
 | usc-title-42-section-4321 | 1 | 24 | 18 | root_authority |
 | usc-title-42-section-9601 | 0 | 23 | 18 | root_authority |
 | usc-title-42-section-9620 | 1 | 15 | 5 | root_authority |
-| usc-title-44-section-3502 | 0 | 6 | 3 | root_authority |
+| usc-title-44-section-3502 | 0 | 7 | 3 | root_authority |
 | usc-title-49-section-40101 | 3 | 11 | 18 | root_authority |
 | usc-title-5-section-3104 | 0 | 16 | 7 | root_authority |
 | usc-title-50-section-1521 | 0 | 28 | 2 | root_authority |
@@ -129,13 +129,17 @@ Generated: 2026-06-13T13:55:00.000Z
 | usc-title-8-section-1101 | 1 | 27 | 18 | root_authority |
 | usc-title-8-section-1182 | 2 | 13 | 18 | root_authority |
 | usc-title-8-section-1189 | 0 | 13 | 0 | root_authority |
-| eo-14028-cybersecurity | 3 | 9 | 2 | evidence_backed |
+| eo-14028-cybersecurity | 3 | 10 | 2 | evidence_backed |
 | eo-14110-ai | 4 | 3 | 18 | evidence_backed |
-| omb-m-21-31-cyber-logging | 3 | 3 | 1 | evidence_backed |
+| omb-m-21-31-cyber-logging | 3 | 4 | 1 | evidence_backed |
 | omb-m-24-10-ai-governance | 4 | 0 | 7 | evidence_backed |
 | far-part-39-acquisition-of-it | 0 | 1 | 6 | authority_gap |
-| nist-sp-800-207-zero-trust-architecture | 1 | 4 | 1 | inferred_review_needed |
-| nist-sp-800-53-r5-security-privacy-controls | 0 | 4 | 0 | authority_gap |
+| cisa-bod-26-02-end-of-support-edge-devices | 2 | 2 | 5 | evidence_backed |
+| cisa-bod-26-04-prioritizing-security-updates | 0 | 4 | 3 | authority_gap |
+| cisa-bod-26-04-implementation-guidance | 2 | 1 | 0 | inferred_review_needed |
+| cisa-zero-trust-maturity-model | 3 | 4 | 1 | inferred_review_needed |
+| nist-sp-800-207-zero-trust-architecture | 1 | 5 | 1 | inferred_review_needed |
+| nist-sp-800-53-r5-security-privacy-controls | 0 | 5 | 0 | authority_gap |
 | dodd-1000-20 | 0 | 6 | 3 | authority_gap |
 | dodd-1000-21e | 1 | 4 | 0 | evidence_backed |
 | dodd-1000-26e | 0 | 4 | 0 | authority_gap |
@@ -1183,7 +1187,7 @@ Generated: 2026-06-13T13:55:00.000Z
 | dodi-8440-01 | 2 | 1 | 1 | evidence_backed |
 | dodi-8440-02 | 0 | 1 | 0 | authority_gap |
 | dodi-8500-01 | 36 | 55 | 13 | evidence_backed |
-| dodi-8510-01-risk-management-framework | 12 | 39 | 5 | evidence_backed |
+| dodi-8510-01-risk-management-framework | 14 | 39 | 5 | evidence_backed |
 | dodi-8520-02 | 8 | 7 | 2 | evidence_backed |
 | dodi-8520-03 | 5 | 5 | 4 | evidence_backed |
 | dodi-8520-04 | 8 | 0 | 3 | evidence_backed |
@@ -1273,12 +1277,21 @@ Generated: 2026-06-13T13:55:00.000Z
 | dowi-6130-03-medical-standards-for-military-service-appointment-enlis | 0 | 0 | 2 | authority_gap |
 | dowi-6130-03-medical-standards-for-military-service-retention | 6 | 0 | 3 | evidence_backed |
 | dowi-6440-03 | 3 | 0 | 0 | evidence_backed |
-| dod-zero-trust-strategy | 3 | 4 | 0 | inferred_review_needed |
+| dod-zero-trust-strategy | 4 | 4 | 0 | inferred_review_needed |
+| afman-17-1301-computer-security | 6 | 4 | 0 | inferred_review_needed |
+| dafman-17-1203-it-asset-management | 0 | 2 | 0 | authority_gap |
+| dafman-17-1304-identity-credential-access-management | 0 | 2 | 0 | authority_gap |
 | secnav-m-5210-1-records-management | 0 | 2 | 0 | authority_gap |
-| secnav-m-5239-3-don-cybersecurity | 5 | 3 | 0 | inferred_review_needed |
-| opnavinst-5239-1e-navy-cybersecurity | 7 | 2 | 0 | inferred_review_needed |
-| cyber-mil-cyber-awareness-challenge | 5 | 1 | 0 | inferred_review_needed |
-| navadmin-214-24-fy2025-cybersecurity-awareness | 5 | 0 | 0 | inferred_review_needed |
+| secnav-m-5239-3-don-cybersecurity | 6 | 4 | 0 | inferred_review_needed |
+| afi-17-101-risk-management-framework | 4 | 2 | 0 | inferred_review_needed |
+| afi-17-130-cybersecurity-program-management | 7 | 2 | 0 | inferred_review_needed |
+| opnavinst-5239-1e-navy-cybersecurity | 4 | 2 | 0 | inferred_review_needed |
+| cyber-mil-cyber-awareness-challenge | 7 | 1 | 0 | inferred_review_needed |
+| dod-cyber-exchange-cloud-computing-srg | 0 | 0 | 0 | authority_gap |
+| dod-cyber-exchange-stig-library | 1 | 0 | 0 | inferred_review_needed |
+| navadmin-214-24-fy2025-cybersecurity-awareness | 6 | 0 | 0 | inferred_review_needed |
+| uscybercom-2018-command-vision | 0 | 0 | 0 | authority_gap |
+| uscybercom-mission-and-vision | 0 | 0 | 0 | authority_gap |
 
 ## Edge Sample
 

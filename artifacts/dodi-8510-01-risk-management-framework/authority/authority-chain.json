@@ -61,12 +61,12 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 12,
+    "upstream_edge_count": 14,
     "downstream_edge_count": 39,
-    "catalogued_node_count": 48,
+    "catalogued_node_count": 50,
     "uncatalogued_gap_count": 5,
     "evidence_backed_edge_count": 46,
-    "inferred_edge_count": 5,
+    "inferred_edge_count": 7,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
@@ -153,6 +153,36 @@
       ],
       "status": "uncatalogued",
       "priority": "low"
+    },
+    {
+      "id": "cisa-bod-26-04-prioritizing-security-updates",
+      "label": "BOD 26-04",
+      "title": "BOD 26-04: Prioritizing Security Updates Based on Risk",
+      "artifact_type": "Binding Operational Directive",
+      "lane": "govwide",
+      "lane_label": "Gov-wide",
+      "hierarchy_rank": 55,
+      "family": "vulnerability_management",
+      "issuing_authority": "CISA",
+      "source_system": "CISA Guidance Library",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "cisa-zero-trust-maturity-model",
+      "label": "CISA ZTMM",
+      "title": "CISA Zero Trust Maturity Model",
+      "artifact_type": "Maturity Model",
+      "lane": "govwide",
+      "lane_label": "Gov-wide",
+      "hierarchy_rank": 60,
+      "family": "zero_trust",
+      "issuing_authority": "CISA",
+      "source_system": "CISA Guidance Library",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     },
     {
       "id": "nist-sp-800-207-zero-trust-architecture",
@@ -847,6 +877,21 @@
       "status": "catalogued"
     },
     {
+      "id": "afman-17-1301-computer-security",
+      "label": "AFMAN 17-1301",
+      "title": "AFMAN 17-1301: Computer Security",
+      "artifact_type": "Air Force Manual",
+      "lane": "service",
+      "lane_label": "Service",
+      "hierarchy_rank": 80,
+      "family": "cybersecurity",
+      "issuing_authority": "Secretary of the Air Force",
+      "source_system": "Air Force e-Publishing",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
       "id": "secnav-m-5239-3-don-cybersecurity",
       "label": "SECNAV M-5239.3",
       "title": "SECNAV M-5239.3: Department of the Navy Cybersecurity Program",
@@ -856,21 +901,6 @@
       "hierarchy_rank": 80,
       "family": "cybersecurity",
       "issuing_authority": "SECNAV",
-      "source_system": "Department of the Navy Issuances",
-      "mirror_status": "blocked",
-      "parser_status": "blocked",
-      "status": "catalogued"
-    },
-    {
-      "id": "opnavinst-5239-1e-navy-cybersecurity",
-      "label": "OPNAVINST 5239.1E",
-      "title": "OPNAVINST 5239.1E: U.S. Navy Cybersecurity Program",
-      "artifact_type": "OPNAV Instruction",
-      "lane": "service",
-      "lane_label": "Service",
-      "hierarchy_rank": 82,
-      "family": "cybersecurity",
-      "issuing_authority": "OPNAV",
       "source_system": "Department of the Navy Issuances",
       "mirror_status": "blocked",
       "parser_status": "blocked",
@@ -1122,6 +1152,46 @@
           1449
         ],
         "count": 7
+      }
+    },
+    {
+      "id": "cisa-bod-26-04-prioritizing-security-updates->dodi-8510-01-risk-management-framework:implements:inferred_flowdown",
+      "source_artifact_id": "cisa-bod-26-04-prioritizing-security-updates",
+      "source_label": "BOD 26-04",
+      "source_lane": "govwide",
+      "target_artifact_id": "dodi-8510-01-risk-management-framework",
+      "target_label": "DoDI 8510.01",
+      "target_lane": "dod",
+      "relationship": "implements",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.59,
+      "direction": "upstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "cybersecurity"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "cisa-zero-trust-maturity-model->dodi-8510-01-risk-management-framework:implements:inferred_flowdown",
+      "source_artifact_id": "cisa-zero-trust-maturity-model",
+      "source_label": "CISA ZTMM",
+      "source_lane": "govwide",
+      "target_artifact_id": "dodi-8510-01-risk-management-framework",
+      "target_label": "DoDI 8510.01",
+      "target_lane": "dod",
+      "relationship": "implements",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.59,
+      "direction": "upstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "cybersecurity"
+        ],
+        "shared_family": ""
       }
     },
     {
@@ -2026,12 +2096,12 @@
       }
     },
     {
-      "id": "dodi-8510-01-risk-management-framework->opnavinst-5239-1e-navy-cybersecurity:service_adopts:inferred_flowdown",
+      "id": "dodi-8510-01-risk-management-framework->afman-17-1301-computer-security:service_adopts:inferred_flowdown",
       "source_artifact_id": "dodi-8510-01-risk-management-framework",
       "source_label": "DoDI 8510.01",
       "source_lane": "dod",
-      "target_artifact_id": "opnavinst-5239-1e-navy-cybersecurity",
-      "target_label": "OPNAVINST 5239.1E",
+      "target_artifact_id": "afman-17-1301-computer-security",
+      "target_label": "AFMAN 17-1301",
       "target_lane": "service",
       "relationship": "service_adopts",
       "evidence_type": "inferred_flowdown",
@@ -2176,7 +2246,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "dodi-8510-01-risk-management-framework",
       "direction": "upstream",
-      "edge_count": 12
+      "edge_count": 14
     },
     {
       "id": "trace-downstream",

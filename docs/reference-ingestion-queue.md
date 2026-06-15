@@ -2,29 +2,29 @@
 
 Generated: 2026-06-12T23:25:00.000Z
 
-- Queue items: 6802
+- Queue items: 6805
 - P0: 799
-- P1: 1348
-- P2: 4544
+- P1: 1350
+- P2: 4545
 - P3: 111
-- Source artifacts with gaps: 677
+- Source artifacts with gaps: 680
 
 ## Family Summary
 
 | Family | Items | Occurrences | P0 | P1 | P2 | P3 |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| usc | 6111 | 16268 | 722 | 1265 | 4124 | 0 |
+| usc | 6112 | 16274 | 722 | 1267 | 4123 | 0 |
 | executive-order | 250 | 1063 | 34 | 43 | 173 | 0 |
 | dodi | 76 | 417 | 10 | 6 | 60 | 0 |
 | public-law | 170 | 389 | 21 | 25 | 124 | 0 |
 | dodd | 76 | 356 | 12 | 7 | 57 | 0 |
 | cfr | 63 | 93 | 0 | 1 | 1 | 61 |
-| nist-sp | 26 | 78 | 0 | 1 | 1 | 24 |
+| nist-sp | 26 | 80 | 0 | 1 | 1 | 24 |
 | dfars | 8 | 15 | 0 | 0 | 0 | 8 |
 | far | 8 | 12 | 0 | 0 | 0 | 8 |
 | opnavinst | 6 | 11 | 0 | 0 | 0 | 6 |
+| omb-memo | 6 | 8 | 0 | 0 | 6 | 0 |
 | secnav | 4 | 7 | 0 | 0 | 0 | 4 |
-| omb-memo | 4 | 5 | 0 | 0 | 4 | 0 |
 
 ## Top Queue Items
 

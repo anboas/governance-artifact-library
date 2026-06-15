@@ -61,12 +61,12 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 5,
+    "upstream_edge_count": 7,
     "downstream_edge_count": 1,
-    "catalogued_node_count": 7,
+    "catalogued_node_count": 9,
     "uncatalogued_gap_count": 0,
     "evidence_backed_edge_count": 0,
-    "inferred_edge_count": 6,
+    "inferred_edge_count": 8,
     "authority_path_status": "inferred_review_needed",
     "implementation_path_status": "has_downstream_trace"
   },
@@ -117,16 +117,46 @@
       "status": "catalogued"
     },
     {
-      "id": "secnav-m-5239-3-don-cybersecurity",
-      "label": "SECNAV M-5239.3",
-      "title": "SECNAV M-5239.3: Department of the Navy Cybersecurity Program",
-      "artifact_type": "SECNAV Manual",
+      "id": "afman-17-1301-computer-security",
+      "label": "AFMAN 17-1301",
+      "title": "AFMAN 17-1301: Computer Security",
+      "artifact_type": "Air Force Manual",
       "lane": "service",
       "lane_label": "Service",
       "hierarchy_rank": 80,
       "family": "cybersecurity",
-      "issuing_authority": "SECNAV",
-      "source_system": "Department of the Navy Issuances",
+      "issuing_authority": "Secretary of the Air Force",
+      "source_system": "Air Force e-Publishing",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
+      "id": "afi-17-101-risk-management-framework",
+      "label": "AFI 17-101",
+      "title": "AFI 17-101: Risk Management Framework for Air Force Information Technology",
+      "artifact_type": "Air Force Instruction",
+      "lane": "service",
+      "lane_label": "Service",
+      "hierarchy_rank": 82,
+      "family": "risk_management",
+      "issuing_authority": "Secretary of the Air Force",
+      "source_system": "Air Force e-Publishing",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
+      "id": "afi-17-130-cybersecurity-program-management",
+      "label": "AFI 17-130",
+      "title": "AFI 17-130: Cybersecurity Program Management",
+      "artifact_type": "Air Force Instruction",
+      "lane": "service",
+      "lane_label": "Service",
+      "hierarchy_rank": 82,
+      "family": "cybersecurity",
+      "issuing_authority": "Secretary of the Air Force",
+      "source_system": "Air Force e-Publishing",
       "mirror_status": "blocked",
       "parser_status": "blocked",
       "status": "catalogued"
@@ -244,9 +274,9 @@
       }
     },
     {
-      "id": "opnavinst-5239-1e-navy-cybersecurity->cyber-mil-cyber-awareness-challenge:component_executes:inferred_flowdown",
-      "source_artifact_id": "opnavinst-5239-1e-navy-cybersecurity",
-      "source_label": "OPNAVINST 5239.1E",
+      "id": "afi-17-101-risk-management-framework->cyber-mil-cyber-awareness-challenge:component_executes:inferred_flowdown",
+      "source_artifact_id": "afi-17-101-risk-management-framework",
+      "source_label": "AFI 17-101",
       "source_lane": "service",
       "target_artifact_id": "cyber-mil-cyber-awareness-challenge",
       "target_label": "Cyber Awareness Challenge",
@@ -264,9 +294,49 @@
       }
     },
     {
-      "id": "secnav-m-5239-3-don-cybersecurity->cyber-mil-cyber-awareness-challenge:component_executes:inferred_flowdown",
-      "source_artifact_id": "secnav-m-5239-3-don-cybersecurity",
-      "source_label": "SECNAV M-5239.3",
+      "id": "afi-17-130-cybersecurity-program-management->cyber-mil-cyber-awareness-challenge:component_executes:inferred_flowdown",
+      "source_artifact_id": "afi-17-130-cybersecurity-program-management",
+      "source_label": "AFI 17-130",
+      "source_lane": "service",
+      "target_artifact_id": "cyber-mil-cyber-awareness-challenge",
+      "target_label": "Cyber Awareness Challenge",
+      "target_lane": "echelon2",
+      "relationship": "component_executes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.59,
+      "direction": "upstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "cybersecurity"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "afman-17-1301-computer-security->cyber-mil-cyber-awareness-challenge:component_executes:inferred_flowdown",
+      "source_artifact_id": "afman-17-1301-computer-security",
+      "source_label": "AFMAN 17-1301",
+      "source_lane": "service",
+      "target_artifact_id": "cyber-mil-cyber-awareness-challenge",
+      "target_label": "Cyber Awareness Challenge",
+      "target_lane": "echelon2",
+      "relationship": "component_executes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.59,
+      "direction": "upstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "cybersecurity"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "opnavinst-5239-1e-navy-cybersecurity->cyber-mil-cyber-awareness-challenge:component_executes:inferred_flowdown",
+      "source_artifact_id": "opnavinst-5239-1e-navy-cybersecurity",
+      "source_label": "OPNAVINST 5239.1E",
       "source_lane": "service",
       "target_artifact_id": "cyber-mil-cyber-awareness-challenge",
       "target_label": "Cyber Awareness Challenge",
@@ -315,7 +385,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "cyber-mil-cyber-awareness-challenge",
       "direction": "upstream",
-      "edge_count": 5
+      "edge_count": 7
     },
     {
       "id": "trace-downstream",
