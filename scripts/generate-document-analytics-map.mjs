@@ -7,6 +7,7 @@ const ROOT = new URL("..", import.meta.url).pathname;
 const CHECK_ONLY = process.argv.includes("--check");
 const READING_WPM = 225;
 const REFERENCE_COVERAGE_PATH = "data/reference-coverage-map.json";
+const DOD_ISSUANCES_CATALOG_PATH = "data/dod-issuances-catalog.json";
 const GENERATED_DATE = new Date(generatedDateString());
 const AUTHORITY_RANKS = {
   law: 10,
@@ -33,9 +34,15 @@ const generatedAt = manifest.generated_at;
 const referenceCoverage = existsSync(join(ROOT, REFERENCE_COVERAGE_PATH))
   ? readJson(REFERENCE_COVERAGE_PATH)
   : { cataloged_reference_edges: [] };
+const dodIssuancesCatalog = existsSync(join(ROOT, DOD_ISSUANCES_CATALOG_PATH))
+  ? readJson(DOD_ISSUANCES_CATALOG_PATH)
+  : { rows: [] };
+const dodIssuanceRowsByArtifactId = new Map((dodIssuancesCatalog.rows || []).map((row) => [row.artifact_id, row]));
 
 const rows = manifest.artifacts.map((entry) => {
   const artifact = readJson(entry.path);
+  const responsibleEntities = responsibleEntitiesFor(artifact, dodIssuanceRowsByArtifactId.get(artifact.id));
+  const primaryResponsibleEntity = responsibleEntities[0] || null;
   const metrics = artifact.analytics_path && existsSync(join(ROOT, artifact.analytics_path))
     ? readJson(artifact.analytics_path)
     : {};
@@ -78,6 +85,10 @@ const rows = manifest.artifacts.map((entry) => {
     authority_level: artifact.authority_level,
     issuing_authority: artifact.issuing_authority,
     issuing_organization: artifact.issuing_organization,
+    responsible_organization: primaryResponsibleEntity?.name || artifact.issuing_organization,
+    responsible_organization_code: primaryResponsibleEntity?.code || null,
+    responsible_organization_source: primaryResponsibleEntity?.source || "artifact",
+    responsible_organizations: responsibleEntities,
     source_system: artifact.source_system || artifact.issuing_organization || "Unknown",
     source_date: artifact.source_date || "",
     publication_date: artifact.publication_date || "",
@@ -133,6 +144,7 @@ const model = {
     implementation_signal_count: sum(rows, "implementation_signal_count"),
   },
   by_source_system: groupRows(rows, "source_system"),
+  by_responsible_organization: groupRows(rows, "responsible_organization"),
   by_artifact_type: groupRows(rows, "artifact_type"),
   by_authority_level: groupRows(rows, "authority_level"),
   by_family: groupRows(rows, "family"),
@@ -225,6 +237,10 @@ function compactRow(row) {
     source_system: row.source_system,
     issuing_authority: row.issuing_authority,
     issuing_organization: row.issuing_organization,
+    responsible_organization: row.responsible_organization,
+    responsible_organization_code: row.responsible_organization_code,
+    responsible_organization_source: row.responsible_organization_source,
+    responsible_organizations: row.responsible_organizations,
     source_date: row.source_date,
     publication_date: row.publication_date,
     effective_date: row.effective_date,
@@ -250,6 +266,66 @@ function compactRow(row) {
     incoming_occurrence_count: row.incoming_occurrence_count || 0,
     lower_level_source_count: row.lower_level_source_count || 0,
   };
+}
+
+function responsibleEntitiesFor(artifact, dodCatalogRow) {
+  if (dodCatalogRow?.opr) {
+    return normalizeDodOpr(dodCatalogRow.opr);
+  }
+  const fallback = artifact.issuing_organization || artifact.issuing_authority || "Unknown organization";
+  return [{
+    id: slugFor(fallback),
+    code: null,
+    name: fallback,
+    source: "artifact",
+    raw_value: fallback,
+  }];
+}
+
+function normalizeDodOpr(opr) {
+  const raw = String(opr || "").trim();
+  const normalized = raw.toUpperCase().replace(/\s+/g, " ");
+  const entities = [];
+  const add = (id, code, name) => {
+    if (entities.some((entity) => entity.id === id)) return;
+    entities.push({ id, code, name, source: "dod_issuance_opr", raw_value: raw });
+  };
+
+  if (/USW\(P&R\)/.test(normalized)) add("under-secretary-war-personnel-readiness", "USW(P&R)", "Under Secretary of War for Personnel and Readiness");
+  if (/USW\(A&S\s*\)/.test(normalized) || /USW\(A&S\)/.test(normalized)) add("under-secretary-war-acquisition-sustainment", "USW(A&S)", "Under Secretary of War for Acquisition and Sustainment");
+  if (/USW\(I&S\)/.test(normalized)) add("under-secretary-war-intelligence-security", "USW(I&S)", "Under Secretary of War for Intelligence and Security");
+  if (/USW\(R&E\)/.test(normalized)) add("under-secretary-war-research-engineering", "USW(R&E)", "Under Secretary of War for Research and Engineering");
+  if (/USW\(P\)(?!&)/.test(normalized)) add("under-secretary-war-policy", "USW(P)", "Under Secretary of War for Policy");
+  if (/USW\(C\)/.test(normalized)) add("under-secretary-war-comptroller-cfo", "USW(C)/CFO", "Under Secretary of War Comptroller / Chief Financial Officer");
+  if (/DOW?\s*CIO|DO W CIO/.test(normalized)) add("department-war-chief-information-officer", "DoW CIO", "Department of War Chief Information Officer");
+  if (/\bGC\b/.test(normalized)) add("general-counsel-department-war", "GC DoW", "General Counsel of the Department of War");
+  if (/\bIG\b/.test(normalized)) add("inspector-general-department-war", "IG DoW", "Inspector General of the Department of War");
+  if (/DA&M/.test(normalized)) add("director-administration-management", "DA&M", "Director of Administration and Management");
+  if (/ATSW\(PA\)/.test(normalized)) add("assistant-secretary-war-public-affairs", "ATSW(PA)", "Assistant to the Secretary of War for Public Affairs");
+  if (/ASW\(SO\/LIC\)|ASW\(SOLIC\)/.test(normalized)) add("assistant-secretary-war-special-operations-low-intensity-conflict", "ASW(SO/LIC)", "Assistant Secretary of War for Special Operations and Low-Intensity Conflict");
+  if (/ASW\(LA\)/.test(normalized)) add("assistant-secretary-war-legislative-affairs", "ASW(LA)", "Assistant Secretary of War for Legislative Affairs");
+  if (/DOT&E/.test(normalized)) add("director-operational-test-evaluation", "DOT&E", "Director, Operational Test and Evaluation");
+  if (/DCAPE/.test(normalized)) add("director-cost-assessment-program-evaluation", "DCAPE", "Director, Cost Assessment and Program Evaluation");
+  if (/ES,\s*OSD/.test(normalized)) add("executive-secretary-office-secretary-war", "ES OSD", "Executive Secretary of the Office of the Secretary of War");
+  if (/\bWHS\b/.test(normalized)) add("washington-headquarters-services", "WHS", "Washington Headquarters Services");
+
+  if (entities.length) return entities;
+  return [{
+    id: slugFor(raw || "unknown-opr"),
+    code: raw || null,
+    name: raw || "Unknown OPR",
+    source: "dod_issuance_opr_unmapped",
+    raw_value: raw,
+  }];
+}
+
+function slugFor(value) {
+  return String(value || "unknown")
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 96) || "unknown";
 }
 
 function groupRows(sourceRows, field) {
