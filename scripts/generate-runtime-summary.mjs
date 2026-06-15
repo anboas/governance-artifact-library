@@ -16,6 +16,7 @@ const authorityChain = readOptionalJson("data/authority-chain-map.json");
 const documentAnalytics = readOptionalJson("data/document-analytics-map.json");
 const artifactSourceDiscovery = readOptionalJson("data/governance-artifact-source-discovery-summary.json");
 const organizationExploration = readOptionalJson("data/organization-entity-source-exploration.json");
+const organizationHierarchy = readOptionalJson("data/policy-organization-hierarchy-summary.json");
 
 const model = {
   generated_at: manifest.generated_at,
@@ -31,6 +32,7 @@ const model = {
     document_analytics: "data/document-analytics-map.json",
     artifact_source_discovery: "data/governance-artifact-source-discovery-summary.json",
     organization_exploration: "data/organization-entity-source-exploration.json",
+    organization_hierarchy: "data/policy-organization-hierarchy-summary.json",
   },
   manifest: {
     artifact_count: manifest.artifact_count || manifest.artifacts?.length || 0,
@@ -50,6 +52,7 @@ const model = {
   document_analytics: documentAnalytics?.summary || {},
   artifact_source_discovery: artifactSourceDiscovery?.summary || {},
   organization_exploration: organizationExploration?.summary || {},
+  organization_hierarchy: organizationHierarchy?.summary || {},
 };
 
 await writeOrCheck("data/policy-corpus-runtime-summary.json", `${JSON.stringify(model, null, 2)}\n`);

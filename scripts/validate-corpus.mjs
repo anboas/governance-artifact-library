@@ -138,6 +138,7 @@ assert.equal(existsSync(join(ROOT, "docs", "source-acquisition-queue.md")), true
 assert.equal(existsSync(join(ROOT, "data", "governance-artifact-source-discovery-summary.json")), true, "governance artifact source discovery summary missing");
 assert.equal(existsSync(join(ROOT, "data", "governance-artifact-source-discovery-index.json")), true, "governance artifact source discovery compact index missing");
 assert.equal(existsSync(join(ROOT, "data", "policy-corpus-runtime-summary.json")), true, "policy corpus runtime summary missing");
+assert.equal(existsSync(join(ROOT, "data", "policy-organization-hierarchy-summary.json")), true, "policy organization hierarchy summary missing");
 assert.equal(existsSync(join(ROOT, "data", "dod-issuances-catalog.json")), true, "DoD issuances catalog missing");
 assert.equal(existsSync(join(ROOT, "docs", "dod-issuances-catalog.md")), true, "DoD issuances catalog docs missing");
 assert.equal(existsSync(join(ROOT, "schemas", "source-acquisition-packet.schema.json")), true, "source acquisition packet schema missing");
@@ -156,6 +157,7 @@ const sourceAcquisitionQueueSummary = readJson("data/source-acquisition-queue-su
 const sourceDiscoverySummary = readJson("data/governance-artifact-source-discovery-summary.json");
 const sourceDiscoveryIndex = readJson("data/governance-artifact-source-discovery-index.json");
 const runtimeSummary = readJson("data/policy-corpus-runtime-summary.json");
+const organizationHierarchySummary = readJson("data/policy-organization-hierarchy-summary.json");
 const dodIssuancesCatalog = readJson("data/dod-issuances-catalog.json");
 const sourceAcquisitionPacketExample = readJson("data/source-acquisition-packet-example.json");
 const sourceAcquisitionCapturePlanExample = readJson("data/source-acquisition-capture-plan.example.json");
@@ -188,6 +190,13 @@ assert.ok(sourceAcquisitionQueue.queue_items.some(item => item.item_type === "so
 assert.ok(sourceAcquisitionQueue.queue_items.some(item => item.item_type === "governance_gap"), "source acquisition queue should include governance gap work");
 assert.deepEqual(sourceDiscoverySummary.summary, sourceDiscoveryIndex.summary, "source discovery summary and index should mirror counts");
 assert.equal(sourceDiscoveryIndex.candidates?.length, sourceDiscoverySummary.summary?.candidate_count, "source discovery compact index should cover every candidate");
+assert.equal(Array.isArray(organizationHierarchySummary.rows), true, "policy organization hierarchy summary rows must be an array");
+assert.equal(organizationHierarchySummary.rows[0]?.title, "Department of War", "policy organization hierarchy should start at Department of War");
+assert.ok(organizationHierarchySummary.summary?.row_count >= organizationHierarchySummary.summary?.artifact_node_count, "policy organization hierarchy summary should count rows and artifact leaves");
+assert.ok(organizationHierarchySummary.rows.some(row => row.type === "policy-echelon1"), "policy organization hierarchy should include echelon 1 rows");
+assert.ok(organizationHierarchySummary.rows.some(row => row.type === "policy-echelon4"), "policy organization hierarchy should include echelon 4 rows");
+assert.ok(organizationHierarchySummary.rows.some(row => row.type === "policy-source-system"), "policy organization hierarchy should include source system rows");
+assert.ok(organizationHierarchySummary.rows.some(row => row.type === "policy-artifact"), "policy organization hierarchy should include artifact leaves");
 assert.ok(sourceDiscoverySummary.candidate_stats_by_source?.length >= 1, "source discovery summary should precompute per-source candidate stats");
 assert.equal(runtimeSummary.manifest?.artifact_count, manifest.artifact_count, "runtime summary artifact count should match manifest");
 assert.deepEqual(runtimeSummary.references, referenceCoverage.summary, "runtime summary should mirror reference totals");
