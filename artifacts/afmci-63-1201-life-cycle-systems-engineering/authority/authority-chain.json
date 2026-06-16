@@ -62,11 +62,11 @@
   ],
   "summary": {
     "upstream_edge_count": 1,
-    "downstream_edge_count": 1,
-    "catalogued_node_count": 3,
+    "downstream_edge_count": 3,
+    "catalogued_node_count": 5,
     "uncatalogued_gap_count": 0,
     "evidence_backed_edge_count": 0,
-    "inferred_edge_count": 2,
+    "inferred_edge_count": 4,
     "authority_path_status": "inferred_review_needed",
     "implementation_path_status": "has_downstream_trace"
   },
@@ -102,6 +102,21 @@
       "status": "current"
     },
     {
+      "id": "msc-specialtime-2026-cybersecurity-responsibilities",
+      "label": "MSC SPECIALTIME 2026",
+      "title": "MSC SPECIALTIME 2026: Privileged User Cybersecurity Responsibilities",
+      "artifact_type": "Command procurement terms",
+      "lane": "echelon4",
+      "lane_label": "Echelon 3-4",
+      "hierarchy_rank": 90,
+      "family": "acquisition",
+      "issuing_authority": "Military Sealift Command",
+      "source_system": "Military Sealift Command",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
       "id": "navair-nawcwd-cyber-risk-assessments-sow",
       "label": "NAVAIR Cyber Risk SOW",
       "title": "NAVAIR NAWCWD Cyber Risk Assessments Statement of Work",
@@ -112,6 +127,21 @@
       "family": "acquisition",
       "issuing_authority": "Naval Air Warfare Center Weapons Division",
       "source_system": "NAVAIR",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "onr-n0001424sc001-rapid-area-detection-cso",
+      "label": "ONR Rapid Area Detection CSO",
+      "title": "ONR Commercial Solutions Opening N0001424SC001: Automated Target Recognition for Rapid Area Detection",
+      "artifact_type": "Commercial Solutions Opening",
+      "lane": "echelon4",
+      "lane_label": "Echelon 3-4",
+      "hierarchy_rank": 90,
+      "family": "acquisition",
+      "issuing_authority": "Office of Naval Research",
+      "source_system": "Office of Naval Research",
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "catalogued"
@@ -142,12 +172,53 @@
   ],
   "downstream_edges": [
     {
+      "id": "afmci-63-1201-life-cycle-systems-engineering->msc-specialtime-2026-cybersecurity-responsibilities:localizes:inferred_flowdown",
+      "source_artifact_id": "afmci-63-1201-life-cycle-systems-engineering",
+      "source_label": "AFMCI 63-1201",
+      "source_lane": "echelon2",
+      "target_artifact_id": "msc-specialtime-2026-cybersecurity-responsibilities",
+      "target_label": "MSC SPECIALTIME 2026",
+      "target_lane": "echelon4",
+      "relationship": "localizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.78,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "acquisition"
+        ],
+        "shared_family": "acquisition"
+      }
+    },
+    {
       "id": "afmci-63-1201-life-cycle-systems-engineering->navair-nawcwd-cyber-risk-assessments-sow:localizes:inferred_flowdown",
       "source_artifact_id": "afmci-63-1201-life-cycle-systems-engineering",
       "source_label": "AFMCI 63-1201",
       "source_lane": "echelon2",
       "target_artifact_id": "navair-nawcwd-cyber-risk-assessments-sow",
       "target_label": "NAVAIR Cyber Risk SOW",
+      "target_lane": "echelon4",
+      "relationship": "localizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.78,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "acquisition",
+          "acquisition"
+        ],
+        "shared_family": "acquisition"
+      }
+    },
+    {
+      "id": "afmci-63-1201-life-cycle-systems-engineering->onr-n0001424sc001-rapid-area-detection-cso:localizes:inferred_flowdown",
+      "source_artifact_id": "afmci-63-1201-life-cycle-systems-engineering",
+      "source_label": "AFMCI 63-1201",
+      "source_lane": "echelon2",
+      "target_artifact_id": "onr-n0001424sc001-rapid-area-detection-cso",
+      "target_label": "ONR Rapid Area Detection CSO",
       "target_lane": "echelon4",
       "relationship": "localizes",
       "evidence_type": "inferred_flowdown",
@@ -177,7 +248,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "afmci-63-1201-life-cycle-systems-engineering",
       "direction": "downstream",
-      "edge_count": 1
+      "edge_count": 3
     }
   ]
 }

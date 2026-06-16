@@ -132,21 +132,6 @@
       "status": "current"
     },
     {
-      "id": "cyber-mil-cyber-awareness-challenge",
-      "label": "Cyber Awareness Challenge",
-      "title": "DoD Cyber Awareness Challenge",
-      "artifact_type": "Implementation Guidance",
-      "lane": "echelon2",
-      "lane_label": "Echelon 2",
-      "hierarchy_rank": 85,
-      "family": "cyber_training",
-      "issuing_authority": "DoW/DoD",
-      "source_system": "DoD Cyber Exchange",
-      "mirror_status": "blocked",
-      "parser_status": "blocked",
-      "status": "catalogued"
-    },
-    {
       "id": "uscg-cybersecurity-and-cyberspace-operations-strategy",
       "label": "USCG Cyber Strategy",
       "title": "U.S. Coast Guard Cybersecurity and Cyberspace Operations",
@@ -172,6 +157,21 @@
       "family": "cyber_training",
       "issuing_authority": "CNO",
       "source_system": "MyNavyHR",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
+      "id": "comnavcyberforinst-5239-2d-commanders-cybersecurity-manual",
+      "label": "NAVCYBERFOR 5239.2D",
+      "title": "COMNAVCYBERFORINST 5239.2D: Commander's Cybersecurity Manual",
+      "artifact_type": "Command instruction",
+      "lane": "echelon4",
+      "lane_label": "Echelon 3-4",
+      "hierarchy_rank": 90,
+      "family": "cybersecurity",
+      "issuing_authority": "Commander, Navy Cyber Forces",
+      "source_system": "Navy Cyber Forces",
       "mirror_status": "blocked",
       "parser_status": "blocked",
       "status": "catalogued"
@@ -259,26 +259,6 @@
   ],
   "downstream_edges": [
     {
-      "id": "opnavinst-5239-1e-navy-cybersecurity->cyber-mil-cyber-awareness-challenge:component_executes:inferred_flowdown",
-      "source_artifact_id": "opnavinst-5239-1e-navy-cybersecurity",
-      "source_label": "OPNAVINST 5239.1E",
-      "source_lane": "service",
-      "target_artifact_id": "cyber-mil-cyber-awareness-challenge",
-      "target_label": "Cyber Awareness Challenge",
-      "target_lane": "echelon2",
-      "relationship": "component_executes",
-      "evidence_type": "inferred_flowdown",
-      "confidence": 0.59,
-      "direction": "downstream",
-      "evidence": {
-        "basis": "shared_family_tags_and_authority_rank",
-        "shared_tags": [
-          "cybersecurity"
-        ],
-        "shared_family": ""
-      }
-    },
-    {
       "id": "opnavinst-5239-1e-navy-cybersecurity->uscg-cybersecurity-and-cyberspace-operations-strategy:component_executes:inferred_flowdown",
       "source_artifact_id": "opnavinst-5239-1e-navy-cybersecurity",
       "source_label": "OPNAVINST 5239.1E",
@@ -318,6 +298,27 @@
           "cybersecurity"
         ],
         "shared_family": ""
+      }
+    },
+    {
+      "id": "opnavinst-5239-1e-navy-cybersecurity->comnavcyberforinst-5239-2d-commanders-cybersecurity-manual:verifies_or_localizes:inferred_flowdown",
+      "source_artifact_id": "opnavinst-5239-1e-navy-cybersecurity",
+      "source_label": "OPNAVINST 5239.1E",
+      "source_lane": "service",
+      "target_artifact_id": "comnavcyberforinst-5239-2d-commanders-cybersecurity-manual",
+      "target_label": "NAVCYBERFOR 5239.2D",
+      "target_lane": "echelon4",
+      "relationship": "verifies_or_localizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.78,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "cybersecurity",
+          "cybersecurity"
+        ],
+        "shared_family": "cybersecurity"
       }
     },
     {

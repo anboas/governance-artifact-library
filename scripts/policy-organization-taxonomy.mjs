@@ -70,6 +70,41 @@ export const POLICY_ORGANIZATION_TAXONOMY = [
     aliases: ["NAVAL FACILITIES ENGINEERING SYSTEMS COMMAND", "NAVFAC"],
   },
   {
+    id: "naval-supply-systems-command",
+    code: "NAVSUP",
+    name: "Naval Supply Systems Command",
+    tier: "command",
+    aliases: ["NAVAL SUPPLY SYSTEMS COMMAND", "NAVSUP", "NAVSUP WSS", "NAVSUP WEAPON SYSTEMS SUPPORT"],
+  },
+  {
+    id: "office-of-naval-research",
+    code: "ONR",
+    name: "Office of Naval Research",
+    tier: "component",
+    aliases: ["OFFICE OF NAVAL RESEARCH", "ONR"],
+  },
+  {
+    id: "military-sealift-command",
+    code: "MSC",
+    name: "Military Sealift Command",
+    tier: "command",
+    aliases: ["MILITARY SEALIFT COMMAND", "MSC", "COMSC"],
+  },
+  {
+    id: "strategic-systems-programs",
+    code: "SSP",
+    name: "Strategic Systems Programs",
+    tier: "component",
+    aliases: ["STRATEGIC SYSTEMS PROGRAMS", "SSP"],
+  },
+  {
+    id: "navy-cyber-forces",
+    code: "NAVCYBERFOR",
+    name: "Navy Cyber Forces",
+    tier: "command",
+    aliases: ["NAVY CYBER FORCES", "NAVCYBERFOR", "COMNAVCYBERFOR", "COMMANDER NAVY CYBER FORCES"],
+  },
+  {
     id: "air-force-materiel-command",
     code: "AFMC",
     name: "Air Force Materiel Command",
@@ -301,13 +336,21 @@ function addNamedEntity(entities, name, extra = {}) {
 
 function addEntity(entities, entity) {
   if (!entity?.name) return;
-  const id = entity.id || slugFor(entity.name);
-  if (entities.some((candidate) => candidate.id === id)) return;
+  const taxonomy = POLICY_ORGANIZATION_TAXONOMY.find((candidate) => candidate.id === entity.id || candidate.name === entity.name);
+  const id = taxonomy?.id || entity.id || slugFor(entity.name);
+  const tier = taxonomy?.tier || entity.tier || "source_owner";
+  const code = entity.code || taxonomy?.code || null;
+  const existing = entities.find((candidate) => candidate.id === id);
+  if (existing) {
+    existing.code ||= code;
+    if ((existing.tier === "source_owner" || existing.tier === "organization") && taxonomy?.tier) existing.tier = taxonomy.tier;
+    return;
+  }
   entities.push({
     id,
-    code: entity.code || null,
-    name: entity.name,
-    tier: entity.tier || "source_owner",
+    code,
+    name: taxonomy?.name || entity.name,
+    tier,
     source: entity.source || entity.facet_source || "taxonomy",
     raw_value: entity.raw_value || entity.name,
   });
@@ -316,7 +359,7 @@ function addEntity(entities, entity) {
 function tierForSourceOwner(name = "") {
   const value = String(name).toLowerCase();
   if (/army|navy|air force|space force|marine corps|coast guard/.test(value)) return "service";
-  if (/command|navsea|navair|navwar|navfac|tradoc|afmc|cybercom|socom/.test(value)) return "command";
+  if (/command|navsea|navair|navwar|navfac|navsup|navcyberfor|military sealift|tradoc|afmc|cybercom|socom/.test(value)) return "command";
   if (/intelligence|security agency|reconnaissance|geospatial/.test(value)) return "intelligence_agency";
   if (/agency|office|chief digital|disa|cdao/.test(value)) return "defense_agency";
   return "component";

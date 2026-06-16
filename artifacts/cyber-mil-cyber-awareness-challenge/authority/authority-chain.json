@@ -61,12 +61,12 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 8,
+    "upstream_edge_count": 7,
     "downstream_edge_count": 4,
-    "catalogued_node_count": 13,
+    "catalogued_node_count": 12,
     "uncatalogued_gap_count": 0,
     "evidence_backed_edge_count": 0,
-    "inferred_edge_count": 12,
+    "inferred_edge_count": 11,
     "authority_path_status": "inferred_review_needed",
     "implementation_path_status": "has_downstream_trace"
   },
@@ -177,21 +177,6 @@
       "status": "catalogued"
     },
     {
-      "id": "opnavinst-5239-1e-navy-cybersecurity",
-      "label": "OPNAVINST 5239.1E",
-      "title": "OPNAVINST 5239.1E: U.S. Navy Cybersecurity Program",
-      "artifact_type": "OPNAV Instruction",
-      "lane": "service",
-      "lane_label": "Service",
-      "hierarchy_rank": 82,
-      "family": "cybersecurity",
-      "issuing_authority": "OPNAV",
-      "source_system": "Department of the Navy Issuances",
-      "mirror_status": "blocked",
-      "parser_status": "blocked",
-      "status": "catalogued"
-    },
-    {
       "id": "cyber-mil-cyber-awareness-challenge",
       "label": "Cyber Awareness Challenge",
       "title": "DoD Cyber Awareness Challenge",
@@ -237,6 +222,21 @@
       "status": "catalogued"
     },
     {
+      "id": "comnavcyberforinst-5239-2d-commanders-cybersecurity-manual",
+      "label": "NAVCYBERFOR 5239.2D",
+      "title": "COMNAVCYBERFORINST 5239.2D: Commander's Cybersecurity Manual",
+      "artifact_type": "Command instruction",
+      "lane": "echelon4",
+      "lane_label": "Echelon 3-4",
+      "hierarchy_rank": 90,
+      "family": "cybersecurity",
+      "issuing_authority": "Commander, Navy Cyber Forces",
+      "source_system": "Navy Cyber Forces",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
       "id": "navsea-supship-cybersecurity-management",
       "label": "NAVSEA Cybersecurity Management",
       "title": "NAVSEA SUPSHIP Operations Manual Chapter 16: Cybersecurity Management",
@@ -247,21 +247,6 @@
       "family": "cybersecurity",
       "issuing_authority": "Naval Sea Systems Command",
       "source_system": "NAVSEA",
-      "mirror_status": "blocked",
-      "parser_status": "blocked",
-      "status": "catalogued"
-    },
-    {
-      "id": "tradoc-reg-1-8-critical-incidents",
-      "label": "TR 1-8",
-      "title": "TRADOC Regulation 1-8: Reporting Serious or Sensitive Incidents",
-      "artifact_type": "TRADOC Regulation",
-      "lane": "echelon4",
-      "lane_label": "Echelon 3-4",
-      "hierarchy_rank": 90,
-      "family": "operations",
-      "issuing_authority": "U.S. Army Training and Doctrine Command",
-      "source_system": "TRADOC Publications",
       "mirror_status": "blocked",
       "parser_status": "blocked",
       "status": "catalogued"
@@ -412,26 +397,6 @@
         ],
         "shared_family": ""
       }
-    },
-    {
-      "id": "opnavinst-5239-1e-navy-cybersecurity->cyber-mil-cyber-awareness-challenge:component_executes:inferred_flowdown",
-      "source_artifact_id": "opnavinst-5239-1e-navy-cybersecurity",
-      "source_label": "OPNAVINST 5239.1E",
-      "source_lane": "service",
-      "target_artifact_id": "cyber-mil-cyber-awareness-challenge",
-      "target_label": "Cyber Awareness Challenge",
-      "target_lane": "echelon2",
-      "relationship": "component_executes",
-      "evidence_type": "inferred_flowdown",
-      "confidence": 0.59,
-      "direction": "upstream",
-      "evidence": {
-        "basis": "shared_family_tags_and_authority_rank",
-        "shared_tags": [
-          "cybersecurity"
-        ],
-        "shared_family": ""
-      }
     }
   ],
   "downstream_edges": [
@@ -479,6 +444,27 @@
       }
     },
     {
+      "id": "cyber-mil-cyber-awareness-challenge->comnavcyberforinst-5239-2d-commanders-cybersecurity-manual:localizes:inferred_flowdown",
+      "source_artifact_id": "cyber-mil-cyber-awareness-challenge",
+      "source_label": "Cyber Awareness Challenge",
+      "source_lane": "echelon2",
+      "target_artifact_id": "comnavcyberforinst-5239-2d-commanders-cybersecurity-manual",
+      "target_label": "NAVCYBERFOR 5239.2D",
+      "target_lane": "echelon4",
+      "relationship": "localizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.66,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "cybersecurity",
+          "cybersecurity"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
       "id": "cyber-mil-cyber-awareness-challenge->navsea-supship-cybersecurity-management:localizes:inferred_flowdown",
       "source_artifact_id": "cyber-mil-cyber-awareness-challenge",
       "source_label": "Cyber Awareness Challenge",
@@ -498,26 +484,6 @@
         ],
         "shared_family": ""
       }
-    },
-    {
-      "id": "cyber-mil-cyber-awareness-challenge->tradoc-reg-1-8-critical-incidents:localizes:inferred_flowdown",
-      "source_artifact_id": "cyber-mil-cyber-awareness-challenge",
-      "source_label": "Cyber Awareness Challenge",
-      "source_lane": "echelon2",
-      "target_artifact_id": "tradoc-reg-1-8-critical-incidents",
-      "target_label": "TR 1-8",
-      "target_lane": "echelon4",
-      "relationship": "localizes",
-      "evidence_type": "inferred_flowdown",
-      "confidence": 0.59,
-      "direction": "downstream",
-      "evidence": {
-        "basis": "shared_family_tags_and_authority_rank",
-        "shared_tags": [
-          "cybersecurity"
-        ],
-        "shared_family": ""
-      }
     }
   ],
   "uncatalogued_authority_gaps": [],
@@ -527,7 +493,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "cyber-mil-cyber-awareness-challenge",
       "direction": "upstream",
-      "edge_count": 8
+      "edge_count": 7
     },
     {
       "id": "trace-downstream",

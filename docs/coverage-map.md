@@ -7,14 +7,14 @@ Generated from `manifest.json` and `taxonomies/governance-item-universe.json`.
 - Universe item types: 25
 - Covered item types: 12
 - Empty item types: 13
-- Artifacts in repo: 1640
-- Mirrored artifacts: 481
-- Source-known blocked artifacts: 24
-- Text extracted: 1582
-- Analytics sidecars: 1640
-- Analysis sidecars: 1640
-- Structured summaries: 1582
-- Version ledgers: 1640
+- Artifacts in repo: 1645
+- Mirrored artifacts: 482
+- Source-known blocked artifacts: 28
+- Text extracted: 1583
+- Analytics sidecars: 1645
+- Analysis sidecars: 1645
+- Structured summaries: 1583
+- Version ledgers: 1645
 
 ## Authority Coverage
 

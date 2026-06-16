@@ -4,25 +4,25 @@ Generated from `data/reference-ingestion-queue.json`, `manifest.json`, and `sour
 
 ## Summary
 
-- Known candidates: 7731
+- Known candidates: 7732
 - Catalog matches: 16
-- Source discovered: 7715
+- Source discovered: 7716
 - Source candidates: 0
 - Needs source discovery: 0
-- P0 candidates: 670
-- Exact or strong source paths: 7731
+- P0 candidates: 671
+- Exact or strong source paths: 7732
 - Official source systems represented: 20
 
 ## Candidate Families
 
 | Family | Candidates | P0 | Catalog Matches | Source Discovered | Source Candidates | Needs Discovery | Occurrences |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| usc | 6938 | 617 | 0 | 6938 | 0 | 0 | 15456 |
+| usc | 6938 | 618 | 0 | 6938 | 0 | 0 | 15458 |
 | executive-order | 296 | 20 | 0 | 296 | 0 | 0 | 705 |
 | dodd | 76 | 12 | 4 | 72 | 0 | 0 | 362 |
 | public-law | 162 | 11 | 0 | 162 | 0 | 0 | 341 |
 | dodi | 77 | 10 | 12 | 65 | 0 | 0 | 429 |
-| cfr | 80 | 0 | 0 | 80 | 0 | 0 | 118 |
+| cfr | 81 | 0 | 0 | 81 | 0 | 0 | 119 |
 | far | 36 | 0 | 0 | 36 | 0 | 0 | 63 |
 | nist-sp | 28 | 0 | 0 | 28 | 0 | 0 | 90 |
 | dfars | 22 | 0 | 0 | 22 | 0 | 0 | 36 |
@@ -34,16 +34,16 @@ Generated from `data/reference-ingestion-queue.json`, `manifest.json`, and `sour
 
 | Source System | Candidates | P0 | Catalog Matches | Source Discovered | Source Candidates | Needs Discovery | Occurrences |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| GovInfo | 7100 | 628 | 0 | 7100 | 0 | 0 | 15797 |
-| U.S. Code | 6938 | 617 | 0 | 6938 | 0 | 0 | 15456 |
+| GovInfo | 7100 | 629 | 0 | 7100 | 0 | 0 | 15799 |
+| U.S. Code | 6938 | 618 | 0 | 6938 | 0 | 0 | 15458 |
 | DoW/DoD Issuances | 153 | 22 | 16 | 137 | 0 | 0 | 791 |
 | Federal Register | 296 | 20 | 0 | 296 | 0 | 0 | 705 |
 | National Archives | 296 | 20 | 0 | 296 | 0 | 0 | 705 |
 | National Archives Executive Orders | 296 | 20 | 0 | 296 | 0 | 0 | 705 |
 | White House Presidential Actions | 296 | 20 | 0 | 296 | 0 | 0 | 705 |
 | Congress.gov | 162 | 11 | 0 | 162 | 0 | 0 | 341 |
-| eCFR | 80 | 0 | 0 | 80 | 0 | 0 | 118 |
-| GovInfo CFR Packages | 80 | 0 | 0 | 80 | 0 | 0 | 118 |
+| eCFR | 81 | 0 | 0 | 81 | 0 | 0 | 119 |
+| GovInfo CFR Packages | 81 | 0 | 0 | 81 | 0 | 0 | 119 |
 | Acquisition.gov | 58 | 0 | 0 | 58 | 0 | 0 | 99 |
 | Acquisition.gov FAR | 36 | 0 | 0 | 36 | 0 | 0 | 63 |
 | NIST CSRC | 28 | 0 | 0 | 28 | 0 | 0 | 90 |

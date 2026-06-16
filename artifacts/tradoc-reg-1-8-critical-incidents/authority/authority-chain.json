@@ -61,76 +61,16 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 4,
+    "upstream_edge_count": 0,
     "downstream_edge_count": 0,
-    "catalogued_node_count": 5,
+    "catalogued_node_count": 1,
     "uncatalogued_gap_count": 0,
     "evidence_backed_edge_count": 0,
-    "inferred_edge_count": 4,
-    "authority_path_status": "inferred_review_needed",
+    "inferred_edge_count": 0,
+    "authority_path_status": "authority_gap",
     "implementation_path_status": "no_downstream_trace_yet"
   },
   "nodes": [
-    {
-      "id": "cyber-mil-cyber-awareness-challenge",
-      "label": "Cyber Awareness Challenge",
-      "title": "DoD Cyber Awareness Challenge",
-      "artifact_type": "Implementation Guidance",
-      "lane": "echelon2",
-      "lane_label": "Echelon 2",
-      "hierarchy_rank": 85,
-      "family": "cyber_training",
-      "issuing_authority": "DoW/DoD",
-      "source_system": "DoD Cyber Exchange",
-      "mirror_status": "blocked",
-      "parser_status": "blocked",
-      "status": "catalogued"
-    },
-    {
-      "id": "nsa-zero-trust-implementation-guideline-primer",
-      "label": "NSA ZIG Primer",
-      "title": "Zero Trust Implementation Guideline Primer",
-      "artifact_type": "Cybersecurity Technical Report",
-      "lane": "echelon2",
-      "lane_label": "Echelon 2",
-      "hierarchy_rank": 85,
-      "family": "zero_trust",
-      "issuing_authority": "National Security Agency",
-      "source_system": "NSA Cybersecurity Guidance",
-      "mirror_status": "blocked",
-      "parser_status": "blocked",
-      "status": "catalogued"
-    },
-    {
-      "id": "navfac-ufc-4-010-06-frcs-cybersecurity",
-      "label": "UFC 4-010-06",
-      "title": "UFC 4-010-06: Cybersecurity of Facility-Related Control Systems",
-      "artifact_type": "Unified Facilities Criteria",
-      "lane": "echelon2",
-      "lane_label": "Echelon 2",
-      "hierarchy_rank": 85,
-      "family": "facilities",
-      "issuing_authority": "DoD Unified Facilities Criteria Program",
-      "source_system": "NAVFAC",
-      "mirror_status": "mirrored",
-      "parser_status": "parsed",
-      "status": "catalogued"
-    },
-    {
-      "id": "uscg-cybersecurity-and-cyberspace-operations-strategy",
-      "label": "USCG Cyber Strategy",
-      "title": "U.S. Coast Guard Cybersecurity and Cyberspace Operations",
-      "artifact_type": "Service strategy",
-      "lane": "echelon2",
-      "lane_label": "Echelon 2",
-      "hierarchy_rank": 86,
-      "family": "cybersecurity",
-      "issuing_authority": "United States Coast Guard",
-      "source_system": "Coast Guard Directives System",
-      "mirror_status": "blocked",
-      "parser_status": "blocked",
-      "status": "catalogued"
-    },
     {
       "id": "tradoc-reg-1-8-critical-incidents",
       "label": "TR 1-8",
@@ -147,88 +87,7 @@
       "status": "current"
     }
   ],
-  "upstream_edges": [
-    {
-      "id": "cyber-mil-cyber-awareness-challenge->tradoc-reg-1-8-critical-incidents:localizes:inferred_flowdown",
-      "source_artifact_id": "cyber-mil-cyber-awareness-challenge",
-      "source_label": "Cyber Awareness Challenge",
-      "source_lane": "echelon2",
-      "target_artifact_id": "tradoc-reg-1-8-critical-incidents",
-      "target_label": "TR 1-8",
-      "target_lane": "echelon4",
-      "relationship": "localizes",
-      "evidence_type": "inferred_flowdown",
-      "confidence": 0.59,
-      "direction": "upstream",
-      "evidence": {
-        "basis": "shared_family_tags_and_authority_rank",
-        "shared_tags": [
-          "cybersecurity"
-        ],
-        "shared_family": ""
-      }
-    },
-    {
-      "id": "nsa-zero-trust-implementation-guideline-primer->tradoc-reg-1-8-critical-incidents:localizes:inferred_flowdown",
-      "source_artifact_id": "nsa-zero-trust-implementation-guideline-primer",
-      "source_label": "NSA ZIG Primer",
-      "source_lane": "echelon2",
-      "target_artifact_id": "tradoc-reg-1-8-critical-incidents",
-      "target_label": "TR 1-8",
-      "target_lane": "echelon4",
-      "relationship": "localizes",
-      "evidence_type": "inferred_flowdown",
-      "confidence": 0.59,
-      "direction": "upstream",
-      "evidence": {
-        "basis": "shared_family_tags_and_authority_rank",
-        "shared_tags": [
-          "cybersecurity"
-        ],
-        "shared_family": ""
-      }
-    },
-    {
-      "id": "navfac-ufc-4-010-06-frcs-cybersecurity->tradoc-reg-1-8-critical-incidents:localizes:inferred_flowdown",
-      "source_artifact_id": "navfac-ufc-4-010-06-frcs-cybersecurity",
-      "source_label": "UFC 4-010-06",
-      "source_lane": "echelon2",
-      "target_artifact_id": "tradoc-reg-1-8-critical-incidents",
-      "target_label": "TR 1-8",
-      "target_lane": "echelon4",
-      "relationship": "localizes",
-      "evidence_type": "inferred_flowdown",
-      "confidence": 0.59,
-      "direction": "upstream",
-      "evidence": {
-        "basis": "shared_family_tags_and_authority_rank",
-        "shared_tags": [
-          "cybersecurity"
-        ],
-        "shared_family": ""
-      }
-    },
-    {
-      "id": "uscg-cybersecurity-and-cyberspace-operations-strategy->tradoc-reg-1-8-critical-incidents:localizes:inferred_flowdown",
-      "source_artifact_id": "uscg-cybersecurity-and-cyberspace-operations-strategy",
-      "source_label": "USCG Cyber Strategy",
-      "source_lane": "echelon2",
-      "target_artifact_id": "tradoc-reg-1-8-critical-incidents",
-      "target_label": "TR 1-8",
-      "target_lane": "echelon4",
-      "relationship": "localizes",
-      "evidence_type": "inferred_flowdown",
-      "confidence": 0.59,
-      "direction": "upstream",
-      "evidence": {
-        "basis": "shared_family_tags_and_authority_rank",
-        "shared_tags": [
-          "cybersecurity"
-        ],
-        "shared_family": ""
-      }
-    }
-  ],
+  "upstream_edges": [],
   "downstream_edges": [],
   "uncatalogued_authority_gaps": [],
   "trace_playbooks": [
@@ -237,7 +96,7 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "tradoc-reg-1-8-critical-incidents",
       "direction": "upstream",
-      "edge_count": 4
+      "edge_count": 0
     },
     {
       "id": "trace-downstream",

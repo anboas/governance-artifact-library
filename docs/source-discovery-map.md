@@ -4,12 +4,12 @@ Generated from `sources/source-discovery-registry.json`, `manifest.json`, and `t
 
 ## Summary
 
-- Official sources tracked: 60
-- Sources with artifacts in repo: 38
+- Official sources tracked: 65
+- Sources with artifacts in repo: 43
 - Sources not started: 22
 - Direct-fetch ready sources: 25
 - Blocked/browser-needed sources: 6
-- Sources needing probe: 28
+- Sources needing probe: 33
 - API-key-required sources: 3
 - API-capable sources: 5
 - Feed-capable sources: 8
@@ -64,13 +64,18 @@ Generated from `sources/source-discovery-registry.json`, `manifest.json`, and `t
 | medium | Law Library of Congress | Library of Congress | not_started | direct_fetch_ready | direct_fetch<br>html_parse<br>sitemap_crawl | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | medium | MARADMIN Messages | United States Marine Corps | not_started | needs_probe | direct_fetch<br>browser_fetch<br>manual_import | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | medium | Marine Corps Publications Electronic Library | United States Marine Corps | source_known_blocked | needs_probe | direct_fetch<br>browser_fetch<br>manual_import | 1 | 0 | 1 | 0 | 1 | 1 | 0 | 1 |
+| medium | Military Sealift Command | Military Sealift Command | source_known_blocked | needs_probe | source_discovery<br>browser_fetch<br>manual_import | 1 | 0 | 1 | 0 | 1 | 1 | 0 | 1 |
 | medium | NAVAIR | Naval Air Systems Command | mixed | needs_probe | source_discovery<br>browser_fetch<br>manual_import | 3 | 1 | 2 | 1 | 3 | 3 | 1 | 3 |
 | medium | NAVSEA | Naval Sea Systems Command | mixed | needs_probe | source_discovery<br>browser_fetch<br>manual_import | 3 | 1 | 2 | 1 | 3 | 3 | 1 | 3 |
+| medium | NAVSUP | Naval Supply Systems Command | source_known_blocked | needs_probe | source_discovery<br>browser_fetch<br>manual_import | 1 | 0 | 1 | 0 | 1 | 1 | 0 | 1 |
 | medium | NAVWAR | Naval Information Warfare Systems Command | mixed | needs_probe | source_discovery<br>browser_fetch<br>manual_import | 3 | 1 | 2 | 1 | 3 | 3 | 1 | 3 |
+| medium | Navy Cyber Forces | Navy Cyber Forces | mixed | needs_probe | source_discovery<br>browser_fetch<br>manual_import | 4 | 1 | 3 | 1 | 4 | 4 | 1 | 4 |
 | medium | Navy Warfare Library | Department of the Navy | not_started | needs_probe | browser_fetch<br>manual_import<br>source_known_registration | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | medium | NSA Cybersecurity Guidance | National Security Agency | source_known_blocked | needs_probe | direct_fetch<br>browser_fetch<br>pdf_fetch | 1 | 0 | 1 | 0 | 1 | 1 | 0 | 1 |
+| medium | Office of Naval Research | Office of Naval Research | mirrored | needs_probe | direct_fetch<br>source_discovery<br>manual_import | 1 | 1 | 0 | 1 | 1 | 1 | 1 | 1 |
 | medium | OPM Policy | Office of Personnel Management | not_started | direct_fetch_ready | direct_fetch<br>html_parse<br>sitemap_crawl | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | medium | Space Force Doctrine | United States Space Force | not_started | needs_probe | direct_fetch<br>browser_fetch<br>manual_import | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| medium | Strategic Systems Programs | Strategic Systems Programs | source_known_blocked | needs_probe | source_discovery<br>browser_fetch<br>manual_import | 1 | 0 | 1 | 0 | 1 | 1 | 0 | 1 |
 | medium | TRADOC Publications | U.S. Army Training and Doctrine Command | source_known_blocked | needs_probe | direct_fetch<br>browser_fetch<br>manual_import | 1 | 0 | 1 | 0 | 1 | 1 | 0 | 1 |
 | medium | U.S. Cyber Command | United States Cyber Command | source_known_blocked | needs_probe | source_discovery<br>browser_fetch<br>manual_import | 2 | 0 | 2 | 0 | 2 | 2 | 0 | 2 |
 | medium | USD(R&E) | Office of the Under Secretary of Defense for Research and Engineering | not_started | needs_probe | source_discovery<br>browser_fetch<br>manual_import | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -129,13 +134,18 @@ Generated from `sources/source-discovery-registry.json`, `manifest.json`, and `t
 | Law Library of Congress | 1 | 0 | 0 | 1 | 1 | yes | loc_law_html | none |
 | MARADMIN Messages | 1 | 0 | 0 | 1 | 1 | yes | maradmin_html<br>marine_corps_pubs_html | none |
 | Marine Corps Publications Electronic Library | 1 | 0 | 0 | 1 | 0 | yes | marine_corps_pubs_pdf<br>marine_corps_pubs_html | mco-5239-2b-marine-corps-cybersecurity |
+| Military Sealift Command | 1 | 0 | 0 | 1 | 0 | yes | msc_pdf<br>msc_html<br>program_office_pdf<br>program_office_html | msc-specialtime-2026-cybersecurity-responsibilities |
 | NAVAIR | 1 | 0 | 0 | 1 | 0 | yes | fleet_command_pdf<br>fleet_command_html<br>program_office_pdf<br>program_office_html | navair-nawcwd-cyber-risk-assessments-sow<br>navsea-supship-cybersecurity-management<br>navwar-digital-engineering-strategy |
 | NAVSEA | 1 | 0 | 0 | 1 | 0 | yes | fleet_command_pdf<br>fleet_command_html<br>program_office_pdf<br>program_office_html | navair-nawcwd-cyber-risk-assessments-sow<br>navsea-supship-cybersecurity-management<br>navwar-digital-engineering-strategy |
+| NAVSUP | 1 | 0 | 0 | 1 | 0 | yes | navsup_pdf<br>navsup_html<br>program_office_pdf<br>program_office_html | navsup-enterprise-web-privacy-impact-assessment |
 | NAVWAR | 1 | 0 | 0 | 1 | 0 | yes | fleet_command_pdf<br>fleet_command_html<br>program_office_pdf<br>program_office_html | navair-nawcwd-cyber-risk-assessments-sow<br>navsea-supship-cybersecurity-management<br>navwar-digital-engineering-strategy |
+| Navy Cyber Forces | 1 | 0 | 0 | 1 | 0 | yes | navy_cyber_pdf<br>navy_cyber_html<br>fleet_command_pdf<br>fleet_command_html | comnavcyberforinst-5239-2d-commanders-cybersecurity-manual<br>navair-nawcwd-cyber-risk-assessments-sow<br>navsea-supship-cybersecurity-management<br>navwar-digital-engineering-strategy |
 | Navy Warfare Library | 1 | 0 | 0 | 1 | 0 | yes | navy_doctrine_pdf<br>navy_doctrine_html | none |
 | NSA Cybersecurity Guidance | 1 | 0 | 0 | 1 | 1 | yes | nsa_cyber_guidance_html<br>nsa_cyber_guidance_pdf | nsa-zero-trust-implementation-guideline-primer |
+| Office of Naval Research | 1 | 0 | 0 | 1 | 0 | yes | onr_pdf<br>onr_html<br>program_office_pdf<br>program_office_html | onr-n0001424sc001-rapid-area-detection-cso |
 | OPM Policy | 1 | 0 | 0 | 1 | 1 | yes | opm_policy_html<br>opm_policy_pdf | none |
 | Space Force Doctrine | 1 | 0 | 0 | 1 | 0 | yes | space_force_doctrine_pdf<br>space_force_doctrine_html | none |
+| Strategic Systems Programs | 1 | 0 | 0 | 1 | 0 | yes | ssp_pdf<br>ssp_html<br>program_office_pdf<br>program_office_html | ssp-directors-intent-2023 |
 | TRADOC Publications | 1 | 0 | 0 | 1 | 0 | yes | tradoc_pubs_pdf<br>tradoc_pubs_html | tradoc-reg-1-8-critical-incidents |
 | U.S. Cyber Command | 1 | 0 | 0 | 1 | 0 | yes | uscybercom_html<br>uscybercom_pdf<br>program_office_html<br>program_office_pdf | uscybercom-2018-command-vision<br>uscybercom-mission-and-vision |
 | USD(R&E) | 1 | 0 | 0 | 1 | 0 | yes | osd_re_html<br>osd_re_pdf<br>program_office_html<br>program_office_pdf | none |
@@ -194,13 +204,18 @@ Generated from `sources/source-discovery-registry.json`, `manifest.json`, and `t
 | Law Library of Congress | Congress<br>Library of Congress | Legal reference<br>Research guide | statute<br>public_law<br>legal_reference | statute<br>public_law<br>legal_reference<br>Legal reference<br>Research guide |
 | MARADMIN Messages | Commandant of the Marine Corps<br>United States Marine Corps | MARADMIN<br>ALMAR | service_policy<br>operations<br>personnel | service_policy<br>operations<br>personnel<br>MARADMIN<br>ALMAR |
 | Marine Corps Publications Electronic Library | Commandant of the Marine Corps<br>United States Marine Corps | MCO<br>MARADMIN<br>MCRP<br>MCWP | service_policy<br>operations<br>cybersecurity | unspecified |
+| Military Sealift Command | MSC<br>Department of the Navy | Command procurement terms<br>Command handbook<br>Contract clause set | acquisition<br>logistics<br>cybersecurity | unspecified |
 | NAVAIR | NAVAIR<br>Department of the Navy | Fleet Guidance<br>Command Policy<br>Program Guidance | implementation<br>acquisition<br>cybersecurity | unspecified |
 | NAVSEA | NAVSEA<br>Department of the Navy | Fleet Guidance<br>Command Policy<br>Program Guidance | implementation<br>acquisition<br>cybersecurity | unspecified |
+| NAVSUP | NAVSUP<br>Department of the Navy | Command policy<br>Privacy Impact Assessment<br>Supply guidance | logistics<br>acquisition<br>privacy<br>cybersecurity | unspecified |
 | NAVWAR | NAVWAR<br>Department of the Navy | Fleet Guidance<br>Command Policy<br>Program Guidance | implementation<br>cybersecurity<br>software_acquisition | unspecified |
+| Navy Cyber Forces | NAVCYBERFOR<br>Department of the Navy | Command instruction<br>Cybersecurity manual<br>Operational guidance | cybersecurity<br>operations<br>implementation | unspecified |
 | Navy Warfare Library | Department of the Navy<br>Chief of Naval Operations | Navy warfare publication<br>Tactics techniques procedures<br>Doctrine | service_policy<br>operations<br>doctrine | service_policy<br>operations<br>doctrine<br>Navy warfare publication<br>Tactics techniques procedures<br>Doctrine |
 | NSA Cybersecurity Guidance | NSA<br>Cybersecurity Directorate | Cybersecurity advisory<br>Hardening guide<br>Best practice<br>Reference architecture | cybersecurity<br>zero_trust<br>reference_design | cybersecurity<br>zero_trust<br>reference_design<br>Cybersecurity advisory<br>Hardening guide<br>Best practice<br>Reference architecture |
+| Office of Naval Research | ONR<br>Department of the Navy | Broad Agency Announcement<br>Commercial Solutions Opening<br>Research guidance | research_security<br>acquisition<br>technology_policy | unspecified |
 | OPM Policy | OPM | Personnel policy<br>Guide<br>Fact sheet | personnel<br>workforce<br>human_resources | personnel<br>workforce<br>human_resources<br>Personnel policy<br>Guide<br>Fact sheet |
 | Space Force Doctrine | United States Space Force | Space Doctrine Publication<br>Doctrine note<br>Guidance | service_policy<br>operations<br>space | service_policy<br>operations<br>space<br>Space Doctrine Publication<br>Doctrine note<br>Guidance |
+| Strategic Systems Programs | SSP<br>Department of the Navy | Command strategy<br>Program guidance<br>Strategic weapons system guidance | strategic_planning<br>acquisition<br>workforce | unspecified |
 | TRADOC Publications | TRADOC<br>Department of the Army | TRADOC Regulation<br>TRADOC Pamphlet<br>TRADOC Supplement | service_policy<br>training<br>doctrine | service_policy<br>training<br>doctrine<br>TRADOC Regulation<br>TRADOC Pamphlet<br>TRADOC Supplement |
 | U.S. Cyber Command | USCYBERCOM<br>DoW/DoD | Command vision<br>Guidance<br>Strategy<br>Fact sheet | cybersecurity<br>operations<br>implementation | cybersecurity<br>operations<br>implementation<br>Command vision<br>Guidance<br>Strategy<br>Fact sheet |
 | USD(R&E) | USD(R&E)<br>DoW/DoD | Technology strategy<br>Research guidance<br>Reference architecture | research_security<br>technology_policy<br>ai_governance<br>software_acquisition | research_security<br>technology_policy<br>ai_governance<br>software_acquisition<br>Technology strategy<br>Research guidance<br>Reference architecture |
@@ -215,15 +230,15 @@ Generated from `sources/source-discovery-registry.json`, `manifest.json`, and `t
 | Capture Strategy | Sources |
 | --- | ---: |
 | api | 5 |
-| browser_fetch | 32 |
+| browser_fetch | 36 |
 | content_package_fetch | 2 |
-| direct_fetch | 42 |
+| direct_fetch | 43 |
 | html_parse | 14 |
-| manual_import | 32 |
+| manual_import | 37 |
 | pdf_fetch | 7 |
 | rss | 6 |
 | sitemap_crawl | 13 |
-| source_discovery | 11 |
+| source_discovery | 16 |
 | source_known_registration | 7 |
 
 ## Automation Status Counts
@@ -234,4 +249,4 @@ Generated from `sources/source-discovery-registry.json`, `manifest.json`, and `t
 | blocked_by_host | 4 |
 | browser_shell_detected | 2 |
 | direct_fetch_ready | 25 |
-| needs_probe | 28 |
+| needs_probe | 33 |

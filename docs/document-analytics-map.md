@@ -4,11 +4,11 @@ Generated from artifact records and per-artifact `analytics/document-metrics.jso
 
 ## Summary
 
-- Artifacts: 1640
-- Metrics sidecars: 1640
-- Extracted words: 18,854,727
-- Approximate pages: 37,768
-- Reading workload: 84,604 minutes at 225 wpm
+- Artifacts: 1645
+- Metrics sidecars: 1645
+- Extracted words: 18,863,228
+- Approximate pages: 37,785
+- Reading workload: 84,642 minutes at 225 wpm
 - Median read time: 16 minutes
 - Median complexity: 82
 
@@ -16,10 +16,10 @@ Generated from artifact records and per-artifact `analytics/document-metrics.jso
 
 | Bucket | Artifacts | Words | Reading Minutes | Avg Complexity |
 | --- | ---: | ---: | ---: | ---: |
-| No Text | 58 | 0 | 0 | 0 |
+| No Text | 62 | 0 | 0 | 0 |
 | Under 5 min | 130 | 51,036 | 300 | 46 |
 | 5-15 min | 616 | 1,327,541 | 6,205 | 78 |
-| 15-45 min | 603 | 3,398,574 | 15,418 | 81 |
+| 15-45 min | 604 | 3,407,075 | 15,456 | 81 |
 | 45-120 min | 166 | 2,599,992 | 11,639 | 84 |
 | 2+ hours | 67 | 11,477,584 | 51,042 | 89 |
 
@@ -27,11 +27,11 @@ Generated from artifact records and per-artifact `analytics/document-metrics.jso
 
 | Bucket | Artifacts | Words | Reading Minutes | Avg Complexity |
 | --- | ---: | ---: | ---: | ---: |
-| No Text | 58 | 0 | 0 | 0 |
+| No Text | 62 | 0 | 0 | 0 |
 | Quick Scan | 54 | 3,051 | 54 | 25 |
 | Moderate | 13 | 5,730 | 31 | 44 |
 | Dense | 177 | 468,075 | 2,164 | 60 |
-| Complex | 477 | 2,515,241 | 11,415 | 72 |
+| Complex | 478 | 2,523,742 | 11,453 | 72 |
 | Extreme | 861 | 15,862,630 | 70,940 | 88 |
 
 ## Top Source Systems
@@ -53,19 +53,19 @@ Generated from artifact records and per-artifact `analytics/document-metrics.jso
 | NIST NVL Publications | 1 | 22,237 | 99 | 74 |
 | U.S. Special Operations Command | 1 | 10,890 | 49 | 85 |
 | NAVAIR | 1 | 8,891 | 40 | 91 |
+| Office of Naval Research | 1 | 8,501 | 38 | 79 |
 | Acquisition.gov | 1 | 3,387 | 16 | 91 |
 | NIST CSRC | 1 | 943 | 5 | 60 |
 | Air Force Materiel Command | 1 | 0 | 0 | 0 |
 | Chief Digital and Artificial Intelligence Office | 1 | 0 | 0 | 0 |
-| Coast Guard Directives System | 1 | 0 | 0 | 0 |
 
 ## Age Buckets
 
 | Age | Artifacts | Words | Reading Minutes | Avg Complexity |
 | --- | ---: | ---: | ---: | ---: |
-| No Date | 468 | 12,664,524 | 56,505 | 82 |
+| No Date | 472 | 12,664,524 | 56,505 | 82 |
 | Under 1 year | 20 | 155,724 | 701 | 73 |
-| 1-3 years | 119 | 1,397,246 | 6,269 | 74 |
+| 1-3 years | 120 | 1,405,747 | 6,307 | 75 |
 | 3-5 years | 124 | 686,158 | 3,113 | 74 |
 | 5-10 years | 299 | 1,606,522 | 7,290 | 74 |
 | 10-20 years | 495 | 1,995,627 | 9,113 | 76 |

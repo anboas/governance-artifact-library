@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 19,
-    "catalogued_node_count": 20,
+    "downstream_edge_count": 20,
+    "catalogued_node_count": 21,
     "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 15,
+    "evidence_backed_edge_count": 16,
     "inferred_edge_count": 4,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -387,10 +387,47 @@
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "catalogued"
+    },
+    {
+      "id": "onr-n0001424sc001-rapid-area-detection-cso",
+      "label": "ONR Rapid Area Detection CSO",
+      "title": "ONR Commercial Solutions Opening N0001424SC001: Automated Target Recognition for Rapid Area Detection",
+      "artifact_type": "Commercial Solutions Opening",
+      "lane": "echelon4",
+      "lane_label": "Echelon 3-4",
+      "hierarchy_rank": 90,
+      "family": "acquisition",
+      "issuing_authority": "Office of Naval Research",
+      "source_system": "Office of Naval Research",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [],
   "downstream_edges": [
+    {
+      "id": "usc-title-20-section-1002->onr-n0001424sc001-rapid-area-detection-cso:verifies_or_localizes:resolved_reference",
+      "source_artifact_id": "usc-title-20-section-1002",
+      "source_label": "20 U.S.C. 1002",
+      "source_lane": "statute",
+      "target_artifact_id": "onr-n0001424sc001-rapid-area-detection-cso",
+      "target_label": "ONR Rapid Area Detection CSO",
+      "target_lane": "echelon4",
+      "relationship": "verifies_or_localizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:20:1002",
+        "label": "20 USC 1002",
+        "first_line": 1110,
+        "lines_sample": [
+          1110
+        ],
+        "count": 1
+      }
+    },
     {
       "id": "usc-title-20-section-1002->eo-10450:authorizes:inferred_flowdown",
       "source_artifact_id": "usc-title-20-section-1002",
@@ -840,7 +877,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-20-section-1002",
       "direction": "downstream",
-      "edge_count": 19
+      "edge_count": 20
     }
   ]
 }

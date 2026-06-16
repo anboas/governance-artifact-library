@@ -2,23 +2,23 @@
 
 Generated: 2026-06-12T23:25:00.000Z
 
-- Queue items: 7731
-- P0: 670
-- P1: 1635
+- Queue items: 7732
+- P0: 671
+- P1: 1634
 - P2: 5256
-- P3: 170
-- Source artifacts with gaps: 816
+- P3: 171
+- Source artifacts with gaps: 817
 
 ## Family Summary
 
 | Family | Items | Occurrences | P0 | P1 | P2 | P3 |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| usc | 6938 | 15456 | 617 | 1532 | 4789 | 0 |
+| usc | 6938 | 15458 | 618 | 1531 | 4789 | 0 |
 | executive-order | 296 | 705 | 20 | 59 | 217 | 0 |
 | dodi | 77 | 429 | 10 | 7 | 60 | 0 |
 | dodd | 76 | 362 | 12 | 7 | 57 | 0 |
 | public-law | 162 | 341 | 11 | 27 | 124 | 0 |
-| cfr | 80 | 118 | 0 | 1 | 2 | 77 |
+| cfr | 81 | 119 | 0 | 1 | 2 | 78 |
 | nist-sp | 28 | 90 | 0 | 1 | 1 | 26 |
 | far | 36 | 63 | 0 | 1 | 0 | 35 |
 | dfars | 22 | 36 | 0 | 0 | 0 | 22 |

@@ -6,13 +6,13 @@ Scope: superficial enumeration only. This map does not mirror new raw files, ext
 
 ## Summary
 
-- Current density organizations: 56
+- Current density organizations: 59
 - DoW/DoD OPR entities found: 17
 - DoW/DoD OPR-to-artifact links enumerated: 1147
 - OPR entities missing from current density labels: 0
-- Source-owner entities tracked: 60
+- Source-owner entities tracked: 65
 - Source-owner entities missing or empty in current density: 25
-- Reference-discovery source candidates: 7731
+- Reference-discovery source candidates: 7732
 
 ## DoW/DoD OPR Entities
 
@@ -44,8 +44,8 @@ Scope: superficial enumeration only. This map does not mirror new raw files, ext
 | Congress.gov | Library of Congress | critical | api_key_required | not_started | 0 | 162 |
 | Acquisition.gov DFARS | Defense Acquisition Regulations System | critical | direct_fetch_ready | mirrored | 1 | 22 |
 | Defense Pricing, Contracting, and Acquisition Policy | Defense Pricing and Contracting | critical | needs_probe | not_started | 0 | 22 |
-| eCFR | Office of the Federal Register / National Archives and Records Administration | high | direct_fetch_ready | not_started | 0 | 80 |
-| GovInfo CFR Packages | U.S. Government Publishing Office | high | direct_fetch_ready | not_started | 0 | 80 |
+| eCFR | Office of the Federal Register / National Archives and Records Administration | high | direct_fetch_ready | not_started | 0 | 81 |
+| GovInfo CFR Packages | U.S. Government Publishing Office | high | direct_fetch_ready | not_started | 0 | 81 |
 | CISA | Cybersecurity and Infrastructure Security Agency | high | direct_fetch_ready | not_started | 0 | 0 |
 | Committee on National Security Systems | Committee on National Security Systems | high | needs_probe | not_started | 0 | 0 |
 | DAU Adaptive Acquisition Framework | Defense Acquisition University | high | direct_fetch_ready | not_started | 0 | 0 |

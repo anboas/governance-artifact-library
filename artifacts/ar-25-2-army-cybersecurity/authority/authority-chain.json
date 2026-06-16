@@ -908,21 +908,6 @@
       "status": "catalogued"
     },
     {
-      "id": "navfac-ufc-4-010-06-frcs-cybersecurity",
-      "label": "UFC 4-010-06",
-      "title": "UFC 4-010-06: Cybersecurity of Facility-Related Control Systems",
-      "artifact_type": "Unified Facilities Criteria",
-      "lane": "echelon2",
-      "lane_label": "Echelon 2",
-      "hierarchy_rank": 85,
-      "family": "facilities",
-      "issuing_authority": "DoD Unified Facilities Criteria Program",
-      "source_system": "NAVFAC",
-      "mirror_status": "mirrored",
-      "parser_status": "parsed",
-      "status": "catalogued"
-    },
-    {
       "id": "uscg-cybersecurity-and-cyberspace-operations-strategy",
       "label": "USCG Cyber Strategy",
       "title": "U.S. Coast Guard Cybersecurity and Cyberspace Operations",
@@ -933,6 +918,21 @@
       "family": "cybersecurity",
       "issuing_authority": "United States Coast Guard",
       "source_system": "Coast Guard Directives System",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
+      "id": "comnavcyberforinst-5239-2d-commanders-cybersecurity-manual",
+      "label": "NAVCYBERFOR 5239.2D",
+      "title": "COMNAVCYBERFORINST 5239.2D: Commander's Cybersecurity Manual",
+      "artifact_type": "Command instruction",
+      "lane": "echelon4",
+      "lane_label": "Echelon 3-4",
+      "hierarchy_rank": 90,
+      "family": "cybersecurity",
+      "issuing_authority": "Commander, Navy Cyber Forces",
+      "source_system": "Navy Cyber Forces",
       "mirror_status": "blocked",
       "parser_status": "blocked",
       "status": "catalogued"
@@ -1833,26 +1833,6 @@
       }
     },
     {
-      "id": "ar-25-2-army-cybersecurity->navfac-ufc-4-010-06-frcs-cybersecurity:component_executes:inferred_flowdown",
-      "source_artifact_id": "ar-25-2-army-cybersecurity",
-      "source_label": "AR 25-2",
-      "source_lane": "service",
-      "target_artifact_id": "navfac-ufc-4-010-06-frcs-cybersecurity",
-      "target_label": "UFC 4-010-06",
-      "target_lane": "echelon2",
-      "relationship": "component_executes",
-      "evidence_type": "inferred_flowdown",
-      "confidence": 0.59,
-      "direction": "downstream",
-      "evidence": {
-        "basis": "shared_family_tags_and_authority_rank",
-        "shared_tags": [
-          "cybersecurity"
-        ],
-        "shared_family": ""
-      }
-    },
-    {
       "id": "ar-25-2-army-cybersecurity->uscg-cybersecurity-and-cyberspace-operations-strategy:component_executes:inferred_flowdown",
       "source_artifact_id": "ar-25-2-army-cybersecurity",
       "source_label": "AR 25-2",
@@ -1861,6 +1841,27 @@
       "target_label": "USCG Cyber Strategy",
       "target_lane": "echelon2",
       "relationship": "component_executes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.78,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "cybersecurity",
+          "cybersecurity"
+        ],
+        "shared_family": "cybersecurity"
+      }
+    },
+    {
+      "id": "ar-25-2-army-cybersecurity->comnavcyberforinst-5239-2d-commanders-cybersecurity-manual:verifies_or_localizes:inferred_flowdown",
+      "source_artifact_id": "ar-25-2-army-cybersecurity",
+      "source_label": "AR 25-2",
+      "source_lane": "service",
+      "target_artifact_id": "comnavcyberforinst-5239-2d-commanders-cybersecurity-manual",
+      "target_label": "NAVCYBERFOR 5239.2D",
+      "target_lane": "echelon4",
+      "relationship": "verifies_or_localizes",
       "evidence_type": "inferred_flowdown",
       "confidence": 0.78,
       "direction": "downstream",

@@ -2,11 +2,11 @@
 
 Generated: 2026-06-13T13:55:00.000Z
 
-- Artifacts: 1640
-- Nodes: 1640
-- Edges: 11946
-- Evidence-backed reference edges: 8918
-- Inferred flowdown edges: 3028
+- Artifacts: 1645
+- Nodes: 1645
+- Edges: 11951
+- Evidence-backed reference edges: 8920
+- Inferred flowdown edges: 3031
 
 ## Lanes
 
@@ -184,7 +184,7 @@ Generated: 2026-06-13T13:55:00.000Z
 | usc-title-10-section-4801 | 2 | 9 | 2 | root_authority |
 | usc-title-10-section-4811 | 10 | 10 | 13 | root_authority |
 | usc-title-10-section-482 | 0 | 11 | 0 | root_authority |
-| usc-title-10-section-4871 | 2 | 9 | 0 | root_authority |
+| usc-title-10-section-4871 | 2 | 10 | 0 | root_authority |
 | usc-title-10-section-4901 | 6 | 8 | 3 | root_authority |
 | usc-title-10-section-491 | 3 | 13 | 2 | root_authority |
 | usc-title-10-section-494 | 1 | 10 | 2 | root_authority |
@@ -248,7 +248,7 @@ Generated: 2026-06-13T13:55:00.000Z
 | usc-title-2-section-661a | 0 | 29 | 0 | root_authority |
 | usc-title-2-section-901 | 1 | 11 | 4 | root_authority |
 | usc-title-20-section-1001 | 7 | 30 | 18 | root_authority |
-| usc-title-20-section-1002 | 0 | 19 | 1 | root_authority |
+| usc-title-20-section-1002 | 0 | 20 | 1 | root_authority |
 | usc-title-20-section-1061 | 0 | 13 | 0 | root_authority |
 | usc-title-20-section-1067q | 0 | 14 | 3 | root_authority |
 | usc-title-20-section-107 | 0 | 8 | 0 | root_authority |
@@ -493,7 +493,7 @@ Generated: 2026-06-13T13:55:00.000Z
 | eo-14173 | 2 | 21 | 5 | evidence_backed |
 | omb-m-21-31-cyber-logging | 3 | 4 | 1 | evidence_backed |
 | omb-m-24-10-ai-governance | 4 | 1 | 7 | evidence_backed |
-| far-part-39-acquisition-of-it | 0 | 3 | 6 | authority_gap |
+| far-part-39-acquisition-of-it | 0 | 4 | 6 | authority_gap |
 | cisa-bod-26-02-end-of-support-edge-devices | 3 | 2 | 4 | evidence_backed |
 | cisa-bod-26-04-prioritizing-security-updates | 1 | 4 | 2 | evidence_backed |
 | cisa-bod-26-04-implementation-guidance | 2 | 1 | 0 | inferred_review_needed |
@@ -600,7 +600,7 @@ Generated: 2026-06-13T13:55:00.000Z
 | dodd-4715-12 | 1 | 5 | 0 | evidence_backed |
 | dodd-4715-1e | 1 | 4 | 1 | evidence_backed |
 | dodd-4715-21 | 5 | 7 | 3 | evidence_backed |
-| dodd-5000-01-defense-acquisition-system | 10 | 56 | 0 | evidence_backed |
+| dodd-5000-01-defense-acquisition-system | 9 | 56 | 0 | evidence_backed |
 | dodd-5000-62 | 0 | 5 | 0 | authority_gap |
 | dodd-5000-71 | 1 | 8 | 0 | evidence_backed |
 | dodd-5010-42 | 0 | 7 | 0 | authority_gap |
@@ -1650,18 +1650,23 @@ Generated: 2026-06-13T13:55:00.000Z
 | ar-25-2-army-cybersecurity | 36 | 4 | 15 | evidence_backed |
 | mco-5239-2b-marine-corps-cybersecurity | 2 | 4 | 0 | inferred_review_needed |
 | opnavinst-5239-1e-navy-cybersecurity | 3 | 4 | 0 | inferred_review_needed |
-| cyber-mil-cyber-awareness-challenge | 8 | 4 | 0 | inferred_review_needed |
+| cyber-mil-cyber-awareness-challenge | 7 | 4 | 0 | inferred_review_needed |
 | dod-cyber-exchange-cloud-computing-srg | 0 | 0 | 0 | authority_gap |
 | dod-cyber-exchange-stig-library | 1 | 0 | 0 | inferred_review_needed |
-| navfac-ufc-4-010-06-frcs-cybersecurity | 7 | 4 | 2 | evidence_backed |
+| navfac-ufc-4-010-06-frcs-cybersecurity | 3 | 4 | 2 | evidence_backed |
 | nsa-zero-trust-implementation-guideline-primer | 3 | 4 | 0 | inferred_review_needed |
 | uscg-cybersecurity-and-cyberspace-operations-strategy | 9 | 4 | 0 | inferred_review_needed |
-| afmci-63-1201-life-cycle-systems-engineering | 1 | 1 | 0 | inferred_review_needed |
-| navadmin-214-24-fy2025-cybersecurity-awareness | 6 | 0 | 0 | inferred_review_needed |
+| afmci-63-1201-life-cycle-systems-engineering | 1 | 3 | 0 | inferred_review_needed |
+| comnavcyberforinst-5239-2d-commanders-cybersecurity-manual | 9 | 0 | 0 | inferred_review_needed |
+| msc-specialtime-2026-cybersecurity-responsibilities | 5 | 0 | 0 | inferred_review_needed |
+| navadmin-214-24-fy2025-cybersecurity-awareness | 4 | 0 | 0 | inferred_review_needed |
 | navair-nawcwd-cyber-risk-assessments-sow | 2 | 0 | 6 | inferred_review_needed |
 | navsea-supship-cybersecurity-management | 9 | 0 | 0 | inferred_review_needed |
-| navwar-digital-engineering-strategy | 2 | 0 | 0 | inferred_review_needed |
-| tradoc-reg-1-8-critical-incidents | 4 | 0 | 0 | inferred_review_needed |
+| navsup-enterprise-web-privacy-impact-assessment | 0 | 0 | 0 | authority_gap |
+| navwar-digital-engineering-strategy | 1 | 0 | 0 | inferred_review_needed |
+| onr-n0001424sc001-rapid-area-detection-cso | 4 | 0 | 1 | evidence_backed |
+| ssp-directors-intent-2023 | 0 | 0 | 0 | authority_gap |
+| tradoc-reg-1-8-critical-incidents | 0 | 0 | 0 | authority_gap |
 | uscybercom-2018-command-vision | 0 | 0 | 0 | authority_gap |
 | uscybercom-mission-and-vision | 0 | 0 | 0 | authority_gap |
 | ussocom-directive-25-53-privacy-program | 9 | 0 | 2 | evidence_backed |

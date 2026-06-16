@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-16T14:22:33.873Z",
+  "generated_at": "2026-06-16T14:45:07.329Z",
   "totals": {
-    "sources": 60,
-    "sources_with_artifacts": 38,
+    "sources": 65,
+    "sources_with_artifacts": 43,
     "sources_not_started": 22,
     "direct_fetch_ready": 25,
     "blocked_or_browser_needed": 6,
-    "needs_probe": 28,
+    "needs_probe": 33,
     "api_key_required": 3,
     "api_sources": 5,
     "feed_sources": 8,
@@ -31,7 +31,7 @@
     },
     {
       "automation_status": "needs_probe",
-      "count": 28
+      "count": 33
     }
   ],
   "by_priority": [
@@ -49,7 +49,7 @@
     },
     {
       "priority": "medium",
-      "count": 20
+      "count": 25
     }
   ],
   "by_capture_strategy": [
@@ -59,7 +59,7 @@
     },
     {
       "capture_strategy": "browser_fetch",
-      "count": 32
+      "count": 36
     },
     {
       "capture_strategy": "content_package_fetch",
@@ -67,7 +67,7 @@
     },
     {
       "capture_strategy": "direct_fetch",
-      "count": 42
+      "count": 43
     },
     {
       "capture_strategy": "html_parse",
@@ -75,7 +75,7 @@
     },
     {
       "capture_strategy": "manual_import",
-      "count": 32
+      "count": 37
     },
     {
       "capture_strategy": "pdf_fetch",
@@ -91,7 +91,7 @@
     },
     {
       "capture_strategy": "source_discovery",
-      "count": 11
+      "count": 16
     },
     {
       "capture_strategy": "source_known_registration",
@@ -15860,6 +15860,70 @@
       "notes": "Marine Corps policy/message source for later cross-service coverage."
     },
     {
+      "id": "military-sealift-command",
+      "name": "Military Sealift Command",
+      "source_owner": "Military Sealift Command",
+      "issuing_authority_scope": [
+        "MSC",
+        "Department of the Navy"
+      ],
+      "source_location_types": [
+        "msc_pdf",
+        "msc_html",
+        "program_office_pdf",
+        "program_office_html"
+      ],
+      "artifact_types": [
+        "Command procurement terms",
+        "Command handbook",
+        "Contract clause set"
+      ],
+      "families": [
+        "acquisition",
+        "logistics",
+        "cybersecurity"
+      ],
+      "coverage_targets": [],
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "medium",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 0,
+        "feed_endpoints": 0,
+        "search_endpoints": 1,
+        "sitemap_urls": 0,
+        "has_robots": true
+      },
+      "coverage_status": "source_known_blocked",
+      "counts": {
+        "artifacts": 1,
+        "mirrored": 0,
+        "blocked": 1,
+        "text_extracted": 0,
+        "analytics": 1,
+        "analysis": 1,
+        "structured": 0,
+        "versioned": 1
+      },
+      "artifacts": [
+        {
+          "id": "msc-specialtime-2026-cybersecurity-responsibilities",
+          "title": "MSC SPECIALTIME 2026: Privileged User Cybersecurity Responsibilities",
+          "mirror_status": "blocked",
+          "pipeline_state": "source_known",
+          "source_location_type": "msc_pdf",
+          "path": "artifacts/msc-specialtime-2026-cybersecurity-responsibilities/artifact.json"
+        }
+      ],
+      "notes": "Sealift logistics and procurement governance lane."
+    },
+    {
       "id": "navair",
       "name": "NAVAIR",
       "source_owner": "Naval Air Systems Command",
@@ -16020,6 +16084,71 @@
       "notes": "Candidate lower-echelon source. Requires discovery before artifact rules are trusted."
     },
     {
+      "id": "navsup",
+      "name": "NAVSUP",
+      "source_owner": "Naval Supply Systems Command",
+      "issuing_authority_scope": [
+        "NAVSUP",
+        "Department of the Navy"
+      ],
+      "source_location_types": [
+        "navsup_pdf",
+        "navsup_html",
+        "program_office_pdf",
+        "program_office_html"
+      ],
+      "artifact_types": [
+        "Command policy",
+        "Privacy Impact Assessment",
+        "Supply guidance"
+      ],
+      "families": [
+        "logistics",
+        "acquisition",
+        "privacy",
+        "cybersecurity"
+      ],
+      "coverage_targets": [],
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "medium",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 0,
+        "feed_endpoints": 0,
+        "search_endpoints": 1,
+        "sitemap_urls": 0,
+        "has_robots": true
+      },
+      "coverage_status": "source_known_blocked",
+      "counts": {
+        "artifacts": 1,
+        "mirrored": 0,
+        "blocked": 1,
+        "text_extracted": 0,
+        "analytics": 1,
+        "analysis": 1,
+        "structured": 0,
+        "versioned": 1
+      },
+      "artifacts": [
+        {
+          "id": "navsup-enterprise-web-privacy-impact-assessment",
+          "title": "NAVSUP Enterprise Web Privacy Impact Assessment",
+          "mirror_status": "blocked",
+          "pipeline_state": "source_known",
+          "source_location_type": "navsup_pdf",
+          "path": "artifacts/navsup-enterprise-web-privacy-impact-assessment/artifact.json"
+        }
+      ],
+      "notes": "Navy supply, logistics, and enterprise-system policy lane."
+    },
+    {
       "id": "navwar",
       "name": "NAVWAR",
       "source_owner": "Naval Information Warfare Systems Command",
@@ -16098,6 +16227,94 @@
         }
       ],
       "notes": "Candidate lower-echelon source for Navy cyber/software implementation guidance."
+    },
+    {
+      "id": "navy-cyber-forces",
+      "name": "Navy Cyber Forces",
+      "source_owner": "Navy Cyber Forces",
+      "issuing_authority_scope": [
+        "NAVCYBERFOR",
+        "Department of the Navy"
+      ],
+      "source_location_types": [
+        "navy_cyber_pdf",
+        "navy_cyber_html",
+        "fleet_command_pdf",
+        "fleet_command_html"
+      ],
+      "artifact_types": [
+        "Command instruction",
+        "Cybersecurity manual",
+        "Operational guidance"
+      ],
+      "families": [
+        "cybersecurity",
+        "operations",
+        "implementation"
+      ],
+      "coverage_targets": [],
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "medium",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 0,
+        "feed_endpoints": 0,
+        "search_endpoints": 1,
+        "sitemap_urls": 0,
+        "has_robots": true
+      },
+      "coverage_status": "mixed",
+      "counts": {
+        "artifacts": 4,
+        "mirrored": 1,
+        "blocked": 3,
+        "text_extracted": 1,
+        "analytics": 4,
+        "analysis": 4,
+        "structured": 1,
+        "versioned": 4
+      },
+      "artifacts": [
+        {
+          "id": "comnavcyberforinst-5239-2d-commanders-cybersecurity-manual",
+          "title": "COMNAVCYBERFORINST 5239.2D: Commander's Cybersecurity Manual",
+          "mirror_status": "blocked",
+          "pipeline_state": "source_known",
+          "source_location_type": "navy_cyber_pdf",
+          "path": "artifacts/comnavcyberforinst-5239-2d-commanders-cybersecurity-manual/artifact.json"
+        },
+        {
+          "id": "navair-nawcwd-cyber-risk-assessments-sow",
+          "title": "NAVAIR NAWCWD Cyber Risk Assessments Statement of Work",
+          "mirror_status": "mirrored",
+          "pipeline_state": "structured",
+          "source_location_type": "fleet_command_pdf",
+          "path": "artifacts/navair-nawcwd-cyber-risk-assessments-sow/artifact.json"
+        },
+        {
+          "id": "navsea-supship-cybersecurity-management",
+          "title": "NAVSEA SUPSHIP Operations Manual Chapter 16: Cybersecurity Management",
+          "mirror_status": "blocked",
+          "pipeline_state": "source_known",
+          "source_location_type": "fleet_command_pdf",
+          "path": "artifacts/navsea-supship-cybersecurity-management/artifact.json"
+        },
+        {
+          "id": "navwar-digital-engineering-strategy",
+          "title": "NAVWAR Digital Engineering Strategy",
+          "mirror_status": "blocked",
+          "pipeline_state": "source_known",
+          "source_location_type": "fleet_command_pdf",
+          "path": "artifacts/navwar-digital-engineering-strategy/artifact.json"
+        }
+      ],
+      "notes": "Navy cyber command manual and operational cybersecurity lane."
     },
     {
       "id": "navy-doctrine-library",
@@ -16231,6 +16448,70 @@
       "notes": "Cyber hardening and reference-design source for national security systems and DoD implementation work."
     },
     {
+      "id": "office-of-naval-research",
+      "name": "Office of Naval Research",
+      "source_owner": "Office of Naval Research",
+      "issuing_authority_scope": [
+        "ONR",
+        "Department of the Navy"
+      ],
+      "source_location_types": [
+        "onr_pdf",
+        "onr_html",
+        "program_office_pdf",
+        "program_office_html"
+      ],
+      "artifact_types": [
+        "Broad Agency Announcement",
+        "Commercial Solutions Opening",
+        "Research guidance"
+      ],
+      "families": [
+        "research_security",
+        "acquisition",
+        "technology_policy"
+      ],
+      "coverage_targets": [],
+      "capture_strategies": [
+        "direct_fetch",
+        "source_discovery",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "medium",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 0,
+        "feed_endpoints": 0,
+        "search_endpoints": 1,
+        "sitemap_urls": 0,
+        "has_robots": true
+      },
+      "coverage_status": "mirrored",
+      "counts": {
+        "artifacts": 1,
+        "mirrored": 1,
+        "blocked": 0,
+        "text_extracted": 1,
+        "analytics": 1,
+        "analysis": 1,
+        "structured": 1,
+        "versioned": 1
+      },
+      "artifacts": [
+        {
+          "id": "onr-n0001424sc001-rapid-area-detection-cso",
+          "title": "ONR Commercial Solutions Opening N0001424SC001: Automated Target Recognition for Rapid Area Detection",
+          "mirror_status": "mirrored",
+          "pipeline_state": "structured",
+          "source_location_type": "onr_pdf",
+          "path": "artifacts/onr-n0001424sc001-rapid-area-detection-cso/artifact.json"
+        }
+      ],
+      "notes": "Navy research and innovation acquisition lane."
+    },
+    {
       "id": "opm-policy",
       "name": "OPM Policy",
       "source_owner": "Office of Personnel Management",
@@ -16347,6 +16628,70 @@
       },
       "artifacts": [],
       "notes": "Space Force doctrine and service-guidance lane for space-specific downstream references."
+    },
+    {
+      "id": "strategic-systems-programs",
+      "name": "Strategic Systems Programs",
+      "source_owner": "Strategic Systems Programs",
+      "issuing_authority_scope": [
+        "SSP",
+        "Department of the Navy"
+      ],
+      "source_location_types": [
+        "ssp_pdf",
+        "ssp_html",
+        "program_office_pdf",
+        "program_office_html"
+      ],
+      "artifact_types": [
+        "Command strategy",
+        "Program guidance",
+        "Strategic weapons system guidance"
+      ],
+      "families": [
+        "strategic_planning",
+        "acquisition",
+        "workforce"
+      ],
+      "coverage_targets": [],
+      "capture_strategies": [
+        "source_discovery",
+        "browser_fetch",
+        "manual_import"
+      ],
+      "automation_status": "needs_probe",
+      "api_key_required": false,
+      "priority": "medium",
+      "discovery_surface_counts": {
+        "landing_pages": 1,
+        "api_endpoints": 0,
+        "feed_endpoints": 0,
+        "search_endpoints": 1,
+        "sitemap_urls": 0,
+        "has_robots": true
+      },
+      "coverage_status": "source_known_blocked",
+      "counts": {
+        "artifacts": 1,
+        "mirrored": 0,
+        "blocked": 1,
+        "text_extracted": 0,
+        "analytics": 1,
+        "analysis": 1,
+        "structured": 0,
+        "versioned": 1
+      },
+      "artifacts": [
+        {
+          "id": "ssp-directors-intent-2023",
+          "title": "Strategic Systems Programs Director's Intent 2023",
+          "mirror_status": "blocked",
+          "pipeline_state": "source_known",
+          "source_location_type": "ssp_pdf",
+          "path": "artifacts/ssp-directors-intent-2023/artifact.json"
+        }
+      ],
+      "notes": "Strategic weapons systems command lane for Navy program governance."
     },
     {
       "id": "tradoc-publications",

@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-06-13T13:55:00.000Z",
   "authority_chain_version": "governance-authority-chain-v1",
-  "artifact_count": 1640,
+  "artifact_count": 1645,
   "lanes": [
     {
       "id": "law",
@@ -45,11 +45,11 @@
     }
   ],
   "summary": {
-    "node_count": 1640,
-    "edge_count": 11946,
-    "resolved_reference_edge_count": 8918,
-    "inferred_flowdown_edge_count": 3028,
-    "artifacts_with_upstream_authority": 1089,
+    "node_count": 1645,
+    "edge_count": 11951,
+    "resolved_reference_edge_count": 8920,
+    "inferred_flowdown_edge_count": 3031,
+    "artifacts_with_upstream_authority": 1091,
     "artifacts_with_downstream_implementation": 1307
   },
   "nodes": [
@@ -24534,6 +24534,36 @@
       "status": "catalogued"
     },
     {
+      "id": "comnavcyberforinst-5239-2d-commanders-cybersecurity-manual",
+      "label": "NAVCYBERFOR 5239.2D",
+      "title": "COMNAVCYBERFORINST 5239.2D: Commander's Cybersecurity Manual",
+      "artifact_type": "Command instruction",
+      "lane": "echelon4",
+      "lane_label": "Echelon 3-4",
+      "hierarchy_rank": 90,
+      "family": "cybersecurity",
+      "issuing_authority": "Commander, Navy Cyber Forces",
+      "source_system": "Navy Cyber Forces",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
+      "id": "msc-specialtime-2026-cybersecurity-responsibilities",
+      "label": "MSC SPECIALTIME 2026",
+      "title": "MSC SPECIALTIME 2026: Privileged User Cybersecurity Responsibilities",
+      "artifact_type": "Command procurement terms",
+      "lane": "echelon4",
+      "lane_label": "Echelon 3-4",
+      "hierarchy_rank": 90,
+      "family": "acquisition",
+      "issuing_authority": "Military Sealift Command",
+      "source_system": "Military Sealift Command",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
       "id": "navadmin-214-24-fy2025-cybersecurity-awareness",
       "label": "NAVADMIN 214/24",
       "title": "NAVADMIN 214/24: Fiscal Year 2025 Cybersecurity Awareness Challenge",
@@ -24579,6 +24609,21 @@
       "status": "catalogued"
     },
     {
+      "id": "navsup-enterprise-web-privacy-impact-assessment",
+      "label": "NAVSUP Enterprise Web PIA",
+      "title": "NAVSUP Enterprise Web Privacy Impact Assessment",
+      "artifact_type": "Privacy Impact Assessment",
+      "lane": "echelon4",
+      "lane_label": "Echelon 3-4",
+      "hierarchy_rank": 90,
+      "family": "privacy",
+      "issuing_authority": "Naval Supply Systems Command",
+      "source_system": "NAVSUP",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
       "id": "navwar-digital-engineering-strategy",
       "label": "NAVWAR DE Strategy",
       "title": "NAVWAR Digital Engineering Strategy",
@@ -24589,6 +24634,36 @@
       "family": "software_acquisition",
       "issuing_authority": "Naval Information Warfare Systems Command",
       "source_system": "NAVWAR",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
+      "id": "onr-n0001424sc001-rapid-area-detection-cso",
+      "label": "ONR Rapid Area Detection CSO",
+      "title": "ONR Commercial Solutions Opening N0001424SC001: Automated Target Recognition for Rapid Area Detection",
+      "artifact_type": "Commercial Solutions Opening",
+      "lane": "echelon4",
+      "lane_label": "Echelon 3-4",
+      "hierarchy_rank": 90,
+      "family": "acquisition",
+      "issuing_authority": "Office of Naval Research",
+      "source_system": "Office of Naval Research",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "ssp-directors-intent-2023",
+      "label": "SSP Director's Intent",
+      "title": "Strategic Systems Programs Director's Intent 2023",
+      "artifact_type": "Command strategy",
+      "lane": "echelon4",
+      "lane_label": "Echelon 3-4",
+      "hierarchy_rank": 90,
+      "family": "strategic_planning",
+      "issuing_authority": "Strategic Systems Programs",
+      "source_system": "Strategic Systems Programs",
       "mirror_status": "blocked",
       "parser_status": "blocked",
       "status": "catalogued"
@@ -146846,12 +146921,53 @@
       }
     },
     {
+      "id": "afmci-63-1201-life-cycle-systems-engineering->msc-specialtime-2026-cybersecurity-responsibilities:localizes:inferred_flowdown",
+      "source_artifact_id": "afmci-63-1201-life-cycle-systems-engineering",
+      "source_label": "AFMCI 63-1201",
+      "source_lane": "echelon2",
+      "target_artifact_id": "msc-specialtime-2026-cybersecurity-responsibilities",
+      "target_label": "MSC SPECIALTIME 2026",
+      "target_lane": "echelon4",
+      "relationship": "localizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.78,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "acquisition"
+        ],
+        "shared_family": "acquisition"
+      }
+    },
+    {
       "id": "afmci-63-1201-life-cycle-systems-engineering->navair-nawcwd-cyber-risk-assessments-sow:localizes:inferred_flowdown",
       "source_artifact_id": "afmci-63-1201-life-cycle-systems-engineering",
       "source_label": "AFMCI 63-1201",
       "source_lane": "echelon2",
       "target_artifact_id": "navair-nawcwd-cyber-risk-assessments-sow",
       "target_label": "NAVAIR Cyber Risk SOW",
+      "target_lane": "echelon4",
+      "relationship": "localizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.78,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "acquisition",
+          "acquisition"
+        ],
+        "shared_family": "acquisition"
+      }
+    },
+    {
+      "id": "afmci-63-1201-life-cycle-systems-engineering->onr-n0001424sc001-rapid-area-detection-cso:localizes:inferred_flowdown",
+      "source_artifact_id": "afmci-63-1201-life-cycle-systems-engineering",
+      "source_label": "AFMCI 63-1201",
+      "source_lane": "echelon2",
+      "target_artifact_id": "onr-n0001424sc001-rapid-area-detection-cso",
+      "target_label": "ONR Rapid Area Detection CSO",
       "target_lane": "echelon4",
       "relationship": "localizes",
       "evidence_type": "inferred_flowdown",
@@ -146889,6 +147005,27 @@
       }
     },
     {
+      "id": "cyber-mil-cyber-awareness-challenge->comnavcyberforinst-5239-2d-commanders-cybersecurity-manual:localizes:inferred_flowdown",
+      "source_artifact_id": "cyber-mil-cyber-awareness-challenge",
+      "source_label": "Cyber Awareness Challenge",
+      "source_lane": "echelon2",
+      "target_artifact_id": "comnavcyberforinst-5239-2d-commanders-cybersecurity-manual",
+      "target_label": "NAVCYBERFOR 5239.2D",
+      "target_lane": "echelon4",
+      "relationship": "localizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.66,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "cybersecurity",
+          "cybersecurity"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
       "id": "cyber-mil-cyber-awareness-challenge->navsea-supship-cybersecurity-management:localizes:inferred_flowdown",
       "source_artifact_id": "cyber-mil-cyber-awareness-challenge",
       "source_label": "Cyber Awareness Challenge",
@@ -146910,12 +147047,12 @@
       }
     },
     {
-      "id": "cyber-mil-cyber-awareness-challenge->tradoc-reg-1-8-critical-incidents:localizes:inferred_flowdown",
-      "source_artifact_id": "cyber-mil-cyber-awareness-challenge",
-      "source_label": "Cyber Awareness Challenge",
+      "id": "nsa-zero-trust-implementation-guideline-primer->msc-specialtime-2026-cybersecurity-responsibilities:localizes:inferred_flowdown",
+      "source_artifact_id": "nsa-zero-trust-implementation-guideline-primer",
+      "source_label": "NSA ZIG Primer",
       "source_lane": "echelon2",
-      "target_artifact_id": "tradoc-reg-1-8-critical-incidents",
-      "target_label": "TR 1-8",
+      "target_artifact_id": "msc-specialtime-2026-cybersecurity-responsibilities",
+      "target_label": "MSC SPECIALTIME 2026",
       "target_lane": "echelon4",
       "relationship": "localizes",
       "evidence_type": "inferred_flowdown",
@@ -146930,20 +147067,21 @@
       }
     },
     {
-      "id": "nsa-zero-trust-implementation-guideline-primer->navadmin-214-24-fy2025-cybersecurity-awareness:localizes:inferred_flowdown",
+      "id": "nsa-zero-trust-implementation-guideline-primer->comnavcyberforinst-5239-2d-commanders-cybersecurity-manual:localizes:inferred_flowdown",
       "source_artifact_id": "nsa-zero-trust-implementation-guideline-primer",
       "source_label": "NSA ZIG Primer",
       "source_lane": "echelon2",
-      "target_artifact_id": "navadmin-214-24-fy2025-cybersecurity-awareness",
-      "target_label": "NAVADMIN 214/24",
+      "target_artifact_id": "comnavcyberforinst-5239-2d-commanders-cybersecurity-manual",
+      "target_label": "NAVCYBERFOR 5239.2D",
       "target_lane": "echelon4",
       "relationship": "localizes",
       "evidence_type": "inferred_flowdown",
-      "confidence": 0.59,
+      "confidence": 0.66,
       "direction": "downstream",
       "evidence": {
         "basis": "shared_family_tags_and_authority_rank",
         "shared_tags": [
+          "cybersecurity",
           "cybersecurity"
         ],
         "shared_family": ""
@@ -146971,12 +147109,12 @@
       }
     },
     {
-      "id": "nsa-zero-trust-implementation-guideline-primer->tradoc-reg-1-8-critical-incidents:localizes:inferred_flowdown",
-      "source_artifact_id": "nsa-zero-trust-implementation-guideline-primer",
-      "source_label": "NSA ZIG Primer",
+      "id": "navfac-ufc-4-010-06-frcs-cybersecurity->msc-specialtime-2026-cybersecurity-responsibilities:localizes:inferred_flowdown",
+      "source_artifact_id": "navfac-ufc-4-010-06-frcs-cybersecurity",
+      "source_label": "UFC 4-010-06",
       "source_lane": "echelon2",
-      "target_artifact_id": "tradoc-reg-1-8-critical-incidents",
-      "target_label": "TR 1-8",
+      "target_artifact_id": "msc-specialtime-2026-cybersecurity-responsibilities",
+      "target_label": "MSC SPECIALTIME 2026",
       "target_lane": "echelon4",
       "relationship": "localizes",
       "evidence_type": "inferred_flowdown",
@@ -146991,20 +147129,21 @@
       }
     },
     {
-      "id": "navfac-ufc-4-010-06-frcs-cybersecurity->navadmin-214-24-fy2025-cybersecurity-awareness:localizes:inferred_flowdown",
+      "id": "navfac-ufc-4-010-06-frcs-cybersecurity->comnavcyberforinst-5239-2d-commanders-cybersecurity-manual:localizes:inferred_flowdown",
       "source_artifact_id": "navfac-ufc-4-010-06-frcs-cybersecurity",
       "source_label": "UFC 4-010-06",
       "source_lane": "echelon2",
-      "target_artifact_id": "navadmin-214-24-fy2025-cybersecurity-awareness",
-      "target_label": "NAVADMIN 214/24",
+      "target_artifact_id": "comnavcyberforinst-5239-2d-commanders-cybersecurity-manual",
+      "target_label": "NAVCYBERFOR 5239.2D",
       "target_lane": "echelon4",
       "relationship": "localizes",
       "evidence_type": "inferred_flowdown",
-      "confidence": 0.59,
+      "confidence": 0.66,
       "direction": "downstream",
       "evidence": {
         "basis": "shared_family_tags_and_authority_rank",
         "shared_tags": [
+          "cybersecurity",
           "cybersecurity"
         ],
         "shared_family": ""
@@ -147032,12 +147171,12 @@
       }
     },
     {
-      "id": "navfac-ufc-4-010-06-frcs-cybersecurity->tradoc-reg-1-8-critical-incidents:localizes:inferred_flowdown",
-      "source_artifact_id": "navfac-ufc-4-010-06-frcs-cybersecurity",
-      "source_label": "UFC 4-010-06",
+      "id": "uscg-cybersecurity-and-cyberspace-operations-strategy->msc-specialtime-2026-cybersecurity-responsibilities:localizes:inferred_flowdown",
+      "source_artifact_id": "uscg-cybersecurity-and-cyberspace-operations-strategy",
+      "source_label": "USCG Cyber Strategy",
       "source_lane": "echelon2",
-      "target_artifact_id": "tradoc-reg-1-8-critical-incidents",
-      "target_label": "TR 1-8",
+      "target_artifact_id": "msc-specialtime-2026-cybersecurity-responsibilities",
+      "target_label": "MSC SPECIALTIME 2026",
       "target_lane": "echelon4",
       "relationship": "localizes",
       "evidence_type": "inferred_flowdown",
@@ -147072,6 +147211,27 @@
       }
     },
     {
+      "id": "uscg-cybersecurity-and-cyberspace-operations-strategy->comnavcyberforinst-5239-2d-commanders-cybersecurity-manual:localizes:inferred_flowdown",
+      "source_artifact_id": "uscg-cybersecurity-and-cyberspace-operations-strategy",
+      "source_label": "USCG Cyber Strategy",
+      "source_lane": "echelon2",
+      "target_artifact_id": "comnavcyberforinst-5239-2d-commanders-cybersecurity-manual",
+      "target_label": "NAVCYBERFOR 5239.2D",
+      "target_lane": "echelon4",
+      "relationship": "localizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.78,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "cybersecurity",
+          "cybersecurity"
+        ],
+        "shared_family": "cybersecurity"
+      }
+    },
+    {
       "id": "uscg-cybersecurity-and-cyberspace-operations-strategy->navsea-supship-cybersecurity-management:localizes:inferred_flowdown",
       "source_artifact_id": "uscg-cybersecurity-and-cyberspace-operations-strategy",
       "source_label": "USCG Cyber Strategy",
@@ -147090,46 +147250,6 @@
           "cybersecurity"
         ],
         "shared_family": "cybersecurity"
-      }
-    },
-    {
-      "id": "uscg-cybersecurity-and-cyberspace-operations-strategy->navwar-digital-engineering-strategy:localizes:inferred_flowdown",
-      "source_artifact_id": "uscg-cybersecurity-and-cyberspace-operations-strategy",
-      "source_label": "USCG Cyber Strategy",
-      "source_lane": "echelon2",
-      "target_artifact_id": "navwar-digital-engineering-strategy",
-      "target_label": "NAVWAR DE Strategy",
-      "target_lane": "echelon4",
-      "relationship": "localizes",
-      "evidence_type": "inferred_flowdown",
-      "confidence": 0.59,
-      "direction": "downstream",
-      "evidence": {
-        "basis": "shared_family_tags_and_authority_rank",
-        "shared_tags": [
-          "strategy"
-        ],
-        "shared_family": ""
-      }
-    },
-    {
-      "id": "uscg-cybersecurity-and-cyberspace-operations-strategy->tradoc-reg-1-8-critical-incidents:localizes:inferred_flowdown",
-      "source_artifact_id": "uscg-cybersecurity-and-cyberspace-operations-strategy",
-      "source_label": "USCG Cyber Strategy",
-      "source_lane": "echelon2",
-      "target_artifact_id": "tradoc-reg-1-8-critical-incidents",
-      "target_label": "TR 1-8",
-      "target_lane": "echelon4",
-      "relationship": "localizes",
-      "evidence_type": "inferred_flowdown",
-      "confidence": 0.59,
-      "direction": "downstream",
-      "evidence": {
-        "basis": "shared_family_tags_and_authority_rank",
-        "shared_tags": [
-          "cybersecurity"
-        ],
-        "shared_family": ""
       }
     },
     {
@@ -155480,26 +155600,6 @@
       }
     },
     {
-      "id": "far-part-39-acquisition-of-it->dodd-5000-01-defense-acquisition-system:implements:inferred_flowdown",
-      "source_artifact_id": "far-part-39-acquisition-of-it",
-      "source_label": "FAR Part 39",
-      "source_lane": "govwide",
-      "target_artifact_id": "dodd-5000-01-defense-acquisition-system",
-      "target_label": "DoDD 5000.01",
-      "target_lane": "dod",
-      "relationship": "implements",
-      "evidence_type": "inferred_flowdown",
-      "confidence": 0.59,
-      "direction": "downstream",
-      "evidence": {
-        "basis": "shared_family_tags_and_authority_rank",
-        "shared_tags": [
-          "acquisition"
-        ],
-        "shared_family": ""
-      }
-    },
-    {
       "id": "nist-sp-800-207-zero-trust-architecture->cjcsi-6510-02g-cryptographic-modernization-planning:implements:inferred_flowdown",
       "source_artifact_id": "nist-sp-800-207-zero-trust-architecture",
       "source_label": "NIST SP 800-207",
@@ -155799,12 +155899,53 @@
       }
     },
     {
+      "id": "far-part-39-acquisition-of-it->msc-specialtime-2026-cybersecurity-responsibilities:verifies_or_localizes:inferred_flowdown",
+      "source_artifact_id": "far-part-39-acquisition-of-it",
+      "source_label": "FAR Part 39",
+      "source_lane": "govwide",
+      "target_artifact_id": "msc-specialtime-2026-cybersecurity-responsibilities",
+      "target_label": "MSC SPECIALTIME 2026",
+      "target_lane": "echelon4",
+      "relationship": "verifies_or_localizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.73,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "acquisition"
+        ],
+        "shared_family": "acquisition"
+      }
+    },
+    {
       "id": "far-part-39-acquisition-of-it->navair-nawcwd-cyber-risk-assessments-sow:verifies_or_localizes:inferred_flowdown",
       "source_artifact_id": "far-part-39-acquisition-of-it",
       "source_label": "FAR Part 39",
       "source_lane": "govwide",
       "target_artifact_id": "navair-nawcwd-cyber-risk-assessments-sow",
       "target_label": "NAVAIR Cyber Risk SOW",
+      "target_lane": "echelon4",
+      "relationship": "verifies_or_localizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.78,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "acquisition",
+          "acquisition"
+        ],
+        "shared_family": "acquisition"
+      }
+    },
+    {
+      "id": "far-part-39-acquisition-of-it->onr-n0001424sc001-rapid-area-detection-cso:verifies_or_localizes:inferred_flowdown",
+      "source_artifact_id": "far-part-39-acquisition-of-it",
+      "source_label": "FAR Part 39",
+      "source_lane": "govwide",
+      "target_artifact_id": "onr-n0001424sc001-rapid-area-detection-cso",
+      "target_label": "ONR Rapid Area Detection CSO",
       "target_lane": "echelon4",
       "relationship": "verifies_or_localizes",
       "evidence_type": "inferred_flowdown",
@@ -248563,26 +248704,6 @@
       }
     },
     {
-      "id": "afi-17-101-risk-management-framework->navfac-ufc-4-010-06-frcs-cybersecurity:component_executes:inferred_flowdown",
-      "source_artifact_id": "afi-17-101-risk-management-framework",
-      "source_label": "AFI 17-101",
-      "source_lane": "service",
-      "target_artifact_id": "navfac-ufc-4-010-06-frcs-cybersecurity",
-      "target_label": "UFC 4-010-06",
-      "target_lane": "echelon2",
-      "relationship": "component_executes",
-      "evidence_type": "inferred_flowdown",
-      "confidence": 0.59,
-      "direction": "downstream",
-      "evidence": {
-        "basis": "shared_family_tags_and_authority_rank",
-        "shared_tags": [
-          "cybersecurity"
-        ],
-        "shared_family": ""
-      }
-    },
-    {
       "id": "afi-17-101-risk-management-framework->uscg-cybersecurity-and-cyberspace-operations-strategy:component_executes:inferred_flowdown",
       "source_artifact_id": "afi-17-101-risk-management-framework",
       "source_label": "AFI 17-101",
@@ -248610,26 +248731,6 @@
       "source_lane": "service",
       "target_artifact_id": "cyber-mil-cyber-awareness-challenge",
       "target_label": "Cyber Awareness Challenge",
-      "target_lane": "echelon2",
-      "relationship": "component_executes",
-      "evidence_type": "inferred_flowdown",
-      "confidence": 0.59,
-      "direction": "downstream",
-      "evidence": {
-        "basis": "shared_family_tags_and_authority_rank",
-        "shared_tags": [
-          "cybersecurity"
-        ],
-        "shared_family": ""
-      }
-    },
-    {
-      "id": "afi-17-130-cybersecurity-program-management->navfac-ufc-4-010-06-frcs-cybersecurity:component_executes:inferred_flowdown",
-      "source_artifact_id": "afi-17-130-cybersecurity-program-management",
-      "source_label": "AFI 17-130",
-      "source_lane": "service",
-      "target_artifact_id": "navfac-ufc-4-010-06-frcs-cybersecurity",
-      "target_label": "UFC 4-010-06",
       "target_lane": "echelon2",
       "relationship": "component_executes",
       "evidence_type": "inferred_flowdown",
@@ -248685,26 +248786,6 @@
       }
     },
     {
-      "id": "ar-25-2-army-cybersecurity->navfac-ufc-4-010-06-frcs-cybersecurity:component_executes:inferred_flowdown",
-      "source_artifact_id": "ar-25-2-army-cybersecurity",
-      "source_label": "AR 25-2",
-      "source_lane": "service",
-      "target_artifact_id": "navfac-ufc-4-010-06-frcs-cybersecurity",
-      "target_label": "UFC 4-010-06",
-      "target_lane": "echelon2",
-      "relationship": "component_executes",
-      "evidence_type": "inferred_flowdown",
-      "confidence": 0.59,
-      "direction": "downstream",
-      "evidence": {
-        "basis": "shared_family_tags_and_authority_rank",
-        "shared_tags": [
-          "cybersecurity"
-        ],
-        "shared_family": ""
-      }
-    },
-    {
       "id": "ar-25-2-army-cybersecurity->uscg-cybersecurity-and-cyberspace-operations-strategy:component_executes:inferred_flowdown",
       "source_artifact_id": "ar-25-2-army-cybersecurity",
       "source_label": "AR 25-2",
@@ -248746,26 +248827,6 @@
       }
     },
     {
-      "id": "mco-5239-2b-marine-corps-cybersecurity->navfac-ufc-4-010-06-frcs-cybersecurity:component_executes:inferred_flowdown",
-      "source_artifact_id": "mco-5239-2b-marine-corps-cybersecurity",
-      "source_label": "MCO 5239.2B",
-      "source_lane": "service",
-      "target_artifact_id": "navfac-ufc-4-010-06-frcs-cybersecurity",
-      "target_label": "UFC 4-010-06",
-      "target_lane": "echelon2",
-      "relationship": "component_executes",
-      "evidence_type": "inferred_flowdown",
-      "confidence": 0.59,
-      "direction": "downstream",
-      "evidence": {
-        "basis": "shared_family_tags_and_authority_rank",
-        "shared_tags": [
-          "cybersecurity"
-        ],
-        "shared_family": ""
-      }
-    },
-    {
       "id": "mco-5239-2b-marine-corps-cybersecurity->uscg-cybersecurity-and-cyberspace-operations-strategy:component_executes:inferred_flowdown",
       "source_artifact_id": "mco-5239-2b-marine-corps-cybersecurity",
       "source_label": "MCO 5239.2B",
@@ -248784,26 +248845,6 @@
           "cybersecurity"
         ],
         "shared_family": "cybersecurity"
-      }
-    },
-    {
-      "id": "opnavinst-5239-1e-navy-cybersecurity->cyber-mil-cyber-awareness-challenge:component_executes:inferred_flowdown",
-      "source_artifact_id": "opnavinst-5239-1e-navy-cybersecurity",
-      "source_label": "OPNAVINST 5239.1E",
-      "source_lane": "service",
-      "target_artifact_id": "cyber-mil-cyber-awareness-challenge",
-      "target_label": "Cyber Awareness Challenge",
-      "target_lane": "echelon2",
-      "relationship": "component_executes",
-      "evidence_type": "inferred_flowdown",
-      "confidence": 0.59,
-      "direction": "downstream",
-      "evidence": {
-        "basis": "shared_family_tags_and_authority_rank",
-        "shared_tags": [
-          "cybersecurity"
-        ],
-        "shared_family": ""
       }
     },
     {
@@ -248828,6 +248869,27 @@
       }
     },
     {
+      "id": "afi-17-101-risk-management-framework->comnavcyberforinst-5239-2d-commanders-cybersecurity-manual:verifies_or_localizes:inferred_flowdown",
+      "source_artifact_id": "afi-17-101-risk-management-framework",
+      "source_label": "AFI 17-101",
+      "source_lane": "service",
+      "target_artifact_id": "comnavcyberforinst-5239-2d-commanders-cybersecurity-manual",
+      "target_label": "NAVCYBERFOR 5239.2D",
+      "target_lane": "echelon4",
+      "relationship": "verifies_or_localizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.66,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "cybersecurity",
+          "cybersecurity"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
       "id": "afi-17-101-risk-management-framework->navsea-supship-cybersecurity-management:verifies_or_localizes:inferred_flowdown",
       "source_artifact_id": "afi-17-101-risk-management-framework",
       "source_label": "AFI 17-101",
@@ -248846,6 +248908,27 @@
           "cybersecurity"
         ],
         "shared_family": ""
+      }
+    },
+    {
+      "id": "afi-17-130-cybersecurity-program-management->comnavcyberforinst-5239-2d-commanders-cybersecurity-manual:verifies_or_localizes:inferred_flowdown",
+      "source_artifact_id": "afi-17-130-cybersecurity-program-management",
+      "source_label": "AFI 17-130",
+      "source_lane": "service",
+      "target_artifact_id": "comnavcyberforinst-5239-2d-commanders-cybersecurity-manual",
+      "target_label": "NAVCYBERFOR 5239.2D",
+      "target_lane": "echelon4",
+      "relationship": "verifies_or_localizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.78,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "cybersecurity",
+          "cybersecurity"
+        ],
+        "shared_family": "cybersecurity"
       }
     },
     {
@@ -248870,12 +248953,54 @@
       }
     },
     {
+      "id": "ar-25-2-army-cybersecurity->comnavcyberforinst-5239-2d-commanders-cybersecurity-manual:verifies_or_localizes:inferred_flowdown",
+      "source_artifact_id": "ar-25-2-army-cybersecurity",
+      "source_label": "AR 25-2",
+      "source_lane": "service",
+      "target_artifact_id": "comnavcyberforinst-5239-2d-commanders-cybersecurity-manual",
+      "target_label": "NAVCYBERFOR 5239.2D",
+      "target_lane": "echelon4",
+      "relationship": "verifies_or_localizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.78,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "cybersecurity",
+          "cybersecurity"
+        ],
+        "shared_family": "cybersecurity"
+      }
+    },
+    {
       "id": "ar-25-2-army-cybersecurity->navsea-supship-cybersecurity-management:verifies_or_localizes:inferred_flowdown",
       "source_artifact_id": "ar-25-2-army-cybersecurity",
       "source_label": "AR 25-2",
       "source_lane": "service",
       "target_artifact_id": "navsea-supship-cybersecurity-management",
       "target_label": "NAVSEA Cybersecurity Management",
+      "target_lane": "echelon4",
+      "relationship": "verifies_or_localizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.78,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "cybersecurity",
+          "cybersecurity"
+        ],
+        "shared_family": "cybersecurity"
+      }
+    },
+    {
+      "id": "mco-5239-2b-marine-corps-cybersecurity->comnavcyberforinst-5239-2d-commanders-cybersecurity-manual:verifies_or_localizes:inferred_flowdown",
+      "source_artifact_id": "mco-5239-2b-marine-corps-cybersecurity",
+      "source_label": "MCO 5239.2B",
+      "source_lane": "service",
+      "target_artifact_id": "comnavcyberforinst-5239-2d-commanders-cybersecurity-manual",
+      "target_label": "NAVCYBERFOR 5239.2D",
       "target_lane": "echelon4",
       "relationship": "verifies_or_localizes",
       "evidence_type": "inferred_flowdown",
@@ -248930,6 +249055,27 @@
           "cybersecurity"
         ],
         "shared_family": ""
+      }
+    },
+    {
+      "id": "opnavinst-5239-1e-navy-cybersecurity->comnavcyberforinst-5239-2d-commanders-cybersecurity-manual:verifies_or_localizes:inferred_flowdown",
+      "source_artifact_id": "opnavinst-5239-1e-navy-cybersecurity",
+      "source_label": "OPNAVINST 5239.1E",
+      "source_lane": "service",
+      "target_artifact_id": "comnavcyberforinst-5239-2d-commanders-cybersecurity-manual",
+      "target_label": "NAVCYBERFOR 5239.2D",
+      "target_lane": "echelon4",
+      "relationship": "verifies_or_localizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.78,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "cybersecurity",
+          "cybersecurity"
+        ],
+        "shared_family": "cybersecurity"
       }
     },
     {
@@ -250113,6 +250259,52 @@
         "first_line": 1551,
         "lines_sample": [
           1551
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-10-section-4871->onr-n0001424sc001-rapid-area-detection-cso:verifies_or_localizes:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-4871",
+      "source_label": "10 U.S.C. 4871",
+      "source_lane": "statute",
+      "target_artifact_id": "onr-n0001424sc001-rapid-area-detection-cso",
+      "target_label": "ONR Rapid Area Detection CSO",
+      "target_lane": "echelon4",
+      "relationship": "verifies_or_localizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_artifact_id": "onr-n0001424sc001-rapid-area-detection-cso",
+        "source_reference_id": "usc:10:4871",
+        "label": "10 U.S.C 4871",
+        "first_line": 974,
+        "lines_sample": [
+          974
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "usc-title-20-section-1002->onr-n0001424sc001-rapid-area-detection-cso:verifies_or_localizes:resolved_reference",
+      "source_artifact_id": "usc-title-20-section-1002",
+      "source_label": "20 U.S.C. 1002",
+      "source_lane": "statute",
+      "target_artifact_id": "onr-n0001424sc001-rapid-area-detection-cso",
+      "target_label": "ONR Rapid Area Detection CSO",
+      "target_lane": "echelon4",
+      "relationship": "verifies_or_localizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_artifact_id": "onr-n0001424sc001-rapid-area-detection-cso",
+        "source_reference_id": "usc:20:1002",
+        "label": "20 USC 1002",
+        "first_line": 1110,
+        "lines_sample": [
+          1110
         ],
         "count": 1
       }
@@ -302815,10 +303007,10 @@
       "artifact_id": "usc-title-10-section-4871",
       "title": "10 U.S.C. 4871: Contracts: consideration of national security objectives",
       "upstream_edge_count": 2,
-      "downstream_edge_count": 9,
-      "catalogued_node_count": 12,
+      "downstream_edge_count": 10,
+      "catalogued_node_count": 13,
       "uncatalogued_gap_count": 0,
-      "evidence_backed_edge_count": 7,
+      "evidence_backed_edge_count": 8,
       "inferred_edge_count": 4,
       "authority_path_status": "root_authority",
       "implementation_path_status": "has_downstream_trace"
@@ -303583,10 +303775,10 @@
       "artifact_id": "usc-title-20-section-1002",
       "title": "20 U.S.C. 1002: Definition of institution of higher education for purposes of student assistance programs",
       "upstream_edge_count": 0,
-      "downstream_edge_count": 19,
-      "catalogued_node_count": 20,
+      "downstream_edge_count": 20,
+      "catalogued_node_count": 21,
       "uncatalogued_gap_count": 1,
-      "evidence_backed_edge_count": 15,
+      "evidence_backed_edge_count": 16,
       "inferred_edge_count": 4,
       "authority_path_status": "root_authority",
       "implementation_path_status": "has_downstream_trace"
@@ -306523,11 +306715,11 @@
       "artifact_id": "far-part-39-acquisition-of-it",
       "title": "Federal Acquisition Regulation Part 39: Acquisition of Information Technology",
       "upstream_edge_count": 0,
-      "downstream_edge_count": 3,
-      "catalogued_node_count": 4,
+      "downstream_edge_count": 4,
+      "catalogued_node_count": 5,
       "uncatalogued_gap_count": 6,
       "evidence_backed_edge_count": 0,
-      "inferred_edge_count": 3,
+      "inferred_edge_count": 4,
       "authority_path_status": "authority_gap",
       "implementation_path_status": "has_downstream_trace"
     },
@@ -307806,12 +307998,12 @@
     {
       "artifact_id": "dodd-5000-01-defense-acquisition-system",
       "title": "DoDD 5000.01: The Defense Acquisition System",
-      "upstream_edge_count": 10,
+      "upstream_edge_count": 9,
       "downstream_edge_count": 56,
-      "catalogued_node_count": 66,
+      "catalogued_node_count": 65,
       "uncatalogued_gap_count": 0,
       "evidence_backed_edge_count": 61,
-      "inferred_edge_count": 5,
+      "inferred_edge_count": 4,
       "authority_path_status": "evidence_backed",
       "implementation_path_status": "has_downstream_trace"
     },
@@ -320406,12 +320598,12 @@
     {
       "artifact_id": "cyber-mil-cyber-awareness-challenge",
       "title": "DoD Cyber Awareness Challenge",
-      "upstream_edge_count": 8,
+      "upstream_edge_count": 7,
       "downstream_edge_count": 4,
-      "catalogued_node_count": 13,
+      "catalogued_node_count": 12,
       "uncatalogued_gap_count": 0,
       "evidence_backed_edge_count": 0,
-      "inferred_edge_count": 12,
+      "inferred_edge_count": 11,
       "authority_path_status": "inferred_review_needed",
       "implementation_path_status": "has_downstream_trace"
     },
@@ -320442,12 +320634,12 @@
     {
       "artifact_id": "navfac-ufc-4-010-06-frcs-cybersecurity",
       "title": "UFC 4-010-06: Cybersecurity of Facility-Related Control Systems",
-      "upstream_edge_count": 7,
+      "upstream_edge_count": 3,
       "downstream_edge_count": 4,
-      "catalogued_node_count": 12,
+      "catalogued_node_count": 8,
       "uncatalogued_gap_count": 2,
       "evidence_backed_edge_count": 3,
-      "inferred_edge_count": 8,
+      "inferred_edge_count": 4,
       "authority_path_status": "evidence_backed",
       "implementation_path_status": "has_downstream_trace"
     },
@@ -320479,23 +320671,47 @@
       "artifact_id": "afmci-63-1201-life-cycle-systems-engineering",
       "title": "AFMCI 63-1201: Life Cycle Systems Engineering",
       "upstream_edge_count": 1,
-      "downstream_edge_count": 1,
-      "catalogued_node_count": 3,
+      "downstream_edge_count": 3,
+      "catalogued_node_count": 5,
       "uncatalogued_gap_count": 0,
       "evidence_backed_edge_count": 0,
-      "inferred_edge_count": 2,
+      "inferred_edge_count": 4,
       "authority_path_status": "inferred_review_needed",
       "implementation_path_status": "has_downstream_trace"
     },
     {
-      "artifact_id": "navadmin-214-24-fy2025-cybersecurity-awareness",
-      "title": "NAVADMIN 214/24: Fiscal Year 2025 Cybersecurity Awareness Challenge",
-      "upstream_edge_count": 6,
+      "artifact_id": "comnavcyberforinst-5239-2d-commanders-cybersecurity-manual",
+      "title": "COMNAVCYBERFORINST 5239.2D: Commander's Cybersecurity Manual",
+      "upstream_edge_count": 9,
       "downstream_edge_count": 0,
-      "catalogued_node_count": 7,
+      "catalogued_node_count": 10,
       "uncatalogued_gap_count": 0,
       "evidence_backed_edge_count": 0,
-      "inferred_edge_count": 6,
+      "inferred_edge_count": 9,
+      "authority_path_status": "inferred_review_needed",
+      "implementation_path_status": "no_downstream_trace_yet"
+    },
+    {
+      "artifact_id": "msc-specialtime-2026-cybersecurity-responsibilities",
+      "title": "MSC SPECIALTIME 2026: Privileged User Cybersecurity Responsibilities",
+      "upstream_edge_count": 5,
+      "downstream_edge_count": 0,
+      "catalogued_node_count": 6,
+      "uncatalogued_gap_count": 0,
+      "evidence_backed_edge_count": 0,
+      "inferred_edge_count": 5,
+      "authority_path_status": "inferred_review_needed",
+      "implementation_path_status": "no_downstream_trace_yet"
+    },
+    {
+      "artifact_id": "navadmin-214-24-fy2025-cybersecurity-awareness",
+      "title": "NAVADMIN 214/24: Fiscal Year 2025 Cybersecurity Awareness Challenge",
+      "upstream_edge_count": 4,
+      "downstream_edge_count": 0,
+      "catalogued_node_count": 5,
+      "uncatalogued_gap_count": 0,
+      "evidence_backed_edge_count": 0,
+      "inferred_edge_count": 4,
       "authority_path_status": "inferred_review_needed",
       "implementation_path_status": "no_downstream_trace_yet"
     },
@@ -320524,27 +320740,63 @@
       "implementation_path_status": "no_downstream_trace_yet"
     },
     {
-      "artifact_id": "navwar-digital-engineering-strategy",
-      "title": "NAVWAR Digital Engineering Strategy",
-      "upstream_edge_count": 2,
+      "artifact_id": "navsup-enterprise-web-privacy-impact-assessment",
+      "title": "NAVSUP Enterprise Web Privacy Impact Assessment",
+      "upstream_edge_count": 0,
       "downstream_edge_count": 0,
-      "catalogued_node_count": 3,
+      "catalogued_node_count": 1,
       "uncatalogued_gap_count": 0,
       "evidence_backed_edge_count": 0,
-      "inferred_edge_count": 2,
+      "inferred_edge_count": 0,
+      "authority_path_status": "authority_gap",
+      "implementation_path_status": "no_downstream_trace_yet"
+    },
+    {
+      "artifact_id": "navwar-digital-engineering-strategy",
+      "title": "NAVWAR Digital Engineering Strategy",
+      "upstream_edge_count": 1,
+      "downstream_edge_count": 0,
+      "catalogued_node_count": 2,
+      "uncatalogued_gap_count": 0,
+      "evidence_backed_edge_count": 0,
+      "inferred_edge_count": 1,
       "authority_path_status": "inferred_review_needed",
+      "implementation_path_status": "no_downstream_trace_yet"
+    },
+    {
+      "artifact_id": "onr-n0001424sc001-rapid-area-detection-cso",
+      "title": "ONR Commercial Solutions Opening N0001424SC001: Automated Target Recognition for Rapid Area Detection",
+      "upstream_edge_count": 4,
+      "downstream_edge_count": 0,
+      "catalogued_node_count": 5,
+      "uncatalogued_gap_count": 1,
+      "evidence_backed_edge_count": 2,
+      "inferred_edge_count": 2,
+      "authority_path_status": "evidence_backed",
+      "implementation_path_status": "no_downstream_trace_yet"
+    },
+    {
+      "artifact_id": "ssp-directors-intent-2023",
+      "title": "Strategic Systems Programs Director's Intent 2023",
+      "upstream_edge_count": 0,
+      "downstream_edge_count": 0,
+      "catalogued_node_count": 1,
+      "uncatalogued_gap_count": 0,
+      "evidence_backed_edge_count": 0,
+      "inferred_edge_count": 0,
+      "authority_path_status": "authority_gap",
       "implementation_path_status": "no_downstream_trace_yet"
     },
     {
       "artifact_id": "tradoc-reg-1-8-critical-incidents",
       "title": "TRADOC Regulation 1-8: Reporting Serious or Sensitive Incidents",
-      "upstream_edge_count": 4,
+      "upstream_edge_count": 0,
       "downstream_edge_count": 0,
-      "catalogued_node_count": 5,
+      "catalogued_node_count": 1,
       "uncatalogued_gap_count": 0,
       "evidence_backed_edge_count": 0,
-      "inferred_edge_count": 4,
-      "authority_path_status": "inferred_review_needed",
+      "inferred_edge_count": 0,
+      "authority_path_status": "authority_gap",
       "implementation_path_status": "no_downstream_trace_yet"
     },
     {

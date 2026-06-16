@@ -2,10 +2,10 @@
 
 Generated: 2026-06-12T23:25:00.000Z
 
-- Artifacts: 1640
-- Resolved reference edges: 10351
-- Uncatalogued references: 7731
-- Artifacts with uncatalogued references: 816
+- Artifacts: 1645
+- Resolved reference edges: 10353
+- Uncatalogued references: 7732
+- Artifacts with uncatalogued references: 817
 
 ## Artifact Summary
 
@@ -1643,10 +1643,15 @@ Generated: 2026-06-12T23:25:00.000Z
 | nsa-zero-trust-implementation-guideline-primer | 0 | 0 | 0 |
 | uscg-cybersecurity-and-cyberspace-operations-strategy | 0 | 0 | 0 |
 | afmci-63-1201-life-cycle-systems-engineering | 0 | 0 | 0 |
+| comnavcyberforinst-5239-2d-commanders-cybersecurity-manual | 0 | 0 | 0 |
+| msc-specialtime-2026-cybersecurity-responsibilities | 0 | 0 | 0 |
 | navadmin-214-24-fy2025-cybersecurity-awareness | 0 | 0 | 0 |
 | navair-nawcwd-cyber-risk-assessments-sow | 0 | 42 | 0 |
 | navsea-supship-cybersecurity-management | 0 | 0 | 0 |
+| navsup-enterprise-web-privacy-impact-assessment | 0 | 0 | 0 |
 | navwar-digital-engineering-strategy | 0 | 0 | 0 |
+| onr-n0001424sc001-rapid-area-detection-cso | 2 | 2 | 2 |
+| ssp-directors-intent-2023 | 0 | 0 | 0 |
 | tradoc-reg-1-8-critical-incidents | 0 | 0 | 0 |
 | uscybercom-2018-command-vision | 0 | 0 | 0 |
 | uscybercom-mission-and-vision | 0 | 0 | 0 |

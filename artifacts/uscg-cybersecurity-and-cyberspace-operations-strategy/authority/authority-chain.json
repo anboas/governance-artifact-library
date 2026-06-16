@@ -222,6 +222,21 @@
       "status": "current"
     },
     {
+      "id": "msc-specialtime-2026-cybersecurity-responsibilities",
+      "label": "MSC SPECIALTIME 2026",
+      "title": "MSC SPECIALTIME 2026: Privileged User Cybersecurity Responsibilities",
+      "artifact_type": "Command procurement terms",
+      "lane": "echelon4",
+      "lane_label": "Echelon 3-4",
+      "hierarchy_rank": 90,
+      "family": "acquisition",
+      "issuing_authority": "Military Sealift Command",
+      "source_system": "Military Sealift Command",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
       "id": "navadmin-214-24-fy2025-cybersecurity-awareness",
       "label": "NAVADMIN 214/24",
       "title": "NAVADMIN 214/24: Fiscal Year 2025 Cybersecurity Awareness Challenge",
@@ -237,6 +252,21 @@
       "status": "catalogued"
     },
     {
+      "id": "comnavcyberforinst-5239-2d-commanders-cybersecurity-manual",
+      "label": "NAVCYBERFOR 5239.2D",
+      "title": "COMNAVCYBERFORINST 5239.2D: Commander's Cybersecurity Manual",
+      "artifact_type": "Command instruction",
+      "lane": "echelon4",
+      "lane_label": "Echelon 3-4",
+      "hierarchy_rank": 90,
+      "family": "cybersecurity",
+      "issuing_authority": "Commander, Navy Cyber Forces",
+      "source_system": "Navy Cyber Forces",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
       "id": "navsea-supship-cybersecurity-management",
       "label": "NAVSEA Cybersecurity Management",
       "title": "NAVSEA SUPSHIP Operations Manual Chapter 16: Cybersecurity Management",
@@ -247,36 +277,6 @@
       "family": "cybersecurity",
       "issuing_authority": "Naval Sea Systems Command",
       "source_system": "NAVSEA",
-      "mirror_status": "blocked",
-      "parser_status": "blocked",
-      "status": "catalogued"
-    },
-    {
-      "id": "navwar-digital-engineering-strategy",
-      "label": "NAVWAR DE Strategy",
-      "title": "NAVWAR Digital Engineering Strategy",
-      "artifact_type": "Command strategy",
-      "lane": "echelon4",
-      "lane_label": "Echelon 3-4",
-      "hierarchy_rank": 90,
-      "family": "software_acquisition",
-      "issuing_authority": "Naval Information Warfare Systems Command",
-      "source_system": "NAVWAR",
-      "mirror_status": "blocked",
-      "parser_status": "blocked",
-      "status": "catalogued"
-    },
-    {
-      "id": "tradoc-reg-1-8-critical-incidents",
-      "label": "TR 1-8",
-      "title": "TRADOC Regulation 1-8: Reporting Serious or Sensitive Incidents",
-      "artifact_type": "TRADOC Regulation",
-      "lane": "echelon4",
-      "lane_label": "Echelon 3-4",
-      "hierarchy_rank": 90,
-      "family": "operations",
-      "issuing_authority": "U.S. Army Training and Doctrine Command",
-      "source_system": "TRADOC Publications",
       "mirror_status": "blocked",
       "parser_status": "blocked",
       "status": "catalogued"
@@ -476,6 +476,26 @@
   ],
   "downstream_edges": [
     {
+      "id": "uscg-cybersecurity-and-cyberspace-operations-strategy->msc-specialtime-2026-cybersecurity-responsibilities:localizes:inferred_flowdown",
+      "source_artifact_id": "uscg-cybersecurity-and-cyberspace-operations-strategy",
+      "source_label": "USCG Cyber Strategy",
+      "source_lane": "echelon2",
+      "target_artifact_id": "msc-specialtime-2026-cybersecurity-responsibilities",
+      "target_label": "MSC SPECIALTIME 2026",
+      "target_lane": "echelon4",
+      "relationship": "localizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.59,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "cybersecurity"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
       "id": "uscg-cybersecurity-and-cyberspace-operations-strategy->navadmin-214-24-fy2025-cybersecurity-awareness:localizes:inferred_flowdown",
       "source_artifact_id": "uscg-cybersecurity-and-cyberspace-operations-strategy",
       "source_label": "USCG Cyber Strategy",
@@ -493,6 +513,27 @@
           "cybersecurity"
         ],
         "shared_family": ""
+      }
+    },
+    {
+      "id": "uscg-cybersecurity-and-cyberspace-operations-strategy->comnavcyberforinst-5239-2d-commanders-cybersecurity-manual:localizes:inferred_flowdown",
+      "source_artifact_id": "uscg-cybersecurity-and-cyberspace-operations-strategy",
+      "source_label": "USCG Cyber Strategy",
+      "source_lane": "echelon2",
+      "target_artifact_id": "comnavcyberforinst-5239-2d-commanders-cybersecurity-manual",
+      "target_label": "NAVCYBERFOR 5239.2D",
+      "target_lane": "echelon4",
+      "relationship": "localizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.78,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "cybersecurity",
+          "cybersecurity"
+        ],
+        "shared_family": "cybersecurity"
       }
     },
     {
@@ -514,46 +555,6 @@
           "cybersecurity"
         ],
         "shared_family": "cybersecurity"
-      }
-    },
-    {
-      "id": "uscg-cybersecurity-and-cyberspace-operations-strategy->navwar-digital-engineering-strategy:localizes:inferred_flowdown",
-      "source_artifact_id": "uscg-cybersecurity-and-cyberspace-operations-strategy",
-      "source_label": "USCG Cyber Strategy",
-      "source_lane": "echelon2",
-      "target_artifact_id": "navwar-digital-engineering-strategy",
-      "target_label": "NAVWAR DE Strategy",
-      "target_lane": "echelon4",
-      "relationship": "localizes",
-      "evidence_type": "inferred_flowdown",
-      "confidence": 0.59,
-      "direction": "downstream",
-      "evidence": {
-        "basis": "shared_family_tags_and_authority_rank",
-        "shared_tags": [
-          "strategy"
-        ],
-        "shared_family": ""
-      }
-    },
-    {
-      "id": "uscg-cybersecurity-and-cyberspace-operations-strategy->tradoc-reg-1-8-critical-incidents:localizes:inferred_flowdown",
-      "source_artifact_id": "uscg-cybersecurity-and-cyberspace-operations-strategy",
-      "source_label": "USCG Cyber Strategy",
-      "source_lane": "echelon2",
-      "target_artifact_id": "tradoc-reg-1-8-critical-incidents",
-      "target_label": "TR 1-8",
-      "target_lane": "echelon4",
-      "relationship": "localizes",
-      "evidence_type": "inferred_flowdown",
-      "confidence": 0.59,
-      "direction": "downstream",
-      "evidence": {
-        "basis": "shared_family_tags_and_authority_rank",
-        "shared_tags": [
-          "cybersecurity"
-        ],
-        "shared_family": ""
       }
     }
   ],
