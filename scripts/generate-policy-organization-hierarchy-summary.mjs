@@ -11,6 +11,7 @@ const exploration = readJson("data/organization-entity-source-exploration.json")
 
 const rows = [];
 const seenArtifacts = new Set();
+const branchIds = new Map();
 
 const rootId = "department-of-war";
 addRow({
@@ -62,20 +63,27 @@ for (const entity of exploration.dod_opr_entities || []) {
 
 for (const entity of exploration.source_owner_entities || []) {
   if (entity.source_name === "DoW/DoD Issuances") continue;
-  const group = sourceOwnerGroup(entity);
-  const groupId = group === "services" ? servicesId : group === "commands" ? commandsId : externalId;
-  const ownerId = addBranch(
-    groupId,
-    2,
-    "policy-echelon2",
-    entity.entity_name,
-    `Echelon 2 · ${Number(entity.artifact_count || 0).toLocaleString()} artifacts · ${entity.source_name}`,
-    `source-owner-${entity.source_id || slugFor(entity.source_name)}`,
-    { source_systems: [entity.source_name], families: entity.families || [] }
-  );
+  const placement = sourceOwnerPlacement(entity);
+  let parentId = placement.groupId;
+  placement.ancestors.forEach((ancestor, index) => {
+    const level = 2 + index;
+    parentId = addSharedBranch(
+      parentId,
+      level,
+      `policy-echelon${Math.min(level, 4)}`,
+      ancestor.title,
+      ancestor.meta || `${echelonLabel(level)} · Policy owner`,
+      ancestor.slug || ancestor.title,
+      {
+        filter_type: "hierarchy",
+        source_systems: [entity.source_name],
+        families: entity.families || [],
+      }
+    );
+  });
   const sourceId = addBranch(
-    ownerId,
-    3,
+    parentId,
+    Math.min(2 + placement.ancestors.length, 5),
     "policy-source-system",
     entity.source_name,
     `Source system · ${entity.priority || "tracked"} · ${entity.automation_status || "unknown automation"}`,
@@ -83,12 +91,13 @@ for (const entity of exploration.source_owner_entities || []) {
     { filter_type: "source", filter_value: entity.source_name, source_systems: [entity.source_name], families: entity.families || [] }
   );
   for (const artifact of (entity.artifacts || []).sort((a, b) => String(a.title || a.id).localeCompare(String(b.title || b.id), undefined, { numeric: true }))) {
-    addArtifact(sourceId, 4, artifact);
+    addArtifact(sourceId, Math.min(3 + placement.ancestors.length, 6), artifact);
     seenArtifacts.add(artifact.id);
   }
 }
 
 hydrateChildCountsAndArtifactIds();
+const orderedRows = orderRowsPreorder(rootId);
 
 const model = {
   generated_at: manifest.generated_at,
@@ -96,15 +105,15 @@ const model = {
   scope: "Compact, precomputed policy-owner hierarchy for browser rendering. Full raw enumeration remains in data/organization-entity-source-exploration.json.",
   summary: {
     artifact_count: seenArtifacts.size,
-    row_count: rows.length,
-    echelon_node_count: rows.filter(row => /^policy-echelon/.test(row.type)).length,
-    source_system_node_count: rows.filter(row => row.type === "policy-source-system").length,
-    artifact_node_count: rows.filter(row => row.type === "policy-artifact").length,
+    row_count: orderedRows.length,
+    echelon_node_count: orderedRows.filter(row => /^policy-echelon/.test(row.type)).length,
+    source_system_node_count: orderedRows.filter(row => row.type === "policy-source-system").length,
+    artifact_node_count: orderedRows.filter(row => row.type === "policy-artifact").length,
     dod_opr_entity_count: exploration.summary?.dod_opr_entity_count || 0,
     dod_opr_artifact_link_count: exploration.summary?.dod_opr_artifact_link_count || 0,
   },
   path: ["Department of War", "Echelon 1", "Echelon 2", "Echelon 3", "Echelon 4", "Artifacts"],
-  rows,
+  rows: orderedRows,
 };
 
 await writeOrCheck("data/policy-organization-hierarchy-summary.json", `${JSON.stringify(model, null, 2)}\n`);
@@ -128,6 +137,21 @@ function addBranch(parentId, level, type, title, meta, slug, extra = {}) {
     source_systems: extra.source_systems || [],
     families: extra.families || [],
   });
+  return id;
+}
+
+function addSharedBranch(parentId, level, type, title, meta, slug, extra = {}) {
+  const key = `${parentId}::${slugFor(slug || title)}`;
+  if (branchIds.has(key)) {
+    const existing = rows.find(row => row.id === branchIds.get(key));
+    if (existing) {
+      existing.source_systems = uniqueSorted([...(existing.source_systems || []), ...(extra.source_systems || [])]);
+      existing.families = uniqueSorted([...(existing.families || []), ...(extra.families || [])]);
+    }
+    return branchIds.get(key);
+  }
+  const id = addBranch(parentId, level, type, title, meta, slug, extra);
+  branchIds.set(key, id);
   return id;
 }
 
@@ -194,11 +218,115 @@ function hydrateChildCountsAndArtifactIds() {
   visit(byId.get(rootId));
 }
 
+function orderRowsPreorder(startId) {
+  const byParent = new Map();
+  const sourceIndex = new Map(rows.map((row, index) => [row.id, index]));
+  for (const row of rows) {
+    const siblings = byParent.get(row.parent_id) || [];
+    siblings.push(row);
+    byParent.set(row.parent_id, siblings);
+  }
+  const order = [];
+  const visit = row => {
+    order.push(row);
+    const children = [...(byParent.get(row.id) || [])].sort((a, b) => compareHierarchyRows(a, b, sourceIndex));
+    for (const child of children) visit(child);
+  };
+  const root = rows.find(row => row.id === startId);
+  if (root) visit(root);
+  for (const row of rows) {
+    if (!order.includes(row)) visit(row);
+  }
+  return order;
+}
+
+function compareHierarchyRows(a, b, sourceIndex) {
+  const rootOrder = new Map([
+    [departmentalId, 0],
+    [servicesId, 1],
+    [commandsId, 2],
+    [externalId, 3],
+  ]);
+  if (rootOrder.has(a.id) || rootOrder.has(b.id)) {
+    return (rootOrder.get(a.id) ?? 99) - (rootOrder.get(b.id) ?? 99);
+  }
+  const typeRank = row => {
+    if (/^policy-echelon/.test(row.type)) return 0;
+    if (row.type === "policy-source-system") return 1;
+    if (row.type === "policy-artifact" || row.type === "policy-candidate") return 2;
+    return 3;
+  };
+  const rank = typeRank(a) - typeRank(b);
+  if (rank) return rank;
+  const title = String(a.title || "").localeCompare(String(b.title || ""), undefined, { numeric: true, sensitivity: "base" });
+  if (title) return title;
+  return (sourceIndex.get(a.id) || 0) - (sourceIndex.get(b.id) || 0);
+}
+
 function sourceOwnerGroup(entity) {
   const text = `${entity.entity_name || ""} ${entity.source_name || ""} ${(entity.artifact_types || []).join(" ")} ${(entity.families || []).join(" ")}`.toLowerCase();
   if (/department of the (navy|army|air force)|mynavy|marine corps|space force|air force e-publishing/.test(text)) return "services";
   if (/cyber command|combatant command|disa|defense information systems|dod cyber|dod cio|dfars|defense acquisition|field activity|defense agency/.test(text)) return "commands";
   return "external";
+}
+
+function sourceOwnerPlacement(entity) {
+  const text = `${entity.entity_name || ""} ${entity.source_name || ""} ${(entity.artifact_types || []).join(" ")} ${(entity.families || []).join(" ")}`.toLowerCase();
+  const owner = entity.entity_name || entity.source_name || "Unknown source owner";
+  const serviceAncestor = (title, meta = "Echelon 2 · Military department") => ({ title, meta, slug: title });
+  const commandAncestor = (title, meta = "Echelon 3 · Subordinate command or component") => ({ title, meta, slug: title });
+
+  if (/department of the navy|mynavy|navadmin|alnav|naval |navy |navair|navsea|navsup|navwar|navfac|office of naval research|military sealift command|strategic systems programs|marine corps|maradmin/.test(text)) {
+    const ancestors = [serviceAncestor("Department of the Navy")];
+    if (!/department of the navy|navy warfare library|department of the navy issuances/.test(`${owner} ${entity.source_name}`.toLowerCase())) {
+      ancestors.push(commandAncestor(owner));
+    }
+    return { groupId: servicesId, ancestors };
+  }
+  if (/department of the army|army publishing|army doctrine|tradoc|u\\.s\\. army training and doctrine command|army training and doctrine command/.test(text)) {
+    const ancestors = [serviceAncestor("Department of the Army")];
+    if (!/department of the army|army publishing|army doctrine/.test(`${owner} ${entity.source_name}`.toLowerCase())) ancestors.push(commandAncestor(owner));
+    return { groupId: servicesId, ancestors };
+  }
+  if (/department of the air force|air force e-publishing|air force materiel command|afmc/.test(text)) {
+    const ancestors = [serviceAncestor("Department of the Air Force")];
+    if (!/department of the air force|air force e-publishing/.test(`${owner} ${entity.source_name}`.toLowerCase())) ancestors.push(commandAncestor(owner));
+    return { groupId: servicesId, ancestors };
+  }
+  if (/space force/.test(text)) {
+    return {
+      groupId: servicesId,
+      ancestors: [
+        serviceAncestor("Department of the Air Force"),
+        commandAncestor("United States Space Force", "Echelon 3 · Military service within the Department of the Air Force"),
+      ],
+    };
+  }
+  if (/coast guard/.test(text)) {
+    return { groupId: servicesId, ancestors: [serviceAncestor("United States Coast Guard", "Echelon 2 · Military service and component policy surface")] };
+  }
+  if (/cyber command|combatant command|united states special operations command|ussocom/.test(text)) {
+    return { groupId: commandsId, ancestors: [serviceAncestor(owner, "Echelon 2 · Combatant command")] };
+  }
+  if (/general services administration|acquisition\.gov far|federal acquisition regulation|\bfar\b/.test(text)) {
+    return { groupId: externalId, ancestors: [serviceAncestor(owner, "Echelon 2 · External, statutory, regulatory, or standards owner")] };
+  }
+  if (/disa|defense information systems|dod cyber|dod cio|defense acquisition|defense pricing|dfars|defense agency|field activity|chief digital and artificial intelligence office/.test(text)) {
+    return { groupId: commandsId, ancestors: [serviceAncestor(owner, "Echelon 2 · Defense agency, field activity, or DoW component")] };
+  }
+  const group = sourceOwnerGroup(entity);
+  return {
+    groupId: group === "services" ? servicesId : group === "commands" ? commandsId : externalId,
+    ancestors: [serviceAncestor(owner, group === "external" ? "Echelon 2 · External, statutory, regulatory, or standards owner" : "Echelon 2 · Policy owner")],
+  };
+}
+
+function echelonLabel(level) {
+  return `Echelon ${level}`;
+}
+
+function uniqueSorted(values = []) {
+  return [...new Set(values.filter(Boolean))].sort();
 }
 
 function familyLabelFor(family) {
