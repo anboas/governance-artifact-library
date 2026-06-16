@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 4,
-    "downstream_edge_count": 17,
-    "catalogued_node_count": 22,
+    "downstream_edge_count": 18,
+    "catalogued_node_count": 23,
     "uncatalogued_gap_count": 7,
-    "evidence_backed_edge_count": 17,
+    "evidence_backed_edge_count": 18,
     "inferred_edge_count": 4,
     "authority_path_status": "root_authority",
     "implementation_path_status": "has_downstream_trace"
@@ -519,6 +519,21 @@
       "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "catalogued"
+    },
+    {
+      "id": "ar-25-2-army-cybersecurity",
+      "label": "AR 25-2",
+      "title": "AR 25-2: Army Cybersecurity",
+      "artifact_type": "Army Regulation",
+      "lane": "service",
+      "lane_label": "Service",
+      "hierarchy_rank": 82,
+      "family": "cybersecurity",
+      "issuing_authority": "Secretary of the Army",
+      "source_system": "Army Publishing Directorate",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [
@@ -944,6 +959,29 @@
       }
     },
     {
+      "id": "usc-title-10-section-2223->ar-25-2-army-cybersecurity:flows_down:resolved_reference",
+      "source_artifact_id": "usc-title-10-section-2223",
+      "source_label": "10 U.S.C. 2223",
+      "source_lane": "statute",
+      "target_artifact_id": "ar-25-2-army-cybersecurity",
+      "target_label": "AR 25-2",
+      "target_lane": "service",
+      "relationship": "flows_down",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "usc:10:2223",
+        "label": "10 USC 2223",
+        "first_line": 301,
+        "lines_sample": [
+          301,
+          2212
+        ],
+        "count": 2
+      }
+    },
+    {
       "id": "usc-title-10-section-2223->usc-title-10-section-2224:references:resolved_reference",
       "source_artifact_id": "usc-title-10-section-2223",
       "source_label": "10 U.S.C. 2223",
@@ -1122,7 +1160,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "usc-title-10-section-2223",
       "direction": "downstream",
-      "edge_count": 17
+      "edge_count": 18
     }
   ]
 }

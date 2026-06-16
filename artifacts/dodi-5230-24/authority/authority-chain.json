@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 14,
-    "downstream_edge_count": 10,
-    "catalogued_node_count": 22,
+    "downstream_edge_count": 11,
+    "catalogued_node_count": 23,
     "uncatalogued_gap_count": 0,
-    "evidence_backed_edge_count": 24,
+    "evidence_backed_edge_count": 25,
     "inferred_edge_count": 0,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -398,6 +398,21 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "ussocom-directive-25-53-privacy-program",
+      "label": "USSOCOM D 25-53",
+      "title": "USSOCOM Directive 25-53: Privacy Program",
+      "artifact_type": "USSOCOM Directive",
+      "lane": "echelon4",
+      "lane_label": "Echelon 3-4",
+      "hierarchy_rank": 90,
+      "family": "privacy",
+      "issuing_authority": "Commander, U.S. Special Operations Command",
+      "source_system": "U.S. Special Operations Command",
+      "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "catalogued"
     }
@@ -963,6 +978,28 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "dodi-5230-24->ussocom-directive-25-53-privacy-program:verifies_or_localizes:resolved_reference",
+      "source_artifact_id": "dodi-5230-24",
+      "source_label": "DoDI 5230.24",
+      "source_lane": "dod",
+      "target_artifact_id": "ussocom-directive-25-53-privacy-program",
+      "target_label": "USSOCOM D 25-53",
+      "target_lane": "echelon4",
+      "relationship": "verifies_or_localizes",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:5230.24",
+        "label": "DODI 5230.24",
+        "first_line": 1475,
+        "lines_sample": [
+          1475
+        ],
+        "count": 1
+      }
     }
   ],
   "uncatalogued_authority_gaps": [],
@@ -979,7 +1016,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-5230-24",
       "direction": "downstream",
-      "edge_count": 10
+      "edge_count": 11
     }
   ]
 }

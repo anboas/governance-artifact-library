@@ -4,28 +4,28 @@ Generated from `data/reference-ingestion-queue.json`, `manifest.json`, and `sour
 
 ## Summary
 
-- Known candidates: 7685
+- Known candidates: 7731
 - Catalog matches: 16
-- Source discovered: 7669
+- Source discovered: 7715
 - Source candidates: 0
 - Needs source discovery: 0
 - P0 candidates: 670
-- Exact or strong source paths: 7685
+- Exact or strong source paths: 7731
 - Official source systems represented: 20
 
 ## Candidate Families
 
 | Family | Candidates | P0 | Catalog Matches | Source Discovered | Source Candidates | Needs Discovery | Occurrences |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| usc | 6936 | 617 | 0 | 6936 | 0 | 0 | 15445 |
+| usc | 6938 | 617 | 0 | 6938 | 0 | 0 | 15456 |
 | executive-order | 296 | 20 | 0 | 296 | 0 | 0 | 705 |
-| dodd | 76 | 12 | 4 | 72 | 0 | 0 | 356 |
-| public-law | 161 | 11 | 0 | 161 | 0 | 0 | 340 |
-| dodi | 76 | 10 | 12 | 64 | 0 | 0 | 417 |
+| dodd | 76 | 12 | 4 | 72 | 0 | 0 | 362 |
+| public-law | 162 | 11 | 0 | 162 | 0 | 0 | 341 |
+| dodi | 77 | 10 | 12 | 65 | 0 | 0 | 429 |
 | cfr | 80 | 0 | 0 | 80 | 0 | 0 | 118 |
-| nist-sp | 26 | 0 | 0 | 26 | 0 | 0 | 80 |
-| far | 10 | 0 | 0 | 10 | 0 | 0 | 14 |
-| dfars | 8 | 0 | 0 | 8 | 0 | 0 | 15 |
+| far | 36 | 0 | 0 | 36 | 0 | 0 | 63 |
+| nist-sp | 28 | 0 | 0 | 28 | 0 | 0 | 90 |
+| dfars | 22 | 0 | 0 | 22 | 0 | 0 | 36 |
 | omb-memo | 6 | 0 | 0 | 6 | 0 | 0 | 8 |
 | opnavinst | 6 | 0 | 0 | 6 | 0 | 0 | 11 |
 | secnav | 4 | 0 | 0 | 4 | 0 | 0 | 7 |
@@ -34,23 +34,23 @@ Generated from `data/reference-ingestion-queue.json`, `manifest.json`, and `sour
 
 | Source System | Candidates | P0 | Catalog Matches | Source Discovered | Source Candidates | Needs Discovery | Occurrences |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| GovInfo | 7097 | 628 | 0 | 7097 | 0 | 0 | 15785 |
-| U.S. Code | 6936 | 617 | 0 | 6936 | 0 | 0 | 15445 |
-| DoW/DoD Issuances | 152 | 22 | 16 | 136 | 0 | 0 | 773 |
+| GovInfo | 7100 | 628 | 0 | 7100 | 0 | 0 | 15797 |
+| U.S. Code | 6938 | 617 | 0 | 6938 | 0 | 0 | 15456 |
+| DoW/DoD Issuances | 153 | 22 | 16 | 137 | 0 | 0 | 791 |
 | Federal Register | 296 | 20 | 0 | 296 | 0 | 0 | 705 |
 | National Archives | 296 | 20 | 0 | 296 | 0 | 0 | 705 |
 | National Archives Executive Orders | 296 | 20 | 0 | 296 | 0 | 0 | 705 |
 | White House Presidential Actions | 296 | 20 | 0 | 296 | 0 | 0 | 705 |
-| Congress.gov | 161 | 11 | 0 | 161 | 0 | 0 | 340 |
+| Congress.gov | 162 | 11 | 0 | 162 | 0 | 0 | 341 |
 | eCFR | 80 | 0 | 0 | 80 | 0 | 0 | 118 |
 | GovInfo CFR Packages | 80 | 0 | 0 | 80 | 0 | 0 | 118 |
-| NIST CSRC | 26 | 0 | 0 | 26 | 0 | 0 | 80 |
-| NIST Publications | 26 | 0 | 0 | 26 | 0 | 0 | 80 |
-| Acquisition.gov | 18 | 0 | 0 | 18 | 0 | 0 | 29 |
-| Acquisition.gov FAR | 10 | 0 | 0 | 10 | 0 | 0 | 14 |
+| Acquisition.gov | 58 | 0 | 0 | 58 | 0 | 0 | 99 |
+| Acquisition.gov FAR | 36 | 0 | 0 | 36 | 0 | 0 | 63 |
+| NIST CSRC | 28 | 0 | 0 | 28 | 0 | 0 | 90 |
+| NIST Publications | 28 | 0 | 0 | 28 | 0 | 0 | 90 |
+| Acquisition.gov DFARS | 22 | 0 | 0 | 22 | 0 | 0 | 36 |
+| Defense Pricing, Contracting, and Acquisition Policy | 22 | 0 | 0 | 22 | 0 | 0 | 36 |
 | Department of the Navy Issuances | 10 | 0 | 0 | 10 | 0 | 0 | 18 |
-| Acquisition.gov DFARS | 8 | 0 | 0 | 8 | 0 | 0 | 15 |
-| Defense Pricing, Contracting, and Acquisition Policy | 8 | 0 | 0 | 8 | 0 | 0 | 15 |
 | OMB | 6 | 0 | 0 | 6 | 0 | 0 | 8 |
 | OMB Circulars | 6 | 0 | 0 | 6 | 0 | 0 | 8 |
 | White House | 6 | 0 | 0 | 6 | 0 | 0 | 8 |
@@ -125,12 +125,12 @@ Generated from `data/reference-ingestion-queue.json`, `manifest.json`, and `sour
 | 64 | 41 U.S.C. 401 | usc | source_discovered | usc-title-41-section-401 | [OLRC HTML](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title41-section401&num=0&edition=prelim) | Capture exact official source URL, mirror raw source, extract text, and regenerate analytics. |
 | 65 | 42 U.S.C. 1395j | usc | source_discovered | usc-title-42-section-1395j | [OLRC HTML](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title42-section1395j&num=0&edition=prelim) | Capture exact official source URL, mirror raw source, extract text, and regenerate analytics. |
 | 66 | 10 USC 2366a | usc | source_discovered | usc-title-10-section-2366a | [OLRC HTML](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title10-section2366a&num=0&edition=prelim) | Capture exact official source URL, mirror raw source, extract text, and regenerate analytics. |
-| 67 | 22 USC 5959 | usc | source_discovered | usc-title-22-section-5959 | [OLRC HTML](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title22-section5959&num=0&edition=prelim) | Capture exact official source URL, mirror raw source, extract text, and regenerate analytics. |
-| 68 | 40 U.S.C. 485 | usc | source_discovered | usc-title-40-section-485 | [OLRC HTML](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title40-section485&num=0&edition=prelim) | Capture exact official source URL, mirror raw source, extract text, and regenerate analytics. |
-| 69 | 41 U.S.C. 251 | usc | source_discovered | usc-title-41-section-251 | [OLRC HTML](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title41-section251&num=0&edition=prelim) | Capture exact official source URL, mirror raw source, extract text, and regenerate analytics. |
-| 70 | 41 U.S.C. 427 | usc | source_discovered | usc-title-41-section-427 | [OLRC HTML](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title41-section427&num=0&edition=prelim) | Capture exact official source URL, mirror raw source, extract text, and regenerate analytics. |
-| 71 | 42 U.S.C. 1395w | usc | source_discovered | usc-title-42-section-1395w | [OLRC HTML](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title42-section1395w&num=0&edition=prelim) | Capture exact official source URL, mirror raw source, extract text, and regenerate analytics. |
-| 72 | 42 U.S.C. 7384l | usc | source_discovered | usc-title-42-section-7384l | [OLRC HTML](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title42-section7384l&num=0&edition=prelim) | Capture exact official source URL, mirror raw source, extract text, and regenerate analytics. |
-| 73 | 50 U.S.C. 413 | usc | source_discovered | usc-title-50-section-413 | [OLRC HTML](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title50-section413&num=0&edition=prelim) | Capture exact official source URL, mirror raw source, extract text, and regenerate analytics. |
-| 74 | 50 U.S.C. 431 | usc | source_discovered | usc-title-50-section-431 | [OLRC HTML](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title50-section431&num=0&edition=prelim) | Capture exact official source URL, mirror raw source, extract text, and regenerate analytics. |
-| 75 | 50 USC 2538a | usc | source_discovered | usc-title-50-section-2538a | [OLRC HTML](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title50-section2538a&num=0&edition=prelim) | Capture exact official source URL, mirror raw source, extract text, and regenerate analytics. |
+| 67 | 10 USC 2533b | usc | source_discovered | usc-title-10-section-2533b | [OLRC HTML](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title10-section2533b&num=0&edition=prelim) | Capture exact official source URL, mirror raw source, extract text, and regenerate analytics. |
+| 68 | 22 USC 5959 | usc | source_discovered | usc-title-22-section-5959 | [OLRC HTML](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title22-section5959&num=0&edition=prelim) | Capture exact official source URL, mirror raw source, extract text, and regenerate analytics. |
+| 69 | 40 U.S.C. 485 | usc | source_discovered | usc-title-40-section-485 | [OLRC HTML](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title40-section485&num=0&edition=prelim) | Capture exact official source URL, mirror raw source, extract text, and regenerate analytics. |
+| 70 | 41 U.S.C. 251 | usc | source_discovered | usc-title-41-section-251 | [OLRC HTML](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title41-section251&num=0&edition=prelim) | Capture exact official source URL, mirror raw source, extract text, and regenerate analytics. |
+| 71 | 41 U.S.C. 427 | usc | source_discovered | usc-title-41-section-427 | [OLRC HTML](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title41-section427&num=0&edition=prelim) | Capture exact official source URL, mirror raw source, extract text, and regenerate analytics. |
+| 72 | 42 U.S.C. 1395w | usc | source_discovered | usc-title-42-section-1395w | [OLRC HTML](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title42-section1395w&num=0&edition=prelim) | Capture exact official source URL, mirror raw source, extract text, and regenerate analytics. |
+| 73 | 42 U.S.C. 7384l | usc | source_discovered | usc-title-42-section-7384l | [OLRC HTML](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title42-section7384l&num=0&edition=prelim) | Capture exact official source URL, mirror raw source, extract text, and regenerate analytics. |
+| 74 | 50 U.S.C. 413 | usc | source_discovered | usc-title-50-section-413 | [OLRC HTML](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title50-section413&num=0&edition=prelim) | Capture exact official source URL, mirror raw source, extract text, and regenerate analytics. |
+| 75 | 50 U.S.C. 431 | usc | source_discovered | usc-title-50-section-431 | [OLRC HTML](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title50-section431&num=0&edition=prelim) | Capture exact official source URL, mirror raw source, extract text, and regenerate analytics. |

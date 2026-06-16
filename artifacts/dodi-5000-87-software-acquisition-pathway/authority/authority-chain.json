@@ -62,11 +62,11 @@
   ],
   "summary": {
     "upstream_edge_count": 6,
-    "downstream_edge_count": 12,
-    "catalogued_node_count": 19,
+    "downstream_edge_count": 13,
+    "catalogued_node_count": 20,
     "uncatalogued_gap_count": 0,
     "evidence_backed_edge_count": 16,
-    "inferred_edge_count": 2,
+    "inferred_edge_count": 3,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
   },
@@ -352,6 +352,21 @@
       "family": "cyber_training",
       "issuing_authority": "DoW/DoD",
       "source_system": "DoD Cyber Exchange",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
+      "id": "navwar-digital-engineering-strategy",
+      "label": "NAVWAR DE Strategy",
+      "title": "NAVWAR Digital Engineering Strategy",
+      "artifact_type": "Command strategy",
+      "lane": "echelon4",
+      "lane_label": "Echelon 3-4",
+      "hierarchy_rank": 90,
+      "family": "software_acquisition",
+      "issuing_authority": "Naval Information Warfare Systems Command",
+      "source_system": "NAVWAR",
       "mirror_status": "blocked",
       "parser_status": "blocked",
       "status": "catalogued"
@@ -764,6 +779,26 @@
         ],
         "shared_family": ""
       }
+    },
+    {
+      "id": "dodi-5000-87-software-acquisition-pathway->navwar-digital-engineering-strategy:verifies_or_localizes:inferred_flowdown",
+      "source_artifact_id": "dodi-5000-87-software-acquisition-pathway",
+      "source_label": "DoDI 5000.87",
+      "source_lane": "dod",
+      "target_artifact_id": "navwar-digital-engineering-strategy",
+      "target_label": "NAVWAR DE Strategy",
+      "target_lane": "echelon4",
+      "relationship": "verifies_or_localizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.59,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "software-acquisition"
+        ],
+        "shared_family": ""
+      }
     }
   ],
   "uncatalogued_authority_gaps": [],
@@ -780,7 +815,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-5000-87-software-acquisition-pathway",
       "direction": "downstream",
-      "edge_count": 12
+      "edge_count": 13
     }
   ]
 }

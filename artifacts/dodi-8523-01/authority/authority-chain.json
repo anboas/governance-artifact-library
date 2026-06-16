@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 1,
-    "downstream_edge_count": 9,
-    "catalogued_node_count": 10,
+    "downstream_edge_count": 10,
+    "catalogued_node_count": 11,
     "uncatalogued_gap_count": 2,
-    "evidence_backed_edge_count": 10,
+    "evidence_backed_edge_count": 11,
     "inferred_edge_count": 0,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -254,6 +254,21 @@
       "mirror_status": "queued",
       "parser_status": "parsed",
       "status": "current"
+    },
+    {
+      "id": "ar-25-2-army-cybersecurity",
+      "label": "AR 25-2",
+      "title": "AR 25-2: Army Cybersecurity",
+      "artifact_type": "Army Regulation",
+      "lane": "service",
+      "lane_label": "Service",
+      "hierarchy_rank": 82,
+      "family": "cybersecurity",
+      "issuing_authority": "Secretary of the Army",
+      "source_system": "Army Publishing Directorate",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [
@@ -479,6 +494,30 @@
         ],
         "count": 1
       }
+    },
+    {
+      "id": "dodi-8523-01->ar-25-2-army-cybersecurity:service_adopts:resolved_reference",
+      "source_artifact_id": "dodi-8523-01",
+      "source_label": "DoDI 8523.01",
+      "source_lane": "dod",
+      "target_artifact_id": "ar-25-2-army-cybersecurity",
+      "target_label": "AR 25-2",
+      "target_lane": "service",
+      "relationship": "service_adopts",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:8523.01",
+        "label": "DODI 8523.01",
+        "first_line": 1531,
+        "lines_sample": [
+          1531,
+          1537,
+          2165
+        ],
+        "count": 3
+      }
     }
   ],
   "uncatalogued_authority_gaps": [
@@ -530,7 +569,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-8523-01",
       "direction": "downstream",
-      "edge_count": 9
+      "edge_count": 10
     }
   ]
 }

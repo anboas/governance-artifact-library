@@ -2,26 +2,26 @@
 
 Generated: 2026-06-12T23:25:00.000Z
 
-- Queue items: 7685
+- Queue items: 7731
 - P0: 670
-- P1: 1632
-- P2: 5254
-- P3: 129
-- Source artifacts with gaps: 812
+- P1: 1635
+- P2: 5256
+- P3: 170
+- Source artifacts with gaps: 816
 
 ## Family Summary
 
 | Family | Items | Occurrences | P0 | P1 | P2 | P3 |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| usc | 6936 | 15445 | 617 | 1531 | 4788 | 0 |
+| usc | 6938 | 15456 | 617 | 1532 | 4789 | 0 |
 | executive-order | 296 | 705 | 20 | 59 | 217 | 0 |
-| dodi | 76 | 417 | 10 | 6 | 60 | 0 |
-| dodd | 76 | 356 | 12 | 7 | 57 | 0 |
-| public-law | 161 | 340 | 11 | 27 | 123 | 0 |
+| dodi | 77 | 429 | 10 | 7 | 60 | 0 |
+| dodd | 76 | 362 | 12 | 7 | 57 | 0 |
+| public-law | 162 | 341 | 11 | 27 | 124 | 0 |
 | cfr | 80 | 118 | 0 | 1 | 2 | 77 |
-| nist-sp | 26 | 80 | 0 | 1 | 1 | 24 |
-| dfars | 8 | 15 | 0 | 0 | 0 | 8 |
-| far | 10 | 14 | 0 | 0 | 0 | 10 |
+| nist-sp | 28 | 90 | 0 | 1 | 1 | 26 |
+| far | 36 | 63 | 0 | 1 | 0 | 35 |
+| dfars | 22 | 36 | 0 | 0 | 0 | 22 |
 | opnavinst | 6 | 11 | 0 | 0 | 0 | 6 |
 | omb-memo | 6 | 8 | 0 | 0 | 6 | 0 |
 | secnav | 4 | 7 | 0 | 0 | 0 | 4 |
@@ -59,11 +59,11 @@ Generated: 2026-06-12T23:25:00.000Z
 | 27 | P0 | 41 U.S.C. 253 | 20 | 9 | usc-title-41-section-253 | official_html_snapshot |
 | 28 | P0 | 41 U.S.C. 421 | 20 | 12 | usc-title-41-section-421 | official_html_snapshot |
 | 29 | P0 | 42 U.S.C. 7274k | 19 | 4 | usc-title-42-section-7274k | official_html_snapshot |
-| 30 | P0 | DoDI 5000.02 | 92 | 61 | dodi-5000-02 | source_discovery_then_mirror |
+| 30 | P0 | DoDI 5000.02 | 97 | 62 | dodi-5000-02 | source_discovery_then_mirror |
 | 31 | P0 | DoDI 5025.01 | 79 | 47 | dodi-5025-01 | source_discovery_then_mirror |
-| 32 | P0 | DoDD 5400.11 | 57 | 48 | dodd-5400-11 | source_discovery_then_mirror |
+| 32 | P0 | DoDD 5400.11 | 58 | 49 | dodd-5400-11 | source_discovery_then_mirror |
 | 33 | P0 | DoDD 5134.01 | 30 | 27 | dodd-5134-01 | source_discovery_then_mirror |
-| 34 | P0 | DoDD 5205.16 | 26 | 23 | dodd-5205-16 | source_discovery_then_mirror |
+| 34 | P0 | DoDD 5205.16 | 29 | 25 | dodd-5205-16 | source_discovery_then_mirror |
 | 35 | P0 | 10 U.S.C. 374 | 18 | 13 | usc-title-10-section-374 | official_html_snapshot |
 | 36 | P0 | 10 USC 2282 | 18 | 8 | usc-title-10-section-2282 | official_html_snapshot |
 | 37 | P0 | 16 U.S.C. 460l | 18 | 6 | usc-title-16-section-460l | official_html_snapshot |
@@ -96,35 +96,35 @@ Generated: 2026-06-12T23:25:00.000Z
 | 64 | P0 | 41 U.S.C. 401 | 12 | 6 | usc-title-41-section-401 | official_html_snapshot |
 | 65 | P0 | 42 U.S.C. 1395j | 12 | 6 | usc-title-42-section-1395j | official_html_snapshot |
 | 66 | P0 | 10 USC 2366a | 11 | 7 | usc-title-10-section-2366a | official_html_snapshot |
-| 67 | P0 | 22 USC 5959 | 11 | 7 | usc-title-22-section-5959 | official_html_snapshot |
-| 68 | P0 | 40 U.S.C. 485 | 11 | 7 | usc-title-40-section-485 | official_html_snapshot |
-| 69 | P0 | 41 U.S.C. 251 | 11 | 6 | usc-title-41-section-251 | official_html_snapshot |
-| 70 | P0 | 41 U.S.C. 427 | 11 | 6 | usc-title-41-section-427 | official_html_snapshot |
-| 71 | P0 | 42 U.S.C. 1395w | 11 | 7 | usc-title-42-section-1395w | official_html_snapshot |
-| 72 | P0 | 42 U.S.C. 7384l | 11 | 5 | usc-title-42-section-7384l | official_html_snapshot |
-| 73 | P0 | 50 U.S.C. 413 | 11 | 6 | usc-title-50-section-413 | official_html_snapshot |
-| 74 | P0 | 50 U.S.C. 431 | 11 | 6 | usc-title-50-section-431 | official_html_snapshot |
-| 75 | P0 | 50 USC 2538a | 11 | 6 | usc-title-50-section-2538a | official_html_snapshot |
-| 76 | P0 | 40 U.S.C. 759 | 15 | 3 | usc-title-40-section-759 | official_html_snapshot |
-| 77 | P0 | DoDI 1315.18 | 16 | 9 | dodi-1315-18 | source_discovery_then_mirror |
-| 78 | P0 | 10 U.S.C. 2359 | 10 | 6 | usc-title-10-section-2359 | official_html_snapshot |
-| 79 | P0 | 10 U.S.C. 4331 | 10 | 7 | usc-title-10-section-4331 | official_html_snapshot |
-| 80 | P0 | 10 USC 4551 | 10 | 9 | usc-title-10-section-4551 | official_html_snapshot |
-| 81 | P0 | 25 U.S.C. 450b | 10 | 8 | usc-title-25-section-450b | official_html_snapshot |
-| 82 | P0 | 40 U.S.C. 481 | 10 | 5 | usc-title-40-section-481 | official_html_snapshot |
-| 83 | P0 | 41 U.S.C. 416 | 10 | 6 | usc-title-41-section-416 | official_html_snapshot |
-| 84 | P0 | 41 U.S.C. 428 | 10 | 7 | usc-title-41-section-428 | official_html_snapshot |
-| 85 | P0 | 41 U.S.C. 5 | 10 | 9 | usc-title-41-section-5 | official_html_snapshot |
-| 86 | P0 | 50 U.S.C. 2791 | 10 | 8 | usc-title-50-section-2791 | official_html_snapshot |
-| 87 | P0 | 50 U.S.C. 4601 | 10 | 5 | usc-title-50-section-4601 | official_html_snapshot |
-| 88 | P0 | 50 USC 2753 | 10 | 5 | usc-title-50-section-2753 | official_html_snapshot |
-| 89 | P0 | Public Law 94-524 | 8 | 5 | public-law-94-524 | source_discovery_then_mirror |
-| 90 | P0 | DoDD 4500.56 | 47 | 2 | dodd-4500-56 | source_discovery_then_mirror |
-| 91 | P0 | 10 USC 2375 | 9 | 4 | usc-title-10-section-2375 | official_html_snapshot |
-| 92 | P0 | 10 USC 2381 | 9 | 7 | usc-title-10-section-2381 | official_html_snapshot |
-| 93 | P0 | 10 USC 2401a | 9 | 8 | usc-title-10-section-2401a | official_html_snapshot |
-| 94 | P0 | 10 USC 2533a | 9 | 8 | usc-title-10-section-2533a | official_html_snapshot |
-| 95 | P0 | 10 USC 2533b | 9 | 4 | usc-title-10-section-2533b | official_html_snapshot |
+| 67 | P0 | 10 USC 2533b | 11 | 5 | usc-title-10-section-2533b | official_html_snapshot |
+| 68 | P0 | 22 USC 5959 | 11 | 7 | usc-title-22-section-5959 | official_html_snapshot |
+| 69 | P0 | 40 U.S.C. 485 | 11 | 7 | usc-title-40-section-485 | official_html_snapshot |
+| 70 | P0 | 41 U.S.C. 251 | 11 | 6 | usc-title-41-section-251 | official_html_snapshot |
+| 71 | P0 | 41 U.S.C. 427 | 11 | 6 | usc-title-41-section-427 | official_html_snapshot |
+| 72 | P0 | 42 U.S.C. 1395w | 11 | 7 | usc-title-42-section-1395w | official_html_snapshot |
+| 73 | P0 | 42 U.S.C. 7384l | 11 | 5 | usc-title-42-section-7384l | official_html_snapshot |
+| 74 | P0 | 50 U.S.C. 413 | 11 | 6 | usc-title-50-section-413 | official_html_snapshot |
+| 75 | P0 | 50 U.S.C. 431 | 11 | 6 | usc-title-50-section-431 | official_html_snapshot |
+| 76 | P0 | 50 USC 2538a | 11 | 6 | usc-title-50-section-2538a | official_html_snapshot |
+| 77 | P0 | 40 U.S.C. 759 | 15 | 3 | usc-title-40-section-759 | official_html_snapshot |
+| 78 | P0 | DoDI 1315.18 | 16 | 9 | dodi-1315-18 | source_discovery_then_mirror |
+| 79 | P0 | 10 U.S.C. 2359 | 10 | 6 | usc-title-10-section-2359 | official_html_snapshot |
+| 80 | P0 | 10 U.S.C. 4331 | 10 | 7 | usc-title-10-section-4331 | official_html_snapshot |
+| 81 | P0 | 10 USC 4551 | 10 | 9 | usc-title-10-section-4551 | official_html_snapshot |
+| 82 | P0 | 25 U.S.C. 450b | 10 | 8 | usc-title-25-section-450b | official_html_snapshot |
+| 83 | P0 | 40 U.S.C. 481 | 10 | 5 | usc-title-40-section-481 | official_html_snapshot |
+| 84 | P0 | 41 U.S.C. 416 | 10 | 6 | usc-title-41-section-416 | official_html_snapshot |
+| 85 | P0 | 41 U.S.C. 428 | 10 | 7 | usc-title-41-section-428 | official_html_snapshot |
+| 86 | P0 | 41 U.S.C. 5 | 10 | 9 | usc-title-41-section-5 | official_html_snapshot |
+| 87 | P0 | 50 U.S.C. 2791 | 10 | 8 | usc-title-50-section-2791 | official_html_snapshot |
+| 88 | P0 | 50 U.S.C. 4601 | 10 | 5 | usc-title-50-section-4601 | official_html_snapshot |
+| 89 | P0 | 50 USC 2753 | 10 | 5 | usc-title-50-section-2753 | official_html_snapshot |
+| 90 | P0 | Public Law 94-524 | 8 | 5 | public-law-94-524 | source_discovery_then_mirror |
+| 91 | P0 | DoDD 4500.56 | 47 | 2 | dodd-4500-56 | source_discovery_then_mirror |
+| 92 | P0 | 10 USC 2375 | 9 | 4 | usc-title-10-section-2375 | official_html_snapshot |
+| 93 | P0 | 10 USC 2381 | 9 | 7 | usc-title-10-section-2381 | official_html_snapshot |
+| 94 | P0 | 10 USC 2401a | 9 | 8 | usc-title-10-section-2401a | official_html_snapshot |
+| 95 | P0 | 10 USC 2533a | 9 | 8 | usc-title-10-section-2533a | official_html_snapshot |
 | 96 | P0 | 22 USC 5955 | 9 | 4 | usc-title-22-section-5955 | official_html_snapshot |
 | 97 | P0 | 38 U.S.C. 1712A | 9 | 4 | usc-title-38-section-1712a | official_html_snapshot |
 | 98 | P0 | 40 U.S.C. 483 | 9 | 5 | usc-title-40-section-483 | official_html_snapshot |

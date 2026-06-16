@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
+import { tmpdir } from "node:os";
 import { spawnSync } from "node:child_process";
 
 const ROOT = new URL("..", import.meta.url).pathname;
@@ -59,9 +60,14 @@ for (const target of targetPacket.targets || []) {
     console.log(`Skip existing ${target.id}`);
     continue;
   }
-  const artifact = target.capture_mode === "browser_html"
-    ? captureBrowserHtml(target)
-    : registerBlocked(target);
+  let artifact;
+  if (target.capture_mode === "browser_html") {
+    artifact = captureBrowserHtml(target);
+  } else if (target.capture_mode === "direct_pdf") {
+    artifact = await capturePdf(target);
+  } else {
+    artifact = registerBlocked(target);
+  }
   additions.push(artifact);
 }
 
@@ -122,6 +128,60 @@ function captureBrowserHtml(target) {
     captureMethod: "browser_html_fetch",
     captureNotes: "Raw HTML mirrored from the official source with browser-assisted fetch after plain HTTP fetch was denied by edge protection.",
   });
+}
+
+async function capturePdf(target) {
+  const response = await fetch(target.source_url, {
+    headers: {
+      "accept": "application/pdf,application/octet-stream;q=0.9,*/*;q=0.8",
+      "user-agent": "governance-artifact-library/0.1 (+official-source-corpus)",
+    },
+    redirect: "follow",
+  });
+  if (!response.ok) {
+    throw new Error(`${target.id} PDF fetch failed: HTTP ${response.status} ${response.statusText}`);
+  }
+  const arrayBuffer = await response.arrayBuffer();
+  const bytes = Buffer.from(arrayBuffer);
+  if (bytes.byteLength < 500 || !bytes.subarray(0, 8).toString("utf8").startsWith("%PDF")) {
+    throw new Error(`${target.id} did not return a PDF payload`);
+  }
+  const text = extractPdfText(target, bytes);
+  assertMeaningfulCapture(target, "", text);
+  const checksum = createHash("sha256").update(bytes).digest("hex");
+  return buildAddition(target, {
+    capturedAt: CAPTURED_AT,
+    checksum,
+    rawBytes: bytes,
+    rawPath: `artifacts/${target.id}/raw/source.pdf`,
+    text,
+    textPath: `artifacts/${target.id}/text/extracted-pdf.txt`,
+    sourceMimeType: "application/pdf",
+    pipelineState: "structured",
+    mirrorStatus: "mirrored",
+    parserStatus: "parsed",
+    reviewStatus: "machine_reviewed",
+    captureMethod: "direct_pdf_fetch",
+    captureNotes: "Official PDF mirrored from the source URL and text extracted locally with pdftotext.",
+  });
+}
+
+function extractPdfText(target, bytes) {
+  const tempDir = mkdtempSync(join(tmpdir(), "governance-artifact-pdf-"));
+  const pdfPath = join(tempDir, "source.pdf");
+  try {
+    writeFileSync(pdfPath, bytes);
+    const result = spawnSync("pdftotext", ["-layout", "-enc", "UTF-8", pdfPath, "-"], {
+      encoding: "utf8",
+      maxBuffer: 80 * 1024 * 1024,
+    });
+    if (result.status !== 0) {
+      throw new Error(`${target.id} pdftotext failed: ${result.stderr || result.stdout}`);
+    }
+    return `${result.stdout.replace(/\r/g, "\n").trim()}\n`;
+  } finally {
+    rmSync(tempDir, { recursive: true, force: true });
+  }
 }
 
 function registerBlocked(target) {

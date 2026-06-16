@@ -2,11 +2,11 @@
 
 Generated: 2026-06-13T13:55:00.000Z
 
-- Artifacts: 1627
-- Nodes: 1627
-- Edges: 11862
-- Evidence-backed reference edges: 8873
-- Inferred flowdown edges: 2989
+- Artifacts: 1640
+- Nodes: 1640
+- Edges: 11946
+- Evidence-backed reference edges: 8918
+- Inferred flowdown edges: 3028
 
 ## Lanes
 
@@ -29,7 +29,7 @@ Generated: 2026-06-13T13:55:00.000Z
 | pl-118-31-fy2024-ndaa | 156 | 10 | 18 | root_authority |
 | public-law-104-106 | 76 | 7 | 18 | root_authority |
 | public-law-104-113 | 3 | 7 | 17 | root_authority |
-| public-law-104-191 | 4 | 17 | 18 | root_authority |
+| public-law-104-191 | 4 | 18 | 18 | root_authority |
 | public-law-104-201 | 54 | 10 | 18 | root_authority |
 | public-law-104-208 | 75 | 7 | 18 | root_authority |
 | public-law-105-261 | 71 | 9 | 18 | root_authority |
@@ -39,7 +39,7 @@ Generated: 2026-06-13T13:55:00.000Z
 | public-law-107-107 | 71 | 8 | 18 | root_authority |
 | public-law-107-296 | 30 | 7 | 18 | root_authority |
 | public-law-107-314 | 50 | 8 | 18 | root_authority |
-| public-law-107-347 | 8 | 15 | 15 | root_authority |
+| public-law-107-347 | 8 | 16 | 15 | root_authority |
 | public-law-108-136 | 76 | 12 | 18 | root_authority |
 | public-law-108-375 | 51 | 12 | 18 | root_authority |
 | public-law-108-458 | 26 | 10 | 18 | root_authority |
@@ -131,8 +131,8 @@ Generated: 2026-06-13T13:55:00.000Z
 | usc-title-10-section-2201 | 0 | 9 | 1 | root_authority |
 | usc-title-10-section-2208 | 2 | 9 | 1 | root_authority |
 | usc-title-10-section-221 | 3 | 31 | 3 | root_authority |
-| usc-title-10-section-2222 | 1 | 21 | 0 | root_authority |
-| usc-title-10-section-2223 | 4 | 17 | 7 | root_authority |
+| usc-title-10-section-2222 | 1 | 22 | 0 | root_authority |
+| usc-title-10-section-2223 | 4 | 18 | 7 | root_authority |
 | usc-title-10-section-2224 | 11 | 22 | 9 | root_authority |
 | usc-title-10-section-2225 | 0 | 12 | 0 | root_authority |
 | usc-title-10-section-2228 | 0 | 12 | 1 | root_authority |
@@ -281,7 +281,7 @@ Generated: 2026-06-13T13:55:00.000Z
 | usc-title-22-section-2371 | 0 | 14 | 3 | root_authority |
 | usc-title-22-section-2394 | 0 | 11 | 2 | root_authority |
 | usc-title-22-section-2403 | 2 | 15 | 1 | root_authority |
-| usc-title-22-section-2551 | 0 | 12 | 1 | root_authority |
+| usc-title-22-section-2551 | 0 | 13 | 1 | root_authority |
 | usc-title-22-section-2593a | 1 | 11 | 0 | root_authority |
 | usc-title-22-section-262p | 0 | 10 | 0 | root_authority |
 | usc-title-22-section-262r | 2 | 12 | 4 | root_authority |
@@ -488,18 +488,19 @@ Generated: 2026-06-13T13:55:00.000Z
 | eo-13587 | 4 | 8 | 2 | evidence_backed |
 | eo-13891 | 0 | 8 | 4 | authority_gap |
 | eo-14028-cybersecurity | 4 | 10 | 1 | evidence_backed |
-| eo-14110-ai | 9 | 3 | 18 | evidence_backed |
+| eo-14110-ai | 9 | 4 | 18 | evidence_backed |
 | eo-14168 | 0 | 37 | 1 | authority_gap |
 | eo-14173 | 2 | 21 | 5 | evidence_backed |
 | omb-m-21-31-cyber-logging | 3 | 4 | 1 | evidence_backed |
-| omb-m-24-10-ai-governance | 4 | 0 | 7 | evidence_backed |
-| far-part-39-acquisition-of-it | 0 | 1 | 6 | authority_gap |
+| omb-m-24-10-ai-governance | 4 | 1 | 7 | evidence_backed |
+| far-part-39-acquisition-of-it | 0 | 3 | 6 | authority_gap |
 | cisa-bod-26-02-end-of-support-edge-devices | 3 | 2 | 4 | evidence_backed |
 | cisa-bod-26-04-prioritizing-security-updates | 1 | 4 | 2 | evidence_backed |
 | cisa-bod-26-04-implementation-guidance | 2 | 1 | 0 | inferred_review_needed |
 | cisa-zero-trust-maturity-model | 3 | 4 | 1 | inferred_review_needed |
 | nist-sp-800-207-zero-trust-architecture | 1 | 5 | 1 | inferred_review_needed |
-| nist-sp-800-53-r5-security-privacy-controls | 0 | 5 | 0 | authority_gap |
+| nist-sp-800-53-r5-security-privacy-controls | 0 | 6 | 0 | authority_gap |
+| cdao-responsible-ai-strategy-implementation-pathway | 2 | 0 | 0 | inferred_review_needed |
 | dodd-1000-20 | 0 | 6 | 3 | authority_gap |
 | dodd-1000-21e | 1 | 4 | 0 | evidence_backed |
 | dodd-1000-26e | 0 | 4 | 0 | authority_gap |
@@ -711,7 +712,7 @@ Generated: 2026-06-13T13:55:00.000Z
 | dodd-5200-43 | 9 | 13 | 3 | evidence_backed |
 | dodd-5200-47e | 6 | 5 | 0 | evidence_backed |
 | dodd-5205-02e | 1 | 6 | 0 | evidence_backed |
-| dodd-5205-07 | 14 | 30 | 0 | evidence_backed |
+| dodd-5205-07 | 14 | 31 | 0 | evidence_backed |
 | dodd-5205-12 | 5 | 18 | 0 | evidence_backed |
 | dodd-5205-14 | 0 | 7 | 0 | authority_gap |
 | dodd-5205-15e | 7 | 4 | 0 | evidence_backed |
@@ -723,9 +724,9 @@ Generated: 2026-06-13T13:55:00.000Z
 | dodd-5210-55 | 0 | 5 | 1 | authority_gap |
 | dodd-5210-56 | 9 | 15 | 0 | evidence_backed |
 | dodd-5220-6 | 1 | 4 | 1 | evidence_backed |
-| dodd-5230-11 | 0 | 32 | 0 | authority_gap |
+| dodd-5230-11 | 0 | 33 | 0 | authority_gap |
 | dodd-5230-20 | 2 | 19 | 0 | evidence_backed |
-| dodd-5230-25 | 3 | 9 | 6 | evidence_backed |
+| dodd-5230-25 | 3 | 10 | 6 | evidence_backed |
 | dodd-5240-01 | 19 | 27 | 2 | evidence_backed |
 | dodd-5240-02 | 9 | 20 | 2 | evidence_backed |
 | dodd-5240-06 | 8 | 16 | 0 | evidence_backed |
@@ -733,7 +734,7 @@ Generated: 2026-06-13T13:55:00.000Z
 | dodd-5400-07 | 0 | 17 | 0 | authority_gap |
 | dodd-5410-12 | 0 | 4 | 2 | authority_gap |
 | dodd-5500-01 | 0 | 7 | 1 | authority_gap |
-| dodd-5500-07 | 2 | 16 | 0 | evidence_backed |
+| dodd-5500-07 | 2 | 17 | 0 | evidence_backed |
 | dodd-5500-11 | 0 | 7 | 6 | authority_gap |
 | dodd-5500-19 | 2 | 6 | 3 | evidence_backed |
 | dodd-5505-05 | 0 | 5 | 1 | authority_gap |
@@ -763,10 +764,10 @@ Generated: 2026-06-13T13:55:00.000Z
 | dodd-7045-20 | 7 | 8 | 0 | evidence_backed |
 | dodd-7050-06 | 2 | 15 | 1 | evidence_backed |
 | dodd-7730-65 | 2 | 13 | 0 | evidence_backed |
-| dodd-8000-01 | 7 | 30 | 1 | evidence_backed |
-| dodd-8100-02 | 0 | 7 | 1 | authority_gap |
-| dodd-8115-01 | 1 | 10 | 0 | evidence_backed |
-| dodd-8140-01 | 4 | 20 | 3 | evidence_backed |
+| dodd-8000-01 | 7 | 31 | 1 | evidence_backed |
+| dodd-8100-02 | 0 | 8 | 1 | authority_gap |
+| dodd-8115-01 | 1 | 11 | 0 | evidence_backed |
+| dodd-8140-01 | 4 | 21 | 3 | evidence_backed |
 | dodd-8190-01e | 3 | 4 | 0 | evidence_backed |
 | dodd-8260-05 | 0 | 4 | 0 | authority_gap |
 | dodd-8422-01e | 15 | 4 | 1 | evidence_backed |
@@ -802,7 +803,7 @@ Generated: 2026-06-13T13:55:00.000Z
 | dodi-1000-25 | 149 | 8 | 3 | evidence_backed |
 | dodi-1000-27 | 0 | 0 | 1 | authority_gap |
 | dodi-1000-28 | 0 | 0 | 0 | authority_gap |
-| dodi-1000-30 | 0 | 14 | 2 | authority_gap |
+| dodi-1000-30 | 0 | 15 | 2 | authority_gap |
 | dodi-1000-31 | 5 | 1 | 0 | evidence_backed |
 | dodi-1000-32 | 142 | 0 | 3 | evidence_backed |
 | dodi-1005-06 | 0 | 0 | 1 | authority_gap |
@@ -835,7 +836,7 @@ Generated: 2026-06-13T13:55:00.000Z
 | dodi-1030-02 | 8 | 7 | 1 | evidence_backed |
 | dodi-1030-03 | 0 | 1 | 0 | authority_gap |
 | dodi-1030-04 | 5 | 1 | 0 | evidence_backed |
-| dodi-1035-01 | 4 | 3 | 1 | evidence_backed |
+| dodi-1035-01 | 4 | 4 | 1 | evidence_backed |
 | dodi-1100-06 | 0 | 0 | 1 | authority_gap |
 | dodi-1100-13 | 1 | 5 | 1 | evidence_backed |
 | dodi-1100-16 | 0 | 0 | 3 | authority_gap |
@@ -996,7 +997,7 @@ Generated: 2026-06-13T13:55:00.000Z
 | dodi-1352-01 | 2 | 1 | 0 | evidence_backed |
 | dodi-1354-01 | 0 | 0 | 0 | authority_gap |
 | dodi-1400-24 | 0 | 0 | 0 | authority_gap |
-| dodi-1400-25 | 1 | 45 | 0 | evidence_backed |
+| dodi-1400-25 | 1 | 46 | 0 | evidence_backed |
 | dodi-1400-36 | 1 | 1 | 0 | evidence_backed |
 | dodi-1402-01 | 0 | 0 | 0 | authority_gap |
 | dodi-1402-03-senior-executive-service-ses-senior-level-sl-and-scienti | 2 | 0 | 0 | evidence_backed |
@@ -1053,7 +1054,7 @@ Generated: 2026-06-13T13:55:00.000Z
 | dodi-3003-01 | 1 | 3 | 0 | evidence_backed |
 | dodi-3020-26 | 9 | 2 | 3 | evidence_backed |
 | dodi-3020-39 | 4 | 3 | 1 | evidence_backed |
-| dodi-3020-41 | 37 | 23 | 0 | evidence_backed |
+| dodi-3020-41 | 37 | 24 | 0 | evidence_backed |
 | dodi-3020-42 | 0 | 4 | 0 | authority_gap |
 | dodi-3020-45 | 18 | 7 | 3 | evidence_backed |
 | dodi-3020-47 | 0 | 4 | 0 | authority_gap |
@@ -1225,7 +1226,7 @@ Generated: 2026-06-13T13:55:00.000Z
 | dodi-5000-70 | 0 | 1 | 0 | authority_gap |
 | dodi-5000-72 | 1 | 2 | 0 | evidence_backed |
 | dodi-5000-73 | 0 | 7 | 0 | authority_gap |
-| dodi-5000-74 | 5 | 7 | 2 | evidence_backed |
+| dodi-5000-74 | 5 | 8 | 2 | evidence_backed |
 | dodi-5000-75 | 4 | 12 | 0 | evidence_backed |
 | dodi-5000-76 | 7 | 1 | 3 | evidence_backed |
 | dodi-5000-77 | 10 | 1 | 3 | evidence_backed |
@@ -1237,7 +1238,7 @@ Generated: 2026-06-13T13:55:00.000Z
 | dodi-5000-84 | 1 | 2 | 0 | evidence_backed |
 | dodi-5000-85 | 17 | 8 | 4 | evidence_backed |
 | dodi-5000-86 | 3 | 2 | 0 | evidence_backed |
-| dodi-5000-87-software-acquisition-pathway | 6 | 12 | 0 | evidence_backed |
+| dodi-5000-87-software-acquisition-pathway | 6 | 13 | 0 | evidence_backed |
 | dodi-5000-88 | 11 | 10 | 1 | evidence_backed |
 | dodi-5000-89 | 14 | 15 | 0 | evidence_backed |
 | dodi-5000-90 | 9 | 5 | 2 | evidence_backed |
@@ -1252,7 +1253,7 @@ Generated: 2026-06-13T13:55:00.000Z
 | dodi-5010-41 | 0 | 1 | 0 | authority_gap |
 | dodi-5010-43 | 1 | 0 | 1 | evidence_backed |
 | dodi-5010-44 | 0 | 9 | 0 | authority_gap |
-| dodi-5015-02 | 7 | 101 | 2 | evidence_backed |
+| dodi-5015-02 | 7 | 103 | 2 | evidence_backed |
 | dodi-5025-12 | 1 | 0 | 0 | evidence_backed |
 | dodi-5025-13 | 1 | 4 | 0 | evidence_backed |
 | dodi-5025-14 | 0 | 0 | 0 | authority_gap |
@@ -1303,11 +1304,11 @@ Generated: 2026-06-13T13:55:00.000Z
 | dodi-5160-68 | 3 | 3 | 0 | evidence_backed |
 | dodi-5160-70 | 11 | 8 | 3 | evidence_backed |
 | dodi-5200-01 | 22 | 21 | 1 | evidence_backed |
-| dodi-5200-02 | 15 | 25 | 1 | evidence_backed |
+| dodi-5200-02 | 15 | 26 | 1 | evidence_backed |
 | dodi-5200-08 | 1 | 26 | 0 | evidence_backed |
 | dodi-5200-33 | 3 | 1 | 0 | evidence_backed |
-| dodi-5200-39 | 14 | 16 | 3 | evidence_backed |
-| dodi-5200-44 | 9 | 15 | 3 | evidence_backed |
+| dodi-5200-39 | 14 | 17 | 3 | evidence_backed |
+| dodi-5200-44 | 9 | 16 | 3 | evidence_backed |
 | dodi-5200-46 | 7 | 3 | 0 | evidence_backed |
 | dodi-5200-48 | 17 | 29 | 2 | evidence_backed |
 | dodi-5200-49 | 7 | 1 | 1 | evidence_backed |
@@ -1332,7 +1333,7 @@ Generated: 2026-06-13T13:55:00.000Z
 | dodi-5220-31 | 2 | 2 | 3 | evidence_backed |
 | dodi-5230-09 | 10 | 10 | 1 | evidence_backed |
 | dodi-5230-16 | 0 | 1 | 0 | authority_gap |
-| dodi-5230-24 | 14 | 10 | 0 | evidence_backed |
+| dodi-5230-24 | 14 | 11 | 0 | evidence_backed |
 | dodi-5230-27 | 14 | 3 | 2 | evidence_backed |
 | dodi-5230-28 | 0 | 1 | 0 | authority_gap |
 | dodi-5230-29 | 11 | 14 | 0 | evidence_backed |
@@ -1347,11 +1348,11 @@ Generated: 2026-06-13T13:55:00.000Z
 | dodi-5330-03 | 0 | 4 | 0 | authority_gap |
 | dodi-5335-04 | 0 | 0 | 0 | authority_gap |
 | dodi-5400-04 | 3 | 6 | 0 | evidence_backed |
-| dodi-5400-11 | 8 | 65 | 2 | evidence_backed |
+| dodi-5400-11 | 8 | 66 | 2 | evidence_backed |
 | dodi-5400-13 | 0 | 8 | 0 | authority_gap |
 | dodi-5400-14 | 4 | 1 | 1 | evidence_backed |
 | dodi-5400-15 | 1 | 1 | 2 | evidence_backed |
-| dodi-5400-16 | 1 | 9 | 1 | evidence_backed |
+| dodi-5400-16 | 1 | 11 | 1 | evidence_backed |
 | dodi-5400-17 | 16 | 2 | 0 | evidence_backed |
 | dodi-5400-18 | 2 | 1 | 0 | evidence_backed |
 | dodi-5400-19 | 12 | 0 | 2 | evidence_backed |
@@ -1522,9 +1523,9 @@ Generated: 2026-06-13T13:55:00.000Z
 | dodi-7770-02 | 10 | 0 | 0 | evidence_backed |
 | dodi-8010-01 | 27 | 4 | 7 | evidence_backed |
 | dodi-8025-01 | 0 | 0 | 0 | authority_gap |
-| dodi-8100-04 | 4 | 4 | 2 | evidence_backed |
+| dodi-8100-04 | 4 | 5 | 2 | evidence_backed |
 | dodi-8110-01 | 25 | 8 | 1 | evidence_backed |
-| dodi-8115-02 | 0 | 8 | 0 | authority_gap |
+| dodi-8115-02 | 0 | 9 | 0 | authority_gap |
 | dodi-8130-01 | 20 | 5 | 1 | evidence_backed |
 | dodi-8140-02 | 4 | 0 | 1 | evidence_backed |
 | dodi-8145-01 | 0 | 0 | 0 | authority_gap |
@@ -1542,23 +1543,23 @@ Generated: 2026-06-13T13:55:00.000Z
 | dodi-8410-01 | 1 | 2 | 0 | evidence_backed |
 | dodi-8410-02 | 3 | 3 | 1 | evidence_backed |
 | dodi-8410-03 | 11 | 4 | 0 | evidence_backed |
-| dodi-8420-01 | 25 | 1 | 1 | evidence_backed |
+| dodi-8420-01 | 25 | 2 | 1 | evidence_backed |
 | dodi-8420-02 | 22 | 1 | 1 | evidence_backed |
-| dodi-8440-01 | 3 | 1 | 0 | evidence_backed |
+| dodi-8440-01 | 3 | 2 | 0 | evidence_backed |
 | dodi-8440-02 | 0 | 1 | 0 | authority_gap |
-| dodi-8500-01 | 37 | 55 | 12 | evidence_backed |
-| dodi-8510-01-risk-management-framework | 15 | 39 | 4 | evidence_backed |
-| dodi-8520-02 | 9 | 7 | 1 | evidence_backed |
-| dodi-8520-03 | 6 | 5 | 3 | evidence_backed |
+| dodi-8500-01 | 37 | 58 | 12 | evidence_backed |
+| dodi-8510-01-risk-management-framework | 12 | 42 | 4 | evidence_backed |
+| dodi-8520-02 | 9 | 8 | 1 | evidence_backed |
+| dodi-8520-03 | 6 | 6 | 3 | evidence_backed |
 | dodi-8520-04 | 10 | 0 | 1 | evidence_backed |
-| dodi-8523-01 | 1 | 9 | 2 | evidence_backed |
-| dodi-8530-01 | 23 | 17 | 6 | evidence_backed |
+| dodi-8523-01 | 1 | 10 | 2 | evidence_backed |
+| dodi-8530-01 | 23 | 18 | 6 | evidence_backed |
 | dodi-8530-03 | 9 | 0 | 2 | evidence_backed |
 | dodi-8531-01 | 3 | 4 | 2 | evidence_backed |
-| dodi-8540-01 | 10 | 2 | 1 | evidence_backed |
-| dodi-8551-01 | 8 | 3 | 1 | evidence_backed |
+| dodi-8540-01 | 10 | 3 | 1 | evidence_backed |
+| dodi-8551-01 | 8 | 4 | 1 | evidence_backed |
 | dodi-8560-01 | 0 | 1 | 0 | authority_gap |
-| dodi-8580-02 | 6 | 4 | 0 | evidence_backed |
+| dodi-8580-02 | 6 | 5 | 0 | evidence_backed |
 | dodi-8580-1 | 0 | 0 | 0 | authority_gap |
 | dodi-8582-01 | 5 | 7 | 4 | evidence_backed |
 | dodi-8585-01 | 5 | 0 | 0 | evidence_backed |
@@ -1637,21 +1638,33 @@ Generated: 2026-06-13T13:55:00.000Z
 | dowi-6130-03-medical-standards-for-military-service-appointment-enlis | 1 | 0 | 1 | evidence_backed |
 | dowi-6130-03-medical-standards-for-military-service-retention | 7 | 0 | 2 | evidence_backed |
 | dowi-6440-03 | 3 | 0 | 0 | evidence_backed |
+| cjcsi-6510-02g-cryptographic-modernization-planning | 6 | 4 | 0 | inferred_review_needed |
 | dod-zero-trust-strategy | 4 | 4 | 0 | inferred_review_needed |
-| afman-17-1301-computer-security | 6 | 4 | 0 | inferred_review_needed |
+| afman-17-1301-computer-security | 7 | 4 | 0 | inferred_review_needed |
 | dafman-17-1203-it-asset-management | 0 | 2 | 0 | authority_gap |
 | dafman-17-1304-identity-credential-access-management | 0 | 2 | 0 | authority_gap |
 | secnav-m-5210-1-records-management | 0 | 2 | 0 | authority_gap |
-| secnav-m-5239-3-don-cybersecurity | 6 | 4 | 0 | inferred_review_needed |
-| afi-17-101-risk-management-framework | 4 | 2 | 0 | inferred_review_needed |
-| afi-17-130-cybersecurity-program-management | 7 | 2 | 0 | inferred_review_needed |
-| opnavinst-5239-1e-navy-cybersecurity | 4 | 2 | 0 | inferred_review_needed |
-| cyber-mil-cyber-awareness-challenge | 7 | 1 | 0 | inferred_review_needed |
+| secnav-m-5239-3-don-cybersecurity | 3 | 4 | 0 | inferred_review_needed |
+| afi-17-101-risk-management-framework | 2 | 4 | 0 | inferred_review_needed |
+| afi-17-130-cybersecurity-program-management | 6 | 4 | 0 | inferred_review_needed |
+| ar-25-2-army-cybersecurity | 36 | 4 | 15 | evidence_backed |
+| mco-5239-2b-marine-corps-cybersecurity | 2 | 4 | 0 | inferred_review_needed |
+| opnavinst-5239-1e-navy-cybersecurity | 3 | 4 | 0 | inferred_review_needed |
+| cyber-mil-cyber-awareness-challenge | 8 | 4 | 0 | inferred_review_needed |
 | dod-cyber-exchange-cloud-computing-srg | 0 | 0 | 0 | authority_gap |
 | dod-cyber-exchange-stig-library | 1 | 0 | 0 | inferred_review_needed |
+| navfac-ufc-4-010-06-frcs-cybersecurity | 7 | 4 | 2 | evidence_backed |
+| nsa-zero-trust-implementation-guideline-primer | 3 | 4 | 0 | inferred_review_needed |
+| uscg-cybersecurity-and-cyberspace-operations-strategy | 9 | 4 | 0 | inferred_review_needed |
+| afmci-63-1201-life-cycle-systems-engineering | 1 | 1 | 0 | inferred_review_needed |
 | navadmin-214-24-fy2025-cybersecurity-awareness | 6 | 0 | 0 | inferred_review_needed |
+| navair-nawcwd-cyber-risk-assessments-sow | 2 | 0 | 6 | inferred_review_needed |
+| navsea-supship-cybersecurity-management | 9 | 0 | 0 | inferred_review_needed |
+| navwar-digital-engineering-strategy | 2 | 0 | 0 | inferred_review_needed |
+| tradoc-reg-1-8-critical-incidents | 4 | 0 | 0 | inferred_review_needed |
 | uscybercom-2018-command-vision | 0 | 0 | 0 | authority_gap |
 | uscybercom-mission-and-vision | 0 | 0 | 0 | authority_gap |
+| ussocom-directive-25-53-privacy-program | 9 | 0 | 2 | evidence_backed |
 
 ## Edge Sample
 

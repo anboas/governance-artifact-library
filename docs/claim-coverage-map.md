@@ -4,25 +4,25 @@ Generated: 2026-06-12T23:10:00.000Z
 
 ## Summary
 
-- Artifacts: 1627
-- Claims: 340861
-- Artifacts with claims: 1574
-- Source-text unavailable: 49
-- Requirements: 101909
-- Reporting requirements: 48912
-- Decision authorities: 56337
+- Artifacts: 1640
+- Claims: 342518
+- Artifacts with claims: 1578
+- Source-text unavailable: 58
+- Requirements: 102254
+- Reporting requirements: 48969
+- Decision authorities: 56517
 
 ## Claim Types
 
 | Type | Count |
 | --- | ---: |
-| requirement | 101909 |
-| decision_authority | 56337 |
-| reporting_requirement | 48912 |
-| permission | 43185 |
-| policy_statement | 43029 |
-| definition | 35203 |
-| prohibition | 12286 |
+| requirement | 102254 |
+| decision_authority | 56517 |
+| reporting_requirement | 48969 |
+| policy_statement | 43409 |
+| permission | 43351 |
+| definition | 35692 |
+| prohibition | 12326 |
 
 ## Top Artifacts
 
@@ -69,6 +69,7 @@ Generated: 2026-06-12T23:10:00.000Z
 | usc-title-15-section-636 | 974 | 329 | 55 | 128 |
 | usc-title-49-section-40101 | 965 | 339 | 118 | 75 |
 | usc-title-10-section-113 | 960 | 322 | 294 | 78 |
+| navfac-ufc-4-010-06-frcs-cybersecurity | 925 | 155 | 16 | 43 |
 | dodi-1015-15 | 852 | 389 | 74 | 187 |
 | usc-title-42-section-1395x | 814 | 274 | 38 | 63 |
 | public-law-107-347 | 810 | 293 | 94 | 64 |
@@ -93,6 +94,7 @@ Generated: 2026-06-12T23:10:00.000Z
 | eo-14110-ai | 463 | 189 | 34 | 13 |
 | usc-title-50-section-3001 | 463 | 188 | 36 | 79 |
 | dodi-8540-01 | 454 | 117 | 16 | 45 |
+| ar-25-2-army-cybersecurity | 452 | 75 | 15 | 93 |
 | public-law-110-233 | 451 | 125 | 3 | 27 |
 | eo-13526 | 450 | 190 | 8 | 84 |
 | dodi-1348-33 | 449 | 55 | 20 | 155 |
@@ -106,5 +108,3 @@ Generated: 2026-06-12T23:10:00.000Z
 | dodd-5505-05 | 378 | 143 | 9 | 104 |
 | usc-title-10-section-801 | 376 | 150 | 39 | 46 |
 | dodi-3020-45 | 372 | 46 | 37 | 38 |
-| dodi-1442-02 | 369 | 158 | 16 | 89 |
-| dodi-1332-14 | 366 | 43 | 15 | 159 |

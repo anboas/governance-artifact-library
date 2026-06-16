@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 23,
-    "downstream_edge_count": 17,
-    "catalogued_node_count": 40,
+    "downstream_edge_count": 18,
+    "catalogued_node_count": 41,
     "uncatalogued_gap_count": 6,
-    "evidence_backed_edge_count": 40,
+    "evidence_backed_edge_count": 41,
     "inferred_edge_count": 0,
     "authority_path_status": "evidence_backed",
     "implementation_path_status": "has_downstream_trace"
@@ -770,6 +770,21 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "ar-25-2-army-cybersecurity",
+      "label": "AR 25-2",
+      "title": "AR 25-2: Army Cybersecurity",
+      "artifact_type": "Army Regulation",
+      "lane": "service",
+      "lane_label": "Service",
+      "hierarchy_rank": 82,
+      "family": "cybersecurity",
+      "issuing_authority": "Secretary of the Army",
+      "source_system": "Army Publishing Directorate",
+      "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "catalogued"
     }
@@ -1678,6 +1693,36 @@
         ],
         "count": 2
       }
+    },
+    {
+      "id": "dodi-8530-01->ar-25-2-army-cybersecurity:service_adopts:resolved_reference",
+      "source_artifact_id": "dodi-8530-01",
+      "source_label": "DoDI 8530.01",
+      "source_lane": "dod",
+      "target_artifact_id": "ar-25-2-army-cybersecurity",
+      "target_label": "AR 25-2",
+      "target_lane": "service",
+      "relationship": "service_adopts",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodi:8530.01",
+        "label": "DODI 8530.01",
+        "first_line": 563,
+        "lines_sample": [
+          563,
+          574,
+          576,
+          662,
+          664,
+          767,
+          889,
+          1796,
+          2167
+        ],
+        "count": 9
+      }
     }
   ],
   "uncatalogued_authority_gaps": [
@@ -1797,7 +1842,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodi-8530-01",
       "direction": "downstream",
-      "edge_count": 17
+      "edge_count": 18
     }
   ]
 }

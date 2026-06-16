@@ -2,10 +2,10 @@
 
 Generated: 2026-06-12T23:25:00.000Z
 
-- Artifacts: 1627
-- Resolved reference edges: 10306
-- Uncatalogued references: 7685
-- Artifacts with uncatalogued references: 812
+- Artifacts: 1640
+- Resolved reference edges: 10351
+- Uncatalogued references: 7731
+- Artifacts with uncatalogued references: 816
 
 ## Artifact Summary
 
@@ -486,6 +486,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | cisa-zero-trust-maturity-model | 0 | 1 | 0 |
 | nist-sp-800-207-zero-trust-architecture | 1 | 2 | 1 |
 | nist-sp-800-53-r5-security-privacy-controls | 1 | 0 | 1 |
+| cdao-responsible-ai-strategy-implementation-pathway | 0 | 0 | 0 |
 | dodd-1000-20 | 1 | 3 | 1 |
 | dodd-1000-21e | 1 | 0 | 1 |
 | dodd-1000-26e | 0 | 0 | 0 |
@@ -1623,6 +1624,7 @@ Generated: 2026-06-12T23:25:00.000Z
 | dowi-6130-03-medical-standards-for-military-service-appointment-enlis | 1 | 1 | 1 |
 | dowi-6130-03-medical-standards-for-military-service-retention | 7 | 2 | 7 |
 | dowi-6440-03 | 3 | 0 | 3 |
+| cjcsi-6510-02g-cryptographic-modernization-planning | 0 | 0 | 0 |
 | dod-zero-trust-strategy | 0 | 0 | 0 |
 | afman-17-1301-computer-security | 0 | 0 | 0 |
 | dafman-17-1203-it-asset-management | 0 | 0 | 0 |
@@ -1631,13 +1633,24 @@ Generated: 2026-06-12T23:25:00.000Z
 | secnav-m-5239-3-don-cybersecurity | 0 | 0 | 0 |
 | afi-17-101-risk-management-framework | 0 | 0 | 0 |
 | afi-17-130-cybersecurity-program-management | 0 | 0 | 0 |
+| ar-25-2-army-cybersecurity | 33 | 15 | 33 |
+| mco-5239-2b-marine-corps-cybersecurity | 0 | 0 | 0 |
 | opnavinst-5239-1e-navy-cybersecurity | 0 | 0 | 0 |
 | cyber-mil-cyber-awareness-challenge | 0 | 0 | 0 |
 | dod-cyber-exchange-cloud-computing-srg | 0 | 0 | 0 |
 | dod-cyber-exchange-stig-library | 0 | 0 | 0 |
+| navfac-ufc-4-010-06-frcs-cybersecurity | 3 | 3 | 3 |
+| nsa-zero-trust-implementation-guideline-primer | 0 | 0 | 0 |
+| uscg-cybersecurity-and-cyberspace-operations-strategy | 0 | 0 | 0 |
+| afmci-63-1201-life-cycle-systems-engineering | 0 | 0 | 0 |
 | navadmin-214-24-fy2025-cybersecurity-awareness | 0 | 0 | 0 |
+| navair-nawcwd-cyber-risk-assessments-sow | 0 | 42 | 0 |
+| navsea-supship-cybersecurity-management | 0 | 0 | 0 |
+| navwar-digital-engineering-strategy | 0 | 0 | 0 |
+| tradoc-reg-1-8-critical-incidents | 0 | 0 | 0 |
 | uscybercom-2018-command-vision | 0 | 0 | 0 |
 | uscybercom-mission-and-vision | 0 | 0 | 0 |
+| ussocom-directive-25-53-privacy-program | 9 | 2 | 9 |
 
 ## Top Uncatalogued References
 
@@ -1646,12 +1659,12 @@ Generated: 2026-06-12T23:25:00.000Z
 | 10 U.S.C. 2302 | usc | 327 | 30 | high |
 | 10 U.S.C. 2358 | usc | 177 | 29 | high |
 | 10 U.S.C. 2431 | usc | 109 | 26 | high |
-| DoDI 5000.02 | dodi | 92 | 61 | high |
+| DoDI 5000.02 | dodi | 97 | 62 | high |
 | DoDI 5025.01 | dodi | 79 | 47 | high |
 | 10 USC 2304 | usc | 72 | 25 | high |
 | 41 U.S.C. 403 | usc | 68 | 26 | high |
 | 50 U.S.C. 403 | usc | 68 | 13 | high |
-| DoDD 5400.11 | dodd | 57 | 48 | high |
+| DoDD 5400.11 | dodd | 58 | 49 | high |
 | 10 USC 2501 | usc | 52 | 24 | high |
 | 42 U.S.C. 1973ff | usc | 52 | 6 | high |
 | DoDD 4500.56 | dodd | 47 | 2 | high |
@@ -1666,13 +1679,14 @@ Generated: 2026-06-12T23:25:00.000Z
 | 50 U.S.C. 401 | usc | 31 | 14 | high |
 | DoDD 5134.01 | dodd | 30 | 27 | high |
 | 10 U.S.C. 2371 | usc | 29 | 19 | high |
+| DoDD 5205.16 | dodd | 29 | 25 | high |
 | 50 U.S.C. 2501 | usc | 26 | 13 | high |
-| DoDD 5205.16 | dodd | 26 | 23 | high |
 | 50 USC 435 | usc | 25 | 10 | high |
 | 10 U.S.C. 7291 | usc | 24 | 12 | high |
 | 50 U.S.C. 404a | usc | 23 | 13 | high |
 | 10 U.S.C. 4571 | usc | 22 | 7 | high |
 | 41 U.S.C. 422 | usc | 22 | 6 | high |
+| FAR 2.101 | far | 22 | 1 | medium |
 | 10 USC 168 | usc | 21 | 9 | high |
 | 40 USC 1401 | usc | 21 | 7 | high |
 | 41 U.S.C. 253 | usc | 20 | 9 | high |
@@ -1685,10 +1699,10 @@ Generated: 2026-06-12T23:25:00.000Z
 | 10 USC 2282 | usc | 18 | 8 | high |
 | 16 U.S.C. 460l | usc | 18 | 6 | high |
 | 41 USC 433 | usc | 18 | 5 | high |
+| NIST SP 800-37 | nist-sp | 18 | 7 | low |
 | 16 U.S.C. 461 | usc | 17 | 5 | high |
 | 41 U.S.C. 10a | usc | 17 | 9 | high |
 | 41 U.S.C. 405 | usc | 17 | 12 | high |
-| NIST SP 800-37 | nist-sp | 17 | 6 | low |
 | 10 U.S.C. 4205 | usc | 16 | 2 | high |
 | 10 USC 371 | usc | 16 | 12 | high |
 | 41 U.S.C. 414 | usc | 16 | 10 | high |
@@ -1717,10 +1731,9 @@ Generated: 2026-06-12T23:25:00.000Z
 | 8 U.S.C. 1324a | usc | 13 | 3 | high |
 | DoDD 5110.10 | dodd | 13 | 5 | high |
 | DoDD 5132.03 | dodd | 13 | 11 | high |
+| DoDD 5230.09 | dodd | 13 | 11 | high |
 | DoDI 5105.45 | dodi | 13 | 1 | high |
 | DoDI 5160.71 | dodi | 13 | 2 | high |
 | DoDI 6025.19 | dodi | 13 | 9 | high |
 | DoDI 6130.03 | dodi | 13 | 9 | high |
-| 10 USC 2324 | usc | 12 | 9 | high |
-| 16 U.S.C. 5405 | usc | 12 | 10 | high |
 

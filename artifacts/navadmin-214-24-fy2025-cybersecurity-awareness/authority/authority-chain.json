@@ -87,51 +87,6 @@
       "status": "catalogued"
     },
     {
-      "id": "secnav-m-5239-3-don-cybersecurity",
-      "label": "SECNAV M-5239.3",
-      "title": "SECNAV M-5239.3: Department of the Navy Cybersecurity Program",
-      "artifact_type": "SECNAV Manual",
-      "lane": "service",
-      "lane_label": "Service",
-      "hierarchy_rank": 80,
-      "family": "cybersecurity",
-      "issuing_authority": "SECNAV",
-      "source_system": "Department of the Navy Issuances",
-      "mirror_status": "blocked",
-      "parser_status": "blocked",
-      "status": "catalogued"
-    },
-    {
-      "id": "afi-17-101-risk-management-framework",
-      "label": "AFI 17-101",
-      "title": "AFI 17-101: Risk Management Framework for Air Force Information Technology",
-      "artifact_type": "Air Force Instruction",
-      "lane": "service",
-      "lane_label": "Service",
-      "hierarchy_rank": 82,
-      "family": "risk_management",
-      "issuing_authority": "Secretary of the Air Force",
-      "source_system": "Air Force e-Publishing",
-      "mirror_status": "blocked",
-      "parser_status": "blocked",
-      "status": "catalogued"
-    },
-    {
-      "id": "afi-17-130-cybersecurity-program-management",
-      "label": "AFI 17-130",
-      "title": "AFI 17-130: Cybersecurity Program Management",
-      "artifact_type": "Air Force Instruction",
-      "lane": "service",
-      "lane_label": "Service",
-      "hierarchy_rank": 82,
-      "family": "cybersecurity",
-      "issuing_authority": "Secretary of the Air Force",
-      "source_system": "Air Force e-Publishing",
-      "mirror_status": "blocked",
-      "parser_status": "blocked",
-      "status": "catalogued"
-    },
-    {
       "id": "opnavinst-5239-1e-navy-cybersecurity",
       "label": "OPNAVINST 5239.1E",
       "title": "OPNAVINST 5239.1E: U.S. Navy Cybersecurity Program",
@@ -157,6 +112,51 @@
       "family": "cyber_training",
       "issuing_authority": "DoW/DoD",
       "source_system": "DoD Cyber Exchange",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
+      "id": "nsa-zero-trust-implementation-guideline-primer",
+      "label": "NSA ZIG Primer",
+      "title": "Zero Trust Implementation Guideline Primer",
+      "artifact_type": "Cybersecurity Technical Report",
+      "lane": "echelon2",
+      "lane_label": "Echelon 2",
+      "hierarchy_rank": 85,
+      "family": "zero_trust",
+      "issuing_authority": "National Security Agency",
+      "source_system": "NSA Cybersecurity Guidance",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
+      "id": "navfac-ufc-4-010-06-frcs-cybersecurity",
+      "label": "UFC 4-010-06",
+      "title": "UFC 4-010-06: Cybersecurity of Facility-Related Control Systems",
+      "artifact_type": "Unified Facilities Criteria",
+      "lane": "echelon2",
+      "lane_label": "Echelon 2",
+      "hierarchy_rank": 85,
+      "family": "facilities",
+      "issuing_authority": "DoD Unified Facilities Criteria Program",
+      "source_system": "NAVFAC",
+      "mirror_status": "mirrored",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "uscg-cybersecurity-and-cyberspace-operations-strategy",
+      "label": "USCG Cyber Strategy",
+      "title": "U.S. Coast Guard Cybersecurity and Cyberspace Operations",
+      "artifact_type": "Service strategy",
+      "lane": "echelon2",
+      "lane_label": "Echelon 2",
+      "hierarchy_rank": 86,
+      "family": "cybersecurity",
+      "issuing_authority": "United States Coast Guard",
+      "source_system": "Coast Guard Directives System",
       "mirror_status": "blocked",
       "parser_status": "blocked",
       "status": "catalogued"
@@ -201,14 +201,14 @@
       }
     },
     {
-      "id": "afi-17-101-risk-management-framework->navadmin-214-24-fy2025-cybersecurity-awareness:verifies_or_localizes:inferred_flowdown",
-      "source_artifact_id": "afi-17-101-risk-management-framework",
-      "source_label": "AFI 17-101",
-      "source_lane": "service",
+      "id": "nsa-zero-trust-implementation-guideline-primer->navadmin-214-24-fy2025-cybersecurity-awareness:localizes:inferred_flowdown",
+      "source_artifact_id": "nsa-zero-trust-implementation-guideline-primer",
+      "source_label": "NSA ZIG Primer",
+      "source_lane": "echelon2",
       "target_artifact_id": "navadmin-214-24-fy2025-cybersecurity-awareness",
       "target_label": "NAVADMIN 214/24",
       "target_lane": "echelon4",
-      "relationship": "verifies_or_localizes",
+      "relationship": "localizes",
       "evidence_type": "inferred_flowdown",
       "confidence": 0.59,
       "direction": "upstream",
@@ -221,14 +221,34 @@
       }
     },
     {
-      "id": "afi-17-130-cybersecurity-program-management->navadmin-214-24-fy2025-cybersecurity-awareness:verifies_or_localizes:inferred_flowdown",
-      "source_artifact_id": "afi-17-130-cybersecurity-program-management",
-      "source_label": "AFI 17-130",
-      "source_lane": "service",
+      "id": "navfac-ufc-4-010-06-frcs-cybersecurity->navadmin-214-24-fy2025-cybersecurity-awareness:localizes:inferred_flowdown",
+      "source_artifact_id": "navfac-ufc-4-010-06-frcs-cybersecurity",
+      "source_label": "UFC 4-010-06",
+      "source_lane": "echelon2",
       "target_artifact_id": "navadmin-214-24-fy2025-cybersecurity-awareness",
       "target_label": "NAVADMIN 214/24",
       "target_lane": "echelon4",
-      "relationship": "verifies_or_localizes",
+      "relationship": "localizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.59,
+      "direction": "upstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "cybersecurity"
+        ],
+        "shared_family": ""
+      }
+    },
+    {
+      "id": "uscg-cybersecurity-and-cyberspace-operations-strategy->navadmin-214-24-fy2025-cybersecurity-awareness:localizes:inferred_flowdown",
+      "source_artifact_id": "uscg-cybersecurity-and-cyberspace-operations-strategy",
+      "source_label": "USCG Cyber Strategy",
+      "source_lane": "echelon2",
+      "target_artifact_id": "navadmin-214-24-fy2025-cybersecurity-awareness",
+      "target_label": "NAVADMIN 214/24",
+      "target_lane": "echelon4",
+      "relationship": "localizes",
       "evidence_type": "inferred_flowdown",
       "confidence": 0.59,
       "direction": "upstream",
@@ -277,27 +297,6 @@
         "basis": "shared_family_tags_and_authority_rank",
         "shared_tags": [
           "navy"
-        ],
-        "shared_family": ""
-      }
-    },
-    {
-      "id": "secnav-m-5239-3-don-cybersecurity->navadmin-214-24-fy2025-cybersecurity-awareness:verifies_or_localizes:inferred_flowdown",
-      "source_artifact_id": "secnav-m-5239-3-don-cybersecurity",
-      "source_label": "SECNAV M-5239.3",
-      "source_lane": "service",
-      "target_artifact_id": "navadmin-214-24-fy2025-cybersecurity-awareness",
-      "target_label": "NAVADMIN 214/24",
-      "target_lane": "echelon4",
-      "relationship": "verifies_or_localizes",
-      "evidence_type": "inferred_flowdown",
-      "confidence": 0.66,
-      "direction": "upstream",
-      "evidence": {
-        "basis": "shared_family_tags_and_authority_rank",
-        "shared_tags": [
-          "navy",
-          "cybersecurity"
         ],
         "shared_family": ""
       }

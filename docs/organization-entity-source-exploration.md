@@ -6,13 +6,13 @@ Scope: superficial enumeration only. This map does not mirror new raw files, ext
 
 ## Summary
 
-- Current density organizations: 43
+- Current density organizations: 56
 - DoW/DoD OPR entities found: 17
 - DoW/DoD OPR-to-artifact links enumerated: 1147
 - OPR entities missing from current density labels: 0
 - Source-owner entities tracked: 60
-- Source-owner entities missing or empty in current density: 40
-- Reference-discovery source candidates: 7685
+- Source-owner entities missing or empty in current density: 25
+- Reference-discovery source candidates: 7731
 
 ## DoW/DoD OPR Entities
 
@@ -41,14 +41,12 @@ Scope: superficial enumeration only. This map does not mirror new raw files, ext
 | Source | Owner | Priority | Automation | Status | Artifacts | Reference Candidates |
 | --- | --- | --- | --- | --- | ---: | ---: |
 | Federal Register | Office of the Federal Register / National Archives and Records Administration | critical | direct_fetch_ready | mirrored | 17 | 296 |
-| Congress.gov | Library of Congress | critical | api_key_required | not_started | 0 | 161 |
-| Acquisition.gov DFARS | Defense Acquisition Regulations System | critical | direct_fetch_ready | mirrored | 1 | 8 |
-| Defense Pricing, Contracting, and Acquisition Policy | Defense Pricing and Contracting | critical | needs_probe | not_started | 0 | 8 |
+| Congress.gov | Library of Congress | critical | api_key_required | not_started | 0 | 162 |
+| Acquisition.gov DFARS | Defense Acquisition Regulations System | critical | direct_fetch_ready | mirrored | 1 | 22 |
+| Defense Pricing, Contracting, and Acquisition Policy | Defense Pricing and Contracting | critical | needs_probe | not_started | 0 | 22 |
 | eCFR | Office of the Federal Register / National Archives and Records Administration | high | direct_fetch_ready | not_started | 0 | 80 |
 | GovInfo CFR Packages | U.S. Government Publishing Office | high | direct_fetch_ready | not_started | 0 | 80 |
-| Chief Digital and Artificial Intelligence Office | Chief Digital and Artificial Intelligence Office | high | needs_probe | not_started | 0 | 0 |
 | CISA | Cybersecurity and Infrastructure Security Agency | high | direct_fetch_ready | not_started | 0 | 0 |
-| CJCS Directives Library | Joint Staff | high | needs_probe | not_started | 0 | 0 |
 | Committee on National Security Systems | Committee on National Security Systems | high | needs_probe | not_started | 0 | 0 |
 | DAU Adaptive Acquisition Framework | Defense Acquisition University | high | direct_fetch_ready | not_started | 0 | 0 |
 | FedRAMP | General Services Administration | high | direct_fetch_ready | not_started | 0 | 0 |
@@ -57,29 +55,16 @@ Scope: superficial enumeration only. This map does not mirror new raw files, ext
 | NIST NCCoE | National Cybersecurity Center of Excellence | high | direct_fetch_ready | not_started | 0 | 0 |
 | Office of Science and Technology Policy | Office of Science and Technology Policy | high | direct_fetch_ready | mirrored | 2 | 0 |
 | USD(A&S) | Office of the Under Secretary of Defense for Acquisition and Sustainment | high | needs_probe | not_started | 0 | 0 |
-| Army Doctrine Publications | Department of the Army | medium | needs_probe | not_started | 0 | 0 |
-| Army Publishing Directorate | Department of the Army | medium | needs_probe | not_started | 0 | 0 |
 | DAU ACQuipedia | Defense Acquisition University | medium | needs_probe | not_started | 0 | 0 |
 | DISA | Defense Information Systems Agency | medium | needs_probe | not_started | 0 | 0 |
 | GSA Policy and Regulations | General Services Administration | medium | direct_fetch_ready | not_started | 0 | 0 |
-| Joint Staff Directives | Joint Staff | medium | needs_probe | not_started | 0 | 0 |
 | Law Library of Congress | Library of Congress | medium | direct_fetch_ready | not_started | 0 | 0 |
 | MARADMIN Messages | United States Marine Corps | medium | needs_probe | not_started | 0 | 0 |
-| Marine Corps Publications Electronic Library | United States Marine Corps | medium | needs_probe | not_started | 0 | 0 |
-| NAVAIR | Naval Air Systems Command | medium | needs_probe | not_started | 0 | 0 |
-| NAVSEA | Naval Sea Systems Command | medium | needs_probe | not_started | 0 | 0 |
-| NAVWAR | Naval Information Warfare Systems Command | medium | needs_probe | not_started | 0 | 0 |
 | Navy Warfare Library | Department of the Navy | medium | needs_probe | not_started | 0 | 0 |
-| NSA Cybersecurity Guidance | National Security Agency | medium | needs_probe | not_started | 0 | 0 |
 | OPM Policy | Office of Personnel Management | medium | direct_fetch_ready | not_started | 0 | 0 |
 | Space Force Doctrine | United States Space Force | medium | needs_probe | not_started | 0 | 0 |
-| TRADOC Publications | U.S. Army Training and Doctrine Command | medium | needs_probe | not_started | 0 | 0 |
 | USD(R&E) | Office of the Under Secretary of Defense for Research and Engineering | medium | needs_probe | not_started | 0 | 0 |
-| Air Force Materiel Command | Air Force Materiel Command | low | needs_probe | not_started | 0 | 0 |
-| Coast Guard Directives System | United States Coast Guard | low | needs_probe | not_started | 0 | 0 |
-| NAVFAC | Naval Facilities Engineering Systems Command | low | needs_probe | not_started | 0 | 0 |
 | PEO Digital | Program Executive Office Digital and Enterprise Services | low | needs_probe | not_started | 0 | 0 |
-| U.S. Special Operations Command | United States Special Operations Command | low | needs_probe | not_started | 0 | 0 |
 
 ## Full Enumeration
 

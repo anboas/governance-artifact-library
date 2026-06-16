@@ -61,31 +61,16 @@
     }
   ],
   "summary": {
-    "upstream_edge_count": 4,
-    "downstream_edge_count": 2,
-    "catalogued_node_count": 7,
+    "upstream_edge_count": 3,
+    "downstream_edge_count": 4,
+    "catalogued_node_count": 8,
     "uncatalogued_gap_count": 0,
     "evidence_backed_edge_count": 0,
-    "inferred_edge_count": 6,
+    "inferred_edge_count": 7,
     "authority_path_status": "inferred_review_needed",
     "implementation_path_status": "has_downstream_trace"
   },
   "nodes": [
-    {
-      "id": "omb-m-21-31-cyber-logging",
-      "label": "OMB M-21-31",
-      "title": "OMB Memorandum M-21-31: Improving the Federal Government's Investigative and Remediation Capabilities Related to Cybersecurity Incidents",
-      "artifact_type": "OMB Memorandum",
-      "lane": "govwide",
-      "lane_label": "Gov-wide",
-      "hierarchy_rank": 40,
-      "family": "cybersecurity",
-      "issuing_authority": "OMB",
-      "source_system": "White House",
-      "mirror_status": "mirrored",
-      "parser_status": "parsed",
-      "status": "catalogued"
-    },
     {
       "id": "afman-17-1301-computer-security",
       "label": "AFMAN 17-1301",
@@ -162,6 +147,21 @@
       "status": "catalogued"
     },
     {
+      "id": "uscg-cybersecurity-and-cyberspace-operations-strategy",
+      "label": "USCG Cyber Strategy",
+      "title": "U.S. Coast Guard Cybersecurity and Cyberspace Operations",
+      "artifact_type": "Service strategy",
+      "lane": "echelon2",
+      "lane_label": "Echelon 2",
+      "hierarchy_rank": 86,
+      "family": "cybersecurity",
+      "issuing_authority": "United States Coast Guard",
+      "source_system": "Coast Guard Directives System",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
+    },
+    {
       "id": "navadmin-214-24-fy2025-cybersecurity-awareness",
       "label": "NAVADMIN 214/24",
       "title": "NAVADMIN 214/24: Fiscal Year 2025 Cybersecurity Awareness Challenge",
@@ -175,30 +175,24 @@
       "mirror_status": "blocked",
       "parser_status": "blocked",
       "status": "catalogued"
+    },
+    {
+      "id": "navsea-supship-cybersecurity-management",
+      "label": "NAVSEA Cybersecurity Management",
+      "title": "NAVSEA SUPSHIP Operations Manual Chapter 16: Cybersecurity Management",
+      "artifact_type": "Command manual chapter",
+      "lane": "echelon4",
+      "lane_label": "Echelon 3-4",
+      "hierarchy_rank": 90,
+      "family": "cybersecurity",
+      "issuing_authority": "Naval Sea Systems Command",
+      "source_system": "NAVSEA",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
+      "status": "catalogued"
     }
   ],
   "upstream_edges": [
-    {
-      "id": "omb-m-21-31-cyber-logging->opnavinst-5239-1e-navy-cybersecurity:flows_down:inferred_flowdown",
-      "source_artifact_id": "omb-m-21-31-cyber-logging",
-      "source_label": "OMB M-21-31",
-      "source_lane": "govwide",
-      "target_artifact_id": "opnavinst-5239-1e-navy-cybersecurity",
-      "target_label": "OPNAVINST 5239.1E",
-      "target_lane": "service",
-      "relationship": "flows_down",
-      "evidence_type": "inferred_flowdown",
-      "confidence": 0.78,
-      "direction": "upstream",
-      "evidence": {
-        "basis": "shared_family_tags_and_authority_rank",
-        "shared_tags": [
-          "cybersecurity",
-          "cybersecurity"
-        ],
-        "shared_family": "cybersecurity"
-      }
-    },
     {
       "id": "afman-17-1301-computer-security->opnavinst-5239-1e-navy-cybersecurity:flows_down:inferred_flowdown",
       "source_artifact_id": "afman-17-1301-computer-security",
@@ -285,6 +279,27 @@
       }
     },
     {
+      "id": "opnavinst-5239-1e-navy-cybersecurity->uscg-cybersecurity-and-cyberspace-operations-strategy:component_executes:inferred_flowdown",
+      "source_artifact_id": "opnavinst-5239-1e-navy-cybersecurity",
+      "source_label": "OPNAVINST 5239.1E",
+      "source_lane": "service",
+      "target_artifact_id": "uscg-cybersecurity-and-cyberspace-operations-strategy",
+      "target_label": "USCG Cyber Strategy",
+      "target_lane": "echelon2",
+      "relationship": "component_executes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.78,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "cybersecurity",
+          "cybersecurity"
+        ],
+        "shared_family": "cybersecurity"
+      }
+    },
+    {
       "id": "opnavinst-5239-1e-navy-cybersecurity->navadmin-214-24-fy2025-cybersecurity-awareness:verifies_or_localizes:inferred_flowdown",
       "source_artifact_id": "opnavinst-5239-1e-navy-cybersecurity",
       "source_label": "OPNAVINST 5239.1E",
@@ -304,6 +319,27 @@
         ],
         "shared_family": ""
       }
+    },
+    {
+      "id": "opnavinst-5239-1e-navy-cybersecurity->navsea-supship-cybersecurity-management:verifies_or_localizes:inferred_flowdown",
+      "source_artifact_id": "opnavinst-5239-1e-navy-cybersecurity",
+      "source_label": "OPNAVINST 5239.1E",
+      "source_lane": "service",
+      "target_artifact_id": "navsea-supship-cybersecurity-management",
+      "target_label": "NAVSEA Cybersecurity Management",
+      "target_lane": "echelon4",
+      "relationship": "verifies_or_localizes",
+      "evidence_type": "inferred_flowdown",
+      "confidence": 0.78,
+      "direction": "downstream",
+      "evidence": {
+        "basis": "shared_family_tags_and_authority_rank",
+        "shared_tags": [
+          "cybersecurity",
+          "cybersecurity"
+        ],
+        "shared_family": "cybersecurity"
+      }
     }
   ],
   "uncatalogued_authority_gaps": [],
@@ -313,14 +349,14 @@
       "label": "Trace upstream to controlling authority",
       "start_artifact_id": "opnavinst-5239-1e-navy-cybersecurity",
       "direction": "upstream",
-      "edge_count": 4
+      "edge_count": 3
     },
     {
       "id": "trace-downstream",
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "opnavinst-5239-1e-navy-cybersecurity",
       "direction": "downstream",
-      "edge_count": 2
+      "edge_count": 4
     }
   ]
 }

@@ -62,10 +62,10 @@
   ],
   "summary": {
     "upstream_edge_count": 0,
-    "downstream_edge_count": 7,
-    "catalogued_node_count": 8,
+    "downstream_edge_count": 8,
+    "catalogued_node_count": 9,
     "uncatalogued_gap_count": 1,
-    "evidence_backed_edge_count": 3,
+    "evidence_backed_edge_count": 4,
     "inferred_edge_count": 4,
     "authority_path_status": "authority_gap",
     "implementation_path_status": "has_downstream_trace"
@@ -205,6 +205,21 @@
       "issuing_authority": "Secretary of Defense",
       "source_system": "DoW/DoD Issuances",
       "mirror_status": "queued",
+      "parser_status": "parsed",
+      "status": "catalogued"
+    },
+    {
+      "id": "ar-25-2-army-cybersecurity",
+      "label": "AR 25-2",
+      "title": "AR 25-2: Army Cybersecurity",
+      "artifact_type": "Army Regulation",
+      "lane": "service",
+      "lane_label": "Service",
+      "hierarchy_rank": 82,
+      "family": "cybersecurity",
+      "issuing_authority": "Secretary of the Army",
+      "source_system": "Army Publishing Directorate",
+      "mirror_status": "mirrored",
       "parser_status": "parsed",
       "status": "catalogued"
     }
@@ -372,6 +387,29 @@
         ],
         "count": 9
       }
+    },
+    {
+      "id": "dodd-8100-02->ar-25-2-army-cybersecurity:service_adopts:resolved_reference",
+      "source_artifact_id": "dodd-8100-02",
+      "source_label": "DoDD 8100.02",
+      "source_lane": "dod",
+      "target_artifact_id": "ar-25-2-army-cybersecurity",
+      "target_label": "AR 25-2",
+      "target_lane": "service",
+      "relationship": "service_adopts",
+      "evidence_type": "resolved_reference",
+      "confidence": 0.94,
+      "direction": "downstream",
+      "evidence": {
+        "source_reference_id": "dodd:8100.02",
+        "label": "DODD 8100.02",
+        "first_line": 1840,
+        "lines_sample": [
+          1840,
+          2134
+        ],
+        "count": 2
+      }
     }
   ],
   "uncatalogued_authority_gaps": [
@@ -406,7 +444,7 @@
       "label": "Trace downstream to implementation and evidence",
       "start_artifact_id": "dodd-8100-02",
       "direction": "downstream",
-      "edge_count": 7
+      "edge_count": 8
     }
   ]
 }

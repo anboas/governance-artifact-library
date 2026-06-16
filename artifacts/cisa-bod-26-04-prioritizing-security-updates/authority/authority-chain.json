@@ -181,18 +181,18 @@
       "status": "catalogued"
     },
     {
-      "id": "dodi-8510-01-risk-management-framework",
-      "label": "DoDI 8510.01",
-      "title": "DoDI 8510.01: Risk Management Framework for DoD Systems",
-      "artifact_type": "DoD Instruction",
+      "id": "cjcsi-6510-02g-cryptographic-modernization-planning",
+      "label": "CJCSI 6510.02G",
+      "title": "CJCSI 6510.02G: Cryptographic Modernization Planning",
+      "artifact_type": "CJCS Instruction",
       "lane": "dod",
       "lane_label": "DoD",
-      "hierarchy_rank": 72,
-      "family": "dod_instruction",
-      "issuing_authority": "Secretary of Defense",
-      "source_system": "DoW/DoD Issuances",
-      "mirror_status": "queued",
-      "parser_status": "parsed",
+      "hierarchy_rank": 74,
+      "family": "cybersecurity",
+      "issuing_authority": "Chairman of the Joint Chiefs of Staff",
+      "source_system": "Joint Staff Directives",
+      "mirror_status": "blocked",
+      "parser_status": "blocked",
       "status": "catalogued"
     }
   ],
@@ -222,20 +222,21 @@
   ],
   "downstream_edges": [
     {
-      "id": "cisa-bod-26-04-prioritizing-security-updates->dodi-8510-01-risk-management-framework:implements:inferred_flowdown",
+      "id": "cisa-bod-26-04-prioritizing-security-updates->cjcsi-6510-02g-cryptographic-modernization-planning:implements:inferred_flowdown",
       "source_artifact_id": "cisa-bod-26-04-prioritizing-security-updates",
       "source_label": "BOD 26-04",
       "source_lane": "govwide",
-      "target_artifact_id": "dodi-8510-01-risk-management-framework",
-      "target_label": "DoDI 8510.01",
+      "target_artifact_id": "cjcsi-6510-02g-cryptographic-modernization-planning",
+      "target_label": "CJCSI 6510.02G",
       "target_lane": "dod",
       "relationship": "implements",
       "evidence_type": "inferred_flowdown",
-      "confidence": 0.59,
+      "confidence": 0.66,
       "direction": "downstream",
       "evidence": {
         "basis": "shared_family_tags_and_authority_rank",
         "shared_tags": [
+          "cybersecurity",
           "cybersecurity"
         ],
         "shared_family": ""
